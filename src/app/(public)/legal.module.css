@@ -1,0 +1,18 @@
+.legal {
+  padding-block: var(--space-2xl) var(--space-3xl);
+}
+
+.legal :global(.prose) {
+  margin-top: var(--space-xl);
+}
+
+.legal :global(.prose) h2 {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-h3);
+}
+
+.legal :global(.prose) p {
+  margin-bottom: var(--space-md);
+  max-width: 68ch;
+}

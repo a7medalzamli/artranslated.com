@@ -1,0 +1,30 @@
+.main {
+  min-height: calc(100dvh - var(--header-height));
+  display: flex;
+  align-items: center;
+  padding-block: var(--space-4xl);
+}
+
+.code {
+  font-size: var(--font-size-h1);
+  font-weight: var(--weight-bold);
+  color: var(--color-accent);
+}
+
+.title {
+  margin-top: var(--space-xs);
+}
+
+.text {
+  margin-top: var(--space-md);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+  max-width: 45ch;
+}
+
+.actions {
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}

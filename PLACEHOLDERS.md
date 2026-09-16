@@ -53,6 +53,24 @@ Status: ☐ = still a placeholder, ☑ = provided and filled in.
 - ☐ `[Any metrics you want changed/removed]` — confirm the numbers (e.g. "50,000 words",
   "100% QA pass") are accurate and safe to publish
 
+## Service-page specifics (added in Milestone 3)
+
+- ☐ `[Sworn/certified translation]` — confirm whether this is offered (Legal page)
+- ☐ `[Healthcare sub-fields]` — any specific healthcare areas/document types to feature
+- ☐ `[Downloadable CV]` — link/PDF for the Work & CV page
+- ☐ `[Years of experience]` — number for the Work & CV background list
+
+## Legal drafts (Terms & Privacy — added in Milestone 3, lawyer to finalize)
+
+- ☐ `[Fees and payment]` terms
+- ☐ `[Intellectual property]` transfer wording
+- ☐ `[Liability]` limitation wording
+- ☐ `[Governing law / jurisdiction]`
+- ☐ `[Processors]` — hosting, database and email providers to name in the privacy policy
+- ☐ `[Data-protection rights]` wording and how to exercise them
+- ☐ `[Privacy contact address]`
+- ☐ `[Last updated date]` for both legal pages
+
 ## Blog
 
 - ☐ Body text for the four seed posts (titles provided; bodies are placeholders — Milestone 6)

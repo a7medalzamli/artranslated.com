@@ -3,6 +3,23 @@
 A running log of significant choices and the reason behind each one.
 Newest entries at the top.
 
+## 2026-09-16 — Milestone 3: Public pages
+
+- **Content lives in typed data modules** under `src/content` (specializations,
+  additional services, trust signals, success stories) so the home page and the
+  services/work pages stay in sync and never duplicate copy.
+- **Only brief-sourced facts are used.** Success-story figures come straight from
+  the brief; anything not in the brief (name, bio, institutions, retention
+  period, legal specifics) is a bracketed placeholder tracked in PLACEHOLDERS.md.
+- **Home hero uses a client `LanguageSample`** with EN/FR/ES source tabs sharing
+  one Arabic target — satisfying the switchable translation-panel requirement.
+- **New reusable components:** `Section`, `Card`/`CardGrid`, `Callout`.
+- **Terms & Privacy are clearly marked drafts** (warning callout + eyebrow) with a
+  lawyer-review note, per the brief.
+- **Custom 404** (`app/not-found.tsx`) renders inside the site chrome by including
+  the header/footer directly, since the root not-found sits outside the
+  `(public)` group layout.
+
 ## 2026-09-16 — Milestone 2: Design system and layout
 
 - **Color palette:** deep teal-blue primary (`#14506e`) with a muted teal accent

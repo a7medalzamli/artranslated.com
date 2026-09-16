@@ -1,0 +1,16 @@
+.callout {
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  border-inline-start-width: 4px;
+}
+
+.info {
+  background: var(--color-surface);
+  border-inline-start-color: var(--color-accent);
+}
+
+.warning {
+  background: var(--color-danger-bg);
+  border-inline-start-color: var(--color-danger);
+}
