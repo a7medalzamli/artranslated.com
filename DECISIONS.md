@@ -3,6 +3,24 @@
 A running log of significant choices and the reason behind each one.
 Newest entries at the top.
 
+## 2026-09-16 — Milestone 4: Database
+
+- **Two tables, RLS on both** (`posts`, `quote_requests`) with explicit policies.
+  The only authenticated user is the admin (public signup disabled in M5), so
+  policies grant `authenticated` full access and restrict `anon` to reading
+  published posts and inserting quote requests.
+- **No separate `categories` table.** Small fixed set; `posts.category` is text,
+  validated in the app with Zod. Avoids an extra table/join for no real benefit.
+- **New Supabase API key format.** The project uses Supabase's new
+  publishable/secret keys (`sb_publishable_…` / `sb_secret_…`) instead of the
+  legacy `anon`/`service_role` JWTs. They are drop-in compatible; env var names
+  kept as `NEXT_PUBLIC_SUPABASE_ANON_KEY` / `SUPABASE_SERVICE_ROLE_KEY`.
+- **Types hand-written** to match the schema (small surface); can be regenerated
+  with the Supabase CLI later.
+- **RLS tests load `.env.local` via a manual parser**, not `@next/env`, because
+  Next skips `.env.local` when `NODE_ENV=test` (which Vitest sets). Tests skip
+  cleanly when keys are absent so CI stays green.
+
 ## 2026-09-16 — Milestone 3: Public pages
 
 - **Content lives in typed data modules** under `src/content` (specializations,
