@@ -1,0 +1,14 @@
+# Normalize line endings to LF in the repository for all text files.
+# This keeps behavior consistent between Windows (local) and Linux (Vercel).
+* text=auto eol=lf
+
+# Treat these as binary (no line-ending conversion / no diff noise).
+*.docx binary
+*.ico binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.woff binary
+*.woff2 binary
