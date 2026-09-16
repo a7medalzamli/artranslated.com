@@ -1,0 +1,126 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  min-height: var(--header-height);
+}
+
+.brand {
+  font-weight: var(--weight-bold);
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  text-decoration: none;
+  margin-inline-end: auto;
+}
+
+.brand:hover {
+  color: var(--color-primary);
+}
+
+/* ---- Desktop navigation ---- */
+.desktopNav {
+  display: none;
+}
+
+.desktopCta {
+  display: none;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+/* ---- Mobile menu button ---- */
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  background: var(--color-surface);
+}
+
+/* ---- Mobile navigation panel ---- */
+.mobileNav {
+  padding-block: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.mobileList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.mobileLink {
+  display: block;
+  padding: var(--space-sm) var(--space-xs);
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--weight-medium);
+  border-radius: var(--radius-sm);
+}
+
+.mobileLink:hover {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+.mobileCta {
+  margin-top: var(--space-md);
+}
+
+/* ---- Switch to desktop layout ---- */
+@media (min-width: 60em) {
+  .desktopNav {
+    display: block;
+  }
+
+  .desktopCta {
+    display: block;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+}

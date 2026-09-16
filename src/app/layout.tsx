@@ -1,5 +1,21 @@
 import type { Metadata } from "next";
+import { IBM_Plex_Sans, IBM_Plex_Sans_Arabic } from "next/font/google";
+import { defaultLocale, localeDirection } from "@/i18n/config";
 import "./globals.css";
+
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-ibm-plex-sans",
+  display: "swap",
+});
+
+const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-ibm-plex-sans-arabic",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -12,7 +28,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" dir="ltr">
+    <html
+      lang={defaultLocale}
+      dir={localeDirection[defaultLocale]}
+      className={`${ibmPlexSans.variable} ${ibmPlexSansArabic.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

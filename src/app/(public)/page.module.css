@@ -1,0 +1,104 @@
+.hero {
+  padding-block: var(--space-3xl);
+  background: radial-gradient(
+    1200px 400px at 100% -10%,
+    color-mix(in srgb, var(--color-primary) 10%, transparent),
+    transparent
+  );
+}
+
+.heroGrid {
+  display: grid;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+@media (min-width: 56em) {
+  .heroGrid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: var(--space-3xl);
+  }
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  font-size: var(--font-size-h1);
+  max-width: 18ch;
+}
+
+.lead {
+  margin-top: var(--space-md);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  max-width: 55ch;
+}
+
+.actions {
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+/* ---- Translation-editor panel ---- */
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.panelBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-surface-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: var(--radius-full);
+  background: var(--color-border-strong);
+}
+
+.panelTitle {
+  margin-inline-start: var(--space-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.segment {
+  padding: var(--space-lg) var(--space-md);
+}
+
+.segment + .segment {
+  border-top: 1px solid var(--color-border);
+}
+
+.segLabel {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+
+.segSource {
+  font-size: var(--font-size-lg);
+}
+
+.segTarget {
+  font-family: var(--font-arabic);
+  font-size: 1.3rem;
+  line-height: var(--line-snug);
+}

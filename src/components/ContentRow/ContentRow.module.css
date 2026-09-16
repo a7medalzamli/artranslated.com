@@ -1,0 +1,68 @@
+.section {
+  padding-block: var(--space-3xl);
+}
+
+.tinted {
+  background: var(--color-surface);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.withMedia {
+  align-items: center;
+}
+
+@media (min-width: 48em) {
+  .withMedia {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+  }
+
+  /* In RTL, "reversed" still means media visually leads. */
+  .withMedia.reversed .media {
+    order: -1;
+  }
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-weight: var(--weight-semibold);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.title {
+  margin-bottom: var(--space-md);
+  max-width: 24ch;
+}
+
+.prose {
+  color: var(--color-text);
+  max-width: 65ch;
+}
+
+.prose :is(p, ul, ol) {
+  margin-bottom: var(--space-md);
+}
+
+.prose :is(p, ul, ol):last-child {
+  margin-bottom: 0;
+}
+
+.prose ul,
+.prose ol {
+  padding-inline-start: var(--space-lg);
+}
+
+.prose li {
+  margin-bottom: var(--space-2xs);
+}
+
+.media {
+  min-width: 0;
+}

@@ -3,6 +3,27 @@
 A running log of significant choices and the reason behind each one.
 Newest entries at the top.
 
+## 2026-09-16 — Milestone 2: Design system and layout
+
+- **Color palette:** deep teal-blue primary (`#14506e`) with a muted teal accent
+  (`#0d7d74`) and calm neutrals — professional, not template-like. Full token set
+  (color, spacing, type, radius, shadow, layout) lives in `src/styles/tokens.css`.
+- **Dark mode follows the system setting only** (`prefers-color-scheme`), per the
+  brief. In dark mode the brand tones lighten and buttons use dark text, keeping
+  WCAG AA contrast.
+- **Fonts** loaded via `next/font` (IBM Plex Sans + IBM Plex Sans Arabic) and
+  exposed as CSS variables `--font-ibm-plex-sans` / `--font-ibm-plex-sans-arabic`.
+- **i18n without a new dependency.** Rather than add `next-intl`, we use a small
+  typed dictionary system (`src/i18n`): English is the source of truth; Arabic
+  chrome strings are provided; `localeDirection` drives `<html dir>`. Full Arabic
+  _content_ remains out of scope for launch (structure only).
+- **Shared layout via a `(public)` route group** so every public page gets the
+  header (nav + Request a quote + mobile menu), skip link, `<main>` and footer.
+- **Stub pages for every route** were added so navigation works end to end now;
+  their real content is written in Milestone 3.
+- **`typecheck` runs `next typegen` first** to avoid failures from stale generated
+  route types after pages are added/removed.
+
 ## 2026-09-16 — Milestone 1: Project foundation
 
 - **Next.js 16.3.5 with the App Router, TypeScript strict.** Matches the fixed

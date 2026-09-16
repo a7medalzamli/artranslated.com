@@ -1,0 +1,4 @@
+.main {
+  /* Ensure the footer sits at the bottom on short pages. */
+  min-height: calc(100dvh - var(--header-height));
+}
