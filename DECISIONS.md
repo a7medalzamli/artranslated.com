@@ -3,6 +3,24 @@
 A running log of significant choices and the reason behind each one.
 Newest entries at the top.
 
+## 2026-09-16 — Milestone 7: Quote request form
+
+- **Server Action + Zod** with per-field errors returned to the form. The insert
+  uses the anonymous server client (RLS permits `insert` only), keeping least
+  privilege rather than the service role.
+- **Save first, email second.** The request is saved, then `sendQuoteEmails` runs
+  best-effort in a try/catch — email failure (or missing Resend config) never
+  blocks the saved request or the success message shown to the visitor.
+- **Spam protection = honeypot + in-memory rate limit** (no CAPTCHA, per the
+  brief's "ask first" rule). The rate limiter is best-effort on serverless; a
+  shared store can replace it later without changing call sites.
+- **No file uploads**, with an explicit notice not to send confidential files
+  until terms/NDA are agreed.
+- **Admin quote-requests**: list with status filter and inline status change
+  (new/replied/closed) that auto-saves.
+- **Resend added** (approved stack). Emails degrade gracefully until
+  `RESEND_API_KEY` / `EMAIL_FROM` / `QUOTE_NOTIFICATION_EMAIL` are set.
+
 ## 2026-09-16 — Milestone 6: Blog
 
 - **Markdown rendering via react-markdown + remark-gfm + rehype-sanitize**
