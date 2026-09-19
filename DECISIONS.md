@@ -3,6 +3,24 @@
 A running log of significant choices and the reason behind each one.
 Newest entries at the top.
 
+## 2026-09-16 — Milestone 6: Blog
+
+- **Markdown rendering via react-markdown + remark-gfm + rehype-sanitize**
+  (approved). No raw HTML injection and output is sanitized, so post content and
+  the live editor preview cannot run injected scripts.
+- **Public blog pages are `force-dynamic`** so newly published/edited posts appear
+  immediately with no redeploy; admin writes also call `revalidatePath`.
+- **Cover images in a public `post-images` Storage bucket** (migration
+  `20260916100000_...`): public read, authenticated (admin) write; the editor
+  also enforces type (PNG/JPEG/WebP/GIF) and size (≤5 MB) before upload.
+- **Slugs auto-generate from the title, stay editable, and are de-duplicated**
+  (`-2`, `-3`, …) server-side.
+- **Four starter posts seeded as drafts** via `scripts/seed-posts.mjs`
+  (idempotent) rather than a migration, so content isn't tied to schema.
+- **Reading time + slug are pure, unit-tested helpers** (`src/lib/blog/format`).
+- **Next image optimization allowed for `*.supabase.co`** so cover images use
+  `next/image`.
+
 ## 2026-09-16 — Milestone 5: Admin login
 
 - **Auth = Supabase Auth email/password.** The only user is the admin; public

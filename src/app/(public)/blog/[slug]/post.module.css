@@ -1,0 +1,20 @@
+.article {
+  padding-block: var(--space-2xl) var(--space-3xl);
+}
+
+.meta {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.cover {
+  margin-bottom: var(--space-xl);
+}
+
+.coverImg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
