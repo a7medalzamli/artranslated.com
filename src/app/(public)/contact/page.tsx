@@ -6,6 +6,7 @@ import { QuoteForm } from "./QuoteForm";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact & Request a Quote",
   description:
     "Request a quote for English, French or Spanish into Arabic translation. Tell me your language pair, specialization, size and deadline.",

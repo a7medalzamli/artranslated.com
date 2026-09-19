@@ -5,6 +5,7 @@ import { CTA } from "@/components/CTA/CTA";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/financial" },
   title: "Financial Translation into Arabic",
   description:
     "English, French and Spanish to Arabic financial translation for reports, statements and financial communications, with precise and consistent terminology.",

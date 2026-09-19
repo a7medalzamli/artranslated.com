@@ -5,6 +5,7 @@ import { CTA } from "@/components/CTA/CTA";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/healthcare" },
   title: "Healthcare Translation into Arabic",
   description:
     "English, French and Spanish to Arabic healthcare and medical translation, delivered with accuracy, clarity and an appropriate register for each audience.",

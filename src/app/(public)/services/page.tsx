@@ -8,6 +8,7 @@ import { additionalServices } from "@/content/additionalServices";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services" },
   title: "Translation Services",
   description:
     "English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations, plus MTPE, transcreation, product testing and AI data annotation.",

@@ -6,6 +6,7 @@ import { CTA } from "@/components/CTA/CTA";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/audiovisual" },
   title: "Audiovisual Translation & Dubbing into Arabic",
   description:
     "Spanish, English and French to Arabic audiovisual translation: subtitling, transcreation and dubbing adaptation with careful lip-sync alignment.",

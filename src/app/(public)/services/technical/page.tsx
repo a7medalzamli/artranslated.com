@@ -5,6 +5,7 @@ import { CTA } from "@/components/CTA/CTA";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/technical" },
   title: "Technical Translation into Arabic",
   description:
     "English, French and Spanish to Arabic technical translation for engineering documentation, manuals and specifications — with MTPE, digital product testing and AI data annotation.",

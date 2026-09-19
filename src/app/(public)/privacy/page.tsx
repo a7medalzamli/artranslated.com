@@ -6,6 +6,7 @@ import { routes } from "@/lib/routes";
 import styles from "../legal.module.css";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy" },
   title: "Privacy Policy",
   description:
     "Draft privacy policy explaining how enquiry data is handled. To be reviewed by a lawyer.",

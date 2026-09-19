@@ -4,9 +4,12 @@ import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Container } from "@/components/Container/Container";
 import { Markdown } from "@/components/Markdown/Markdown";
+import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { getPublishedPostBySlug } from "@/lib/blog/posts";
 import { formatDate, readingTimeMinutes } from "@/lib/blog/format";
 import { routes } from "@/lib/routes";
+import { siteUrl } from "@/lib/seo";
+import { site } from "@/lib/site";
 import styles from "./post.module.css";
 
 export const dynamic = "force-dynamic";
@@ -26,6 +29,7 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title,
       description,
@@ -45,8 +49,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
+  const blogPosting = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt ?? undefined,
+    image: post.cover_image_url ?? undefined,
+    datePublished: post.published_at ?? undefined,
+    dateModified: post.updated_at,
+    author: { "@type": "Person", name: site.name },
+    url: `${siteUrl}/blog/${post.slug}`,
+    mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
+  };
+
   return (
     <>
+      <JsonLd data={blogPosting} />
       <PageHeader
         eyebrow={post.category ?? undefined}
         title={post.title}

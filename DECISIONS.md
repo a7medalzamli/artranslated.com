@@ -3,6 +3,21 @@
 A running log of significant choices and the reason behind each one.
 Newest entries at the top.
 
+## 2026-09-16 — Milestone 8: SEO & performance
+
+- **`metadataBase` from `NEXT_PUBLIC_SITE_URL`** (localhost fallback), plus
+  site-wide Open Graph/Twitter defaults in the root layout; every page/post sets
+  its own title, description and **canonical** URL.
+- **`sitemap.ts`** (dynamic) lists all static routes plus published post URLs;
+  **`robots.ts`** allows everything except `/admin` and points to the sitemap.
+- **Structured data** via a small `JsonLd` component: `ProfessionalService` on the
+  home page, `BlogPosting` on each post.
+- **Images through `next/image`** (cover images from `*.supabase.co`).
+- **Lighthouse target (90+ mobile) to be measured on the deployed URL** — the
+  practices that achieve it are in place (font optimization, image optimization,
+  semantic HTML, minimal client JS, metadata); the score itself needs the live
+  site and is verified at/after launch.
+
 ## 2026-09-16 — Milestone 7: Quote request form
 
 - **Server Action + Zod** with per-field errors returned to the form. The insert

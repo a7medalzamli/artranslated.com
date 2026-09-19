@@ -6,6 +6,7 @@ import { routes } from "@/lib/routes";
 import styles from "../legal.module.css";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terms" },
   title: "Terms and Conditions",
   description: "Draft terms and conditions for translation services. To be reviewed by a lawyer.",
 };

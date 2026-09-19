@@ -5,6 +5,7 @@ import { CTA } from "@/components/CTA/CTA";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/confidentiality" },
   title: "Confidentiality & Data Security",
   description:
     "How confidential files are handled: NDAs signed before files are opened, secure transfers, careful storage and a clear data-retention policy.",

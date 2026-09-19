@@ -1,16 +1,43 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
 import { Card, CardGrid } from "@/components/Card/Card";
 import { CTA } from "@/components/CTA/CTA";
 import { LanguageSample } from "@/components/LanguageSample/LanguageSample";
+import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { specializations } from "@/content/specializations";
 import { trustSignals } from "@/content/trustSignals";
 import { routes } from "@/lib/routes";
+import { siteUrl } from "@/lib/seo";
+import { site } from "@/lib/site";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const professionalService = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: site.name,
+  description:
+    "Professional English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations.",
+  url: siteUrl,
+  areaServed: "Worldwide",
+  availableLanguage: ["English", "French", "Spanish", "Arabic"],
+  serviceType: [
+    "Technical translation",
+    "Legal translation",
+    "Financial translation",
+    "Healthcare translation",
+    "Audiovisual translation",
+  ],
+};
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={professionalService} />
       <section className={styles.hero}>
         <Container>
           <div className={styles.heroGrid}>

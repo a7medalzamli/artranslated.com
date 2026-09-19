@@ -6,6 +6,7 @@ import { CTA } from "@/components/CTA/CTA";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/process" },
   title: "Process & QA",
   description:
     "The TEP (Translation, Editing, Proofreading) workflow, quality-assurance policy and SDL Trados tools behind every Arabic translation project.",

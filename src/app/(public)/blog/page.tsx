@@ -9,6 +9,7 @@ import { routes } from "@/lib/routes";
 import styles from "./blog.module.css";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog" },
   title: "Blog",
   description:
     "Notes on translation workflow, localization, terminology and confidentiality — from an English, French and Spanish into Arabic translator.",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { defaultLocale, localeDirection } from "@/i18n/config";
+import { siteUrl } from "@/lib/seo";
 import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -18,12 +19,22 @@ const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "English, French & Spanish to Arabic Translation Services",
     template: "%s | Arabic Translation Services",
   },
   description:
     "Professional English, French and Spanish into Arabic translation: technical, legal, financial, healthcare and audiovisual specializations.",
+  openGraph: {
+    type: "website",
+    locale: "en",
+    siteName: "Arabic Translation Services",
+    url: siteUrl,
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

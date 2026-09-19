@@ -8,6 +8,7 @@ import { routes } from "@/lib/routes";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/work" },
   title: "Work & CV",
   description:
     "Anonymized success stories across environmental engineering, audiovisual dubbing and AI localization, plus client types and professional background.",
