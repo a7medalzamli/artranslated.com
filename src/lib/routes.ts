@@ -20,3 +20,11 @@ export const routes = {
 } as const;
 
 export type RouteKey = keyof typeof routes;
+
+/** Admin area routes (protected on the server). */
+export const adminRoutes = {
+  dashboard: "/admin",
+  login: "/admin/login",
+  posts: "/admin/posts",
+  quotes: "/admin/quote-requests",
+} as const;

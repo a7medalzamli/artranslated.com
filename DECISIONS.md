@@ -3,6 +3,23 @@
 A running log of significant choices and the reason behind each one.
 Newest entries at the top.
 
+## 2026-09-16 — Milestone 5: Admin login
+
+- **Auth = Supabase Auth email/password.** The only user is the admin; public
+  signup is disabled in the Supabase dashboard (no signup UI exists either).
+- **Two-layer protection.** `src/middleware.ts` (matcher `/admin/:path*`) runs
+  `updateSession` to refresh the session and redirect unauthenticated users to
+  `/admin/login`; the protected admin layout _also_ verifies with `getUser()`
+  (defense in depth). Middleware is scoped to `/admin` so the public site works
+  even without Supabase env.
+- **Route group `admin/(protected)`** holds the authenticated area (dashboard,
+  posts, quote-requests); `admin/login` sits outside it to avoid a redirect loop.
+- **Login via Server Action** with Zod validation; errors are generic
+  ("Invalid email or password") to avoid leaking which emails exist.
+- **Admin pages are `noindex`** via metadata.
+- **Vitest:** added `@`→`src` alias (needed for runtime value imports) and
+  middleware protection tests.
+
 ## 2026-09-16 — Milestone 4: Database
 
 - **Two tables, RLS on both** (`posts`, `quote_requests`) with explicit policies.
