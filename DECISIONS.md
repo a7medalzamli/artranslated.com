@@ -3,6 +3,25 @@
 A running log of significant choices and the reason behind each one.
 Newest entries at the top.
 
+## 2026-09-19 — Milestone 9: Testing & security review
+
+- **Unit tests (Vitest):** validation schemas (auth, quote, post) and blog
+  helpers, plus the existing RLS and middleware-protection tests — 27 total.
+- **E2E (Playwright):** public browse, blog listing, and a full quote submission
+  driven in a real browser; admin route-protection redirect. The admin
+  authoring test (login → create → publish → delete) is gated on
+  `TEST_ADMIN_EMAIL`/`TEST_ADMIN_PASSWORD` and auto-skips until an admin user
+  exists.
+- **Accessibility:** added `@axe-core/playwright` (dev-only) and scan all 14
+  public pages against WCAG 2.0/2.1 A & AA — zero violations. (New dependency
+  beyond the listed stack; it's the standard tool for the brief's required a11y
+  checks and Playwright was already approved.)
+- **Security headers** in `next.config.ts` (CSP, HSTS, X-Frame-Options,
+  X-Content-Type-Options, Referrer-Policy, Permissions-Policy). `'unsafe-eval'`
+  is allowed in **development only** (React dev needs it); production CSP omits it.
+- **Security review** documented in `SECURITY.md`: no high-severity findings;
+  verified the service-role key value is absent from the client bundle.
+
 ## 2026-09-16 — Milestone 8: SEO & performance
 
 - **`metadataBase` from `NEXT_PUBLIC_SITE_URL`** (localhost fallback), plus
