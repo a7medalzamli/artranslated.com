@@ -3,6 +3,16 @@
 A running log of significant choices and the reason behind each one.
 Newest entries at the top.
 
+## 2026-09-19 — Milestone 10: Launch
+
+- **Owner + launch guides** written (`OWNER-GUIDE.md`, `LAUNCH-GUIDE.md`). Actual
+  launch (Vercel env, domain/DNS, Resend verification) is user-driven and guided
+  interactively; DNS changes will review existing records first and never remove
+  MX.
+- **Analytics: Vercel Web Analytics** (owner's choice) via `@vercel/analytics`.
+  Privacy-friendly, cookieless, same-origin — works within the existing CSP with
+  no changes.
+
 ## 2026-09-19 — Milestone 9: Testing & security review
 
 - **Unit tests (Vitest):** validation schemas (auth, quote, post) and blog

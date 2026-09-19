@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Sans_Arabic } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { defaultLocale, localeDirection } from "@/i18n/config";
 import { siteUrl } from "@/lib/seo";
 import "./globals.css";
@@ -44,7 +45,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       dir={localeDirection[defaultLocale]}
       className={`${ibmPlexSans.variable} ${ibmPlexSansArabic.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
