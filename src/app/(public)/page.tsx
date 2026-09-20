@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
-import { Card, CardGrid } from "@/components/Card/Card";
 import { CTA } from "@/components/CTA/CTA";
 import { LanguageSample } from "@/components/LanguageSample/LanguageSample";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
@@ -42,9 +42,7 @@ export default function HomePage() {
         <Container>
           <div className={styles.heroGrid}>
             <div className={styles.heroText}>
-              <p className={styles.eyebrow}>
-                English &middot; French &middot; Spanish &rarr; Arabic
-              </p>
+              <p className={styles.label}>English &middot; French &middot; Spanish &rarr; Arabic</p>
               <h1 className={styles.title}>
                 Precise Arabic translation agencies and companies can rely on
               </h1>
@@ -69,43 +67,45 @@ export default function HomePage() {
 
       <section className={styles.section}>
         <Container>
-          <div className={styles.sectionHead}>
-            <h2 className={styles.sectionTitle}>Specializations</h2>
-            <p className={styles.sectionIntro}>
-              Focused expertise where accuracy and terminology matter most.
-            </p>
-          </div>
-          <CardGrid columns={3}>
+          <p className={styles.label}>Specializations</p>
+          <p className={styles.sectionLead}>
+            Focused expertise where accuracy and terminology matter most.
+          </p>
+          <ul className={styles.index}>
             {specializations.map((item) => (
-              <Card key={item.slug} title={item.title} href={item.href}>
-                {item.summary}
-              </Card>
+              <li key={item.slug} className={styles.indexRow}>
+                <Link href={item.href} className={styles.indexTerm}>
+                  {item.title}
+                </Link>
+                <p className={styles.indexDesc}>{item.summary}</p>
+              </li>
             ))}
-          </CardGrid>
+          </ul>
         </Container>
       </section>
 
       <section className={`${styles.section} ${styles.tinted}`}>
         <Container>
-          <div className={styles.sectionHead}>
-            <h2 className={styles.sectionTitle}>Why clients trust the work</h2>
-            <p className={styles.sectionIntro}>
-              In place of a certification logo, four concrete signals: a defined process, the right
-              tools, strict confidentiality and genuine subject-matter expertise.
-            </p>
+          <div className={styles.split}>
+            <div className={styles.splitAside}>
+              <p className={styles.label}>Why clients trust the work</p>
+              <p className={styles.sectionLead}>
+                In place of a certification logo, four concrete signals: a defined process, the
+                right tools, strict confidentiality and genuine subject-matter expertise.
+              </p>
+            </div>
+            <div className={styles.splitMain}>
+              {trustSignals.map((signal) => (
+                <div key={signal.title} className={styles.trustItem}>
+                  <h2 className={styles.trustTitle}>{signal.title}</h2>
+                  <p className={styles.trustDesc}>{signal.summary}</p>
+                  <Link href={signal.href} className={styles.trustLink}>
+                    {signal.linkLabel} <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
-          <CardGrid columns={2}>
-            {trustSignals.map((signal) => (
-              <Card
-                key={signal.title}
-                title={signal.title}
-                href={signal.href}
-                linkLabel={signal.linkLabel}
-              >
-                {signal.summary}
-              </Card>
-            ))}
-          </CardGrid>
         </Container>
       </section>
 

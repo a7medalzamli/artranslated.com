@@ -45,10 +45,12 @@ h4 {
   font-weight: var(--weight-semibold);
   color: var(--color-text);
   text-wrap: balance;
+  letter-spacing: var(--tracking-tight);
 }
 
 h1 {
   font-size: var(--font-size-h1);
+  letter-spacing: var(--tracking-tighter);
 }
 h2 {
   font-size: var(--font-size-h2);
