@@ -45,6 +45,10 @@
   gap: var(--space-md);
 }
 
+.heroSocials {
+  margin-top: var(--space-lg);
+}
+
 /* ---- Sections ---- */
 .section {
   padding-block: var(--space-4xl);
