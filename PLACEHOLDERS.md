@@ -9,7 +9,7 @@ Status: ☐ = still a placeholder, ☑ = provided and filled in.
 
 ## Identity & contact
 
-- ☐ `[Your Name]` — the translator's full name, shown in header, footer, CV, metadata
+- ☑ `[Your Name]` — set to "Ahmed Alzamli" in `src/lib/site.ts` (header, footer, metadata). Note: the Terms/Privacy drafts still use `[Legal Entity / Your Name]` pending the legal entity name.
 - ☐ `[Professional Title]` — e.g. "EN/FR/ES → Arabic Translator & Localization Specialist"
 - ☐ `[Contact Email]` — public contact address shown on the site
 - ☐ `[Notification Email]` — where quote-request notifications are sent (Milestone 7; may differ from the public one)

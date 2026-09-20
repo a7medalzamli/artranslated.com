@@ -4,7 +4,7 @@
  */
 export const site = {
   /** Wordmark / logo text shown in the header and footer. */
-  name: "[Your Name]",
+  name: "Ahmed Alzamli",
   /** Short professional descriptor used in the footer. */
   role: "English, French & Spanish into Arabic Translator",
 } as const;
