@@ -104,11 +104,7 @@
 
 .mobileTheme {
   margin-top: var(--space-sm);
-}
-
-.mobileThemeToggle {
-  width: 100%;
-  justify-content: center;
+  padding-inline: var(--space-xs);
 }
 
 .mobileCta {

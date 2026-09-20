@@ -67,7 +67,6 @@ export function ThemeToggle({ className }: { className?: string }) {
       title={`Theme: ${labels[theme]}`}
     >
       <Icon />
-      <span className={styles.label}>Theme: {labels[theme]}</span>
     </button>
   );
 }

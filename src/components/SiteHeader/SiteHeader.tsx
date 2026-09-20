@@ -74,7 +74,7 @@ export function SiteHeader({ dict }: { dict: Dictionary }) {
                 </li>
               ))}
               <li className={styles.mobileTheme}>
-                <ThemeToggle className={styles.mobileThemeToggle} />
+                <ThemeToggle />
               </li>
               <li className={styles.mobileCta}>
                 <Button href={routes.contact} size="lg" onClick={() => setOpen(false)}>
