@@ -44,7 +44,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang={defaultLocale}
       dir={localeDirection[defaultLocale]}
       className={`${ibmPlexSans.variable} ${ibmPlexSansArabic.variable}`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          // Set the saved theme before paint to avoid a flash of the wrong theme.
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}}catch(e){}})();",
+          }}
+        />
+      </head>
       <body>
         {children}
         <Analytics />

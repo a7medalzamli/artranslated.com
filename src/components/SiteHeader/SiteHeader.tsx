@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Container } from "../Container/Container";
 import { Button } from "../Button/Button";
+import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
 import type { Dictionary } from "@/i18n";
@@ -42,6 +43,7 @@ export function SiteHeader({ dict }: { dict: Dictionary }) {
           </nav>
 
           <div className={styles.desktopCta}>
+            <ThemeToggle />
             <Button href={routes.contact}>{dict.actions.requestQuote}</Button>
           </div>
 
@@ -71,6 +73,9 @@ export function SiteHeader({ dict }: { dict: Dictionary }) {
                   </Link>
                 </li>
               ))}
+              <li className={styles.mobileTheme}>
+                <ThemeToggle className={styles.mobileThemeToggle} />
+              </li>
               <li className={styles.mobileCta}>
                 <Button href={routes.contact} size="lg" onClick={() => setOpen(false)}>
                   {dict.actions.requestQuote}

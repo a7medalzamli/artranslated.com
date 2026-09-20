@@ -13,6 +13,16 @@ Newest entries at the top.
   Privacy-friendly, cookieless, same-origin — works within the existing CSP with
   no changes.
 
+## 2026-09-20 — Theme switch (System / Light / Dark)
+
+- `data-theme` on `<html>` overrides the `prefers-color-scheme` default: dark
+  tokens apply under `@media (dark) :root:not([data-theme="light"])` and under
+  `:root[data-theme="dark"]`; `color-scheme` set per theme for native controls.
+- No-flash inline script in the root layout sets the saved theme before paint;
+  `<html suppressHydrationWarning>`. Choice saved in localStorage (try/catch).
+- `ThemeToggle` reads the preference via `useSyncExternalStore` (no
+  setState-in-effect, no hydration mismatch). No new dependency.
+
 ## 2026-09-19 — Milestone 9: Testing & security review
 
 - **Unit tests (Vitest):** validation schemas (auth, quote, post) and blog
