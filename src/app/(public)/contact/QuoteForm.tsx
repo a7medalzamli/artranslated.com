@@ -3,6 +3,7 @@
 import { useActionState } from "react";
 import { submitQuote, type QuoteState } from "./actions";
 import { specializations } from "@/content/specializations";
+import { homeServices } from "@/content/homeServices";
 import styles from "./contact.module.css";
 
 const initialState: QuoteState = { ok: false, error: null };
@@ -92,6 +93,18 @@ export function QuoteForm() {
           <input name="deadline" placeholder="e.g. 15 October, or flexible" />
         </label>
       </div>
+
+      <label className={styles.field}>
+        <span>Service needed</span>
+        <select name="service" defaultValue="">
+          <option value="">Select a service…</option>
+          {homeServices.map((service) => (
+            <option key={service.title} value={service.title}>
+              {service.title}
+            </option>
+          ))}
+        </select>
+      </label>
 
       <label className={styles.field}>
         <span>Project details</span>
