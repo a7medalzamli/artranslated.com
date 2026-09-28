@@ -7,7 +7,6 @@ import Image from "next/image";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { LanguageSample } from "@/components/LanguageSample/LanguageSample";
 import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
-import { specializations } from "@/content/specializations";
 import { homeServices } from "@/content/homeServices";
 import { trustSignals } from "@/content/trustSignals";
 import { routes } from "@/lib/routes";
@@ -86,25 +85,6 @@ export default function HomePage() {
               </Button>
             </div>
           </div>
-        </Container>
-      </section>
-
-      <section className={styles.section}>
-        <Container>
-          <p className={styles.label}>Specializations</p>
-          <p className={styles.sectionLead}>
-            Focused expertise where accuracy and terminology matter most.
-          </p>
-          <ul className={styles.index}>
-            {specializations.map((item) => (
-              <li key={item.slug} className={styles.indexRow}>
-                <Link href={item.href} className={styles.indexTerm}>
-                  {item.title}
-                </Link>
-                <p className={styles.indexDesc}>{item.summary}</p>
-              </li>
-            ))}
-          </ul>
         </Container>
       </section>
 
