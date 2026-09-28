@@ -13,6 +13,12 @@ Newest entries at the top.
   Privacy-friendly, cookieless, same-origin — works within the existing CSP with
   no changes.
 
+## 2026-09-28 — Removed dark mode (light only)
+
+- Per owner request, the site is now light mode only: dark token blocks, the
+  no-flash script, `suppressHydrationWarning`, and the `ThemeToggle` component
+  were removed. `color-scheme: light` retained.
+
 ## 2026-09-20 — Theme switch (System / Light / Dark)
 
 - `data-theme` on `<html>` overrides the `prefers-color-scheme` default: dark

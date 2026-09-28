@@ -109,13 +109,8 @@
   color: var(--color-primary);
 }
 
-.mobileTheme {
-  margin-top: var(--space-sm);
-  padding-inline: var(--space-xs);
-}
-
 .mobileCta {
-  margin-top: var(--space-xs);
+  margin-top: var(--space-md);
 }
 
 /* ---- Switch to desktop layout ---- */
