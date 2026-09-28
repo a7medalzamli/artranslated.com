@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "../Container/Container";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
@@ -71,6 +72,31 @@ export function SiteFooter({ dict }: { dict: Dictionary }) {
             </ul>
           </nav>
         </div>
+
+        <ul className={styles.badges}>
+          {site.badges.map((badge, i) => {
+            const external = badge.href.startsWith("http");
+            return (
+              <li key={`${badge.src}-${i}`}>
+                <a
+                  href={badge.href}
+                  className={styles.badgeLink}
+                  aria-label={badge.label}
+                  title={badge.label}
+                  {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                >
+                  <Image
+                    src={badge.src}
+                    alt={badge.label}
+                    width={120}
+                    height={60}
+                    className={styles.badgeImg}
+                  />
+                </a>
+              </li>
+            );
+          })}
+        </ul>
 
         <div className={styles.bottom}>
           <p>

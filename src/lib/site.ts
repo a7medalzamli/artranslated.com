@@ -17,4 +17,16 @@ export const site = {
     { platform: "x", label: "X (Twitter)", href: "#" },
     { platform: "email", label: "Email", href: "#" },
   ],
+  /**
+   * Credential / membership badges shown at the bottom of the footer.
+   * `href: "#"` are placeholders — replace with the real profile/verification
+   * URLs (tracked in PLACEHOLDERS.md). Edit `label` for accurate alt text.
+   */
+  badges: [
+    { src: "/badges/badge-1.jpg", label: "100% satisfaction guarantee", href: "#" },
+    { src: "/badges/badge-2.jpg", label: "Translators without Borders", href: "#" },
+    { src: "/badges/badge-3.jpg", label: "ProZ Certified PRO", href: "#" },
+    { src: "/badges/badge-4.jpg", label: "Translators without Borders", href: "#" },
+    { src: "/badges/badge-5.jpg", label: "Professional membership", href: "#" },
+  ],
 } as const;
