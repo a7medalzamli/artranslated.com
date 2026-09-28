@@ -48,6 +48,16 @@
   border-color: var(--color-primary);
 }
 
+.accent {
+  background: var(--color-accent-strong);
+  color: var(--color-on-accent);
+}
+
+.accent:hover {
+  background: var(--color-accent-strong-hover);
+  color: var(--color-on-accent);
+}
+
 .ghost {
   background: transparent;
   color: var(--color-text);

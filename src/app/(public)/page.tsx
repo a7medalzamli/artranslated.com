@@ -5,7 +5,10 @@ import { Button } from "@/components/Button/Button";
 import { CTA } from "@/components/CTA/CTA";
 import Image from "next/image";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
+import { LanguageSample } from "@/components/LanguageSample/LanguageSample";
+import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
 import { specializations } from "@/content/specializations";
+import { homeServices } from "@/content/homeServices";
 import { trustSignals } from "@/content/trustSignals";
 import { routes } from "@/lib/routes";
 import { siteUrl } from "@/lib/seo";
@@ -112,6 +115,76 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className={styles.services}>
+        <Container>
+          <div className={styles.servicesHead}>
+            <p className={styles.label}>Our expertise</p>
+            <h2 className={styles.servicesTitle}>Specialized translation services</h2>
+          </div>
+          <div className={styles.serviceGrid}>
+            {homeServices.map((service) => (
+              <div key={service.title} className={styles.serviceCard}>
+                <span className={styles.serviceIcon}>
+                  <ServiceIcon name={service.icon} />
+                </span>
+                <h3 className={styles.serviceCardTitle}>{service.title}</h3>
+                <p className={styles.serviceCardText}>{service.summary}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className={`${styles.section} ${styles.tinted}`}>
+        <Container>
+          <div className={styles.whyGrid}>
+            <div>
+              <p className={styles.label}>The advantage</p>
+              <h2 className={styles.whyTitle}>Why partner with me?</h2>
+              <p className={styles.whyIntro}>
+                Reaching the Arabic market takes cultural intelligence, technical precision and
+                reliability &mdash; not just language.
+              </p>
+              <ul className={styles.whyList}>
+                {[
+                  {
+                    title: "Meticulous quality assurance",
+                    text: "A full Translation–Editing–Proofreading review keeps quality and tone consistent.",
+                  },
+                  {
+                    title: "Industry-standard tools",
+                    text: "SDL Trados translation memories and termbases ensure consistency and efficiency.",
+                  },
+                  {
+                    title: "Cultural & terminology accuracy",
+                    text: "Content is adapted so it reads naturally and correctly for the target audience.",
+                  },
+                ].map((item) => (
+                  <li key={item.title} className={styles.whyItem}>
+                    <span className={styles.whyCheck} aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="m5 12 5 5 9-11"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div>
+                      <h3 className={styles.whyItemTitle}>{item.title}</h3>
+                      <p className={styles.whyItemText}>{item.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <LanguageSample />
           </div>
         </Container>
       </section>

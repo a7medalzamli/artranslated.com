@@ -13,6 +13,21 @@ Newest entries at the top.
   Privacy-friendly, cookieless, same-origin — works within the existing CSP with
   no changes.
 
+## 2026-09-28 — Restyle to navy + amber; add services grid & "why partner" sections
+
+- Per owner request (based on a supplied mockup), restyled the whole site at the
+  token level: **navy** (`#0f172a`) brand + **amber** accent. `--color-accent`
+  is amber-700 (`#b45309`, AA-safe for text) while `--color-accent-strong`
+  (`#f59e0b`) is the bright fill for buttons/icons paired with navy text. Added a
+  Button `accent` variant. **Kept plain CSS + IBM Plex** — did NOT adopt
+  Tailwind, Font Awesome or Inter from the mockup (fixed-stack rules); icons are
+  inline SVG.
+- Added two home sections from the mockup without removing existing ones: an
+  icon **services grid** (`homeServices` + `ServiceIcon`) and a **"Why partner
+  with me?"** feature list reusing the `LanguageSample` panel as its visual.
+- Verified: axe scan of all 14 public pages passes (AA contrast) with the new
+  palette.
+
 ## 2026-09-28 — Removed dark mode (light only)
 
 - Per owner request, the site is now light mode only: dark token blocks, the

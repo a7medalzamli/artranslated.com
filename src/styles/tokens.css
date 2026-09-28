@@ -7,23 +7,29 @@
  */
 
 :root {
-  /* ---- Color: neutrals & surfaces (cool off-white / off-black) ---- */
-  --color-bg: #fbfcfd;
-  --color-surface: #f2f5f8;
-  --color-surface-2: #e7ecf1;
-  --color-text: #111418;
-  --color-text-muted: #556070;
-  --color-border: #e4e8ee; /* hairline */
-  --color-border-strong: #ccd3dc;
+  /* ---- Color: neutrals & surfaces ---- */
+  --color-bg: #ffffff;
+  --color-surface: #f8fafc;
+  --color-surface-2: #eef2f7;
+  --color-text: #1f2937; /* gray-800 */
+  --color-text-muted: #4b5563; /* gray-600 */
+  --color-border: #e5e7eb;
+  --color-border-strong: #cbd2db;
 
-  /* ---- Color: single accent (cobalt) — links, focus, small highlights ---- */
-  --color-primary: #2a4bd0;
-  --color-primary-hover: #2140b4;
+  /* ---- Color: brand (navy) ---- */
+  --color-primary: #0f172a; /* navy-900 */
+  --color-primary-hover: #1a2942; /* navy-800 */
   --color-on-primary: #ffffff;
 
-  --color-accent: #2a4bd0;
-  --color-accent-hover: #2140b4;
-  --color-on-accent: #ffffff;
+  /* ---- Color: accent (amber) ----
+     `--color-accent` is the AA-safe amber for text/links/eyebrows on light
+     backgrounds; `--color-accent-strong` is the bright amber for large fills
+     (buttons, icon highlights) which pair with navy text. */
+  --color-accent: #b45309; /* amber-700 — AA on white */
+  --color-accent-hover: #92400e; /* amber-800 */
+  --color-on-accent: #0f172a; /* navy text on amber fills */
+  --color-accent-strong: #f59e0b; /* amber-500 */
+  --color-accent-strong-hover: #d97706; /* amber-600 */
 
   /* ---- Color: feedback ---- */
   --color-danger: #b3261e;
@@ -32,7 +38,7 @@
   --color-success-bg: #e7f5ee;
 
   /* ---- Color: focus ring (visible keyboard focus) ---- */
-  --color-focus: #2a4bd0;
+  --color-focus: #b45309;
 
   /* ---- Typography ---- */
   --font-sans:
