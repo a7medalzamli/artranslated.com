@@ -120,7 +120,6 @@ export default function HomePage() {
 
       <section className={styles.partners} aria-label="Partners">
         <Container>
-          <h2 className={styles.partnersHeading}>Partners</h2>
           <ul className={styles.partnerList}>
             {site.badges.map((badge, i) => (
               <li key={`${badge.src}-${i}`} className={styles.partnerItem}>
