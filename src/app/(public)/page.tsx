@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
-import { CTA } from "@/components/CTA/CTA";
 import Image from "next/image";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { LanguageSample } from "@/components/LanguageSample/LanguageSample";
@@ -216,13 +215,6 @@ export default function HomePage() {
           </ul>
         </Container>
       </section>
-
-      <CTA
-        title="Have a project in mind?"
-        description="Tell me your language pair, specialization and deadline, and I'll get back to you with a clear quote."
-        primary={{ label: "Request a quote", href: routes.contact }}
-        secondary={{ label: "See how I work", href: routes.process }}
-      />
     </>
   );
 }
