@@ -4,7 +4,6 @@ import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
 import { CTA } from "@/components/CTA/CTA";
 import Image from "next/image";
-import { SocialLinks } from "@/components/SocialLinks/SocialLinks";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { specializations } from "@/content/specializations";
 import { trustSignals } from "@/content/trustSignals";
@@ -60,7 +59,6 @@ export default function HomePage() {
                   Explore services
                 </Button>
               </div>
-              <SocialLinks className={styles.heroSocials} />
             </div>
             <Image
               src="/portrait.jpg"

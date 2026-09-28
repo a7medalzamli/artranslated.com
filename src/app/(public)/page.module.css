@@ -45,10 +45,6 @@
   gap: var(--space-md);
 }
 
-.heroSocials {
-  margin-top: var(--space-lg);
-}
-
 .portrait {
   display: block;
   width: 100%;
