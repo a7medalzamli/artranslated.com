@@ -33,7 +33,7 @@ export const homeServices: HomeService[] = [
     icon: "film",
   },
   {
-    title: "AI / MT post-editing",
+    title: "MT post-editing",
     summary:
       "Editing machine-translated Arabic to human quality — correcting nuance, tone and terminology.",
     icon: "robot",
