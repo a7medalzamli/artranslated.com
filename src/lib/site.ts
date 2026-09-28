@@ -25,7 +25,7 @@ export const site = {
   badges: [
     { src: "/badges/badge-2.jpg", label: "Translators without Borders", href: "#" },
     { src: "/badges/badge-3.jpg", label: "ProZ Certified PRO", href: "#" },
-    { src: "/badges/badge-4.jpg", label: "Translators without Borders", href: "#" },
     { src: "/badges/badge-6.jpg", label: "Partner", href: "#" },
+    { src: "/badges/badge-5.jpg", label: "Professional membership", href: "#" },
   ],
 } as const;
