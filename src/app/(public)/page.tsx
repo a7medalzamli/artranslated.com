@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
 import { CTA } from "@/components/CTA/CTA";
-import { LanguageSample } from "@/components/LanguageSample/LanguageSample";
+import Image from "next/image";
 import { SocialLinks } from "@/components/SocialLinks/SocialLinks";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { specializations } from "@/content/specializations";
@@ -62,7 +62,14 @@ export default function HomePage() {
               </div>
               <SocialLinks className={styles.heroSocials} />
             </div>
-            <LanguageSample />
+            <Image
+              src="/portrait.jpg"
+              alt="Ahmed Alzamli"
+              width={640}
+              height={640}
+              className={styles.portrait}
+              priority
+            />
           </div>
         </Container>
       </section>
