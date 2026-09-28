@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Sans_Arabic } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+import { CookieConsent } from "@/components/CookieConsent/CookieConsent";
 import { defaultLocale, localeDirection } from "@/i18n/config";
 import { siteUrl } from "@/lib/seo";
 import "./globals.css";
@@ -47,7 +47,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body>
         {children}
-        <Analytics />
+        <CookieConsent />
       </body>
     </html>
   );
