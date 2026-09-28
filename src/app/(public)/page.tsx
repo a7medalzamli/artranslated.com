@@ -43,26 +43,33 @@ export default function HomePage() {
       <JsonLd data={professionalService} />
       <section className={styles.hero}>
         <Container>
-          <div className={styles.heroGrid}>
-            <div className={styles.heroText}>
-              <p className={styles.label}>English &middot; French &middot; Spanish &rarr; Arabic</p>
-              <h1 className={styles.title}>
-                Precise Arabic translation agencies and companies can rely on
-              </h1>
-              <p className={styles.lead}>
-                Technical, legal, financial, healthcare and audiovisual specializations &mdash;
-                delivered with a full Translation&ndash;Editing&ndash;Proofreading workflow and SDL
-                Trados terminology control.
-              </p>
-              <div className={styles.actions}>
-                <Button href={routes.contact} size="lg">
-                  Request a quote
-                </Button>
-                <Button href={routes.services} variant="secondary" size="lg">
-                  Explore services
-                </Button>
-              </div>
+          <div className={styles.heroInner}>
+            <p className={styles.heroLabel}>
+              English &middot; French &middot; Spanish &rarr; Arabic
+            </p>
+            <h1 className={styles.heroTitle}>
+              Precise Arabic translation agencies and companies can rely on
+            </h1>
+            <p className={styles.heroLead}>
+              Technical, legal, financial, healthcare and audiovisual specializations &mdash;
+              delivered with a full Translation&ndash;Editing&ndash;Proofreading workflow and SDL
+              Trados terminology control.
+            </p>
+            <div className={styles.heroActions}>
+              <Button href={routes.contact} variant="accent" size="lg">
+                Request a quote
+              </Button>
+              <Link href={routes.services} className={styles.heroSecondary}>
+                Explore services
+              </Link>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className={styles.about} id="about">
+        <Container>
+          <div className={styles.aboutGrid}>
             <Image
               src="/portrait.jpg"
               alt="Ahmed Alzamli"
@@ -71,6 +78,13 @@ export default function HomePage() {
               className={styles.portrait}
               priority
             />
+            <div>
+              <h2 className={styles.aboutTitle}>About me</h2>
+              <p className={styles.aboutText}>{site.role}.</p>
+              <Button href={routes.work} variant="secondary">
+                Read my background
+              </Button>
+            </div>
           </div>
         </Container>
       </section>

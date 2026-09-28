@@ -1,20 +1,76 @@
-/* ---- Hero ---- */
+/* ---- Hero (dark navy) ---- */
 .hero {
-  padding-block: var(--space-4xl) var(--space-3xl);
-  border-block-end: 1px solid var(--color-border);
+  background-color: var(--color-primary);
+  background-image:
+    radial-gradient(
+      circle at 100% 100%,
+      var(--color-primary-hover) 0,
+      var(--color-primary-hover) 6px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 0 0,
+      var(--color-primary-hover) 0,
+      var(--color-primary-hover) 6px,
+      transparent 6px
+    );
+  background-size: 24px 24px;
+  padding-block: var(--space-4xl);
+  text-align: center;
 }
 
-.heroGrid {
-  display: grid;
-  gap: var(--space-2xl);
+.heroInner {
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.heroLabel {
+  color: var(--color-accent-strong);
+  font-weight: var(--weight-semibold);
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--tracking-label);
+  margin-bottom: var(--space-md);
+}
+
+.heroTitle {
+  font-size: var(--font-size-h1);
+  color: #ffffff;
+  margin-inline: auto;
+  max-width: 20ch;
+}
+
+.heroLead {
+  margin: var(--space-lg) auto 0;
+  font-size: var(--font-size-lg);
+  color: #d1d5db;
+  max-width: 46ch;
+}
+
+.heroActions {
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.heroSecondary {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  font-size: var(--font-size-lg);
+  font-weight: var(--weight-semibold);
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
 }
 
-@media (min-width: 56em) {
-  .heroGrid {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: var(--space-4xl);
-  }
+.heroSecondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
 }
 
 /* Sentence-case label (reads naturally; matches the future Arabic version) */
@@ -26,30 +82,40 @@
   margin-bottom: var(--space-md);
 }
 
-.title {
-  font-size: var(--font-size-h1);
-  max-width: 16ch;
+/* ---- About me ---- */
+.about {
+  padding-block: var(--space-4xl);
 }
 
-.lead {
-  margin-top: var(--space-lg);
+.aboutGrid {
+  display: grid;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+@media (min-width: 56em) {
+  .aboutGrid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: var(--space-4xl);
+  }
+}
+
+.aboutTitle {
+  font-size: var(--font-size-h2);
+}
+
+.aboutText {
+  margin-block: var(--space-md) var(--space-lg);
   font-size: var(--font-size-lg);
   color: var(--color-text-muted);
-  max-width: 52ch;
-}
-
-.actions {
-  margin-top: var(--space-xl);
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-md);
+  max-width: var(--measure);
 }
 
 .portrait {
   display: block;
   width: 100%;
   height: auto;
-  max-width: 30rem;
+  max-width: 26rem;
   margin-inline: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
