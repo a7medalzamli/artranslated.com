@@ -276,17 +276,9 @@
 }
 
 /* ---- Why partner ---- */
-.whyGrid {
-  display: grid;
-  gap: var(--space-2xl);
-  align-items: center;
-}
-
-@media (min-width: 56em) {
-  .whyGrid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-4xl);
-  }
+.whyHead {
+  max-width: 48ch;
+  margin-bottom: var(--space-2xl);
 }
 
 .whyTitle {
@@ -303,11 +295,23 @@
 
 .whyList {
   list-style: none;
-  margin: var(--space-xl) 0 0;
+  margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg) var(--space-2xl);
+}
+
+@media (min-width: 40em) {
+  .whyList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60em) {
+  .whyList {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .whyItem {

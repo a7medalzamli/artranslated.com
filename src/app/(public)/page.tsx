@@ -4,7 +4,6 @@ import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
 import Image from "next/image";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
-import { LanguageSample } from "@/components/LanguageSample/LanguageSample";
 import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
 import { QuoteForm } from "./contact/QuoteForm";
 import { homeServices } from "@/content/homeServices";
@@ -135,51 +134,60 @@ export default function HomePage() {
 
       <section className={`${styles.section} ${styles.tinted}`}>
         <Container>
-          <div className={styles.whyGrid}>
-            <div>
-              <p className={styles.label}>The advantage</p>
-              <h2 className={styles.whyTitle}>Why partner with me?</h2>
-              <p className={styles.whyIntro}>
-                Reaching the Arabic market takes cultural intelligence, technical precision and
-                reliability &mdash; not just language.
-              </p>
-              <ul className={styles.whyList}>
-                {[
-                  {
-                    title: "Meticulous quality assurance",
-                    text: "A full Translation–Editing–Proofreading review keeps quality and tone consistent.",
-                  },
-                  {
-                    title: "Industry-standard tools",
-                    text: "SDL Trados translation memories and termbases ensure consistency and efficiency.",
-                  },
-                  {
-                    title: "Cultural & terminology accuracy",
-                    text: "Content is adapted so it reads naturally and correctly for the target audience.",
-                  },
-                ].map((item) => (
-                  <li key={item.title} className={styles.whyItem}>
-                    <span className={styles.whyCheck} aria-hidden="true">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                        <path
-                          d="m5 12 5 5 9-11"
-                          stroke="currentColor"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </span>
-                    <div>
-                      <h3 className={styles.whyItemTitle}>{item.title}</h3>
-                      <p className={styles.whyItemText}>{item.text}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <LanguageSample />
+          <div className={styles.whyHead}>
+            <p className={styles.label}>The advantage</p>
+            <h2 className={styles.whyTitle}>Why partner with me?</h2>
+            <p className={styles.whyIntro}>
+              Reaching the Arabic market takes cultural intelligence, technical precision and
+              reliability &mdash; not just language.
+            </p>
           </div>
+          <ul className={styles.whyList}>
+            {[
+              {
+                title: "Meticulous quality assurance",
+                text: "A full Translation–Editing–Proofreading review keeps quality and tone consistent.",
+              },
+              {
+                title: "Industry-standard tools",
+                text: "SDL Trados translation memories and termbases ensure consistency and efficiency.",
+              },
+              {
+                title: "Cultural & terminology accuracy",
+                text: "Content is adapted so it reads naturally and correctly for the target audience.",
+              },
+              {
+                title: "On-time delivery",
+                text: "Projects are scoped realistically and delivered by the agreed deadline.",
+              },
+              {
+                title: "Clear communication",
+                text: "Questions are raised early and progress is easy to follow from start to finish.",
+              },
+              {
+                title: "Confidentiality by default",
+                text: "Files are handled securely, with an NDA available before anything is shared.",
+              },
+            ].map((item) => (
+              <li key={item.title} className={styles.whyItem}>
+                <span className={styles.whyCheck} aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="m5 12 5 5 9-11"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                <div>
+                  <h3 className={styles.whyItemTitle}>{item.title}</h3>
+                  <p className={styles.whyItemText}>{item.text}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </Container>
       </section>
 
