@@ -15,15 +15,22 @@
 }
 
 .brand {
-  font-weight: var(--weight-bold);
-  font-size: var(--font-size-lg);
-  color: var(--color-text);
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
   margin-inline-end: auto;
+  border-radius: var(--radius-sm);
 }
 
-.brand:hover {
-  color: var(--color-primary);
+/* Logo is a wordmark on a white canvas; crop its whitespace with cover and
+   keep a light chip so it reads consistently in light and dark mode. */
+.logo {
+  display: block;
+  height: 40px;
+  width: 172px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-sm);
+  background: #ffffff;
 }
 
 /* ---- Desktop navigation ---- */

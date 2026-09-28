@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "../Container/Container";
 import { Button } from "../Button/Button";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
@@ -26,8 +27,15 @@ export function SiteHeader({ dict }: { dict: Dictionary }) {
     <header className={styles.header}>
       <Container>
         <div className={styles.bar}>
-          <Link href={routes.home} className={styles.brand}>
-            {site.name}
+          <Link href={routes.home} className={styles.brand} aria-label={`${site.name} — home`}>
+            <Image
+              src="/logo.jpg"
+              alt="Translated into Arabic"
+              width={172}
+              height={40}
+              className={styles.logo}
+              priority
+            />
           </Link>
 
           <nav className={styles.desktopNav} aria-label="Primary">
