@@ -69,4 +69,13 @@
   border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
   font-size: var(--font-size-sm);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.footerSocials {
+  margin-inline-start: auto;
 }

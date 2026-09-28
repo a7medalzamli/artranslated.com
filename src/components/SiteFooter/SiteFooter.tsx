@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "../Container/Container";
+import { SocialLinks } from "../SocialLinks/SocialLinks";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
 import type { Dictionary } from "@/i18n";
@@ -76,6 +77,7 @@ export function SiteFooter({ dict }: { dict: Dictionary }) {
           <p>
             &copy; {year} {site.name}. {dict.footer.rightsReserved}
           </p>
+          <SocialLinks className={styles.footerSocials} />
         </div>
       </Container>
     </footer>
