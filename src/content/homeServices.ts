@@ -1,4 +1,4 @@
-export type HomeServiceIcon = "chip" | "scale" | "heart" | "film" | "robot" | "globe";
+export type HomeServiceIcon = "chip" | "scale" | "finance" | "heart" | "film" | "robot" | "globe";
 
 export type HomeService = {
   title: string;
@@ -15,22 +15,22 @@ export const homeServices: HomeService[] = [
     icon: "chip",
   },
   {
-    title: "Legal & financial",
+    title: "Legal",
     summary:
-      "Careful handling of contracts, reports and compliance material, with strict terminology control.",
+      "Careful handling of contracts, agreements and compliance documentation, with strict terminology control.",
     icon: "scale",
+  },
+  {
+    title: "Financial & Banking",
+    summary:
+      "Reports, statements and banking communications translated with precise, consistent terminology.",
+    icon: "finance",
   },
   {
     title: "Healthcare & medical",
     summary:
       "Accurate translation for medical devices, pharmaceuticals, clinical documentation and patient records.",
     icon: "heart",
-  },
-  {
-    title: "Audiovisual & dubbing",
-    summary:
-      "Culturally adapted subtitling and dubbing with lip-sync alignment for film, media and corporate video.",
-    icon: "film",
   },
   {
     title: "MT post-editing",

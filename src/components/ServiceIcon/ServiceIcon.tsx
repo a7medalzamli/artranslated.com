@@ -28,6 +28,13 @@ export function ServiceIcon({ name }: { name: HomeServiceIcon }) {
           <path d="M12 3v18M7 21h10M6 7l-3 6h6L6 7Zm12 0-3 6h6l-3-6ZM4 7h16" />
         </svg>
       );
+    case "finance":
+      return (
+        <svg {...common}>
+          <path d="M4 21h16M7 21v-6M12 21v-11M17 21v-8" />
+          <path d="m5 9 5-4 4 3 5-5" />
+        </svg>
+      );
     case "heart":
       return (
         <svg {...common}>
