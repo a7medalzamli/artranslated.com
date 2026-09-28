@@ -27,5 +27,7 @@ export const site = {
     { src: "/badges/badge-5.jpg", label: "Professional membership", href: "#" },
     { src: "/badges/badge-7.jpg", label: "Protemos", href: "#" },
     { src: "/badges/badge-8.jpg", label: "Smartcat", href: "#" },
+    { src: "/badges/badge-9.jpg", label: "Wordfast", href: "#" },
+    { src: "/badges/badge-10.jpg", label: "Partner", href: "#" },
   ],
 } as const;
