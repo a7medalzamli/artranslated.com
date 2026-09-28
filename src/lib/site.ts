@@ -14,7 +14,7 @@ export const site = {
    */
   socials: [
     { platform: "linkedin", label: "LinkedIn", href: "#" },
-    { platform: "x", label: "X (Twitter)", href: "#" },
+    { platform: "whatsapp", label: "WhatsApp", href: "#" },
     { platform: "email", label: "Email", href: "#" },
   ],
   /**
