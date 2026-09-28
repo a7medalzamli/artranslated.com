@@ -118,6 +118,25 @@ export default function HomePage() {
         </Container>
       </section>
 
+      <section className={styles.partners} aria-label="Partners">
+        <Container>
+          <h2 className={styles.partnersHeading}>Partners</h2>
+          <ul className={styles.partnerList}>
+            {site.badges.map((badge, i) => (
+              <li key={`${badge.src}-${i}`} className={styles.partnerItem}>
+                <Image
+                  src={badge.src}
+                  alt={badge.label}
+                  width={140}
+                  height={70}
+                  className={styles.partnerImg}
+                />
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
       <CTA
         title="Have a project in mind?"
         description="Tell me your language pair, specialization and deadline, and I'll get back to you with a clear quote."

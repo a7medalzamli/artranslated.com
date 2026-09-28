@@ -11,7 +11,7 @@ Status: ☐ = still a placeholder, ☑ = provided and filled in.
 
 - ☑ `[Your Name]` — set to "Ahmed Alzamli" in `src/lib/site.ts` (header, footer, metadata). Note: the Terms/Privacy drafts still use `[Legal Entity / Your Name]` pending the legal entity name.
 - ☐ Social links — hero icons in `src/lib/site.ts` (`socials`) currently point to `href: "#"`. Replace with real LinkedIn / X / email URLs (or set href to "" to hide one).
-- ☐ Footer badges — `src/lib/site.ts` (`badges`) images link to `href: "#"`. Add the real profile/verification URLs and fix each `label` (used as alt text). Note: badge-2 and badge-4 are the same "Translators without Borders" image — drop one if not intended.
+- ☐ Partners images — `src/lib/site.ts` (`badges`) shown in the home "Partners" section (images only). Fix each `label` (used as alt text). Note: badge-2 and badge-4 are the same "Translators without Borders" image — drop one if not intended.
 - ☐ `[Professional Title]` — e.g. "EN/FR/ES → Arabic Translator & Localization Specialist"
 - ☐ `[Contact Email]` — public contact address shown on the site
 - ☐ `[Notification Email]` — where quote-request notifications are sent (Milestone 7; may differ from the public one)
