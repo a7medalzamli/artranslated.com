@@ -126,8 +126,8 @@ export default function HomePage() {
                 <Image
                   src={badge.src}
                   alt={badge.label}
-                  width={140}
-                  height={70}
+                  width={280}
+                  height={140}
                   className={styles.partnerImg}
                 />
               </li>

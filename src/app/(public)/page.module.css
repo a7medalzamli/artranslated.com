@@ -76,22 +76,18 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: var(--space-lg);
+  gap: var(--space-2xl);
 }
 
 .partnerItem {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-sm) var(--space-md);
-  background: #ffffff;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
 }
 
 .partnerImg {
   display: block;
-  height: 56px;
+  height: 110px;
   width: auto;
   object-fit: contain;
 }
