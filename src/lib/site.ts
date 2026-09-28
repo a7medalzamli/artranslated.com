@@ -23,8 +23,6 @@ export const site = {
    * URLs (tracked in PLACEHOLDERS.md). Edit `label` for accurate alt text.
    */
   badges: [
-    { src: "/badges/badge-2.jpg", label: "Translators without Borders", href: "#" },
-    { src: "/badges/badge-3.jpg", label: "ProZ Certified PRO", href: "#" },
     { src: "/badges/badge-6.jpg", label: "Partner", href: "#" },
     { src: "/badges/badge-5.jpg", label: "Professional membership", href: "#" },
     { src: "/badges/badge-7.jpg", label: "Protemos", href: "#" },
