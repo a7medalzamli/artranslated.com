@@ -27,5 +27,7 @@ export const site = {
     { src: "/badges/badge-3.jpg", label: "ProZ Certified PRO", href: "#" },
     { src: "/badges/badge-6.jpg", label: "Partner", href: "#" },
     { src: "/badges/badge-5.jpg", label: "Professional membership", href: "#" },
+    { src: "/badges/badge-7.jpg", label: "Protemos", href: "#" },
+    { src: "/badges/badge-8.jpg", label: "Smartcat", href: "#" },
   ],
 } as const;
