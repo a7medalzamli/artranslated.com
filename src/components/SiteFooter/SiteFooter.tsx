@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "../Container/Container";
 import { SocialLinks } from "../SocialLinks/SocialLinks";
 import { routes } from "@/lib/routes";
@@ -14,7 +15,15 @@ export function SiteFooter({ dict }: { dict: Dictionary }) {
       <Container>
         <div className={styles.grid}>
           <div className={styles.brandCol}>
-            <p className={styles.brand}>{site.name}</p>
+            <Link href={routes.home} className={styles.brand} aria-label={`${site.name} — home`}>
+              <Image
+                src="/logo.jpg"
+                alt="Translated into Arabic"
+                width={172}
+                height={40}
+                className={styles.logo}
+              />
+            </Link>
             <p className={styles.tagline}>{dict.footer.tagline}</p>
           </div>
 
