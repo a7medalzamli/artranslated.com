@@ -7,6 +7,7 @@ import Image from "next/image";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { LanguageSample } from "@/components/LanguageSample/LanguageSample";
 import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
+import { QuoteForm } from "./contact/QuoteForm";
 import { homeServices } from "@/content/homeServices";
 import { trustSignals } from "@/content/trustSignals";
 import { routes } from "@/lib/routes";
@@ -179,6 +180,21 @@ export default function HomePage() {
               </ul>
             </div>
             <LanguageSample />
+          </div>
+        </Container>
+      </section>
+
+      <section className={styles.contact} id="contact">
+        <Container>
+          <div className={styles.contactHead}>
+            <p className={styles.label}>Ready to start?</p>
+            <h2 className={styles.contactTitle}>Get a free quote</h2>
+            <p className={styles.contactIntro}>
+              Tell me about your project and I&rsquo;ll reply with a clear quote.
+            </p>
+          </div>
+          <div className={styles.contactCard}>
+            <QuoteForm />
           </div>
         </Container>
       </section>
