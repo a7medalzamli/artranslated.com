@@ -7,7 +7,6 @@ import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
 import { QuoteForm } from "./contact/QuoteForm";
 import { homeServices } from "@/content/homeServices";
-import { trustSignals } from "@/content/trustSignals";
 import { routes } from "@/lib/routes";
 import { siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -82,31 +81,6 @@ export default function HomePage() {
               <Button href={routes.work} variant="secondary">
                 Read my background
               </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className={`${styles.section} ${styles.tinted}`}>
-        <Container>
-          <div className={styles.split}>
-            <div className={styles.splitAside}>
-              <p className={styles.label}>Why clients trust the work</p>
-              <p className={styles.sectionLead}>
-                In place of a certification logo, four concrete signals: a defined process, the
-                right tools, strict confidentiality and genuine subject-matter expertise.
-              </p>
-            </div>
-            <div className={styles.splitMain}>
-              {trustSignals.map((signal) => (
-                <div key={signal.title} className={styles.trustItem}>
-                  <h2 className={styles.trustTitle}>{signal.title}</h2>
-                  <p className={styles.trustDesc}>{signal.summary}</p>
-                  <Link href={signal.href} className={styles.trustLink}>
-                    {signal.linkLabel} <span aria-hidden="true">&rarr;</span>
-                  </Link>
-                </div>
-              ))}
             </div>
           </div>
         </Container>
