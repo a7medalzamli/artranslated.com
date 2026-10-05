@@ -6,7 +6,7 @@ import Image from "next/image";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
 import { QuoteForm } from "./contact/QuoteForm";
-import { homeServices } from "@/content/homeServices";
+import { getHomeContent } from "@/lib/content/getHomeContent";
 import { routes } from "@/lib/routes";
 import { siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -34,24 +34,18 @@ const professionalService = {
   ],
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const content = await getHomeContent();
+
   return (
     <>
       <JsonLd data={professionalService} />
       <section className={styles.hero}>
         <Container>
           <div className={styles.heroInner}>
-            <p className={styles.heroLabel}>
-              English &middot; French &middot; Spanish &rarr; Arabic
-            </p>
-            <h1 className={styles.heroTitle}>
-              Precise Arabic translation agencies and companies can rely on
-            </h1>
-            <p className={styles.heroLead}>
-              Technical, legal, financial, healthcare and audiovisual specializations &mdash;
-              delivered with a full Translation&ndash;Editing&ndash;Proofreading workflow and SDL
-              Trados terminology control.
-            </p>
+            <p className={styles.heroLabel}>{content.hero.label}</p>
+            <h1 className={styles.heroTitle}>{content.hero.title}</h1>
+            <p className={styles.heroLead}>{content.hero.lead}</p>
             <div className={styles.heroActions}>
               <Button href={routes.contact} variant="accent" size="lg">
                 Request a quote
@@ -68,16 +62,16 @@ export default function HomePage() {
         <Container>
           <div className={styles.aboutGrid}>
             <Image
-              src="/portrait.jpg"
-              alt="Ahmed Alzamli"
+              src={content.about.image}
+              alt={site.name}
               width={640}
               height={640}
               className={styles.portrait}
               priority
             />
             <div>
-              <h2 className={styles.aboutTitle}>About me</h2>
-              <p className={styles.aboutText}>{site.role}.</p>
+              <h2 className={styles.aboutTitle}>{content.about.title}</h2>
+              <p className={styles.aboutText}>{content.about.text}</p>
             </div>
           </div>
         </Container>
@@ -86,11 +80,11 @@ export default function HomePage() {
       <section className={styles.services}>
         <Container>
           <div className={styles.servicesHead}>
-            <p className={styles.label}>Our expertise</p>
-            <h2 className={styles.servicesTitle}>Specialized translation services</h2>
+            <p className={styles.label}>{content.services.eyebrow}</p>
+            <h2 className={styles.servicesTitle}>{content.services.title}</h2>
           </div>
           <div className={styles.serviceGrid}>
-            {homeServices.map((service) => (
+            {content.services.items.map((service) => (
               <div key={service.title} className={styles.serviceCard}>
                 <span className={styles.serviceIcon}>
                   <ServiceIcon name={service.icon} />
@@ -106,40 +100,12 @@ export default function HomePage() {
       <section className={`${styles.section} ${styles.tinted}`}>
         <Container>
           <div className={styles.whyHead}>
-            <p className={styles.label}>The advantage</p>
-            <h2 className={styles.whyTitle}>Why partner with me?</h2>
-            <p className={styles.whyIntro}>
-              Reaching the Arabic market takes cultural intelligence, technical precision and
-              reliability &mdash; not just language.
-            </p>
+            <p className={styles.label}>{content.why.eyebrow}</p>
+            <h2 className={styles.whyTitle}>{content.why.title}</h2>
+            <p className={styles.whyIntro}>{content.why.intro}</p>
           </div>
           <ul className={styles.whyList}>
-            {[
-              {
-                title: "Meticulous quality assurance",
-                text: "A full Translation–Editing–Proofreading review keeps quality and tone consistent.",
-              },
-              {
-                title: "Industry-standard tools",
-                text: "SDL Trados translation memories and termbases ensure consistency and efficiency.",
-              },
-              {
-                title: "Cultural & terminology accuracy",
-                text: "Content is adapted so it reads naturally and correctly for the target audience.",
-              },
-              {
-                title: "On-time delivery",
-                text: "Projects are scoped realistically and delivered by the agreed deadline.",
-              },
-              {
-                title: "Clear communication",
-                text: "Questions are raised early and progress is easy to follow from start to finish.",
-              },
-              {
-                title: "Confidentiality by default",
-                text: "Files are handled securely, with an NDA available before anything is shared.",
-              },
-            ].map((item) => (
+            {content.why.items.map((item) => (
               <li key={item.title} className={styles.whyItem}>
                 <span className={styles.whyCheck} aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -165,11 +131,9 @@ export default function HomePage() {
       <section className={styles.contact} id="contact">
         <Container>
           <div className={styles.contactHead}>
-            <p className={styles.label}>Ready to start?</p>
-            <h2 className={styles.contactTitle}>Get a free quote</h2>
-            <p className={styles.contactIntro}>
-              Tell me about your project and I&rsquo;ll reply with a clear quote.
-            </p>
+            <p className={styles.label}>{content.contact.eyebrow}</p>
+            <h2 className={styles.contactTitle}>{content.contact.title}</h2>
+            <p className={styles.contactIntro}>{content.contact.intro}</p>
           </div>
           <div className={styles.contactCard}>
             <QuoteForm />
@@ -180,7 +144,7 @@ export default function HomePage() {
       <section className={styles.partners} aria-label="Partners">
         <Container>
           <ul className={styles.partnerList}>
-            {site.badges.map((badge, i) => (
+            {content.partners.map((badge, i) => (
               <li key={`${badge.src}-${i}`} className={styles.partnerItem}>
                 <Image
                   src={badge.src}

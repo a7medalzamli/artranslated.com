@@ -99,6 +99,24 @@ export type Database = {
         };
         Relationships: [];
       };
+      site_content: {
+        Row: {
+          key: string;
+          data: Record<string, unknown>;
+          updated_at: string;
+        };
+        Insert: {
+          key: string;
+          data: Record<string, unknown>;
+          updated_at?: string;
+        };
+        Update: {
+          key?: string;
+          data?: Record<string, unknown>;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
     };
     Views: Record<never, never>;
     Functions: Record<never, never>;

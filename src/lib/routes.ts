@@ -26,4 +26,5 @@ export const adminRoutes = {
   login: "/admin/login",
   posts: "/admin/posts",
   quotes: "/admin/quote-requests",
+  content: "/admin/content",
 } as const;
