@@ -11,7 +11,7 @@ const ar: Dictionary = {
   nav: {
     services: "الخدمات",
     process: "سير العمل والجودة",
-    confidentiality: "السرية",
+    confidentiality: "كيف نعمل؟",
     blog: "المدونة",
     contact: "تواصل",
   },
