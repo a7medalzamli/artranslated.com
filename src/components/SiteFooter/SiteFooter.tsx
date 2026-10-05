@@ -58,9 +58,6 @@ export function SiteFooter({ dict }: { dict: Dictionary }) {
                 <Link href={routes.confidentiality}>{dict.nav.confidentiality}</Link>
               </li>
               <li>
-                <Link href={routes.work}>{dict.nav.work}</Link>
-              </li>
-              <li>
                 <Link href={routes.blog}>{dict.nav.blog}</Link>
               </li>
               <li>

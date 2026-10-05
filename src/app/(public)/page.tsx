@@ -78,9 +78,6 @@ export default function HomePage() {
             <div>
               <h2 className={styles.aboutTitle}>About me</h2>
               <p className={styles.aboutText}>{site.role}.</p>
-              <Button href={routes.work} variant="secondary">
-                Read my background
-              </Button>
             </div>
           </div>
         </Container>

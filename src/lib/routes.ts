@@ -12,7 +12,6 @@ export const routes = {
   audiovisual: "/services/audiovisual",
   process: "/process",
   confidentiality: "/confidentiality",
-  work: "/work",
   blog: "/blog",
   contact: "/contact",
   terms: "/terms",

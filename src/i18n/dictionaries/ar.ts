@@ -12,7 +12,6 @@ const ar: Dictionary = {
     services: "الخدمات",
     process: "سير العمل والجودة",
     confidentiality: "السرية",
-    work: "الأعمال والسيرة الذاتية",
     blog: "المدونة",
     contact: "تواصل",
   },

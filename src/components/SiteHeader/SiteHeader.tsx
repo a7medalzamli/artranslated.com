@@ -17,7 +17,6 @@ export function SiteHeader({ dict }: { dict: Dictionary }) {
     { href: routes.services, label: dict.nav.services },
     { href: routes.process, label: dict.nav.process },
     { href: routes.confidentiality, label: dict.nav.confidentiality },
-    { href: routes.work, label: dict.nav.work },
     { href: routes.blog, label: dict.nav.blog },
     { href: routes.contact, label: dict.nav.contact },
   ];

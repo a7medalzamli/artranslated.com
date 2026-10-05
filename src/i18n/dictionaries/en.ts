@@ -10,7 +10,6 @@ const en = {
     services: "Services",
     process: "Process & QA",
     confidentiality: "Confidentiality",
-    work: "Work & CV",
     blog: "Blog",
     contact: "Contact",
   },
