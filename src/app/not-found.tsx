@@ -3,15 +3,17 @@ import { SiteHeader } from "@/components/SiteHeader/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter/SiteFooter";
 import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
+import { getSiteSettings } from "@/lib/content/getSiteSettings";
 import { routes } from "@/lib/routes";
 import styles from "./not-found.module.css";
 
-export default function NotFound() {
+export default async function NotFound() {
   const dict = getDictionary(defaultLocale);
+  const settings = await getSiteSettings();
 
   return (
     <>
-      <SiteHeader dict={dict} />
+      <SiteHeader dict={dict} settings={settings} />
       <main id="main-content" className={styles.main}>
         <Container>
           <p className={styles.code}>404</p>
@@ -29,7 +31,7 @@ export default function NotFound() {
           </div>
         </Container>
       </main>
-      <SiteFooter dict={dict} />
+      <SiteFooter dict={dict} settings={settings} />
     </>
   );
 }

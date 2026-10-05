@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { site } from "@/lib/site";
 import styles from "./SocialLinks.module.css";
 
 const icons: Record<string, ReactNode> = {
@@ -21,8 +20,10 @@ const icons: Record<string, ReactNode> = {
   ),
 };
 
-export function SocialLinks({ className }: { className?: string }) {
-  const items = site.socials.filter((s) => s.href);
+type Social = { platform: string; label: string; href: string };
+
+export function SocialLinks({ socials, className }: { socials: Social[]; className?: string }) {
+  const items = socials.filter((s) => s.href);
   if (items.length === 0) return null;
 
   return (

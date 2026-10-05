@@ -30,6 +30,7 @@ export default async function ProtectedAdminLayout({ children }: { children: Rea
         <nav className={styles.nav} aria-label="Admin">
           <Link href={adminRoutes.dashboard}>Dashboard</Link>
           <Link href={adminRoutes.content}>Home page</Link>
+          <Link href={adminRoutes.settings}>Site settings</Link>
           <Link href={adminRoutes.posts}>Posts</Link>
           <Link href={adminRoutes.quotes}>Quote requests</Link>
           <Link href="/" className={styles.viewSite}>

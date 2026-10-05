@@ -27,4 +27,5 @@ export const adminRoutes = {
   posts: "/admin/posts",
   quotes: "/admin/quote-requests",
   content: "/admin/content",
+  settings: "/admin/settings",
 } as const;

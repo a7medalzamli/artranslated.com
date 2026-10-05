@@ -3,11 +3,11 @@ import Image from "next/image";
 import { Container } from "../Container/Container";
 import { SocialLinks } from "../SocialLinks/SocialLinks";
 import { routes } from "@/lib/routes";
-import { site } from "@/lib/site";
 import type { Dictionary } from "@/i18n";
+import type { SiteSettings } from "@/lib/content/settings";
 import styles from "./SiteFooter.module.css";
 
-export function SiteFooter({ dict }: { dict: Dictionary }) {
+export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: SiteSettings }) {
   const year = new Date().getFullYear();
 
   return (
@@ -15,16 +15,20 @@ export function SiteFooter({ dict }: { dict: Dictionary }) {
       <Container>
         <div className={styles.grid}>
           <div className={styles.brandCol}>
-            <Link href={routes.home} className={styles.brand} aria-label={`${site.name} — home`}>
+            <Link
+              href={routes.home}
+              className={styles.brand}
+              aria-label={`${settings.name} — home`}
+            >
               <Image
-                src="/logo.jpg"
-                alt="Translated into Arabic"
+                src={settings.logo}
+                alt={settings.name}
                 width={172}
                 height={40}
                 className={styles.logo}
               />
             </Link>
-            <p className={styles.tagline}>{dict.footer.tagline}</p>
+            <p className={styles.tagline}>{settings.footerTagline}</p>
           </div>
 
           <nav className={styles.col} aria-label={dict.footer.servicesHeading}>
@@ -81,9 +85,9 @@ export function SiteFooter({ dict }: { dict: Dictionary }) {
 
         <div className={styles.bottom}>
           <p>
-            &copy; {year} {site.name}. {dict.footer.rightsReserved}
+            &copy; {year} {settings.name}. {dict.footer.rightsReserved}
           </p>
-          <SocialLinks className={styles.footerSocials} />
+          <SocialLinks socials={settings.socials} className={styles.footerSocials} />
         </div>
       </Container>
     </footer>

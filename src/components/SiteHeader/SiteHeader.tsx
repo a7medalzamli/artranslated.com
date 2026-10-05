@@ -6,11 +6,11 @@ import Image from "next/image";
 import { Container } from "../Container/Container";
 import { Button } from "../Button/Button";
 import { routes } from "@/lib/routes";
-import { site } from "@/lib/site";
 import type { Dictionary } from "@/i18n";
+import type { SiteSettings } from "@/lib/content/settings";
 import styles from "./SiteHeader.module.css";
 
-export function SiteHeader({ dict }: { dict: Dictionary }) {
+export function SiteHeader({ dict, settings }: { dict: Dictionary; settings: SiteSettings }) {
   const [open, setOpen] = useState(false);
 
   const navItems = [
@@ -25,10 +25,10 @@ export function SiteHeader({ dict }: { dict: Dictionary }) {
     <header className={styles.header}>
       <Container>
         <div className={styles.bar}>
-          <Link href={routes.home} className={styles.brand} aria-label={`${site.name} — home`}>
+          <Link href={routes.home} className={styles.brand} aria-label={`${settings.name} — home`}>
             <Image
-              src="/logo.jpg"
-              alt="Translated into Arabic"
+              src={settings.logo}
+              alt={settings.name}
               width={172}
               height={40}
               className={styles.logo}
