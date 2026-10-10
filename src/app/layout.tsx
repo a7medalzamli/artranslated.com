@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Sans_Arabic } from "next/font/google";
+import { Lexend, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { CookieConsent } from "@/components/CookieConsent/CookieConsent";
 import { defaultLocale, localeDirection } from "@/i18n/config";
 import { siteUrl } from "@/lib/seo";
 import "./globals.css";
 
-const ibmPlexSans = IBM_Plex_Sans({
+const lexend = Lexend({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-ibm-plex-sans",
+  variable: "--font-lexend",
   display: "swap",
 });
 
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang={defaultLocale}
       dir={localeDirection[defaultLocale]}
-      className={`${ibmPlexSans.variable} ${ibmPlexSansArabic.variable}`}
+      className={`${lexend.variable} ${ibmPlexSansArabic.variable}`}
     >
       <body>
         {children}

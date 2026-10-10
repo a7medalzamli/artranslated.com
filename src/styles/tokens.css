@@ -38,7 +38,7 @@
 
   /* ---- Typography ---- */
   --font-sans:
-    var(--font-ibm-plex-sans), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    var(--font-lexend), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-arabic: var(--font-ibm-plex-sans-arabic), var(--font-sans);
 
   --font-size-sm: 0.875rem;
