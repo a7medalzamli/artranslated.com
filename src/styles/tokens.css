@@ -16,21 +16,16 @@
   --color-border: #e5e7eb;
   --color-border-strong: #cbd2db;
 
-  /* ---- Color: brand (teal) ---- */
-  --color-primary: #0f766e; /* teal-700 — buttons/links, AA with white text */
-  --color-primary-hover: #115e59; /* teal-800 */
+  /* ---- Color: brand (blue) — one color everywhere ---- */
+  --color-primary: #0062ff;
+  --color-primary-hover: #0052d6;
   --color-on-primary: #ffffff;
 
-  /* ---- Color: accent (teal) ----
-     `--color-accent` is the AA-safe teal for text/links/eyebrows on light
-     backgrounds; `--color-accent-strong` is a brighter teal for icon/graphic
-     highlights (non-text, 3:1). */
-  --color-accent: #0f766e; /* teal-700 — AA on white */
-  --color-accent-hover: #115e59; /* teal-800 */
+  --color-accent: #0062ff; /* AA on white for text/links/eyebrows */
+  --color-accent-hover: #0052d6;
   --color-on-accent: #ffffff;
-  /* One teal everywhere (same as accent/primary) for a consistent palette. */
-  --color-accent-strong: #0f766e;
-  --color-accent-strong-hover: #115e59;
+  --color-accent-strong: #0062ff;
+  --color-accent-strong-hover: #0052d6;
 
   /* ---- Color: feedback ---- */
   --color-danger: #b3261e;
@@ -39,7 +34,7 @@
   --color-success-bg: #e7f5ee;
 
   /* ---- Color: focus ring (visible keyboard focus) ---- */
-  --color-focus: #0f766e;
+  --color-focus: #0062ff;
 
   /* ---- Typography ---- */
   --font-sans:
