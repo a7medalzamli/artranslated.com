@@ -23,7 +23,11 @@
   .sidebar {
     border-bottom: none;
     border-inline-end: 1px solid var(--color-border);
-    min-height: 100dvh;
+    /* Stay fixed in view while the main content scrolls. */
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    overflow-y: auto;
   }
 }
 
