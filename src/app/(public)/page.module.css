@@ -1,20 +1,13 @@
-/* ---- Hero (dark navy) ---- */
+/* ---- Hero (light) ---- */
 .hero {
-  background-color: var(--color-primary);
-  background-image:
+  background:
     radial-gradient(
-      circle at 100% 100%,
-      var(--color-primary-hover) 0,
-      var(--color-primary-hover) 6px,
-      transparent 6px
+      1100px 460px at 50% -20%,
+      color-mix(in srgb, var(--color-accent) 12%, transparent),
+      transparent
     ),
-    radial-gradient(
-      circle at 0 0,
-      var(--color-primary-hover) 0,
-      var(--color-primary-hover) 6px,
-      transparent 6px
-    );
-  background-size: 24px 24px;
+    var(--color-bg);
+  border-block-end: 1px solid var(--color-border);
   padding-block: var(--space-4xl);
   text-align: center;
 }
@@ -25,7 +18,7 @@
 }
 
 .heroLabel {
-  color: var(--color-accent-strong);
+  color: var(--color-accent);
   font-weight: var(--weight-semibold);
   font-size: var(--font-size-sm);
   letter-spacing: var(--tracking-label);
@@ -34,7 +27,7 @@
 
 .heroTitle {
   font-size: var(--font-size-h1);
-  color: #ffffff;
+  color: var(--color-text);
   margin-inline: auto;
   max-width: 20ch;
 }
@@ -42,7 +35,7 @@
 .heroLead {
   margin: var(--space-lg) auto 0;
   font-size: var(--font-size-lg);
-  color: #d1d5db;
+  color: var(--color-text-muted);
   max-width: 46ch;
 }
 
@@ -61,16 +54,18 @@
   padding: 0.8rem 1.5rem;
   font-size: var(--font-size-lg);
   font-weight: var(--weight-semibold);
-  color: #ffffff;
+  color: var(--color-text);
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-md);
-  transition: background var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .heroSecondary:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
+  background: var(--color-surface);
+  border-color: var(--color-primary);
 }
 
 /* Sentence-case label (reads naturally; matches the future Arabic version) */

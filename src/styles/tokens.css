@@ -16,20 +16,20 @@
   --color-border: #e5e7eb;
   --color-border-strong: #cbd2db;
 
-  /* ---- Color: brand (navy) ---- */
-  --color-primary: #0f172a; /* navy-900 */
-  --color-primary-hover: #1a2942; /* navy-800 */
+  /* ---- Color: brand (teal) ---- */
+  --color-primary: #0f766e; /* teal-700 — buttons/links, AA with white text */
+  --color-primary-hover: #115e59; /* teal-800 */
   --color-on-primary: #ffffff;
 
-  /* ---- Color: accent (amber) ----
-     `--color-accent` is the AA-safe amber for text/links/eyebrows on light
-     backgrounds; `--color-accent-strong` is the bright amber for large fills
-     (buttons, icon highlights) which pair with navy text. */
-  --color-accent: #b45309; /* amber-700 — AA on white */
-  --color-accent-hover: #92400e; /* amber-800 */
-  --color-on-accent: #0f172a; /* navy text on amber fills */
-  --color-accent-strong: #f59e0b; /* amber-500 */
-  --color-accent-strong-hover: #d97706; /* amber-600 */
+  /* ---- Color: accent (teal) ----
+     `--color-accent` is the AA-safe teal for text/links/eyebrows on light
+     backgrounds; `--color-accent-strong` is a brighter teal for icon/graphic
+     highlights (non-text, 3:1). */
+  --color-accent: #0f766e; /* teal-700 — AA on white */
+  --color-accent-hover: #115e59; /* teal-800 */
+  --color-on-accent: #ffffff;
+  --color-accent-strong: #0d9488; /* teal-600 */
+  --color-accent-strong-hover: #0f766e; /* teal-700 */
 
   /* ---- Color: feedback ---- */
   --color-danger: #b3261e;
@@ -38,7 +38,7 @@
   --color-success-bg: #e7f5ee;
 
   /* ---- Color: focus ring (visible keyboard focus) ---- */
-  --color-focus: #b45309;
+  --color-focus: #0f766e;
 
   /* ---- Typography ---- */
   --font-sans:

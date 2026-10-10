@@ -47,7 +47,7 @@ export default async function HomePage() {
             <h1 className={styles.heroTitle}>{content.hero.title}</h1>
             <p className={styles.heroLead}>{content.hero.lead}</p>
             <div className={styles.heroActions}>
-              <Button href={routes.contact} variant="accent" size="lg">
+              <Button href={routes.contact} variant="primary" size="lg">
                 Request a quote
               </Button>
               <Link href={routes.services} className={styles.heroSecondary}>
