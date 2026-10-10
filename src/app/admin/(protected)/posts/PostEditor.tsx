@@ -2,7 +2,7 @@
 
 import { useActionState, useId, useState } from "react";
 import Image from "next/image";
-import { createClient } from "@/lib/supabase/client";
+import { uploadImageAction } from "@/lib/content/uploadImageAction";
 import { Markdown } from "@/components/Markdown/Markdown";
 import { slugify } from "@/lib/blog/format";
 import { postCategories } from "@/content/postCategories";
@@ -52,21 +52,14 @@ export function PostEditor({ action, post }: { action: EditorAction; post?: Post
 
     setUploading(true);
     try {
-      const supabase = createClient();
-      const ext = file.name.split(".").pop() ?? "img";
-      const path = `${crypto.randomUUID()}.${ext}`;
-      const { error } = await supabase.storage.from("post-images").upload(path, file, {
-        cacheControl: "3600",
-        upsert: false,
-      });
-      if (error) {
-        setUploadError(error.message);
+      const fd = new FormData();
+      fd.append("file", file);
+      const res = await uploadImageAction(fd);
+      if (res.error || !res.url) {
+        setUploadError(res.error ?? "Upload failed.");
         return;
       }
-      const {
-        data: { publicUrl },
-      } = supabase.storage.from("post-images").getPublicUrl(path);
-      setCoverUrl(publicUrl);
+      setCoverUrl(res.url);
     } finally {
       setUploading(false);
     }

@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { createClient } from "@/lib/supabase/client";
 import type { HomeContent } from "@/lib/content/home";
+import { uploadImageAction } from "@/lib/content/uploadImageAction";
 import { saveHomeContent } from "./actions";
 import styles from "./content.module.css";
 
@@ -13,12 +13,11 @@ const MAX_BYTES = 5 * 1024 * 1024;
 async function uploadImage(file: File): Promise<string> {
   if (!file.type.startsWith("image/")) throw new Error("Please choose an image file.");
   if (file.size > MAX_BYTES) throw new Error("Image must be 5 MB or smaller.");
-  const supabase = createClient();
-  const ext = file.name.split(".").pop()?.toLowerCase() || "jpg";
-  const path = `site/${crypto.randomUUID()}.${ext}`;
-  const { error } = await supabase.storage.from("post-images").upload(path, file);
-  if (error) throw new Error(error.message);
-  return supabase.storage.from("post-images").getPublicUrl(path).data.publicUrl;
+  const fd = new FormData();
+  fd.append("file", file);
+  const res = await uploadImageAction(fd);
+  if (res.error || !res.url) throw new Error(res.error ?? "Upload failed.");
+  return res.url;
 }
 
 export function HomeContentEditor({ initial }: { initial: HomeContent }) {
