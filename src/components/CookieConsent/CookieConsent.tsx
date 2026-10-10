@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { usePathname } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import styles from "./CookieConsent.module.css";
 
@@ -43,6 +44,10 @@ function setConsent(value: "accepted" | "declined") {
 
 export function CookieConsent() {
   const snapshot = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const pathname = usePathname();
+
+  // No cookie banner / analytics in the admin area.
+  if (pathname?.startsWith("/admin")) return null;
 
   return (
     <>
