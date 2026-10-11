@@ -27,13 +27,21 @@ body {
   min-height: 100dvh;
 }
 
-/* Arabic content uses the Arabic font; RTL is set on the html element per locale. */
-:lang(ar) {
-  font-family: var(--font-arabic);
-}
-
+/* Arabic content uses the Arabic font, a slightly larger size and more
+   line-height for comfortable reading. RTL is set on <html> per locale. */
+:lang(ar),
 [dir="rtl"] {
   font-family: var(--font-arabic);
+  font-size: calc(1em * var(--font-scale-arabic));
+  line-height: var(--line-arabic);
+  letter-spacing: 0;
+}
+
+/* Don't scale Arabic inside headings twice (headings set their own size). */
+:lang(ar) :is(h1, h2, h3, h4),
+[dir="rtl"] :is(h1, h2, h3, h4) {
+  font-size: revert;
+  line-height: var(--line-snug);
 }
 
 /* ---- Headings & text ---- */
