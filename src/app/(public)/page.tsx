@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
-import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
 import { Reveal } from "@/components/Reveal/Reveal";
 import { CountUp } from "@/components/CountUp/CountUp";
 import { Flag, type LanguageCode } from "@/components/Flag/Flag";
@@ -114,32 +113,6 @@ export default async function HomePage() {
               </li>
             ))}
           </ul>
-        </Container>
-      </section>
-
-      {/* ---- Services ---- */}
-      <section className={styles.services}>
-        <Container>
-          <div className={styles.servicesHead}>
-            <p className={styles.label}>{content.services.eyebrow}</p>
-            <h2 className={styles.servicesTitle}>{content.services.title}</h2>
-          </div>
-          <div className={styles.serviceGrid}>
-            {content.services.items.map((service, i) => (
-              <Reveal
-                key={service.title}
-                from="up"
-                delay={(i % 3) * 90}
-                className={styles.serviceCard}
-              >
-                <span className={styles.serviceIcon}>
-                  <ServiceIcon name={service.icon} />
-                </span>
-                <h3 className={styles.serviceCardTitle}>{service.title}</h3>
-                <p className={styles.serviceCardText}>{service.summary}</p>
-              </Reveal>
-            ))}
-          </div>
         </Container>
       </section>
 

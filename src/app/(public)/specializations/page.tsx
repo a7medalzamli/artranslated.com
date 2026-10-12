@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
-import { specializations } from "@/content/specializations";
+import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
+import { Reveal } from "@/components/Reveal/Reveal";
+import { getHomeContent } from "@/lib/content/getHomeContent";
 import { routes } from "@/lib/routes";
 import styles from "./specializations.module.css";
 
@@ -11,10 +12,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/specializations" },
   title: "Specializations",
   description:
-    "Fields I specialize in — technical, legal, financial, healthcare and audiovisual translation and localization into Arabic.",
+    "Fields I specialize in — technical, legal, financial, healthcare, machine-translation post-editing and website localization and marketing, into Arabic.",
 };
 
-export default function SpecializationsPage() {
+export default async function SpecializationsPage() {
+  const content = await getHomeContent();
+
   return (
     <>
       <PageHeader
@@ -25,16 +28,22 @@ export default function SpecializationsPage() {
       />
 
       <Section>
-        <ul className={styles.index}>
-          {specializations.map((spec) => (
-            <li key={spec.slug} className={styles.indexRow}>
-              <Link href={spec.href} className={styles.indexTerm}>
-                {spec.title}
-              </Link>
-              <p className={styles.indexDesc}>{spec.summary}</p>
-            </li>
+        <div className={styles.serviceGrid}>
+          {content.services.items.map((service, i) => (
+            <Reveal
+              key={service.title}
+              from="up"
+              delay={(i % 3) * 90}
+              className={styles.serviceCard}
+            >
+              <span className={styles.serviceIcon}>
+                <ServiceIcon name={service.icon} />
+              </span>
+              <h2 className={styles.serviceCardTitle}>{service.title}</h2>
+              <p className={styles.serviceCardText}>{service.summary}</p>
+            </Reveal>
           ))}
-        </ul>
+        </div>
       </Section>
 
       <CTA
