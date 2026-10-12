@@ -30,26 +30,26 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
                 className={styles.logo}
               />
             </Link>
-            <p className={styles.tagline}>{settings.footerTagline}</p>
+            <p className={styles.tagline}>{dict.footer.tagline}</p>
           </div>
 
           <nav className={styles.col} aria-label={dict.footer.servicesHeading}>
             <h2 className={styles.heading}>{dict.footer.servicesHeading}</h2>
             <ul className={styles.list}>
               <li>
-                <Link href={routes.technical}>Technical</Link>
+                <Link href={routes.technical}>{dict.footer.serviceLinks.technical}</Link>
               </li>
               <li>
-                <Link href={routes.legal}>Legal</Link>
+                <Link href={routes.legal}>{dict.footer.serviceLinks.legal}</Link>
               </li>
               <li>
-                <Link href={routes.financial}>Financial</Link>
+                <Link href={routes.financial}>{dict.footer.serviceLinks.financial}</Link>
               </li>
               <li>
-                <Link href={routes.healthcare}>Healthcare</Link>
+                <Link href={routes.healthcare}>{dict.footer.serviceLinks.healthcare}</Link>
               </li>
               <li>
-                <Link href={routes.audiovisual}>Audiovisual</Link>
+                <Link href={routes.audiovisual}>{dict.footer.serviceLinks.audiovisual}</Link>
               </li>
             </ul>
           </nav>

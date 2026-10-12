@@ -26,7 +26,7 @@ const ar: Dictionary = {
     home: "الرئيسية",
   },
   footer: {
-    tagline: "ترجمة وتوطين المواقع الإلكترونية إلى الإنجليزية والعربية.",
+    tagline: "خدمات احترافية في الترجمة والتسويق الرقمي.",
     servicesHeading: "الخدمات",
     companyHeading: "الشركة",
     legalHeading: "قانوني",
@@ -36,6 +36,13 @@ const ar: Dictionary = {
     rightsReserved: "جميع الحقوق محفوظة.",
     about: "نبذة",
     howItWorks: "كيف نعمل؟",
+    serviceLinks: {
+      technical: "التقنية",
+      legal: "القانونية",
+      financial: "المالية",
+      healthcare: "الرعاية الصحية",
+      audiovisual: "السمعية البصرية",
+    },
   },
   breadcrumbs: {
     home: "الرئيسية",

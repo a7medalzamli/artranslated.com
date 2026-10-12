@@ -24,7 +24,7 @@ const en = {
     home: "Home",
   },
   footer: {
-    tagline: "Website translation & localization into English and Arabic.",
+    tagline: "Professional Translation & Digital Marketing Services.",
     servicesHeading: "Services",
     companyHeading: "Company",
     legalHeading: "Legal",
@@ -34,6 +34,13 @@ const en = {
     rightsReserved: "All rights reserved.",
     about: "About",
     howItWorks: "How it works?",
+    serviceLinks: {
+      technical: "Technical",
+      legal: "Legal",
+      financial: "Financial",
+      healthcare: "Healthcare",
+      audiovisual: "Audiovisual",
+    },
   },
   breadcrumbs: {
     home: "Home",

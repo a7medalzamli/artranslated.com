@@ -20,7 +20,7 @@ const es: Dictionary = {
     home: "Inicio",
   },
   footer: {
-    tagline: "Traducción y localización de sitios web al inglés y al árabe.",
+    tagline: "Servicios profesionales de traducción y marketing digital.",
     servicesHeading: "Servicios",
     companyHeading: "Empresa",
     legalHeading: "Legal",
@@ -30,6 +30,13 @@ const es: Dictionary = {
     rightsReserved: "Todos los derechos reservados.",
     about: "Acerca de",
     howItWorks: "¿Cómo funciona?",
+    serviceLinks: {
+      technical: "Técnica",
+      legal: "Jurídica",
+      financial: "Financiera",
+      healthcare: "Salud",
+      audiovisual: "Audiovisual",
+    },
   },
   breadcrumbs: {
     home: "Inicio",
