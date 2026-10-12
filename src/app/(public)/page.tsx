@@ -11,7 +11,6 @@ import { Flag, type LanguageCode } from "@/components/Flag/Flag";
 import { QuoteForm } from "./contact/QuoteForm";
 import { getHomeContent } from "@/lib/content/getHomeContent";
 import { experienceStats } from "@/content/stats";
-import { specializations } from "@/content/specializations";
 import { routes } from "@/lib/routes";
 import { siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -141,28 +140,6 @@ export default async function HomePage() {
               </Reveal>
             ))}
           </div>
-        </Container>
-      </section>
-
-      {/* ---- Specializations (own section) ---- */}
-      <section className={`${styles.section} ${styles.tinted}`} aria-labelledby="specializations-title">
-        <Container>
-          <div className={styles.servicesHead}>
-            <p className={styles.label}>Specializations</p>
-            <h2 id="specializations-title" className={styles.servicesTitle}>
-              Fields I specialize in
-            </h2>
-          </div>
-          <ul className={styles.index}>
-            {specializations.map((spec, i) => (
-              <Reveal as="li" key={spec.slug} from="up" delay={(i % 2) * 80} className={styles.indexRow}>
-                <Link href={spec.href} className={styles.indexTerm}>
-                  {spec.title}
-                </Link>
-                <p className={styles.indexDesc}>{spec.summary}</p>
-              </Reveal>
-            ))}
-          </ul>
         </Container>
       </section>
 

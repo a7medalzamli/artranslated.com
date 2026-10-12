@@ -9,6 +9,7 @@ const en = {
   nav: {
     about: "About",
     services: "Services",
+    specializations: "Specializations",
     howItWorks: "How it works?",
     process: "Process & QA",
     confidentiality: "Confidentiality",
