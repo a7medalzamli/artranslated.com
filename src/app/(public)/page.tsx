@@ -134,7 +134,7 @@ export default async function HomePage() {
 
       {/* ---- Why partner / QA ---- */}
       <section className={styles.section}>
-        <Container>
+        <Container className={styles.wideContainer}>
           <div className={styles.whyHead}>
             <p className={styles.label}>{content.why.eyebrow}</p>
             <h2 className={styles.whyTitle}>{content.why.title}</h2>
