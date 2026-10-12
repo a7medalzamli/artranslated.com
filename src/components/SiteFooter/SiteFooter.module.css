@@ -56,8 +56,8 @@
 
 .credBadge {
   display: block;
-  flex: 0 1 320px;
-  max-width: 320px;
+  flex: 0 1 200px;
+  max-width: 200px;
   border-radius: var(--radius-sm);
   transition: opacity var(--transition-fast);
 }
