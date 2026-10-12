@@ -5,8 +5,8 @@
   padding-block: var(--space-2xl) var(--space-sm);
   /* Full-screen-height footer: main grid at the top, copyright pinned to the
      bottom (see .inner / .bottom). */
-  min-height: 80vh;
-  min-height: 80svh;
+  min-height: 60vh;
+  min-height: 60svh;
   display: flex;
   flex-direction: column;
 }
@@ -52,20 +52,10 @@
 }
 
 /* ---- Credential badges (ProZ, Translators without Borders / Trados) ---- */
-.credBadges {
-  margin-top: var(--space-md);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  gap: var(--space-lg);
-}
-
 .credBadge {
   display: block;
-  flex: 0 1 200px;
-  max-width: 200px;
+  margin-top: var(--space-md);
+  max-width: 190px;
   border-radius: var(--radius-sm);
   transition: opacity var(--transition-fast);
 }
