@@ -31,21 +31,30 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
               />
             </Link>
             <p className={styles.tagline}>{settings.footerTagline}</p>
-            <a
-              href={prozHref}
-              className={styles.prozBadge}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="ProZ.com Certified PRO — Professional Translator (opens in a new tab)"
-            >
+            <div className={styles.credBadges}>
+              <a
+                href={prozHref}
+                className={styles.credBadge}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ProZ.com Certified PRO — Professional Translator (opens in a new tab)"
+              >
+                <Image
+                  src="/proz-certified-pro.jpg"
+                  alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
+                  width={1600}
+                  height={528}
+                  className={styles.credImg}
+                />
+              </a>
               <Image
-                src="/proz-certified-pro.jpg"
-                alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
+                src="/twb-trados.jpg"
+                alt="Translators without Borders — I work with Trados"
                 width={1600}
                 height={528}
-                className={styles.prozImg}
+                className={`${styles.credBadge} ${styles.credImg}`}
               />
-            </a>
+            </div>
           </div>
 
           <nav className={styles.col} aria-label={dict.footer.servicesHeading}>
@@ -99,20 +108,6 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
               <li>
                 <Link href={routes.privacy}>{dict.footer.privacy}</Link>
               </li>
-            </ul>
-            <ul className={styles.memberBadges} aria-label="Professional profiles">
-              {site.memberships.map((m) => (
-                <li key={m.id}>
-                  <a
-                    href={m.href}
-                    className={styles.memberBadge}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {m.label}
-                  </a>
-                </li>
-              ))}
             </ul>
           </nav>
 

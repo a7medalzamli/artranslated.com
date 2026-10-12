@@ -37,55 +37,30 @@
   }
 }
 
-/* ---- ProZ Certified PRO badge ---- */
-.prozBadge {
-  display: block;
+/* ---- Credential badges (ProZ, Translators without Borders / Trados) ---- */
+.credBadges {
   margin-top: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
   max-width: 320px;
+}
+
+.credBadge {
+  display: block;
   border-radius: var(--radius-sm);
   transition: opacity var(--transition-fast);
 }
 
-.prozBadge:hover {
+a.credBadge:hover {
   opacity: 0.9;
 }
 
-.prozImg {
+.credImg {
   display: block;
   width: 100%;
   height: auto;
   border-radius: var(--radius-sm);
-}
-
-/* ---- Professional profile badges (ProZ, Translators without Borders) ---- */
-.memberBadges {
-  list-style: none;
-  margin: var(--space-md) 0 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-}
-
-.memberBadge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.3rem 0.6rem;
-  font-size: calc(var(--font-size-sm) - 0.05rem);
-  font-weight: var(--weight-semibold);
-  color: var(--color-text);
-  text-decoration: none;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-full);
-  transition:
-    border-color var(--transition-fast),
-    color var(--transition-fast);
-}
-
-.memberBadge:hover {
-  color: var(--color-primary);
-  border-color: var(--color-primary);
 }
 
 .brand {
