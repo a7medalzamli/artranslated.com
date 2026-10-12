@@ -8,7 +8,6 @@ import { Reveal } from "@/components/Reveal/Reveal";
 import { CountUp } from "@/components/CountUp/CountUp";
 import { AvailabilityHours } from "@/components/AvailabilityHours/AvailabilityHours";
 import { Flag, type LanguageCode } from "@/components/Flag/Flag";
-import { QuoteForm } from "./contact/QuoteForm";
 import { getHomeContent } from "@/lib/content/getHomeContent";
 import { experienceStats } from "@/content/stats";
 import { routes } from "@/lib/routes";
@@ -161,25 +160,6 @@ export default async function HomePage() {
               </Reveal>
             ))}
           </ul>
-        </Container>
-      </section>
-
-      {/* ---- Contact ---- */}
-      <section className={styles.contact} id="contact">
-        <Container>
-          <div className={styles.contactHead}>
-            <p className={styles.label}>{content.contact.eyebrow}</p>
-            <h2 className={styles.contactTitle}>{content.contact.title}</h2>
-            <p className={styles.contactIntro}>{content.contact.intro}</p>
-            <p className={styles.contactDetails}>
-              <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
-              <span aria-hidden="true"> · </span>
-              <a href={`tel:${site.contact.phoneHref}`}>{site.contact.phone}</a>
-            </p>
-          </div>
-          <div className={styles.contactCard}>
-            <QuoteForm />
-          </div>
         </Container>
       </section>
 
