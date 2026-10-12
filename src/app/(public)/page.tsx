@@ -58,13 +58,9 @@ export default async function HomePage() {
       <section className={styles.hero}>
         <Container>
           <div className={styles.heroInner}>
-            <p className={styles.heroLabel}>{content.hero.label}</p>
+            {content.hero.label && <p className={styles.heroLabel}>{content.hero.label}</p>}
             <h1 className={styles.heroTitle}>{content.hero.title}</h1>
-            <p className={styles.heroLead}>{content.hero.lead}</p>
-            <p className={styles.heroLocalize}>
-              I translate and localize websites into <strong>English</strong> and{" "}
-              <strong>Arabic</strong> — so your product reads naturally for every visitor.
-            </p>
+            {content.hero.lead && <p className={styles.heroLead}>{content.hero.lead}</p>}
             <div className={styles.heroActions}>
               <Button href={routes.contact} variant="primary" size="lg">
                 Let&apos;s talk
