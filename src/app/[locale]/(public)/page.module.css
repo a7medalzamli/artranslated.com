@@ -59,7 +59,11 @@
   justify-content: center;
 }
 
-/* ---- Languages strip ---- */
+/* ---- Languages (now inside the hero) ---- */
+.heroLanguages {
+  margin-top: var(--space-2xl);
+}
+
 .languages {
   padding-block: var(--space-2xl);
   border-block-end: 1px solid var(--color-border);

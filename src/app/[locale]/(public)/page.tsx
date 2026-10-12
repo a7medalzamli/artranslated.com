@@ -69,24 +69,27 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 {t.common.exploreServices}
               </Link>
             </div>
-          </div>
-        </Container>
-      </section>
 
-      {/* ---- Languages ---- */}
-      <section className={styles.languages} aria-labelledby="languages-title">
-        <Container>
-          <h2 id="languages-title" className={styles.languagesTitle}>
-            {t.home.languagesTitle}
-          </h2>
-          <ul className={styles.languageList}>
-            {languageCodes.map((code, i) => (
-              <Reveal as="li" key={code} from="up" delay={i * 80} className={styles.languageItem}>
-                <Flag code={code} size={34} />
-                <span>{t.home.langNames[code]}</span>
-              </Reveal>
-            ))}
-          </ul>
+            <div className={styles.heroLanguages} aria-labelledby="languages-title">
+              <h2 id="languages-title" className={styles.languagesTitle}>
+                {t.home.languagesTitle}
+              </h2>
+              <ul className={styles.languageList}>
+                {languageCodes.map((code, i) => (
+                  <Reveal
+                    as="li"
+                    key={code}
+                    from="up"
+                    delay={i * 80}
+                    className={styles.languageItem}
+                  >
+                    <Flag code={code} size={34} />
+                    <span>{t.home.langNames[code]}</span>
+                  </Reveal>
+                ))}
+              </ul>
+            </div>
+          </div>
         </Container>
       </section>
 
