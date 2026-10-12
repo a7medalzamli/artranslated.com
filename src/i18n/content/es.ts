@@ -212,6 +212,183 @@ const es: SiteContent = {
       },
     ],
   },
+  serviceDetail: {
+    eyebrow: "Especialización",
+    technical: {
+      title: "Traducción técnica al árabe",
+      description:
+        "Documentación de ingeniería e industrial traducida por alguien que entiende el tema, no solo las palabras.",
+      crumb: "Técnica",
+      s1Title: "Entender el tema, no solo el idioma",
+      s1p1: "Una formación en ingeniería ambiental permite leer los textos técnicos de origen como el autor pretendía: los conceptos, las unidades y las normas detrás de la terminología resultan familiares, de modo que el árabe se lee correctamente para los especialistas del campo.",
+      s1p2: "La coherencia se garantiza con SDL Trados Studio: los glosarios y bases terminológicas del proyecto mantienen uniformes los términos clave, y las memorias de traducción mantienen alineados los documentos extensos o actualizados con frecuencia de una versión a otra.",
+      s2Title: "Qué traduzco",
+      s2List: [
+        "Manuales de ingeniería, guías de usuario y procedimientos operativos",
+        "Especificaciones técnicas y fichas de datos",
+        "Informes ambientales y de ingeniería",
+        "Documentación de seguridad, normas y cumplimiento",
+        "Documentación de productos y equipos",
+      ],
+      s3Title: "Servicios técnicos relacionados",
+      s3Intro: "Los proyectos técnicos suelen combinar la traducción con:",
+      s3List: [
+        "Posedición de traducción automática (MTPE): llevar la salida automática a calidad humana manteniendo plazos eficientes.",
+        "Pruebas de producto digital: revisar las interfaces localizadas en contexto para detectar problemas de maquetación, truncamiento y usabilidad.",
+        "Anotación y evaluación de datos de IA (RLHF): evaluar y mejorar la salida en árabe generada por IA.",
+      ],
+      ctaTitle: "¿Tienes documentación técnica para traducir?",
+      ctaDescription:
+        "Comparte la combinación de idiomas, el área temática y el plazo para un presupuesto claro.",
+    },
+    legal: {
+      title: "Traducción jurídica al árabe",
+      description:
+        "Contratos y documentación jurídica traducidos con precisión y tratados con la confidencialidad que el material exige.",
+      crumb: "Jurídica",
+      s1Title: "Precisión y confidencialidad",
+      s1p1: "Los textos jurídicos no dejan lugar a la ambigüedad: la terminología, la estructura y el significado deben trasladarse con exactitud. Cada proyecto utiliza las bases terminológicas de SDL Trados para que los términos definidos se mantengan coherentes dentro de un documento y entre documentos relacionados.",
+      s1p2: "El material jurídico es sensible por naturaleza. Los archivos se tratan con estricta confidencialidad, se transfieren de forma segura, y estoy dispuesto a firmar un acuerdo de confidencialidad antes de abrir ningún archivo.",
+      s2Title: "Qué traduzco",
+      s2List: [
+        "Contratos y acuerdos",
+        "Términos y condiciones, políticas y documentos de cumplimiento",
+        "Documentación corporativa y regulatoria",
+        "Correspondencia y materiales jurídicos de apoyo",
+      ],
+      ctaTitle: "¿Necesitas traducir documentos jurídicos con confidencialidad?",
+      ctaDescription:
+        "Dime el alcance y el plazo: se puede firmar un acuerdo de confidencialidad antes de compartir nada.",
+    },
+    financial: {
+      title: "Traducción financiera al árabe",
+      description:
+        "Documentos financieros traducidos con la exactitud, la discreción y la coherencia terminológica que exigen las cifras.",
+      crumb: "Financiera",
+      s1Title: "Exactitud donde importan tanto las cifras como las palabras",
+      s1p1: "Los documentos financieros combinan cifras exactas con un lenguaje cuidadosamente elegido. La terminología se mantiene coherente con las bases terminológicas y memorias de traducción de SDL Trados, de modo que los términos recurrentes y las expresiones estándar se mantienen uniformes entre periodos de reporte y conjuntos de documentos.",
+      s1p2: "El material financiero se trata como confidencial: transferencias seguras, manejo cuidadoso y disposición a firmar un acuerdo de confidencialidad antes de abrir ningún archivo.",
+      s2Title: "Qué traduzco",
+      s2List: [
+        "Informes y estados financieros",
+        "Comunicaciones a inversores y comunicaciones corporativas",
+        "Documentación de auditoría y cumplimiento",
+        "Presentaciones y materiales de marketing financiero",
+      ],
+      ctaTitle: "¿Tienes documentos financieros para traducir?",
+      ctaDescription:
+        "Comparte el alcance, la combinación de idiomas y el plazo para un presupuesto claro.",
+    },
+    healthcare: {
+      title: "Traducción sanitaria al árabe",
+      description:
+        "Documentación médica y sanitaria traducida con exactitud, claridad y el registro adecuado para sus lectores.",
+      crumb: "Salud",
+      s1Title: "Claridad y corrección para contenido sensible",
+      s1p1: "El contenido sanitario tiene consecuencias reales, por eso la exactitud y la claridad van primero. Los términos se mantienen coherentes con las bases terminológicas de SDL Trados, y el registro se adapta al público, ya sean los lectores clínicos o pacientes.",
+      s1p2: "Cada proyecto sigue un flujo completo de Traducción–Edición–Revisión, y los archivos se tratan con estricta confidencialidad.",
+      s2Title: "Qué traduzco",
+      s2List: [
+        "Documentación médica y clínica",
+        "Información e instrucciones dirigidas a pacientes",
+        "Documentación de productos y dispositivos sanitarios",
+        "Materiales regulatorios y de cumplimiento",
+      ],
+      ctaTitle: "¿Necesitas traducir contenido sanitario al árabe?",
+      ctaDescription:
+        "Dime el tipo de documento, la combinación de idiomas y el plazo para un presupuesto claro.",
+    },
+    audiovisual: {
+      title: "Traducción audiovisual y doblaje al árabe",
+      description:
+        "Subtitulado, transcreación y adaptación de doblaje, con la precisión de sincronización labial que exigen el streaming y la difusión.",
+      crumb: "Audiovisual",
+      s1Title: "Diálogos que suenan nativos y encajan en los labios",
+      s1p1: "El trabajo audiovisual es más que palabras en una página: el árabe tiene que ajustarse a la imagen, al ritmo y a la interpretación. Eso implica transcrear las expresiones para que resulten nativas al público árabe conservando la tensión dramática y la intención del original.",
+      stepsTitle: "El proceso de adaptación de doblaje y sincronización labial",
+      steps: [
+        {
+          title: "Revisión del guion y los códigos de tiempo",
+          description:
+            "Estudiar el guion con códigos de tiempo junto con la interpretación en pantalla para entender el ritmo, el tono y la intención.",
+        },
+        {
+          title: "Traducción y transcreación",
+          description:
+            "Traducir el significado y transcrear las expresiones culturales para que transmitan la misma carga emocional en árabe sin sonar artificiales.",
+        },
+        {
+          title: "Ajuste de sílabas y sincronización labial",
+          description:
+            "Ajustar la expresión en árabe y el número de sílabas para que coincidan con los movimientos labiales de los actores y el ritmo de cada línea.",
+        },
+        {
+          title: "Revisión frente a la imagen",
+          description:
+            "Comprobar el diálogo adaptado frente al metraje para verificar la exactitud del ritmo y el encaje cultural, afinando donde sea necesario.",
+        },
+        {
+          title: "Entrega lista para estudio",
+          description:
+            "Entregar un guion adaptado que la grabación pueda usar directamente, respetando la intención del director original.",
+        },
+      ],
+      offerTitle: "Qué ofrezco",
+      offerList: [
+        "Subtitulado y traducción de guiones con códigos de tiempo",
+        "Adaptación de doblaje con sincronización labial",
+        "Transcreación de diálogos culturalmente específicos",
+      ],
+      ctaTitle: "¿Localizas una serie o película al árabe?",
+      ctaDescription: "Dime el idioma de origen, el formato y el plazo para un presupuesto claro.",
+    },
+  },
+  form: {
+    successTitle: "Gracias — hemos recibido tu solicitud.",
+    successText:
+      "Te responderé en breve. Por favor, no envíes archivos confidenciales hasta que hayamos acordado las condiciones.",
+    company: "Empresa",
+    name: "Nombre",
+    email: "Correo electrónico",
+    languagePair: "Combinación de idiomas",
+    choose: "Elegir…",
+    specialization: "Especialización",
+    notSure: "No estoy seguro / otro",
+    volume: "Número de palabras o duración",
+    volumePlaceholder: "p. ej. 5000 palabras o 20 minutos",
+    deadline: "Plazo",
+    deadlinePlaceholder: "p. ej. 15 de octubre, o flexible",
+    service: "Servicio necesario",
+    selectService: "Selecciona un servicio…",
+    details: "Detalles del proyecto",
+    detailsPlaceholder: "Cuéntame sobre tu proyecto…",
+    nda: "Quiero firmar un acuerdo de confidencialidad antes de compartir archivos.",
+    sending: "Enviando…",
+    send: "Enviar solicitud",
+    pairs: ["Inglés → Árabe", "Francés → Árabe", "Español → Árabe"],
+  },
+  cookie: {
+    text: "Este sitio utiliza analíticas respetuosas con la privacidad para entender cómo se usa. Consulta la",
+    privacy: "política de privacidad",
+    decline: "Rechazar",
+    accept: "Aceptar",
+  },
+  notFound: {
+    title: "Página no encontrada",
+    text: "La página que buscas no existe o puede que se haya movido.",
+    goHome: "Ir al inicio",
+    browse: "Ver servicios",
+  },
+  blog: {
+    title: "Blog",
+    description: "Notas sobre el flujo de traducción, la localización y la terminología.",
+    crumb: "Blog",
+    all: "Todo",
+    filterAria: "Filtrar por categoría",
+    emptyCategory: "Aún no hay artículos en esta categoría.",
+    emptyNone: "Aún no se han publicado artículos — vuelve pronto.",
+    minRead: "min de lectura",
+  },
 };
 
 export default es;

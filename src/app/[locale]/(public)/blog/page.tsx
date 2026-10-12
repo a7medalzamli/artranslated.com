@@ -5,6 +5,8 @@ import { Container } from "@/components/Container/Container";
 import { getPublishedPosts } from "@/lib/blog/posts";
 import { postCategories, isPostCategory } from "@/content/postCategories";
 import { formatDate, readingTimeMinutes } from "@/lib/blog/format";
+import { getContent } from "@/i18n/content";
+import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import styles from "./blog.module.css";
 
@@ -19,10 +21,15 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function BlogPage({
+  params,
   searchParams,
 }: {
+  params: Promise<{ locale: string }>;
   searchParams: Promise<{ category?: string }>;
 }) {
+  const { locale } = await params;
+  const t = getContent(locale as Locale);
+  const b = t.blog;
   const { category } = await searchParams;
   const activeCategory = category && isPostCategory(category) ? category : undefined;
   const posts = await getPublishedPosts(activeCategory);
@@ -30,19 +37,19 @@ export default async function BlogPage({
   return (
     <>
       <PageHeader
-        title="Blog"
-        description="Notes on translation workflow, localization and terminology."
-        breadcrumbs={[{ label: "Home", href: routes.home }, { label: "Blog" }]}
+        title={b.title}
+        description={b.description}
+        breadcrumbs={[{ label: t.common.homeCrumb, href: routes.home }, { label: b.crumb }]}
       />
 
       <Container>
-        <nav className={styles.filters} aria-label="Filter by category">
+        <nav className={styles.filters} aria-label={b.filterAria}>
           <Link
             href={routes.blog}
             className={styles.filter}
             aria-current={!activeCategory ? "true" : undefined}
           >
-            All
+            {b.all}
           </Link>
           {postCategories.map((cat) => (
             <Link
@@ -57,11 +64,7 @@ export default async function BlogPage({
         </nav>
 
         {posts.length === 0 ? (
-          <p className={styles.empty}>
-            {activeCategory
-              ? "No posts in this category yet."
-              : "No posts published yet — check back soon."}
-          </p>
+          <p className={styles.empty}>{activeCategory ? b.emptyCategory : b.emptyNone}</p>
         ) : (
           <ul className={styles.list}>
             {posts.map((post) => (
@@ -73,8 +76,8 @@ export default async function BlogPage({
                   </h2>
                   {post.excerpt && <p className={styles.excerpt}>{post.excerpt}</p>}
                   <p className={styles.meta}>
-                    {formatDate(post.published_at)} &middot; {readingTimeMinutes(post.content)} min
-                    read
+                    {formatDate(post.published_at)} &middot; {readingTimeMinutes(post.content)}{" "}
+                    {b.minRead}
                   </p>
                 </article>
               </li>

@@ -211,6 +211,179 @@ const en = {
       },
     ],
   },
+  serviceDetail: {
+    eyebrow: "Specialization",
+    technical: {
+      title: "Technical translation into Arabic",
+      description:
+        "Engineering and industrial documentation translated by someone who understands the subject, not just the words.",
+      crumb: "Technical",
+      s1Title: "Subject-matter understanding, not just language",
+      s1p1: "A degree in environmental engineering means technical source texts are read the way the author intended — the concepts, units and standards behind the terminology are familiar, so the Arabic reads correctly to specialists in the field.",
+      s1p2: "Consistency is enforced with SDL Trados Studio: project glossaries and termbases keep key terms uniform, and translation memories keep long or frequently updated documents aligned from one version to the next.",
+      s2Title: "What I translate",
+      s2List: [
+        "Engineering manuals, user guides and operating procedures",
+        "Technical specifications and datasheets",
+        "Environmental and engineering reports",
+        "Safety, standards and compliance documentation",
+        "Product and equipment documentation",
+      ],
+      s3Title: "Related technical services",
+      s3Intro: "Technical projects often pair translation with:",
+      s3List: [
+        "Machine translation post-editing (MTPE) — bringing machine output up to human quality while keeping turnaround efficient.",
+        "Digital product testing — checking localized interfaces in context for layout, truncation and usability issues.",
+        "AI data annotation & evaluation (RLHF) — assessing and improving AI-generated Arabic output.",
+      ],
+      ctaTitle: "Have technical documentation to translate?",
+      ctaDescription: "Share the language pair, subject area and deadline for a clear quote.",
+    },
+    legal: {
+      title: "Legal translation into Arabic",
+      description:
+        "Contracts and legal documentation translated with precision and handled with the confidentiality the material demands.",
+      crumb: "Legal",
+      s1Title: "Precision and confidentiality",
+      s1p1: "Legal texts leave no room for ambiguity: terminology, structure and meaning must carry across accurately. Each project uses SDL Trados termbases so defined terms stay consistent throughout a document and across related documents.",
+      s1p2: "Legal material is sensitive by nature. Files are handled under strict confidentiality, transferred securely, and I am ready to sign a non-disclosure agreement before any file is opened.",
+      s2Title: "What I translate",
+      s2List: [
+        "Contracts and agreements",
+        "Terms and conditions, policies and compliance documents",
+        "Corporate and regulatory documentation",
+        "Correspondence and supporting legal materials",
+      ],
+      ctaTitle: "Need legal documents translated in confidence?",
+      ctaDescription: "Tell me the scope and deadline — an NDA can be in place before you share anything.",
+    },
+    financial: {
+      title: "Financial translation into Arabic",
+      description:
+        "Financial documents translated with the accuracy, discretion and terminology consistency the numbers require.",
+      crumb: "Financial",
+      s1Title: "Accuracy where figures and wording both matter",
+      s1p1: "Financial documents combine exact figures with carefully chosen language. Terminology is kept consistent with SDL Trados termbases and translation memories, so recurring terms and standard phrasing stay uniform across reporting periods and document sets.",
+      s1p2: "Financial material is treated as confidential: secure transfers, careful handling and readiness to sign an NDA before any file is opened.",
+      s2Title: "What I translate",
+      s2List: [
+        "Financial reports and statements",
+        "Investor and corporate communications",
+        "Audit and compliance documentation",
+        "Presentations and financial marketing materials",
+      ],
+      ctaTitle: "Have financial documents to translate?",
+      ctaDescription: "Share the scope, language pair and deadline for a clear quote.",
+    },
+    healthcare: {
+      title: "Healthcare translation into Arabic",
+      description:
+        "Medical and healthcare documentation translated with accuracy, clarity and the right register for its readers.",
+      crumb: "Healthcare",
+      s1Title: "Clarity and correctness for sensitive content",
+      s1p1: "Healthcare content carries real consequences, so accuracy and clarity come first. Terms are kept consistent with SDL Trados termbases, and the register is matched to the audience — whether the readers are clinicians or patients.",
+      s1p2: "Every project follows a full Translation–Editing–Proofreading workflow, and files are handled under strict confidentiality.",
+      s2Title: "What I translate",
+      s2List: [
+        "Medical and clinical documentation",
+        "Patient-facing information and instructions",
+        "Healthcare product and device documentation",
+        "Regulatory and compliance materials",
+      ],
+      ctaTitle: "Need healthcare content translated into Arabic?",
+      ctaDescription: "Tell me the document type, language pair and deadline for a clear quote.",
+    },
+    audiovisual: {
+      title: "Audiovisual translation & dubbing into Arabic",
+      description:
+        "Subtitling, transcreation and dubbing adaptation — with the lip-sync precision streaming and broadcast work demands.",
+      crumb: "Audiovisual",
+      s1Title: "Dialogue that sounds native — and lands on the lips",
+      s1p1: "Audiovisual work is about more than words on a page: the Arabic has to fit the picture, the timing and the performance. That means transcreating idioms so they feel native to Arab audiences while preserving the drama and intent of the original.",
+      stepsTitle: "The dubbing & lip-sync adaptation process",
+      steps: [
+        {
+          title: "Script & timecode review",
+          description:
+            "Study the timecoded script alongside the on-screen performance to understand timing, tone and intent.",
+        },
+        {
+          title: "Translation & transcreation",
+          description:
+            "Translate the meaning and transcreate culturally specific idioms so they carry the same emotional weight in Arabic without sounding unnatural.",
+        },
+        {
+          title: "Syllable & lip-sync matching",
+          description:
+            "Adjust Arabic phrasing and syllable count to match the actors' lip movements and the timing of each line.",
+        },
+        {
+          title: "Review against picture",
+          description:
+            "Check the adapted dialogue against the footage for timing accuracy and cultural fit, refining where needed.",
+        },
+        {
+          title: "Studio-ready delivery",
+          description:
+            "Deliver an adapted script that recording can use directly, respecting the original director's intent.",
+        },
+      ],
+      offerTitle: "What I offer",
+      offerList: [
+        "Subtitling and timecoded script translation",
+        "Dubbing adaptation with lip-sync alignment",
+        "Transcreation of culturally specific dialogue",
+      ],
+      ctaTitle: "Localizing a series or film into Arabic?",
+      ctaDescription: "Tell me the source language, format and deadline for a clear quote.",
+    },
+  },
+  form: {
+    successTitle: "Thank you — your request has been received.",
+    successText:
+      "I'll get back to you shortly. Please don't send any confidential files until we've agreed terms.",
+    company: "Company",
+    name: "Name",
+    email: "Email",
+    languagePair: "Language pair",
+    choose: "Choose…",
+    specialization: "Specialization",
+    notSure: "Not sure / other",
+    volume: "Word count or runtime",
+    volumePlaceholder: "e.g. 5,000 words or 20 minutes",
+    deadline: "Deadline",
+    deadlinePlaceholder: "e.g. 15 October, or flexible",
+    service: "Service needed",
+    selectService: "Select a service…",
+    details: "Project details",
+    detailsPlaceholder: "Tell me about your project…",
+    nda: "I'd like an NDA signed before I share files.",
+    sending: "Sending…",
+    send: "Send request",
+    pairs: ["English → Arabic", "French → Arabic", "Spanish → Arabic"],
+  },
+  cookie: {
+    text: "This website uses privacy-friendly analytics to understand how the site is used. See the",
+    privacy: "privacy policy",
+    decline: "Decline",
+    accept: "Accept",
+  },
+  notFound: {
+    title: "Page not found",
+    text: "The page you're looking for doesn't exist or may have moved.",
+    goHome: "Go to home",
+    browse: "Browse services",
+  },
+  blog: {
+    title: "Blog",
+    description: "Notes on translation workflow, localization and terminology.",
+    crumb: "Blog",
+    all: "All",
+    filterAria: "Filter by category",
+    emptyCategory: "No posts in this category yet.",
+    emptyNone: "No posts published yet — check back soon.",
+    minRead: "min read",
+  },
 };
 
 export default en;

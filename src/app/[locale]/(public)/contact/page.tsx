@@ -5,6 +5,7 @@ import { Callout } from "@/components/Callout/Callout";
 import { LocaleLink } from "@/components/LocaleLink/LocaleLink";
 import { QuoteForm } from "./QuoteForm";
 import { getContent } from "@/i18n/content";
+import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
@@ -18,8 +19,12 @@ export const metadata: Metadata = {
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = getContent(locale as Locale);
+  const loc = locale as Locale;
+  const t = getContent(loc);
   const c = t.contact;
+  const home = await getLocalizedHome(loc);
+  const specializationOptions = t.cards.specializations.map((s) => s.title);
+  const serviceOptions = home.services.items.map((s) => s.title);
 
   return (
     <>
@@ -48,7 +53,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         </Callout>
 
         <div className="section-gap">
-          <QuoteForm />
+          <QuoteForm
+            labels={t.form}
+            specializationOptions={specializationOptions}
+            serviceOptions={serviceOptions}
+          />
         </div>
       </Container>
     </>

@@ -214,6 +214,181 @@ const fr: SiteContent = {
       },
     ],
   },
+  serviceDetail: {
+    eyebrow: "Spécialisation",
+    technical: {
+      title: "Traduction technique vers l'arabe",
+      description:
+        "Documentation d'ingénierie et industrielle traduite par quelqu'un qui comprend le sujet, pas seulement les mots.",
+      crumb: "Technique",
+      s1Title: "Comprendre le sujet, pas seulement la langue",
+      s1p1: "Une formation en ingénierie environnementale permet de lire les textes techniques sources comme l'auteur l'a voulu — les concepts, unités et normes derrière la terminologie sont familiers, de sorte que l'arabe se lit correctement pour les spécialistes du domaine.",
+      s1p2: "La cohérence est assurée avec SDL Trados Studio : les glossaires et bases terminologiques du projet maintiennent l'uniformité des termes clés, et les mémoires de traduction gardent les documents longs ou fréquemment mis à jour alignés d'une version à l'autre.",
+      s2Title: "Ce que je traduis",
+      s2List: [
+        "Manuels d'ingénierie, guides d'utilisation et procédures d'exploitation",
+        "Spécifications techniques et fiches techniques",
+        "Rapports environnementaux et d'ingénierie",
+        "Documents de sécurité, de normes et de conformité",
+        "Documentation de produits et d'équipements",
+      ],
+      s3Title: "Services techniques connexes",
+      s3Intro: "Les projets techniques associent souvent la traduction à :",
+      s3List: [
+        "Post-édition de traduction automatique (MTPE) — amener la sortie machine au niveau humain tout en gardant des délais efficaces.",
+        "Test de produits numériques — vérifier les interfaces localisées en contexte pour la mise en page, la troncature et l'ergonomie.",
+        "Annotation et évaluation de données IA (RLHF) — évaluer et améliorer la sortie arabe générée par l'IA.",
+      ],
+      ctaTitle: "Vous avez une documentation technique à traduire ?",
+      ctaDescription: "Indiquez la combinaison de langues, le domaine et le délai pour un devis clair.",
+    },
+    legal: {
+      title: "Traduction juridique vers l'arabe",
+      description:
+        "Contrats et documents juridiques traduits avec précision et traités avec la confidentialité que le matériel exige.",
+      crumb: "Juridique",
+      s1Title: "Précision et confidentialité",
+      s1p1: "Les textes juridiques ne laissent aucune place à l'ambiguïté : la terminologie, la structure et le sens doivent être rendus avec exactitude. Chaque projet utilise les bases terminologiques SDL Trados pour que les termes définis restent cohérents dans un document et entre documents liés.",
+      s1p2: "Le matériel juridique est sensible par nature. Les fichiers sont traités dans une stricte confidentialité, transférés en toute sécurité, et je suis prêt à signer un accord de confidentialité avant l'ouverture de tout fichier.",
+      s2Title: "Ce que je traduis",
+      s2List: [
+        "Contrats et accords",
+        "Conditions générales, politiques et documents de conformité",
+        "Documentation d'entreprise et réglementaire",
+        "Correspondance et pièces juridiques annexes",
+      ],
+      ctaTitle: "Besoin de traduire des documents juridiques en toute confidentialité ?",
+      ctaDescription:
+        "Indiquez-moi la portée et le délai — un accord de confidentialité peut être en place avant tout partage.",
+    },
+    financial: {
+      title: "Traduction financière vers l'arabe",
+      description:
+        "Documents financiers traduits avec l'exactitude, la discrétion et la cohérence terminologique que les chiffres exigent.",
+      crumb: "Financier",
+      s1Title: "L'exactitude là où les chiffres et les mots comptent tous deux",
+      s1p1: "Les documents financiers associent des chiffres exacts à un langage soigneusement choisi. La terminologie reste cohérente grâce aux bases terminologiques et mémoires de traduction SDL Trados, de sorte que les termes récurrents et les formulations standard restent uniformes d'une période à l'autre et d'un ensemble de documents à l'autre.",
+      s1p2: "Le matériel financier est traité comme confidentiel : transferts sécurisés, manipulation soignée et disposition à signer un accord de confidentialité avant l'ouverture de tout fichier.",
+      s2Title: "Ce que je traduis",
+      s2List: [
+        "Rapports et états financiers",
+        "Communications aux investisseurs et communications d'entreprise",
+        "Documentation d'audit et de conformité",
+        "Présentations et supports marketing financiers",
+      ],
+      ctaTitle: "Vous avez des documents financiers à traduire ?",
+      ctaDescription: "Indiquez la portée, la combinaison de langues et le délai pour un devis clair.",
+    },
+    healthcare: {
+      title: "Traduction médicale vers l'arabe",
+      description:
+        "Documentation médicale et de santé traduite avec exactitude, clarté et le registre adapté à ses lecteurs.",
+      crumb: "Santé",
+      s1Title: "Clarté et exactitude pour un contenu sensible",
+      s1p1: "Le contenu médical a de réelles conséquences, l'exactitude et la clarté passent donc en premier. Les termes restent cohérents grâce aux bases terminologiques SDL Trados, et le registre est adapté au public — que les lecteurs soient des cliniciens ou des patients.",
+      s1p2: "Chaque projet suit un flux complet Traduction–Révision–Relecture, et les fichiers sont traités dans une stricte confidentialité.",
+      s2Title: "Ce que je traduis",
+      s2List: [
+        "Documentation médicale et clinique",
+        "Informations et instructions destinées aux patients",
+        "Documentation de produits et dispositifs médicaux",
+        "Documents réglementaires et de conformité",
+      ],
+      ctaTitle: "Besoin de traduire du contenu médical vers l'arabe ?",
+      ctaDescription:
+        "Indiquez-moi le type de document, la combinaison de langues et le délai pour un devis clair.",
+    },
+    audiovisual: {
+      title: "Traduction audiovisuelle et doublage vers l'arabe",
+      description:
+        "Sous-titrage, transcréation et adaptation de doublage — avec la précision de synchronisation labiale qu'exigent le streaming et la diffusion.",
+      crumb: "Audiovisuel",
+      s1Title: "Des dialogues qui sonnent natifs — et tombent juste sur les lèvres",
+      s1p1: "Le travail audiovisuel va au-delà des mots sur une page : l'arabe doit s'accorder à l'image, au rythme et au jeu. Cela implique de transcréer les expressions pour qu'elles paraissent natives au public arabe tout en préservant la tension dramatique et l'intention de l'original.",
+      stepsTitle: "Le processus d'adaptation de doublage et de synchronisation labiale",
+      steps: [
+        {
+          title: "Revue du script et des timecodes",
+          description:
+            "Étudier le script minuté en parallèle de l'interprétation à l'écran pour comprendre le rythme, le ton et l'intention.",
+        },
+        {
+          title: "Traduction et transcréation",
+          description:
+            "Traduire le sens et transcréer les expressions culturelles pour qu'elles portent la même charge émotionnelle en arabe sans paraître artificielles.",
+        },
+        {
+          title: "Adéquation syllabes et synchronisation labiale",
+          description:
+            "Ajuster la formulation arabe et le nombre de syllabes pour correspondre aux mouvements des lèvres des acteurs et au rythme de chaque réplique.",
+        },
+        {
+          title: "Vérification face à l'image",
+          description:
+            "Contrôler le dialogue adapté face aux images pour l'exactitude du rythme et l'adéquation culturelle, en affinant si nécessaire.",
+        },
+        {
+          title: "Livraison prête pour le studio",
+          description:
+            "Livrer un script adapté directement utilisable en enregistrement, dans le respect de l'intention du réalisateur.",
+        },
+      ],
+      offerTitle: "Ce que je propose",
+      offerList: [
+        "Sous-titrage et traduction de scripts minutés",
+        "Adaptation de doublage avec synchronisation labiale",
+        "Transcréation de dialogues culturellement spécifiques",
+      ],
+      ctaTitle: "Vous localisez une série ou un film vers l'arabe ?",
+      ctaDescription: "Indiquez-moi la langue source, le format et le délai pour un devis clair.",
+    },
+  },
+  form: {
+    successTitle: "Merci — votre demande a bien été reçue.",
+    successText:
+      "Je vous recontacte sous peu. Merci de ne pas envoyer de fichiers confidentiels avant que nous ayons convenu des conditions.",
+    company: "Entreprise",
+    name: "Nom",
+    email: "E-mail",
+    languagePair: "Combinaison de langues",
+    choose: "Choisir…",
+    specialization: "Spécialisation",
+    notSure: "Je ne sais pas / autre",
+    volume: "Nombre de mots ou durée",
+    volumePlaceholder: "ex. 5 000 mots ou 20 minutes",
+    deadline: "Délai",
+    deadlinePlaceholder: "ex. 15 octobre, ou flexible",
+    service: "Service souhaité",
+    selectService: "Sélectionner un service…",
+    details: "Détails du projet",
+    detailsPlaceholder: "Parlez-moi de votre projet…",
+    nda: "Je souhaite un accord de confidentialité signé avant de partager des fichiers.",
+    sending: "Envoi…",
+    send: "Envoyer la demande",
+    pairs: ["Anglais → Arabe", "Français → Arabe", "Espagnol → Arabe"],
+  },
+  cookie: {
+    text: "Ce site utilise des statistiques respectueuses de la vie privée pour comprendre son utilisation. Consultez la",
+    privacy: "politique de confidentialité",
+    decline: "Refuser",
+    accept: "Accepter",
+  },
+  notFound: {
+    title: "Page introuvable",
+    text: "La page que vous recherchez n'existe pas ou a peut-être été déplacée.",
+    goHome: "Aller à l'accueil",
+    browse: "Parcourir les services",
+  },
+  blog: {
+    title: "Blog",
+    description: "Notes sur le flux de traduction, la localisation et la terminologie.",
+    crumb: "Blog",
+    all: "Tout",
+    filterAria: "Filtrer par catégorie",
+    emptyCategory: "Aucun article dans cette catégorie pour le moment.",
+    emptyNone: "Aucun article publié pour le moment — revenez bientôt.",
+    minRead: "min de lecture",
+  },
 };
 
 export default fr;

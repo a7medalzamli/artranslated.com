@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
+import { getContent } from "@/i18n/content";
+import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
@@ -11,50 +13,46 @@ export const metadata: Metadata = {
     "English, French and Spanish to Arabic financial translation for reports, statements and financial communications, with precise and consistent terminology.",
 };
 
-export default function FinancialPage() {
+export default async function FinancialPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = getContent(locale as Locale);
+  const s = t.serviceDetail.financial;
+
   return (
     <>
       <PageHeader
-        eyebrow="Specialization"
-        title="Financial translation into Arabic"
-        description="Financial documents translated with the accuracy, discretion and terminology consistency the numbers require."
+        eyebrow={t.serviceDetail.eyebrow}
+        title={s.title}
+        description={s.description}
         breadcrumbs={[
-          { label: "Home", href: routes.home },
-          { label: "Services", href: routes.services },
-          { label: "Financial" },
+          { label: t.common.homeCrumb, href: routes.home },
+          { label: t.services.crumb, href: routes.services },
+          { label: s.crumb },
         ]}
       />
 
-      <Section title="Accuracy where figures and wording both matter">
+      <Section title={s.s1Title}>
         <div className="prose">
-          <p>
-            Financial documents combine exact figures with carefully chosen language. Terminology is
-            kept consistent with SDL Trados termbases and translation memories, so recurring terms
-            and standard phrasing stay uniform across reporting periods and document sets.
-          </p>
-          <p>
-            Financial material is treated as confidential: secure transfers, careful handling and
-            readiness to sign an NDA before any file is opened.
-          </p>
+          <p>{s.s1p1}</p>
+          <p>{s.s1p2}</p>
         </div>
       </Section>
 
-      <Section tinted title="What I translate">
+      <Section tinted title={s.s2Title}>
         <div className="prose">
           <ul>
-            <li>Financial reports and statements</li>
-            <li>Investor and corporate communications</li>
-            <li>Audit and compliance documentation</li>
-            <li>Presentations and financial marketing materials</li>
+            {s.s2List.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
         </div>
       </Section>
 
       <CTA
-        title="Have financial documents to translate?"
-        description="Share the scope, language pair and deadline for a clear quote."
-        primary={{ label: "Let's talk", href: routes.contact }}
-        secondary={{ label: "How I work", href: routes.process }}
+        title={s.ctaTitle}
+        description={s.ctaDescription}
+        primary={{ label: t.common.letsTalk, href: routes.contact }}
+        secondary={{ label: t.common.seeProcess, href: routes.process }}
       />
     </>
   );

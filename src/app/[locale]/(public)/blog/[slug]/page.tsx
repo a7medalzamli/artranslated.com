@@ -7,6 +7,8 @@ import { Markdown } from "@/components/Markdown/Markdown";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { getPublishedPostBySlug } from "@/lib/blog/posts";
 import { formatDate, readingTimeMinutes } from "@/lib/blog/format";
+import { getContent } from "@/i18n/content";
+import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -41,8 +43,13 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}) {
+  const { locale, slug } = await params;
+  const t = getContent(locale as Locale);
   const post = await getPublishedPostBySlug(slug);
 
   if (!post) {
@@ -69,15 +76,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         eyebrow={post.category ?? undefined}
         title={post.title}
         breadcrumbs={[
-          { label: "Home", href: routes.home },
-          { label: "Blog", href: routes.blog },
+          { label: t.common.homeCrumb, href: routes.home },
+          { label: t.blog.crumb, href: routes.blog },
           { label: post.title },
         ]}
       />
 
       <Container size="narrow" className={styles.article}>
         <p className={styles.meta}>
-          {formatDate(post.published_at)} &middot; {readingTimeMinutes(post.content)} min read
+          {formatDate(post.published_at)} &middot; {readingTimeMinutes(post.content)} {t.blog.minRead}
         </p>
 
         {post.cover_image_url && (

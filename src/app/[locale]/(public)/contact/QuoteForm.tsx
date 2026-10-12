@@ -2,25 +2,50 @@
 
 import { useActionState } from "react";
 import { submitQuote, type QuoteState } from "./actions";
-import { specializations } from "@/content/specializations";
-import { homeServices } from "@/content/homeServices";
 import styles from "./contact.module.css";
 
 const initialState: QuoteState = { ok: false, error: null };
 
-const languagePairs = ["English → Arabic", "French → Arabic", "Spanish → Arabic"];
+export type QuoteFormLabels = {
+  successTitle: string;
+  successText: string;
+  company: string;
+  name: string;
+  email: string;
+  languagePair: string;
+  choose: string;
+  specialization: string;
+  notSure: string;
+  volume: string;
+  volumePlaceholder: string;
+  deadline: string;
+  deadlinePlaceholder: string;
+  service: string;
+  selectService: string;
+  details: string;
+  detailsPlaceholder: string;
+  nda: string;
+  sending: string;
+  send: string;
+  pairs: string[];
+};
 
-export function QuoteForm() {
+export function QuoteForm({
+  labels,
+  specializationOptions,
+  serviceOptions,
+}: {
+  labels: QuoteFormLabels;
+  specializationOptions: string[];
+  serviceOptions: string[];
+}) {
   const [state, formAction, pending] = useActionState(submitQuote, initialState);
 
   if (state.ok) {
     return (
       <div className={styles.success} role="status">
-        <h2>Thank you — your request has been received.</h2>
-        <p>
-          I&rsquo;ll get back to you shortly. Please don&rsquo;t send any confidential files until
-          we&rsquo;ve agreed terms.
-        </p>
+        <h2>{labels.successTitle}</h2>
+        <p>{labels.successText}</p>
       </div>
     );
   }
@@ -32,20 +57,20 @@ export function QuoteForm() {
       {/* Honeypot: hidden from humans; bots that fill it are silently ignored. */}
       <div className={styles.honeypot} aria-hidden="true">
         <label>
-          Company
+          {labels.company}
           <input type="text" name="company" tabIndex={-1} autoComplete="off" />
         </label>
       </div>
 
       <div className={styles.row}>
         <label className={styles.field}>
-          <span>Name *</span>
+          <span>{labels.name} *</span>
           <input name="name" required aria-invalid={Boolean(fieldError("name"))} />
           {fieldError("name") && <em className={styles.err}>{fieldError("name")}</em>}
         </label>
 
         <label className={styles.field}>
-          <span>Email *</span>
+          <span>{labels.email} *</span>
           <input name="email" type="email" required aria-invalid={Boolean(fieldError("email"))} />
           {fieldError("email") && <em className={styles.err}>{fieldError("email")}</em>}
         </label>
@@ -53,12 +78,12 @@ export function QuoteForm() {
 
       <div className={styles.row}>
         <label className={styles.field}>
-          <span>Language pair *</span>
+          <span>{labels.languagePair} *</span>
           <select name="language_pair" required defaultValue="">
             <option value="" disabled>
-              Choose…
+              {labels.choose}
             </option>
-            {languagePairs.map((pair) => (
+            {labels.pairs.map((pair) => (
               <option key={pair} value={pair}>
                 {pair}
               </option>
@@ -70,12 +95,12 @@ export function QuoteForm() {
         </label>
 
         <label className={styles.field}>
-          <span>Specialization</span>
+          <span>{labels.specialization}</span>
           <select name="specialization" defaultValue="">
-            <option value="">Not sure / other</option>
-            {specializations.map((s) => (
-              <option key={s.slug} value={s.title}>
-                {s.title}
+            <option value="">{labels.notSure}</option>
+            {specializationOptions.map((title) => (
+              <option key={title} value={title}>
+                {title}
               </option>
             ))}
           </select>
@@ -84,37 +109,37 @@ export function QuoteForm() {
 
       <div className={styles.row}>
         <label className={styles.field}>
-          <span>Word count or runtime</span>
-          <input name="volume" placeholder="e.g. 5,000 words or 20 minutes" />
+          <span>{labels.volume}</span>
+          <input name="volume" placeholder={labels.volumePlaceholder} />
         </label>
 
         <label className={styles.field}>
-          <span>Deadline</span>
-          <input name="deadline" placeholder="e.g. 15 October, or flexible" />
+          <span>{labels.deadline}</span>
+          <input name="deadline" placeholder={labels.deadlinePlaceholder} />
         </label>
       </div>
 
       <label className={styles.field}>
-        <span>Service needed</span>
+        <span>{labels.service}</span>
         <select name="service" defaultValue="">
-          <option value="">Select a service…</option>
-          {homeServices.map((service) => (
-            <option key={service.title} value={service.title}>
-              {service.title}
+          <option value="">{labels.selectService}</option>
+          {serviceOptions.map((title) => (
+            <option key={title} value={title}>
+              {title}
             </option>
           ))}
         </select>
       </label>
 
       <label className={styles.field}>
-        <span>Project details</span>
-        <textarea name="message" rows={5} placeholder="Tell me about your project…" />
+        <span>{labels.details}</span>
+        <textarea name="message" rows={5} placeholder={labels.detailsPlaceholder} />
         {fieldError("message") && <em className={styles.err}>{fieldError("message")}</em>}
       </label>
 
       <label className={styles.checkbox}>
         <input type="checkbox" name="nda_requested" />
-        <span>I&rsquo;d like an NDA signed before I share files.</span>
+        <span>{labels.nda}</span>
       </label>
 
       {state.error && (
@@ -124,7 +149,7 @@ export function QuoteForm() {
       )}
 
       <button type="submit" className={styles.submit} disabled={pending}>
-        {pending ? "Sending…" : "Send request"}
+        {pending ? labels.sending : labels.send}
       </button>
     </form>
   );

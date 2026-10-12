@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
+import { getContent } from "@/i18n/content";
+import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
@@ -11,53 +13,46 @@ export const metadata: Metadata = {
     "English, French and Spanish to Arabic healthcare and medical translation, delivered with accuracy, clarity and an appropriate register for each audience.",
 };
 
-export default function HealthcarePage() {
+export default async function HealthcarePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = getContent(locale as Locale);
+  const s = t.serviceDetail.healthcare;
+
   return (
     <>
       <PageHeader
-        eyebrow="Specialization"
-        title="Healthcare translation into Arabic"
-        description="Medical and healthcare documentation translated with accuracy, clarity and the right register for its readers."
+        eyebrow={t.serviceDetail.eyebrow}
+        title={s.title}
+        description={s.description}
         breadcrumbs={[
-          { label: "Home", href: routes.home },
-          { label: "Services", href: routes.services },
-          { label: "Healthcare" },
+          { label: t.common.homeCrumb, href: routes.home },
+          { label: t.services.crumb, href: routes.services },
+          { label: s.crumb },
         ]}
       />
 
-      <Section title="Clarity and correctness for sensitive content">
+      <Section title={s.s1Title}>
         <div className="prose">
-          <p>
-            Healthcare content carries real consequences, so accuracy and clarity come first. Terms
-            are kept consistent with SDL Trados termbases, and the register is matched to the
-            audience — whether the readers are clinicians or patients.
-          </p>
-          <p>
-            Every project follows a full Translation&ndash;Editing&ndash;Proofreading workflow, and
-            files are handled under strict confidentiality.
-          </p>
+          <p>{s.s1p1}</p>
+          <p>{s.s1p2}</p>
         </div>
       </Section>
 
-      <Section tinted title="What I translate">
+      <Section tinted title={s.s2Title}>
         <div className="prose">
           <ul>
-            <li>Medical and clinical documentation</li>
-            <li>Patient-facing information and instructions</li>
-            <li>Healthcare product and device documentation</li>
-            <li>Regulatory and compliance materials</li>
+            {s.s2List.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
-          <p>
-            [Note: confirm any specific healthcare sub-fields or document types to feature here.]
-          </p>
         </div>
       </Section>
 
       <CTA
-        title="Need healthcare content translated into Arabic?"
-        description="Tell me the document type, language pair and deadline for a clear quote."
-        primary={{ label: "Let's talk", href: routes.contact }}
-        secondary={{ label: "Process & QA", href: routes.process }}
+        title={s.ctaTitle}
+        description={s.ctaDescription}
+        primary={{ label: t.common.letsTalk, href: routes.contact }}
+        secondary={{ label: t.common.seeProcess, href: routes.process }}
       />
     </>
   );
