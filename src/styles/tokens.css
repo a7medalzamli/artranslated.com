@@ -1,59 +1,45 @@
 /*
- * Design tokens — single source of truth (color, type, spacing, radius, shadow).
- * Generated from design-system/ar-translated/MASTER.md
- * Direction: "Trust & Authority" · Style: Accessible & Ethical · Density: Spacious.
- * Reference via var(--token) only; never hard-code raw colors/sizes in components.
+ * Design tokens — the single source of truth for color, spacing, type,
+ * radius, shadow and layout values. Reference these via var(--token) only;
+ * never hard-code raw colors or sizes in component styles.
  *
- * Light is the default (:root); dark follows the visitor's system setting.
+ * The site is light mode only.
  */
 
 :root {
-  color-scheme: light;
-
   /* ---- Color: neutrals & surfaces ---- */
   --color-bg: #ffffff;
   --color-surface: #f8fafc;
   --color-surface-2: #eef2f7;
-  --color-text: #0f172a;
-  --color-text-muted: #475569;
-  --color-border: #e2e8f0;
-  --color-border-strong: #cbd5e1;
+  --color-text: #1f2937; /* gray-800 */
+  --color-text-muted: #4b5563; /* gray-600 */
+  --color-border: #e5e7eb;
+  --color-border-strong: #cbd2db;
 
-  /* ---- Color: brand — navy authority + blue CTA ---- */
-  --color-primary: #0369a1;
-  --color-primary-hover: #025d8f;
+  /* ---- Color: brand (blue) — one color everywhere ---- */
+  --color-primary: #0062ff;
+  --color-primary-hover: #0052d6;
   --color-on-primary: #ffffff;
 
-  --color-secondary: #334155;
-  --color-on-secondary: #ffffff;
-
-  --color-accent: #0369a1;
-  --color-accent-hover: #025d8f;
+  --color-accent: #0062ff; /* AA on white for text/links/eyebrows */
+  --color-accent-hover: #0052d6;
   --color-on-accent: #ffffff;
-  --color-accent-strong: #0369a1;
-  --color-accent-strong-hover: #025d8f;
-
-  /* ---- Color: semantic surfaces (from MASTER) ---- */
-  --color-foreground: #020617;
-  --color-card: #ffffff;
-  --color-card-foreground: #020617;
-  --color-muted: #e8ecf1;
-  --color-muted-foreground: #475569;
-  --color-ring: #0369a1;
+  --color-accent-strong: #0062ff;
+  --color-accent-strong-hover: #0052d6;
 
   /* ---- Color: feedback ---- */
-  --color-danger: #dc2626;
-  --color-danger-bg: #fdecec;
-  --color-on-danger: #ffffff;
+  --color-danger: #b3261e;
+  --color-danger-bg: #fdeceb;
   --color-success: #1e7d55;
   --color-success-bg: #e7f5ee;
 
-  --color-focus: #0369a1;
+  /* ---- Color: focus ring (visible keyboard focus) ---- */
+  --color-focus: #0062ff;
 
-  /* ---- Typography (bilingual: Noto Sans + Noto Sans Arabic) ---- */
+  /* ---- Typography ---- */
   --font-sans:
-    var(--font-noto-sans), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --font-arabic: var(--font-noto-sans-arabic), var(--font-sans);
+    var(--font-lexend), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-arabic: var(--font-ibm-plex-sans-arabic), var(--font-sans);
 
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -63,25 +49,22 @@
   --font-size-h3: clamp(1.3rem, 1.15rem + 0.9vw, 1.6rem);
   --font-size-h4: clamp(1.1rem, 1.05rem + 0.3vw, 1.25rem);
 
-  --line-tight: 1.15;
-  --line-snug: 1.35;
-  --line-normal: 1.6;
-
-  /* Arabic needs a little more size + air than Latin. */
-  --font-scale-arabic: 1.06;
-  --line-arabic: 1.9;
+  --line-tight: 1.1;
+  --line-snug: 1.3;
+  --line-normal: 1.65;
 
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
 
-  --tracking-tight: -0.015em;
-  --tracking-tighter: -0.025em;
-  --tracking-label: 0.01em;
-  --measure: 65ch;
+  /* ---- Letter-spacing & measure ---- */
+  --tracking-tight: -0.02em; /* large headings */
+  --tracking-tighter: -0.035em; /* hero headline */
+  --tracking-label: 0.01em; /* sentence-case labels (not uppercase) */
+  --measure: 65ch; /* comfortable body line length */
 
-  /* ---- Spacing scale (spacious) ---- */
+  /* ---- Spacing scale (4px base) ---- */
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
@@ -92,71 +75,27 @@
   --space-3xl: 4rem;
   --space-4xl: 6rem;
 
-  /* ---- Radius (MASTER) ---- */
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-full: 999px;
+  /* ---- Radius ---- */
+  /* Square corners everywhere. */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-full: 999px; /* genuine circles only (dots, number badges) */
 
-  /* ---- Shadow (MASTER) ---- */
-  --shadow-sm: 0 1px 2px rgba(2, 6, 23, 0.05);
-  --shadow-md: 0 4px 6px rgba(2, 6, 23, 0.08), 0 1px 2px rgba(2, 6, 23, 0.05);
-  --shadow-lg: 0 10px 15px rgba(2, 6, 23, 0.1), 0 4px 6px rgba(2, 6, 23, 0.05);
-  --shadow-xl: 0 20px 25px rgba(2, 6, 23, 0.15), 0 8px 10px rgba(2, 6, 23, 0.06);
+  /* ---- Shadow ---- */
+  --shadow-sm: 0 1px 2px rgba(17, 20, 24, 0.05);
+  --shadow-md: 0 2px 4px rgba(17, 20, 24, 0.04), 0 8px 24px rgba(17, 20, 24, 0.06);
+  --shadow-lg: 0 16px 48px rgba(17, 20, 24, 0.1);
 
   /* ---- Layout ---- */
-  --container-max: 72rem;
-  --container-narrow: 46rem;
-  --header-height: 4.5rem;
+  --container-max: 72rem; /* ~1152px */
+  --container-narrow: 46rem; /* ~736px, for prose */
+  --header-height: 4rem;
 
   /* ---- Motion ---- */
   --transition-fast: 150ms ease;
   --transition: 250ms ease;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-
-    --color-bg: #0b1220;
-    --color-surface: #111a2b;
-    --color-surface-2: #1b2740;
-    --color-text: #e8eef6;
-    --color-text-muted: #9fb0c3;
-    --color-border: #243247;
-    --color-border-strong: #35485f;
-
-    --color-primary: #5ab0e8;
-    --color-primary-hover: #7cc4f0;
-    --color-on-primary: #07121d;
-
-    --color-secondary: #94a3b8;
-    --color-on-secondary: #0b1220;
-
-    --color-accent: #6fb9ec;
-    --color-accent-hover: #8fcbf2;
-    --color-on-accent: #07121d;
-    --color-accent-strong: #5ab0e8;
-    --color-accent-strong-hover: #7cc4f0;
-
-    --color-foreground: #e8eef6;
-    --color-card: #111a2b;
-    --color-card-foreground: #e8eef6;
-    --color-muted: #1b2740;
-    --color-muted-foreground: #9fb0c3;
-    --color-ring: #6fb9ec;
-
-    --color-danger: #f87171;
-    --color-danger-bg: #2a1414;
-    --color-success: #8fd3b3;
-    --color-success-bg: #12241c;
-
-    --color-focus: #6fb9ec;
-
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.45);
-    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 20px 30px rgba(0, 0, 0, 0.6);
-  }
+  /* Light mode only. */
+  color-scheme: light;
 }

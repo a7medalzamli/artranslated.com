@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Noto_Sans, Noto_Sans_Arabic } from "next/font/google";
+import { Lexend, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { CookieConsent } from "@/components/CookieConsent/CookieConsent";
 import { defaultLocale, localeDirection } from "@/i18n/config";
 import { siteUrl } from "@/lib/seo";
 import "./globals.css";
 
-const notoSans = Noto_Sans({
+const lexend = Lexend({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-noto-sans",
+  variable: "--font-lexend",
   display: "swap",
 });
 
-const notoSansArabic = Noto_Sans_Arabic({
+const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-noto-sans-arabic",
+  variable: "--font-ibm-plex-sans-arabic",
   display: "swap",
 });
 
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang={defaultLocale}
       dir={localeDirection[defaultLocale]}
-      className={`${notoSans.variable} ${notoSansArabic.variable}`}
+      className={`${lexend.variable} ${ibmPlexSansArabic.variable}`}
     >
       <body>
         {children}
