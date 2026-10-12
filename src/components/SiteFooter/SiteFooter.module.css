@@ -2,13 +2,14 @@
   margin-top: var(--space-4xl);
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
-  padding-block: var(--space-2xl) var(--space-xl);
-  /* Full-screen-height footer with content vertically centered. */
+  padding-block: var(--space-2xl) var(--space-sm);
+  /* Full-screen-height footer; content sits toward the bottom so the space
+     under the copyright line stays small. */
   min-height: 100vh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .grid {
