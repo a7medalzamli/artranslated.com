@@ -14,7 +14,7 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
 
   return (
     <footer className={styles.footer}>
-      <Container>
+      <Container className={styles.inner}>
         <div className={styles.grid}>
           <div className={styles.brandCol}>
             <Link

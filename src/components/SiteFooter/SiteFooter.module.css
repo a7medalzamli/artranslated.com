@@ -3,13 +3,20 @@
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
   padding-block: var(--space-2xl) var(--space-sm);
-  /* Full-screen-height footer; content sits toward the bottom so the space
-     under the copyright line stays small. */
+  /* Full-screen-height footer: main grid at the top, copyright pinned to the
+     bottom (see .inner / .bottom). */
   min-height: 100vh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+}
+
+/* Fill the footer height and lay children out as a column so the bottom bar
+   can be pushed to the bottom while the grid stays at the top. */
+.inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .grid {
@@ -126,7 +133,7 @@ a.credBadge:hover {
 }
 
 .bottom {
-  margin-top: var(--space-md);
+  margin-top: auto;
   padding-top: var(--space-sm);
   border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
