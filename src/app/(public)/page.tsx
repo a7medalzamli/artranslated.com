@@ -118,31 +118,6 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {/* ---- About ---- */}
-      <section className={styles.about} id="about">
-        <Container>
-          <div className={styles.aboutGrid}>
-            <Reveal from="right" className={styles.portraitWrap}>
-              <Image
-                src={content.about.image}
-                alt={site.name}
-                width={640}
-                height={640}
-                className={styles.portrait}
-                priority
-              />
-            </Reveal>
-            <Reveal from="up">
-              <h2 className={styles.aboutTitle}>{content.about.title}</h2>
-              <p className={styles.aboutText}>{content.about.text}</p>
-              <Link href={routes.about} className={styles.trustLink}>
-                More about me →
-              </Link>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
-
       {/* ---- Services ---- */}
       <section className={styles.services}>
         <Container>
