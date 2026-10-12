@@ -4,6 +4,7 @@ import { Container } from "@/components/Container/Container";
 import { Callout } from "@/components/Callout/Callout";
 import { QuoteForm } from "./QuoteForm";
 import { routes } from "@/lib/routes";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
@@ -22,6 +23,18 @@ export default function ContactPage() {
       />
 
       <Container className="section-pad">
+        <p style={{ fontSize: "var(--font-size-lg)", marginBottom: "var(--space-lg)" }}>
+          Prefer to reach out directly? Email{" "}
+          <a href={`mailto:${site.contact.email}`} style={{ color: "var(--color-accent)", fontWeight: 600 }}>
+            {site.contact.email}
+          </a>{" "}
+          or call{" "}
+          <a href={`tel:${site.contact.phoneHref}`} style={{ color: "var(--color-accent)", fontWeight: 600 }}>
+            {site.contact.phone}
+          </a>
+          .
+        </p>
+
         <Callout>
           <strong>Please don&rsquo;t send confidential files yet.</strong> This form is for project
           details only. Wait until we&rsquo;ve agreed terms &mdash; and an NDA, if you&rsquo;d like
