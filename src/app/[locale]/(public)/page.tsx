@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/LocaleLink/LocaleLink";
 import Image from "next/image";
 import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";

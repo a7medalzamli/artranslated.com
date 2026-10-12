@@ -1,16 +1,30 @@
 import type { ReactNode } from "react";
-import { getDictionary, defaultLocale } from "@/i18n";
+import { notFound } from "next/navigation";
+import { getDictionary, isLocale, localeDirection, locales, type Locale } from "@/i18n";
 import { SiteHeader } from "@/components/SiteHeader/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter/SiteFooter";
 import { getSiteSettings } from "@/lib/content/getSiteSettings";
 import styles from "./layout.module.css";
 
-export default async function PublicLayout({ children }: { children: ReactNode }) {
-  const dict = getDictionary(defaultLocale);
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default async function PublicLayout({
+  children,
+  params,
+}: {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+
+  const dict = getDictionary(locale as Locale);
   const settings = await getSiteSettings();
 
   return (
-    <>
+    <div lang={locale} dir={localeDirection[locale as Locale]} className={styles.localeRoot}>
       <a href="#main-content" className="skip-link">
         {dict.actions.skipToContent}
       </a>
@@ -19,6 +33,6 @@ export default async function PublicLayout({ children }: { children: ReactNode }
         {children}
       </main>
       <SiteFooter dict={dict} settings={settings} />
-    </>
+    </div>
   );
 }

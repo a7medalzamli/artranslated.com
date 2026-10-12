@@ -3,6 +3,7 @@
 import { useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
+import { LocaleLink } from "../LocaleLink/LocaleLink";
 import styles from "./CookieConsent.module.css";
 
 const KEY = "cookie-consent";
@@ -56,7 +57,7 @@ export function CookieConsent() {
         <div className={styles.banner} role="region" aria-label="Cookie consent">
           <p className={styles.text}>
             This website uses privacy-friendly analytics to understand how the site is used. See the{" "}
-            <a href="/privacy">privacy policy</a>.
+            <LocaleLink href="/privacy">privacy policy</LocaleLink>.
           </p>
           <div className={styles.actions}>
             <button type="button" className={styles.decline} onClick={() => setConsent("declined")}>

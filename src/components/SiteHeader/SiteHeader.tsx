@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { LocaleLink as Link } from "../LocaleLink/LocaleLink";
 import Image from "next/image";
 import { Container } from "../Container/Container";
 import { Button } from "../Button/Button";
+import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher";
 import { routes } from "@/lib/routes";
 import type { Dictionary } from "@/i18n";
 import type { SiteSettings } from "@/lib/content/settings";
@@ -50,6 +51,7 @@ export function SiteHeader({ dict, settings }: { dict: Dictionary; settings: Sit
           </nav>
 
           <div className={styles.desktopCta}>
+            <LanguageSwitcher />
             <Button href={routes.contact}>{dict.actions.requestQuote}</Button>
           </div>
 
@@ -80,6 +82,7 @@ export function SiteHeader({ dict, settings }: { dict: Dictionary; settings: Sit
                 </li>
               ))}
               <li className={styles.mobileCta}>
+                <LanguageSwitcher className={styles.mobileSwitcher} />
                 <Button href={routes.contact} size="lg" onClick={() => setOpen(false)}>
                   {dict.actions.requestQuote}
                 </Button>

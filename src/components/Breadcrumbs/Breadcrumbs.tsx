@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocaleLink } from "../LocaleLink/LocaleLink";
 import styles from "./Breadcrumbs.module.css";
 
 export type Crumb = { label: string; href?: string };
@@ -20,9 +20,9 @@ export function Breadcrumbs({ items, label = "Breadcrumb" }: BreadcrumbsProps) {
           return (
             <li key={`${item.label}-${index}`} className={styles.item}>
               {item.href && !isLast ? (
-                <Link href={item.href} className={styles.link}>
+                <LocaleLink href={item.href} className={styles.link}>
                   {item.label}
-                </Link>
+                </LocaleLink>
               ) : (
                 <span aria-current={isLast ? "page" : undefined} className={styles.current}>
                   {item.label}

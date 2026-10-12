@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocaleLink } from "../LocaleLink/LocaleLink";
 import type { ReactNode } from "react";
 import styles from "./Button.module.css";
 
@@ -39,9 +39,9 @@ export function Button({
 
   if (href) {
     return (
-      <Link href={href} className={cls} onClick={onClick} target={target} rel={rel} {...aria}>
+      <LocaleLink href={href} className={cls} onClick={onClick} target={target} rel={rel} {...aria}>
         {children}
-      </Link>
+      </LocaleLink>
     );
   }
 

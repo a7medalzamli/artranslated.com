@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocaleLink as Link } from "../LocaleLink/LocaleLink";
 import Image from "next/image";
 import { Container } from "../Container/Container";
 import { SocialLinks } from "../SocialLinks/SocialLinks";

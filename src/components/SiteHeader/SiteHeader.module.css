@@ -112,6 +112,11 @@
   margin-top: var(--space-md);
 }
 
+.mobileSwitcher {
+  width: 100%;
+  margin-bottom: var(--space-sm);
+}
+
 /* ---- Switch to desktop layout ---- */
 @media (min-width: 60em) {
   .desktopNav {
