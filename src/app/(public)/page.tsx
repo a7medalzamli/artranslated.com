@@ -6,6 +6,7 @@ import { Button } from "@/components/Button/Button";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { Reveal } from "@/components/Reveal/Reveal";
 import { CountUp } from "@/components/CountUp/CountUp";
+import { AvailabilityHours } from "@/components/AvailabilityHours/AvailabilityHours";
 import { Flag, type LanguageCode } from "@/components/Flag/Flag";
 import { QuoteForm } from "./contact/QuoteForm";
 import { getHomeContent } from "@/lib/content/getHomeContent";
@@ -122,10 +123,7 @@ export default async function HomePage() {
               <h2 id="availability-title" className={styles.availabilityTitle}>
                 Currently accepting new projects
               </h2>
-              <p className={styles.availabilityText}>
-                Typical reply within one business day. Working remotely across European and
-                Middle&nbsp;East time zones, with flexible scheduling for urgent agency deadlines.
-              </p>
+              <AvailabilityHours />
             </div>
             <Button href={routes.contact} variant="primary" size="lg">
               Let&apos;s talk
