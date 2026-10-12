@@ -435,11 +435,6 @@
 }
 
 /* ---- Why partner ---- */
-/* Full page width for the Why section (keeps the standard edge gutter). */
-.wideContainer {
-  max-width: none;
-}
-
 .whyHead {
   max-width: none;
   margin-bottom: var(--space-2xl);
