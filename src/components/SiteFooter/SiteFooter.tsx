@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Container } from "../Container/Container";
 import { SocialLinks } from "../SocialLinks/SocialLinks";
 import { routes } from "@/lib/routes";
+import { site } from "@/lib/site";
 import type { Dictionary } from "@/i18n";
 import type { SiteSettings } from "@/lib/content/settings";
 import styles from "./SiteFooter.module.css";
@@ -29,6 +30,16 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
               />
             </Link>
             <p className={styles.tagline}>{settings.footerTagline}</p>
+            <div className={styles.qr}>
+              <Image
+                src="/qr.svg"
+                alt={`QR code linking to ${site.domain}`}
+                width={96}
+                height={96}
+                className={styles.qrImg}
+              />
+              <span className={styles.qrCaption}>Scan to visit {site.domain}</span>
+            </div>
           </div>
 
           <nav className={styles.col} aria-label={dict.footer.servicesHeading}>
@@ -56,7 +67,10 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
             <h2 className={styles.heading}>{dict.footer.companyHeading}</h2>
             <ul className={styles.list}>
               <li>
-                <Link href={routes.process}>{dict.nav.process}</Link>
+                <Link href={routes.about}>{dict.footer.about}</Link>
+              </li>
+              <li>
+                <Link href={routes.process}>{dict.footer.howItWorks}</Link>
               </li>
               <li>
                 <Link href={routes.confidentiality}>{dict.nav.confidentiality}</Link>
@@ -80,7 +94,33 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
                 <Link href={routes.privacy}>{dict.footer.privacy}</Link>
               </li>
             </ul>
+            <ul className={styles.memberBadges} aria-label="Professional profiles">
+              {site.memberships.map((m) => (
+                <li key={m.id}>
+                  <a
+                    href={m.href}
+                    className={styles.memberBadge}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {m.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </nav>
+
+          <div className={styles.col}>
+            <h2 className={styles.heading}>{dict.footer.contactHeading}</h2>
+            <ul className={styles.list}>
+              <li>
+                <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+              </li>
+              <li>
+                <a href={`tel:${site.contact.phoneHref}`}>{site.contact.phone}</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className={styles.bottom}>

@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
-import Image from "next/image";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
+import { Reveal } from "@/components/Reveal/Reveal";
+import { CountUp } from "@/components/CountUp/CountUp";
+import { Flag, type LanguageCode } from "@/components/Flag/Flag";
 import { QuoteForm } from "./contact/QuoteForm";
 import { getHomeContent } from "@/lib/content/getHomeContent";
+import { experienceStats } from "@/content/stats";
+import { specializations } from "@/content/specializations";
 import { routes } from "@/lib/routes";
 import { siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -21,11 +26,14 @@ const professionalService = {
   "@type": "ProfessionalService",
   name: site.name,
   description:
-    "Professional English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations.",
+    "Website translation and localization into English and Arabic, plus English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations.",
   url: siteUrl,
   areaServed: "Worldwide",
   availableLanguage: ["English", "French", "Spanish", "Arabic"],
+  email: site.contact.email,
+  telephone: site.contact.phone,
   serviceType: [
+    "Website localization",
     "Technical translation",
     "Legal translation",
     "Financial translation",
@@ -34,21 +42,34 @@ const professionalService = {
   ],
 };
 
+const languages: { code: LanguageCode; name: string }[] = [
+  { code: "en", name: "English" },
+  { code: "ar", name: "Arabic" },
+  { code: "fr", name: "French" },
+  { code: "es", name: "Spanish" },
+];
+
 export default async function HomePage() {
   const content = await getHomeContent();
 
   return (
     <>
       <JsonLd data={professionalService} />
+
+      {/* ---- Hero ---- */}
       <section className={styles.hero}>
         <Container>
           <div className={styles.heroInner}>
             <p className={styles.heroLabel}>{content.hero.label}</p>
             <h1 className={styles.heroTitle}>{content.hero.title}</h1>
             <p className={styles.heroLead}>{content.hero.lead}</p>
+            <p className={styles.heroLocalize}>
+              I translate and localize websites into <strong>English</strong> and{" "}
+              <strong>Arabic</strong> — so your product reads naturally for every visitor.
+            </p>
             <div className={styles.heroActions}>
               <Button href={routes.contact} variant="primary" size="lg">
-                Request a quote
+                Let&apos;s talk
               </Button>
               <Link href={routes.services} className={styles.heroSecondary}>
                 Explore services
@@ -58,25 +79,71 @@ export default async function HomePage() {
         </Container>
       </section>
 
+      {/* ---- Languages ---- */}
+      <section className={styles.languages} aria-labelledby="languages-title">
+        <Container>
+          <h2 id="languages-title" className={styles.languagesTitle}>
+            Languages I work in
+          </h2>
+          <ul className={styles.languageList}>
+            {languages.map((lang, i) => (
+              <Reveal as="li" key={lang.code} from="up" delay={i * 80} className={styles.languageItem}>
+                <Flag code={lang.code} size={34} />
+                <span>{lang.name}</span>
+              </Reveal>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      {/* ---- Past experience (animated counters) ---- */}
+      <section className={`${styles.stats} ${styles.tinted}`} aria-labelledby="stats-title">
+        <Container>
+          <div className={styles.servicesHead}>
+            <p className={styles.label}>Past experience</p>
+            <h2 id="stats-title" className={styles.servicesTitle}>
+              A track record agencies trust
+            </h2>
+          </div>
+          <ul className={styles.statGrid}>
+            {experienceStats.map((stat) => (
+              <li key={stat.id} className={styles.statItem}>
+                <span className={styles.statValue}>
+                  <CountUp value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
+                </span>
+                <span className={styles.statLabel}>{stat.label}</span>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      {/* ---- About ---- */}
       <section className={styles.about} id="about">
         <Container>
           <div className={styles.aboutGrid}>
-            <Image
-              src={content.about.image}
-              alt={site.name}
-              width={640}
-              height={640}
-              className={styles.portrait}
-              priority
-            />
-            <div>
+            <Reveal from="right" className={styles.portraitWrap}>
+              <Image
+                src={content.about.image}
+                alt={site.name}
+                width={640}
+                height={640}
+                className={styles.portrait}
+                priority
+              />
+            </Reveal>
+            <Reveal from="up">
               <h2 className={styles.aboutTitle}>{content.about.title}</h2>
               <p className={styles.aboutText}>{content.about.text}</p>
-            </div>
+              <Link href={routes.about} className={styles.trustLink}>
+                More about me →
+              </Link>
+            </Reveal>
           </div>
         </Container>
       </section>
 
+      {/* ---- Services ---- */}
       <section className={styles.services}>
         <Container>
           <div className={styles.servicesHead}>
@@ -84,20 +151,70 @@ export default async function HomePage() {
             <h2 className={styles.servicesTitle}>{content.services.title}</h2>
           </div>
           <div className={styles.serviceGrid}>
-            {content.services.items.map((service) => (
-              <div key={service.title} className={styles.serviceCard}>
+            {content.services.items.map((service, i) => (
+              <Reveal
+                key={service.title}
+                from="up"
+                delay={(i % 3) * 90}
+                className={styles.serviceCard}
+              >
                 <span className={styles.serviceIcon}>
                   <ServiceIcon name={service.icon} />
                 </span>
                 <h3 className={styles.serviceCardTitle}>{service.title}</h3>
                 <p className={styles.serviceCardText}>{service.summary}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className={`${styles.section} ${styles.tinted}`}>
+      {/* ---- Specializations (own section) ---- */}
+      <section className={`${styles.section} ${styles.tinted}`} aria-labelledby="specializations-title">
+        <Container>
+          <div className={styles.servicesHead}>
+            <p className={styles.label}>Specializations</p>
+            <h2 id="specializations-title" className={styles.servicesTitle}>
+              Fields I specialize in
+            </h2>
+          </div>
+          <ul className={styles.index}>
+            {specializations.map((spec, i) => (
+              <Reveal as="li" key={spec.slug} from="up" delay={(i % 2) * 80} className={styles.indexRow}>
+                <Link href={spec.href} className={styles.indexTerm}>
+                  {spec.title}
+                </Link>
+                <p className={styles.indexDesc}>{spec.summary}</p>
+              </Reveal>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      {/* ---- Availability ---- */}
+      <section className={styles.availability} aria-labelledby="availability-title">
+        <Container>
+          <Reveal from="up" className={styles.availabilityCard}>
+            <span className={styles.availabilityDot} aria-hidden="true" />
+            <div>
+              <p className={styles.label}>Availability</p>
+              <h2 id="availability-title" className={styles.availabilityTitle}>
+                Currently accepting new projects
+              </h2>
+              <p className={styles.availabilityText}>
+                Typical reply within one business day. Working remotely across European and
+                Middle&nbsp;East time zones, with flexible scheduling for urgent agency deadlines.
+              </p>
+            </div>
+            <Button href={routes.contact} variant="primary" size="lg">
+              Let&apos;s talk
+            </Button>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* ---- Why partner / QA ---- */}
+      <section className={styles.section}>
         <Container>
           <div className={styles.whyHead}>
             <p className={styles.label}>{content.why.eyebrow}</p>
@@ -105,8 +222,8 @@ export default async function HomePage() {
             <p className={styles.whyIntro}>{content.why.intro}</p>
           </div>
           <ul className={styles.whyList}>
-            {content.why.items.map((item) => (
-              <li key={item.title} className={styles.whyItem}>
+            {content.why.items.map((item, i) => (
+              <Reveal as="li" key={item.title} from="up" delay={(i % 3) * 90} className={styles.whyItem}>
                 <span className={styles.whyCheck} aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                     <path
@@ -122,18 +239,24 @@ export default async function HomePage() {
                   <h3 className={styles.whyItemTitle}>{item.title}</h3>
                   <p className={styles.whyItemText}>{item.text}</p>
                 </div>
-              </li>
+              </Reveal>
             ))}
           </ul>
         </Container>
       </section>
 
+      {/* ---- Contact ---- */}
       <section className={styles.contact} id="contact">
         <Container>
           <div className={styles.contactHead}>
             <p className={styles.label}>{content.contact.eyebrow}</p>
             <h2 className={styles.contactTitle}>{content.contact.title}</h2>
             <p className={styles.contactIntro}>{content.contact.intro}</p>
+            <p className={styles.contactDetails}>
+              <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+              <span aria-hidden="true"> · </span>
+              <a href={`tel:${site.contact.phoneHref}`}>{site.contact.phone}</a>
+            </p>
           </div>
           <div className={styles.contactCard}>
             <QuoteForm />
@@ -141,6 +264,7 @@ export default async function HomePage() {
         </Container>
       </section>
 
+      {/* ---- Partners / credentials ---- */}
       <section className={styles.partners} aria-label="Partners">
         <Container>
           <ul className={styles.partnerList}>

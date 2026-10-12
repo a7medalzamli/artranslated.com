@@ -65,7 +65,7 @@ export default function ConfidentialityPage() {
       <CTA
         title="Ready to share your project securely?"
         description="An NDA can be in place before you send a single file."
-        primary={{ label: "Request a quote", href: routes.contact }}
+        primary={{ label: "Let's talk", href: routes.contact }}
         secondary={{ label: "See the process", href: routes.process }}
       />
     </>

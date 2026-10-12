@@ -56,7 +56,7 @@ export default function HealthcarePage() {
       <CTA
         title="Need healthcare content translated into Arabic?"
         description="Tell me the document type, language pair and deadline for a clear quote."
-        primary={{ label: "Request a quote", href: routes.contact }}
+        primary={{ label: "Let's talk", href: routes.contact }}
         secondary={{ label: "Process & QA", href: routes.process }}
       />
     </>

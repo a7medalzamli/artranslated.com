@@ -58,7 +58,7 @@ export default function LegalPage() {
       <CTA
         title="Need legal documents translated in confidence?"
         description="Tell me the scope and deadline — an NDA can be in place before you share anything."
-        primary={{ label: "Request a quote", href: routes.contact }}
+        primary={{ label: "Let's talk", href: routes.contact }}
         secondary={{ label: "Confidentiality", href: routes.confidentiality }}
       />
     </>

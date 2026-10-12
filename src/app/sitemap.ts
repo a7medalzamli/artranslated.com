@@ -9,6 +9,7 @@ export const dynamic = "force-dynamic";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPaths: string[] = [
     routes.home,
+    routes.about,
     routes.services,
     routes.technical,
     routes.legal,

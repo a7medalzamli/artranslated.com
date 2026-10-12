@@ -7,27 +7,32 @@
  */
 const en = {
   nav: {
+    about: "About",
     services: "Services",
+    howItWorks: "How it works?",
     process: "Process & QA",
-    confidentiality: "How it works?",
+    confidentiality: "Confidentiality",
     blog: "Blog",
     contact: "Contact",
   },
   actions: {
-    requestQuote: "Request a quote",
+    requestQuote: "Let's talk",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     skipToContent: "Skip to main content",
     home: "Home",
   },
   footer: {
-    tagline: "English, French & Spanish into Arabic translation.",
+    tagline: "Website translation & localization into English and Arabic.",
     servicesHeading: "Services",
-    companyHeading: "About",
+    companyHeading: "Company",
     legalHeading: "Legal",
+    contactHeading: "Contact",
     terms: "Terms and conditions",
     privacy: "Privacy policy",
     rightsReserved: "All rights reserved.",
+    about: "About",
+    howItWorks: "How it works?",
   },
   breadcrumbs: {
     home: "Home",

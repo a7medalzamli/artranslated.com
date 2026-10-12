@@ -7,9 +7,9 @@ import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/process" },
-  title: "Process & QA",
+  title: "How it works?",
   description:
-    "The TEP (Translation, Editing, Proofreading) workflow, quality-assurance policy and SDL Trados tools behind every Arabic translation project.",
+    "How it works — the TEP (Translation, Editing, Proofreading) workflow, quality-assurance policy and SDL Trados tools behind every Arabic translation and localization project.",
 };
 
 const tepSteps = [
@@ -44,9 +44,10 @@ export default function ProcessPage() {
   return (
     <>
       <PageHeader
-        title="Process & QA"
-        description="Quality is built in through a defined workflow — not bolted on at the end."
-        breadcrumbs={[{ label: "Home", href: routes.home }, { label: "Process & QA" }]}
+        eyebrow="Process & QA"
+        title="How it works?"
+        description="Quality is built in through a defined workflow — not bolted on at the end. Here's exactly how your project is handled, step by step."
+        breadcrumbs={[{ label: "Home", href: routes.home }, { label: "How it works?" }]}
       />
 
       <Section
@@ -89,7 +90,7 @@ export default function ProcessPage() {
       <CTA
         title="Want this level of care on your project?"
         description="Tell me what you're working on and I'll explain exactly how it would be handled."
-        primary={{ label: "Request a quote", href: routes.contact }}
+        primary={{ label: "Let's talk", href: routes.contact }}
         secondary={{ label: "Confidentiality", href: routes.confidentiality }}
       />
     </>

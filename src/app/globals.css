@@ -48,6 +48,22 @@ h4 {
   letter-spacing: var(--tracking-tight);
 }
 
+/* "All titles in caps" — uppercase headings for Latin text, with a touch of
+   positive tracking so uppercase stays legible. Arabic has no letter case, so
+   it is explicitly excluded to avoid harming Arabic shaping/readability. */
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+:lang(ar) :is(h1, h2, h3),
+[dir="rtl"] :is(h1, h2, h3) {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
 h1 {
   font-size: var(--font-size-h1);
   letter-spacing: var(--tracking-tighter);

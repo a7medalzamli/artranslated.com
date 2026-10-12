@@ -53,7 +53,7 @@ export default function FinancialPage() {
       <CTA
         title="Have financial documents to translate?"
         description="Share the scope, language pair and deadline for a clear quote."
-        primary={{ label: "Request a quote", href: routes.contact }}
+        primary={{ label: "Let's talk", href: routes.contact }}
         secondary={{ label: "How I work", href: routes.process }}
       />
     </>

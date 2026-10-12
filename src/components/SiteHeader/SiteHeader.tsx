@@ -14,9 +14,9 @@ export function SiteHeader({ dict, settings }: { dict: Dictionary; settings: Sit
   const [open, setOpen] = useState(false);
 
   const navItems = [
+    { href: routes.about, label: dict.nav.about },
     { href: routes.services, label: dict.nav.services },
-    { href: routes.process, label: dict.nav.process },
-    { href: routes.confidentiality, label: dict.nav.confidentiality },
+    { href: routes.process, label: dict.nav.howItWorks },
     { href: routes.blog, label: dict.nav.blog },
     { href: routes.contact, label: dict.nav.contact },
   ];

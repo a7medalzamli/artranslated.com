@@ -81,7 +81,7 @@ export default function AudiovisualPage() {
       <CTA
         title="Localizing a series or film into Arabic?"
         description="Tell me the source language, format and deadline for a clear quote."
-        primary={{ label: "Request a quote", href: routes.contact }}
+        primary={{ label: "Let's talk", href: routes.contact }}
         secondary={{ label: "See the process", href: routes.process }}
       />
     </>

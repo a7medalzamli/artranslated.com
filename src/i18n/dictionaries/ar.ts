@@ -9,27 +9,32 @@ import type { Dictionary } from "../index";
  */
 const ar: Dictionary = {
   nav: {
+    about: "نبذة",
     services: "الخدمات",
+    howItWorks: "كيف نعمل؟",
     process: "سير العمل والجودة",
-    confidentiality: "كيف نعمل؟",
+    confidentiality: "السرية",
     blog: "المدونة",
     contact: "تواصل",
   },
   actions: {
-    requestQuote: "اطلب عرض سعر",
+    requestQuote: "لنتحدث",
     openMenu: "افتح القائمة",
     closeMenu: "أغلق القائمة",
     skipToContent: "تخطَّ إلى المحتوى الرئيسي",
     home: "الرئيسية",
   },
   footer: {
-    tagline: "ترجمة من الإنجليزية والفرنسية والإسبانية إلى العربية.",
+    tagline: "ترجمة وتوطين المواقع الإلكترونية إلى الإنجليزية والعربية.",
     servicesHeading: "الخدمات",
-    companyHeading: "نبذة",
+    companyHeading: "الشركة",
     legalHeading: "قانوني",
+    contactHeading: "تواصل",
     terms: "الشروط والأحكام",
     privacy: "سياسة الخصوصية",
     rightsReserved: "جميع الحقوق محفوظة.",
+    about: "نبذة",
+    howItWorks: "كيف نعمل؟",
   },
   breadcrumbs: {
     home: "الرئيسية",

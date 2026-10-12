@@ -39,12 +39,176 @@
   max-width: 46ch;
 }
 
+.heroLocalize {
+  margin: var(--space-md) auto 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  max-width: 44ch;
+}
+
+.heroLocalize strong {
+  color: var(--color-accent);
+  font-weight: var(--weight-semibold);
+}
+
 .heroActions {
   margin-top: var(--space-xl);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);
   justify-content: center;
+}
+
+/* ---- Languages strip ---- */
+.languages {
+  padding-block: var(--space-2xl);
+  border-block-end: 1px solid var(--color-border);
+}
+
+.languagesTitle {
+  text-align: center;
+  font-size: var(--font-size-h4);
+  color: var(--color-text-muted);
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-xl);
+}
+
+.languageList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-lg) var(--space-2xl);
+}
+
+.languageItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+}
+
+/* ---- Past experience (counters) ---- */
+.stats {
+  padding-block: var(--space-4xl);
+}
+
+.statGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2xl) var(--space-lg);
+  text-align: center;
+}
+
+@media (min-width: 60em) {
+  .statGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.statValue {
+  font-size: clamp(2.5rem, 1.8rem + 3vw, 3.75rem);
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  color: var(--color-accent);
+  letter-spacing: var(--tracking-tight);
+}
+
+.statLabel {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+}
+
+/* ---- Availability ---- */
+.availability {
+  padding-block: var(--space-4xl);
+}
+
+.availabilityCard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-2xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.availabilityCard > div {
+  flex: 1 1 20rem;
+}
+
+.availabilityDot {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-success, #1e7d55);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-success, #1e7d55) 60%, transparent);
+  animation: availabilityPulse 2s ease-out infinite;
+}
+
+@keyframes availabilityPulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-success, #1e7d55) 55%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 0.75rem transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .availabilityDot {
+    animation: none;
+  }
+}
+
+.availabilityTitle {
+  font-size: var(--font-size-h3);
+  margin-top: var(--space-2xs);
+}
+
+.availabilityText {
+  margin-top: var(--space-sm);
+  color: var(--color-text-muted);
+  max-width: var(--measure);
+}
+
+/* ---- Contact details line ---- */
+.contactDetails {
+  margin-top: var(--space-md);
+  font-weight: var(--weight-semibold);
+}
+
+.contactDetails a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.contactDetails a:hover {
+  text-decoration: underline;
+}
+
+.portraitWrap {
+  display: block;
 }
 
 .heroSecondary {

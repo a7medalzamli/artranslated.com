@@ -13,13 +13,83 @@
 
 @media (min-width: 40em) {
   .grid {
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+@media (min-width: 64em) {
+  .grid {
+    grid-template-columns: 1.6fr 1fr 1fr 1fr 1.1fr;
     gap: var(--space-lg);
   }
 }
 
 .brandCol {
-  max-width: 30ch;
+  max-width: 34ch;
+}
+
+/* Brand column on its own row on small/medium, spanning full width */
+@media (min-width: 40em) and (max-width: 63.99em) {
+  .brandCol {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+}
+
+/* ---- QR code ---- */
+.qr {
+  margin-top: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.qrImg {
+  display: block;
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 4px;
+}
+
+.qrCaption {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  max-width: 14ch;
+}
+
+/* ---- Professional profile badges (ProZ, Translators without Borders) ---- */
+.memberBadges {
+  list-style: none;
+  margin: var(--space-md) 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.memberBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.6rem;
+  font-size: calc(var(--font-size-sm) - 0.05rem);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+  text-decoration: none;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  transition:
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.memberBadge:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .brand {

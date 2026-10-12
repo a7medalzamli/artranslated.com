@@ -78,7 +78,7 @@ export default function TechnicalPage() {
       <CTA
         title="Have technical documentation to translate?"
         description="Share the language pair, subject area and deadline for a clear quote."
-        primary={{ label: "Request a quote", href: routes.contact }}
+        primary={{ label: "Let's talk", href: routes.contact }}
         secondary={{ label: "How I work", href: routes.process }}
       />
     </>

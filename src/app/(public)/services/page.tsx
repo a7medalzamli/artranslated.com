@@ -53,7 +53,7 @@ export default function ServicesPage() {
       <CTA
         title="Not sure which service fits?"
         description="Describe your project and I'll recommend the right approach and give you a clear quote."
-        primary={{ label: "Request a quote", href: routes.contact }}
+        primary={{ label: "Let's talk", href: routes.contact }}
         secondary={{ label: "See the process", href: routes.process }}
       />
     </>
