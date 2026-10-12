@@ -77,7 +77,23 @@ function dayKey(instant: Date, timeZone: string): string {
   }).format(instant);
 }
 
-export function AvailabilityHours() {
+type AvailabilityLabels = {
+  days: string;
+  palestine: string;
+  yourTime: string;
+  picker: string;
+  nextDay: string;
+};
+
+const defaultLabels: AvailabilityLabels = {
+  days: "Daily — Monday to Sunday",
+  palestine: "Palestine",
+  yourTime: "Your time",
+  picker: "See these hours in your country / time zone:",
+  nextDay: "(next day)",
+};
+
+export function AvailabilityHours({ labels = defaultLabels }: { labels?: AvailabilityLabels }) {
   const [selected, setSelected] = useState(PALESTINE_TZ);
   const [detected, setDetected] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -124,15 +140,15 @@ export function AvailabilityHours() {
 
   return (
     <div className={styles.wrap}>
-      <p className={styles.days}>Daily — Monday to Sunday</p>
+      <p className={styles.days}>{labels.days}</p>
 
       <p className={styles.row}>
-        <span className={styles.zoneName}>Palestine</span>
+        <span className={styles.zoneName}>{labels.palestine}</span>
         <span className={styles.time}>{palestine}</span>
       </p>
 
       <label className={styles.picker}>
-        <span>See these hours in your country / time zone:</span>
+        <span>{labels.picker}</span>
         <select
           value={selected}
           onChange={(e) => setSelected(e.target.value)}
@@ -149,10 +165,10 @@ export function AvailabilityHours() {
 
       {mounted && selected !== PALESTINE_TZ && (
         <p className={`${styles.row} ${styles.yourRow}`}>
-          <span className={styles.zoneName}>Your time</span>
+          <span className={styles.zoneName}>{labels.yourTime}</span>
           <span className={styles.time}>
             {localStart} – {localEnd}
-            {crossesDay && <span className={styles.nextDay}> (next day)</span>}
+            {crossesDay && <span className={styles.nextDay}> {labels.nextDay}</span>}
           </span>
         </p>
       )}

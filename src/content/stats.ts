@@ -15,7 +15,7 @@ export type Stat = {
 };
 
 export const experienceStats: Stat[] = [
-  { id: "years", value: 6, suffix: "+", label: "Years of experience" },
+  { id: "years", value: 14, suffix: "+", label: "Years of experience" },
   { id: "words", value: 1000000, suffix: "+", label: "Words translated" },
   { id: "projects", value: 100, suffix: "+", label: "Projects delivered" },
   { id: "languages", value: 4, suffix: "", label: "Working languages" },

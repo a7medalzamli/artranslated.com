@@ -4,7 +4,9 @@ import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
 import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
 import { Reveal } from "@/components/Reveal/Reveal";
-import { getHomeContent } from "@/lib/content/getHomeContent";
+import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
+import { getContent } from "@/i18n/content";
+import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import styles from "./specializations.module.css";
 
@@ -15,16 +17,26 @@ export const metadata: Metadata = {
     "Fields I specialize in — technical, legal, financial, healthcare, machine-translation post-editing and website localization and marketing, into Arabic.",
 };
 
-export default async function SpecializationsPage() {
-  const content = await getHomeContent();
+export default async function SpecializationsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const loc = locale as Locale;
+  const content = await getLocalizedHome(loc);
+  const t = getContent(loc);
 
   return (
     <>
       <PageHeader
-        eyebrow="Specializations"
-        title="Fields I specialize in"
-        description="Deep, domain-specific experience across the areas where accuracy and terminology matter most."
-        breadcrumbs={[{ label: "Home", href: routes.home }, { label: "Specializations" }]}
+        eyebrow={t.specializations.eyebrow}
+        title={t.specializations.title}
+        description={t.specializations.description}
+        breadcrumbs={[
+          { label: t.common.homeCrumb, href: routes.home },
+          { label: t.specializations.crumb },
+        ]}
       />
 
       <Section>
@@ -47,10 +59,10 @@ export default async function SpecializationsPage() {
       </Section>
 
       <CTA
-        title="Have a project in one of these fields?"
-        description="Tell me what you're working on and I'll reply with a clear, honest quote."
-        primary={{ label: "Let's talk", href: routes.contact }}
-        secondary={{ label: "View services", href: routes.services }}
+        title={t.specializations.ctaTitle}
+        description={t.specializations.ctaDescription}
+        primary={{ label: t.common.letsTalk, href: routes.contact }}
+        secondary={{ label: t.common.viewServices, href: routes.services }}
       />
     </>
   );

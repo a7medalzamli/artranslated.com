@@ -3,6 +3,8 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { ProcessSteps } from "@/components/ProcessSteps/ProcessSteps";
 import { CTA } from "@/components/CTA/CTA";
+import { getContent } from "@/i18n/content";
+import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
@@ -12,86 +14,49 @@ export const metadata: Metadata = {
     "How it works — the TEP (Translation, Editing, Proofreading) workflow, quality-assurance policy and SDL Trados tools behind every Arabic translation and localization project.",
 };
 
-const tepSteps = [
-  {
-    title: "Preparation & terminology",
-    description:
-      "Analyze the source, confirm or build a project glossary and termbase, and set up the project in SDL Trados with the relevant translation memory.",
-  },
-  {
-    title: "Translation",
-    description:
-      "Translate with terminology control and translation-memory leverage, keeping meaning, tone and consistency intact.",
-  },
-  {
-    title: "Editing",
-    description:
-      "Compare the translation against the source for accuracy, completeness and consistency, refining terminology and style.",
-  },
-  {
-    title: "Proofreading",
-    description:
-      "Read the Arabic on its own for language, flow, formatting and typography — catching anything a bilingual pass can miss.",
-  },
-  {
-    title: "QA checks & delivery",
-    description:
-      "Run automated QA checks (terminology, numbers, tags and consistency), resolve any flags, then deliver in the required format.",
-  },
-];
+export default async function ProcessPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = getContent(locale as Locale);
+  const p = t.process;
 
-export default function ProcessPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Process & QA"
-        title="How it works?"
-        description="Quality is built in through a defined workflow — not bolted on at the end. Here's exactly how your project is handled, step by step."
-        breadcrumbs={[{ label: "Home", href: routes.home }, { label: "How it works?" }]}
+        eyebrow={p.eyebrow}
+        title={p.title}
+        description={p.description}
+        breadcrumbs={[{ label: t.common.homeCrumb, href: routes.home }, { label: p.crumb }]}
       />
 
-      <Section
-        title="The TEP workflow"
-        intro="Every project runs through Translation, Editing and Proofreading, with terminology and QA around it."
-      >
-        <ProcessSteps steps={tepSteps} />
+      <Section title={p.tepTitle} intro={p.tepIntro}>
+        <ProcessSteps steps={p.steps} />
       </Section>
 
-      <Section tinted title="Quality-assurance policy">
+      <Section tinted title={p.qaTitle}>
         <div className="prose">
-          <p>
-            Quality assurance combines automated checks with human judgement. Automated checks in
-            SDL Trados flag terminology mismatches, number and tag errors and inconsistencies; a
-            human editing and proofreading pass ensures the Arabic reads naturally and accurately.
-          </p>
-          <p>
-            Terminology decisions are captured in glossaries and termbases so they carry forward to
-            future work, and translation memories keep updated or repeat content consistent.
-          </p>
+          {p.qaParagraphs.map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
         </div>
       </Section>
 
-      <Section title="Tools">
+      <Section title={p.toolsTitle}>
         <div className="prose">
           <ul>
-            <li>
-              <strong>SDL Trados Studio</strong> — the core CAT environment for translation and QA
-            </li>
-            <li>
-              <strong>Translation memories</strong> — consistency across large and updated documents
-            </li>
-            <li>
-              <strong>Glossaries &amp; termbases</strong> — controlled, client-approved terminology
-            </li>
+            {p.tools.map((tool) => (
+              <li key={tool.name}>
+                <strong>{tool.name}</strong> — {tool.text}
+              </li>
+            ))}
           </ul>
         </div>
       </Section>
 
       <CTA
-        title="Want this level of care on your project?"
-        description="Tell me what you're working on and I'll explain exactly how it would be handled."
-        primary={{ label: "Let's talk", href: routes.contact }}
-        secondary={{ label: "Confidentiality", href: routes.confidentiality }}
+        title={p.ctaTitle}
+        description={p.ctaDescription}
+        primary={{ label: t.common.letsTalk, href: routes.contact }}
+        secondary={{ label: t.common.confidentiality, href: routes.confidentiality }}
       />
     </>
   );

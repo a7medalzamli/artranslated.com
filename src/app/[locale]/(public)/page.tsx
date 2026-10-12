@@ -8,7 +8,9 @@ import { Reveal } from "@/components/Reveal/Reveal";
 import { CountUp } from "@/components/CountUp/CountUp";
 import { AvailabilityHours } from "@/components/AvailabilityHours/AvailabilityHours";
 import { Flag, type LanguageCode } from "@/components/Flag/Flag";
-import { getHomeContent } from "@/lib/content/getHomeContent";
+import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
+import { getContent } from "@/i18n/content";
+import type { Locale } from "@/i18n";
 import { experienceStats } from "@/content/stats";
 import { routes } from "@/lib/routes";
 import { siteUrl } from "@/lib/seo";
@@ -40,15 +42,13 @@ const professionalService = {
   ],
 };
 
-const languages: { code: LanguageCode; name: string }[] = [
-  { code: "en", name: "English" },
-  { code: "ar", name: "Arabic" },
-  { code: "fr", name: "French" },
-  { code: "es", name: "Spanish" },
-];
+const languageCodes: LanguageCode[] = ["en", "ar", "fr", "es"];
 
-export default async function HomePage() {
-  const content = await getHomeContent();
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const loc = locale as Locale;
+  const content = await getLocalizedHome(loc);
+  const t = getContent(loc);
 
   return (
     <>
@@ -63,10 +63,10 @@ export default async function HomePage() {
             {content.hero.lead && <p className={styles.heroLead}>{content.hero.lead}</p>}
             <div className={styles.heroActions}>
               <Button href={routes.contact} variant="primary" size="lg">
-                Let&apos;s talk
+                {t.common.letsTalk}
               </Button>
               <Link href={routes.services} className={styles.heroSecondary}>
-                Explore services
+                {t.common.exploreServices}
               </Link>
             </div>
           </div>
@@ -77,13 +77,13 @@ export default async function HomePage() {
       <section className={styles.languages} aria-labelledby="languages-title">
         <Container>
           <h2 id="languages-title" className={styles.languagesTitle}>
-            Languages I work in
+            {t.home.languagesTitle}
           </h2>
           <ul className={styles.languageList}>
-            {languages.map((lang, i) => (
-              <Reveal as="li" key={lang.code} from="up" delay={i * 80} className={styles.languageItem}>
-                <Flag code={lang.code} size={34} />
-                <span>{lang.name}</span>
+            {languageCodes.map((code, i) => (
+              <Reveal as="li" key={code} from="up" delay={i * 80} className={styles.languageItem}>
+                <Flag code={code} size={34} />
+                <span>{t.home.langNames[code]}</span>
               </Reveal>
             ))}
           </ul>
@@ -94,9 +94,9 @@ export default async function HomePage() {
       <section className={`${styles.stats} ${styles.tinted}`} aria-labelledby="stats-title">
         <Container>
           <div className={styles.servicesHead}>
-            <p className={styles.label}>Past experience</p>
+            <p className={styles.label}>{t.home.pastExperienceEyebrow}</p>
             <h2 id="stats-title" className={styles.servicesTitle}>
-              A track record agencies trust
+              {t.home.pastExperienceTitle}
             </h2>
           </div>
           <ul className={styles.statGrid}>
@@ -105,7 +105,9 @@ export default async function HomePage() {
                 <span className={styles.statValue}>
                   <CountUp value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </span>
-                <span className={styles.statLabel}>{stat.label}</span>
+                <span className={styles.statLabel}>
+                  {t.home.stats[stat.id as keyof typeof t.home.stats]}
+                </span>
               </li>
             ))}
           </ul>
@@ -118,14 +120,14 @@ export default async function HomePage() {
           <Reveal from="up" className={styles.availabilityCard}>
             <span className={styles.availabilityDot} aria-hidden="true" />
             <div>
-              <p className={styles.label}>Availability</p>
+              <p className={styles.label}>{t.home.availabilityEyebrow}</p>
               <h2 id="availability-title" className={styles.availabilityTitle}>
-                Currently accepting new projects
+                {t.home.availabilityTitle}
               </h2>
-              <AvailabilityHours />
+              <AvailabilityHours labels={t.home.availability} />
             </div>
             <Button href={routes.contact} variant="primary" size="lg">
-              Let&apos;s talk
+              {t.common.letsTalk}
             </Button>
           </Reveal>
         </Container>
@@ -135,7 +137,7 @@ export default async function HomePage() {
       <section className={styles.section}>
         <Container>
           <div className={styles.whyHead}>
-            <p className={styles.label}>{content.why.eyebrow}</p>
+            {content.why.eyebrow && <p className={styles.label}>{content.why.eyebrow}</p>}
             <h2 className={styles.whyTitle}>{content.why.title}</h2>
             <p className={styles.whyIntro}>{content.why.intro}</p>
           </div>

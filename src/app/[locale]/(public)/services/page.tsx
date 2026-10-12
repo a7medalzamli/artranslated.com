@@ -5,6 +5,8 @@ import { Card, CardGrid } from "@/components/Card/Card";
 import { CTA } from "@/components/CTA/CTA";
 import { specializations } from "@/content/specializations";
 import { additionalServices } from "@/content/additionalServices";
+import { getContent } from "@/i18n/content";
+import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
@@ -14,47 +16,47 @@ export const metadata: Metadata = {
     "English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations, plus MTPE, transcreation, product testing and AI data annotation.",
 };
 
-export default function ServicesPage() {
+export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = getContent(locale as Locale);
+
   return (
     <>
       <PageHeader
-        title="Translation services"
-        description="English, French and Spanish into Arabic — across five specializations, backed by a defined process and the right tools."
-        breadcrumbs={[{ label: "Home", href: routes.home }, { label: "Services" }]}
+        title={t.services.title}
+        description={t.services.description}
+        breadcrumbs={[{ label: t.common.homeCrumb, href: routes.home }, { label: t.services.crumb }]}
       />
 
-      <Section
-        title="Specializations"
-        intro="Each specialization has its own page explaining what is covered and how the work is handled."
-      >
+      <Section title={t.services.specializationsTitle} intro={t.services.specializationsIntro}>
         <CardGrid columns={3}>
-          {specializations.map((item) => (
-            <Card key={item.slug} title={item.title} href={item.href}>
-              {item.summary}
+          {specializations.map((item, i) => (
+            <Card
+              key={item.slug}
+              title={t.cards.specializations[i]?.title ?? item.title}
+              href={item.href}
+            >
+              {t.cards.specializations[i]?.summary ?? item.summary}
             </Card>
           ))}
         </CardGrid>
       </Section>
 
-      <Section
-        tinted
-        title="Additional services"
-        intro="Beyond straight translation, these services support localization and AI projects end to end."
-      >
+      <Section tinted title={t.services.additionalTitle} intro={t.services.additionalIntro}>
         <CardGrid columns={3}>
-          {additionalServices.map((service) => (
-            <Card key={service.title} title={service.title}>
-              {service.summary}
+          {additionalServices.map((service, i) => (
+            <Card key={service.title} title={t.cards.additional[i]?.title ?? service.title}>
+              {t.cards.additional[i]?.summary ?? service.summary}
             </Card>
           ))}
         </CardGrid>
       </Section>
 
       <CTA
-        title="Not sure which service fits?"
-        description="Describe your project and I'll recommend the right approach and give you a clear quote."
-        primary={{ label: "Let's talk", href: routes.contact }}
-        secondary={{ label: "See the process", href: routes.process }}
+        title={t.services.ctaTitle}
+        description={t.services.ctaDescription}
+        primary={{ label: t.common.letsTalk, href: routes.contact }}
+        secondary={{ label: t.common.seeProcess, href: routes.process }}
       />
     </>
   );

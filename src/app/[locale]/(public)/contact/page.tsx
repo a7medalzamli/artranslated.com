@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Container } from "@/components/Container/Container";
 import { Callout } from "@/components/Callout/Callout";
+import { LocaleLink } from "@/components/LocaleLink/LocaleLink";
 import { QuoteForm } from "./QuoteForm";
+import { getContent } from "@/i18n/content";
+import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
 
@@ -13,22 +16,26 @@ export const metadata: Metadata = {
     "Request a quote for English, French or Spanish into Arabic translation. Tell me your language pair, specialization, size and deadline.",
 };
 
-export default function ContactPage() {
+export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = getContent(locale as Locale);
+  const c = t.contact;
+
   return (
     <>
       <PageHeader
-        title="Contact & request a quote"
-        description="Tell me about your project and I'll reply with a clear quote."
-        breadcrumbs={[{ label: "Home", href: routes.home }, { label: "Contact" }]}
+        title={c.title}
+        description={c.description}
+        breadcrumbs={[{ label: t.common.homeCrumb, href: routes.home }, { label: c.crumb }]}
       />
 
       <Container className="section-pad">
         <p style={{ fontSize: "var(--font-size-lg)", marginBottom: "var(--space-lg)" }}>
-          Prefer to reach out directly? Email{" "}
+          {c.directIntro}{" "}
           <a href={`mailto:${site.contact.email}`} style={{ color: "var(--color-accent)", fontWeight: 600 }}>
             {site.contact.email}
           </a>{" "}
-          or call{" "}
+          {c.directOr}{" "}
           <a href={`tel:${site.contact.phoneHref}`} style={{ color: "var(--color-accent)", fontWeight: 600 }}>
             {site.contact.phone}
           </a>
@@ -36,10 +43,8 @@ export default function ContactPage() {
         </p>
 
         <Callout>
-          <strong>Please don&rsquo;t send confidential files yet.</strong> This form is for project
-          details only. Wait until we&rsquo;ve agreed terms &mdash; and an NDA, if you&rsquo;d like
-          one &mdash; before sharing any sensitive documents. See the{" "}
-          <a href={routes.confidentiality}>confidentiality page</a>.
+          <strong>{c.calloutStrong}</strong> {c.calloutText}{" "}
+          <LocaleLink href={routes.confidentiality}>{c.calloutLink}</LocaleLink>.
         </Callout>
 
         <div className="section-gap">
