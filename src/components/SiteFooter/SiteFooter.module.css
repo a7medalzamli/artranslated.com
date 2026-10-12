@@ -5,8 +5,8 @@
   padding-block: var(--space-2xl) var(--space-sm);
   /* Full-screen-height footer: main grid at the top, copyright pinned to the
      bottom (see .inner / .bottom). */
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: 80vh;
+  min-height: 80svh;
   display: flex;
   flex-direction: column;
 }
@@ -53,7 +53,7 @@
 
 /* ---- Credential badges (ProZ, Translators without Borders / Trados) ---- */
 .credBadges {
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-md);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
