@@ -436,7 +436,7 @@
 
 /* ---- Why partner ---- */
 .whyHead {
-  max-width: 48ch;
+  max-width: none;
   margin-bottom: var(--space-2xl);
 }
 
@@ -449,7 +449,7 @@
   margin-top: var(--space-md);
   color: var(--color-text-muted);
   font-size: var(--font-size-lg);
-  max-width: var(--measure);
+  max-width: none;
 }
 
 .whyList {
