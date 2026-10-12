@@ -7,6 +7,22 @@ it and tick it off here.
 
 Status: ☐ = still a placeholder, ☑ = provided and filled in.
 
+## Redesign (Oct 2025) — new placeholders to confirm
+
+- ☐ **Past-experience counters** in `src/content/stats.ts` — currently conservative
+  placeholders (6+ years, 1,000,000+ words, 100+ projects, 4 languages). Replace with
+  Ahmed's real figures (editable in the file or the admin content panel).
+- ☐ **ProZ.com + Translators without Borders** profile links in `src/lib/site.ts`
+  (`memberships`) — currently `href: "#"`. Provide the real profile URLs. If you have
+  official logo image files, they can replace the current text badges.
+- ☐ **Social links** in `src/lib/site.ts` (`socials`) — LinkedIn still `href: "#"`.
+- ☐ **Production domain** — set `NEXT_PUBLIC_SITE_URL=https://artranslated.com` in Vercel
+  so SEO canonicals, the sitemap and the footer QR target are correct. The footer QR
+  code (`public/qr.svg`) already encodes https://artranslated.com.
+- ☐ **About page bio** (`src/app/(public)/about/page.tsx`) — references an
+  environmental-engineering + marketing background (from the existing success stories).
+  Confirm the wording is accurate.
+
 ## Identity & contact
 
 - ☑ `[Your Name]` — set to "Ahmed Alzamli" in `src/lib/site.ts` (header, footer, metadata). Note: the Terms/Privacy drafts still use `[Legal Entity / Your Name]` pending the legal entity name.
