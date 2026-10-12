@@ -129,7 +129,7 @@ a.credBadge:hover {
   padding-top: var(--space-sm);
   border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
-  font-size: calc(var(--font-size-sm) - 0.05rem);
+  font-size: 0.72rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
