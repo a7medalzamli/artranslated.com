@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default async function ProcessPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = getContent(locale as Locale);
+  const t = await getContent(locale as Locale);
   const p = t.process;
 
   return (

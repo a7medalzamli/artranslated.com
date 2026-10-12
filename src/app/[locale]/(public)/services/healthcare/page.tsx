@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default async function HealthcarePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = getContent(locale as Locale);
+  const t = await getContent(locale as Locale);
   const s = t.serviceDetail.healthcare;
 
   return (

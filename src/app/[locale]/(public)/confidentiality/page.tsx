@@ -19,7 +19,7 @@ export default async function ConfidentialityPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = getContent(locale as Locale);
+  const t = await getContent(locale as Locale);
   const c = t.confidentiality;
 
   return (

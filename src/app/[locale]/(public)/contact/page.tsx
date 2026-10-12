@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc = locale as Locale;
-  const t = getContent(loc);
+  const t = await getContent(loc);
   const c = t.contact;
   const home = await getLocalizedHome(loc);
   const specializationOptions = t.cards.specializations.map((s) => s.title);

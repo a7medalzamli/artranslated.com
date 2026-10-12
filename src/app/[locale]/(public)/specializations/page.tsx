@@ -25,7 +25,7 @@ export default async function SpecializationsPage({
   const { locale } = await params;
   const loc = locale as Locale;
   const content = await getLocalizedHome(loc);
-  const t = getContent(loc);
+  const t = await getContent(loc);
 
   return (
     <>

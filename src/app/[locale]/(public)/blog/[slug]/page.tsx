@@ -49,7 +49,7 @@ export default async function BlogPostPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const t = getContent(locale as Locale);
+  const t = await getContent(locale as Locale);
   const post = await getPublishedPostBySlug(slug);
 
   if (!post) {

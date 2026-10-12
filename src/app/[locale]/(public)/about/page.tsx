@@ -18,7 +18,8 @@ export const metadata: Metadata = {
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = getContent(locale as Locale).about;
+  const c = await getContent(locale as Locale);
+  const t = c.about;
 
   return (
     <>
@@ -26,7 +27,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         eyebrow={t.eyebrow}
         title={t.title}
         description={t.description}
-        breadcrumbs={[{ label: getContent(locale as Locale).common.homeCrumb, href: routes.home }, { label: t.crumb }]}
+        breadcrumbs={[{ label: c.common.homeCrumb, href: routes.home }, { label: t.crumb }]}
       />
 
       <Section>
@@ -50,7 +51,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <CTA
         title={t.ctaTitle}
         description={t.ctaDescription}
-        primary={{ label: getContent(locale as Locale).common.letsTalk, href: routes.contact }}
+        primary={{ label: c.common.letsTalk, href: routes.contact }}
         secondary={{ label: t.howItWorks, href: routes.process }}
       />
     </>

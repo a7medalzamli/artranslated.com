@@ -28,7 +28,7 @@ export default async function BlogPage({
   searchParams: Promise<{ category?: string }>;
 }) {
   const { locale } = await params;
-  const t = getContent(locale as Locale);
+  const t = await getContent(locale as Locale);
   const b = t.blog;
   const { category } = await searchParams;
   const activeCategory = category && isPostCategory(category) ? category : undefined;

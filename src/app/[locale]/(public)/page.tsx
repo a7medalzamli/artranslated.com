@@ -48,7 +48,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const loc = locale as Locale;
   const content = await getLocalizedHome(loc);
-  const t = getContent(loc);
+  const t = await getContent(loc);
 
   return (
     <>

@@ -149,3 +149,200 @@
 .bottomBar {
   padding-block: var(--space-md) var(--space-2xl);
 }
+
+/* ---- CMS: pages list + recursive editor ---- */
+.sub {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  margin-top: 0.25rem;
+  max-width: 60ch;
+}
+
+.pageList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.seedBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.pageGroup {
+  margin-top: var(--space-md);
+}
+
+.groupTitle {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.pageRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-bg);
+}
+
+.pageInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.pageLink {
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+  text-decoration: none;
+}
+.pageLink:hover {
+  color: var(--color-primary);
+}
+
+.route {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.localeLinks {
+  display: inline-flex;
+  gap: 0.4rem;
+}
+
+.localeLink {
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-semibold);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  text-decoration: none;
+}
+.localeLink:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.breadcrumbRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+.back,
+.preview {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+.localeTabs {
+  display: inline-flex;
+  gap: 0.25rem;
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+.tab,
+.activeTab {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+}
+.activeTab {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-color: var(--color-primary);
+}
+
+.input {
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem 0.6rem;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+}
+.input:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.listRow {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: flex-start;
+}
+.itemHead {
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+}
+.muted {
+  color: var(--color-text-muted);
+}
+
+.imageField {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+}
+.imageControls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+.upload {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  width: max-content;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted);
+  margin-bottom: 0.3rem;
+}
