@@ -39,11 +39,11 @@
 
 /* ---- Credential badges (ProZ, Translators without Borders / Trados) ---- */
 .credBadges {
-  margin-top: var(--space-lg);
+  margin-top: var(--space-md);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  max-width: 320px;
+  max-width: 260px;
 }
 
 .credBadge {
