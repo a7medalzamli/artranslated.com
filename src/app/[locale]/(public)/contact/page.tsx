@@ -5,17 +5,27 @@ import { Callout } from "@/components/Callout/Callout";
 import { LocaleLink } from "@/components/LocaleLink/LocaleLink";
 import { QuoteForm } from "./QuoteForm";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/contact" },
-  title: "Contact & Request a Quote",
-  description:
-    "Request a quote for English, French or Spanish into Arabic translation. Tell me your language pair, specialization, size and deadline.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "/contact",
+    locale,
+    defaultTitle: t.contact.title,
+    defaultDescription: t.contact.description,
+    seo: t.seo.contact,
+  });
+}
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

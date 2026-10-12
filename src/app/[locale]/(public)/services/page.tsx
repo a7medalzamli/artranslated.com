@@ -6,15 +6,25 @@ import { CTA } from "@/components/CTA/CTA";
 import { specializations } from "@/content/specializations";
 import { additionalServices } from "@/content/additionalServices";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/services" },
-  title: "Translation Services",
-  description:
-    "English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations, plus MTPE, transcreation, product testing and AI data annotation.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "/services",
+    locale,
+    defaultTitle: t.services.title,
+    defaultDescription: t.services.description,
+    seo: t.seo.services,
+  });
+}
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

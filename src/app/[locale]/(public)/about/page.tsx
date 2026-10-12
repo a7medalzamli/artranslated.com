@@ -4,17 +4,27 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
 import styles from "./about.module.css";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/about" },
-  title: "About",
-  description:
-    "Ahmed Alzamli — a specialist translator and localizer working into English and Arabic, with an environmental-engineering and marketing background and a rigorous TEP quality workflow.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "/about",
+    locale,
+    defaultTitle: t.about.title,
+    defaultDescription: t.about.description,
+    seo: t.seo.about,
+  });
+}
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

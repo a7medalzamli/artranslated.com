@@ -3,15 +3,25 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/confidentiality" },
-  title: "Confidentiality & Data Security",
-  description:
-    "How confidential files are handled: NDAs signed before files are opened, secure transfers, careful storage and a clear data-retention policy.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "/confidentiality",
+    locale,
+    defaultTitle: t.confidentiality.title,
+    defaultDescription: t.confidentiality.description,
+    seo: t.seo.confidentiality,
+  });
+}
 
 export default async function ConfidentialityPage({
   params,

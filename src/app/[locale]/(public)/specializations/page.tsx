@@ -6,16 +6,26 @@ import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
 import { Reveal } from "@/components/Reveal/Reveal";
 import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import styles from "./specializations.module.css";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/specializations" },
-  title: "Specializations",
-  description:
-    "Fields I specialize in — technical, legal, financial, healthcare, machine-translation post-editing and website localization and marketing, into Arabic.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "/specializations",
+    locale,
+    defaultTitle: t.specializations.title,
+    defaultDescription: t.specializations.description,
+    seo: t.seo.specializations,
+  });
+}
 
 export default async function SpecializationsPage({
   params,

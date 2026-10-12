@@ -4,15 +4,25 @@ import { Section } from "@/components/Section/Section";
 import { ProcessSteps } from "@/components/ProcessSteps/ProcessSteps";
 import { CTA } from "@/components/CTA/CTA";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/process" },
-  title: "How it works?",
-  description:
-    "How it works — the TEP (Translation, Editing, Proofreading) workflow, quality-assurance policy and SDL Trados tools behind every Arabic translation and localization project.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "/process",
+    locale,
+    defaultTitle: t.process.title,
+    defaultDescription: t.process.description,
+    seo: t.seo.process,
+  });
+}
 
 export default async function ProcessPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

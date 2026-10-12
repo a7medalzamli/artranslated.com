@@ -3,15 +3,25 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/services/technical" },
-  title: "Technical Translation into Arabic",
-  description:
-    "English, French and Spanish to Arabic technical translation for engineering documentation, manuals and specifications — with MTPE, digital product testing and AI data annotation.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "/services/technical",
+    locale,
+    defaultTitle: t.serviceDetail.technical.title,
+    defaultDescription: t.serviceDetail.technical.description,
+    seo: t.seo.technical,
+  });
+}
 
 export default async function TechnicalPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

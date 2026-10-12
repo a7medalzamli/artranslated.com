@@ -384,6 +384,21 @@ const en = {
     emptyNone: "No posts published yet — check back soon.",
     minRead: "min read",
   },
+  seo: {
+    home: { title: "", description: "", ogImage: "" },
+    about: { title: "", description: "", ogImage: "" },
+    specializations: { title: "", description: "", ogImage: "" },
+    services: { title: "", description: "", ogImage: "" },
+    process: { title: "", description: "", ogImage: "" },
+    contact: { title: "", description: "", ogImage: "" },
+    confidentiality: { title: "", description: "", ogImage: "" },
+    blog: { title: "", description: "", ogImage: "" },
+    technical: { title: "", description: "", ogImage: "" },
+    legal: { title: "", description: "", ogImage: "" },
+    financial: { title: "", description: "", ogImage: "" },
+    healthcare: { title: "", description: "", ogImage: "" },
+    audiovisual: { title: "", description: "", ogImage: "" },
+  },
 };
 
 export default en;

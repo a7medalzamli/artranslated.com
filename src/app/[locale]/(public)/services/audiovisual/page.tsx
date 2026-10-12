@@ -4,15 +4,25 @@ import { Section } from "@/components/Section/Section";
 import { ProcessSteps } from "@/components/ProcessSteps/ProcessSteps";
 import { CTA } from "@/components/CTA/CTA";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/services/audiovisual" },
-  title: "Audiovisual Translation & Dubbing into Arabic",
-  description:
-    "Spanish, English and French to Arabic audiovisual translation: subtitling, transcreation and dubbing adaptation with careful lip-sync alignment.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "/services/audiovisual",
+    locale,
+    defaultTitle: t.serviceDetail.audiovisual.title,
+    defaultDescription: t.serviceDetail.audiovisual.description,
+    seo: t.seo.audiovisual,
+  });
+}
 
 export default async function AudiovisualPage({
   params,

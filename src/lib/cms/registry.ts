@@ -65,6 +65,22 @@ export const CMS_PAGES: CmsPage[] = [
   { id: "common", label: "Shared buttons & labels", route: null, store: CONTENT_STORE, path: "common", group: "Shared" },
   { id: "cookie", label: "Cookie banner", route: null, store: CONTENT_STORE, path: "cookie", group: "Shared" },
   { id: "notFound", label: "404 page", route: null, store: CONTENT_STORE, path: "notFound", group: "Shared" },
+
+  // Per-locale SEO (title, meta description, social image). Empty fields fall
+  // back to the page's own localized title/description.
+  { id: "seo-home", label: "SEO — Home", route: "/", store: CONTENT_STORE, path: "seo.home", group: "SEO" },
+  { id: "seo-about", label: "SEO — About", route: "/about", store: CONTENT_STORE, path: "seo.about", group: "SEO" },
+  { id: "seo-specializations", label: "SEO — Specializations", route: "/specializations", store: CONTENT_STORE, path: "seo.specializations", group: "SEO" },
+  { id: "seo-services", label: "SEO — Services", route: "/services", store: CONTENT_STORE, path: "seo.services", group: "SEO" },
+  { id: "seo-process", label: "SEO — How it works", route: "/process", store: CONTENT_STORE, path: "seo.process", group: "SEO" },
+  { id: "seo-contact", label: "SEO — Contact", route: "/contact", store: CONTENT_STORE, path: "seo.contact", group: "SEO" },
+  { id: "seo-confidentiality", label: "SEO — Confidentiality", route: "/confidentiality", store: CONTENT_STORE, path: "seo.confidentiality", group: "SEO" },
+  { id: "seo-blog", label: "SEO — Blog", route: "/blog", store: CONTENT_STORE, path: "seo.blog", group: "SEO" },
+  { id: "seo-technical", label: "SEO — Technical", route: "/services/technical", store: CONTENT_STORE, path: "seo.technical", group: "SEO" },
+  { id: "seo-legal", label: "SEO — Legal", route: "/services/legal", store: CONTENT_STORE, path: "seo.legal", group: "SEO" },
+  { id: "seo-financial", label: "SEO — Financial", route: "/services/financial", store: CONTENT_STORE, path: "seo.financial", group: "SEO" },
+  { id: "seo-healthcare", label: "SEO — Healthcare", route: "/services/healthcare", store: CONTENT_STORE, path: "seo.healthcare", group: "SEO" },
+  { id: "seo-audiovisual", label: "SEO — Audiovisual", route: "/services/audiovisual", store: CONTENT_STORE, path: "seo.audiovisual", group: "SEO" },
 ];
 
 export function getCmsPage(id: string): CmsPage | undefined {

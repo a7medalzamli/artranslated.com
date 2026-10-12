@@ -10,6 +10,7 @@ import { AvailabilityHours } from "@/components/AvailabilityHours/AvailabilityHo
 import { Flag, type LanguageCode } from "@/components/Flag/Flag";
 import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { experienceStats } from "@/content/stats";
 import { routes } from "@/lib/routes";
@@ -17,9 +18,21 @@ import { siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "",
+    locale,
+    defaultTitle: "Website Translation & Localization into English & Arabic | Ahmed Alzamli",
+    defaultDescription: "Website translation and localization into English and Arabic, plus English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations.",
+    seo: t.seo.home,
+  });
+}
 
 const professionalService = {
   "@context": "https://schema.org",

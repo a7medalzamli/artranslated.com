@@ -6,16 +6,26 @@ import { getPublishedPosts } from "@/lib/blog/posts";
 import { postCategories, isPostCategory } from "@/content/postCategories";
 import { formatDate, readingTimeMinutes } from "@/lib/blog/format";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import styles from "./blog.module.css";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/blog" },
-  title: "Blog",
-  description:
-    "Notes on translation workflow, localization, terminology and confidentiality — from an English, French and Spanish into Arabic translator.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "/blog",
+    locale,
+    defaultTitle: t.blog.title,
+    defaultDescription: t.blog.description,
+    seo: t.seo.blog,
+  });
+}
 
 // Always reflect the latest published posts (no redeploy needed).
 export const dynamic = "force-dynamic";

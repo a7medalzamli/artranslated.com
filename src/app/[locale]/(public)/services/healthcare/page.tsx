@@ -3,15 +3,25 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/services/healthcare" },
-  title: "Healthcare Translation into Arabic",
-  description:
-    "English, French and Spanish to Arabic healthcare and medical translation, delivered with accuracy, clarity and an appropriate register for each audience.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "/services/healthcare",
+    locale,
+    defaultTitle: t.serviceDetail.healthcare.title,
+    defaultDescription: t.serviceDetail.healthcare.description,
+    seo: t.seo.healthcare,
+  });
+}
 
 export default async function HealthcarePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

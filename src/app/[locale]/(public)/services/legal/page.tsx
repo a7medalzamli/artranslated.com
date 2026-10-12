@@ -3,15 +3,25 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
 import { getContent } from "@/i18n/content";
+import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/services/legal" },
-  title: "Legal Translation into Arabic",
-  description:
-    "English, French and Spanish to Arabic legal translation for contracts, compliance and legal documentation — handled under strict confidentiality and NDA.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getContent(locale as Locale);
+  return buildCmsMetadata({
+    path: "/services/legal",
+    locale,
+    defaultTitle: t.serviceDetail.legal.title,
+    defaultDescription: t.serviceDetail.legal.description,
+    seo: t.seo.legal,
+  });
+}
 
 export default async function LegalPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
