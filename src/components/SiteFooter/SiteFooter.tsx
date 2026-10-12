@@ -97,31 +97,32 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
                 <a href={`tel:${site.contact.phoneHref}`}>{site.contact.phone}</a>
               </li>
             </ul>
-            <div className={styles.credBadges}>
-              <a
-                href={prozHref}
-                className={styles.credBadge}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="ProZ.com Certified PRO — Professional Translator (opens in a new tab)"
-              >
-                <Image
-                  src="/proz-certified-pro.jpg"
-                  alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
-                  width={1600}
-                  height={528}
-                  className={styles.credImg}
-                />
-              </a>
-              <Image
-                src="/twb-trados.jpg"
-                alt="Translators without Borders — I work with Trados"
-                width={1600}
-                height={528}
-                className={`${styles.credBadge} ${styles.credImg}`}
-              />
-            </div>
           </div>
+        </div>
+
+        <div className={styles.credBadges}>
+          <a
+            href={prozHref}
+            className={styles.credBadge}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="ProZ.com Certified PRO — Professional Translator (opens in a new tab)"
+          >
+            <Image
+              src="/proz-certified-pro.jpg"
+              alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
+              width={1600}
+              height={528}
+              className={styles.credImg}
+            />
+          </a>
+          <Image
+            src="/twb-trados.jpg"
+            alt="Translators without Borders — I work with Trados"
+            width={1600}
+            height={528}
+            className={`${styles.credBadge} ${styles.credImg}`}
+          />
         </div>
 
         <div className={styles.bottom}>

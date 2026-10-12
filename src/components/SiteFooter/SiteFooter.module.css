@@ -3,6 +3,12 @@
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
   padding-block: var(--space-2xl) var(--space-xl);
+  /* Full-screen-height footer with content vertically centered. */
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .grid {
@@ -39,15 +45,19 @@
 
 /* ---- Credential badges (ProZ, Translators without Borders / Trados) ---- */
 .credBadges {
-  margin-top: var(--space-md);
+  margin-top: var(--space-2xl);
   display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  max-width: 260px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-lg);
 }
 
 .credBadge {
   display: block;
+  flex: 0 1 320px;
+  max-width: 320px;
   border-radius: var(--radius-sm);
   transition: opacity var(--transition-fast);
 }
