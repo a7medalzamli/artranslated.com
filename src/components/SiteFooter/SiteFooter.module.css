@@ -37,28 +37,24 @@
   }
 }
 
-/* ---- QR code ---- */
-.qr {
-  margin-top: var(--space-lg);
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-}
-
-.qrImg {
+/* ---- ProZ Certified PRO badge ---- */
+.prozBadge {
   display: block;
-  width: 84px;
-  height: 84px;
+  margin-top: var(--space-lg);
+  max-width: 320px;
   border-radius: var(--radius-sm);
-  background: #ffffff;
-  border: 1px solid var(--color-border);
-  padding: 4px;
+  transition: opacity var(--transition-fast);
 }
 
-.qrCaption {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  max-width: 14ch;
+.prozBadge:hover {
+  opacity: 0.9;
+}
+
+.prozImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
 }
 
 /* ---- Professional profile badges (ProZ, Translators without Borders) ---- */

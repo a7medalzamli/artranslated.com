@@ -17,8 +17,7 @@ Status: ☐ = still a placeholder, ☑ = provided and filled in.
   official logo image files, they can replace the current text badges.
 - ☐ **Social links** in `src/lib/site.ts` (`socials`) — LinkedIn still `href: "#"`.
 - ☐ **Production domain** — set `NEXT_PUBLIC_SITE_URL=https://artranslated.com` in Vercel
-  so SEO canonicals, the sitemap and the footer QR target are correct. The footer QR
-  code (`public/qr.svg`) already encodes https://artranslated.com.
+  so SEO canonicals and the sitemap are correct.
 - ☐ **About page bio** (`src/app/(public)/about/page.tsx`) — references an
   environmental-engineering + marketing background (from the existing success stories).
   Confirm the wording is accurate.

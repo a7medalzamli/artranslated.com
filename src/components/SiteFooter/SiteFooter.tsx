@@ -10,6 +10,7 @@ import styles from "./SiteFooter.module.css";
 
 export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: SiteSettings }) {
   const year = new Date().getFullYear();
+  const prozHref = site.memberships.find((m) => m.id === "proz")?.href ?? "#";
 
   return (
     <footer className={styles.footer}>
@@ -30,16 +31,21 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
               />
             </Link>
             <p className={styles.tagline}>{settings.footerTagline}</p>
-            <div className={styles.qr}>
+            <a
+              href={prozHref}
+              className={styles.prozBadge}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ProZ.com Certified PRO — Professional Translator (opens in a new tab)"
+            >
               <Image
-                src="/qr.svg"
-                alt={`QR code linking to ${site.domain}`}
-                width={96}
-                height={96}
-                className={styles.qrImg}
+                src="/proz-certified-pro.jpg"
+                alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
+                width={1600}
+                height={528}
+                className={styles.prozImg}
               />
-              <span className={styles.qrCaption}>Scan to visit {site.domain}</span>
-            </div>
+            </a>
           </div>
 
           <nav className={styles.col} aria-label={dict.footer.servicesHeading}>
