@@ -3,7 +3,6 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { Card, CardGrid } from "@/components/Card/Card";
 import { CTA } from "@/components/CTA/CTA";
-import { specializations } from "@/content/specializations";
 import { additionalServices } from "@/content/additionalServices";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
@@ -37,20 +36,6 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         description={t.services.description}
         breadcrumbs={[{ label: t.common.homeCrumb, href: routes.home }, { label: t.services.crumb }]}
       />
-
-      <Section title={t.services.specializationsTitle} intro={t.services.specializationsIntro}>
-        <CardGrid columns={3}>
-          {specializations.map((item, i) => (
-            <Card
-              key={item.slug}
-              title={t.cards.specializations[i]?.title ?? item.title}
-              href={item.href}
-            >
-              {t.cards.specializations[i]?.summary ?? item.summary}
-            </Card>
-          ))}
-        </CardGrid>
-      </Section>
 
       <Section tinted title={t.services.additionalTitle} intro={t.services.additionalIntro}>
         <CardGrid columns={3}>
