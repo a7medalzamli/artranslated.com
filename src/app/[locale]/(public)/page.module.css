@@ -507,7 +507,8 @@
 
 /* ---- Sections ---- */
 .section {
-  padding-block: var(--space-4xl);
+  /* No top padding: removes the empty space above the "Why partner with me?" section. */
+  padding-block: 0 var(--space-4xl);
 }
 
 .tinted {
