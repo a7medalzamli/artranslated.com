@@ -21,6 +21,12 @@ const ar: SiteContent = {
       projects: "مشروعًا مُنجزًا",
       languages: "لغات العمل",
     },
+    statValues: {
+      years: { value: 14, suffix: "+" },
+      words: { value: 1000000, suffix: "+" },
+      projects: { value: 100, suffix: "+" },
+      languages: { value: 4, suffix: "" },
+    },
     availabilityEyebrow: "التوفّر",
     availabilityTitle: "أستقبل مشاريع جديدة حاليًا",
     availability: {

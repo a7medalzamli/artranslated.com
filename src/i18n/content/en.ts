@@ -23,6 +23,12 @@ const en = {
       projects: "Projects delivered",
       languages: "Working languages",
     },
+    statValues: {
+      years: { value: 14, suffix: "+" },
+      words: { value: 1000000, suffix: "+" },
+      projects: { value: 100, suffix: "+" },
+      languages: { value: 4, suffix: "" },
+    },
     availabilityEyebrow: "Availability",
     availabilityTitle: "Currently accepting new projects",
     availability: {

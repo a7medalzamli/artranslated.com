@@ -21,6 +21,12 @@ const es: SiteContent = {
       projects: "Proyectos entregados",
       languages: "Idiomas de trabajo",
     },
+    statValues: {
+      years: { value: 14, suffix: "+" },
+      words: { value: 1000000, suffix: "+" },
+      projects: { value: 100, suffix: "+" },
+      languages: { value: 4, suffix: "" },
+    },
     availabilityEyebrow: "Disponibilidad",
     availabilityTitle: "Actualmente acepto nuevos proyectos",
     availability: {

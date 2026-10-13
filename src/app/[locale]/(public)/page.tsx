@@ -12,7 +12,6 @@ import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
-import { experienceStats } from "@/content/stats";
 import { routes } from "@/lib/routes";
 import { siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -116,14 +115,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </h2>
           </div>
           <ul className={styles.statGrid}>
-            {experienceStats.map((stat) => (
-              <li key={stat.id} className={styles.statItem}>
+            {(["years", "words", "projects", "languages"] as const).map((id) => (
+              <li key={id} className={styles.statItem}>
                 <span className={styles.statValue}>
-                  <CountUp value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
+                  <CountUp value={t.home.statValues[id].value} suffix={t.home.statValues[id].suffix} />
                 </span>
-                <span className={styles.statLabel}>
-                  {t.home.stats[stat.id as keyof typeof t.home.stats]}
-                </span>
+                <span className={styles.statLabel}>{t.home.stats[id]}</span>
               </li>
             ))}
           </ul>
