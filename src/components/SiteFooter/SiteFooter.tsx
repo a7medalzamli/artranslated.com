@@ -84,13 +84,6 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
                 <Link href={routes.privacy}>{dict.footer.privacy}</Link>
               </li>
             </ul>
-            <Image
-              src="/proz-certified-pro.jpg"
-              alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
-              width={1600}
-              height={528}
-              className={`${styles.credBadge} ${styles.credImg}`}
-            />
           </nav>
 
           <div className={styles.col}>
@@ -103,14 +96,24 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
                 <a href={`tel:${site.contact.phoneHref}`}>{site.contact.phone}</a>
               </li>
             </ul>
-            <Image
-              src="/twb-trados.jpg"
-              alt="Translators without Borders — I work with Trados"
-              width={1600}
-              height={528}
-              className={`${styles.credBadge} ${styles.credImg}`}
-            />
           </div>
+        </div>
+
+        <div className={styles.credBadges}>
+          <Image
+            src="/proz-certified-pro.jpg"
+            alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
+            width={1600}
+            height={528}
+            className={styles.credImg}
+          />
+          <Image
+            src="/twb-trados.jpg"
+            alt="Translators without Borders — I work with Trados"
+            width={1600}
+            height={528}
+            className={styles.credImg}
+          />
         </div>
 
         <div className={styles.bottom}>

@@ -52,17 +52,19 @@
 }
 
 /* ---- Credential badges (ProZ, Translators without Borders / Trados) ---- */
-.credBadge {
-  display: block;
-  margin-top: var(--space-md);
+/* Credential images in one row (not inside the columns), so both render at
+   exactly the same width and height. Not links. */
+.credBadges {
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-lg);
 }
 
-/* Both credential images render at exactly the same width and height
-   (same source aspect ratio), and are not links. */
 .credImg {
   display: block;
   width: 170px;
-  max-width: 100%;
   height: auto;
   border-radius: var(--radius-sm);
 }
