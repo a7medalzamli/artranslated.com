@@ -10,7 +10,6 @@ import styles from "./SiteFooter.module.css";
 
 export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: SiteSettings }) {
   const year = new Date().getFullYear();
-  const prozHref = site.memberships.find((m) => m.id === "proz")?.href ?? "#";
 
   return (
     <footer className={styles.footer}>
@@ -85,21 +84,13 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
                 <Link href={routes.privacy}>{dict.footer.privacy}</Link>
               </li>
             </ul>
-            <a
-              href={prozHref}
-              className={styles.credBadge}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="ProZ.com Certified PRO — Professional Translator (opens in a new tab)"
-            >
-              <Image
-                src="/proz-certified-pro.jpg"
-                alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
-                width={1600}
-                height={528}
-                className={styles.credImg}
-              />
-            </a>
+            <Image
+              src="/proz-certified-pro.jpg"
+              alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
+              width={1600}
+              height={528}
+              className={`${styles.credBadge} ${styles.credImg}`}
+            />
           </nav>
 
           <div className={styles.col}>

@@ -55,18 +55,14 @@
 .credBadge {
   display: block;
   margin-top: var(--space-md);
-  max-width: 190px;
-  border-radius: var(--radius-sm);
-  transition: opacity var(--transition-fast);
 }
 
-a.credBadge:hover {
-  opacity: 0.9;
-}
-
+/* Both credential images render at exactly the same width and height
+   (same source aspect ratio), and are not links. */
 .credImg {
   display: block;
-  width: 100%;
+  width: 170px;
+  max-width: 100%;
   height: auto;
   border-radius: var(--radius-sm);
 }
