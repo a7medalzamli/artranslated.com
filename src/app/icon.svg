@@ -1,11 +1,14 @@
-<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ahmed Alzamli — Arabic translation">
-  <rect width="32" height="32" rx="7" fill="#0062ff" />
-  <path
-    d="M16 6.5 24.5 25.5 M16 6.5 7.5 25.5 M10.6 19.5 H21.4"
-    fill="none"
-    stroke="#ffffff"
-    stroke-width="3.1"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
+<svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ahmed Alzamli — Arabic translation">
+  <rect width="64" height="64" rx="14" fill="#0f1e36" />
+  <rect x="4" y="4" width="56" height="56" rx="10.5" fill="none" stroke="#c9a961" stroke-opacity="0.45" stroke-width="1.5" />
+  <g fill="#d4b56f">
+    <!-- thick right stroke -->
+    <path d="M28.6 10.5h5.6L46.6 49h-7z" />
+    <!-- thin left stroke -->
+    <path d="M28.6 10.5h2.2l1.1 3.3L20.4 49h-3.4z" />
+    <!-- crossbar -->
+    <path d="M22.4 35h17.8v3.2H21.3z" />
+    <!-- serifs -->
+    <path d="M13.5 48.5h11v3h-11zM36 48.5h14.5v3H36z" />
+  </g>
 </svg>
