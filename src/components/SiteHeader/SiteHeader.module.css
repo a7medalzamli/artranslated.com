@@ -221,28 +221,6 @@
   color: var(--color-primary);
 }
 
-/* Specializations nested under Translation. */
-.menuSub {
-  list-style: none;
-  margin: 0 0 var(--space-2xs);
-  padding: 0;
-  margin-inline-start: var(--space-md);
-  border-inline-start: 2px solid var(--color-border);
-}
-
-.menuSubLink {
-  display: block;
-  padding: 0.3rem var(--space-sm);
-  color: var(--color-text-muted);
-  text-decoration: none;
-  font-size: var(--font-size-sm);
-  white-space: nowrap;
-}
-
-.menuSubLink:hover {
-  color: var(--color-primary);
-}
-
 /* ---- Services list inside the mobile menu ---- */
 .mobileSub {
   padding: 0;

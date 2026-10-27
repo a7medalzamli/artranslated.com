@@ -137,18 +137,3 @@
 .footerSocials {
   margin-inline-start: auto;
 }
-
-/* Specializations nested under Translation. */
-.subList {
-  list-style: none;
-  margin: var(--space-xs) 0 0;
-  padding-inline-start: var(--space-sm);
-  border-inline-start: 2px solid var(--color-border);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
-
-.subList a {
-  color: var(--color-text-muted);
-}

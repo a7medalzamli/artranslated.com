@@ -39,15 +39,6 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
               {buildServiceNav(dict).map((item) => (
                 <li key={item.href}>
                   <Link href={item.href}>{item.label}</Link>
-                  {item.children && (
-                    <ul className={styles.subList}>
-                      {item.children.map((child) => (
-                        <li key={child.href}>
-                          <Link href={child.href}>{child.label}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </li>
               ))}
             </ul>

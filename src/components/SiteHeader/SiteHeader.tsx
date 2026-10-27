@@ -115,7 +115,7 @@ export function SiteHeader({ dict, settings }: { dict: Dictionary; settings: Sit
   );
 }
 
-/** Services submenu; Translation's specializations render as a nested list. */
+/** Services submenu (desktop dropdown and mobile menu). */
 function MenuList({
   items,
   className,
@@ -132,17 +132,6 @@ function MenuList({
           <Link href={item.href} className={styles.menuLink} onClick={onNavigate}>
             {item.label}
           </Link>
-          {item.children && (
-            <ul className={styles.menuSub}>
-              {item.children.map((child) => (
-                <li key={child.href}>
-                  <Link href={child.href} className={styles.menuSubLink} onClick={onNavigate}>
-                    {child.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
         </li>
       ))}
     </ul>
