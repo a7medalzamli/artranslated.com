@@ -69,6 +69,9 @@ const es: SiteContent = {
     specializationsTitle: "Especializaciones",
     specializationsIntro:
       "Cada especialización tiene su propia página que explica qué incluye y cómo se realiza el trabajo.",
+    translationTitle: "Traducción",
+    translationSummary:
+      "Traducción humana profesional del inglés, el francés y el español al árabe — precisa, natural y coherente con su terminología, para documentos, sitios web y software.",
     additionalTitle: "Servicios adicionales",
     additionalIntro:
       "Más allá de la traducción, estos servicios acompañan los proyectos de localización e IA de principio a fin.",

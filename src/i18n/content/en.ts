@@ -71,6 +71,9 @@ const en = {
     specializationsTitle: "Specializations",
     specializationsIntro:
       "Each specialization has its own page explaining what is covered and how the work is handled.",
+    translationTitle: "Translation",
+    translationSummary:
+      "Professional human translation from English, French and Spanish into Arabic — accurate, natural and consistent with your terminology, for documents, websites and software.",
     additionalTitle: "Additional services",
     additionalIntro:
       "Beyond straight translation, these services support localization and AI projects end to end.",

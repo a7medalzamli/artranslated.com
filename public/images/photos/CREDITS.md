@@ -16,3 +16,4 @@ All photos are from Unsplash, used under the Unsplash License (free for commerci
 | service-ai-annotation.jpg | https://unsplash.com/photos/FPXnt5DsW5s (vitaly-gariev) |
 | service-dubbing.jpg | https://unsplash.com/photos/n30_i7mx62o (soundtrap) |
 | contact.jpg | https://unsplash.com/photos/vbd1ONgbZlY (vitaly-gariev) |
+| service-translation.jpg | https://unsplash.com/photos/GroTDwJCVYw (the-unmistakables) |

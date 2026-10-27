@@ -71,6 +71,9 @@ const fr: SiteContent = {
     specializationsTitle: "Spécialisations",
     specializationsIntro:
       "Chaque spécialisation a sa propre page expliquant ce qui est couvert et comment le travail est réalisé.",
+    translationTitle: "Traduction",
+    translationSummary:
+      "Traduction humaine professionnelle de l’anglais, du français et de l’espagnol vers l’arabe — précise, naturelle et cohérente avec votre terminologie, pour vos documents, sites web et logiciels.",
     additionalTitle: "Services complémentaires",
     additionalIntro:
       "Au-delà de la traduction, ces services accompagnent les projets de localisation et d'IA de bout en bout.",

@@ -48,6 +48,9 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
       <Section tinted title={t.services.additionalTitle} intro={t.services.additionalIntro}>
         <CardGrid columns={3}>
+          <Card title={t.services.translationTitle} image="/images/photos/service-translation.jpg">
+            {t.services.translationSummary}
+          </Card>
           {additionalServices.map((service, i) => (
             <Card key={service.title} title={t.cards.additional[i]?.title ?? service.title} image={serviceImages[i]}>
               {t.cards.additional[i]?.summary ?? service.summary}
