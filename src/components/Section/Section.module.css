@@ -8,14 +8,12 @@
 
 .title {
   font-size: var(--font-size-h2);
-  max-width: 24ch;
 }
 
 .intro {
   margin-top: var(--space-sm);
   color: var(--color-text-muted);
   font-size: var(--font-size-lg);
-  max-width: 60ch;
 }
 
 .body {
@@ -27,12 +25,5 @@
 .body :global(.prose) ul,
 .body :global(.prose) ol {
   margin-bottom: var(--space-md);
-  max-width: 65ch;
 }
 
-/* Opt-in: let prose use the full container width. */
-.body :global(.prose-wide) p,
-.body :global(.prose-wide) ul,
-.body :global(.prose-wide) ol {
-  max-width: none;
-}

@@ -38,12 +38,10 @@
 
 .title {
   margin-bottom: var(--space-md);
-  max-width: 24ch;
 }
 
 .prose {
   color: var(--color-text);
-  max-width: 65ch;
 }
 
 .prose :is(p, ul, ol) {

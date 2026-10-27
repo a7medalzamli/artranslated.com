@@ -1,7 +1,6 @@
 .prose {
   color: var(--color-text);
   line-height: var(--line-normal);
-  max-width: 68ch;
 }
 
 .prose > * + * {

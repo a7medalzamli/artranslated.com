@@ -82,7 +82,7 @@ export default async function BlogPostPage({
         ]}
       />
 
-      <Container size="narrow" className={styles.article}>
+      <Container className={styles.article}>
         <p className={styles.meta}>
           {formatDate(post.published_at)} &middot; {readingTimeMinutes(post.content)} {t.blog.minRead}
         </p>

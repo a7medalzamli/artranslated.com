@@ -14,7 +14,6 @@
 
 .legal :global(.prose) p {
   margin-bottom: var(--space-md);
-  max-width: 68ch;
 }
 
 .legal :global(.prose) h2 {
@@ -24,7 +23,6 @@
 .legal :global(.prose) ul {
   margin-bottom: var(--space-md);
   padding-inline-start: var(--space-lg);
-  max-width: 68ch;
 }
 
 .legal :global(.prose) li {

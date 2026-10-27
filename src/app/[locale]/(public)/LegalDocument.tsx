@@ -65,7 +65,7 @@ export async function LegalDocument({ locale, t }: { locale: string; t: LegalCon
         breadcrumbs={[{ label: c.common.homeCrumb, href: routes.home }, { label: t.crumb }]}
       />
 
-      <Container size="narrow" className={styles.legal}>
+      <Container className={styles.legal}>
         <div className="prose">
           <p className={styles.intro}>
             {t.introBefore}
