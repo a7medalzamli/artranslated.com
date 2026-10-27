@@ -9,7 +9,7 @@ import styles from "./AvailabilityHours.module.css";
  * through the Intl APIs, so daylight-saving changes are handled automatically.
  */
 const PALESTINE_TZ = "Asia/Hebron";
-/** Time zone the hours are shown in by default (the headline row and picker default). */
+/** Fallback zone when the visitor's own time zone can't be detected. */
 const DISPLAY_TZ = "America/New_York";
 /** Working window in Palestine local time (24h). Edit here to change hours. */
 const WINDOW = { startHour: 9, startMin: 0, endHour: 23, endMin: 0 };
@@ -125,9 +125,6 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
     };
   }, []);
 
-  const headline = `${formatTime(startInstant, DISPLAY_TZ)} – ${formatTime(endInstant, DISPLAY_TZ)}`;
-  const headlineCrossesDay = dayKey(endInstant, DISPLAY_TZ) !== dayKey(startInstant, DISPLAY_TZ);
-
   // Build the options, adding the detected zone if it isn't already listed.
   const options = useMemo(() => {
     const list = [...ZONES];
@@ -141,15 +138,24 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
   const localEnd = formatTime(endInstant, selected);
   const crossesDay = dayKey(endInstant, selected) !== dayKey(startInstant, selected);
 
+  // Label for the shown zone: "Your time (City)" for the visitor's own zone,
+  // otherwise the picked zone's name.
+  const zoneLabel =
+    mounted && selected === detected
+      ? `${labels.yourTime} (${selected.split("/").pop()?.replace(/_/g, " ")})`
+      : (options.find((z) => z.tz === selected)?.label ?? labels.displayZone);
+
   return (
     <div className={styles.wrap}>
       <p className={styles.days}>{labels.days}</p>
 
-      <p className={styles.row}>
-        <span className={styles.zoneName}>{labels.displayZone}</span>
+      {/* Shown in the visitor's own time zone once detected; hidden until then so
+          the server-rendered fallback time never flashes. */}
+      <p className={`${styles.row} ${styles.yourRow}`} style={{ opacity: mounted ? 1 : 0 }}>
+        <span className={styles.zoneName}>{zoneLabel}</span>
         <span className={styles.time}>
-          {headline}
-          {headlineCrossesDay && <span className={styles.nextDay}> {labels.nextDay}</span>}
+          {localStart} – {localEnd}
+          {crossesDay && <span className={styles.nextDay}> {labels.nextDay}</span>}
         </span>
       </p>
 
@@ -168,16 +174,6 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
           ))}
         </select>
       </label>
-
-      {mounted && selected !== DISPLAY_TZ && (
-        <p className={`${styles.row} ${styles.yourRow}`}>
-          <span className={styles.zoneName}>{labels.yourTime}</span>
-          <span className={styles.time}>
-            {localStart} – {localEnd}
-            {crossesDay && <span className={styles.nextDay}> {labels.nextDay}</span>}
-          </span>
-        </p>
-      )}
     </div>
   );
 }
