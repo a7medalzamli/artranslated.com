@@ -15,6 +15,7 @@ export function SiteHeader({ dict, settings }: { dict: Dictionary; settings: Sit
   const [open, setOpen] = useState(false);
 
   const navItems = [
+    { href: routes.home, label: dict.nav.home },
     { href: routes.about, label: dict.nav.about },
     { href: routes.services, label: dict.nav.services },
     { href: routes.specializations, label: dict.nav.specializations },

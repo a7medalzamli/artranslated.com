@@ -3,10 +3,10 @@ import type { Locale } from "@/i18n";
 import styles from "./ProcessDiagram.module.css";
 
 const labels: Record<Locale, { aria: string; start: string; end: string }> = {
-  en: { aria: "Workflow diagram", start: "Your files", end: "Ready to publish" },
-  ar: { aria: "مخطط سير العمل", start: "ملفاتك", end: "جاهز للنشر" },
-  fr: { aria: "Schéma du processus", start: "Vos fichiers", end: "Prêt à publier" },
-  es: { aria: "Diagrama del proceso", start: "Sus archivos", end: "Listo para publicar" },
+  en: { aria: "Workflow diagram", start: "Your files", end: "Ready" },
+  ar: { aria: "مخطط سير العمل", start: "ملفاتك", end: "جاهز" },
+  fr: { aria: "Schéma du processus", start: "Vos fichiers", end: "Prêt" },
+  es: { aria: "Diagrama del proceso", start: "Sus archivos", end: "Listo" },
 };
 
 const svg = (children: ReactNode) => (

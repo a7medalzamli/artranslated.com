@@ -3,6 +3,7 @@ import type { Dictionary } from "../index";
 /** French UI strings (interface chrome only). */
 const fr: Dictionary = {
   nav: {
+    home: "Accueil",
     about: "À propos",
     services: "Services",
     specializations: "Spécialisations",

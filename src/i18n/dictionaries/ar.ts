@@ -9,6 +9,7 @@ import type { Dictionary } from "../index";
  */
 const ar: Dictionary = {
   nav: {
+    home: "الرئيسية",
     about: "نبذة",
     services: "الخدمات",
     specializations: "التخصصات",

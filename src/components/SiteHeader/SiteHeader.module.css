@@ -137,3 +137,10 @@
     display: none;
   }
 }
+
+/* Tighter link spacing on smaller desktops so all menu items fit on one line. */
+@media (min-width: 60em) and (max-width: 75em) {
+  .navList {
+    gap: var(--space-md);
+  }
+}

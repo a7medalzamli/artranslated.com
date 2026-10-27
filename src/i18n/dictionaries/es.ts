@@ -3,6 +3,7 @@ import type { Dictionary } from "../index";
 /** Spanish UI strings (interface chrome only). */
 const es: Dictionary = {
   nav: {
+    home: "Inicio",
     about: "Acerca de",
     services: "Servicios",
     specializations: "Especializaciones",
