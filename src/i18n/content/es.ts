@@ -31,7 +31,7 @@ const es: SiteContent = {
     availabilityTitle: "Actualmente acepto nuevos proyectos",
     availability: {
       days: "A diario — de lunes a domingo",
-      palestine: "Estados Unidos (hora del Este)",
+      displayZone: "Estados Unidos (hora del Este)",
       yourTime: "Tu hora",
       picker: "Consulta estos horarios en tu país / zona horaria:",
       nextDay: "(día siguiente)",

@@ -33,7 +33,7 @@ const en = {
     availabilityTitle: "Currently accepting new projects",
     availability: {
       days: "Daily — Monday to Sunday",
-      palestine: "United States (Eastern)",
+      displayZone: "United States (Eastern)",
       yourTime: "Your time",
       picker: "See these hours in your country / time zone:",
       nextDay: "(next day)",

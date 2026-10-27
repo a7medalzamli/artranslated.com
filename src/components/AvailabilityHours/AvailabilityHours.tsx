@@ -81,7 +81,7 @@ function dayKey(instant: Date, timeZone: string): string {
 
 type AvailabilityLabels = {
   days: string;
-  palestine: string;
+  displayZone: string;
   yourTime: string;
   picker: string;
   nextDay: string;
@@ -89,7 +89,7 @@ type AvailabilityLabels = {
 
 const defaultLabels: AvailabilityLabels = {
   days: "Daily — Monday to Sunday",
-  palestine: "United States (Eastern)",
+  displayZone: "United States (Eastern)",
   yourTime: "Your time",
   picker: "See these hours in your country / time zone:",
   nextDay: "(next day)",
@@ -146,7 +146,7 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
       <p className={styles.days}>{labels.days}</p>
 
       <p className={styles.row}>
-        <span className={styles.zoneName}>{labels.palestine}</span>
+        <span className={styles.zoneName}>{labels.displayZone}</span>
         <span className={styles.time}>
           {headline}
           {headlineCrossesDay && <span className={styles.nextDay}> {labels.nextDay}</span>}
