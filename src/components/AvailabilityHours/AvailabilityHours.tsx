@@ -9,12 +9,19 @@ import styles from "./AvailabilityHours.module.css";
  * through the Intl APIs, so daylight-saving changes are handled automatically.
  */
 const PALESTINE_TZ = "Asia/Hebron";
+/** Time zone the hours are shown in by default (the headline row and picker default). */
+const DISPLAY_TZ = "America/New_York";
 /** Working window in Palestine local time (24h). Edit here to change hours. */
 const WINDOW = { startHour: 9, startMin: 0, endHour: 23, endMin: 0 };
 
 /** Friendly country / time-zone choices offered in the picker. */
 const ZONES: { tz: string; label: string }[] = [
-  { tz: "Asia/Hebron", label: "Palestine" },
+  { tz: "America/New_York", label: "US Eastern (New York)" },
+  { tz: "America/Chicago", label: "US Central (Chicago)" },
+  { tz: "America/Denver", label: "US Mountain (Denver)" },
+  { tz: "America/Los_Angeles", label: "US Pacific (Los Angeles)" },
+  { tz: "America/Anchorage", label: "Alaska" },
+  { tz: "Pacific/Honolulu", label: "Hawaii" },
   { tz: "Europe/London", label: "UK · Ireland · Portugal" },
   { tz: "Europe/Paris", label: "Western Europe (France, Germany, Spain)" },
   { tz: "Europe/Athens", label: "Eastern Europe (Greece, Romania)" },
@@ -22,12 +29,7 @@ const ZONES: { tz: string; label: string }[] = [
   { tz: "Asia/Riyadh", label: "Saudi Arabia · Gulf" },
   { tz: "Asia/Dubai", label: "United Arab Emirates" },
   { tz: "Asia/Kolkata", label: "India" },
-  { tz: "America/New_York", label: "US Eastern (New York)" },
-  { tz: "America/Chicago", label: "US Central (Chicago)" },
-  { tz: "America/Denver", label: "US Mountain (Denver)" },
-  { tz: "America/Los_Angeles", label: "US Pacific (Los Angeles)" },
-  { tz: "America/Anchorage", label: "Alaska" },
-  { tz: "Pacific/Honolulu", label: "Hawaii" },
+  { tz: "Asia/Hebron", label: "Palestine" },
   { tz: "Australia/Sydney", label: "Australia (Sydney)" },
 ];
 
@@ -87,14 +89,14 @@ type AvailabilityLabels = {
 
 const defaultLabels: AvailabilityLabels = {
   days: "Daily — Monday to Sunday",
-  palestine: "Palestine",
+  palestine: "United States (Eastern)",
   yourTime: "Your time",
   picker: "See these hours in your country / time zone:",
   nextDay: "(next day)",
 };
 
 export function AvailabilityHours({ labels = defaultLabels }: { labels?: AvailabilityLabels }) {
-  const [selected, setSelected] = useState(PALESTINE_TZ);
+  const [selected, setSelected] = useState(DISPLAY_TZ);
   const [detected, setDetected] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
 
@@ -108,7 +110,7 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
           setSelected(tz);
         }
       } catch {
-        /* keep Palestine default */
+        /* keep the US default */
       }
     });
     return () => cancelAnimationFrame(id);
@@ -123,7 +125,8 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
     };
   }, []);
 
-  const palestine = `${formatTime(startInstant, PALESTINE_TZ)} – ${formatTime(endInstant, PALESTINE_TZ)}`;
+  const headline = `${formatTime(startInstant, DISPLAY_TZ)} – ${formatTime(endInstant, DISPLAY_TZ)}`;
+  const headlineCrossesDay = dayKey(endInstant, DISPLAY_TZ) !== dayKey(startInstant, DISPLAY_TZ);
 
   // Build the options, adding the detected zone if it isn't already listed.
   const options = useMemo(() => {
@@ -144,7 +147,10 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
 
       <p className={styles.row}>
         <span className={styles.zoneName}>{labels.palestine}</span>
-        <span className={styles.time}>{palestine}</span>
+        <span className={styles.time}>
+          {headline}
+          {headlineCrossesDay && <span className={styles.nextDay}> {labels.nextDay}</span>}
+        </span>
       </p>
 
       <label className={styles.picker}>
@@ -163,7 +169,7 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
         </select>
       </label>
 
-      {mounted && selected !== PALESTINE_TZ && (
+      {mounted && selected !== DISPLAY_TZ && (
         <p className={`${styles.row} ${styles.yourRow}`}>
           <span className={styles.zoneName}>{labels.yourTime}</span>
           <span className={styles.time}>
