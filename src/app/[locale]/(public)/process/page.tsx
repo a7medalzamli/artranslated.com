@@ -45,7 +45,7 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
       </Section>
 
       <Section tinted title={p.qaTitle}>
-        <div className="prose">
+        <div className="prose prose-wide">
           {p.qaParagraphs.map((para, i) => (
             <p key={i}>{para}</p>
           ))}
@@ -53,7 +53,7 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
       </Section>
 
       <Section title={p.toolsTitle}>
-        <div className="prose">
+        <div className="prose prose-wide">
           <ul>
             {p.tools.map((tool) => (
               <li key={tool.name}>

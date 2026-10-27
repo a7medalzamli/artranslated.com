@@ -29,3 +29,10 @@
   margin-bottom: var(--space-md);
   max-width: 65ch;
 }
+
+/* Opt-in: let prose use the full container width. */
+.body :global(.prose-wide) p,
+.body :global(.prose-wide) ul,
+.body :global(.prose-wide) ol {
+  max-width: none;
+}
