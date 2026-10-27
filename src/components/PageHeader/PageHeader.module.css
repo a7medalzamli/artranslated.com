@@ -4,9 +4,6 @@
   padding-block: var(--space-2xl);
 }
 
-.crumbs {
-  margin-bottom: var(--space-md);
-}
 
 .eyebrow {
   color: var(--color-accent);
