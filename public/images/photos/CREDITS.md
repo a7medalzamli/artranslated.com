@@ -12,8 +12,8 @@ All photos are from Unsplash, used under the Unsplash License (free for commerci
 | spec-website-marketing.jpg | https://unsplash.com/photos/Of_m3hMsoAA (jud-mackrill) |
 | service-mtpe.jpg | https://unsplash.com/photos/9yCYGgPe5Kg (luke-southern) |
 | service-transcreation.jpg | https://unsplash.com/photos/pqzRfBhd9r0 (ux-indonesia) |
-| service-product-testing.jpg | https://unsplash.com/photos/n31x0hhnzOs (yura-fresh) |
 | service-ai-annotation.jpg | https://unsplash.com/photos/FPXnt5DsW5s (vitaly-gariev) |
-| service-dubbing.jpg | https://unsplash.com/photos/n30_i7mx62o (soundtrap) |
 | contact.jpg | https://unsplash.com/photos/vbd1ONgbZlY (vitaly-gariev) |
 | service-translation.jpg | https://unsplash.com/photos/GroTDwJCVYw (the-unmistakables) |
+| service-digital-marketing.jpg | https://unsplash.com/photos/CielzQJR0SQ (loui-kiaer) |
+| service-consulting.jpg | https://unsplash.com/photos/7RWBSYA9Rro (docusign) |

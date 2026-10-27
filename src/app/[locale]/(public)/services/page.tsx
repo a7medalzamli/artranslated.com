@@ -9,14 +9,7 @@ import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
-/** Photos in the same order as additionalServices. */
-const serviceImages = [
-  "/images/photos/service-mtpe.jpg",
-  "/images/photos/service-transcreation.jpg",
-  "/images/photos/service-product-testing.jpg",
-  "/images/photos/service-ai-annotation.jpg",
-  "/images/photos/service-dubbing.jpg",
-];
+const photo = (name: string) => `/images/photos/service-${name}.jpg`;
 
 export async function generateMetadata({
   params,
@@ -37,6 +30,25 @@ export async function generateMetadata({
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getContent(locale as Locale);
+  const s = t.services;
+
+  /** One of the shared additionalServices entries (localized by index). */
+  const shared = (i: number, image: string) => ({
+    title: t.cards.additional[i]?.title ?? additionalServices[i].title,
+    summary: t.cards.additional[i]?.summary ?? additionalServices[i].summary,
+    image: photo(image),
+  });
+
+  // Card order on the page. Product testing and dubbing were replaced by
+  // Consulting and Digital Marketing.
+  const cards = [
+    { title: s.translationTitle, summary: s.translationSummary, image: photo("translation") },
+    shared(0, "mtpe"),
+    shared(1, "transcreation"),
+    { title: s.consultingTitle, summary: s.consultingSummary, image: photo("consulting") },
+    shared(3, "ai-annotation"),
+    { title: s.marketingTitle, summary: s.marketingSummary, image: photo("digital-marketing") },
+  ];
 
   return (
     <>
@@ -48,12 +60,9 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
       <Section tinted title={t.services.additionalTitle} intro={t.services.additionalIntro}>
         <CardGrid columns={3}>
-          <Card title={t.services.translationTitle} image="/images/photos/service-translation.jpg">
-            {t.services.translationSummary}
-          </Card>
-          {additionalServices.map((service, i) => (
-            <Card key={service.title} title={t.cards.additional[i]?.title ?? service.title} image={serviceImages[i]}>
-              {t.cards.additional[i]?.summary ?? service.summary}
+          {cards.map((card) => (
+            <Card key={card.title} title={card.title} image={card.image}>
+              {card.summary}
             </Card>
           ))}
         </CardGrid>

@@ -72,6 +72,12 @@ const es: SiteContent = {
     translationTitle: "Traducción",
     translationSummary:
       "Traducción humana profesional del inglés, el francés y el español al árabe — precisa, natural y coherente con su terminología, para documentos, sitios web y software.",
+    consultingTitle: "Consultoría",
+    consultingSummary:
+      "Consultoría de localización: asesoramiento para entrar en los mercados de habla árabe, creación de glosarios y guías de estilo, y elección del flujo de trabajo, las herramientas y el proceso de calidad adecuados.",
+    marketingTitle: "Marketing digital",
+    marketingSummary:
+      "SEO en árabe, redes sociales y contenidos de campaña para llegar al público árabe — combinando localización y experiencia en marketing para generar tráfico y conversiones.",
     additionalTitle: "Servicios adicionales",
     additionalIntro:
       "Más allá de la traducción, estos servicios acompañan los proyectos de localización e IA de principio a fin.",
