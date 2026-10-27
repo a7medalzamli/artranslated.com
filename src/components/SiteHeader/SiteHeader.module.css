@@ -144,3 +144,121 @@
     gap: var(--space-md);
   }
 }
+
+/* ---- Services dropdown (desktop) ---- */
+.hasMenu {
+  position: relative;
+}
+
+.hasMenu > .navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.chevron {
+  transition: transform var(--transition-fast);
+}
+
+.hasMenu:hover .chevron,
+.hasMenu:focus-within .chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  inset-inline-start: calc(var(--space-md) * -1);
+  top: 100%;
+  /* Invisible bridge so the menu stays open while the pointer moves down. */
+  padding-top: var(--space-sm);
+  min-width: 17rem;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    visibility var(--transition-fast);
+  z-index: 10;
+}
+
+.hasMenu:hover .dropdown,
+.hasMenu:focus-within .dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+}
+
+.dropdown > .menuList {
+  padding: var(--space-sm);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.menuList {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menuLink {
+  display: block;
+  padding: var(--space-xs) var(--space-sm);
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--weight-medium);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.menuLink:hover {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+/* Specializations nested under Translation. */
+.menuSub {
+  list-style: none;
+  margin: 0 0 var(--space-2xs);
+  padding: 0;
+  margin-inline-start: var(--space-md);
+  border-inline-start: 2px solid var(--color-border);
+}
+
+.menuSubLink {
+  display: block;
+  padding: 0.3rem var(--space-sm);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+.menuSubLink:hover {
+  color: var(--color-primary);
+}
+
+/* ---- Services list inside the mobile menu ---- */
+.mobileSub {
+  padding: 0;
+  margin-inline-start: var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
+/* Long menus scroll instead of running off the screen. */
+.mobileNav {
+  max-height: calc(100dvh - var(--header-height));
+  overflow-y: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dropdown,
+  .chevron {
+    transition: none;
+  }
+}

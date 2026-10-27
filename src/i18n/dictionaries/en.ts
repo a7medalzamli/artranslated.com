@@ -41,9 +41,16 @@ const en = {
       financial: "Financial",
       healthcare: "Healthcare",
       audiovisual: "Audiovisual",
-      digitalMarketing: "Digital Marketing",
-      consulting: "Consulting",
     },
+  },
+  /** Labels for the Services menu (header dropdown and footer). */
+  serviceMenu: {
+    translation: "Translation",
+    mtpe: "Post-editing (MTPE)",
+    transcreation: "Transcreation & UI copy",
+    consulting: "Consulting",
+    aiDataAnnotation: "AI data annotation",
+    digitalMarketing: "Digital Marketing",
   },
   breadcrumbs: {
     home: "Home",

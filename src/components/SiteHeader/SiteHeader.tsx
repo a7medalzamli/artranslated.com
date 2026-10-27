@@ -7,6 +7,7 @@ import { Container } from "../Container/Container";
 import { Button } from "../Button/Button";
 import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher";
 import { routes } from "@/lib/routes";
+import { buildServiceNav, type NavLink } from "@/lib/serviceNav";
 import type { Dictionary } from "@/i18n";
 import type { SiteSettings } from "@/lib/content/settings";
 import styles from "./SiteHeader.module.css";
@@ -14,11 +15,10 @@ import styles from "./SiteHeader.module.css";
 export function SiteHeader({ dict, settings }: { dict: Dictionary; settings: SiteSettings }) {
   const [open, setOpen] = useState(false);
 
-  const navItems = [
+  const navItems: NavLink[] = [
     { href: routes.home, label: dict.nav.home },
     { href: routes.about, label: dict.nav.about },
-    { href: routes.services, label: dict.nav.services },
-    { href: routes.specializations, label: dict.nav.specializations },
+    { href: routes.services, label: dict.nav.services, children: buildServiceNav(dict) },
     { href: routes.process, label: dict.nav.howItWorks },
     { href: routes.blog, label: dict.nav.blog },
     { href: routes.contact, label: dict.nav.contact },
@@ -41,13 +41,25 @@ export function SiteHeader({ dict, settings }: { dict: Dictionary; settings: Sit
 
           <nav className={styles.desktopNav} aria-label="Primary">
             <ul className={styles.navList}>
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href} className={styles.navLink}>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {navItems.map((item) =>
+                item.children ? (
+                  <li key={item.href} className={styles.hasMenu}>
+                    <Link href={item.href} className={styles.navLink} aria-haspopup="true">
+                      {item.label}
+                      <ChevronIcon />
+                    </Link>
+                    <div className={styles.dropdown}>
+                      <MenuList items={item.children} />
+                    </div>
+                  </li>
+                ) : (
+                  <li key={item.href}>
+                    <Link href={item.href} className={styles.navLink}>
+                      {item.label}
+                    </Link>
+                  </li>
+                ),
+              )}
             </ul>
           </nav>
 
@@ -80,6 +92,13 @@ export function SiteHeader({ dict, settings }: { dict: Dictionary; settings: Sit
                   >
                     {item.label}
                   </Link>
+                  {item.children && (
+                    <MenuList
+                      items={item.children}
+                      className={styles.mobileSub}
+                      onNavigate={() => setOpen(false)}
+                    />
+                  )}
                 </li>
               ))}
               <li className={styles.mobileCta}>
@@ -93,6 +112,48 @@ export function SiteHeader({ dict, settings }: { dict: Dictionary; settings: Sit
         )}
       </Container>
     </header>
+  );
+}
+
+/** Services submenu; Translation's specializations render as a nested list. */
+function MenuList({
+  items,
+  className,
+  onNavigate,
+}: {
+  items: NavLink[];
+  className?: string;
+  onNavigate?: () => void;
+}) {
+  return (
+    <ul className={[styles.menuList, className].filter(Boolean).join(" ")}>
+      {items.map((item) => (
+        <li key={item.href}>
+          <Link href={item.href} className={styles.menuLink} onClick={onNavigate}>
+            {item.label}
+          </Link>
+          {item.children && (
+            <ul className={styles.menuSub}>
+              {item.children.map((child) => (
+                <li key={child.href}>
+                  <Link href={child.href} className={styles.menuSubLink} onClick={onNavigate}>
+                    {child.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function ChevronIcon() {
+  return (
+    <svg className={styles.chevron} width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }
 

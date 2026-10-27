@@ -37,9 +37,16 @@ const es: Dictionary = {
       financial: "Financiera",
       healthcare: "Salud",
       audiovisual: "Audiovisual",
-      digitalMarketing: "Marketing digital",
-      consulting: "Consultoría",
     },
+  },
+  /** Labels for the Services menu (header dropdown and footer). */
+  serviceMenu: {
+    translation: "Traducción",
+    mtpe: "Posedición (MTPE)",
+    transcreation: "Transcreación y textos de interfaz",
+    consulting: "Consultoría",
+    aiDataAnnotation: "Anotación de datos de IA",
+    digitalMarketing: "Marketing digital",
   },
   breadcrumbs: {
     home: "Inicio",

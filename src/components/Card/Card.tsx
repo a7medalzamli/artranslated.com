@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "../LocaleLink/LocaleLink";
 import type { ReactNode } from "react";
 import styles from "./Card.module.css";
 

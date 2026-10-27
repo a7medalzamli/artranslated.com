@@ -33,21 +33,22 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   const s = t.services;
 
   /** One of the shared additionalServices entries (localized by index). */
-  const shared = (i: number, image: string) => ({
+  const shared = (i: number, image: string, href: string) => ({
     title: t.cards.additional[i]?.title ?? additionalServices[i].title,
     summary: t.cards.additional[i]?.summary ?? additionalServices[i].summary,
     image: photo(image),
+    href,
   });
 
   // Card order on the page. Product testing and dubbing were replaced by
   // Consulting and Digital Marketing.
   const cards = [
-    { title: s.translationTitle, summary: s.translationSummary, image: photo("translation") },
-    shared(0, "mtpe"),
-    shared(1, "transcreation"),
-    { title: s.consultingTitle, summary: s.consultingSummary, image: photo("consulting") },
-    shared(3, "ai-annotation"),
-    { title: s.marketingTitle, summary: s.marketingSummary, image: photo("digital-marketing") },
+    { title: s.translationTitle, summary: s.translationSummary, image: photo("translation"), href: routes.translation },
+    shared(0, "mtpe", routes.mtpe),
+    shared(1, "transcreation", routes.transcreation),
+    { title: s.consultingTitle, summary: s.consultingSummary, image: photo("consulting"), href: routes.consulting },
+    shared(3, "ai-annotation", routes.aiDataAnnotation),
+    { title: s.marketingTitle, summary: s.marketingSummary, image: photo("digital-marketing"), href: routes.digitalMarketing },
   ];
 
   return (
@@ -61,7 +62,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       <Section tinted title={t.services.additionalTitle} intro={t.services.additionalIntro}>
         <CardGrid columns={3}>
           {cards.map((card) => (
-            <Card key={card.title} title={card.title} image={card.image}>
+            <Card key={card.title} title={card.title} image={card.image} href={card.href}>
               {card.summary}
             </Card>
           ))}

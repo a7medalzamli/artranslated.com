@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Container } from "../Container/Container";
 import { SocialLinks } from "../SocialLinks/SocialLinks";
 import { routes } from "@/lib/routes";
+import { buildServiceNav } from "@/lib/serviceNav";
 import { site } from "@/lib/site";
 import type { Dictionary } from "@/i18n";
 import type { SiteSettings } from "@/lib/content/settings";
@@ -35,27 +36,20 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
           <nav className={styles.col} aria-label={dict.footer.servicesHeading}>
             <h2 className={styles.heading}>{dict.footer.servicesHeading}</h2>
             <ul className={styles.list}>
-              <li>
-                <Link href={routes.technical}>{dict.footer.serviceLinks.technical}</Link>
-              </li>
-              <li>
-                <Link href={routes.legal}>{dict.footer.serviceLinks.legal}</Link>
-              </li>
-              <li>
-                <Link href={routes.financial}>{dict.footer.serviceLinks.financial}</Link>
-              </li>
-              <li>
-                <Link href={routes.healthcare}>{dict.footer.serviceLinks.healthcare}</Link>
-              </li>
-              <li>
-                <Link href={routes.audiovisual}>{dict.footer.serviceLinks.audiovisual}</Link>
-              </li>
-              <li>
-                <Link href={routes.services}>{dict.footer.serviceLinks.digitalMarketing}</Link>
-              </li>
-              <li>
-                <Link href={routes.services}>{dict.footer.serviceLinks.consulting}</Link>
-              </li>
+              {buildServiceNav(dict).map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href}>{item.label}</Link>
+                  {item.children && (
+                    <ul className={styles.subList}>
+                      {item.children.map((child) => (
+                        <li key={child.href}>
+                          <Link href={child.href}>{child.label}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
             </ul>
           </nav>
 
@@ -70,9 +64,6 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
               </li>
               <li>
                 <Link href={routes.services}>{dict.nav.services}</Link>
-              </li>
-              <li>
-                <Link href={routes.specializations}>{dict.nav.specializations}</Link>
               </li>
               <li>
                 <Link href={routes.process}>{dict.footer.howItWorks}</Link>

@@ -43,9 +43,16 @@ const ar: Dictionary = {
       financial: "المالية",
       healthcare: "الرعاية الصحية",
       audiovisual: "السمعية البصرية",
-      digitalMarketing: "التسويق الرقمي",
-      consulting: "الاستشارات",
     },
+  },
+  /** Labels for the Services menu (header dropdown and footer). */
+  serviceMenu: {
+    translation: "الترجمة",
+    mtpe: "التحرير اللاحق للترجمة الآلية",
+    transcreation: "الترجمة الإبداعية ونصوص الواجهات",
+    consulting: "الاستشارات",
+    aiDataAnnotation: "توسيم البيانات للذكاء الاصطناعي",
+    digitalMarketing: "التسويق الرقمي",
   },
   breadcrumbs: {
     home: "الرئيسية",
