@@ -58,3 +58,42 @@
 .serviceCardText {
   color: var(--color-text-muted);
 }
+
+/* Photo across the top of the card, bleeding to its edges (card padding is --space-xl). */
+.serviceCard {
+  overflow: hidden;
+}
+
+.serviceMedia {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  margin: calc(var(--space-xl) * -1) calc(var(--space-xl) * -1) 0;
+  background: var(--color-surface-2);
+}
+
+.serviceMedia img {
+  object-fit: cover;
+  /* Keep faces in frame on portrait photos. */
+  object-position: center 25%;
+  transition: transform var(--transition);
+}
+
+.serviceCard:hover .serviceMedia img {
+  transform: scale(1.03);
+}
+
+/* Icon badge overlaps the bottom edge of the photo. */
+.serviceMedia + .serviceIcon {
+  position: relative;
+  margin-top: calc(3.25rem / -2);
+  box-shadow: 0 0 0 4px var(--color-surface);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .serviceMedia img {
+    transition: none;
+  }
+  .serviceCard:hover .serviceMedia img {
+    transform: none;
+  }
+}

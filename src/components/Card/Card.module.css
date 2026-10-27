@@ -68,3 +68,18 @@
 .link:hover {
   text-decoration: underline;
 }
+
+/* Photo bleeds to the card edges; card padding is --space-lg. */
+.media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  margin: calc(var(--space-lg) * -1) calc(var(--space-lg) * -1) var(--space-xs);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
+  background: var(--color-surface-2);
+}
+
+.media img {
+  object-fit: cover;
+  object-position: center 25%;
+}

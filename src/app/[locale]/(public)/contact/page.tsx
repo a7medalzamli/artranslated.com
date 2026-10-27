@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Container } from "@/components/Container/Container";
 import { Callout } from "@/components/Callout/Callout";
@@ -10,6 +11,7 @@ import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
+import styles from "./contact.module.css";
 
 export async function generateMetadata({
   params,
@@ -45,22 +47,36 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       />
 
       <Container className="section-pad">
-        <p style={{ fontSize: "var(--font-size-lg)", marginBottom: "var(--space-lg)" }}>
-          {c.directIntro}{" "}
-          <a href={`mailto:${site.contact.email}`} style={{ color: "var(--color-accent)", fontWeight: 600 }}>
-            {site.contact.email}
-          </a>{" "}
-          {c.directOr}{" "}
-          <a href={`tel:${site.contact.phoneHref}`} style={{ color: "var(--color-accent)", fontWeight: 600 }}>
-            {site.contact.phone}
-          </a>
-          .
-        </p>
+        <div className={styles.intro}>
+          <div className={styles.introText}>
+            <p style={{ fontSize: "var(--font-size-lg)", marginBottom: "var(--space-lg)" }}>
+              {c.directIntro}{" "}
+              <a href={`mailto:${site.contact.email}`} style={{ color: "var(--color-accent)", fontWeight: 600 }}>
+                {site.contact.email}
+              </a>{" "}
+              {c.directOr}{" "}
+              <a href={`tel:${site.contact.phoneHref}`} style={{ color: "var(--color-accent)", fontWeight: 600 }}>
+                {site.contact.phone}
+              </a>
+              .
+            </p>
 
-        <Callout>
-          <strong>{c.calloutStrong}</strong> {c.calloutText}{" "}
-          <LocaleLink href={routes.confidentiality}>{c.calloutLink}</LocaleLink>.
-        </Callout>
+            <Callout>
+              <strong>{c.calloutStrong}</strong> {c.calloutText}{" "}
+              <LocaleLink href={routes.confidentiality}>{c.calloutLink}</LocaleLink>.
+            </Callout>
+          </div>
+
+          <div className={styles.introMedia}>
+            <Image
+              src="/images/photos/contact.jpg"
+              alt=""
+              fill
+              sizes="(min-width: 60em) 40vw, 100vw"
+              priority
+            />
+          </div>
+        </div>
 
         <div className="section-gap">
           <QuoteForm

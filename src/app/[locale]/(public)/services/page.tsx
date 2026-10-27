@@ -9,6 +9,15 @@ import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
+/** Photos in the same order as additionalServices. */
+const serviceImages = [
+  "/images/photos/service-mtpe.jpg",
+  "/images/photos/service-transcreation.jpg",
+  "/images/photos/service-product-testing.jpg",
+  "/images/photos/service-ai-annotation.jpg",
+  "/images/photos/service-dubbing.jpg",
+];
+
 export async function generateMetadata({
   params,
 }: {
@@ -40,7 +49,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       <Section tinted title={t.services.additionalTitle} intro={t.services.additionalIntro}>
         <CardGrid columns={3}>
           {additionalServices.map((service, i) => (
-            <Card key={service.title} title={t.cards.additional[i]?.title ?? service.title}>
+            <Card key={service.title} title={t.cards.additional[i]?.title ?? service.title} image={serviceImages[i]}>
               {t.cards.additional[i]?.summary ?? service.summary}
             </Card>
           ))}

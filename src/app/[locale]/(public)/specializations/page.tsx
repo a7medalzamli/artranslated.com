@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
@@ -10,6 +11,16 @@ import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import styles from "./specializations.module.css";
+
+/** Photo for each specialization card, matched by its icon. */
+const specializationImages: Record<string, string> = {
+  chip: "/images/photos/spec-technical.jpg",
+  scale: "/images/photos/spec-legal.jpg",
+  finance: "/images/photos/spec-financial.jpg",
+  heart: "/images/photos/spec-healthcare.jpg",
+  robot: "/images/photos/spec-mtpe.jpg",
+  globe: "/images/photos/spec-website-marketing.jpg",
+};
 
 export async function generateMetadata({
   params,
@@ -58,6 +69,16 @@ export default async function SpecializationsPage({
               delay={(i % 3) * 90}
               className={styles.serviceCard}
             >
+              {specializationImages[service.icon] && (
+                <div className={styles.serviceMedia}>
+                  <Image
+                    src={specializationImages[service.icon]}
+                    alt=""
+                    fill
+                    sizes="(min-width: 60em) 33vw, (min-width: 40em) 50vw, 100vw"
+                  />
+                </div>
+              )}
               <span className={styles.serviceIcon}>
                 <ServiceIcon name={service.icon} />
               </span>
