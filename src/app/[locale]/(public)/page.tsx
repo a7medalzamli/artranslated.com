@@ -133,9 +133,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <Reveal from="up" className={styles.availabilityCard}>
             <span className={styles.availabilityDot} aria-hidden="true" />
             <div>
-              <p className={styles.label}>{t.home.availabilityEyebrow}</p>
               <h2 id="availability-title" className={styles.availabilityTitle}>
-                {t.home.availabilityTitle}
+                {t.home.availabilityEyebrow}
               </h2>
               <AvailabilityHours labels={t.home.availability} />
             </div>
