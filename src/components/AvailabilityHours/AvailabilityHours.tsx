@@ -151,7 +151,7 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
 
       {/* Shown in the visitor's own time zone once detected; hidden until then so
           the server-rendered fallback time never flashes. */}
-      <p className={`${styles.row} ${styles.yourRow}`} style={{ opacity: mounted ? 1 : 0 }}>
+      <p className={styles.row} style={{ opacity: mounted ? 1 : 0 }}>
         <span className={styles.zoneName}>{zoneLabel}</span>
         <span className={styles.time}>
           {localStart} – {localEnd}
