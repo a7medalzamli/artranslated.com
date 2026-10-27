@@ -1,4 +1,10 @@
 /**
+ * Telegram link for the footer icon. Replace with your own account, e.g.
+ * "https://t.me/yourusername".
+ */
+const TELEGRAM_URL = "https://t.me/+970594808782";
+
+/**
  * Site-wide identity values. Bracketed values are placeholders tracked in
  * PLACEHOLDERS.md — replace them with the real details when provided.
  */
@@ -15,6 +21,7 @@ export const site = {
     phoneHref: "+970594808782",
     /** WhatsApp uses the number without the leading + or spaces. */
     whatsapp: "970594808782",
+    telegram: TELEGRAM_URL,
   },
   /** Canonical public domain (no protocol). */
   domain: "artranslated.com",
@@ -26,7 +33,7 @@ export const site = {
   socials: [
     { platform: "linkedin", label: "LinkedIn", href: "#" },
     { platform: "whatsapp", label: "WhatsApp", href: "https://wa.me/970594808782" },
-    { platform: "email", label: "Email", href: "mailto:ahmed@artranslated.com" },
+    { platform: "telegram", label: "Telegram", href: TELEGRAM_URL },
   ],
   /**
    * Professional directory / network profiles shown in the footer.

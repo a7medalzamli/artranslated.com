@@ -42,6 +42,7 @@ const ar: Dictionary = {
       financial: "المالية",
       healthcare: "الرعاية الصحية",
       audiovisual: "السمعية البصرية",
+      digitalMarketing: "التسويق الرقمي",
     },
   },
   breadcrumbs: {

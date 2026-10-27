@@ -7,7 +7,7 @@ import { uploadImageAction } from "@/lib/content/uploadImageAction";
 import { saveSiteSettings } from "./actions";
 import styles from "../content/content.module.css";
 
-const PLATFORMS = ["linkedin", "whatsapp", "email"] as const;
+const PLATFORMS = ["linkedin", "whatsapp", "telegram", "email"] as const;
 const MAX_BYTES = 5 * 1024 * 1024;
 
 async function uploadImage(file: File): Promise<string> {
@@ -138,7 +138,7 @@ export function SettingsEditor({ initial }: { initial: SiteSettings }) {
               />
             </label>
             <label className={styles.field}>
-              <span>Link (URL, or mailto:/https://wa.me/…)</span>
+              <span>Link (URL, or mailto:/https://wa.me/…/https://t.me/…)</span>
               <input
                 value={s.href}
                 placeholder="https://…"

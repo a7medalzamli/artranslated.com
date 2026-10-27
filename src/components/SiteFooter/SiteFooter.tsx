@@ -50,6 +50,9 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
               <li>
                 <Link href={routes.audiovisual}>{dict.footer.serviceLinks.audiovisual}</Link>
               </li>
+              <li>
+                <Link href={routes.services}>{dict.footer.serviceLinks.digitalMarketing}</Link>
+              </li>
             </ul>
           </nav>
 
@@ -58,6 +61,12 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
             <ul className={styles.list}>
               <li>
                 <Link href={routes.about}>{dict.footer.about}</Link>
+              </li>
+              <li>
+                <Link href={routes.services}>{dict.nav.services}</Link>
+              </li>
+              <li>
+                <Link href={routes.specializations}>{dict.nav.specializations}</Link>
               </li>
               <li>
                 <Link href={routes.process}>{dict.footer.howItWorks}</Link>

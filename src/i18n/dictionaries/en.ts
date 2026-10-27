@@ -40,6 +40,7 @@ const en = {
       financial: "Financial",
       healthcare: "Healthcare",
       audiovisual: "Audiovisual",
+      digitalMarketing: "Digital Marketing",
     },
   },
   breadcrumbs: {

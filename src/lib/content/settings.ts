@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { site } from "@/lib/site";
 
-export const socialPlatformEnum = z.enum(["linkedin", "whatsapp", "email"]);
+export const socialPlatformEnum = z.enum(["linkedin", "whatsapp", "telegram", "email"]);
 
 export const siteSettingsSchema = z.object({
   name: z.string(),

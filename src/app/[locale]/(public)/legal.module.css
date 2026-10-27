@@ -16,3 +16,21 @@
   margin-bottom: var(--space-md);
   max-width: 68ch;
 }
+
+.legal :global(.prose) h2 {
+  font-weight: var(--weight-bold);
+}
+
+.legal :global(.prose) ul {
+  margin-bottom: var(--space-md);
+  padding-inline-start: var(--space-lg);
+  max-width: 68ch;
+}
+
+.legal :global(.prose) li {
+  margin-bottom: var(--space-2xs);
+}
+
+.legal .intro {
+  font-size: 1.125rem;
+}
