@@ -42,6 +42,7 @@ const en = {
       healthcare: "Healthcare",
       audiovisual: "Audiovisual",
       digitalMarketing: "Digital Marketing",
+      consulting: "Consulting",
     },
   },
   breadcrumbs: {

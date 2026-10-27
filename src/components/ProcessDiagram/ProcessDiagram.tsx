@@ -105,7 +105,6 @@ export function ProcessDiagram({ steps, locale }: { steps: { title: string }[]; 
           <li key={step.title} className={styles.item}>
             {arrow}
             <div className={styles.node}>
-              <span className={styles.number}>{i + 1}</span>
               <span className={`${styles.icon} ${styles.iconPrimary}`}>
                 {stepIcons[i] ?? stepIcons[stepIcons.length - 1]}
               </span>

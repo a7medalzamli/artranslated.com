@@ -69,23 +69,6 @@
   color: var(--color-primary);
 }
 
-.number {
-  position: absolute;
-  inset-block-start: -0.55rem;
-  inset-inline-start: -0.55rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  padding-inline: 0.3rem;
-  border-radius: 999px;
-  background: var(--color-text);
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: var(--weight-bold);
-}
-
 .label {
   font-weight: var(--weight-semibold);
   color: var(--color-text);

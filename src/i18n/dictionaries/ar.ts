@@ -44,6 +44,7 @@ const ar: Dictionary = {
       healthcare: "الرعاية الصحية",
       audiovisual: "السمعية البصرية",
       digitalMarketing: "التسويق الرقمي",
+      consulting: "الاستشارات",
     },
   },
   breadcrumbs: {

@@ -38,6 +38,7 @@ const fr: Dictionary = {
       healthcare: "Santé",
       audiovisual: "Audiovisuel",
       digitalMarketing: "Marketing digital",
+      consulting: "Conseil",
     },
   },
   breadcrumbs: {

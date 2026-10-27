@@ -38,6 +38,7 @@ const es: Dictionary = {
       healthcare: "Salud",
       audiovisual: "Audiovisual",
       digitalMarketing: "Marketing digital",
+      consulting: "Consultoría",
     },
   },
   breadcrumbs: {
