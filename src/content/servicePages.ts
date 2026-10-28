@@ -90,7 +90,7 @@ const en: LocaleContent = {
       {
         title: "SaaS",
         summary:
-          "Software-as-a-Service platforms, dashboards, help centres and release notes localized so Arabic-speaking users get a seamless product experience.",
+          "Helping SaaS companies reach Arabic-speaking users by localizing platforms, dashboards, help centres and release notes for a seamless product experience.",
         image: "/images/photos/spec-saas.jpg",
       },
     ],
@@ -274,7 +274,7 @@ const ar: LocaleContent = {
       {
         title: "البرمجيات كخدمة (SaaS)",
         summary:
-          "توطين منصات البرمجيات كخدمة ولوحات التحكم ومراكز المساعدة وملاحظات الإصدار، ليحظى المستخدم العربي بتجربة منتج سلسة.",
+          "مساعدة شركات البرمجيات كخدمة على الوصول إلى المستخدمين العرب من خلال توطين المنصات ولوحات التحكم ومراكز المساعدة وملاحظات الإصدار، لتقديم تجربة منتج سلسة.",
         image: "/images/photos/spec-saas.jpg",
       },
     ],
@@ -457,7 +457,7 @@ const fr: LocaleContent = {
       {
         title: "SaaS",
         summary:
-          "Plateformes SaaS, tableaux de bord, centres d’aide et notes de version localisés pour offrir aux utilisateurs arabophones une expérience fluide.",
+          "Aider les entreprises SaaS à toucher les utilisateurs arabophones en localisant plateformes, tableaux de bord, centres d’aide et notes de version, pour une expérience produit fluide.",
         image: "/images/photos/spec-saas.jpg",
       },
     ],
@@ -642,7 +642,7 @@ const es: LocaleContent = {
       {
         title: "SaaS",
         summary:
-          "Plataformas SaaS, paneles, centros de ayuda y notas de versión localizados para que los usuarios de habla árabe disfruten de una experiencia fluida.",
+          "Ayudar a las empresas SaaS a llegar a los usuarios de habla árabe localizando plataformas, paneles, centros de ayuda y notas de versión, para ofrecer una experiencia de producto fluida.",
         image: "/images/photos/spec-saas.jpg",
       },
     ],
