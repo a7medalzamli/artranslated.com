@@ -32,7 +32,7 @@ export async function generateMetadata({
   return buildCmsMetadata({
     path: "/services",
     locale,
-    defaultTitle: t.services.title,
+    defaultTitle: getServicePages(locale).overview.pageTitle,
     defaultDescription: t.services.intro,
     seo: t.seo.services,
   });
@@ -40,7 +40,6 @@ export async function generateMetadata({
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getContent(locale as Locale);
   const dict = getDictionary(locale as Locale);
   const { overview } = getServicePages(locale);
 
@@ -52,12 +51,10 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
   return (
     <>
-      {/* ---- Header: title, tagline and a wide photo ---- */}
+      {/* ---- Header: title and a wide photo ---- */}
       <header className={styles.hero}>
         <Container>
-          <h1 className={styles.heroTitle}>{t.services.title}</h1>
-          <p className={styles.tagline}>{overview.tagline}</p>
-          {t.services.intro && <p className={styles.heroText}>{t.services.intro}</p>}
+          <h1 className={styles.heroTitle}>{overview.pageTitle}</h1>
           <div className={styles.banner}>
             <Image src="/images/photos/services-hero.jpg" alt="" fill priority sizes="100vw" />
           </div>

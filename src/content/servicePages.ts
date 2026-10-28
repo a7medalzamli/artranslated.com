@@ -56,8 +56,8 @@ type Shared = {
 type Overview = {
   helpTitle: string;
   learnMore: string;
-  /** Line under the page title, above the header photo. */
-  tagline: string;
+  /** Services page title (kept in code so a saved CMS title can’t override it). */
+  pageTitle: string;
   /** Closing "tell me about your project" block with contact details. */
   closingTitle: string;
   closingText: string;
@@ -111,7 +111,7 @@ const en: LocaleContent = {
   overview: {
     helpTitle: "I can help with",
     learnMore: "Learn more",
-    tagline: "Excellence in Arabic, from English, French and Spanish",
+    pageTitle: "Linguistic Services",
     closingTitle: "I’d love to hear more about your project",
     closingText: "Tell me what you need translated, adapted or reviewed, and I’ll get back to you with a plan and a quote.",
     getInTouch: "Get in touch",
@@ -294,7 +294,7 @@ const ar: LocaleContent = {
   overview: {
     helpTitle: "يمكنني مساعدتك في",
     learnMore: "اعرف المزيد",
-    tagline: "التميّز في العربية، من الإنجليزية والفرنسية والإسبانية",
+    pageTitle: "الخدمات اللغوية",
     closingTitle: "يسعدني أن أعرف المزيد عن مشروعك",
     closingText: "أخبرني بما تحتاج إلى ترجمته أو تكييفه أو مراجعته، وسأعود إليك بخطة وعرض سعر.",
     getInTouch: "تواصل معي",
@@ -476,7 +476,7 @@ const fr: LocaleContent = {
   overview: {
     helpTitle: "Je peux vous aider avec",
     learnMore: "En savoir plus",
-    tagline: "L’excellence en arabe, depuis l’anglais, le français et l’espagnol",
+    pageTitle: "Services linguistiques",
     closingTitle: "J’aimerais en savoir plus sur votre projet",
     closingText: "Dites-moi ce que vous souhaitez traduire, adapter ou réviser, et je reviendrai vers vous avec un plan et un devis.",
     getInTouch: "Me contacter",
@@ -660,7 +660,7 @@ const es: LocaleContent = {
   overview: {
     helpTitle: "Puedo ayudarle con",
     learnMore: "Más información",
-    tagline: "Excelencia en árabe, desde el inglés, el francés y el español",
+    pageTitle: "Servicios lingüísticos",
     closingTitle: "Me encantaría saber más sobre su proyecto",
     closingText: "Cuénteme qué necesita traducir, adaptar o revisar y le responderé con un plan y un presupuesto.",
     getInTouch: "Contactar",
