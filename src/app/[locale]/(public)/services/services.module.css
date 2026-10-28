@@ -91,7 +91,10 @@
     box-shadow var(--transition-fast);
 }
 
-.tile:hover {
+/* Keep the text white: the site-wide link hover colour would make it blue on blue. */
+.tile:hover,
+.tile:focus-visible {
+  color: var(--color-on-primary);
   background: var(--color-primary-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
@@ -219,7 +222,9 @@
   transition: background var(--transition-fast);
 }
 
-.button:hover {
+.button:hover,
+.button:focus-visible {
+  color: var(--color-on-primary);
   background: var(--color-primary-hover);
 }
 
