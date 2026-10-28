@@ -1,38 +1,50 @@
+/* All steps on one line. On narrow screens the row scrolls sideways
+   instead of wrapping. */
 .list {
   list-style: none;
-  padding: 0;
+  padding: var(--space-sm) var(--space-2xs) var(--space-md);
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: var(--space-xl) var(--space-lg);
+  gap: var(--space-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .step {
-  /* Five fit on one row on wide screens; fewer per row as space shrinks. */
-  flex: 1 1 13rem;
-  max-width: 17rem;
+  flex: 1 1 0;
+  min-width: 8.5rem;
+  max-width: 11rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  scroll-snap-align: center;
+}
+
+/* When the row is wider than the screen, start from the first step. */
+@media (max-width: 48em) {
+  .list {
+    justify-content: flex-start;
+  }
 }
 
 .number {
-  font-size: clamp(2.5rem, 2rem + 1.6vw, 3.25rem);
+  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
   line-height: 1;
   font-weight: var(--weight-bold);
   color: var(--color-primary);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.02em;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .circle {
   width: 100%;
-  /* A circle; if a long description needs more room it grows into an oval
+  /* A circle; if a description needs more room it grows into an oval
      instead of overflowing. */
-  min-height: 0;
   aspect-ratio: 1;
   border: 1.5px solid var(--color-primary);
   border-radius: 50%;
@@ -41,7 +53,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 14%;
+  padding: 13%;
   transition:
     box-shadow var(--transition-fast),
     transform var(--transition-fast);
@@ -53,15 +65,15 @@
 }
 
 .title {
-  font-size: 1.05rem;
+  font-size: 0.875rem;
   line-height: 1.25;
-  margin-bottom: var(--space-xs);
+  margin-bottom: 0.3rem;
 }
 
 .description {
   color: var(--color-text-muted);
-  font-size: 0.85rem;
-  line-height: 1.45;
+  font-size: 0.75rem;
+  line-height: 1.4;
 }
 
 @media (prefers-reduced-motion: reduce) {
