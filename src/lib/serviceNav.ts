@@ -4,17 +4,19 @@ import { routes } from "@/lib/routes";
 export type NavLink = { href: string; label: string; children?: NavLink[] };
 
 /**
- * The Services menu shared by the header dropdown and the footer.
+ * The Services menu shared by the header dropdown and the footer. Each item
+ * jumps to that service's section on the Services page; the section's
+ * "Learn more" link leads on to the service's own page.
  */
 export function buildServiceNav(dict: Dictionary): NavLink[] {
   const m = dict.serviceMenu;
+  const section = (slug: string) => `${routes.services}#${slug}`;
   return [
-    // Specializations are listed on the Translation page itself.
-    { href: routes.translation, label: m.translation },
-    { href: routes.mtpe, label: m.mtpe },
-    { href: routes.transcreation, label: m.transcreation },
-    { href: routes.consulting, label: m.consulting },
-    { href: routes.aiDataAnnotation, label: m.aiDataAnnotation },
-    { href: routes.digitalMarketing, label: m.digitalMarketing },
+    { href: section("translation"), label: m.translation },
+    { href: section("mtpe"), label: m.mtpe },
+    { href: section("transcreation"), label: m.transcreation },
+    { href: section("consulting"), label: m.consulting },
+    { href: section("ai-data-annotation"), label: m.aiDataAnnotation },
+    { href: section("digital-marketing"), label: m.digitalMarketing },
   ];
 }
