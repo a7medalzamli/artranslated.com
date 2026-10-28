@@ -53,7 +53,7 @@ export default async function AudiovisualPage({
       </Section>
 
       <Section tinted title={s.stepsTitle}>
-        <ProcessSteps steps={s.steps} />
+        <ProcessSteps steps={s.workflowSteps} />
       </Section>
 
       <Section title={s.offerTitle}>

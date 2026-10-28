@@ -39,7 +39,7 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
       />
 
       <Section title={p.tepTitle} intro={p.tepIntro}>
-        <ProcessSteps steps={p.steps} />
+        <ProcessSteps steps={p.workflowSteps} />
       </Section>
 
       <Section tinted title={p.qaTitle}>

@@ -96,7 +96,7 @@ const en = {
     tepTitle: "The TEP workflow",
     tepIntro:
       "Every project runs through Translation, Editing and Proofreading, with terminology and QA around it.",
-    steps: [
+    workflowSteps: [
       {
         title: "Preparation & terminology",
         description:
@@ -316,7 +316,7 @@ const en = {
       s1Title: "Dialogue that sounds native — and lands on the lips",
       s1p1: "Audiovisual work is about more than words on a page: the Arabic has to fit the picture, the timing and the performance. That means transcreating idioms so they feel native to Arab audiences while preserving the drama and intent of the original.",
       stepsTitle: "The dubbing & lip-sync adaptation process",
-      steps: [
+      workflowSteps: [
         {
           title: "Script & timecode review",
           description:

@@ -93,7 +93,7 @@ const es: SiteContent = {
     tepTitle: "El flujo TEP",
     tepIntro:
       "Cada proyecto pasa por Traducción, Edición y Revisión, con la terminología y el control de calidad alrededor.",
-    steps: [
+    workflowSteps: [
       {
         title: "Preparación y terminología",
         description:
@@ -321,7 +321,7 @@ const es: SiteContent = {
       s1Title: "Diálogos que suenan nativos y encajan en los labios",
       s1p1: "El trabajo audiovisual es más que palabras en una página: el árabe tiene que ajustarse a la imagen, al ritmo y a la interpretación. Eso implica transcrear las expresiones para que resulten nativas al público árabe conservando la tensión dramática y la intención del original.",
       stepsTitle: "El proceso de adaptación de doblaje y sincronización labial",
-      steps: [
+      workflowSteps: [
         {
           title: "Revisión del guion y los códigos de tiempo",
           description:

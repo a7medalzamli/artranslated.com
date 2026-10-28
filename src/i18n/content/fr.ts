@@ -96,7 +96,7 @@ const fr: SiteContent = {
     tepTitle: "Le flux TEP",
     tepIntro:
       "Chaque projet passe par la Traduction, la Révision et la Relecture, avec la terminologie et la QA tout autour.",
-    steps: [
+    workflowSteps: [
       {
         title: "Préparation et terminologie",
         description:
@@ -321,7 +321,7 @@ const fr: SiteContent = {
       s1Title: "Des dialogues qui sonnent natifs — et tombent juste sur les lèvres",
       s1p1: "Le travail audiovisuel va au-delà des mots sur une page : l'arabe doit s'accorder à l'image, au rythme et au jeu. Cela implique de transcréer les expressions pour qu'elles paraissent natives au public arabe tout en préservant la tension dramatique et l'intention de l'original.",
       stepsTitle: "Le processus d'adaptation de doublage et de synchronisation labiale",
-      steps: [
+      workflowSteps: [
         {
           title: "Revue du script et des timecodes",
           description:
