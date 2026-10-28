@@ -37,6 +37,8 @@ export type ServicePage = {
   title: string;
   description: string;
   intro: string[];
+  /** Overrides the shared "What's included" heading for this page. */
+  includedTitle?: string;
   included: string[];
   steps: Step[];
   ctaTitle: string;
@@ -96,12 +98,14 @@ const en: LocaleContent = {
         "Every project is translated by a professional linguist, not just run through a machine. The goal is Arabic that is accurate, reads naturally and stays consistent with your terminology and brand voice.",
         "Work follows a defined translation, editing and proofreading process, supported by CAT tools, glossaries and translation memories so quality holds across every file and every update.",
       ],
+      includedTitle: "Projects handled",
       included: [
         "Documents, reports and manuals",
         "Websites, apps and software strings",
         "Contracts and compliance documents",
         "Marketing and corporate communications",
         "Glossary and translation memory maintenance",
+        "Videos and audio",
       ],
       steps: [
         s("Brief & quote", "Share your files, deadline and audience; you receive a clear quote and timeline."),
@@ -272,12 +276,14 @@ const ar: LocaleContent = {
         "يتولى ترجمة كل مشروع لغويٌّ محترف، ولا يُكتفى بتمريره عبر الترجمة الآلية. والهدف نصٌّ عربي دقيق وسلس ومتّسق مع مصطلحاتك وأسلوب علامتك التجارية.",
         "يسير العمل وفق منهجية محددة للترجمة والتحرير والتدقيق، بدعم من أدوات الترجمة بمساعدة الحاسوب ومسارد المصطلحات وذاكرات الترجمة، للحفاظ على الجودة في كل ملف وكل تحديث.",
       ],
+      includedTitle: "المشاريع التي أتولاها",
       included: [
         "المستندات والتقارير والأدلة",
         "المواقع الإلكترونية والتطبيقات ونصوص البرمجيات",
         "العقود ووثائق الامتثال",
         "المواد التسويقية والمراسلات المؤسسية",
         "إعداد مسارد المصطلحات وذاكرات الترجمة وتحديثها",
+        "مقاطع الفيديو والملفات الصوتية",
       ],
       steps: [
         s("المتطلبات وعرض السعر", "أرسل ملفاتك وموعد التسليم والجمهور المستهدف، لتحصل على عرض سعر وجدول زمني واضحين."),
@@ -447,12 +453,14 @@ const fr: LocaleContent = {
         "Chaque projet est traduit par un linguiste professionnel, et pas seulement passé par une machine. L’objectif : un arabe exact, naturel et cohérent avec votre terminologie et votre ton.",
         "Le travail suit un processus défini de traduction, révision et relecture, appuyé par des outils de TAO, des glossaires et des mémoires de traduction pour garantir la qualité sur chaque fichier et chaque mise à jour.",
       ],
+      includedTitle: "Projets pris en charge",
       included: [
         "Documents, rapports et manuels",
         "Sites web, applications et chaînes logicielles",
         "Contrats et documents de conformité",
         "Communication marketing et institutionnelle",
         "Gestion des glossaires et des mémoires de traduction",
+        "Vidéos et contenus audio",
       ],
       steps: [
         s("Brief et devis", "Envoyez vos fichiers, votre délai et votre public cible ; vous recevez un devis et un calendrier clairs."),
@@ -624,12 +632,14 @@ const es: LocaleContent = {
         "Cada proyecto lo traduce un lingüista profesional, no solo una máquina. El objetivo es un árabe preciso, natural y coherente con su terminología y su tono de marca.",
         "El trabajo sigue un proceso definido de traducción, edición y corrección, con herramientas TAO, glosarios y memorias de traducción para mantener la calidad en cada archivo y cada actualización.",
       ],
+      includedTitle: "Proyectos gestionados",
       included: [
         "Documentos, informes y manuales",
         "Sitios web, aplicaciones y cadenas de software",
         "Contratos y documentos de cumplimiento",
         "Comunicación de marketing y corporativa",
         "Mantenimiento de glosarios y memorias de traducción",
+        "Vídeos y audio",
       ],
       steps: [
         s("Briefing y presupuesto", "Envíe sus archivos, plazo y público; recibirá un presupuesto y un calendario claros."),

@@ -100,7 +100,7 @@ export default async function ServicePage({ params }: { params: Params }) {
         </Section>
       )}
 
-      <Section title={shared.includedTitle}>
+      <Section title={page.includedTitle ?? shared.includedTitle}>
         <ul className={styles.included}>
           {page.included.map((item) => (
             <li key={item}>
