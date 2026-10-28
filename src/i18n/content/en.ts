@@ -66,7 +66,7 @@ const en = {
   services: {
     title: "Translation services",
     description:
-      "English, French and Spanish into Arabic — across five specializations, backed by a defined process and the right tools.",
+      "English, French and Spanish into Arabic — across nine specializations, backed by a defined process and the right tools.",
     crumb: "Services",
     specializationsTitle: "Specializations",
     specializationsIntro:
