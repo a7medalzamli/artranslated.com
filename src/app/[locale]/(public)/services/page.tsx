@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Container } from "@/components/Container/Container";
-import { CTA } from "@/components/CTA/CTA";
 import { LocaleLink as Link } from "@/components/LocaleLink/LocaleLink";
 import { getServicePages, serviceImages, serviceSlugs, type ServiceSlug } from "@/content/servicePages";
 import { getContent } from "@/i18n/content";
@@ -11,6 +9,7 @@ import { getDictionary } from "@/i18n";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
+import { site } from "@/lib/site";
 import styles from "./services.module.css";
 
 /** Dictionary key for each service's menu label. */
@@ -53,7 +52,17 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
   return (
     <>
-      <PageHeader title={t.services.title} description={t.services.description} />
+      {/* ---- Header: title, tagline and a wide photo ---- */}
+      <header className={styles.hero}>
+        <Container>
+          <h1 className={styles.heroTitle}>{t.services.title}</h1>
+          <p className={styles.tagline}>{overview.tagline}</p>
+          {t.services.description && <p className={styles.heroText}>{t.services.description}</p>}
+          <div className={styles.banner}>
+            <Image src="/images/photos/services-hero.jpg" alt="" fill priority sizes="100vw" />
+          </div>
+        </Container>
+      </header>
 
       {/* ---- "I can help with": tiles that jump to each section below ---- */}
       <section className={styles.help}>
@@ -92,7 +101,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
               <div className={styles.text}>
                 <h2 className={styles.name}>{s.name}</h2>
                 <p className={styles.question}>{s.question}</p>
-                <p className={styles.body}>{s.text}</p>
+                <p className={styles.body}>{withBold(s.text)}</p>
                 <Link href={`/services/${s.slug}`} className={styles.more}>
                   {overview.learnMore}
                 </Link>
@@ -102,14 +111,49 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         </Container>
       </div>
 
-      <CTA
-        title={t.services.ctaTitle}
-        description={t.services.ctaDescription}
-        primary={{ label: t.common.letsTalk, href: routes.contact }}
-        secondary={{ label: t.common.seeProcess, href: routes.process }}
-      />
+      {/* ---- Closing: invitation plus contact details ---- */}
+      <section className={styles.closing}>
+        <Container>
+          <div className={styles.closingGrid}>
+            <div>
+              <h2 className={styles.closingTitle}>{overview.closingTitle}</h2>
+              <p className={styles.closingText}>{overview.closingText}</p>
+              <Link href={routes.contact} className={styles.button}>
+                {overview.getInTouch}
+              </Link>
+            </div>
+            <dl className={styles.contactList}>
+              <div>
+                <dt>{overview.contactLabels.email}</dt>
+                <dd><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></dd>
+              </div>
+              <div>
+                <dt>{overview.contactLabels.whatsapp}</dt>
+                <dd>
+                  <a href={`https://wa.me/${site.contact.whatsapp}`} dir="ltr">{site.contact.phone}</a>
+                </dd>
+              </div>
+              <div>
+                <dt>{overview.contactLabels.telegram}</dt>
+                <dd><a href={site.contact.telegram} dir="ltr">{site.contact.phone}</a></dd>
+              </div>
+              <div>
+                <dt>{overview.contactLabels.timezone}</dt>
+                <dd dir="auto">{overview.timezone}</dd>
+              </div>
+            </dl>
+          </div>
+        </Container>
+      </section>
     </>
   );
+}
+
+/** Turns **phrase** markers into bold text. */
+function withBold(text: string): ReactNode[] {
+  return text
+    .split(/\*\*(.+?)\*\*/)
+    .map((part, i) => (i % 2 === 1 ? <strong key={i}>{part}</strong> : part));
 }
 
 const icon = (children: ReactNode) => (

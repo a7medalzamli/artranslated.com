@@ -56,6 +56,15 @@ type Shared = {
 type Overview = {
   helpTitle: string;
   learnMore: string;
+  /** Line under the page title, above the header photo. */
+  tagline: string;
+  /** Closing "tell me about your project" block with contact details. */
+  closingTitle: string;
+  closingText: string;
+  getInTouch: string;
+  contactLabels: { email: string; whatsapp: string; telegram: string; timezone: string };
+  timezone: string;
+  /** `text` may wrap key phrases in **double asterisks** to show them in bold. */
   items: Record<ServiceSlug, { question: string; text: string }>;
 };
 
@@ -102,30 +111,36 @@ const en: LocaleContent = {
   overview: {
     helpTitle: "I can help with",
     learnMore: "Learn more",
+    tagline: "Excellence in Arabic, from English, French and Spanish",
+    closingTitle: "I’d love to hear more about your project",
+    closingText: "Tell me what you need translated, adapted or reviewed, and I’ll get back to you with a plan and a quote.",
+    getInTouch: "Get in touch",
+    contactLabels: { email: "Email", whatsapp: "WhatsApp", telegram: "Telegram", timezone: "Time zone" },
+    timezone: "Palestine (GMT+2 / GMT+3)",
     items: {
       translation: {
         question: "Do you need documents, websites or software translated into Arabic?",
-        text: "I translate from English, French and Spanish into Arabic across technical, legal, financial, healthcare, education, environmental and audiovisual content — accurate, natural and consistent with your terminology.",
+        text: "I translate from **English, French and Spanish into Arabic** across technical, legal, financial, healthcare, education, environmental and audiovisual content — accurate, natural and consistent with your terminology.",
       },
       mtpe: {
         question: "Do you use machine translation but need human-quality Arabic?",
-        text: "I post-edit machine-translated output, correcting meaning, terminology and style so it reads naturally — light or full post-editing, depending on how the text will be used.",
+        text: "I **post-edit machine-translated output**, correcting meaning, terminology and style so it reads naturally — light or full post-editing, depending on how the text will be used.",
       },
       transcreation: {
         question: "Does your marketing or app copy need to feel native in Arabic?",
-        text: "I adapt slogans, campaigns and interface text so they carry the same intent and emotion for Arab audiences, fit the space available and follow right-to-left conventions.",
+        text: "I adapt **slogans, campaigns and interface text** so they carry the same intent and emotion for Arab audiences, fit the space available and follow right-to-left conventions.",
       },
       consulting: {
         question: "Planning to enter Arabic-speaking markets?",
-        text: "I advise on terminology, style guides, workflows and tools so your content is ready for Arabic and quality stays consistent as you grow.",
+        text: "I advise on **terminology, style guides, workflows and tools** so your content is ready for Arabic and quality stays consistent as you grow.",
       },
       "ai-data-annotation": {
         question: "Training or evaluating AI models in Arabic?",
-        text: "I rate, rank and correct Arabic AI output, write prompts and responses, and give structured feedback against your guidelines to improve model quality and safety.",
+        text: "I **rate, rank and correct Arabic AI output**, write prompts and responses, and give structured feedback against your guidelines to improve model quality and safety.",
       },
       "digital-marketing": {
         question: "Want your brand to be found and trusted by Arab audiences?",
-        text: "I combine localization with a marketing background to create Arabic SEO, social media and campaign content written for your target market, not translated line by line.",
+        text: "I combine localization with a marketing background to create **Arabic SEO, social media and campaign content** written for your target market, not translated line by line.",
       },
     },
   },
@@ -279,30 +294,36 @@ const ar: LocaleContent = {
   overview: {
     helpTitle: "يمكنني مساعدتك في",
     learnMore: "اعرف المزيد",
+    tagline: "التميّز في العربية، من الإنجليزية والفرنسية والإسبانية",
+    closingTitle: "يسعدني أن أعرف المزيد عن مشروعك",
+    closingText: "أخبرني بما تحتاج إلى ترجمته أو تكييفه أو مراجعته، وسأعود إليك بخطة وعرض سعر.",
+    getInTouch: "تواصل معي",
+    contactLabels: { email: "البريد الإلكتروني", whatsapp: "واتساب", telegram: "تيليجرام", timezone: "المنطقة الزمنية" },
+    timezone: "فلسطين (GMT+2 / GMT+3)",
     items: {
       translation: {
         question: "هل تحتاج إلى ترجمة مستندات أو مواقع إلكترونية أو برمجيات إلى العربية؟",
-        text: "أترجم من الإنجليزية والفرنسية والإسبانية إلى العربية في المجالات التقنية والقانونية والمالية والطبية والتعليمية والبيئية والسمعية البصرية — ترجمة دقيقة وسلسة ومتّسقة مع مصطلحاتك.",
+        text: "أترجم **من الإنجليزية والفرنسية والإسبانية إلى العربية** في المجالات التقنية والقانونية والمالية والطبية والتعليمية والبيئية والسمعية البصرية — ترجمة دقيقة وسلسة ومتّسقة مع مصطلحاتك.",
       },
       mtpe: {
         question: "هل تستخدم الترجمة الآلية وتحتاج إلى نص عربي بجودة بشرية؟",
-        text: "أحرّر مخرجات الترجمة الآلية لأصحّح المعنى والمصطلحات والأسلوب حتى يُقرأ النص بسلاسة — تحريرًا خفيفًا أو كاملًا بحسب استخدام النص.",
+        text: "أحرّر **مخرجات الترجمة الآلية** لأصحّح المعنى والمصطلحات والأسلوب حتى يُقرأ النص بسلاسة — تحريرًا خفيفًا أو كاملًا بحسب استخدام النص.",
       },
       transcreation: {
         question: "هل تحتاج نصوصك التسويقية أو نصوص تطبيقك إلى أن تبدو أصيلة بالعربية؟",
-        text: "أكيّف الشعارات والحملات ونصوص الواجهات لتحمل المقصد والمشاعر نفسها للجمهور العربي، وتناسب المساحة المتاحة، وتراعي اتجاه الكتابة من اليمين إلى اليسار.",
+        text: "أكيّف **الشعارات والحملات ونصوص الواجهات** لتحمل المقصد والمشاعر نفسها للجمهور العربي، وتناسب المساحة المتاحة، وتراعي اتجاه الكتابة من اليمين إلى اليسار.",
       },
       consulting: {
         question: "هل تخطط لدخول الأسواق الناطقة بالعربية؟",
-        text: "أقدّم المشورة بشأن المصطلحات وأدلة الأسلوب وسير العمل والأدوات، ليكون محتواك جاهزًا للعربية وتبقى الجودة متّسقة مع نموّك.",
+        text: "أقدّم المشورة بشأن **المصطلحات وأدلة الأسلوب وسير العمل والأدوات**، ليكون محتواك جاهزًا للعربية وتبقى الجودة متّسقة مع نموّك.",
       },
       "ai-data-annotation": {
         question: "هل تدرّب نماذج ذكاء اصطناعي بالعربية أو تقيّمها؟",
-        text: "أقيّم مخرجات الذكاء الاصطناعي العربية وأرتّبها وأصحّحها، وأكتب الأوامر والإجابات، وأقدّم ملاحظات منظَّمة وفق إرشاداتك لتحسين جودة النماذج وأمانها.",
+        text: "**أقيّم مخرجات الذكاء الاصطناعي العربية وأرتّبها وأصحّحها**، وأكتب الأوامر والإجابات، وأقدّم ملاحظات منظَّمة وفق إرشاداتك لتحسين جودة النماذج وأمانها.",
       },
       "digital-marketing": {
         question: "هل تريد أن يجد الجمهور العربي علامتك التجارية ويثق بها؟",
-        text: "أجمع بين التوطين والخبرة التسويقية لإنشاء محتوى عربي لتحسين محركات البحث ووسائل التواصل الاجتماعي والحملات، مكتوب لسوقك المستهدفة لا مترجَم سطرًا بسطر.",
+        text: "أجمع بين التوطين والخبرة التسويقية لإنشاء **محتوى عربي لتحسين محركات البحث ووسائل التواصل الاجتماعي والحملات**، مكتوب لسوقك المستهدفة لا مترجَم سطرًا بسطر.",
       },
     },
   },
@@ -455,30 +476,36 @@ const fr: LocaleContent = {
   overview: {
     helpTitle: "Je peux vous aider avec",
     learnMore: "En savoir plus",
+    tagline: "L’excellence en arabe, depuis l’anglais, le français et l’espagnol",
+    closingTitle: "J’aimerais en savoir plus sur votre projet",
+    closingText: "Dites-moi ce que vous souhaitez traduire, adapter ou réviser, et je reviendrai vers vous avec un plan et un devis.",
+    getInTouch: "Me contacter",
+    contactLabels: { email: "E-mail", whatsapp: "WhatsApp", telegram: "Telegram", timezone: "Fuseau horaire" },
+    timezone: "Palestine (GMT+2 / GMT+3)",
     items: {
       translation: {
         question: "Vous avez besoin de traduire des documents, un site web ou un logiciel en arabe ?",
-        text: "Je traduis de l’anglais, du français et de l’espagnol vers l’arabe dans les domaines technique, juridique, financier, médical, éducatif, environnemental et audiovisuel — avec précision, naturel et cohérence terminologique.",
+        text: "Je traduis **de l’anglais, du français et de l’espagnol vers l’arabe** dans les domaines technique, juridique, financier, médical, éducatif, environnemental et audiovisuel — avec précision, naturel et cohérence terminologique.",
       },
       mtpe: {
         question: "Vous utilisez la traduction automatique mais visez une qualité humaine ?",
-        text: "Je post-édite les traductions automatiques en corrigeant le sens, la terminologie et le style pour un arabe naturel — post-édition légère ou complète selon l’usage du texte.",
+        text: "Je **post-édite les traductions automatiques** en corrigeant le sens, la terminologie et le style pour un arabe naturel — post-édition légère ou complète selon l’usage du texte.",
       },
       transcreation: {
         question: "Vos textes marketing ou d’interface doivent sonner naturels en arabe ?",
-        text: "J’adapte slogans, campagnes et textes d’interface pour qu’ils gardent la même intention et la même émotion auprès du public arabophone, tiennent dans l’espace disponible et respectent la lecture de droite à gauche.",
+        text: "J’adapte **slogans, campagnes et textes d’interface** pour qu’ils gardent la même intention et la même émotion auprès du public arabophone, tiennent dans l’espace disponible et respectent la lecture de droite à gauche.",
       },
       consulting: {
         question: "Vous préparez votre arrivée sur les marchés arabophones ?",
-        text: "Je vous conseille sur la terminologie, les guides de style, les processus et les outils pour que vos contenus soient prêts pour l’arabe et que la qualité reste constante à mesure que vous grandissez.",
+        text: "Je vous conseille sur **la terminologie, les guides de style, les processus et les outils** pour que vos contenus soient prêts pour l’arabe et que la qualité reste constante à mesure que vous grandissez.",
       },
       "ai-data-annotation": {
         question: "Vous entraînez ou évaluez des modèles d’IA en arabe ?",
-        text: "J’évalue, classe et corrige les réponses d’IA en arabe, rédige des prompts et des réponses, et fournis des retours structurés selon vos consignes pour améliorer la qualité et la sécurité des modèles.",
+        text: "J’**évalue, classe et corrige les réponses d’IA en arabe**, rédige des prompts et des réponses, et fournis des retours structurés selon vos consignes pour améliorer la qualité et la sécurité des modèles.",
       },
       "digital-marketing": {
         question: "Vous voulez que votre marque soit trouvée et appréciée par le public arabophone ?",
-        text: "J’associe localisation et expertise marketing pour créer des contenus SEO, réseaux sociaux et campagnes en arabe, écrits pour votre marché cible et non traduits ligne à ligne.",
+        text: "J’associe localisation et expertise marketing pour créer des **contenus SEO, réseaux sociaux et campagnes en arabe**, écrits pour votre marché cible et non traduits ligne à ligne.",
       },
     },
   },
@@ -633,30 +660,36 @@ const es: LocaleContent = {
   overview: {
     helpTitle: "Puedo ayudarle con",
     learnMore: "Más información",
+    tagline: "Excelencia en árabe, desde el inglés, el francés y el español",
+    closingTitle: "Me encantaría saber más sobre su proyecto",
+    closingText: "Cuénteme qué necesita traducir, adaptar o revisar y le responderé con un plan y un presupuesto.",
+    getInTouch: "Contactar",
+    contactLabels: { email: "Correo electrónico", whatsapp: "WhatsApp", telegram: "Telegram", timezone: "Zona horaria" },
+    timezone: "Palestina (GMT+2 / GMT+3)",
     items: {
       translation: {
         question: "¿Necesita traducir documentos, sitios web o software al árabe?",
-        text: "Traduzco del inglés, el francés y el español al árabe en los ámbitos técnico, jurídico, financiero, sanitario, educativo, medioambiental y audiovisual, con precisión, naturalidad y coherencia terminológica.",
+        text: "Traduzco **del inglés, el francés y el español al árabe** en los ámbitos técnico, jurídico, financiero, sanitario, educativo, medioambiental y audiovisual, con precisión, naturalidad y coherencia terminológica.",
       },
       mtpe: {
         question: "¿Utiliza traducción automática pero necesita un árabe de calidad humana?",
-        text: "Realizo la posedición de traducciones automáticas, corrigiendo sentido, terminología y estilo para que el texto se lea con naturalidad: posedición ligera o completa según el uso del texto.",
+        text: "Realizo la **posedición de traducciones automáticas**, corrigiendo sentido, terminología y estilo para que el texto se lea con naturalidad: posedición ligera o completa según el uso del texto.",
       },
       transcreation: {
         question: "¿Sus textos de marketing o de su aplicación deben sonar naturales en árabe?",
-        text: "Adapto eslóganes, campañas y textos de interfaz para que transmitan la misma intención y emoción al público árabe, quepan en el espacio disponible y respeten la lectura de derecha a izquierda.",
+        text: "Adapto **eslóganes, campañas y textos de interfaz** para que transmitan la misma intención y emoción al público árabe, quepan en el espacio disponible y respeten la lectura de derecha a izquierda.",
       },
       consulting: {
         question: "¿Planea entrar en los mercados de habla árabe?",
-        text: "Le asesoro sobre terminología, guías de estilo, flujos de trabajo y herramientas para que su contenido esté listo para el árabe y la calidad se mantenga a medida que crece.",
+        text: "Le asesoro sobre **terminología, guías de estilo, flujos de trabajo y herramientas** para que su contenido esté listo para el árabe y la calidad se mantenga a medida que crece.",
       },
       "ai-data-annotation": {
         question: "¿Entrena o evalúa modelos de IA en árabe?",
-        text: "Puntúo, clasifico y corrijo respuestas de IA en árabe, redacto instrucciones y respuestas, y ofrezco comentarios estructurados según sus pautas para mejorar la calidad y la seguridad de los modelos.",
+        text: "**Puntúo, clasifico y corrijo respuestas de IA en árabe**, redacto instrucciones y respuestas, y ofrezco comentarios estructurados según sus pautas para mejorar la calidad y la seguridad de los modelos.",
       },
       "digital-marketing": {
         question: "¿Quiere que el público árabe encuentre su marca y confíe en ella?",
-        text: "Combino localización y experiencia en marketing para crear contenido en árabe para SEO, redes sociales y campañas, escrito para su mercado objetivo y no traducido línea por línea.",
+        text: "Combino localización y experiencia en marketing para crear **contenido en árabe para SEO, redes sociales y campañas**, escrito para su mercado objetivo y no traducido línea por línea.",
       },
     },
   },
