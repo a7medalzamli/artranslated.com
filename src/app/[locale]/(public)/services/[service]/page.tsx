@@ -91,6 +91,11 @@ export default async function ServicePage({ params }: { params: Params }) {
                 {t.cards.specializations[i]?.summary ?? spec.summary}
               </Card>
             ))}
+            {shared.extraSpecializations.map((spec) => (
+              <Card key={spec.title} title={spec.title} image={spec.image}>
+                {spec.summary}
+              </Card>
+            ))}
           </CardGrid>
         </Section>
       )}

@@ -50,6 +50,8 @@ type Shared = {
   /** Translation page only: the specializations section. */
   specTitle: string;
   specIntro: string;
+  /** Extra specialization cards (no detail page yet), shown after the main five. */
+  extraSpecializations: { title: string; summary: string; image: string }[];
 };
 
 type LocaleContent = { shared: Shared; pages: Record<ServiceSlug, ServicePage> };
@@ -63,7 +65,27 @@ const en: LocaleContent = {
     stepsTitle: "How it works",
     specTitle: "Specializations",
     specIntro:
-      "Translation is organised by subject area, each with its own terminology and quality checks.",
+      "Accurate translation depends on knowing the field. Each specialization below is handled with subject-matter knowledge, dedicated glossaries and terminology checks, so your Arabic reads correctly to experts and everyday readers alike.",
+    extraSpecializations: [
+      {
+        title: "Education",
+        summary:
+          "Curricula, textbooks, e-learning courses and academic documents translated clearly for students, teachers and institutions.",
+        image: "/images/photos/spec-education.jpg",
+      },
+      {
+        title: "Environment",
+        summary:
+          "Environmental impact assessments, sustainability reports and research — backed by a degree in environmental engineering.",
+        image: "/images/photos/spec-environment.jpg",
+      },
+      {
+        title: "Language teaching",
+        summary:
+          "Translation and adaptation of language-learning materials — lessons, exercises and assessments — for learners at every level.",
+        image: "/images/photos/spec-language-teaching.jpg",
+      },
+    ],
   },
   pages: {
     translation: {
@@ -219,7 +241,27 @@ const ar: LocaleContent = {
     includedTitle: "ما تشمله الخدمة",
     stepsTitle: "كيف تسير العملية",
     specTitle: "التخصصات",
-    specIntro: "تُنظَّم الترجمة حسب المجال، ولكل مجال مصطلحاته وإجراءات الجودة الخاصة به.",
+    specIntro:
+      "تعتمد دقة الترجمة على فهم المجال. ويُتعامل مع كل تخصص أدناه بمعرفة متخصصة ومسارد مصطلحات مخصّصة وتدقيق للمصطلحات، ليقرأ المختصون والقرّاء العاديون نصك العربي بالشكل الصحيح.",
+    extraSpecializations: [
+      {
+        title: "التعليم",
+        summary:
+          "ترجمة المناهج والكتب الدراسية ودورات التعلّم الإلكتروني والوثائق الأكاديمية بلغة واضحة للطلاب والمعلمين والمؤسسات.",
+        image: "/images/photos/spec-education.jpg",
+      },
+      {
+        title: "البيئة",
+        summary: "تقييمات الأثر البيئي وتقارير الاستدامة والأبحاث — بدعم من شهادة في الهندسة البيئية.",
+        image: "/images/photos/spec-environment.jpg",
+      },
+      {
+        title: "تعليم اللغات",
+        summary:
+          "ترجمة مواد تعلّم اللغات وتكييفها — من الدروس والتمارين إلى الاختبارات — للمتعلمين في جميع المستويات.",
+        image: "/images/photos/spec-language-teaching.jpg",
+      },
+    ],
   },
   pages: {
     translation: {
@@ -374,7 +416,27 @@ const fr: LocaleContent = {
     stepsTitle: "Déroulement",
     specTitle: "Spécialisations",
     specIntro:
-      "La traduction est organisée par domaine, chacun avec sa terminologie et ses contrôles qualité.",
+      "Une traduction juste repose sur la connaissance du domaine. Chaque spécialisation ci-dessous est traitée avec une expertise du sujet, des glossaires dédiés et des contrôles terminologiques, pour que votre texte arabe soit juste aux yeux des experts comme du grand public.",
+    extraSpecializations: [
+      {
+        title: "Éducation",
+        summary:
+          "Programmes, manuels, cours en ligne et documents académiques traduits clairement pour les élèves, les enseignants et les établissements.",
+        image: "/images/photos/spec-education.jpg",
+      },
+      {
+        title: "Environnement",
+        summary:
+          "Études d’impact environnemental, rapports de développement durable et travaux de recherche — avec une formation d’ingénieur en environnement.",
+        image: "/images/photos/spec-environment.jpg",
+      },
+      {
+        title: "Enseignement des langues",
+        summary:
+          "Traduction et adaptation de supports d’apprentissage des langues — leçons, exercices et évaluations — pour les apprenants de tous niveaux.",
+        image: "/images/photos/spec-language-teaching.jpg",
+      },
+    ],
   },
   pages: {
     translation: {
@@ -531,7 +593,27 @@ const es: LocaleContent = {
     stepsTitle: "Cómo funciona",
     specTitle: "Especializaciones",
     specIntro:
-      "La traducción se organiza por áreas, cada una con su propia terminología y controles de calidad.",
+      "Una traducción precisa depende de conocer el ámbito. Cada especialización se trabaja con conocimiento del tema, glosarios específicos y controles terminológicos, para que su texto en árabe sea correcto tanto para expertos como para el público general.",
+    extraSpecializations: [
+      {
+        title: "Educación",
+        summary:
+          "Planes de estudio, libros de texto, cursos en línea y documentos académicos traducidos con claridad para estudiantes, docentes e instituciones.",
+        image: "/images/photos/spec-education.jpg",
+      },
+      {
+        title: "Medio ambiente",
+        summary:
+          "Evaluaciones de impacto ambiental, informes de sostenibilidad e investigaciones, con el respaldo de una titulación en ingeniería ambiental.",
+        image: "/images/photos/spec-environment.jpg",
+      },
+      {
+        title: "Enseñanza de idiomas",
+        summary:
+          "Traducción y adaptación de materiales para aprender idiomas — lecciones, ejercicios y evaluaciones — para estudiantes de todos los niveles.",
+        image: "/images/photos/spec-language-teaching.jpg",
+      },
+    ],
   },
   pages: {
     translation: {
