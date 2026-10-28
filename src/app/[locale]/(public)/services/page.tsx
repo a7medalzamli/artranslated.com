@@ -33,7 +33,7 @@ export async function generateMetadata({
     path: "/services",
     locale,
     defaultTitle: t.services.title,
-    defaultDescription: t.services.description,
+    defaultDescription: t.services.intro,
     seo: t.seo.services,
   });
 }
@@ -57,7 +57,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         <Container>
           <h1 className={styles.heroTitle}>{t.services.title}</h1>
           <p className={styles.tagline}>{overview.tagline}</p>
-          {t.services.description && <p className={styles.heroText}>{t.services.description}</p>}
+          {t.services.intro && <p className={styles.heroText}>{t.services.intro}</p>}
           <div className={styles.banner}>
             <Image src="/images/photos/services-hero.jpg" alt="" fill priority sizes="100vw" />
           </div>

@@ -67,6 +67,8 @@ const fr: SiteContent = {
     title: "Services de traduction",
     description:
       "De l'anglais, du français et de l'espagnol vers l'arabe — à travers neuf spécialisations, avec un processus défini et les bons outils.",
+    intro:
+      "De l'anglais, du français et de l'espagnol vers l'arabe — à travers neuf spécialisations, avec un processus défini et les bons outils.",
     crumb: "Services",
     specializationsTitle: "Spécialisations",
     specializationsIntro:

@@ -65,6 +65,8 @@ const es: SiteContent = {
     title: "Servicios de traducción",
     description:
       "Del inglés, el francés y el español al árabe, a través de nueve especializaciones, con un proceso definido y las herramientas adecuadas.",
+    intro:
+      "Del inglés, el francés y el español al árabe, a través de nueve especializaciones, con un proceso definido y las herramientas adecuadas.",
     crumb: "Servicios",
     specializationsTitle: "Especializaciones",
     specializationsIntro:
