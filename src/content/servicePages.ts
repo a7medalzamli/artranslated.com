@@ -31,8 +31,6 @@ export const serviceImages: Record<ServiceSlug, string> = {
   "digital-marketing": "/images/photos/service-digital-marketing.jpg",
 };
 
-type Step = { title: string; description: string };
-
 export type ServicePage = {
   title: string;
   description: string;
@@ -40,7 +38,6 @@ export type ServicePage = {
   /** Overrides the shared "What's included" heading for this page. */
   includedTitle?: string;
   included: string[];
-  steps: Step[];
   ctaTitle: string;
   ctaDescription: string;
 };
@@ -48,7 +45,6 @@ export type ServicePage = {
 type Shared = {
   eyebrow: string;
   includedTitle: string;
-  stepsTitle: string;
   /** Translation page only: the specializations section. */
   specTitle: string;
   specIntro: string;
@@ -58,13 +54,10 @@ type Shared = {
 
 type LocaleContent = { shared: Shared; pages: Record<ServiceSlug, ServicePage> };
 
-const s = (title: string, description: string): Step => ({ title, description });
-
 const en: LocaleContent = {
   shared: {
     eyebrow: "Service",
     includedTitle: "What’s included",
-    stepsTitle: "How it works",
     specTitle: "Specializations",
     specIntro:
       "Accurate translation depends on knowing the field. Each specialization below is handled with subject-matter knowledge, dedicated glossaries and terminology checks, so your Arabic reads correctly to experts and everyday readers alike.",
@@ -113,12 +106,6 @@ const en: LocaleContent = {
         "Glossary and translation memory maintenance",
         "Videos and audio",
       ],
-      steps: [
-        s("Brief & quote", "Share your files, deadline and audience; you receive a clear quote and timeline."),
-        s("Translation", "A specialist linguist translates using your terminology and reference material."),
-        s("Editing & proofreading", "A full review for accuracy, style and consistency, followed by a final proofread."),
-        s("QA & delivery", "Automated QA checks, then delivery in the format you need."),
-      ],
       ctaTitle: "Have files to translate?",
       ctaDescription: "Send your documents for a quote and a clear delivery timeline.",
     },
@@ -136,12 +123,6 @@ const en: LocaleContent = {
         "Correction of meaning, grammar and fluency errors",
         "Feedback on recurring engine errors",
         "Quality scoring on request",
-      ],
-      steps: [
-        s("Scope", "Agree the level of post-editing (light or full) and the quality target."),
-        s("Sample review", "Check a sample to estimate the effort and the quality of the output."),
-        s("Post-editing", "Edit the full output against the source text and glossary."),
-        s("QA & delivery", "Final checks, then delivery."),
       ],
       ctaTitle: "Using machine translation?",
       ctaDescription: "Get the speed of MT with the quality your audience expects.",
@@ -161,12 +142,6 @@ const en: LocaleContent = {
         "Several creative options with back-translation",
         "Review of copy in context (screenshots or staging)",
       ],
-      steps: [
-        s("Creative brief", "Audience, tone, goals and constraints."),
-        s("Transcreation", "Options written in Arabic, with an explanation for each."),
-        s("Review in context", "Checked in the layout for length and right-to-left display."),
-        s("Final copy", "Approved copy delivered ready to implement."),
-      ],
       ctaTitle: "Launching in Arabic?",
       ctaDescription: "Make your message land with Arab audiences from day one.",
     },
@@ -184,12 +159,6 @@ const en: LocaleContent = {
         "Workflow, CAT tool and TMS recommendations",
         "Quality process and review guidelines",
         "Localization-readiness review of websites and apps",
-      ],
-      steps: [
-        s("Discovery call", "Understand your goals, markets and content."),
-        s("Assessment", "Review your content, tools and current process."),
-        s("Recommendations", "A clear written plan with next steps."),
-        s("Set-up support", "Help putting glossaries, style guides and workflows in place."),
       ],
       ctaTitle: "Planning an Arabic launch?",
       ctaDescription: "Book a call to discuss your content, markets and goals.",
@@ -209,12 +178,6 @@ const en: LocaleContent = {
         "Safety, bias and cultural-appropriateness review",
         "Structured feedback against your guidelines",
       ],
-      steps: [
-        s("Guidelines", "Study the project guidelines and examples."),
-        s("Calibration", "A test batch to align with your scoring."),
-        s("Annotation", "Ongoing tasks with consistent judgement."),
-        s("Feedback", "Report recurring patterns and edge cases."),
-      ],
       ctaTitle: "Training models in Arabic?",
       ctaDescription: "Get native, consistent Arabic evaluation for your AI data.",
     },
@@ -233,12 +196,6 @@ const en: LocaleContent = {
         "Ad copy for search and social campaigns",
         "Email and newsletter localization",
       ],
-      steps: [
-        s("Goals & audience", "Define the markets, audience and results you want."),
-        s("Research", "Keywords, competitors and platforms."),
-        s("Content creation", "Arabic content optimized for search and each platform."),
-        s("Review & refine", "Adjustments based on performance."),
-      ],
       ctaTitle: "Want to grow in Arab markets?",
       ctaDescription: "Let’s plan Arabic content that gets found and drives action.",
     },
@@ -249,7 +206,6 @@ const ar: LocaleContent = {
   shared: {
     eyebrow: "خدمة",
     includedTitle: "ما تشمله الخدمة",
-    stepsTitle: "كيف تسير العملية",
     specTitle: "التخصصات",
     specIntro:
       "تعتمد دقة الترجمة على فهم المجال. ويُتعامل مع كل تخصص أدناه بمعرفة متخصصة ومسارد مصطلحات مخصّصة وتدقيق للمصطلحات، ليقرأ المختصون والقرّاء العاديون نصك العربي بالشكل الصحيح.",
@@ -297,12 +253,6 @@ const ar: LocaleContent = {
         "إعداد مسارد المصطلحات وذاكرات الترجمة وتحديثها",
         "مقاطع الفيديو والملفات الصوتية",
       ],
-      steps: [
-        s("المتطلبات وعرض السعر", "أرسل ملفاتك وموعد التسليم والجمهور المستهدف، لتحصل على عرض سعر وجدول زمني واضحين."),
-        s("الترجمة", "يترجم لغويٌّ متخصص النص بالاعتماد على مصطلحاتك والمواد المرجعية."),
-        s("التحرير والتدقيق", "مراجعة شاملة للدقة والأسلوب والاتساق، يليها تدقيق لغوي نهائي."),
-        s("ضمان الجودة والتسليم", "فحوص جودة آلية، ثم التسليم بالصيغة التي تحتاجها."),
-      ],
       ctaTitle: "لديك ملفات للترجمة؟",
       ctaDescription: "أرسل مستنداتك لتحصل على عرض سعر وموعد تسليم واضح.",
     },
@@ -320,12 +270,6 @@ const ar: LocaleContent = {
         "تصحيح أخطاء المعنى والقواعد والسلاسة",
         "ملاحظات حول الأخطاء المتكررة في محرك الترجمة",
         "تقييم الجودة عند الطلب",
-      ],
-      steps: [
-        s("تحديد النطاق", "الاتفاق على مستوى التحرير (خفيف أو كامل) ومعيار الجودة المطلوب."),
-        s("مراجعة عيّنة", "فحص عيّنة لتقدير الجهد المطلوب وجودة المخرجات."),
-        s("التحرير اللاحق", "تحرير المخرجات كاملةً مقارنةً بالنص المصدر ومسرد المصطلحات."),
-        s("ضمان الجودة والتسليم", "فحوص نهائية ثم التسليم."),
       ],
       ctaTitle: "تستخدم الترجمة الآلية؟",
       ctaDescription: "احصل على سرعة الترجمة الآلية بالجودة التي يتوقعها جمهورك.",
@@ -345,12 +289,6 @@ const ar: LocaleContent = {
         "عدة خيارات إبداعية مع ترجمة عكسية",
         "مراجعة النصوص في سياقها (لقطات شاشة أو بيئة تجريبية)",
       ],
-      steps: [
-        s("الموجز الإبداعي", "تحديد الجمهور والنبرة والأهداف والقيود."),
-        s("الترجمة الإبداعية", "كتابة خيارات بالعربية مع شرح لكل منها."),
-        s("المراجعة في السياق", "التحقق من النص داخل التصميم من حيث الطول واتجاه الكتابة."),
-        s("النص النهائي", "تسليم النص المعتمد جاهزًا للتنفيذ."),
-      ],
       ctaTitle: "تطلق منتجك بالعربية؟",
       ctaDescription: "اجعل رسالتك تصل إلى الجمهور العربي من اليوم الأول.",
     },
@@ -368,12 +306,6 @@ const ar: LocaleContent = {
         "إجراءات الجودة وإرشادات المراجعة",
         "تقييم جاهزية المواقع والتطبيقات للتوطين",
       ],
-      steps: [
-        s("مكالمة تعارف", "التعرّف على أهدافك وأسواقك ومحتواك."),
-        s("التقييم", "مراجعة المحتوى والأدوات وطريقة العمل الحالية."),
-        s("التوصيات", "خطة مكتوبة وواضحة بالخطوات التالية."),
-        s("دعم التنفيذ", "المساعدة في إعداد المسارد وأدلة الأسلوب وسير العمل."),
-      ],
       ctaTitle: "تخطط لإطلاق بالعربية؟",
       ctaDescription: "احجز مكالمة لمناقشة محتواك وأسواقك وأهدافك.",
     },
@@ -390,12 +322,6 @@ const ar: LocaleContent = {
         "كتابة الأوامر والإجابات",
         "مراجعة الأمان والتحيّز والملاءمة الثقافية",
         "ملاحظات منظَّمة وفق إرشاداتك",
-      ],
-      steps: [
-        s("الإرشادات", "دراسة إرشادات المشروع والأمثلة."),
-        s("المعايرة", "دفعة تجريبية للتوافق مع معايير التقييم لديك."),
-        s("التوسيم", "تنفيذ المهام بشكل مستمر وبحكم متّسق."),
-        s("الملاحظات", "الإبلاغ عن الأنماط المتكررة والحالات الخاصة."),
       ],
       ctaTitle: "تدرّب نماذج بالعربية؟",
       ctaDescription: "احصل على تقييم عربي أصيل ومتّسق لبيانات الذكاء الاصطناعي.",
@@ -415,12 +341,6 @@ const ar: LocaleContent = {
         "نصوص إعلانية لحملات البحث ووسائل التواصل",
         "توطين الرسائل البريدية والنشرات الإخبارية",
       ],
-      steps: [
-        s("الأهداف والجمهور", "تحديد الأسواق والجمهور والنتائج المطلوبة."),
-        s("البحث", "الكلمات المفتاحية والمنافسون والمنصات."),
-        s("إنشاء المحتوى", "محتوى عربي محسَّن لمحركات البحث والمنصات."),
-        s("المراجعة والتحسين", "تعديلات مبنية على الأداء."),
-      ],
       ctaTitle: "تريد النمو في الأسواق العربية؟",
       ctaDescription: "لنخطط معًا لمحتوى عربي يسهل العثور عليه ويدفع إلى التفاعل.",
     },
@@ -431,7 +351,6 @@ const fr: LocaleContent = {
   shared: {
     eyebrow: "Service",
     includedTitle: "Ce qui est inclus",
-    stepsTitle: "Déroulement",
     specTitle: "Spécialisations",
     specIntro:
       "Une traduction juste repose sur la connaissance du domaine. Chaque spécialisation ci-dessous est traitée avec une expertise du sujet, des glossaires dédiés et des contrôles terminologiques, pour que votre texte arabe soit juste aux yeux des experts comme du grand public.",
@@ -480,12 +399,6 @@ const fr: LocaleContent = {
         "Gestion des glossaires et des mémoires de traduction",
         "Vidéos et contenus audio",
       ],
-      steps: [
-        s("Brief et devis", "Envoyez vos fichiers, votre délai et votre public cible ; vous recevez un devis et un calendrier clairs."),
-        s("Traduction", "Un linguiste spécialisé traduit à partir de votre terminologie et de vos documents de référence."),
-        s("Révision et relecture", "Une révision complète de l’exactitude, du style et de la cohérence, suivie d’une relecture finale."),
-        s("Contrôle qualité et livraison", "Contrôles qualité automatisés, puis livraison au format souhaité."),
-      ],
       ctaTitle: "Des fichiers à traduire ?",
       ctaDescription: "Envoyez vos documents pour obtenir un devis et un délai de livraison clair.",
     },
@@ -503,12 +416,6 @@ const fr: LocaleContent = {
         "Correction des erreurs de sens, de grammaire et de fluidité",
         "Retours sur les erreurs récurrentes du moteur",
         "Évaluation de la qualité sur demande",
-      ],
-      steps: [
-        s("Périmètre", "Choix du niveau de post-édition (légère ou complète) et de l’objectif de qualité."),
-        s("Analyse d’un échantillon", "Vérification d’un extrait pour estimer l’effort et la qualité."),
-        s("Post-édition", "Révision de l’ensemble par rapport au texte source et au glossaire."),
-        s("Contrôle qualité et livraison", "Vérifications finales, puis livraison."),
       ],
       ctaTitle: "Vous utilisez la traduction automatique ?",
       ctaDescription: "Profitez de sa rapidité avec la qualité qu’attend votre public.",
@@ -528,12 +435,6 @@ const fr: LocaleContent = {
         "Plusieurs propositions créatives avec rétrotraduction",
         "Vérification des textes en contexte (captures ou préproduction)",
       ],
-      steps: [
-        s("Brief créatif", "Public, ton, objectifs et contraintes."),
-        s("Transcréation", "Propositions rédigées en arabe, avec une explication pour chacune."),
-        s("Vérification en contexte", "Contrôle dans la mise en page : longueur et sens de lecture."),
-        s("Texte final", "Livraison des textes validés, prêts à intégrer."),
-      ],
       ctaTitle: "Vous lancez une version arabe ?",
       ctaDescription: "Faites passer votre message auprès du public arabophone dès le premier jour.",
     },
@@ -551,12 +452,6 @@ const fr: LocaleContent = {
         "Recommandations de processus, d’outils de TAO et de TMS",
         "Processus qualité et consignes de révision",
         "Audit de préparation à la localisation de sites et d’applications",
-      ],
-      steps: [
-        s("Appel de découverte", "Comprendre vos objectifs, vos marchés et vos contenus."),
-        s("Analyse", "Examen de vos contenus, outils et processus actuels."),
-        s("Recommandations", "Un plan écrit et clair des prochaines étapes."),
-        s("Accompagnement", "Aide à la mise en place des glossaires, guides de style et processus."),
       ],
       ctaTitle: "Vous préparez un lancement en arabe ?",
       ctaDescription: "Réservez un appel pour parler de vos contenus, marchés et objectifs.",
@@ -576,12 +471,6 @@ const fr: LocaleContent = {
         "Revue de sécurité, de biais et d’adéquation culturelle",
         "Retours structurés selon vos consignes",
       ],
-      steps: [
-        s("Consignes", "Étude des consignes du projet et des exemples."),
-        s("Calibrage", "Lot d’essai pour s’aligner sur votre grille de notation."),
-        s("Annotation", "Traitement continu des tâches avec un jugement cohérent."),
-        s("Retours", "Signalement des tendances et des cas particuliers."),
-      ],
       ctaTitle: "Vous entraînez des modèles en arabe ?",
       ctaDescription: "Obtenez une évaluation native et cohérente de vos données d’IA.",
     },
@@ -600,12 +489,6 @@ const fr: LocaleContent = {
         "Textes d’annonces pour le search et les réseaux sociaux",
         "Localisation d’e-mails et de newsletters",
       ],
-      steps: [
-        s("Objectifs et public", "Définir les marchés, le public et les résultats attendus."),
-        s("Recherche", "Mots-clés, concurrents et plateformes."),
-        s("Création de contenu", "Contenus arabes optimisés pour la recherche et chaque plateforme."),
-        s("Suivi et ajustements", "Améliorations basées sur les performances."),
-      ],
       ctaTitle: "Envie de vous développer sur les marchés arabes ?",
       ctaDescription: "Planifions des contenus en arabe qui se trouvent facilement et font agir.",
     },
@@ -616,7 +499,6 @@ const es: LocaleContent = {
   shared: {
     eyebrow: "Servicio",
     includedTitle: "Qué incluye",
-    stepsTitle: "Cómo funciona",
     specTitle: "Especializaciones",
     specIntro:
       "Una traducción precisa depende de conocer el ámbito. Cada especialización se trabaja con conocimiento del tema, glosarios específicos y controles terminológicos, para que su texto en árabe sea correcto tanto para expertos como para el público general.",
@@ -665,12 +547,6 @@ const es: LocaleContent = {
         "Mantenimiento de glosarios y memorias de traducción",
         "Vídeos y audio",
       ],
-      steps: [
-        s("Briefing y presupuesto", "Envíe sus archivos, plazo y público; recibirá un presupuesto y un calendario claros."),
-        s("Traducción", "Un lingüista especializado traduce con su terminología y su material de referencia."),
-        s("Edición y corrección", "Revisión completa de exactitud, estilo y coherencia, seguida de una corrección final."),
-        s("Control de calidad y entrega", "Controles de calidad automatizados y entrega en el formato que necesite."),
-      ],
       ctaTitle: "¿Tiene archivos para traducir?",
       ctaDescription: "Envíe sus documentos y reciba un presupuesto y un plazo de entrega claros.",
     },
@@ -688,12 +564,6 @@ const es: LocaleContent = {
         "Corrección de errores de sentido, gramática y fluidez",
         "Comentarios sobre errores recurrentes del motor",
         "Evaluación de la calidad bajo petición",
-      ],
-      steps: [
-        s("Alcance", "Acordar el nivel de posedición (ligera o completa) y el objetivo de calidad."),
-        s("Revisión de una muestra", "Revisar un fragmento para estimar el esfuerzo y la calidad."),
-        s("Posedición", "Editar todo el resultado frente al texto original y el glosario."),
-        s("Control de calidad y entrega", "Comprobaciones finales y entrega."),
       ],
       ctaTitle: "¿Utiliza traducción automática?",
       ctaDescription: "Obtenga su rapidez con la calidad que espera su público.",
@@ -713,12 +583,6 @@ const es: LocaleContent = {
         "Varias propuestas creativas con retrotraducción",
         "Revisión de los textos en contexto (capturas o entorno de pruebas)",
       ],
-      steps: [
-        s("Briefing creativo", "Público, tono, objetivos y limitaciones."),
-        s("Transcreación", "Propuestas redactadas en árabe, con una explicación para cada una."),
-        s("Revisión en contexto", "Comprobación en el diseño: longitud y dirección de lectura."),
-        s("Texto final", "Entrega de los textos aprobados, listos para implementar."),
-      ],
       ctaTitle: "¿Lanza su producto en árabe?",
       ctaDescription: "Haga que su mensaje llegue al público árabe desde el primer día.",
     },
@@ -736,12 +600,6 @@ const es: LocaleContent = {
         "Recomendaciones de flujo de trabajo, herramientas TAO y TMS",
         "Proceso de calidad y pautas de revisión",
         "Revisión de la preparación para la localización de sitios web y aplicaciones",
-      ],
-      steps: [
-        s("Llamada inicial", "Conocer sus objetivos, mercados y contenidos."),
-        s("Análisis", "Revisión de sus contenidos, herramientas y proceso actual."),
-        s("Recomendaciones", "Un plan escrito y claro con los próximos pasos."),
-        s("Apoyo en la implantación", "Ayuda para crear glosarios, guías de estilo y flujos de trabajo."),
       ],
       ctaTitle: "¿Prepara un lanzamiento en árabe?",
       ctaDescription: "Reserve una llamada para hablar de sus contenidos, mercados y objetivos.",
@@ -761,12 +619,6 @@ const es: LocaleContent = {
         "Revisión de seguridad, sesgos y adecuación cultural",
         "Comentarios estructurados según sus pautas",
       ],
-      steps: [
-        s("Pautas", "Estudio de las pautas del proyecto y de los ejemplos."),
-        s("Calibración", "Lote de prueba para alinearse con su sistema de puntuación."),
-        s("Anotación", "Tareas continuas con un criterio coherente."),
-        s("Comentarios", "Informe de patrones recurrentes y casos límite."),
-      ],
       ctaTitle: "¿Entrena modelos en árabe?",
       ctaDescription: "Obtenga una evaluación nativa y coherente de sus datos de IA.",
     },
@@ -784,12 +636,6 @@ const es: LocaleContent = {
         "Publicaciones y textos para redes sociales",
         "Textos de anuncios para campañas de búsqueda y redes sociales",
         "Localización de correos electrónicos y boletines",
-      ],
-      steps: [
-        s("Objetivos y público", "Definir mercados, público y resultados esperados."),
-        s("Investigación", "Palabras clave, competencia y plataformas."),
-        s("Creación de contenido", "Contenido en árabe optimizado para buscadores y cada plataforma."),
-        s("Revisión y mejora", "Ajustes basados en el rendimiento."),
       ],
       ctaTitle: "¿Quiere crecer en los mercados árabes?",
       ctaDescription: "Planifiquemos contenido en árabe que se encuentre fácilmente y genere resultados.",

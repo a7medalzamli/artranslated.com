@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { Card, CardGrid } from "@/components/Card/Card";
-import { ProcessSteps } from "@/components/ProcessSteps/ProcessSteps";
 import { CTA } from "@/components/CTA/CTA";
 import { specializations } from "@/content/specializations";
 import {
@@ -109,10 +108,6 @@ export default async function ServicePage({ params }: { params: Params }) {
             </li>
           ))}
         </ul>
-      </Section>
-
-      <Section tinted title={shared.stepsTitle}>
-        <ProcessSteps steps={page.steps} />
       </Section>
 
       <CTA
