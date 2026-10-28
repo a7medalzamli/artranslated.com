@@ -28,9 +28,6 @@ export function Card({ title, children, href, linkLabel, image }: CardProps) {
         {image && <CardImage src={image} />}
         <h3 className={styles.title}>{title}</h3>
         <div className={styles.body}>{children}</div>
-        <span className={styles.arrow} aria-hidden="true">
-          &rarr;
-        </span>
       </Link>
     );
   }

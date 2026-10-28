@@ -53,10 +53,6 @@
   flex: 1;
 }
 
-.arrow {
-  color: var(--color-primary);
-  font-weight: var(--weight-bold);
-}
 
 .link {
   color: var(--color-primary);
