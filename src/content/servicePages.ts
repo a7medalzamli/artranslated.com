@@ -87,6 +87,12 @@ const en: LocaleContent = {
           "Translation and adaptation of language-learning materials — lessons, exercises and assessments — for learners at every level.",
         image: "/images/photos/spec-language-teaching.jpg",
       },
+      {
+        title: "SaaS",
+        summary:
+          "Software-as-a-Service platforms, dashboards, help centres and release notes localized so Arabic-speaking users get a seamless product experience.",
+        image: "/images/photos/spec-saas.jpg",
+      },
     ],
   },
   pages: {
@@ -106,7 +112,6 @@ const en: LocaleContent = {
         "Marketing and corporate communications",
         "Glossary and translation memory maintenance",
         "Videos and audio",
-        "SaaS products and platforms",
       ],
       steps: [
         s("Brief & quote", "Share your files, deadline and audience; you receive a clear quote and timeline."),
@@ -266,6 +271,12 @@ const ar: LocaleContent = {
           "ترجمة مواد تعلّم اللغات وتكييفها — من الدروس والتمارين إلى الاختبارات — للمتعلمين في جميع المستويات.",
         image: "/images/photos/spec-language-teaching.jpg",
       },
+      {
+        title: "البرمجيات كخدمة (SaaS)",
+        summary:
+          "توطين منصات البرمجيات كخدمة ولوحات التحكم ومراكز المساعدة وملاحظات الإصدار، ليحظى المستخدم العربي بتجربة منتج سلسة.",
+        image: "/images/photos/spec-saas.jpg",
+      },
     ],
   },
   pages: {
@@ -285,7 +296,6 @@ const ar: LocaleContent = {
         "المواد التسويقية والمراسلات المؤسسية",
         "إعداد مسارد المصطلحات وذاكرات الترجمة وتحديثها",
         "مقاطع الفيديو والملفات الصوتية",
-        "منتجات ومنصات البرمجيات كخدمة (SaaS)",
       ],
       steps: [
         s("المتطلبات وعرض السعر", "أرسل ملفاتك وموعد التسليم والجمهور المستهدف، لتحصل على عرض سعر وجدول زمني واضحين."),
@@ -444,6 +454,12 @@ const fr: LocaleContent = {
           "Traduction et adaptation de supports d’apprentissage des langues — leçons, exercices et évaluations — pour les apprenants de tous niveaux.",
         image: "/images/photos/spec-language-teaching.jpg",
       },
+      {
+        title: "SaaS",
+        summary:
+          "Plateformes SaaS, tableaux de bord, centres d’aide et notes de version localisés pour offrir aux utilisateurs arabophones une expérience fluide.",
+        image: "/images/photos/spec-saas.jpg",
+      },
     ],
   },
   pages: {
@@ -463,7 +479,6 @@ const fr: LocaleContent = {
         "Communication marketing et institutionnelle",
         "Gestion des glossaires et des mémoires de traduction",
         "Vidéos et contenus audio",
-        "Produits et plateformes SaaS",
       ],
       steps: [
         s("Brief et devis", "Envoyez vos fichiers, votre délai et votre public cible ; vous recevez un devis et un calendrier clairs."),
@@ -624,6 +639,12 @@ const es: LocaleContent = {
           "Traducción y adaptación de materiales para aprender idiomas — lecciones, ejercicios y evaluaciones — para estudiantes de todos los niveles.",
         image: "/images/photos/spec-language-teaching.jpg",
       },
+      {
+        title: "SaaS",
+        summary:
+          "Plataformas SaaS, paneles, centros de ayuda y notas de versión localizados para que los usuarios de habla árabe disfruten de una experiencia fluida.",
+        image: "/images/photos/spec-saas.jpg",
+      },
     ],
   },
   pages: {
@@ -643,7 +664,6 @@ const es: LocaleContent = {
         "Comunicación de marketing y corporativa",
         "Mantenimiento de glosarios y memorias de traducción",
         "Vídeos y audio",
-        "Productos y plataformas SaaS",
       ],
       steps: [
         s("Briefing y presupuesto", "Envíe sus archivos, plazo y público; recibirá un presupuesto y un calendario claros."),
