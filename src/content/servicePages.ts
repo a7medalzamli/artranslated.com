@@ -106,6 +106,7 @@ const en: LocaleContent = {
         "Marketing and corporate communications",
         "Glossary and translation memory maintenance",
         "Videos and audio",
+        "SaaS products and platforms",
       ],
       steps: [
         s("Brief & quote", "Share your files, deadline and audience; you receive a clear quote and timeline."),
@@ -284,6 +285,7 @@ const ar: LocaleContent = {
         "المواد التسويقية والمراسلات المؤسسية",
         "إعداد مسارد المصطلحات وذاكرات الترجمة وتحديثها",
         "مقاطع الفيديو والملفات الصوتية",
+        "منتجات ومنصات البرمجيات كخدمة (SaaS)",
       ],
       steps: [
         s("المتطلبات وعرض السعر", "أرسل ملفاتك وموعد التسليم والجمهور المستهدف، لتحصل على عرض سعر وجدول زمني واضحين."),
@@ -461,6 +463,7 @@ const fr: LocaleContent = {
         "Communication marketing et institutionnelle",
         "Gestion des glossaires et des mémoires de traduction",
         "Vidéos et contenus audio",
+        "Produits et plateformes SaaS",
       ],
       steps: [
         s("Brief et devis", "Envoyez vos fichiers, votre délai et votre public cible ; vous recevez un devis et un calendrier clairs."),
@@ -640,6 +643,7 @@ const es: LocaleContent = {
         "Comunicación de marketing y corporativa",
         "Mantenimiento de glosarios y memorias de traducción",
         "Vídeos y audio",
+        "Productos y plataformas SaaS",
       ],
       steps: [
         s("Briefing y presupuesto", "Envíe sus archivos, plazo y público; recibirá un presupuesto y un calendario claros."),
