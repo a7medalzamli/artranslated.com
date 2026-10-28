@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { ProcessSteps } from "@/components/ProcessSteps/ProcessSteps";
-import { ProcessDiagram } from "@/components/ProcessDiagram/ProcessDiagram";
 import { CTA } from "@/components/CTA/CTA";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
@@ -40,7 +39,6 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
       />
 
       <Section title={p.tepTitle} intro={p.tepIntro}>
-        <ProcessDiagram steps={p.steps} locale={locale} />
         <ProcessSteps steps={p.steps} />
       </Section>
 
