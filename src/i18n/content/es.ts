@@ -97,27 +97,27 @@ const es: SiteContent = {
       {
         title: "Preparación y terminología",
         description:
-          "Analizar el texto de origen, confirmar o crear un glosario y una base terminológica, y configurar el proyecto en SDL Trados con la memoria de traducción pertinente.",
+          "Analizar el original y preparar glosarios y memoria de traducción.",
       },
       {
         title: "Traducción",
         description:
-          "Traducir con control terminológico y el apoyo de la memoria de traducción, conservando el significado, el tono y la coherencia.",
+          "Traducir con terminología coherente, conservando sentido y tono.",
       },
       {
         title: "Edición",
         description:
-          "Comparar la traducción con el origen en cuanto a exactitud, integridad y coherencia, afinando la terminología y el estilo.",
+          "Revisar la traducción frente al original.",
       },
       {
         title: "Revisión",
         description:
-          "Leer el árabe por sí solo en cuanto a lengua, fluidez, formato y tipografía, detectando lo que una revisión bilingüe puede pasar por alto.",
+          "Pulir el árabe: fluidez, estilo y formato.",
       },
       {
         title: "Controles de calidad y entrega",
         description:
-          "Ejecutar controles de calidad automatizados (terminología, números, etiquetas y coherencia), resolver cualquier aviso y entregar en el formato requerido.",
+          "Controles de calidad finales y entrega en su formato.",
       },
     ],
     qaTitle: "Política de aseguramiento de la calidad",
@@ -325,27 +325,27 @@ const es: SiteContent = {
         {
           title: "Revisión del guion y los códigos de tiempo",
           description:
-            "Estudiar el guion con códigos de tiempo junto con la interpretación en pantalla para entender el ritmo, el tono y la intención.",
+            "Estudiar el guion, los tiempos y el tono.",
         },
         {
           title: "Traducción y transcreación",
           description:
-            "Traducir el significado y transcrear las expresiones culturales para que transmitan la misma carga emocional en árabe sin sonar artificiales.",
+            "Traducir el sentido y adaptar las expresiones.",
         },
         {
           title: "Ajuste de sílabas y sincronización labial",
           description:
-            "Ajustar la expresión en árabe y el número de sílabas para que coincidan con los movimientos labiales de los actores y el ritmo de cada línea.",
+            "Ajustar las sílabas árabes al movimiento de los labios.",
         },
         {
           title: "Revisión frente a la imagen",
           description:
-            "Comprobar el diálogo adaptado frente al metraje para verificar la exactitud del ritmo y el encaje cultural, afinando donde sea necesario.",
+            "Revisar el diálogo frente a la imagen.",
         },
         {
           title: "Entrega lista para estudio",
           description:
-            "Entregar un guion adaptado que la grabación pueda usar directamente, respetando la intención del director original.",
+            "Entregar un guion listo para grabar.",
         },
       ],
       offerTitle: "Qué ofrezco",

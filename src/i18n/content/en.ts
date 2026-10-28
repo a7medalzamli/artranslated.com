@@ -100,27 +100,27 @@ const en = {
       {
         title: "Preparation & terminology",
         description:
-          "Analyze the source, confirm or build a project glossary and termbase, and set up the project in SDL Trados with the relevant translation memory.",
+          "Analyze the source and set up glossaries and translation memory.",
       },
       {
         title: "Translation",
         description:
-          "Translate with terminology control and translation-memory leverage, keeping meaning, tone and consistency intact.",
+          "Translate with consistent terminology, keeping meaning and tone.",
       },
       {
         title: "Editing",
         description:
-          "Compare the translation against the source for accuracy, completeness and consistency, refining terminology and style.",
+          "Check the translation against the source for accuracy.",
       },
       {
         title: "Proofreading",
         description:
-          "Read the Arabic on its own for language, flow, formatting and typography — catching anything a bilingual pass can miss.",
+          "Polish the Arabic for flow, style and formatting.",
       },
       {
         title: "QA checks & delivery",
         description:
-          "Run automated QA checks (terminology, numbers, tags and consistency), resolve any flags, then deliver in the required format.",
+          "Run final QA checks and deliver in your format.",
       },
     ],
     qaTitle: "Quality-assurance policy",
@@ -320,27 +320,27 @@ const en = {
         {
           title: "Script & timecode review",
           description:
-            "Study the timecoded script alongside the on-screen performance to understand timing, tone and intent.",
+            "Study the script, timing and tone.",
         },
         {
           title: "Translation & transcreation",
           description:
-            "Translate the meaning and transcreate culturally specific idioms so they carry the same emotional weight in Arabic without sounding unnatural.",
+            "Translate the meaning and adapt idioms naturally.",
         },
         {
           title: "Syllable & lip-sync matching",
           description:
-            "Adjust Arabic phrasing and syllable count to match the actors' lip movements and the timing of each line.",
+            "Match Arabic syllables to lip movements.",
         },
         {
           title: "Review against picture",
           description:
-            "Check the adapted dialogue against the footage for timing accuracy and cultural fit, refining where needed.",
+            "Check the dialogue against the footage.",
         },
         {
           title: "Studio-ready delivery",
           description:
-            "Deliver an adapted script that recording can use directly, respecting the original director's intent.",
+            "Deliver a script ready for recording.",
         },
       ],
       offerTitle: "What I offer",

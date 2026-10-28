@@ -100,27 +100,27 @@ const fr: SiteContent = {
       {
         title: "Préparation et terminologie",
         description:
-          "Analyser la source, confirmer ou créer un glossaire et une base terminologique, et configurer le projet dans SDL Trados avec la mémoire de traduction appropriée.",
+          "Analyser la source et préparer glossaires et mémoire de traduction.",
       },
       {
         title: "Traduction",
         description:
-          "Traduire avec un contrôle terminologique et l'appui de la mémoire de traduction, en préservant le sens, le ton et la cohérence.",
+          "Traduire avec une terminologie cohérente, en gardant sens et ton.",
       },
       {
         title: "Révision",
         description:
-          "Comparer la traduction à la source pour l'exactitude, l'exhaustivité et la cohérence, en affinant la terminologie et le style.",
+          "Vérifier la traduction par rapport à la source.",
       },
       {
         title: "Relecture",
         description:
-          "Lire l'arabe seul pour la langue, la fluidité, la mise en forme et la typographie — en repérant ce qu'une relecture bilingue peut manquer.",
+          "Peaufiner l’arabe : fluidité, style et mise en forme.",
       },
       {
         title: "Contrôles QA et livraison",
         description:
-          "Effectuer des contrôles QA automatisés (terminologie, chiffres, balises et cohérence), résoudre les éventuels signalements, puis livrer au format requis.",
+          "Contrôles qualité finaux et livraison au bon format.",
       },
     ],
     qaTitle: "Politique d'assurance qualité",
@@ -325,27 +325,27 @@ const fr: SiteContent = {
         {
           title: "Revue du script et des timecodes",
           description:
-            "Étudier le script minuté en parallèle de l'interprétation à l'écran pour comprendre le rythme, le ton et l'intention.",
+            "Étudier le script, le timing et le ton.",
         },
         {
           title: "Traduction et transcréation",
           description:
-            "Traduire le sens et transcréer les expressions culturelles pour qu'elles portent la même charge émotionnelle en arabe sans paraître artificielles.",
+            "Traduire le sens et adapter les expressions.",
         },
         {
           title: "Adéquation syllabes et synchronisation labiale",
           description:
-            "Ajuster la formulation arabe et le nombre de syllabes pour correspondre aux mouvements des lèvres des acteurs et au rythme de chaque réplique.",
+            "Caler les syllabes arabes sur le mouvement des lèvres.",
         },
         {
           title: "Vérification face à l'image",
           description:
-            "Contrôler le dialogue adapté face aux images pour l'exactitude du rythme et l'adéquation culturelle, en affinant si nécessaire.",
+            "Vérifier les dialogues face à l’image.",
         },
         {
           title: "Livraison prête pour le studio",
           description:
-            "Livrer un script adapté directement utilisable en enregistrement, dans le respect de l'intention du réalisateur.",
+            "Livrer un script prêt pour l’enregistrement.",
         },
       ],
       offerTitle: "Ce que je propose",
