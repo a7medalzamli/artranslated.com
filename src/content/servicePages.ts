@@ -101,7 +101,7 @@ const en: LocaleContent = {
         image: "/images/photos/spec-language-teaching.jpg",
       },
       {
-        title: "SaaS",
+        title: "SaaS Localization",
         summary:
           "Helping SaaS companies reach Arabic-speaking users by localizing platforms, dashboards, help centres and release notes for a seamless product experience.",
         image: "/images/photos/spec-saas.jpg",
@@ -284,7 +284,7 @@ const ar: LocaleContent = {
         image: "/images/photos/spec-language-teaching.jpg",
       },
       {
-        title: "البرمجيات كخدمة (SaaS)",
+        title: "توطين البرمجيات كخدمة (SaaS)",
         summary:
           "مساعدة شركات البرمجيات كخدمة على الوصول إلى المستخدمين العرب من خلال توطين المنصات ولوحات التحكم ومراكز المساعدة وملاحظات الإصدار، لتقديم تجربة منتج سلسة.",
         image: "/images/photos/spec-saas.jpg",
@@ -466,7 +466,7 @@ const fr: LocaleContent = {
         image: "/images/photos/spec-language-teaching.jpg",
       },
       {
-        title: "SaaS",
+        title: "Localisation de SaaS",
         summary:
           "Aider les entreprises SaaS à toucher les utilisateurs arabophones en localisant plateformes, tableaux de bord, centres d’aide et notes de version, pour une expérience produit fluide.",
         image: "/images/photos/spec-saas.jpg",
@@ -650,7 +650,7 @@ const es: LocaleContent = {
         image: "/images/photos/spec-language-teaching.jpg",
       },
       {
-        title: "SaaS",
+        title: "Localización de SaaS",
         summary:
           "Ayudar a las empresas SaaS a llegar a los usuarios de habla árabe localizando plataformas, paneles, centros de ayuda y notas de versión, para ofrecer una experiencia de producto fluida.",
         image: "/images/photos/spec-saas.jpg",
