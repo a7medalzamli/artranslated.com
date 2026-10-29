@@ -1,7 +1,54 @@
+/* ---- What I offer: checklist in up to three columns ---- */
+.offerings {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-sm) var(--space-xl);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 40em) {
+  .offerings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60em) {
+  .offerings {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.offerings li {
+  position: relative;
+  padding-inline-start: 2rem;
+  font-weight: var(--weight-semibold);
+  font-size: var(--font-size-lg);
+}
+
+/* Blue check mark */
+.offerings li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.3em;
+  width: 1.1rem;
+  height: 0.6rem;
+  border-inline-start: 3px solid var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
+  transform: rotate(-45deg);
+}
+
+:global([dir="rtl"]) .offerings li::before {
+  transform: rotate(45deg);
+}
+
+/* ---- Portrait beside the introduction ---- */
 .bioGrid {
   display: grid;
   gap: var(--space-2xl);
-  align-items: start;
+  align-items: center;
 }
 
 @media (min-width: 56em) {
@@ -24,99 +71,73 @@
   box-shadow: var(--shadow-md);
 }
 
-/* ---- Experience counters ---- */
-.statGrid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-2xl) var(--space-lg);
-  text-align: center;
-}
-
-@media (min-width: 60em) {
-  .statGrid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.statItem {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
-
-.statValue {
-  font-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.25rem);
-  font-weight: var(--weight-bold);
-  line-height: 1;
-  color: var(--color-accent);
-}
-
-.statLabel {
-  color: var(--color-text-muted);
-}
-
-/* ---- Languages ---- */
-.languageList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  gap: var(--space-lg);
-}
-
-.languageItem {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2xs);
-  padding: var(--space-lg);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-}
-
-.languageName {
-  font-weight: var(--weight-semibold);
+.introText {
   font-size: var(--font-size-lg);
-  margin-top: var(--space-xs);
+  line-height: var(--line-normal);
 }
 
-.languageNote {
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
-}
-
-/* ---- Specializations ---- */
-.specList {
+/* ---- Education cards ---- */
+.credentials {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr;
   gap: var(--space-lg);
+  grid-template-columns: 1fr;
 }
 
-@media (min-width: 48em) {
-  .specList {
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width: 56em) {
+  .credentials {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.specItem {
+.credential {
   padding: var(--space-lg);
   background: var(--color-bg);
   border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary);
   border-radius: var(--radius-md);
 }
 
-.specTitle {
+.credentialTitle {
   font-size: var(--font-size-h4);
-  margin-bottom: var(--space-2xs);
+  margin-bottom: var(--space-xs);
 }
 
-.specText {
+.credentialText {
   color: var(--color-text-muted);
+}
+
+/* ---- Lists: webinars, courses, volunteering, memberships ---- */
+.twoCol {
+  display: grid;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 56em) {
+  .twoCol {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+  }
+}
+
+.listTitle {
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--space-md);
+}
+
+.list {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.list li::marker {
+  color: var(--color-primary);
+}
+
+.list a {
+  overflow-wrap: anywhere;
 }
