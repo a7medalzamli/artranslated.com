@@ -32,8 +32,8 @@ export function SiteHeader({ dict, settings }: { dict: Dictionary; settings: Sit
             <Image
               src={settings.logo}
               alt={settings.name}
-              width={172}
-              height={40}
+              width={578}
+              height={127}
               className={styles.logo}
               priority
             />

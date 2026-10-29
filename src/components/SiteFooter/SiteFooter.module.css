@@ -79,11 +79,9 @@
 .logo {
   display: block;
   height: 40px;
-  width: 172px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: var(--radius-sm);
-  background: #ffffff;
+  width: auto;
+  /* The logo file has a white background; blend it into light backgrounds. */
+  mix-blend-mode: multiply;
 }
 
 .tagline {

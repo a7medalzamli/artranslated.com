@@ -7,6 +7,11 @@ import { site } from "@/lib/site";
  * The footer's email icon was replaced by Telegram. Settings saved before that
  * change still list "email", so swap it for the Telegram link.
  */
+/** A saved copy may still point at the old logo file; use the new one instead. */
+function withNewLogo(settings: SiteSettings): SiteSettings {
+  return settings.logo === "/logo.jpg" ? { ...settings, logo: defaultSiteSettings.logo } : settings;
+}
+
 function withTelegram(settings: SiteSettings): SiteSettings {
   if (settings.socials.some((s) => s.platform === "telegram")) return settings;
   return {
@@ -40,7 +45,7 @@ export async function getSiteSettings(): Promise<SiteSettings> {
     if (error || !data) return defaultSiteSettings;
 
     const parsed = siteSettingsSchema.safeParse(data.data);
-    return parsed.success ? withTelegram(parsed.data) : defaultSiteSettings;
+    return parsed.success ? withTelegram(withNewLogo(parsed.data)) : defaultSiteSettings;
   } catch {
     return defaultSiteSettings;
   }
