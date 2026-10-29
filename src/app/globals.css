@@ -92,6 +92,13 @@ a:hover {
   color: var(--color-primary-hover);
 }
 
+/* Email, phone, WhatsApp and Telegram links read as plain black text. */
+a:is([href^="mailto:"], [href^="tel:"], [href^="https://wa.me/"], [href^="https://t.me/"]),
+a:is([href^="mailto:"], [href^="tel:"], [href^="https://wa.me/"], [href^="https://t.me/"]):hover {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
 /* ---- Media ---- */
 img,
 picture,

@@ -45,11 +45,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <div className={styles.introText}>
             <p style={{ fontSize: "var(--font-size-lg)", marginBottom: "var(--space-lg)" }}>
               {c.directIntro}{" "}
-              <a href={`mailto:${site.contact.email}`} style={{ color: "var(--color-accent)", fontWeight: 600 }}>
+              <a href={`mailto:${site.contact.email}`} style={{ fontWeight: 600 }}>
                 {site.contact.email}
               </a>{" "}
               {c.directOr}{" "}
-              <a href={`tel:${site.contact.phoneHref}`} style={{ color: "var(--color-accent)", fontWeight: 600 }}>
+              <a href={`tel:${site.contact.phoneHref}`} style={{ fontWeight: 600 }}>
                 {site.contact.phone}
               </a>
               .
