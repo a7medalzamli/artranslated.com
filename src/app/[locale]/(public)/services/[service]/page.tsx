@@ -56,9 +56,10 @@ export default async function ServicePage({ params }: { params: Params }) {
 
   return (
     <>
-      <PageHeader eyebrow={shared.eyebrow} title={page.title} description={page.description} />
+      <PageHeader title={page.title} />
 
       <Section>
+        <p className={styles.lead}>{page.description}</p>
         <div className={styles.intro}>
           <div className={`prose ${styles.introText}`}>
             {page.intro.map((p, i) => (

@@ -70,3 +70,12 @@
   margin-top: 0.15rem;
   color: var(--color-primary);
 }
+
+/* Short summary line, shown above the intro instead of under the title. */
+.lead {
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.625rem);
+  font-weight: var(--weight-semibold);
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-bottom: var(--space-xl);
+}
