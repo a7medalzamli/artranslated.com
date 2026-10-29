@@ -148,7 +148,7 @@ const es: SiteContent = {
   contact: {
     title: "Contacto y solicitud de presupuesto",
     description: "Cuéntame sobre tu proyecto y te responderé con un presupuesto claro.",
-    lead: "Compárteme algunos detalles de tu proyecto —idiomas, tema y plazo— y te responderé con un presupuesto claro y a tu medida.",
+    lead: "Compárteme algunos detalles de tu proyecto, idiomas, tema y plazo, y te responderé con un presupuesto claro y a tu medida.",
     crumb: "Contacto",
     directIntro: "¿Prefieres un contacto directo? Escribe a",
     directOr: "o llama al",

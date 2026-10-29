@@ -151,7 +151,7 @@ const en = {
   contact: {
     title: "Contact & request a quote",
     description: "Tell me about your project and I'll reply with a clear quote.",
-    lead: "Share a few details about your project — the languages, subject and deadline — and I’ll reply with a clear, tailored quote.",
+    lead: "Share a few details about your project, the languages, subject and deadline, and I’ll reply with a clear, tailored quote.",
     crumb: "Contact",
     directIntro: "Prefer to reach out directly? Email",
     directOr: "or call",
