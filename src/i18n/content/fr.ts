@@ -131,12 +131,18 @@ const fr: SiteContent = {
       "Les décisions terminologiques sont consignées dans des glossaires et des bases terminologiques pour être réutilisées, et les mémoires de traduction maintiennent la cohérence du contenu mis à jour ou répété.",
     ],
     toolsTitle: "Outils",
-    tools: [
-      { name: "SDL Trados Studio", text: "l'environnement TAO central pour la traduction et la QA" },
-      { name: "Mémoires de traduction", text: "cohérence sur les documents volumineux et mis à jour" },
+    toolList: [
       {
-        name: "Glossaires et bases terminologiques",
-        text: "terminologie maîtrisée et validée par le client",
+        name: "Outils de traduction assistée par ordinateur (TAO)",
+        text: "SDL Trados Studio, memoQ, Wordfast et Xbench pour une terminologie cohérente, des mémoires de traduction et des contrôles qualité",
+      },
+      {
+        name: "Microsoft Office",
+        text: "fichiers Word, Excel et PowerPoint traduits et livrés avec leur mise en page et leur mise en forme d’origine",
+      },
+      {
+        name: "Logiciels marketing",
+        text: "outils SEO, d’analyse et de réseaux sociaux pour la recherche de mots-clés, la planification de contenus et le suivi des campagnes",
       },
     ],
     ctaTitle: "Vous voulez ce niveau de soin pour votre projet ?",

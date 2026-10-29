@@ -131,10 +131,19 @@ const en = {
       "Terminology decisions are captured in glossaries and termbases so they carry forward to future work, and translation memories keep updated or repeat content consistent.",
     ],
     toolsTitle: "Tools",
-    tools: [
-      { name: "SDL Trados Studio", text: "the core CAT environment for translation and QA" },
-      { name: "Translation memories", text: "consistency across large and updated documents" },
-      { name: "Glossaries & termbases", text: "controlled, client-approved terminology" },
+    toolList: [
+      {
+        name: "Computer-assisted translation (CAT) tools",
+        text: "SDL Trados Studio, memoQ, Wordfast and Xbench for consistent terminology, translation memories and QA checks",
+      },
+      {
+        name: "Microsoft Office",
+        text: "Word, Excel and PowerPoint files translated and delivered in their original layout and formatting",
+      },
+      {
+        name: "Marketing software",
+        text: "SEO, analytics and social media tools for keyword research, content planning and campaign tracking",
+      },
     ],
     ctaTitle: "Want this level of care on your project?",
     ctaDescription: "Tell me what you're working on and I'll explain exactly how it would be handled.",

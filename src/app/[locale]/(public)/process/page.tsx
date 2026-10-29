@@ -53,7 +53,7 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
       <Section title={p.toolsTitle}>
         <div className="prose">
           <ul>
-            {p.tools.map((tool) => (
+            {p.toolList.map((tool) => (
               <li key={tool.name}>
                 <strong>{tool.name}</strong> — {tool.text}
               </li>
