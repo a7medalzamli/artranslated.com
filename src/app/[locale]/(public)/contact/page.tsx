@@ -40,13 +40,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <>
-      <PageHeader
-        title={c.title}
-        description={c.description}
-        breadcrumbs={[{ label: t.common.homeCrumb, href: routes.home }, { label: c.crumb }]}
-      />
+      <PageHeader title={c.title} />
 
       <Container className="section-pad">
+        {c.description && <p className={styles.lead}>{c.description}</p>}
         <div className={styles.intro}>
           <div className={styles.introText}>
             <p style={{ fontSize: "var(--font-size-lg)", marginBottom: "var(--space-lg)" }}>

@@ -154,3 +154,12 @@
     aspect-ratio: 4 / 3;
   }
 }
+
+/* Short line above the contact details, moved down from the page header. */
+.lead {
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.625rem);
+  font-weight: var(--weight-semibold);
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-bottom: var(--space-xl);
+}
