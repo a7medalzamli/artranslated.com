@@ -242,7 +242,7 @@ const en: LocaleContent = {
       ctaDescription: "Get native, consistent Arabic evaluation for your AI data.",
     },
     "digital-marketing": {
-      title: "Digital marketing in Arabic",
+      title: "Digital Marketing",
       description:
         "Arabic SEO, social media and campaign content that reaches Arab audiences and drives results.",
       intro: [
@@ -428,7 +428,7 @@ const ar: LocaleContent = {
       ctaDescription: "احصل على تقييم عربي أصيل ومتّسق لبيانات الذكاء الاصطناعي.",
     },
     "digital-marketing": {
-      title: "التسويق الرقمي بالعربية",
+      title: "التسويق الرقمي",
       description:
         "تحسين محركات البحث بالعربية ومحتوى وسائل التواصل الاجتماعي والحملات للوصول إلى الجمهور العربي وتحقيق النتائج.",
       intro: [
@@ -617,7 +617,7 @@ const fr: LocaleContent = {
       ctaDescription: "Obtenez une évaluation native et cohérente de vos données d’IA.",
     },
     "digital-marketing": {
-      title: "Marketing digital en arabe",
+      title: "Marketing digital",
       description:
         "SEO en arabe, réseaux sociaux et contenus de campagne pour toucher les publics arabophones et obtenir des résultats.",
       intro: [
@@ -806,7 +806,7 @@ const es: LocaleContent = {
       ctaDescription: "Obtenga una evaluación nativa y coherente de sus datos de IA.",
     },
     "digital-marketing": {
-      title: "Marketing digital en árabe",
+      title: "Marketing digital",
       description:
         "SEO en árabe, redes sociales y contenidos de campaña para llegar al público árabe y obtener resultados.",
       intro: [
