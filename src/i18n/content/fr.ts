@@ -78,7 +78,7 @@ const fr: SiteContent = {
       "Traduction humaine professionnelle de l’anglais, du français et de l’espagnol vers l’arabe — précise, naturelle et cohérente avec votre terminologie, pour vos documents, sites web et logiciels.",
     consultingTitle: "Conseil",
     consultingSummary:
-      "Conseil en localisation : accompagnement pour aborder les marchés arabophones, mise en place de glossaires et de guides de style, et choix du bon processus, des outils et du contrôle qualité.",
+      "Conseil : accompagnement pour aborder les marchés arabophones, mise en place de glossaires et de guides de style, et choix du bon processus, des outils et du contrôle qualité.",
     marketingTitle: "Marketing digital",
     marketingSummary:
       "SEO en arabe, réseaux sociaux et contenus de campagne pour toucher les publics arabophones — en alliant localisation et expertise marketing pour générer du trafic et des conversions.",

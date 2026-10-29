@@ -78,7 +78,7 @@ const en = {
       "Professional human translation from English, French and Spanish into Arabic — accurate, natural and consistent with your terminology, for documents, websites and software.",
     consultingTitle: "Consulting",
     consultingSummary:
-      "Localization consulting: advice on entering Arabic-speaking markets, setting up terminology and style guides, and choosing the right workflow, tools and quality process.",
+      "Consulting: advice on entering Arabic-speaking markets, setting up terminology and style guides, and choosing the right workflow, tools and quality process.",
     marketingTitle: "Digital Marketing",
     marketingSummary:
       "Arabic SEO, social media and campaign content that reaches Arab audiences — combining localization with a marketing background to drive traffic and conversions.",

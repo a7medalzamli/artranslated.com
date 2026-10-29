@@ -202,7 +202,7 @@ const en: LocaleContent = {
       ctaDescription: "Make your message land with Arab audiences from day one.",
     },
     consulting: {
-      title: "Localization consulting",
+      title: "Consulting",
       description:
         "Practical advice on entering Arabic-speaking markets and building a localization workflow that scales.",
       intro: [
@@ -386,7 +386,7 @@ const ar: LocaleContent = {
       ctaDescription: "اجعل رسالتك تصل إلى الجمهور العربي من اليوم الأول.",
     },
     consulting: {
-      title: "استشارات التوطين",
+      title: "الاستشارات",
       description: "نصائح عملية لدخول الأسواق الناطقة بالعربية وبناء سير عمل للتوطين قابل للتوسع.",
       intro: [
         "لا يقتصر دخول السوق العربية على الترجمة، بل يشمل تصميمات من اليمين إلى اليسار، والفروق الإقليمية، وقرارات المصطلحات، واختيار الأدوات والشركاء المناسبين.",
@@ -569,7 +569,7 @@ const fr: LocaleContent = {
       ctaDescription: "Faites passer votre message auprès du public arabophone dès le premier jour.",
     },
     consulting: {
-      title: "Conseil en localisation",
+      title: "Conseil",
       description:
         "Des conseils concrets pour aborder les marchés arabophones et bâtir un processus de localisation évolutif.",
       intro: [
@@ -754,7 +754,7 @@ const es: LocaleContent = {
       ctaDescription: "Haga que su mensaje llegue al público árabe desde el primer día.",
     },
     consulting: {
-      title: "Consultoría de localización",
+      title: "Consultoría",
       description:
         "Asesoramiento práctico para entrar en los mercados de habla árabe y crear un flujo de localización escalable.",
       intro: [
