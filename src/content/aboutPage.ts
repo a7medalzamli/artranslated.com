@@ -9,6 +9,8 @@ import type { Locale } from "@/i18n";
 
 export type AboutPageContent = {
   title: string;
+  /** Short heading in the top box. */
+  heading: string;
   lead: string;
   offerings: string[];
   intro: string;
@@ -48,6 +50,7 @@ const CAFE = "https://ahmedalzamly.translatorscafe.com";
 
 const en: AboutPageContent = {
   title: "About Ahmed Alzamli",
+  heading: "About",
   lead: "Creative solutions for clients who want to expand to the Arabic-speaking countries.",
   offerings: [
     "Website Localization",
@@ -105,6 +108,7 @@ const en: AboutPageContent = {
 
 const ar: AboutPageContent = {
   title: "نبذة عن أحمد الزاملي",
+  heading: "من أنا",
   lead: "حلول إبداعية للعملاء الراغبين في التوسّع إلى الدول الناطقة بالعربية.",
   offerings: [
     "توطين المواقع الإلكترونية",
@@ -162,6 +166,7 @@ const ar: AboutPageContent = {
 
 const fr: AboutPageContent = {
   title: "À propos d’Ahmed Alzamli",
+  heading: "À propos",
   lead: "Des solutions créatives pour les clients qui souhaitent se développer dans les pays arabophones.",
   offerings: [
     "Localisation de sites web",
@@ -219,6 +224,7 @@ const fr: AboutPageContent = {
 
 const es: AboutPageContent = {
   title: "Sobre Ahmed Alzamli",
+  heading: "Sobre mí",
   lead: "Soluciones creativas para clientes que quieren expandirse a los países de habla árabe.",
   offerings: [
     "Localización de sitios web",

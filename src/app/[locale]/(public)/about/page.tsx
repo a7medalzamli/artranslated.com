@@ -35,15 +35,16 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
   return (
     <>
-      {/* No title: the opening line is the page heading. */}
+      {/* Top box: short heading */}
       <header className={styles.header}>
         <Container>
-          <h1 className={styles.lead}>{a.lead}</h1>
+          <h1 className={styles.heading}>{a.heading}</h1>
         </Container>
       </header>
 
       {/* What I offer */}
       <Section>
+        <p className={styles.lead}>{a.lead}</p>
         <ul className={styles.offerings}>
           {a.offerings.map((item) => (
             <li key={item}>{item}</li>
