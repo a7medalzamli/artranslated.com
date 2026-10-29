@@ -22,7 +22,7 @@ export type SiteSettings = z.infer<typeof siteSettingsSchema>;
 export const defaultSiteSettings: SiteSettings = {
   name: site.name,
   role: site.role,
-  logo: "/logo-tia.png",
+  logo: "/logo-tia-v2.png",
   footerTagline: "English, French & Spanish into Arabic translation.",
   socials: site.socials.map((s) => ({ platform: s.platform, label: s.label, href: s.href })),
 };

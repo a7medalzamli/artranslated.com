@@ -24,7 +24,7 @@
    keep a light chip so it reads consistently in light and dark mode. */
 .logo {
   display: block;
-  height: 40px;
+  height: 34px;
   width: auto;
   /* The logo file has a white background; blend it into light backgrounds. */
   mix-blend-mode: multiply;

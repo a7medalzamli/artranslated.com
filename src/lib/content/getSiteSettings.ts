@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
  */
 /** A saved copy may still point at the old logo file; use the new one instead. */
 function withNewLogo(settings: SiteSettings): SiteSettings {
-  return settings.logo === "/logo.jpg" ? { ...settings, logo: defaultSiteSettings.logo } : settings;
+  return (settings.logo === "/logo.jpg" || settings.logo === "/logo-tia.png") ? { ...settings, logo: defaultSiteSettings.logo } : settings;
 }
 
 function withTelegram(settings: SiteSettings): SiteSettings {
