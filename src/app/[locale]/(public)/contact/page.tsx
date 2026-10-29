@@ -2,14 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Container } from "@/components/Container/Container";
-import { Callout } from "@/components/Callout/Callout";
-import { LocaleLink } from "@/components/LocaleLink/LocaleLink";
 import { QuoteForm } from "./QuoteForm";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import type { Locale } from "@/i18n";
-import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
 import styles from "./contact.module.css";
 
@@ -57,11 +54,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               </a>
               .
             </p>
-
-            <Callout>
-              <strong>{c.calloutStrong}</strong> {c.calloutText}{" "}
-              <LocaleLink href={routes.confidentiality}>{c.calloutLink}</LocaleLink>.
-            </Callout>
           </div>
 
           <div className={styles.introMedia}>
