@@ -141,3 +141,17 @@
 .list a {
   overflow-wrap: anywhere;
 }
+
+/* ---- Page heading: the opening line, large, in sentence case ---- */
+.header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding-block: var(--space-2xl);
+}
+
+.lead {
+  font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.75rem);
+  line-height: 1.25;
+  text-transform: none;
+  letter-spacing: normal;
+}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { PageHeader } from "@/components/PageHeader/PageHeader";
+import { Container } from "@/components/Container/Container";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
 import { courses, getAboutPage, volunteering, webinars } from "@/content/aboutPage";
@@ -35,7 +35,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
   return (
     <>
-      <PageHeader title={a.title} description={a.lead} />
+      {/* No title: the opening line is the page heading. */}
+      <header className={styles.header}>
+        <Container>
+          <h1 className={styles.lead}>{a.lead}</h1>
+        </Container>
+      </header>
 
       {/* What I offer */}
       <Section>
