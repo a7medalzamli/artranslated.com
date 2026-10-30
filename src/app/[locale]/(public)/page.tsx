@@ -29,8 +29,7 @@ export async function generateMetadata({
     path: "",
     locale,
     defaultTitle: getSeoText(locale).homeTitle,
-    defaultDescription: getSeoText(locale).home,| Ahmed Alzamli",
-    defaultDescription: "Website translation and localization into English and Arabic, plus English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations.",
+    defaultDescription: getSeoText(locale).home,
     seo: t.seo.home,
   });
 }
