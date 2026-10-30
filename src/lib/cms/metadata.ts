@@ -24,7 +24,11 @@ export function buildCmsMetadata(opts: {
 }): Metadata {
   const title = opts.seo?.title?.trim() || opts.defaultTitle;
   const description = opts.seo?.description?.trim() || opts.defaultDescription;
-  const ogImage = opts.seo?.ogImage?.trim() || opts.defaultOgImage || "/portrait.jpg";
+  // Default share image: the 1200x630 branded card in the page's language.
+  const ogImage =
+    opts.seo?.ogImage?.trim() ||
+    opts.defaultOgImage ||
+    `/og/og-${ogLocales[opts.locale] ? opts.locale : "en"}.png`;
   const canonical = `/${opts.locale}${opts.path}`;
   // x-default tells Google which version to show visitors in other languages.
   const languages = {

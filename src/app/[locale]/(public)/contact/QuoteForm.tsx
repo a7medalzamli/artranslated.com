@@ -1,6 +1,7 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
+import { trackEvent } from "@/lib/analytics";
 import { submitQuote, type QuoteState } from "./actions";
 import styles from "./contact.module.css";
 
@@ -34,12 +35,19 @@ export function QuoteForm({
   labels,
   specializationOptions,
   serviceOptions,
+  locale,
 }: {
   labels: QuoteFormLabels;
+  locale: string;
   specializationOptions: string[];
   serviceOptions: string[];
 }) {
   const [state, formAction, pending] = useActionState(submitQuote, initialState);
+
+  // Count a successful request as a lead in Google Analytics (if consented).
+  useEffect(() => {
+    if (state.ok) trackEvent("generate_lead", { form: "quote", page_language: locale });
+  }, [state.ok, locale]);
 
   if (state.ok) {
     return (
@@ -54,6 +62,7 @@ export function QuoteForm({
 
   return (
     <form action={formAction} className={styles.form} noValidate>
+      <input type="hidden" name="locale" value={locale} />
       {/* Honeypot: hidden from humans; bots that fill it are silently ignored. */}
       <div className={styles.honeypot} aria-hidden="true">
         <label>

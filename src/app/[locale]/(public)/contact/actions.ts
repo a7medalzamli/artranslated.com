@@ -5,7 +5,8 @@ import { createClient } from "@/lib/supabase/server";
 import { quoteRequestSchema } from "@/lib/validation/quote";
 import { rateLimit } from "@/lib/rateLimit";
 import { sendQuoteEmails } from "@/lib/email/quote";
-import { homeServices } from "@/content/homeServices";
+import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
+import { isLocale, defaultLocale } from "@/i18n/config";
 
 export type QuoteState = {
   ok: boolean;
@@ -51,10 +52,15 @@ export async function submitQuote(_prev: QuoteState, formData: FormData): Promis
 
   const input = parsed.data;
 
-  // "Service needed" is captured in the message (whitelisted against real
-  // services), so no schema change is needed.
+  // Page language the form was sent from (for the client confirmation email).
+  const localeRaw = String(formData.get("locale") ?? "");
+  const locale = isLocale(localeRaw) ? localeRaw : defaultLocale;
+
+  // "Service needed" is captured in the message, checked against the service
+  // names shown on that language's form, so no schema change is needed.
   const serviceRaw = String(formData.get("service") ?? "");
-  const service = homeServices.some((s) => s.title === serviceRaw) ? serviceRaw : "";
+  const home = await getLocalizedHome(locale);
+  const service = home.services.items.some((s) => s.title === serviceRaw) ? serviceRaw : "";
   const composedMessage = [service ? `Service needed: ${service}` : "", input.message ?? ""]
     .filter(Boolean)
     .join("\n\n");
@@ -78,7 +84,7 @@ export async function submitQuote(_prev: QuoteState, formData: FormData): Promis
   }
 
   // 5. Email is best-effort and must never block success (saved already).
-  await sendQuoteEmails(finalInput);
+  await sendQuoteEmails(finalInput, locale);
 
   return { ok: true, error: null };
 }

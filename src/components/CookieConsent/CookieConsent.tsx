@@ -1,6 +1,7 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
+import { trackEvent } from "@/lib/analytics";
 import { usePathname } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
@@ -78,6 +79,29 @@ function setConsent(value: "accepted" | "declined") {
 export function CookieConsent() {
   const snapshot = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
   const pathname = usePathname();
+
+  // After consent, count clicks on email / phone / WhatsApp / Telegram links
+  // anywhere on the site as "contact" events in Google Analytics.
+  useEffect(() => {
+    if (snapshot !== "accepted") return;
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as Element | null)?.closest?.("a[href]");
+      if (!a) return;
+      const href = a.getAttribute("href") ?? "";
+      const method = href.startsWith("mailto:")
+        ? "email"
+        : href.startsWith("tel:")
+          ? "phone"
+          : href.startsWith("https://wa.me/")
+            ? "whatsapp"
+            : href.startsWith("https://t.me/")
+              ? "telegram"
+              : null;
+      if (method) trackEvent("contact", { method, page_path: window.location.pathname });
+    };
+    document.addEventListener("click", onClick, true);
+    return () => document.removeEventListener("click", onClick, true);
+  }, [snapshot]);
 
   // No cookie banner / analytics in the admin area.
   if (pathname?.startsWith("/admin")) return null;

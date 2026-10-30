@@ -56,3 +56,61 @@ const byLocale: Record<Locale, SeoText> = { en, ar, fr, es };
 export function getSeoText(locale: string): SeoText {
   return byLocale[locale as Locale] ?? en;
 }
+
+/**
+ * Search-result titles for the Services page and each service page. More
+ * descriptive than the on-page headings (which stay short), so Google shows
+ * what each page offers. " | Ahmed Alzamli" is added by the title template.
+ */
+type ServiceTitles = {
+  services: string;
+  translation: string;
+  mtpe: string;
+  transcreation: string;
+  consulting: string;
+  "ai-data-annotation": string;
+  "digital-marketing": string;
+};
+
+const serviceTitles: Record<Locale, ServiceTitles> = {
+  en: {
+    services: "Arabic Linguistic Services",
+    translation: "Professional Translation into Arabic",
+    mtpe: "Arabic Machine Translation Post-Editing (MTPE)",
+    transcreation: "Arabic Transcreation & UI Copy",
+    consulting: "Arabic Localization Consulting",
+    "ai-data-annotation": "Arabic AI Data Annotation & RLHF",
+    "digital-marketing": "Arabic Digital Marketing & SEO",
+  },
+  ar: {
+    services: "الخدمات اللغوية بالعربية",
+    translation: "ترجمة احترافية إلى العربية",
+    mtpe: "التحرير اللاحق للترجمة الآلية إلى العربية (MTPE)",
+    transcreation: "الترجمة الإبداعية ونصوص الواجهات بالعربية",
+    consulting: "استشارات التوطين إلى العربية",
+    "ai-data-annotation": "توسيم بيانات الذكاء الاصطناعي بالعربية (RLHF)",
+    "digital-marketing": "التسويق الرقمي وتحسين محركات البحث بالعربية",
+  },
+  fr: {
+    services: "Services linguistiques en arabe",
+    translation: "Traduction professionnelle vers l’arabe",
+    mtpe: "Post-édition de traduction automatique (MTPE) arabe",
+    transcreation: "Transcréation et textes d’interface en arabe",
+    consulting: "Conseil en localisation arabe",
+    "ai-data-annotation": "Annotation de données IA en arabe (RLHF)",
+    "digital-marketing": "Marketing digital et SEO en arabe",
+  },
+  es: {
+    services: "Servicios lingüísticos en árabe",
+    translation: "Traducción profesional al árabe",
+    mtpe: "Posedición de traducción automática (MTPE) al árabe",
+    transcreation: "Transcreación y textos de interfaz en árabe",
+    consulting: "Consultoría de localización al árabe",
+    "ai-data-annotation": "Anotación de datos de IA en árabe (RLHF)",
+    "digital-marketing": "Marketing digital y SEO en árabe",
+  },
+};
+
+export function getServiceSeoTitles(locale: string): ServiceTitles {
+  return serviceTitles[locale as Locale] ?? serviceTitles.en;
+}

@@ -26,6 +26,7 @@ export async function generateMetadata({
     defaultTitle: a.title,
     defaultDescription: getSeoText(locale).about,
     seo: t.seo.about,
+    defaultOgImage: "/portrait.jpg",
   });
 }
 

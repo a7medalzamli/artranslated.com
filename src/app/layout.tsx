@@ -52,14 +52,14 @@ export const metadata: Metadata = {
     description:
       "Specialist translation and localization into English and Arabic — websites, technical, legal, financial, healthcare and audiovisual content.",
     url: siteUrl,
-    images: [{ url: "/portrait.jpg", width: 640, height: 640, alt: "Ahmed Alzamli" }],
+    images: [{ url: "/og/og-en.png", width: 1200, height: 630, alt: "Translated into Arabic: Arabic translation and localization" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Website Translation & Localization into English & Arabic",
     description:
       "Specialist translation and localization into English and Arabic by Ahmed Alzamli.",
-    images: ["/portrait.jpg"],
+    images: ["/og/og-en.png"],
   },
 };
 

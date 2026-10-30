@@ -73,6 +73,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             labels={t.form}
             specializationOptions={specializationOptions}
             serviceOptions={serviceOptions}
+            locale={locale}
           />
         </div>
       </Container>

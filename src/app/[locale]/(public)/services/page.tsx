@@ -7,6 +7,7 @@ import { getServicePages, serviceImages, serviceSlugs, type ServiceSlug } from "
 import { getContent } from "@/i18n/content";
 import { getDictionary } from "@/i18n";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
+import { getServiceSeoTitles } from "@/content/seoText";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
@@ -32,7 +33,7 @@ export async function generateMetadata({
   return buildCmsMetadata({
     path: "/services",
     locale,
-    defaultTitle: getServicePages(locale).overview.pageTitle,
+    defaultTitle: getServiceSeoTitles(locale).services,
     defaultDescription: t.services.intro,
     seo: t.seo.services,
   });

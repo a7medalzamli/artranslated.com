@@ -14,6 +14,7 @@ import {
 } from "@/content/servicePages";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
+import { getServiceSeoTitles } from "@/content/seoText";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return buildCmsMetadata({
     path: `/services/${service}`,
     locale,
-    defaultTitle: page.title,
+    defaultTitle: getServiceSeoTitles(locale)[service],
     defaultDescription: page.description,
     defaultOgImage: serviceImages[service],
   });
