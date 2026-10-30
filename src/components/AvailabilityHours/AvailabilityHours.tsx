@@ -61,12 +61,25 @@ function wallTimeToInstant(y: number, m: number, d: number, h: number, min: numb
   return instant;
 }
 
-function formatTime(instant: Date, timeZone: string): string {
-  return new Intl.DateTimeFormat("en-US", {
+/**
+ * Clock style per page language: 12-hour AM/PM for English, the Arabic
+ * ص/م markers (with Western digits) for Arabic, and 24-hour for French and
+ * Spanish, as readers of each language expect.
+ */
+const TIME_FORMATS: Record<string, { locale: string; hour12: boolean }> = {
+  en: { locale: "en-US", hour12: true },
+  ar: { locale: "ar-u-nu-latn", hour12: true },
+  fr: { locale: "fr-FR", hour12: false },
+  es: { locale: "es-ES", hour12: false },
+};
+
+function formatTime(instant: Date, timeZone: string, lang: string): string {
+  const f = TIME_FORMATS[lang] ?? TIME_FORMATS.en;
+  return new Intl.DateTimeFormat(f.locale, {
     timeZone,
-    hour: "numeric",
+    hour: f.hour12 ? "numeric" : "2-digit",
     minute: "2-digit",
-    hour12: true,
+    hourCycle: f.hour12 ? "h12" : "h23",
   }).format(instant);
 }
 
@@ -99,10 +112,12 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
   const [selected, setSelected] = useState(DISPLAY_TZ);
   const [detected, setDetected] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
+  const [lang, setLang] = useState("en");
 
   useEffect(() => {
     const id = requestAnimationFrame(() => {
       setMounted(true);
+      setLang(document.documentElement.lang.slice(0, 2) || "en");
       try {
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
         if (tz) {
@@ -134,8 +149,8 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
     return list;
   }, [detected]);
 
-  const localStart = formatTime(startInstant, selected);
-  const localEnd = formatTime(endInstant, selected);
+  const localStart = formatTime(startInstant, selected, lang);
+  const localEnd = formatTime(endInstant, selected, lang);
   const crossesDay = dayKey(endInstant, selected) !== dayKey(startInstant, selected);
 
   // Label for the shown zone: "Your time (City)" for the visitor's own zone,
