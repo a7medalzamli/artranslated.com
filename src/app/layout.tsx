@@ -69,7 +69,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang={defaultLocale}
       dir={localeDirection[defaultLocale]}
       className={`${lexend.variable} ${ibmPlexSansArabic.variable}`}
+      // The inline script below sets lang/dir from the URL before hydration.
+      suppressHydrationWarning
     >
+      <head>
+        {/* Mark the whole page with its real language (e.g. /fr → lang="fr"),
+            not only the content wrapper, for browsers and search engines. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var l=location.pathname.split("/")[1];if(["en","ar","fr","es"].indexOf(l)>-1){var h=document.documentElement;h.lang=l;h.dir=l==="ar"?"rtl":"ltr";}})();`,
+          }}
+        />
+      </head>
       <body>
         {children}
         <CookieConsent />
