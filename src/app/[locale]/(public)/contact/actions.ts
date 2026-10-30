@@ -5,7 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { quoteRequestSchema } from "@/lib/validation/quote";
 import { rateLimit } from "@/lib/rateLimit";
 import { sendQuoteEmails } from "@/lib/email/quote";
-import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
+import { getServicePages, serviceSlugs } from "@/content/servicePages";
 import { isLocale, defaultLocale } from "@/i18n/config";
 
 export type QuoteState = {
@@ -59,8 +59,8 @@ export async function submitQuote(_prev: QuoteState, formData: FormData): Promis
   // "Service needed" is captured in the message, checked against the service
   // names shown on that language's form, so no schema change is needed.
   const serviceRaw = String(formData.get("service") ?? "");
-  const home = await getLocalizedHome(locale);
-  const service = home.services.items.some((s) => s.title === serviceRaw) ? serviceRaw : "";
+  const pages = getServicePages(locale).pages;
+  const service = serviceSlugs.some((slug) => pages[slug].title === serviceRaw) ? serviceRaw : "";
   const composedMessage = [service ? `Service needed: ${service}` : "", input.message ?? ""]
     .filter(Boolean)
     .join("\n\n");

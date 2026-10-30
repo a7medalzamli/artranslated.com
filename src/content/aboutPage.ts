@@ -46,7 +46,8 @@ export const courses = [
 export const volunteering = ["Translators without Borders", "ProZ Pro Bono", "Global Voices"];
 
 const PROZ = "https://www.proz.com/profile/2522215";
-const CAFE = "https://ahmedalzamly.translatorscafe.com";
+// TranslatorsCafe profile subdomains only work over http (it forwards to the https profile).
+const CAFE = "http://ahmedalzamly.translatorscafe.com";
 
 const en: AboutPageContent = {
   title: "About Me: Arabic Translator & Localizer",

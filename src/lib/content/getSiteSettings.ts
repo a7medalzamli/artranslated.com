@@ -12,6 +12,20 @@ function withNewLogo(settings: SiteSettings): SiteSettings {
   return (settings.logo === "/logo.jpg" || settings.logo === "/logo-tia.png") ? { ...settings, logo: defaultSiteSettings.logo } : settings;
 }
 
+/**
+ * WhatsApp links only work as wa.me/<country code><number>, with no "+" or "00"
+ * prefix. Fix a saved link like wa.me/00970… so the button opens a chat.
+ */
+function withValidWhatsApp(settings: SiteSettings): SiteSettings {
+  return {
+    ...settings,
+    socials: settings.socials.map((s) => ({
+      ...s,
+      href: s.href.replace(/^(https:\/\/wa\.me\/)(?:\+|00)/, "$1"),
+    })),
+  };
+}
+
 function withTelegram(settings: SiteSettings): SiteSettings {
   if (settings.socials.some((s) => s.platform === "telegram")) return settings;
   return {
@@ -45,7 +59,7 @@ export async function getSiteSettings(): Promise<SiteSettings> {
     if (error || !data) return defaultSiteSettings;
 
     const parsed = siteSettingsSchema.safeParse(data.data);
-    return parsed.success ? withTelegram(withNewLogo(parsed.data)) : defaultSiteSettings;
+    return parsed.success ? withValidWhatsApp(withTelegram(withNewLogo(parsed.data))) : defaultSiteSettings;
   } catch {
     return defaultSiteSettings;
   }

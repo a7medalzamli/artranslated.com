@@ -6,7 +6,7 @@ import { QuoteForm } from "./QuoteForm";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getSeoText } from "@/content/seoText";
-import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
+import { getServicePages, serviceSlugs } from "@/content/servicePages";
 import type { Locale } from "@/i18n";
 import { site } from "@/lib/site";
 import styles from "./contact.module.css";
@@ -32,9 +32,13 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const loc = locale as Locale;
   const t = await getContent(loc);
   const c = t.contact;
-  const home = await getLocalizedHome(loc);
-  const specializationOptions = t.cards.specializations.map((s) => s.title);
-  const serviceOptions = home.services.items.map((s) => s.title);
+  const servicePages = getServicePages(loc);
+  // All nine specializations and the six services, as shown on the Services pages.
+  const specializationOptions = [
+    ...t.cards.specializations.map((s) => s.title),
+    ...servicePages.shared.extraSpecializations.map((s) => s.title),
+  ];
+  const serviceOptions = serviceSlugs.map((slug) => servicePages.pages[slug].title);
 
   return (
     <>
