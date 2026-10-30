@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
   async headers() {
     // React dev mode needs eval() for debugging; production never does.
     const isDev = process.env.NODE_ENV !== "production";
-    const scriptSrc = `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`;
+    const scriptSrc = `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com${isDev ? " 'unsafe-eval'" : ""}`;
 
     const csp = [
       "default-src 'self'",
@@ -26,9 +26,10 @@ const nextConfig: NextConfig = {
       // without a nonce pipeline.
       scriptSrc,
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob: https://*.supabase.co",
+      // Google Analytics 4 hosts are allowed; GA only loads after cookie consent.
+      "img-src 'self' data: blob: https://*.supabase.co https://*.google-analytics.com https://*.googletagmanager.com",
       "font-src 'self' data:",
-      "connect-src 'self' https://*.supabase.co wss://*.supabase.co",
+      "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",

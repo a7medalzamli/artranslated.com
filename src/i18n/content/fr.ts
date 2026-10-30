@@ -392,7 +392,7 @@ const fr: SiteContent = {
     pairs: ["Anglais → Arabe", "Français → Arabe", "Espagnol → Arabe"],
   },
   cookie: {
-    text: "Ce site utilise des statistiques respectueuses de la vie privée pour comprendre son utilisation. Consultez la",
+    text: "Ce site utilise des cookies de mesure d’audience (Google Analytics) pour comprendre son utilisation. Ils ne sont déposés qu’avec votre accord. Consultez la",
     privacy: "politique de confidentialité",
     decline: "Refuser",
     accept: "Accepter",

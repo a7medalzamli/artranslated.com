@@ -3,33 +3,37 @@
 import { useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import { LocaleLink } from "../LocaleLink/LocaleLink";
 import { isLocale, defaultLocale } from "@/i18n/config";
 import styles from "./CookieConsent.module.css";
 
 const KEY = "cookie-consent";
 
+// Google Analytics 4 measurement ID. Loaded only after the visitor accepts cookies.
+const GA_ID = "G-1HGXTWKZGJ";
+
 const COOKIE_LABELS = {
   en: {
-    text: "This website uses privacy-friendly analytics to understand how the site is used. See the",
+    text: "This website uses analytics cookies (Google Analytics) to understand how the site is used. They are only set if you accept. See the",
     privacy: "privacy policy",
     decline: "Decline",
     accept: "Accept",
   },
   ar: {
-    text: "يستخدم هذا الموقع تحليلات تحترم الخصوصية لفهم كيفية استخدام الموقع. اطّلع على",
+    text: "يستخدم هذا الموقع ملفات تعريف ارتباط تحليلية (Google Analytics) لفهم كيفية استخدام الموقع، ولا تُفعَّل إلا بعد موافقتك. اطّلع على",
     privacy: "سياسة الخصوصية",
     decline: "رفض",
     accept: "قبول",
   },
   fr: {
-    text: "Ce site utilise des statistiques respectueuses de la vie privée pour comprendre son utilisation. Consultez la",
+    text: "Ce site utilise des cookies de mesure d’audience (Google Analytics) pour comprendre son utilisation. Ils ne sont déposés qu’avec votre accord. Consultez la",
     privacy: "politique de confidentialité",
     decline: "Refuser",
     accept: "Accepter",
   },
   es: {
-    text: "Este sitio utiliza analíticas respetuosas con la privacidad para entender cómo se usa. Consulta la",
+    text: "Este sitio utiliza cookies de analítica (Google Analytics) para entender cómo se usa. Solo se instalan si las aceptas. Consulta la",
     privacy: "política de privacidad",
     decline: "Rechazar",
     accept: "Aceptar",
@@ -84,7 +88,18 @@ export function CookieConsent() {
 
   return (
     <>
-      {snapshot === "accepted" && <Analytics />}
+      {snapshot === "accepted" && (
+        <>
+          <Analytics />
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="ga4" strategy="afterInteractive">
+            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+          </Script>
+        </>
+      )}
       {snapshot === "none" && (
         <div className={styles.banner} role="region" aria-label="Cookie consent">
           <p className={styles.text}>

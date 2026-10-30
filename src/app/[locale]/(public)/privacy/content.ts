@@ -33,7 +33,7 @@ const en: LegalContent = {
         },
         {
           lead: "Technical Data:",
-          text: "Basic website usage data (such as IP addresses or browser types) collected through standard website analytics.",
+          text: "Basic website usage data (such as pages visited, approximate location, device and browser type) collected through Google Analytics and Vercel Analytics. These tools, and the cookies Google Analytics sets, are used only if you accept them in the cookie banner. Google processes this data under its own privacy policy (policies.google.com/privacy).",
         },
       ],
     },
@@ -122,7 +122,7 @@ const ar: LegalContent = {
         },
         {
           lead: "البيانات التقنية:",
-          text: "بيانات أساسية عن استخدام الموقع (مثل عناوين IP أو أنواع المتصفحات) تُجمع عبر أدوات تحليل المواقع المعتادة.",
+          text: "بيانات أساسية عن استخدام الموقع (مثل الصفحات التي تمت زيارتها، والموقع التقريبي، ونوع الجهاز والمتصفح) تُجمع عبر Google Analytics وVercel Analytics. ولا تُستخدم هذه الأدوات، ولا ملفات تعريف الارتباط التي يضعها Google Analytics، إلا إذا وافقت عليها في شريط ملفات تعريف الارتباط. وتعالج Google هذه البيانات وفق سياسة الخصوصية الخاصة بها (policies.google.com/privacy).",
         },
       ],
     },
@@ -207,7 +207,7 @@ const fr: LegalContent = {
         },
         {
           lead: "Données techniques :",
-          text: "des données de base sur l’utilisation du site (telles que les adresses IP ou les types de navigateur) collectées au moyen d’outils d’analyse d’audience standard.",
+          text: "des données de base sur l’utilisation du site (pages consultées, localisation approximative, type d’appareil et de navigateur) collectées au moyen de Google Analytics et de Vercel Analytics. Ces outils, ainsi que les cookies déposés par Google Analytics, ne sont utilisés que si vous les acceptez dans le bandeau cookies. Google traite ces données conformément à sa propre politique de confidentialité (policies.google.com/privacy).",
         },
       ],
     },
@@ -296,7 +296,7 @@ const es: LegalContent = {
         },
         {
           lead: "Datos técnicos:",
-          text: "datos básicos de uso del sitio web (como direcciones IP o tipos de navegador) recopilados mediante herramientas estándar de analítica web.",
+          text: "datos básicos de uso del sitio web (como las páginas visitadas, la ubicación aproximada y el tipo de dispositivo y navegador) recopilados mediante Google Analytics y Vercel Analytics. Estas herramientas, y las cookies que instala Google Analytics, solo se utilizan si las acepta en el aviso de cookies. Google trata estos datos conforme a su propia política de privacidad (policies.google.com/privacy).",
         },
       ],
     },

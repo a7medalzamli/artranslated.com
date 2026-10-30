@@ -389,7 +389,7 @@ const es: SiteContent = {
     pairs: ["Inglés → Árabe", "Francés → Árabe", "Español → Árabe"],
   },
   cookie: {
-    text: "Este sitio utiliza analíticas respetuosas con la privacidad para entender cómo se usa. Consulta la",
+    text: "Este sitio utiliza cookies de analítica (Google Analytics) para entender cómo se usa. Solo se instalan si las aceptas. Consulta la",
     privacy: "política de privacidad",
     decline: "Rechazar",
     accept: "Aceptar",

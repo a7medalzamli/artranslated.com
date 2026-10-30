@@ -390,7 +390,7 @@ const en = {
     pairs: ["English → Arabic", "French → Arabic", "Spanish → Arabic"],
   },
   cookie: {
-    text: "This website uses privacy-friendly analytics to understand how the site is used. See the",
+    text: "This website uses analytics cookies (Google Analytics) to understand how the site is used. They are only set if you accept. See the",
     privacy: "privacy policy",
     decline: "Decline",
     accept: "Accept",
