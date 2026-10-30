@@ -15,7 +15,10 @@ function localeUrl(locale: string, path: string): string {
 /** hreflang alternates map for a path across all locales. */
 function alternates(path: string) {
   return {
-    languages: Object.fromEntries(locales.map((l) => [l, localeUrl(l, path)])),
+    languages: {
+      ...Object.fromEntries(locales.map((l) => [l, localeUrl(l, path)])),
+      "x-default": localeUrl("en", path),
+    },
   };
 }
 

@@ -22,8 +22,9 @@ const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Website Translation & Localization into English & Arabic | Ahmed Alzamli",
-    template: "%s | Ahmed Alzamli — Arabic Translation & Localization",
+    default: "Arabic Translation & Localization Services | Ahmed Alzamli",
+    // Kept short so titles fit in Google results (~60 characters).
+    template: "%s | Ahmed Alzamli",
   },
   description:
     "Website translation and localization into English and Arabic, plus professional English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations.",

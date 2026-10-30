@@ -16,6 +16,8 @@ import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
+import { JsonLd } from "@/components/JsonLd/JsonLd";
+import { siteUrl } from "@/lib/seo";
 import styles from "./servicePage.module.css";
 
 type Params = Promise<{ locale: string; service: string }>;
@@ -54,8 +56,20 @@ export default async function ServicePage({ params }: { params: Params }) {
   const { shared, pages } = getServicePages(locale);
   const page = pages[service];
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: page.title,
+    description: page.description,
+    url: `${siteUrl}/${locale}/services/${service}`,
+    inLanguage: locale,
+    areaServed: "Worldwide",
+    provider: { "@type": "ProfessionalService", name: "Ahmed Alzamli", url: siteUrl },
+  };
+
   return (
     <>
+      <JsonLd data={serviceSchema} />
       <PageHeader title={page.title} />
 
       <Section>

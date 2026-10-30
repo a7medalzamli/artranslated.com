@@ -5,6 +5,7 @@ import { ProcessSteps } from "@/components/ProcessSteps/ProcessSteps";
 import { CTA } from "@/components/CTA/CTA";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
+import { getSeoText } from "@/content/seoText";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 
@@ -19,7 +20,7 @@ export async function generateMetadata({
     path: "/process",
     locale,
     defaultTitle: t.process.title,
-    defaultDescription: t.process.description,
+    defaultDescription: getSeoText(locale).process,
     seo: t.seo.process,
   });
 }

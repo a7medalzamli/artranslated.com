@@ -5,6 +5,7 @@ import { Container } from "@/components/Container/Container";
 import { QuoteForm } from "./QuoteForm";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
+import { getSeoText } from "@/content/seoText";
 import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import type { Locale } from "@/i18n";
 import { site } from "@/lib/site";
@@ -21,7 +22,7 @@ export async function generateMetadata({
     path: "/contact",
     locale,
     defaultTitle: t.contact.title,
-    defaultDescription: t.contact.description,
+    defaultDescription: getSeoText(locale).contact,
     seo: t.seo.contact,
   });
 }

@@ -6,6 +6,7 @@ import { CTA } from "@/components/CTA/CTA";
 import { courses, getAboutPage, volunteering, webinars } from "@/content/aboutPage";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
+import { getSeoText } from "@/content/seoText";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
@@ -23,7 +24,7 @@ export async function generateMetadata({
     path: "/about",
     locale,
     defaultTitle: a.title,
-    defaultDescription: a.lead,
+    defaultDescription: getSeoText(locale).about,
     seo: t.seo.about,
   });
 }

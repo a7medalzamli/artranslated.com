@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { locales } from "@/i18n/config";
 import { siteUrl } from "@/lib/seo";
 
+/** Open Graph expects language_TERRITORY codes. */
+const ogLocales: Record<string, string> = { en: "en_US", ar: "ar_AR", fr: "fr_FR", es: "es_ES" };
+
 export type SeoOverride = { title?: string; description?: string; ogImage?: string };
 
 /**
@@ -23,7 +26,11 @@ export function buildCmsMetadata(opts: {
   const description = opts.seo?.description?.trim() || opts.defaultDescription;
   const ogImage = opts.seo?.ogImage?.trim() || opts.defaultOgImage || "/portrait.jpg";
   const canonical = `/${opts.locale}${opts.path}`;
-  const languages = Object.fromEntries(locales.map((l) => [l, `/${l}${opts.path}`]));
+  // x-default tells Google which version to show visitors in other languages.
+  const languages = {
+    ...Object.fromEntries(locales.map((l) => [l, `/${l}${opts.path}`])),
+    "x-default": `/en${opts.path}`,
+  };
 
   return {
     title,
@@ -35,7 +42,7 @@ export function buildCmsMetadata(opts: {
       url: `${siteUrl}${canonical}`,
       images: [{ url: ogImage }],
       type: "website",
-      locale: opts.locale,
+      locale: ogLocales[opts.locale] ?? opts.locale,
     },
     twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };

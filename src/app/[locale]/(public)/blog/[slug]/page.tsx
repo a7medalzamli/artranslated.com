@@ -9,6 +9,7 @@ import { getPublishedPostBySlug } from "@/lib/blog/posts";
 import { formatDate, readingTimeMinutes } from "@/lib/blog/format";
 import { getContent } from "@/i18n/content";
 import type { Locale } from "@/i18n";
+import { locales } from "@/i18n/config";
 import { routes } from "@/lib/routes";
 import { siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -19,9 +20,9 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const post = await getPublishedPostBySlug(slug);
   if (!post) return { title: "Post not found" };
 
@@ -31,7 +32,13 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: {
+      canonical: `/${locale}/blog/${post.slug}`,
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}/blog/${post.slug}`])),
+        "x-default": `/en/blog/${post.slug}`,
+      },
+    },
     openGraph: {
       title,
       description,
@@ -65,8 +72,10 @@ export default async function BlogPostPage({
     datePublished: post.published_at ?? undefined,
     dateModified: post.updated_at,
     author: { "@type": "Person", name: site.name },
-    url: `${siteUrl}/blog/${post.slug}`,
-    mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
+    url: `${siteUrl}/${locale}/blog/${post.slug}`,
+    mainEntityOfPage: `${siteUrl}/${locale}/blog/${post.slug}`,
+    inLanguage: locale,
+    publisher: { "@type": "Person", name: site.name, url: siteUrl },
   };
 
   return (

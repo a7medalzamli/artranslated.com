@@ -49,7 +49,7 @@ const PROZ = "https://www.proz.com/profile/2522215";
 const CAFE = "https://ahmedalzamly.translatorscafe.com";
 
 const en: AboutPageContent = {
-  title: "About Ahmed Alzamli",
+  title: "About Me: Arabic Translator & Localizer",
   heading: "About",
   lead: "Creative solutions for clients who want to expand to the Arabic-speaking countries.",
   offerings: [
@@ -107,7 +107,7 @@ const en: AboutPageContent = {
 };
 
 const ar: AboutPageContent = {
-  title: "نبذة عن أحمد الزاملي",
+  title: "من أنا: مترجم ومختص في التوطين إلى العربية",
   heading: "من أنا",
   lead: "حلول إبداعية للعملاء الراغبين في التوسّع إلى الدول الناطقة بالعربية.",
   offerings: [
@@ -165,7 +165,7 @@ const ar: AboutPageContent = {
 };
 
 const fr: AboutPageContent = {
-  title: "À propos d’Ahmed Alzamli",
+  title: "À propos : traducteur et localisateur arabe",
   heading: "À propos",
   lead: "Des solutions créatives pour les clients qui souhaitent se développer dans les pays arabophones.",
   offerings: [
@@ -223,7 +223,7 @@ const fr: AboutPageContent = {
 };
 
 const es: AboutPageContent = {
-  title: "Sobre Ahmed Alzamli",
+  title: "Sobre mí: traductor y localizador de árabe",
   heading: "Sobre mí",
   lead: "Soluciones creativas para clientes que quieren expandirse a los países de habla árabe.",
   offerings: [

@@ -7,6 +7,7 @@ import { postCategories, isPostCategory } from "@/content/postCategories";
 import { formatDate, readingTimeMinutes } from "@/lib/blog/format";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
+import { getSeoText } from "@/content/seoText";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import styles from "./blog.module.css";
@@ -22,7 +23,7 @@ export async function generateMetadata({
     path: "/blog",
     locale,
     defaultTitle: t.blog.title,
-    defaultDescription: t.blog.description,
+    defaultDescription: getSeoText(locale).blog,
     seo: t.seo.blog,
   });
 }

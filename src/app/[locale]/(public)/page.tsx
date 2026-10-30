@@ -11,6 +11,7 @@ import { Flag, type LanguageCode } from "@/components/Flag/Flag";
 import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
+import { getSeoText } from "@/content/seoText";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { siteUrl } from "@/lib/seo";
@@ -27,7 +28,8 @@ export async function generateMetadata({
   return buildCmsMetadata({
     path: "",
     locale,
-    defaultTitle: "Website Translation & Localization into English & Arabic | Ahmed Alzamli",
+    defaultTitle: getSeoText(locale).homeTitle,
+    defaultDescription: getSeoText(locale).home,| Ahmed Alzamli",
     defaultDescription: "Website translation and localization into English and Arabic, plus English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations.",
     seo: t.seo.home,
   });
@@ -45,13 +47,38 @@ const professionalService = {
   email: site.contact.email,
   telephone: site.contact.phone,
   serviceType: [
+    "Arabic translation",
     "Website localization",
+    "SaaS localization",
+    "Machine translation post-editing",
+    "Transcreation",
+    "Localization consulting",
+    "AI data annotation",
+    "Arabic digital marketing",
     "Technical translation",
     "Legal translation",
     "Financial translation",
     "Healthcare translation",
     "Audiovisual translation",
   ],
+  logo: `${siteUrl}/logo-tia-v2.png`,
+  image: `${siteUrl}/portrait.jpg`,
+  address: { "@type": "PostalAddress", addressCountry: "PS" },
+  founder: {
+    "@type": "Person",
+    name: "Ahmed Alzamli",
+    jobTitle: "Arabic Translator and Localizer",
+    knowsLanguage: ["ar", "en", "fr", "es"],
+  },
+};
+
+const webSite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Translated into Arabic (TIA)",
+  alternateName: "Ahmed Alzamli",
+  url: siteUrl,
+  inLanguage: ["en", "ar", "fr", "es"],
 };
 
 const languageCodes: LanguageCode[] = ["en", "ar", "fr", "es"];
@@ -65,6 +92,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <>
       <JsonLd data={professionalService} />
+      <JsonLd data={webSite} />
 
       {/* ---- Hero ---- */}
       <section className={styles.hero}>
