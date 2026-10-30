@@ -629,3 +629,15 @@
     white-space: nowrap;
   }
 }
+
+/* Hero fills the first screen, so its bottom line sits at the screen's edge. */
+.hero {
+  min-height: calc(100svh - var(--header-height) - 1px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero > * {
+  width: 100%;
+}
