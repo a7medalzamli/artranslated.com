@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { ProcessSteps } from "@/components/ProcessSteps/ProcessSteps";
 import { CTA } from "@/components/CTA/CTA";
-import { getContent } from "@/i18n/content";
+import { getContent, getStaticContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getSeoText } from "@/content/seoText";
 import type { Locale } from "@/i18n";
@@ -35,7 +35,8 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
       <PageHeader
         eyebrow={p.eyebrow}
         title={p.title}
-        description={p.description}
+        // Non-English intros follow the code copy (English has none), not older CMS text.
+        description={locale === "en" ? p.description : getStaticContent(locale as Locale).process.description}
         breadcrumbs={[{ label: t.common.homeCrumb, href: routes.home }, { label: p.crumb }]}
       />
 
