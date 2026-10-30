@@ -13,7 +13,7 @@ const es: SiteContent = {
   home: {
     languagesTitle: "Idiomas con los que trabajo",
     langNames: { en: "Inglés", ar: "Árabe", fr: "Francés", es: "Español" },
-    pastExperienceEyebrow: "Experiencia",
+    pastExperienceEyebrow: "Experiencia previa",
     pastExperienceTitle: "Una trayectoria en la que confían las agencias",
     stats: {
       years: "Años de experiencia",
@@ -44,7 +44,7 @@ const es: SiteContent = {
       "Traductor y localizador especializado que ayuda a agencias y empresas a llegar al público de habla árabe e inglesa con precisión, matiz cultural y entregas fiables.",
     crumb: "Acerca de",
     paragraphs: [
-      "Traduzco y localizo sitios web y productos digitales al inglés y al árabe, y traduzco documentación especializada del inglés, el francés y el español al árabe. Mi objetivo es sencillo: contenido que se lea como si se hubiera escrito para su público, nunca una mera conversión palabra por palabra.",
+      "Traduzco y localizo sitios web y productos digitales al inglés y al árabe, y traduzco documentación especializada del inglés, el francés y el español al árabe. Mi objetivo es sencillo: contenido que se lea como si se hubiera escrito para tu público, nunca una mera conversión palabra por palabra.",
       "Mi formación combina la ingeniería ambiental y un diploma en marketing, por eso la precisión técnica y una redacción persuasiva y natural conviven con facilidad en mi trabajo. Esa combinación es especialmente valiosa en la localización de sitios web, la redacción de interfaces y la transcreación, donde la precisión por sí sola no basta: el mensaje tiene que calar.",
       "Cada proyecto sigue un flujo de trabajo riguroso de Traducción–Edición–Revisión (TEP) con memorias de traducción de SDL Trados y bases terminológicas aprobadas por el cliente, de modo que la terminología se mantenga coherente y la calidad se integre desde el principio. Los archivos se tratan con confidencialidad, con un acuerdo de confidencialidad disponible antes de compartir nada.",
     ],
@@ -73,7 +73,7 @@ const es: SiteContent = {
       "Cada especialización tiene su propia página que explica qué incluye y cómo se realiza el trabajo.",
     translationTitle: "Traducción",
     translationSummary:
-      "Traducción humana profesional del inglés, el francés y el español al árabe — precisa, natural y coherente con su terminología, para documentos, sitios web y software.",
+      "Traducción humana profesional del inglés, el francés y el español al árabe — precisa, natural y coherente con tu terminología, para documentos, sitios web y software.",
     consultingTitle: "Consultoría",
     consultingSummary:
       "Consultoría: asesoramiento para entrar en los mercados de habla árabe, creación de glosarios y guías de estilo, y elección del flujo de trabajo, las herramientas y el proceso de calidad adecuados.",
@@ -89,8 +89,7 @@ const es: SiteContent = {
   process: {
     eyebrow: "Proceso y control de calidad",
     title: "¿Cómo funciona?",
-    description:
-      "La calidad se integra mediante un flujo de trabajo definido, no se añade al final. Así es exactamente cómo se gestiona tu proyecto, paso a paso.",
+    description: "",
     crumb: "¿Cómo funciona?",
     tepTitle: "El flujo TEP",
     tepIntro:
@@ -119,7 +118,7 @@ const es: SiteContent = {
       {
         title: "Controles de calidad y entrega",
         description:
-          "Controles de calidad finales y entrega en su formato.",
+          "Controles de calidad finales y entrega en tu formato.",
       },
     ],
     qaTitle: "Política de aseguramiento de la calidad",

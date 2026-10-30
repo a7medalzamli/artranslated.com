@@ -13,7 +13,7 @@ const fr: SiteContent = {
   home: {
     languagesTitle: "Les langues dans lesquelles je travaille",
     langNames: { en: "Anglais", ar: "Arabe", fr: "Français", es: "Espagnol" },
-    pastExperienceEyebrow: "Expérience",
+    pastExperienceEyebrow: "Expérience passée",
     pastExperienceTitle: "Un parcours qui inspire confiance aux agences",
     stats: {
       years: "Années d'expérience",
@@ -92,8 +92,7 @@ const fr: SiteContent = {
   process: {
     eyebrow: "Processus et QA",
     title: "Comment ça marche ?",
-    description:
-      "La qualité est intégrée grâce à un flux de travail défini — pas ajoutée à la fin. Voici exactement comment votre projet est traité, étape par étape.",
+    description: "",
     crumb: "Comment ça marche ?",
     tepTitle: "Le flux TEP",
     tepIntro:

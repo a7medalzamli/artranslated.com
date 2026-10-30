@@ -88,8 +88,7 @@ const ar: SiteContent = {
   process: {
     eyebrow: "سير العمل والجودة",
     title: "كيف نعمل؟",
-    description:
-      "الجودة مبنية من خلال سير عمل محدد — لا تُضاف في النهاية. إليك بالضبط كيف يُنجَز مشروعك، خطوة بخطوة.",
+    description: "",
     crumb: "كيف نعمل؟",
     tepTitle: "سير عمل TEP",
     tepIntro:

@@ -33,6 +33,69 @@ const ZONES: { tz: string; label: string }[] = [
   { tz: "Australia/Sydney", label: "Australia (Sydney)" },
 ];
 
+/** Picker names in the other page languages (English names live in ZONES). */
+const ZONE_NAMES: Record<string, Record<string, string>> = {
+  fr: {
+    "America/New_York": "États-Unis, côte Est (New York)",
+    "America/Chicago": "États-Unis, Centre (Chicago)",
+    "America/Denver": "États-Unis, Rocheuses (Denver)",
+    "America/Los_Angeles": "États-Unis, côte Ouest (Los Angeles)",
+    "America/Anchorage": "Alaska",
+    "Pacific/Honolulu": "Hawaï",
+    "Europe/London": "Royaume-Uni · Irlande · Portugal",
+    "Europe/Paris": "Europe de l’Ouest (France, Allemagne, Espagne)",
+    "Europe/Athens": "Europe de l’Est (Grèce, Roumanie)",
+    "Africa/Cairo": "Égypte",
+    "Asia/Riyadh": "Arabie saoudite · Golfe",
+    "Asia/Dubai": "Émirats arabes unis",
+    "Asia/Kolkata": "Inde",
+    "Asia/Hebron": "Palestine",
+    "Australia/Sydney": "Australie (Sydney)",
+  },
+  es: {
+    "America/New_York": "EE. UU., costa este (Nueva York)",
+    "America/Chicago": "EE. UU., centro (Chicago)",
+    "America/Denver": "EE. UU., montaña (Denver)",
+    "America/Los_Angeles": "EE. UU., costa oeste (Los Ángeles)",
+    "America/Anchorage": "Alaska",
+    "Pacific/Honolulu": "Hawái",
+    "Europe/London": "Reino Unido · Irlanda · Portugal",
+    "Europe/Paris": "Europa occidental (Francia, Alemania, España)",
+    "Europe/Athens": "Europa oriental (Grecia, Rumanía)",
+    "Africa/Cairo": "Egipto",
+    "Asia/Riyadh": "Arabia Saudí · Golfo",
+    "Asia/Dubai": "Emiratos Árabes Unidos",
+    "Asia/Kolkata": "India",
+    "Asia/Hebron": "Palestina",
+    "Australia/Sydney": "Australia (Sídney)",
+  },
+  ar: {
+    "America/New_York": "الولايات المتحدة، الساحل الشرقي (نيويورك)",
+    "America/Chicago": "الولايات المتحدة، الوسط (شيكاغو)",
+    "America/Denver": "الولايات المتحدة، المنطقة الجبلية (دنفر)",
+    "America/Los_Angeles": "الولايات المتحدة، الساحل الغربي (لوس أنجلوس)",
+    "America/Anchorage": "ألاسكا",
+    "Pacific/Honolulu": "هاواي",
+    "Europe/London": "المملكة المتحدة · أيرلندا · البرتغال",
+    "Europe/Paris": "أوروبا الغربية (فرنسا، ألمانيا، إسبانيا)",
+    "Europe/Athens": "أوروبا الشرقية (اليونان، رومانيا)",
+    "Africa/Cairo": "مصر",
+    "Asia/Riyadh": "السعودية · الخليج",
+    "Asia/Dubai": "الإمارات العربية المتحدة",
+    "Asia/Kolkata": "الهند",
+    "Asia/Hebron": "فلسطين",
+    "Australia/Sydney": "أستراليا (سيدني)",
+  },
+};
+
+/** "Your location" prefix for an unlisted detected zone, per language. */
+const YOUR_LOCATION: Record<string, string> = {
+  en: "Your location",
+  fr: "Votre position",
+  es: "Tu ubicación",
+  ar: "موقعك",
+};
+
 /** Offset (minutes) of a time zone at a given instant. */
 function tzOffsetMinutes(date: Date, timeZone: string): number {
   const parts = new Intl.DateTimeFormat("en-US", {
@@ -142,12 +205,14 @@ export function AvailabilityHours({ labels = defaultLabels }: { labels?: Availab
 
   // Build the options, adding the detected zone if it isn't already listed.
   const options = useMemo(() => {
-    const list = [...ZONES];
+    const names = ZONE_NAMES[lang];
+    const list = ZONES.map((z) => ({ tz: z.tz, label: names?.[z.tz] ?? z.label }));
     if (detected && !list.some((z) => z.tz === detected)) {
-      list.unshift({ tz: detected, label: `Your location (${detected.replace(/_/g, " ")})` });
+      const prefix = YOUR_LOCATION[lang] ?? YOUR_LOCATION.en;
+      list.unshift({ tz: detected, label: `${prefix} (${detected.replace(/_/g, " ")})` });
     }
     return list;
-  }, [detected]);
+  }, [detected, lang]);
 
   const localStart = formatTime(startInstant, selected, lang);
   const localEnd = formatTime(endInstant, selected, lang);

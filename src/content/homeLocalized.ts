@@ -24,7 +24,7 @@ export const localizedHome: Record<"ar" | "fr" | "es", HomeContent> = {
   ar: {
     hero: {
       label: "",
-      title: "لمساعدة علامتك التجارية على التواصل مع العملاء حول العالم.",
+      title: "اجعل أعمالك تزدهر في العالم العربي",
       lead: "",
     },
     about: {
@@ -71,13 +71,13 @@ export const localizedHome: Record<"ar" | "fr" | "es", HomeContent> = {
     why: {
       eyebrow: "",
       title: "لماذا تتعاون معي؟",
-      intro: "الوصول إلى السوق العربية يتطلب ذكاءً ثقافيًا ودقة تقنية وموثوقية — لا مجرد لغة.",
+      intro: "الوصول إلى السوق العربية يتطلب ذكاءً ثقافيًا ودقة تقنية وموثوقية، لا مجرد لغة.",
       items: [
-        { title: "ضمان جودة دقيق", text: "مراجعة كاملة قوامها الترجمة والتحرير والتدقيق تحافظ على اتساق الجودة والنبرة." },
+        { title: "ضمان جودة دقيق", text: "مراجعة كاملة قوامها الترجمة والتحرير والتدقيق (TEP) تحافظ على اتساق الجودة والنبرة." },
         { title: "أدوات بمعايير الصناعة", text: "ذاكرات الترجمة وقواعد المصطلحات في SDL Trados تضمن الاتساق والكفاءة." },
         { title: "دقة ثقافية ومصطلحية", text: "يُكيَّف المحتوى ليُقرأ بشكل طبيعي وصحيح للجمهور المستهدف." },
-        { title: "التسليم في الموعد", text: "تُحدَّد نطاقات المشاريع بواقعية وتُسلَّم في الموعد المتفق عليه." },
-        { title: "تواصل واضح", text: "تُطرح الأسئلة مبكرًا ويسهل متابعة التقدم من البداية إلى النهاية." },
+        { title: "التسليم في الموعد", text: "تُدار المشاريع بكفاءة وتُسلَّم في الموعد المتفق عليه." },
+        { title: "تواصل واضح", text: "ردود سريعة وإجابات واضحة ليمضي مشروعك قدمًا دون تأخير." },
         { title: "السرية افتراضيًا", text: "تُعامَل الملفات بأمان، مع إمكانية توقيع اتفاقية عدم إفصاح قبل مشاركة أي شيء." },
       ],
     },
@@ -91,7 +91,7 @@ export const localizedHome: Record<"ar" | "fr" | "es", HomeContent> = {
   fr: {
     hero: {
       label: "",
-      title: "Pour aider votre marque à se connecter avec des clients du monde entier.",
+      title: "Faites prospérer votre entreprise dans le monde arabophone",
       lead: "",
     },
     about: {
@@ -138,13 +138,13 @@ export const localizedHome: Record<"ar" | "fr" | "es", HomeContent> = {
     why: {
       eyebrow: "",
       title: "Pourquoi travailler avec moi ?",
-      intro: "Atteindre le marché arabe exige une intelligence culturelle, une précision technique et de la fiabilité — pas seulement la langue.",
+      intro: "Atteindre le marché arabe exige une intelligence culturelle, une précision technique et de la fiabilité , pas seulement la langue.",
       items: [
-        { title: "Assurance qualité méticuleuse", text: "Une révision complète Traduction–Révision–Relecture maintient la qualité et le ton cohérents." },
+        { title: "Assurance qualité méticuleuse", text: "Un processus complet de traduction, révision et relecture (TEP) garantit une qualité et un ton homogènes." },
         { title: "Outils aux normes du secteur", text: "Les mémoires de traduction et bases terminologiques SDL Trados garantissent cohérence et efficacité." },
         { title: "Exactitude culturelle et terminologique", text: "Le contenu est adapté pour se lire naturellement et correctement pour le public cible." },
-        { title: "Livraison dans les délais", text: "Les projets sont cadrés de façon réaliste et livrés à la date convenue." },
-        { title: "Communication claire", text: "Les questions sont posées tôt et l'avancement est facile à suivre du début à la fin." },
+        { title: "Livraison dans les délais", text: "Les projets sont gérés efficacement et livrés dans les délais convenus." },
+        { title: "Communication claire", text: "Des réponses rapides et claires pour que vos projets avancent sans retard." },
         { title: "Confidentialité par défaut", text: "Les fichiers sont traités en toute sécurité, avec un accord de confidentialité possible avant tout partage." },
       ],
     },
@@ -158,7 +158,7 @@ export const localizedHome: Record<"ar" | "fr" | "es", HomeContent> = {
   es: {
     hero: {
       label: "",
-      title: "Para ayudar a tu marca a conectar con clientes de todo el mundo.",
+      title: "Haz crecer tu negocio en el mundo de habla árabe",
       lead: "",
     },
     about: {
@@ -207,11 +207,11 @@ export const localizedHome: Record<"ar" | "fr" | "es", HomeContent> = {
       title: "¿Por qué trabajar conmigo?",
       intro: "Llegar al mercado árabe requiere inteligencia cultural, precisión técnica y fiabilidad, no solo idioma.",
       items: [
-        { title: "Control de calidad meticuloso", text: "Una revisión completa de Traducción–Edición–Revisión mantiene la calidad y el tono coherentes." },
+        { title: "Control de calidad meticuloso", text: "Un proceso completo de traducción, edición y revisión (TEP) mantiene la calidad y el tono coherentes." },
         { title: "Herramientas estándar del sector", text: "Las memorias de traducción y bases terminológicas de SDL Trados garantizan coherencia y eficiencia." },
         { title: "Precisión cultural y terminológica", text: "El contenido se adapta para que se lea con naturalidad y corrección para el público objetivo." },
-        { title: "Entrega puntual", text: "Los proyectos se planifican de forma realista y se entregan en la fecha acordada." },
-        { title: "Comunicación clara", text: "Las preguntas se plantean pronto y el avance es fácil de seguir de principio a fin." },
+        { title: "Entrega puntual", text: "Los proyectos se gestionan con eficacia y se entregan en el plazo acordado." },
+        { title: "Comunicación clara", text: "Respuestas rápidas y claras para que tus proyectos avancen sin retrasos." },
         { title: "Confidencialidad por defecto", text: "Los archivos se tratan de forma segura, con un acuerdo de confidencialidad disponible antes de compartir nada." },
       ],
     },

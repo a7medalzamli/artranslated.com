@@ -644,7 +644,7 @@ const es: LocaleContent = {
     includedTitle: "Qué incluye",
     specTitle: "Especializaciones",
     specIntro:
-      "Una traducción precisa depende de conocer el ámbito. Cada especialización se trabaja con conocimiento del tema, glosarios específicos y controles terminológicos, para que su texto en árabe sea correcto tanto para expertos como para el público general.",
+      "Una traducción precisa depende de conocer el ámbito. Cada especialización se trabaja con conocimiento del tema, glosarios específicos y controles terminológicos, para que tu texto en árabe sea correcto tanto para expertos como para el público general.",
     extraSpecializations: [
       {
         title: "Educación",
@@ -673,38 +673,38 @@ const es: LocaleContent = {
     ],
   },
   overview: {
-    helpTitle: "Puedo ayudarle con",
+    helpTitle: "Puedo ayudarte con",
     learnMore: "Más información",
     pageTitle: "Servicios lingüísticos",
-    closingTitle: "Me encantaría saber más sobre su proyecto",
-    closingText: "Cuénteme qué necesita traducir, adaptar o revisar y le responderé con un plan y un presupuesto.",
+    closingTitle: "Me encantaría saber más sobre tu proyecto",
+    closingText: "Cuéntame qué necesitas traducir, adaptar o revisar y te responderé con un plan y un presupuesto.",
     getInTouch: "Contactar",
     contactLabels: { email: "Correo electrónico", whatsapp: "WhatsApp", telegram: "Telegram", timezone: "Zona horaria" },
     timezone: "Palestina (GMT+2 / GMT+3)",
     items: {
       translation: {
-        question: "¿Necesita traducir documentos, sitios web o software al árabe?",
+        question: "¿Necesitas traducir documentos, sitios web o software al árabe?",
         text: "Traduzco **del inglés, el francés y el español al árabe** en los ámbitos técnico, jurídico, financiero, sanitario, educativo, medioambiental y audiovisual, con precisión, naturalidad y coherencia terminológica.",
       },
       mtpe: {
-        question: "¿Utiliza traducción automática pero necesita un árabe de calidad humana?",
+        question: "¿Usas traducción automática pero necesitas un árabe de calidad humana?",
         text: "Realizo la **posedición de traducciones automáticas**, corrigiendo sentido, terminología y estilo para que el texto se lea con naturalidad: posedición ligera o completa según el uso del texto.",
       },
       transcreation: {
-        question: "¿Sus textos de marketing o de su aplicación deben sonar naturales en árabe?",
+        question: "¿Tus textos de marketing o de tu aplicación deben sonar naturales en árabe?",
         text: "Adapto **eslóganes, campañas y textos de interfaz** para que transmitan la misma intención y emoción al público árabe, quepan en el espacio disponible y respeten la lectura de derecha a izquierda.",
       },
       consulting: {
-        question: "¿Planea entrar en los mercados de habla árabe?",
-        text: "Le asesoro sobre **terminología, guías de estilo, flujos de trabajo y herramientas** para que su contenido esté listo para el árabe y la calidad se mantenga a medida que crece.",
+        question: "¿Planeas entrar en los mercados de habla árabe?",
+        text: "Te asesoro sobre **terminología, guías de estilo, flujos de trabajo y herramientas** para que tu contenido esté listo para el árabe y la calidad se mantenga a medida que creces.",
       },
       "ai-data-annotation": {
-        question: "¿Entrena o evalúa modelos de IA en árabe?",
-        text: "**Puntúo, clasifico y corrijo respuestas de IA en árabe**, redacto instrucciones y respuestas, y ofrezco comentarios estructurados según sus pautas para mejorar la calidad y la seguridad de los modelos.",
+        question: "¿Entrenas o evalúas modelos de IA en árabe?",
+        text: "**Puntúo, clasifico y corrijo respuestas de IA en árabe**, redacto instrucciones y respuestas, y ofrezco comentarios estructurados según tus pautas para mejorar la calidad y la seguridad de los modelos.",
       },
       "digital-marketing": {
-        question: "¿Quiere que el público árabe encuentre su marca y confíe en ella?",
-        text: "Combino localización y experiencia en marketing para crear **contenido en árabe para SEO, redes sociales y campañas**, escrito para su mercado objetivo y no traducido línea por línea.",
+        question: "¿Quieres que el público árabe encuentre tu marca y confíe en ella?",
+        text: "Combino localización y experiencia en marketing para crear **contenido en árabe para SEO, redes sociales y campañas**, escrito para tu mercado objetivo y no traducido línea por línea.",
       },
     },
   },
@@ -714,7 +714,7 @@ const es: LocaleContent = {
       description:
         "Traducción humana profesional del inglés, el francés y el español al árabe, en los ámbitos técnico, jurídico, financiero, sanitario y audiovisual.",
       intro: [
-        "Cada proyecto lo traduce un lingüista profesional, no solo una máquina. El objetivo es un árabe preciso, natural y coherente con su terminología y su tono de marca.",
+        "Cada proyecto lo traduce un lingüista profesional, no solo una máquina. El objetivo es un árabe preciso, natural y coherente con tu terminología y tu tono de marca.",
         "El trabajo sigue un proceso definido de traducción, edición y corrección, con herramientas TAO, glosarios y memorias de traducción para mantener la calidad en cada archivo y cada actualización.",
       ],
       includedTitle: "Proyectos gestionados",
@@ -726,8 +726,8 @@ const es: LocaleContent = {
         "Mantenimiento de glosarios y memorias de traducción",
         "Vídeos y audio",
       ],
-      ctaTitle: "¿Tiene archivos para traducir?",
-      ctaDescription: "Envíe sus documentos y reciba un presupuesto y un plazo de entrega claros.",
+      ctaTitle: "¿Tienes archivos para traducir?",
+      ctaDescription: "Envía tus documentos y recibe un presupuesto y un plazo de entrega claros.",
     },
     mtpe: {
       title: "Posedición de traducción automática (MTPE)",
@@ -745,8 +745,8 @@ const es: LocaleContent = {
         "Evaluación de la calidad bajo petición",
         "Revisión final y comprobación del formato",
       ],
-      ctaTitle: "¿Utiliza traducción automática?",
-      ctaDescription: "Obtenga su rapidez con la calidad que espera su público.",
+      ctaTitle: "¿Usas traducción automática?",
+      ctaDescription: "Consigue su rapidez con la calidad que espera tu público.",
     },
     transcreation: {
       title: "Transcreación y textos de interfaz",
@@ -764,8 +764,8 @@ const es: LocaleContent = {
         "Revisión de los textos en contexto (capturas o entorno de pruebas)",
         "Pautas de voz y tono de marca en árabe",
       ],
-      ctaTitle: "¿Lanza su producto en árabe?",
-      ctaDescription: "Haga que su mensaje llegue al público árabe desde el primer día.",
+      ctaTitle: "¿Lanzas tu producto en árabe?",
+      ctaDescription: "Haz que tu mensaje llegue al público árabe desde el primer día.",
     },
     consulting: {
       title: "Consultoría",
@@ -773,7 +773,7 @@ const es: LocaleContent = {
         "Asesoramiento práctico para entrar en los mercados de habla árabe y crear un flujo de localización escalable.",
       intro: [
         "Lanzarse en árabe no es solo traducir: implica diseños de derecha a izquierda, variantes regionales, decisiones terminológicas y elegir las herramientas y los socios adecuados.",
-        "La consultoría le ayuda a tomar esas decisiones desde el principio, para que el contenido sea más fácil de localizar y la calidad se mantenga a medida que crece.",
+        "La consultoría te ayuda a tomar esas decisiones desde el principio, para que el contenido sea más fácil de localizar y la calidad se mantenga a medida que creces.",
       ],
       included: [
         "Particularidades del mercado y del público árabes",
@@ -783,8 +783,8 @@ const es: LocaleContent = {
         "Revisión de la preparación para la localización de sitios web y aplicaciones",
         "Adaptación cultural de imágenes, nombres, fechas y monedas",
       ],
-      ctaTitle: "¿Prepara un lanzamiento en árabe?",
-      ctaDescription: "Reserve una llamada para hablar de sus contenidos, mercados y objetivos.",
+      ctaTitle: "¿Preparas un lanzamiento en árabe?",
+      ctaDescription: "Reserva una llamada para hablar de tus contenidos, mercados y objetivos.",
     },
     "ai-data-annotation": {
       title: "Anotación y evaluación de datos de IA (RLHF)",
@@ -792,25 +792,25 @@ const es: LocaleContent = {
         "Evaluar, clasificar y corregir respuestas de IA en árabe para mejorar la calidad y la seguridad de los modelos.",
       intro: [
         "Los modelos de lenguaje necesitan el criterio de un hablante nativo para funcionar bien en árabe. La anotación y la evaluación aportan esa señal: puntuar respuestas, corregir errores y señalar contenidos inseguros o poco naturales.",
-        "El trabajo sigue sus pautas con precisión, con una puntuación coherente y comentarios escritos claros.",
+        "El trabajo sigue tus pautas con precisión, con una puntuación coherente y comentarios escritos claros.",
       ],
       included: [
         "Puntuación y clasificación de respuestas (RLHF)",
         "Corrección de textos árabes traducidos automáticamente o generados",
         "Redacción de instrucciones y respuestas",
         "Revisión de seguridad, sesgos y adecuación cultural",
-        "Comentarios estructurados según sus pautas",
+        "Comentarios estructurados según tus pautas",
         "Etiquetado y clasificación de datos en árabe",
       ],
-      ctaTitle: "¿Entrena modelos en árabe?",
-      ctaDescription: "Obtenga una evaluación nativa y coherente de sus datos de IA.",
+      ctaTitle: "¿Entrenas modelos en árabe?",
+      ctaDescription: "Obtén una evaluación nativa y coherente de tus datos de IA.",
     },
     "digital-marketing": {
       title: "Marketing digital",
       description:
         "SEO en árabe, redes sociales y contenidos de campaña para llegar al público árabe y obtener resultados.",
       intro: [
-        "Llegar al público árabe en internet significa hablar su idioma y buscar como él. El marketing digital combina localización y experiencia en marketing para que su contenido sea visible y convincente en árabe.",
+        "Llegar al público árabe en internet significa hablar su idioma y buscar como él. El marketing digital combina localización y experiencia en marketing para que tu contenido sea visible y convincente en árabe.",
         "Desde la investigación de palabras clave hasta las publicaciones en redes sociales y los anuncios, cada contenido se escribe para el mercado objetivo en lugar de traducirse línea por línea.",
       ],
       included: [
@@ -821,7 +821,7 @@ const es: LocaleContent = {
         "Localización de correos electrónicos y boletines",
         "Análisis del rendimiento de campañas y recomendaciones",
       ],
-      ctaTitle: "¿Quiere crecer en los mercados árabes?",
+      ctaTitle: "¿Quieres crecer en los mercados árabes?",
       ctaDescription: "Planifiquemos contenido en árabe que se encuentre fácilmente y genere resultados.",
     },
   },
