@@ -87,6 +87,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const loc = locale as Locale;
   const content = await getLocalizedHome(loc);
   const t = await getContent(loc);
+  // Stats are numbers, so every language shows the English values (edited in the CMS).
+  const statValues = loc === "en" ? t.home.statValues : (await getContent("en")).home.statValues;
 
   return (
     <>
@@ -144,7 +146,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {(["years", "words", "projects", "languages"] as const).map((id) => (
               <li key={id} className={styles.statItem}>
                 <span className={styles.statValue}>
-                  <CountUp value={t.home.statValues[id].value} suffix={t.home.statValues[id].suffix} />
+                  <CountUp value={statValues[id].value} suffix={statValues[id].suffix} />
                 </span>
                 <span className={styles.statLabel}>{t.home.stats[id]}</span>
               </li>

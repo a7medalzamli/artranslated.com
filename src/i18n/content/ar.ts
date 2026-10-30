@@ -23,8 +23,8 @@ const ar: SiteContent = {
     },
     statValues: {
       years: { value: 14, suffix: "+" },
-      words: { value: 1000000, suffix: "+" },
-      projects: { value: 100, suffix: "+" },
+      words: { value: 4500000, suffix: "+" },
+      projects: { value: 270, suffix: "+" },
       languages: { value: 4, suffix: "" },
     },
     availabilityEyebrow: "التوفّر",
