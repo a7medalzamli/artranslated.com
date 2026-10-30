@@ -9,7 +9,7 @@ import { CountUp } from "@/components/CountUp/CountUp";
 import { AvailabilityHours } from "@/components/AvailabilityHours/AvailabilityHours";
 import { Flag, type LanguageCode } from "@/components/Flag/Flag";
 import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
-import { getContent, getStaticContent } from "@/i18n/content";
+import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getSeoText } from "@/content/seoText";
 import type { Locale } from "@/i18n";
@@ -135,8 +135,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* ---- Past experience (animated counters) ---- */}
       <section className={`${styles.stats} ${styles.tinted}`} aria-labelledby="stats-title">
         <Container>
-          <div className={styles.servicesHead}>
-            <p className={styles.label}>{loc === "en" ? t.home.pastExperienceEyebrow : getStaticContent(loc).home.pastExperienceEyebrow}</p>
+          <div className={`${styles.servicesHead} ${styles.statsHead}`}>
             <h2 id="stats-title" className={styles.servicesTitle}>
               {t.home.pastExperienceTitle}
             </h2>

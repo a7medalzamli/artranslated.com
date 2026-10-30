@@ -618,3 +618,14 @@
 .trustLink:hover {
   text-decoration: underline;
 }
+
+/* "A track record agencies trust": one line on tablets and wider. */
+.statsHead {
+  max-width: none;
+}
+
+@media (min-width: 48em) {
+  .statsHead .servicesTitle {
+    white-space: nowrap;
+  }
+}
