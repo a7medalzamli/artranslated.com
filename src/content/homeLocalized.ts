@@ -138,7 +138,7 @@ export const localizedHome: Record<"ar" | "fr" | "es", HomeContent> = {
     why: {
       eyebrow: "",
       title: "Pourquoi travailler avec moi ?",
-      intro: "Atteindre le marché arabe exige une intelligence culturelle, une précision technique et de la fiabilité , pas seulement la langue.",
+      intro: "Atteindre le marché arabe exige une intelligence culturelle, une précision technique et de la fiabilité, pas seulement la langue.",
       items: [
         { title: "Assurance qualité méticuleuse", text: "Un processus complet de traduction, révision et relecture (TEP) garantit une qualité et un ton homogènes." },
         { title: "Outils aux normes du secteur", text: "Les mémoires de traduction et bases terminologiques SDL Trados garantissent cohérence et efficacité." },
