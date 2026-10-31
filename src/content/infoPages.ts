@@ -24,6 +24,9 @@ export type InfoPage = {
   list: string[];
   tables?: InfoTable[];
   blocks?: { title: string; text: string }[];
+  /** Heading above the blocks, and whether they come before the tables. */
+  blocksTitle?: string;
+  blocksFirst?: boolean;
   /** Show the availability hours widget (agency page). */
   showAvailability?: boolean;
   availabilityTitle?: string;
@@ -586,6 +589,331 @@ const rates: Record<Locale, InfoPage> = {
     ctaDescription: "Envíame tus archivos o cuéntame el proyecto, y te responderé con el precio y la fecha de entrega.",
   },
 };
+
+/* ------------------------------------------------------------------ */
+/* For businesses (direct clients, plain language, no tool names)     */
+/* Prices are examples at USD 0.04–0.06 per word; translation, editing */
+/* and proofreading are included for direct clients by default.       */
+/* ------------------------------------------------------------------ */
+
+const businesses: Record<Locale, InfoPage> = {
+  en: {
+    title: "Arabic Translation for Businesses",
+    crumb: "For businesses",
+    seoTitle: "Arabic Translation for Businesses: How It Works & Prices",
+    description:
+      "Need your documents, website or marketing in Arabic? Send your file, get a clear price, and receive Arabic that’s checked and ready to use. No translation knowledge needed.",
+    intro: [
+      "You don’t need to know anything about translation to work with me. Send me what you have, tell me who it’s for, and I’ll take care of the rest, from the translation itself to the final checks, so you receive Arabic you can publish, print or send straight away.",
+      "Every project is translated, then edited against your original and proofread by me before delivery. That second and third check is included in the price, not an extra.",
+    ],
+    blocksTitle: "How it works",
+    blocksFirst: true,
+    blocks: [
+      {
+        title: "1. Send your file",
+        text: "Word, Excel, PowerPoint, PDF, or the text from your website. Tell me who will read it and when you need it. If you’re not sure what you need, just describe your goal.",
+      },
+      {
+        title: "2. Get a clear price",
+        text: "I reply with a free written quote showing the price and the delivery date. Nothing starts until you agree.",
+      },
+      {
+        title: "3. I translate and check",
+        text: "I translate your text into natural Arabic, then compare it with your original and proofread it, so names, numbers and meaning are all correct.",
+      },
+      {
+        title: "4. Receive it ready to use",
+        text: "You get your file back in the same format and layout, ready to use. If you notice anything that needs fixing within 14 days, I correct it at no extra cost.",
+      },
+    ],
+    tables: [
+      {
+        title: "What it costs: examples",
+        head: ["Example project", "Typical price and delivery"],
+        rows: [
+          ["A brochure or flyer (about 1,000 words)", "USD 40–60 · within 1 working day"],
+          ["A contract or policy (about 3,000 words)", "USD 120–180 · 1–2 working days"],
+          ["A 10-page website (about 5,000 words)", "USD 200–300 · 2–4 working days"],
+          ["A user manual or report (about 10,000 words)", "USD 400–600 · 2–4 working days"],
+        ],
+        note: "Based on USD 0.04–0.06 per word of your original text, with editing and proofreading included. Your exact price and date are in your free quote.",
+      },
+    ],
+    listTitle: "What you receive",
+    list: [
+      "Arabic that reads naturally, as if it was written in Arabic",
+      "Your file in the same format and layout as the original",
+      "Every text checked a second and third time before delivery",
+      "The same terms used consistently, now and in future projects",
+      "Advice on the right kind of Arabic for your audience",
+      "Free corrections for 14 days after delivery",
+    ],
+    faqTitle: "Common questions",
+    faqs: [
+      {
+        q: "How do I know how many words my document has?",
+        a: "You don’t need to count. Send me the file and I’ll count the words and include the number in your quote. In Word, you can also see it at the bottom of the window.",
+      },
+      {
+        q: "What kind of Arabic will you use?",
+        a: "Modern Standard Arabic, which is understood in every Arabic-speaking country, unless your marketing targets one country and a local tone works better. I’ll recommend what fits your audience.",
+      },
+      {
+        q: "Will the Arabic look right in my document or website?",
+        a: "Yes. Arabic is written from right to left, and I check that text, numbers and layout display correctly in the delivered file.",
+      },
+      {
+        q: "Is my document kept confidential?",
+        a: "Yes. Your files are used only for your project, and I’m happy to sign a non-disclosure agreement (NDA) before you send anything.",
+      },
+      {
+        q: "Do you provide sworn or certified translation?",
+        a: "No. I don’t provide sworn or certified translations with an official stamp, such as for immigration or court documents.",
+      },
+    ],
+    ctaTitle: "Ready to reach Arabic-speaking customers?",
+    ctaDescription: "Send me your file or tell me about your project, and I’ll reply with a clear price and delivery date.",
+  },
+  ar: {
+    title: "الترجمة إلى العربية للشركات",
+    crumb: "للشركات",
+    seoTitle: "الترجمة إلى العربية للشركات: كيف نعمل والأسعار",
+    description:
+      "هل تحتاج إلى مستنداتك أو موقعك الإلكتروني أو محتواك التسويقي بالعربية؟ أرسل ملفك، واحصل على سعر واضح، واستلم نصًا عربيًا مراجَعًا وجاهزًا للاستخدام، دون الحاجة إلى أي معرفة بالترجمة.",
+    intro: [
+      "لا تحتاج إلى معرفة أي شيء عن الترجمة للعمل معي. أرسل إليّ ما لديك، وأخبرني لمن هو موجّه، وسأتولى الباقي، من الترجمة نفسها حتى الفحص النهائي، لتستلم نصًا عربيًا يمكنك نشره أو طباعته أو إرساله فورًا.",
+      "كل مشروع يُترجَم، ثم يُراجَع مقابل النص الأصلي ويُدقَّق قبل التسليم. وهذه المراجعة والتدقيق مشمولان في السعر، لا تُضافان إليه.",
+    ],
+    blocksTitle: "كيف نعمل",
+    blocksFirst: true,
+    blocks: [
+      {
+        title: "1. أرسل ملفك",
+        text: "Word أو Excel أو PowerPoint أو PDF، أو نصوص موقعك الإلكتروني. أخبرني من سيقرؤه ومتى تحتاج إليه. وإن لم تكن متأكدًا مما تحتاجه، فصِف لي هدفك فقط.",
+      },
+      {
+        title: "2. احصل على سعر واضح",
+        text: "أرد عليك بعرض سعر مكتوب ومجاني يوضح السعر وموعد التسليم. ولا يبدأ أي عمل قبل موافقتك.",
+      },
+      {
+        title: "3. أترجم وأراجع",
+        text: "أترجم نصك إلى عربية طبيعية، ثم أقارنها بالأصل وأدقّقها، لتكون الأسماء والأرقام والمعاني كلها صحيحة.",
+      },
+      {
+        title: "4. استلمه جاهزًا للاستخدام",
+        text: "تستلم ملفك بالصيغة والتنسيق نفسيهما، جاهزًا للاستخدام. وإن لاحظت أي شيء يحتاج إلى تصحيح خلال 14 يومًا، أصحّحه دون أي تكلفة إضافية.",
+      },
+    ],
+    tables: [
+      {
+        title: "كم يكلّف: أمثلة",
+        head: ["مثال على المشروع", "السعر ومدة التسليم المعتادة"],
+        rows: [
+          ["كتيّب أو نشرة (نحو 1,000 كلمة)", "40–60 دولارًا أمريكيًا · خلال يوم عمل واحد"],
+          ["عقد أو سياسة (نحو 3,000 كلمة)", "120–180 دولارًا أمريكيًا · 1–2 يوم عمل"],
+          ["موقع إلكتروني من 10 صفحات (نحو 5,000 كلمة)", "200–300 دولار أمريكي · 2–4 أيام عمل"],
+          ["دليل مستخدم أو تقرير (نحو 10,000 كلمة)", "400–600 دولار أمريكي · 2–4 أيام عمل"],
+        ],
+        note: "بناءً على 0.04–0.06 دولار أمريكي لكل كلمة في نصك الأصلي، مع المراجعة والتدقيق. ويتضمن عرض السعر المجاني السعر الدقيق وموعد التسليم.",
+      },
+    ],
+    listTitle: "ما الذي تستلمه",
+    list: [
+      "نص عربي طبيعي، كأنه كُتب بالعربية أصلًا",
+      "ملفك بالصيغة والتنسيق نفسيهما",
+      "مراجعة كل نص وتدقيقه قبل التسليم",
+      "مصطلحات موحّدة الآن وفي مشاريعك القادمة",
+      "نصيحة بنوع العربية المناسب لجمهورك",
+      "تصحيحات مجانية لمدة 14 يومًا بعد التسليم",
+    ],
+    faqTitle: "أسئلة شائعة",
+    faqs: [
+      {
+        q: "كيف أعرف عدد الكلمات في مستندي؟",
+        a: "لا تحتاج إلى عدّها. أرسل إليّ الملف وسأعدّ الكلمات وأذكر العدد في عرض السعر. ويمكنك أيضًا رؤيته أسفل نافذة Word.",
+      },
+      {
+        q: "ما نوع العربية التي ستستخدمها؟",
+        a: "العربية الفصحى المعاصرة، المفهومة في جميع الدول العربية، إلا إذا كان محتواك التسويقي موجّهًا إلى بلد واحد وكانت اللهجة المحلية أنسب. وسأنصحك بما يناسب جمهورك.",
+      },
+      {
+        q: "هل سيظهر النص العربي بشكل صحيح في مستندي أو موقعي؟",
+        a: "نعم. تُكتب العربية من اليمين إلى اليسار، وأتحقق من أن النص والأرقام والتنسيق تظهر بشكل صحيح في الملف المسلَّم.",
+      },
+      {
+        q: "هل يبقى مستندي سريًا؟",
+        a: "نعم. تُستخدم ملفاتك لمشروعك فقط، ويسعدني توقيع اتفاقية عدم إفصاح قبل أن ترسل أي شيء.",
+      },
+      {
+        q: "هل تقدّم ترجمة محلّفة أو معتمدة؟",
+        a: "لا. لا أقدّم ترجمات محلّفة أو معتمدة بختم رسمي، كتلك المطلوبة لمعاملات الهجرة أو المحاكم.",
+      },
+    ],
+    ctaTitle: "هل أنت مستعد للوصول إلى العملاء الناطقين بالعربية؟",
+    ctaDescription: "أرسل إليّ ملفك أو أخبرني عن مشروعك، وسأرد عليك بسعر واضح وموعد تسليم.",
+  },
+  fr: {
+    title: "Traduction en arabe pour les entreprises",
+    crumb: "Pour les entreprises",
+    seoTitle: "Traduction en arabe pour les entreprises : fonctionnement et prix",
+    description:
+      "Besoin de vos documents, de votre site ou de vos supports marketing en arabe ? Envoyez votre fichier, recevez un prix clair et obtenez un arabe vérifié et prêt à l’emploi, sans aucune connaissance en traduction.",
+    intro: [
+      "Vous n’avez besoin d’aucune connaissance en traduction pour travailler avec moi. Envoyez-moi ce que vous avez, dites-moi à qui le texte s’adresse, et je m’occupe du reste, de la traduction aux vérifications finales, pour que vous receviez un arabe à publier, imprimer ou envoyer tout de suite.",
+      "Chaque projet est traduit, puis révisé par rapport à l’original et relu avant livraison. Ces deux vérifications sont comprises dans le prix, pas en supplément.",
+    ],
+    blocksTitle: "Comment ça marche",
+    blocksFirst: true,
+    blocks: [
+      {
+        title: "1. Envoyez votre fichier",
+        text: "Word, Excel, PowerPoint, PDF ou les textes de votre site. Dites-moi qui le lira et pour quand vous en avez besoin. Si vous ne savez pas exactement ce qu’il vous faut, décrivez simplement votre objectif.",
+      },
+      {
+        title: "2. Recevez un prix clair",
+        text: "Je vous réponds avec un devis écrit et gratuit indiquant le prix et la date de livraison. Rien ne commence sans votre accord.",
+      },
+      {
+        title: "3. Je traduis et je vérifie",
+        text: "Je traduis votre texte dans un arabe naturel, puis je le compare à l’original et je le relis, pour que noms, chiffres et sens soient tous exacts.",
+      },
+      {
+        title: "4. Recevez-le prêt à l’emploi",
+        text: "Vous récupérez votre fichier dans le même format et la même mise en page, prêt à l’emploi. Si vous remarquez quelque chose à corriger dans les 14 jours, je le corrige sans frais.",
+      },
+    ],
+    tables: [
+      {
+        title: "Combien ça coûte : exemples",
+        head: ["Exemple de projet", "Prix et délai habituels"],
+        rows: [
+          ["Une brochure ou un dépliant (environ 1 000 mots)", "40–60 USD · sous 1 jour ouvré"],
+          ["Un contrat ou une politique (environ 3 000 mots)", "120–180 USD · 1 à 2 jours ouvrés"],
+          ["Un site de 10 pages (environ 5 000 mots)", "200–300 USD · 2 à 4 jours ouvrés"],
+          ["Un manuel ou un rapport (environ 10 000 mots)", "400–600 USD · 2 à 4 jours ouvrés"],
+        ],
+        note: "Sur la base de 0,04 à 0,06 USD par mot de votre texte original, révision et relecture comprises. Votre prix exact et votre date figurent dans votre devis gratuit.",
+      },
+    ],
+    listTitle: "Ce que vous recevez",
+    list: [
+      "Un arabe naturel, comme s’il avait été écrit directement en arabe",
+      "Votre fichier dans le même format et la même mise en page",
+      "Chaque texte vérifié deux fois avant livraison",
+      "Les mêmes termes utilisés de façon cohérente, aujourd’hui et pour vos prochains projets",
+      "Des conseils sur la forme d’arabe adaptée à votre public",
+      "Des corrections gratuites pendant 14 jours après la livraison",
+    ],
+    faqTitle: "Questions fréquentes",
+    faqs: [
+      {
+        q: "Comment savoir combien de mots contient mon document ?",
+        a: "Inutile de compter. Envoyez-moi le fichier : je compte les mots et j’indique le nombre dans votre devis. Dans Word, vous le voyez aussi en bas de la fenêtre.",
+      },
+      {
+        q: "Quel arabe allez-vous utiliser ?",
+        a: "L’arabe standard moderne, compris dans tous les pays arabophones, sauf si votre marketing vise un seul pays et qu’un ton local fonctionne mieux. Je vous recommanderai ce qui convient à votre public.",
+      },
+      {
+        q: "L’arabe s’affichera-t-il correctement dans mon document ou sur mon site ?",
+        a: "Oui. L’arabe s’écrit de droite à gauche, et je vérifie que le texte, les chiffres et la mise en page s’affichent correctement dans le fichier livré.",
+      },
+      {
+        q: "Mon document reste-t-il confidentiel ?",
+        a: "Oui. Vos fichiers ne servent qu’à votre projet, et je signe volontiers un accord de confidentialité avant que vous m’envoyiez quoi que ce soit.",
+      },
+      {
+        q: "Proposez-vous des traductions assermentées ou certifiées ?",
+        a: "Non. Je ne fournis pas de traductions assermentées ou certifiées avec cachet officiel, comme pour les démarches d’immigration ou les tribunaux.",
+      },
+    ],
+    ctaTitle: "Prêt à toucher des clients arabophones ?",
+    ctaDescription: "Envoyez-moi votre fichier ou décrivez votre projet, et je vous répondrai avec un prix clair et une date de livraison.",
+  },
+  es: {
+    title: "Traducción al árabe para empresas",
+    crumb: "Para empresas",
+    seoTitle: "Traducción al árabe para empresas: cómo funciona y precios",
+    description:
+      "¿Necesitas tus documentos, tu web o tu marketing en árabe? Envía tu archivo, recibe un precio claro y obtén un árabe revisado y listo para usar, sin saber nada de traducción.",
+    intro: [
+      "No necesitas saber nada de traducción para trabajar conmigo. Envíame lo que tengas, dime a quién va dirigido y yo me encargo del resto, de la traducción a las comprobaciones finales, para que recibas un árabe que puedas publicar, imprimir o enviar enseguida.",
+      "Cada proyecto se traduce y después se revisa frente al original y se corrige antes de la entrega. Esas dos comprobaciones están incluidas en el precio, no son un extra.",
+    ],
+    blocksTitle: "Cómo funciona",
+    blocksFirst: true,
+    blocks: [
+      {
+        title: "1. Envía tu archivo",
+        text: "Word, Excel, PowerPoint, PDF o los textos de tu web. Dime quién lo va a leer y para cuándo lo necesitas. Si no tienes claro qué necesitas, cuéntame tu objetivo.",
+      },
+      {
+        title: "2. Recibe un precio claro",
+        text: "Te respondo con un presupuesto gratuito y por escrito con el precio y la fecha de entrega. No empieza nada hasta que des tu aprobación.",
+      },
+      {
+        title: "3. Traduzco y reviso",
+        text: "Traduzco tu texto a un árabe natural, después lo comparo con el original y lo corrijo, para que nombres, cifras y significado sean correctos.",
+      },
+      {
+        title: "4. Recíbelo listo para usar",
+        text: "Recibes tu archivo en el mismo formato y diseño, listo para usar. Si notas algo que corregir en los 14 días siguientes, lo corrijo sin coste adicional.",
+      },
+    ],
+    tables: [
+      {
+        title: "Cuánto cuesta: ejemplos",
+        head: ["Proyecto de ejemplo", "Precio y entrega habituales"],
+        rows: [
+          ["Un folleto (unas 1000 palabras)", "40–60 USD · en 1 día laborable"],
+          ["Un contrato o una política (unas 3000 palabras)", "120–180 USD · 1–2 días laborables"],
+          ["Una web de 10 páginas (unas 5000 palabras)", "200–300 USD · 2–4 días laborables"],
+          ["Un manual o un informe (unas 10 000 palabras)", "400–600 USD · 2–4 días laborables"],
+        ],
+        note: "Basado en 0,04–0,06 USD por palabra de tu texto original, con edición y revisión incluidas. Tu precio exacto y la fecha aparecen en tu presupuesto gratuito.",
+      },
+    ],
+    listTitle: "Qué recibes",
+    list: [
+      "Un árabe natural, como si se hubiera escrito directamente en árabe",
+      "Tu archivo en el mismo formato y diseño que el original",
+      "Cada texto revisado dos veces antes de la entrega",
+      "Los mismos términos usados de forma coherente, ahora y en tus próximos proyectos",
+      "Consejo sobre el tipo de árabe adecuado para tu público",
+      "Correcciones gratuitas durante 14 días tras la entrega",
+    ],
+    faqTitle: "Preguntas frecuentes",
+    faqs: [
+      {
+        q: "¿Cómo sé cuántas palabras tiene mi documento?",
+        a: "No hace falta que las cuentes. Envíame el archivo y contaré las palabras e incluiré el número en tu presupuesto. En Word también puedes verlo en la parte inferior de la ventana.",
+      },
+      {
+        q: "¿Qué tipo de árabe vas a usar?",
+        a: "El árabe estándar moderno, que se entiende en todos los países árabes, salvo que tu marketing se dirija a un solo país y funcione mejor un tono local. Te recomendaré lo que mejor encaje con tu público.",
+      },
+      {
+        q: "¿El árabe se verá bien en mi documento o en mi web?",
+        a: "Sí. El árabe se escribe de derecha a izquierda, y compruebo que el texto, las cifras y el diseño se muestren correctamente en el archivo entregado.",
+      },
+      {
+        q: "¿Mi documento es confidencial?",
+        a: "Sí. Tus archivos solo se usan para tu proyecto, y firmo encantado un acuerdo de confidencialidad antes de que envíes nada.",
+      },
+      {
+        q: "¿Ofreces traducción jurada o certificada?",
+        a: "No. No ofrezco traducciones juradas ni certificadas con sello oficial, como las que se piden para trámites de inmigración o tribunales.",
+      },
+    ],
+    ctaTitle: "¿Listo para llegar a clientes de habla árabe?",
+    ctaDescription: "Envíame tu archivo o cuéntame tu proyecto, y te responderé con un precio claro y una fecha de entrega.",
+  },
+};
+
+export function getBusinessPage(locale: string): InfoPage {
+  return businesses[locale as Locale] ?? businesses.en;
+}
 
 export function getAgencyPage(locale: string): InfoPage {
   return agencies[locale as Locale] ?? agencies.en;

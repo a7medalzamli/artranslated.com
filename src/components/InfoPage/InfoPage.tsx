@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
@@ -26,6 +27,85 @@ export async function InfoPageView({
 }) {
   const t = await getContent(locale as Locale);
 
+  const tablesSection = p.tables && {
+    key: "tables",
+    body: (
+      <div className={styles.tables}>
+        {p.tables.map((table) => (
+          <div key={table.title}>
+            <h2 className={styles.tableTitle}>{table.title}</h2>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th scope="col">{table.head[0]}</th>
+                  <th scope="col">{table.head[1]}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {table.rows.map(([a, b]) => (
+                  <tr key={a}>
+                    <th scope="row">{a}</th>
+                    <td>{b}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {table.note && <p className={styles.tableNote}>{table.note}</p>}
+          </div>
+        ))}
+      </div>
+    ),
+  };
+
+  const listSection = {
+    key: "list",
+    title: p.listTitle,
+    body: (
+      <ul className={serviceStyles.included}>
+        {p.list.map((item) => (
+          <li key={item}>
+            <CheckIcon />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    ),
+  };
+
+  const blocksSection = p.blocks && {
+    key: "blocks",
+    title: p.blocksTitle,
+    body: (
+      <div className={serviceStyles.details}>
+        {p.blocks.map((block) => (
+          <div key={block.title} className={serviceStyles.detail}>
+            <h2 className={serviceStyles.detailTitle}>{block.title}</h2>
+            <p>{block.text}</p>
+          </div>
+        ))}
+      </div>
+    ),
+  };
+
+  const availabilitySection = p.showAvailability && {
+    key: "availability",
+    narrow: true,
+    body: (
+      <div className={styles.availability}>
+        <h2 className={styles.tableTitle}>{p.availabilityTitle}</h2>
+        <AvailabilityHours labels={t.home.availability} />
+      </div>
+    ),
+  };
+
+  // Sections in page order; backgrounds alternate automatically.
+  type SectionPart = { key: string; title?: string; narrow?: boolean; body: ReactNode };
+  const sections = (
+    p.blocksFirst
+      ? [blocksSection, tablesSection, listSection, availabilitySection]
+      : [tablesSection, listSection, blocksSection, availabilitySection]
+  ).filter(Boolean) as SectionPart[];
+
   return (
     <>
       <JsonLd data={structuredData} />
@@ -49,70 +129,14 @@ export async function InfoPageView({
         </div>
       </Section>
 
-      {p.tables && (
-        <Section tinted>
-          <div className={styles.tables}>
-            {p.tables.map((table) => (
-              <div key={table.title} className={styles.tableBlock}>
-                <h2 className={styles.tableTitle}>{table.title}</h2>
-                <table className={styles.table}>
-                  <thead>
-                    <tr>
-                      <th scope="col">{table.head[0]}</th>
-                      <th scope="col">{table.head[1]}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {table.rows.map(([a, b]) => (
-                      <tr key={a}>
-                        <th scope="row">{a}</th>
-                        <td>{b}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                {table.note && <p className={styles.tableNote}>{table.note}</p>}
-              </div>
-            ))}
-          </div>
+      {sections.map((section, i) => (
+        <Section key={section.key} tinted={i % 2 === 0} title={section.title} narrow={section.narrow}>
+          {section.body}
         </Section>
-      )}
+      ))}
 
-      <Section tinted={!p.tables} title={p.listTitle}>
-        <ul className={serviceStyles.included}>
-          {p.list.map((item) => (
-            <li key={item}>
-              <CheckIcon />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </Section>
-
-      {p.blocks && (
-        <Section tinted={!p.tables}>
-          <div className={serviceStyles.details}>
-            {p.blocks.map((block) => (
-              <div key={block.title} className={serviceStyles.detail}>
-                <h2 className={serviceStyles.detailTitle}>{block.title}</h2>
-                <p>{block.text}</p>
-              </div>
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {p.showAvailability && (
-        <Section narrow>
-          <div className={styles.availability}>
-            <h2 className={styles.tableTitle}>{p.availabilityTitle}</h2>
-            <AvailabilityHours labels={t.home.availability} />
-          </div>
-        </Section>
-      )}
-
-      <Faq title={p.faqTitle} items={p.faqs} tinted />
-
+      {/* FAQ continues the alternating backgrounds. */}
+      <Faq title={p.faqTitle} items={p.faqs} tinted={sections.length % 2 === 0} />
       <CTA
         title={p.ctaTitle}
         description={p.ctaDescription}
