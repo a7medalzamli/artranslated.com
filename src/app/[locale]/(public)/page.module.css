@@ -136,6 +136,15 @@
     font-size: var(--font-size-sm);
   }
 
+  /* Line the arrow up with the flags, not with flag + name. */
+  .languagePair {
+    align-items: flex-start;
+  }
+
+  .languageArrow {
+    margin-top: 5px;
+  }
+
   .languageArrow svg {
     width: 24px;
     height: 24px;
