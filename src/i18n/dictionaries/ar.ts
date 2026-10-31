@@ -35,6 +35,7 @@ const ar: Dictionary = {
     terms: "الشروط والأحكام",
     privacy: "سياسة الخصوصية",
     rightsReserved: "جميع الحقوق محفوظة.",
+    alconost: "معتمد من Alconost",
     about: "نبذة",
     howItWorks: "كيف نعمل؟",
     serviceLinks: {

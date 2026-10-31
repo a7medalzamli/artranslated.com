@@ -94,6 +94,16 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
         </div>
 
         <div className={styles.credBadges}>
+          <figure className={styles.alconost}>
+            <Image
+              src="/badges/alconost-logo.svg"
+              alt="Alconost"
+              width={258}
+              height={45}
+              className={styles.alconostLogo}
+            />
+            <figcaption>{dict.footer.alconost}</figcaption>
+          </figure>
           <Image
             src="/proz-certified-pro.jpg"
             alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"

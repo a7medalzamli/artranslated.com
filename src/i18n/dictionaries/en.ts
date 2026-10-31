@@ -33,6 +33,7 @@ const en = {
     terms: "Terms and conditions",
     privacy: "Privacy policy",
     rightsReserved: "All rights reserved.",
+    alconost: "Certified by Alconost",
     about: "About",
     howItWorks: "How it works?",
     serviceLinks: {

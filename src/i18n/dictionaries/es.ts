@@ -29,6 +29,7 @@ const es: Dictionary = {
     terms: "Términos y condiciones",
     privacy: "Política de privacidad",
     rightsReserved: "Todos los derechos reservados.",
+    alconost: "Certificado por Alconost",
     about: "Acerca de",
     howItWorks: "¿Cómo funciona?",
     serviceLinks: {
