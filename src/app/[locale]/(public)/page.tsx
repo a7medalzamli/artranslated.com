@@ -13,6 +13,8 @@ import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getHomeSummary, getSeoText } from "@/content/seoText";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
+import { Faq } from "@/components/Faq/Faq";
+import { getFaqs } from "@/content/faqs";
 import styles from "./page.module.css";
 
 export async function generateMetadata({
@@ -153,6 +155,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </ul>
         </Container>
       </section>
+
+      {/* ---- Frequently asked questions ---- */}
+      <Faq title={getFaqs(locale).title} items={getFaqs(locale).home} tinted />
 
       {/* ---- Partners / credentials ---- */}
       <section className={styles.partners} aria-label="Partners">

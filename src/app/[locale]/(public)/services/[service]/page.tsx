@@ -21,6 +21,8 @@ import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { getServiceDetails } from "@/content/serviceDetails";
 import { siteUrl } from "@/lib/seo";
 import { ids, breadcrumbs } from "@/lib/entity";
+import { Faq } from "@/components/Faq/Faq";
+import { getFaqs } from "@/content/faqs";
 import styles from "./servicePage.module.css";
 
 type Params = Promise<{ locale: string; service: string }>;
@@ -144,6 +146,10 @@ export default async function ServicePage({ params }: { params: Params }) {
           ))}
         </ul>
       </Section>
+
+      {service === "translation" && (
+        <Faq title={getFaqs(locale).title} items={getFaqs(locale).translation} tinted />
+      )}
 
       <CTA
         title={page.ctaTitle}
