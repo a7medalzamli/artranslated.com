@@ -6,6 +6,7 @@ import { Button } from "@/components/Button/Button";
 import { Reveal } from "@/components/Reveal/Reveal";
 import { CountUp } from "@/components/CountUp/CountUp";
 import { AvailabilityHours } from "@/components/AvailabilityHours/AvailabilityHours";
+import { Flag, type LanguageCode } from "@/components/Flag/Flag";
 import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
@@ -33,6 +34,10 @@ export async function generateMetadata({
   });
 }
 
+const sourceLanguages: LanguageCode[] = ["en", "fr", "es"];
+// Read by screen readers between the source languages and Arabic.
+const intoWord: Record<Locale, string> = { en: "into", ar: "إلى", fr: "vers", es: "al" };
+
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc = locale as Locale;
@@ -58,6 +63,46 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <Link href={routes.services} className={styles.heroSecondary}>
                 {t.common.exploreServices}
               </Link>
+            </div>
+
+            {/* Language pair: source languages → Arabic. Names stay as text
+                so search engines read them; the arrow is decorative. */}
+            <div className={styles.heroLanguages} aria-labelledby="languages-title">
+              <h2 id="languages-title" className={styles.languagesTitle}>
+                {t.home.languagesTitle}
+              </h2>
+              <div className={styles.languagePair}>
+                <ul className={styles.languageList}>
+                  {sourceLanguages.map((code, i) => (
+                    <Reveal
+                      as="li"
+                      key={code}
+                      from="up"
+                      delay={i * 80}
+                      className={styles.languageItem}
+                    >
+                      <Flag code={code} size={34} />
+                      <span>{t.home.langNames[code]}</span>
+                    </Reveal>
+                  ))}
+                </ul>
+                <Reveal from="up" delay={240} className={styles.languageArrow}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M4 12h15m-6-6 6 6-6 6"
+                      stroke="currentColor"
+                      strokeWidth="2.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span className="visually-hidden">{intoWord[loc]}</span>
+                </Reveal>
+                <Reveal from="up" delay={320} className={`${styles.languageItem} ${styles.languageTarget}`}>
+                  <Flag code="ar" size={34} />
+                  <span>{t.home.langNames.ar}</span>
+                </Reveal>
+              </div>
             </div>
           </div>
         </Container>

@@ -120,10 +120,10 @@ export function getServiceSeoTitles(locale: string): ServiceTitles {
  * since when, in plain words that people and AI assistants can quote.
  */
 const homeSummary: Record<Locale, string> = {
-  en: "I’m Ahmed Alzamli, a Palestinian translator working professionally from English, French and Spanish into Arabic since 2014. Through Translated into Arabic (TIA), I help businesses and agencies reach Arabic-speaking audiences with accurate, natural Arabic for websites, software, marketing and specialized documents.",
-  ar: "أنا أحمد الزاملي، مترجم فلسطيني محترف من الإنجليزية والفرنسية والإسبانية إلى العربية منذ عام 2014. ومن خلال Translated into Arabic (TIA)، أساعد الشركات ووكالات الترجمة على الوصول إلى الجمهور الناطق بالعربية بنصوص عربية دقيقة وطبيعية للمواقع الإلكترونية والبرمجيات والتسويق والوثائق المتخصصة.",
-  fr: "Je suis Ahmed Alzamli, traducteur palestinien professionnel de l’anglais, du français et de l’espagnol vers l’arabe depuis 2014. Avec Translated into Arabic (TIA), j’aide entreprises et agences à toucher le public arabophone grâce à un arabe exact et naturel pour les sites web, les logiciels, le marketing et les documents spécialisés.",
-  es: "Soy Ahmed Alzamli, traductor palestino profesional del inglés, el francés y el español al árabe desde 2014. Con Translated into Arabic (TIA), ayudo a empresas y agencias a llegar al público de habla árabe con un árabe preciso y natural para sitios web, software, marketing y documentos especializados.",
+  en: "I’m Ahmed Alzamli, a Palestinian translator working professionally since 2014. Through Translated into Arabic (TIA), I help businesses and agencies reach Arabic-speaking audiences with accurate, natural Arabic for websites, software, marketing and specialized documents.",
+  ar: "أنا أحمد الزاملي، مترجم فلسطيني محترف منذ عام 2014. ومن خلال Translated into Arabic (TIA)، أساعد الشركات ووكالات الترجمة على الوصول إلى الجمهور الناطق بالعربية بنصوص عربية دقيقة وطبيعية للمواقع الإلكترونية والبرمجيات والتسويق والوثائق المتخصصة.",
+  fr: "Je suis Ahmed Alzamli, traducteur palestinien professionnel depuis 2014. Avec Translated into Arabic (TIA), j’aide entreprises et agences à toucher le public arabophone grâce à un arabe exact et naturel pour les sites web, les logiciels, le marketing et les documents spécialisés.",
+  es: "Soy Ahmed Alzamli, traductor palestino profesional desde 2014. Con Translated into Arabic (TIA), ayudo a empresas y agencias a llegar al público de habla árabe con un árabe preciso y natural para sitios web, software, marketing y documentos especializados.",
 };
 
 export function getHomeSummary(locale: string): string {
