@@ -13,7 +13,7 @@
 }
 
 .heroInner {
-  max-width: 52rem;
+  max-width: 62rem;
   margin-inline: auto;
 }
 
@@ -26,20 +26,21 @@
 }
 
 .heroTitle {
-  font-size: clamp(2.25rem, 1.7rem + 3vw, 3.5rem);
+  font-size: clamp(2.1rem, 1.5rem + 2.6vw, 3.1rem);
   color: var(--color-text);
   margin-inline: auto;
-  max-width: 20ch;
+  max-width: 28ch;
+  text-wrap: balance;
 }
 
 /* The hero holds only title, lead and buttons, so the lead is a little
    larger and narrower to read as a short intro, not a block of text. */
 .heroLead {
-  margin: var(--space-lg) auto 0;
+  margin: var(--space-xl) auto 0;
   font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
   line-height: 1.6;
   color: var(--color-text-muted);
-  max-width: 54ch;
+  max-width: 60ch;
   text-wrap: pretty;
 }
 
@@ -56,7 +57,7 @@
 }
 
 .heroActions {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-2xl);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);
@@ -65,7 +66,7 @@
 
 /* ---- Languages (now inside the hero) ---- */
 .heroLanguages {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-3xl);
 }
 
 .languages {
@@ -78,7 +79,7 @@
   font-size: var(--font-size-h4);
   color: var(--color-text-muted);
   font-weight: var(--weight-semibold);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
 .languageList {
