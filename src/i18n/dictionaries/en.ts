@@ -46,6 +46,7 @@ const en = {
   /** Labels for the Services menu (header dropdown and footer). */
   serviceMenu: {
     translation: "Translation",
+    editing: "Editing & proofreading",
     mtpe: "Post-editing (MTPE)",
     transcreation: "Transcreation & UI copy",
     consulting: "Consulting",

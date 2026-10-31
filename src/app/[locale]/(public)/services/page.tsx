@@ -18,6 +18,7 @@ import styles from "./services.module.css";
 /** Dictionary key for each service's menu label. */
 const menuKey = {
   translation: "translation",
+  editing: "editing",
   mtpe: "mtpe",
   transcreation: "transcreation",
   consulting: "consulting",

@@ -65,6 +65,7 @@ export function getSeoText(locale: string): SeoText {
 type ServiceTitles = {
   services: string;
   translation: string;
+  editing: string;
   mtpe: string;
   transcreation: string;
   consulting: string;
@@ -75,6 +76,7 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
   en: {
     services: "Arabic Linguistic Services",
     translation: "Professional Translation into Arabic",
+    editing: "Arabic Editing, Proofreading & LQA",
     mtpe: "Arabic Machine Translation Post-Editing (MTPE)",
     transcreation: "Arabic Transcreation & UI Copy",
     consulting: "Arabic Localization Consulting",
@@ -83,6 +85,7 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
   ar: {
     services: "الخدمات اللغوية بالعربية",
     translation: "ترجمة احترافية إلى العربية",
+    editing: "تحرير الترجمات العربية وتدقيقها وتقييم جودتها (LQA)",
     mtpe: "التحرير اللاحق للترجمة الآلية إلى العربية (MTPE)",
     transcreation: "الترجمة الإبداعية ونصوص الواجهات بالعربية",
     consulting: "استشارات التوطين إلى العربية",
@@ -91,6 +94,7 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
   fr: {
     services: "Services linguistiques en arabe",
     translation: "Traduction professionnelle vers l’arabe",
+    editing: "Révision, relecture et LQA de traductions arabes",
     mtpe: "Post-édition de traduction automatique (MTPE) arabe",
     transcreation: "Transcréation et textes d’interface en arabe",
     consulting: "Conseil en localisation arabe",
@@ -99,6 +103,7 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
   es: {
     services: "Servicios lingüísticos en árabe",
     translation: "Traducción profesional al árabe",
+    editing: "Edición, revisión y LQA de traducciones al árabe",
     mtpe: "Posedición de traducción automática (MTPE) al árabe",
     transcreation: "Transcreación y textos de interfaz en árabe",
     consulting: "Consultoría de localización al árabe",

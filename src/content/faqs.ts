@@ -54,6 +54,36 @@ const en: FaqSet = {
       a: "Yes. For direct clients, every project goes through translation, editing and proofreading (TEP) followed by quality checks, so you receive a document that is ready to publish or use, not a draft. Agencies that run their own review step can order translation only.",
     },
   ],
+  editing: [
+    {
+      q: "What is the difference between editing and proofreading?",
+      a: "Editing is a bilingual check: I compare the Arabic translation with the source sentence by sentence to correct mistranslations, omissions, terminology and style. Proofreading is a final monolingual check of the Arabic text itself, for grammar, spelling, punctuation, consistency and formatting, before it is published.",
+    },
+    {
+      q: "Do you review other translators’ work?",
+      a: "Yes. I regularly review translations done by other translators, in-house teams and machine translation, and I give specific, constructive feedback so the translator understands each change.",
+    },
+    {
+      q: "What does a review check?",
+      a: "Accuracy (mistranslations, omissions and additions), terminology and glossary compliance, grammar and spelling, Arabic punctuation and typography, consistency across the document, locale conventions such as dates, numbers and currencies, register and style for the audience, and formatting, tags and layout, including right-to-left issues.",
+    },
+    {
+      q: "What is LQA, and how do you score translations?",
+      a: "Language quality assessment (LQA) measures translation quality objectively. Each error is logged by category, such as accuracy, terminology, fluency, style or locale conventions, and by severity (minor, major or critical), using the MQM framework or your agency’s own scorecard. The result is a quality score and a short report with examples and recommendations.",
+    },
+    {
+      q: "Will you change the translator’s style?",
+      a: "No. I avoid preferential changes: I correct errors and inconsistencies, not personal word choices, so the review stays objective and the translator’s work is respected. Suggestions that would only improve style are marked as optional.",
+    },
+    {
+      q: "Which file formats do you work with?",
+      a: "Word, Excel, PowerPoint and PDF; bilingual CAT formats such as XLIFF, SDLXLIFF and MQXLIFF; Trados and memoQ project packages; and HTML, XML, JSON and SRT subtitle files. If your format isn’t listed, just ask.",
+    },
+    {
+      q: "Do I receive tracked changes or a clean file?",
+      a: "Whichever you prefer: tracked changes, a clean final version, or both, together with a log of significant changes and any questions about the source text.",
+    },
+  ],
   mtpe: [
     {
       q: "Will post-edited Arabic read like a human translation?",
@@ -146,6 +176,36 @@ const ar: FaqSet = {
     {
       q: "هل يشمل العمل التحرير والتدقيق؟",
       a: "نعم. بالنسبة للعملاء المباشرين، يمرّ كل مشروع بمراحل الترجمة والتحرير والتدقيق (TEP) ثم فحوص الجودة، لتستلم مستندًا جاهزًا للنشر أو الاستخدام لا مسودة. ويمكن للوكالات التي تتولى المراجعة بنفسها طلب الترجمة فقط.",
+    },
+  ],
+  editing: [
+    {
+      q: "ما الفرق بين التحرير والتدقيق؟",
+      a: "التحرير مراجعة ثنائية اللغة: أقارن الترجمة العربية بالنص المصدر جملةً جملة لتصحيح أخطاء الترجمة والسقط والمصطلحات والأسلوب. أما التدقيق فمراجعة نهائية أحادية اللغة للنص العربي نفسه، من حيث القواعد والإملاء وعلامات الترقيم والاتساق والتنسيق، قبل نشره.",
+    },
+    {
+      q: "هل تراجع أعمال مترجمين آخرين؟",
+      a: "نعم. أراجع بانتظام ترجمات أنجزها مترجمون آخرون وفرق داخلية والترجمة الآلية، وأقدّم ملاحظات محددة وبنّاءة ليفهم المترجم سبب كل تعديل.",
+    },
+    {
+      q: "ماذا تشمل المراجعة؟",
+      a: "الدقة (أخطاء الترجمة والسقط والإضافات)، والالتزام بالمصطلحات والمسرد، والقواعد والإملاء، وعلامات الترقيم العربية وقواعد الطباعة، والاتساق في المستند كله، والأعراف المحلية كالتواريخ والأرقام والعملات، والأسلوب المناسب للجمهور، والتنسيق والوسوم والتخطيط، بما في ذلك مشكلات الكتابة من اليمين إلى اليسار.",
+    },
+    {
+      q: "ما تقييم جودة اللغة (LQA)، وكيف تقيّم الترجمات؟",
+      a: "تقييم جودة اللغة (LQA) يقيس جودة الترجمة بموضوعية. يُسجَّل كل خطأ حسب فئته، كالدقة أو المصطلحات أو السلاسة أو الأسلوب أو الأعراف المحلية، وحسب خطورته (بسيط أو جوهري أو حرج)، وفق إطار MQM أو بطاقة التقييم الخاصة بوكالتك. والنتيجة درجة للجودة وتقرير موجز يتضمن أمثلة وتوصيات.",
+    },
+    {
+      q: "هل ستغيّر أسلوب المترجم؟",
+      a: "لا. أتجنّب التعديلات التفضيلية: أصحّح الأخطاء وأوجه عدم الاتساق، لا الاختيارات الشخصية للكلمات، لتبقى المراجعة موضوعية ويُحترم عمل المترجم. وتُعلَّم الاقتراحات التي تحسّن الأسلوب فقط على أنها اختيارية.",
+    },
+    {
+      q: "ما صيغ الملفات التي تعمل عليها؟",
+      a: "Word وExcel وPowerPoint وPDF؛ وصيغ أدوات الترجمة ثنائية اللغة مثل XLIFF وSDLXLIFF وMQXLIFF؛ وحزم مشاريع Trados وmemoQ؛ وملفات HTML وXML وJSON وملفات الترجمة المرئية SRT. وإن لم تجد صيغتك هنا، فاسألني.",
+    },
+    {
+      q: "هل أستلم الملف بتعديلات متتبَّعة أم نسخة نظيفة؟",
+      a: "كما تفضّل: تعديلات متتبَّعة، أو نسخة نهائية نظيفة، أو كلتاهما، مع سجل بأهم التعديلات وأي استفسارات حول النص المصدر.",
     },
   ],
   mtpe: [
@@ -242,6 +302,36 @@ const fr: FaqSet = {
       a: "Oui. Pour les clients directs, chaque projet passe par la traduction, la révision et la relecture (TEP), suivies de contrôles qualité : vous recevez un document prêt à être publié ou utilisé, pas un brouillon. Les agences qui assurent leur propre relecture peuvent commander la traduction seule.",
     },
   ],
+  editing: [
+    {
+      q: "Quelle différence entre révision et relecture ?",
+      a: "La révision est un contrôle bilingue : je compare la traduction arabe à la source phrase par phrase pour corriger contresens, omissions, terminologie et style. La relecture est un contrôle final unilingue du texte arabe lui-même, pour la grammaire, l’orthographe, la ponctuation, la cohérence et la mise en forme, avant publication.",
+    },
+    {
+      q: "Révisez-vous le travail d’autres traducteurs ?",
+      a: "Oui. Je révise régulièrement des traductions réalisées par d’autres traducteurs, par des équipes internes ou par traduction automatique, avec des commentaires précis et constructifs pour que le traducteur comprenne chaque modification.",
+    },
+    {
+      q: "Que vérifie une révision ?",
+      a: "L’exactitude (contresens, omissions et ajouts), le respect de la terminologie et du glossaire, la grammaire et l’orthographe, la ponctuation et la typographie arabes, la cohérence dans tout le document, les conventions locales comme les dates, nombres et devises, le registre et le style adaptés au public, ainsi que la mise en forme, les balises et la mise en page, y compris les problèmes d’écriture de droite à gauche.",
+    },
+    {
+      q: "Qu’est-ce que la LQA, et comment notez-vous les traductions ?",
+      a: "L’évaluation de la qualité linguistique (LQA) mesure objectivement la qualité d’une traduction. Chaque erreur est consignée par catégorie, comme l’exactitude, la terminologie, la fluidité, le style ou les conventions locales, et par gravité (mineure, majeure ou critique), selon le référentiel MQM ou la grille de votre agence. Le résultat : une note de qualité et un court rapport avec exemples et recommandations.",
+    },
+    {
+      q: "Allez-vous modifier le style du traducteur ?",
+      a: "Non. J’évite les modifications de préférence : je corrige les erreurs et les incohérences, pas les choix de mots personnels, pour que la révision reste objective et respecte le travail du traducteur. Les suggestions purement stylistiques sont signalées comme facultatives.",
+    },
+    {
+      q: "Avec quels formats de fichiers travaillez-vous ?",
+      a: "Word, Excel, PowerPoint et PDF ; les formats bilingues TAO comme XLIFF, SDLXLIFF et MQXLIFF ; les packages de projet Trados et memoQ ; ainsi que les fichiers HTML, XML, JSON et les sous-titres SRT. Si votre format n’est pas cité, n’hésitez pas à demander.",
+    },
+    {
+      q: "Est-ce que je reçois un fichier avec suivi des modifications ou une version propre ?",
+      a: "Comme vous préférez : suivi des modifications, version finale propre, ou les deux, avec un journal des modifications importantes et des éventuelles questions sur le texte source.",
+    },
+  ],
   mtpe: [
     {
       q: "L’arabe post-édité se lit-il comme une traduction humaine ?",
@@ -334,6 +424,36 @@ const es: FaqSet = {
     {
       q: "¿Incluye edición y revisión?",
       a: "Sí. Para los clientes directos, cada proyecto pasa por traducción, edición y revisión (TEP), seguidas de controles de calidad, así que recibes un documento listo para publicar o usar, no un borrador. Las agencias que hacen su propia revisión pueden pedir solo la traducción.",
+    },
+  ],
+  editing: [
+    {
+      q: "¿Qué diferencia hay entre edición y revisión?",
+      a: "La edición es una comprobación bilingüe: comparo la traducción al árabe con el original frase por frase para corregir errores de traducción, omisiones, terminología y estilo. La revisión es una comprobación final monolingüe del propio texto en árabe, de gramática, ortografía, puntuación, coherencia y formato, antes de publicarlo.",
+    },
+    {
+      q: "¿Revisas el trabajo de otros traductores?",
+      a: "Sí. Reviso con regularidad traducciones hechas por otros traductores, equipos internos y traducción automática, con comentarios concretos y constructivos para que el traductor entienda cada cambio.",
+    },
+    {
+      q: "¿Qué se comprueba en una revisión?",
+      a: "La exactitud (errores de traducción, omisiones y añadidos), el cumplimiento de la terminología y el glosario, la gramática y la ortografía, la puntuación y tipografía árabes, la coherencia en todo el documento, las convenciones locales como fechas, números y monedas, el registro y el estilo adecuados al público, y el formato, las etiquetas y el diseño, incluidos los problemas de escritura de derecha a izquierda.",
+    },
+    {
+      q: "¿Qué es la LQA y cómo puntúas las traducciones?",
+      a: "La evaluación de la calidad lingüística (LQA) mide la calidad de una traducción de forma objetiva. Cada error se registra por categoría, como exactitud, terminología, fluidez, estilo o convenciones locales, y por gravedad (leve, grave o crítico), con el marco MQM o la ficha de tu agencia. El resultado es una puntuación de calidad y un breve informe con ejemplos y recomendaciones.",
+    },
+    {
+      q: "¿Vas a cambiar el estilo del traductor?",
+      a: "No. Evito los cambios preferenciales: corrijo errores e incoherencias, no elecciones personales de palabras, para que la revisión sea objetiva y se respete el trabajo del traductor. Las sugerencias que solo mejoran el estilo se marcan como opcionales.",
+    },
+    {
+      q: "¿Con qué formatos de archivo trabajas?",
+      a: "Word, Excel, PowerPoint y PDF; formatos bilingües TAO como XLIFF, SDLXLIFF y MQXLIFF; paquetes de proyecto de Trados y memoQ; y archivos HTML, XML, JSON y subtítulos SRT. Si tu formato no aparece, pregúntame.",
+    },
+    {
+      q: "¿Recibo el archivo con control de cambios o una versión limpia?",
+      a: "Como prefieras: con control de cambios, una versión final limpia o ambas, junto con un registro de los cambios importantes y las dudas sobre el texto original.",
     },
   ],
   mtpe: [

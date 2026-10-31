@@ -8,6 +8,7 @@ import type { Locale } from "@/i18n";
 
 export const serviceSlugs = [
   "translation",
+  "editing",
   "mtpe",
   "transcreation",
   "consulting",
@@ -23,6 +24,7 @@ export function isServiceSlug(value: string): value is ServiceSlug {
 /** Photo shown beside each page's intro (also used on the services overview cards). */
 export const serviceImages: Record<ServiceSlug, string> = {
   translation: "/images/photos/service-translation.jpg",
+  editing: "/images/photos/spec-mtpe.jpg",
   mtpe: "/images/photos/service-mtpe.jpg",
   transcreation: "/images/photos/service-transcreation.jpg",
   consulting: "/images/photos/service-consulting.jpg",
@@ -121,6 +123,10 @@ const en: LocaleContent = {
         question: "Do you need documents, websites or software translated into Arabic?",
         text: "I translate from **English, French and Spanish into Arabic** across technical, legal, financial, healthcare, education, environmental and audiovisual content — accurate, natural and consistent with your terminology.",
       },
+      editing: {
+        question: "Need an Arabic translation checked before it goes out?",
+        text: "I **edit, proofread and quality-score Arabic translations**, including other translators’ work and machine output, against the source and your style guide, and deliver clean files with tracked changes and, for agencies, **LQA scorecards and reports**.",
+      },
       mtpe: {
         question: "Do you use machine translation but need human-quality Arabic?",
         text: "I **post-edit machine-translated output**, correcting meaning, terminology and style so it reads naturally — light or full post-editing, depending on how the text will be used.",
@@ -159,6 +165,25 @@ const en: LocaleContent = {
       ],
       ctaTitle: "Have files to translate?",
       ctaDescription: "Send your documents for a quote and a clear delivery timeline.",
+    },
+    editing: {
+      title: "Editing & Proofreading",
+      description:
+        "Bilingual editing, proofreading and language quality assessment (LQA) of Arabic translations, so every text is accurate, consistent and ready to publish.",
+      intro: [
+        "A second pair of expert eyes is what turns a good translation into a reliable one. I review Arabic translations, whether done by other translators, in-house teams or machine translation, against the source text, your glossary and your style guide, and correct anything that affects meaning, terminology, grammar, fluency or formatting.",
+        "For agencies, I also provide language quality assessment (LQA): errors are logged by category and severity using standard frameworks such as MQM or your own scorecard, and summarized in a clear report with a quality score and feedback for the translator.",
+      ],
+      included: [
+        "Bilingual editing against the source text",
+        "Monolingual proofreading of the Arabic",
+        "Terminology and style-guide compliance checks",
+        "LQA scoring by error category and severity",
+        "Quality reports and feedback for translators",
+        "Final formatting and pre-publication checks",
+      ],
+      ctaTitle: "Request a quote",
+      ctaDescription: "Send the source and the translation, or tell me about the project, and I’ll reply with a clear quote.",
     },
     mtpe: {
       title: "Machine translation post-editing (MTPE)",
@@ -287,6 +312,10 @@ const ar: LocaleContent = {
         question: "هل تحتاج إلى ترجمة مستندات أو مواقع إلكترونية أو برمجيات إلى العربية؟",
         text: "أترجم **من الإنجليزية والفرنسية والإسبانية إلى العربية** في المجالات التقنية والقانونية والمالية والطبية والتعليمية والبيئية والسمعية البصرية — ترجمة دقيقة وسلسة ومتّسقة مع مصطلحاتك.",
       },
+      editing: {
+        question: "هل تحتاج إلى مراجعة ترجمة عربية قبل اعتمادها؟",
+        text: "**أحرّر الترجمات العربية وأدقّقها وأقيّم جودتها**، بما في ذلك أعمال مترجمين آخرين ومخرجات الترجمة الآلية، مقابل النص المصدر ودليل الأسلوب الخاص بك، وأسلّم ملفات نظيفة بتعديلات متتبَّعة، إضافةً إلى **بطاقات تقييم الجودة (LQA) وتقاريرها** للوكالات.",
+      },
       mtpe: {
         question: "هل تستخدم الترجمة الآلية وتحتاج إلى نص عربي بجودة بشرية؟",
         text: "أحرّر **مخرجات الترجمة الآلية** لأصحّح المعنى والمصطلحات والأسلوب حتى يُقرأ النص بسلاسة — تحريرًا خفيفًا أو كاملًا بحسب استخدام النص.",
@@ -325,6 +354,25 @@ const ar: LocaleContent = {
       ],
       ctaTitle: "لديك ملفات للترجمة؟",
       ctaDescription: "أرسل مستنداتك لتحصل على عرض سعر وموعد تسليم واضح.",
+    },
+    editing: {
+      title: "التحرير والتدقيق",
+      description:
+        "تحرير الترجمات العربية مقابل النص المصدر وتدقيقها وتقييم جودتها (LQA)، ليكون كل نص دقيقًا ومتّسقًا وجاهزًا للنشر.",
+      intro: [
+        "العين الخبيرة الثانية هي ما يحوّل الترجمة الجيدة إلى ترجمة يمكن الاعتماد عليها. أراجع الترجمات العربية، سواء أنجزها مترجمون آخرون أو فرق داخلية أو الترجمة الآلية، مقابل النص المصدر ومسرد المصطلحات ودليل الأسلوب الخاص بك، وأصحّح كل ما يمسّ المعنى أو المصطلحات أو القواعد أو السلاسة أو التنسيق.",
+        "وللوكالات، أقدّم أيضًا تقييم جودة اللغة (LQA): تُسجَّل الأخطاء حسب الفئة ودرجة الخطورة باستخدام أطر معيارية مثل MQM أو بطاقة التقييم الخاصة بكم، وتُلخَّص في تقرير واضح يتضمن درجة الجودة وملاحظات للمترجم.",
+      ],
+      included: [
+        "تحرير ثنائي اللغة مقابل النص المصدر",
+        "تدقيق أحادي اللغة للنص العربي",
+        "التحقق من الالتزام بالمصطلحات ودليل الأسلوب",
+        "تقييم الجودة (LQA) حسب فئة الخطأ ودرجة خطورته",
+        "تقارير الجودة وملاحظات للمترجمين",
+        "مراجعة التنسيق النهائي والفحص قبل النشر",
+      ],
+      ctaTitle: "اطلب عرض سعر",
+      ctaDescription: "أرسل النص المصدر والترجمة، أو أخبرني عن المشروع، وسأرد عليك بعرض سعر واضح.",
     },
     mtpe: {
       title: "التحرير اللاحق للترجمة الآلية (MTPE)",
@@ -453,6 +501,10 @@ const fr: LocaleContent = {
         question: "Vous avez besoin de traduire des documents, un site web ou un logiciel en arabe ?",
         text: "Je traduis **de l’anglais, du français et de l’espagnol vers l’arabe** dans les domaines technique, juridique, financier, médical, éducatif, environnemental et audiovisuel — avec précision, naturel et cohérence terminologique.",
       },
+      editing: {
+        question: "Besoin de faire vérifier une traduction arabe avant sa diffusion ?",
+        text: "Je **révise, relis et évalue la qualité de traductions arabes**, y compris le travail d’autres traducteurs et les sorties de traduction automatique, par rapport à la source et à votre guide de style, et je livre des fichiers propres avec suivi des modifications et, pour les agences, des **grilles et rapports LQA**.",
+      },
       mtpe: {
         question: "Vous utilisez la traduction automatique mais visez une qualité humaine ?",
         text: "Je **post-édite les traductions automatiques** en corrigeant le sens, la terminologie et le style pour un arabe naturel — post-édition légère ou complète selon l’usage du texte.",
@@ -491,6 +543,25 @@ const fr: LocaleContent = {
       ],
       ctaTitle: "Des fichiers à traduire ?",
       ctaDescription: "Envoyez vos documents pour obtenir un devis et un délai de livraison clair.",
+    },
+    editing: {
+      title: "Révision et relecture",
+      description:
+        "Révision bilingue, relecture et évaluation de la qualité linguistique (LQA) de traductions arabes, pour des textes exacts, cohérents et prêts à publier.",
+      intro: [
+        "Un second regard expert transforme une bonne traduction en traduction fiable. Je révise des traductions arabes, qu’elles soient réalisées par d’autres traducteurs, par des équipes internes ou par traduction automatique, par rapport au texte source, à votre glossaire et à votre guide de style, et je corrige tout ce qui touche au sens, à la terminologie, à la grammaire, à la fluidité ou à la mise en forme.",
+        "Pour les agences, je propose aussi l’évaluation de la qualité linguistique (LQA) : les erreurs sont consignées par catégorie et par gravité selon des référentiels comme MQM ou votre propre grille, puis synthétisées dans un rapport clair avec une note de qualité et des commentaires pour le traducteur.",
+      ],
+      included: [
+        "Révision bilingue par rapport au texte source",
+        "Relecture unilingue de l’arabe",
+        "Vérification de la terminologie et du guide de style",
+        "Notation LQA par catégorie et gravité d’erreur",
+        "Rapports qualité et retours aux traducteurs",
+        "Contrôle final de la mise en forme avant publication",
+      ],
+      ctaTitle: "Demander un devis",
+      ctaDescription: "Envoyez-moi la source et la traduction, ou décrivez votre projet, et je vous répondrai avec un devis clair.",
     },
     mtpe: {
       title: "Post-édition de traduction automatique (MTPE)",
@@ -620,6 +691,10 @@ const es: LocaleContent = {
         question: "¿Necesitas traducir documentos, sitios web o software al árabe?",
         text: "Traduzco **del inglés, el francés y el español al árabe** en los ámbitos técnico, jurídico, financiero, sanitario, educativo, medioambiental y audiovisual, con precisión, naturalidad y coherencia terminológica.",
       },
+      editing: {
+        question: "¿Necesitas revisar una traducción al árabe antes de publicarla?",
+        text: "**Edito, reviso y evalúo la calidad de traducciones al árabe**, incluido el trabajo de otros traductores y la traducción automática, frente al original y tu guía de estilo, y entrego archivos limpios con control de cambios y, para agencias, **fichas e informes LQA**.",
+      },
       mtpe: {
         question: "¿Usas traducción automática pero necesitas un árabe de calidad humana?",
         text: "Realizo la **posedición de traducciones automáticas**, corrigiendo sentido, terminología y estilo para que el texto se lea con naturalidad: posedición ligera o completa según el uso del texto.",
@@ -658,6 +733,25 @@ const es: LocaleContent = {
       ],
       ctaTitle: "¿Tienes archivos para traducir?",
       ctaDescription: "Envía tus documentos y recibe un presupuesto y un plazo de entrega claros.",
+    },
+    editing: {
+      title: "Edición y revisión",
+      description:
+        "Edición bilingüe, revisión y evaluación de la calidad lingüística (LQA) de traducciones al árabe, para que cada texto sea preciso, coherente y esté listo para publicar.",
+      intro: [
+        "Una segunda mirada experta es lo que convierte una buena traducción en una traducción fiable. Reviso traducciones al árabe, hechas por otros traductores, equipos internos o traducción automática, frente al texto original, tu glosario y tu guía de estilo, y corrijo todo lo que afecte al sentido, la terminología, la gramática, la fluidez o el formato.",
+        "Para agencias, también ofrezco evaluación de la calidad lingüística (LQA): los errores se registran por categoría y gravedad con marcos estándar como MQM o vuestra propia ficha, y se resumen en un informe claro con una puntuación de calidad y comentarios para el traductor.",
+      ],
+      included: [
+        "Edición bilingüe frente al texto original",
+        "Revisión monolingüe del árabe",
+        "Comprobación de terminología y guía de estilo",
+        "Puntuación LQA por categoría y gravedad del error",
+        "Informes de calidad y comentarios para traductores",
+        "Comprobación final del formato antes de publicar",
+      ],
+      ctaTitle: "Solicitar un presupuesto",
+      ctaDescription: "Envíame el original y la traducción, o cuéntame el proyecto, y te responderé con un presupuesto claro.",
     },
     mtpe: {
       title: "Posedición de traducción automática (MTPE)",

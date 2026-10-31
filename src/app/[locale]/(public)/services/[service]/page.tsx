@@ -22,6 +22,7 @@ import { getServiceDetails } from "@/content/serviceDetails";
 import { siteUrl } from "@/lib/seo";
 import { ids, breadcrumbs } from "@/lib/entity";
 import { Faq } from "@/components/Faq/Faq";
+import { QuoteForm } from "../../contact/QuoteForm";
 import { Testimonials } from "@/components/Testimonials/Testimonials";
 import { getFaqs } from "@/content/faqs";
 import styles from "./servicePage.module.css";
@@ -154,12 +155,28 @@ export default async function ServicePage({ params }: { params: Params }) {
         <Faq title={getFaqs(locale).title} items={getFaqs(locale)[service] ?? []} tinted />
       )}
 
-      <CTA
-        title={page.ctaTitle}
-        description={page.ctaDescription}
-        primary={{ label: t.common.letsTalk, href: routes.contact }}
-        secondary={{ label: t.common.viewServices, href: routes.services }}
-      />
+      {service === "editing" ? (
+        // Editing page: the quote form itself, with the service pre-selected.
+        <Section title={page.ctaTitle} intro={page.ctaDescription} narrow>
+          <QuoteForm
+            labels={t.form}
+            locale={locale}
+            defaultService={page.title}
+            specializationOptions={[
+              ...t.cards.specializations.map((s) => s.title),
+              ...shared.extraSpecializations.map((s) => s.title),
+            ]}
+            serviceOptions={serviceSlugs.map((slug) => pages[slug].title)}
+          />
+        </Section>
+      ) : (
+        <CTA
+          title={page.ctaTitle}
+          description={page.ctaDescription}
+          primary={{ label: t.common.letsTalk, href: routes.contact }}
+          secondary={{ label: t.common.viewServices, href: routes.services }}
+        />
+      )}
     </>
   );
 }

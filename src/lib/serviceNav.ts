@@ -13,6 +13,7 @@ export function buildServiceNav(dict: Dictionary): NavLink[] {
   const section = (slug: string) => `${routes.services}#${slug}`;
   return [
     { href: section("translation"), label: m.translation },
+    { href: section("editing"), label: m.editing },
     { href: section("mtpe"), label: m.mtpe },
     { href: section("transcreation"), label: m.transcreation },
     { href: section("consulting"), label: m.consulting },

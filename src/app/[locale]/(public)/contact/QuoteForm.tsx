@@ -36,9 +36,12 @@ export function QuoteForm({
   specializationOptions,
   serviceOptions,
   locale,
+  defaultService = "",
 }: {
   labels: QuoteFormLabels;
   locale: string;
+  /** Service pre-selected in the "Service needed" menu (e.g. on a service page). */
+  defaultService?: string;
   specializationOptions: string[];
   serviceOptions: string[];
 }) {
@@ -130,7 +133,7 @@ export function QuoteForm({
 
       <label className={styles.field}>
         <span>{labels.service}</span>
-        <select name="service" defaultValue="">
+        <select name="service" defaultValue={defaultService}>
           <option value="">{labels.selectService}</option>
           {serviceOptions.map((title) => (
             <option key={title} value={title}>

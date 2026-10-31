@@ -48,6 +48,7 @@ const ar: Dictionary = {
   /** Labels for the Services menu (header dropdown and footer). */
   serviceMenu: {
     translation: "الترجمة",
+    editing: "التحرير والتدقيق",
     mtpe: "التحرير اللاحق للترجمة الآلية",
     transcreation: "الترجمة الإبداعية ونصوص الواجهات",
     consulting: "الاستشارات",

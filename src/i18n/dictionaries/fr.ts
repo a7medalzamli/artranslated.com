@@ -42,6 +42,7 @@ const fr: Dictionary = {
   /** Labels for the Services menu (header dropdown and footer). */
   serviceMenu: {
     translation: "Traduction",
+    editing: "Révision et relecture",
     mtpe: "Post-édition (MTPE)",
     transcreation: "Transcréation et textes d’interface",
     consulting: "Conseil",

@@ -7,6 +7,7 @@ export const routes = {
   about: "/about",
   services: "/services",
   translation: "/services/translation",
+  editing: "/services/editing",
   mtpe: "/services/mtpe",
   transcreation: "/services/transcreation",
   consulting: "/services/consulting",

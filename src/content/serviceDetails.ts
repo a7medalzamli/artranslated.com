@@ -30,6 +30,12 @@ const en: Details = {
     "You send the files and tell me the audience, deadline and any reference material. I confirm the scope and quote, set up a termbase and translation memory in SDL Trados Studio or memoQ, translate, then edit and proofread the Arabic (TEP). Automated QA checks catch number, tag and terminology errors before delivery.",
     "Translated files in their original format and layout (Word, Excel, PowerPoint, bilingual XLIFF and other CAT formats), plus the updated translation memory and glossary on request, so future updates stay consistent and cost less. Turnaround depends on volume and is agreed in the quote.",
   ),
+  editing: d(
+    "en",
+    "Direct clients who want an Arabic translation checked before it is published or printed, and translation agencies (LSPs) that need an independent reviser, a final proofreader or LQA scoring for their Arabic projects and vendors.",
+    "You send the source and the translation, with any glossary, style guide or reference material, and tell me the level of review you need. I edit in your CAT tool or with tracked changes, check terminology, numbers, tags and consistency with QA tools such as Xbench, then proofread the final Arabic. For LQA, each error is logged with its category and severity.",
+    "Corrected files in their original format, with tracked changes or as a clean version, a log of key changes and queries, and for agencies an LQA scorecard and report. I work with Word, Excel, PowerPoint and PDF, bilingual CAT formats such as XLIFF, SDLXLIFF and MQXLIFF, Trados and memoQ project packages, and HTML, XML, JSON and SRT subtitle files.",
+  ),
   mtpe: d(
     "en",
     "Teams that already run content through machine translation engines or large language models and need the Arabic checked and corrected by a professional before it is used, published or fed back into training.",
@@ -62,6 +68,12 @@ const ar: Details = {
     "الشركات والوكالات والمؤسسات التي تحتاج إلى نقل محتواها من الإنجليزية أو الفرنسية أو الإسبانية إلى العربية: وثائق المنتجات وأدلة المستخدم، والمواقع الإلكترونية، والعقود، والتقارير، والمواد التدريبية والتسويقية. تتعاون معي وكالات الترجمة بصفتي لغويًا مختصًا بالعربية في مشاريعها المستمرة، ويلجأ إليّ العملاء المباشرون حين يريدون مترجمًا واحدًا مسؤولًا عن العمل من البداية حتى التسليم.",
     "ترسل الملفات وتخبرني بالجمهور المستهدف والموعد النهائي وأي مواد مرجعية. أؤكد نطاق العمل وعرض السعر، ثم أُعدّ قاعدة المصطلحات وذاكرة الترجمة في SDL Trados Studio أو memoQ، وأترجم، ثم أحرّر النص العربي وأدقّقه (TEP). وتكشف فحوص الجودة الآلية أخطاء الأرقام والوسوم والمصطلحات قبل التسليم.",
     "ملفات مترجمة بصيغتها وتنسيقها الأصليين (Word وExcel وPowerPoint وملفات XLIFF ثنائية اللغة وغيرها من صيغ أدوات الترجمة)، إضافةً إلى ذاكرة الترجمة والمسرد المحدَّثين عند الطلب، لتبقى التحديثات المستقبلية متّسقة وأقل تكلفة. وتعتمد مدة التسليم على حجم العمل ويُتفق عليها في عرض السعر.",
+  ),
+  editing: d(
+    "ar",
+    "العملاء المباشرون الذين يريدون مراجعة ترجمة عربية قبل نشرها أو طباعتها، ووكالات الترجمة التي تحتاج إلى مراجع مستقل أو مدقّق نهائي أو تقييم جودة (LQA) لمشاريعها العربية ومترجميها.",
+    "ترسل النص المصدر والترجمة، مع أي مسرد أو دليل أسلوب أو مواد مرجعية، وتحدّد مستوى المراجعة الذي تحتاجه. أحرّر النص في أداة الترجمة التي تستخدمها أو بتتبّع التغييرات، وأتحقق من المصطلحات والأرقام والوسوم والاتساق بأدوات ضمان الجودة مثل Xbench، ثم أدقّق النص العربي النهائي. وفي تقييم الجودة (LQA)، يُسجَّل كل خطأ مع فئته ودرجة خطورته.",
+    "ملفات مصحَّحة بصيغتها الأصلية، بتعديلات متتبَّعة أو بنسخة نظيفة، وسجل بأهم التعديلات والاستفسارات، وللوكالات بطاقة تقييم جودة وتقرير. أعمل على ملفات Word وExcel وPowerPoint وPDF، وصيغ أدوات الترجمة ثنائية اللغة مثل XLIFF وSDLXLIFF وMQXLIFF، وحزم مشاريع Trados وmemoQ، وملفات HTML وXML وJSON وملفات الترجمة المرئية SRT.",
   ),
   mtpe: d(
     "ar",
@@ -96,6 +108,12 @@ const fr: Details = {
     "Vous m’envoyez les fichiers en précisant le public, le délai et les éventuels documents de référence. Je confirme le périmètre et le devis, je prépare une base terminologique et une mémoire de traduction dans SDL Trados Studio ou memoQ, je traduis, puis je révise et relis l’arabe (TEP). Des contrôles qualité automatiques repèrent les erreurs de chiffres, de balises et de terminologie avant la livraison.",
     "Les fichiers traduits dans leur format et leur mise en page d’origine (Word, Excel, PowerPoint, XLIFF bilingues et autres formats TAO), ainsi que la mémoire de traduction et le glossaire mis à jour sur demande, pour des mises à jour futures cohérentes et moins coûteuses. Le délai dépend du volume et il est fixé dans le devis.",
   ),
+  editing: d(
+    "fr",
+    "Les clients directs qui veulent faire vérifier une traduction arabe avant publication ou impression, et les agences de traduction qui ont besoin d’un réviseur indépendant, d’un relecteur final ou d’une notation LQA pour leurs projets et prestataires arabes.",
+    "Vous m’envoyez la source et la traduction, avec glossaire, guide de style ou documents de référence, et vous précisez le niveau de révision souhaité. Je révise dans votre outil TAO ou en mode suivi des modifications, je vérifie la terminologie, les chiffres, les balises et la cohérence avec des outils de contrôle qualité comme Xbench, puis je relis l’arabe final. Pour la LQA, chaque erreur est consignée avec sa catégorie et sa gravité.",
+    "Des fichiers corrigés dans leur format d’origine, avec suivi des modifications ou en version propre, un journal des principales modifications et questions et, pour les agences, une grille et un rapport LQA. Je travaille sur Word, Excel, PowerPoint et PDF, les formats bilingues TAO comme XLIFF, SDLXLIFF et MQXLIFF, les packages de projet Trados et memoQ, ainsi que les fichiers HTML, XML, JSON et les sous-titres SRT.",
+  ),
   mtpe: d(
     "fr",
     "Les équipes qui font déjà passer leurs contenus par des moteurs de traduction automatique ou de grands modèles de langage, et qui ont besoin qu’un professionnel vérifie et corrige l’arabe avant de l’utiliser, de le publier ou de le réinjecter dans l’entraînement.",
@@ -128,6 +146,12 @@ const es: Details = {
     "Empresas, agencias y organizaciones que necesitan su contenido en inglés, francés o español en árabe: documentación de producto y manuales de usuario, sitios web, contratos, informes, material de formación y marketing. Las agencias de traducción trabajan conmigo como lingüista de árabe dedicado en sus cuentas recurrentes, y los clientes directos acuden a mí cuando quieren un único traductor responsable desde el encargo hasta la entrega.",
     "Me envías los archivos y me indicas el público, el plazo y cualquier material de referencia. Confirmo el alcance y el presupuesto, preparo una base terminológica y una memoria de traducción en SDL Trados Studio o memoQ, traduzco y después edito y reviso el árabe (TEP). Los controles de calidad automáticos detectan errores de números, etiquetas y terminología antes de la entrega.",
     "Los archivos traducidos en su formato y diseño originales (Word, Excel, PowerPoint, XLIFF bilingües y otros formatos TAO), además de la memoria de traducción y el glosario actualizados si los pides, para que las futuras actualizaciones sean coherentes y cuesten menos. El plazo depende del volumen y se acuerda en el presupuesto.",
+  ),
+  editing: d(
+    "es",
+    "Clientes directos que quieren revisar una traducción al árabe antes de publicarla o imprimirla, y agencias de traducción que necesitan un revisor independiente, un corrector final o una puntuación LQA para sus proyectos y proveedores de árabe.",
+    "Me envías el original y la traducción, con cualquier glosario, guía de estilo o material de referencia, y me indicas el nivel de revisión que necesitas. Edito en tu herramienta TAO o con control de cambios, compruebo terminología, números, etiquetas y coherencia con herramientas de control de calidad como Xbench, y después reviso el árabe final. En la LQA, cada error se registra con su categoría y su gravedad.",
+    "Archivos corregidos en su formato original, con control de cambios o en versión limpia, un registro de los cambios principales y las dudas y, para agencias, una ficha e informe LQA. Trabajo con Word, Excel, PowerPoint y PDF, formatos bilingües TAO como XLIFF, SDLXLIFF y MQXLIFF, paquetes de proyecto de Trados y memoQ, y archivos HTML, XML, JSON y subtítulos SRT.",
   ),
   mtpe: d(
     "es",

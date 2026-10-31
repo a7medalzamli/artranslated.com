@@ -35,6 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     routes.about,
     routes.services,
     routes.translation,
+    routes.editing,
     routes.mtpe,
     routes.transcreation,
     routes.consulting,
