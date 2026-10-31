@@ -45,7 +45,7 @@ const es: Dictionary = {
     translation: "Traducción",
     editing: "Edición y revisión",
     mtpe: "Posedición (MTPE)",
-    transcreation: "Transcreación y textos de interfaz",
+    transcreation: "Transcreación",
     consulting: "Consultoría",
     digitalMarketing: "Marketing digital",
   },

@@ -49,7 +49,7 @@ const en = {
     translation: "Translation",
     editing: "Editing & proofreading",
     mtpe: "Post-editing (MTPE)",
-    transcreation: "Transcreation & UI copy",
+    transcreation: "Transcreation",
     consulting: "Consulting",
     digitalMarketing: "Digital Marketing",
   },

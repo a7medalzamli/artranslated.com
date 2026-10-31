@@ -217,7 +217,7 @@ const en = {
           "Editing machine-translated output to human quality — correcting accuracy, terminology and style while keeping turnaround efficient.",
       },
       {
-        title: "Transcreation & UI copy",
+        title: "Transcreation",
         summary:
           "Adapting marketing and product interface copy so it reads naturally in Arabic and preserves intent, tone and conversion — informed by a marketing background.",
       },

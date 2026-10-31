@@ -205,7 +205,7 @@ const en: LocaleContent = {
       ctaDescription: "Get the speed of MT with the quality your audience expects.",
     },
     transcreation: {
-      title: "Transcreation & UI copy",
+      title: "Transcreation",
       description:
         "Adapting marketing and product copy so it feels native to Arabic audiences — keeping intent, tone and conversion.",
       intro: [
@@ -394,7 +394,7 @@ const ar: LocaleContent = {
       ctaDescription: "احصل على سرعة الترجمة الآلية بالجودة التي يتوقعها جمهورك.",
     },
     transcreation: {
-      title: "الترجمة الإبداعية ونصوص الواجهات",
+      title: "الترجمة الإبداعية",
       description:
         "تكييف النصوص التسويقية ونصوص المنتجات لتبدو أصيلة لدى الجمهور العربي — مع الحفاظ على المقصد والنبرة وقدرتها على الإقناع.",
       intro: [
@@ -583,7 +583,7 @@ const fr: LocaleContent = {
       ctaDescription: "Profitez de sa rapidité avec la qualité qu’attend votre public.",
     },
     transcreation: {
-      title: "Transcréation et textes d’interface",
+      title: "Transcréation",
       description:
         "Adapter vos textes marketing et produit pour qu’ils sonnent naturels en arabe — en préservant l’intention, le ton et la conversion.",
       intro: [
@@ -773,7 +773,7 @@ const es: LocaleContent = {
       ctaDescription: "Consigue su rapidez con la calidad que espera tu público.",
     },
     transcreation: {
-      title: "Transcreación y textos de interfaz",
+      title: "Transcreación",
       description:
         "Adaptar textos de marketing y de producto para que suenen naturales en árabe, conservando intención, tono y conversión.",
       intro: [

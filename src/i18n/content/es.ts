@@ -211,7 +211,7 @@ const es: SiteContent = {
           "Edición de la traducción automática a calidad humana — corrigiendo exactitud, terminología y estilo manteniendo plazos eficientes.",
       },
       {
-        title: "Transcreación y textos de interfaz",
+        title: "Transcreación",
         summary:
           "Adaptar los textos de marketing y de interfaz de producto para que se lean con naturalidad en árabe, preservando intención, tono y conversión — con criterio de marketing.",
       },

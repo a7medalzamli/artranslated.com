@@ -17,7 +17,7 @@
 - [Translation into Arabic](https://www.artranslated.com/en/services/translation): professional human translation from English, French and Spanish, with translation, editing and proofreading (TEP)
 - [Editing & Proofreading](https://www.artranslated.com/en/services/editing): bilingual editing, proofreading and LQA scoring of Arabic translations, including other translators' work, for clients and agencies
 - [Machine translation post-editing (MTPE)](https://www.artranslated.com/en/services/mtpe): light and full post-editing of machine-translated Arabic
-- [Transcreation & UI copy](https://www.artranslated.com/en/services/transcreation): marketing, app and website copy adapted for Arabic audiences
+- [Transcreation](https://www.artranslated.com/en/services/transcreation): marketing, app and website copy adapted for Arabic audiences
 - [Consulting](https://www.artranslated.com/en/services/consulting): advice on entering Arabic-speaking markets, terminology, style guides and localization workflow
 - [Digital Marketing](https://www.artranslated.com/en/services/digital-marketing): Arabic SEO, social media, ads and email content
 

@@ -216,7 +216,7 @@ const fr: SiteContent = {
           "Édition de la traduction automatique à un niveau humain — en corrigeant l'exactitude, la terminologie et le style tout en gardant des délais efficaces.",
       },
       {
-        title: "Transcréation et textes d'interface",
+        title: "Transcréation",
         summary:
           "Adapter les textes marketing et d'interface produit pour une lecture naturelle en arabe, en préservant l'intention, le ton et la conversion — avec une sensibilité marketing.",
       },
