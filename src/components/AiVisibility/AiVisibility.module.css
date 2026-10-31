@@ -1,0 +1,57 @@
+/* Roles: small pills, separated like "Researcher • Strategist • Developer". */
+.roles {
+  list-style: none;
+  margin: 0 0 var(--space-xl);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.roles li {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+}
+
+.abbr {
+  font-size: 1.75rem;
+  font-weight: var(--weight-bold);
+  line-height: 1.1;
+  color: var(--color-accent);
+  letter-spacing: 0.02em;
+}
+
+.name {
+  font-size: var(--font-size-base);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+}
+
+.text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}

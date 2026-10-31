@@ -80,7 +80,7 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
     mtpe: "Arabic Machine Translation Post-Editing (MTPE)",
     transcreation: "Arabic Transcreation",
     consulting: "Arabic Localization Consulting",
-    "digital-marketing": "Arabic Digital Marketing & SEO",
+    "digital-marketing": "Digital Marketing, SEO & AI Search Visibility",
   },
   ar: {
     services: "الخدمات اللغوية بالعربية",
@@ -89,7 +89,7 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
     mtpe: "التحرير اللاحق للترجمة الآلية إلى العربية (MTPE)",
     transcreation: "الترجمة الإبداعية إلى العربية",
     consulting: "استشارات التوطين إلى العربية",
-    "digital-marketing": "التسويق الرقمي وتحسين محركات البحث بالعربية",
+    "digital-marketing": "التسويق الرقمي وتحسين محركات البحث والظهور في الذكاء الاصطناعي",
   },
   fr: {
     services: "Services linguistiques en arabe",
@@ -98,7 +98,7 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
     mtpe: "Post-édition de traduction automatique (MTPE) arabe",
     transcreation: "Transcréation en arabe",
     consulting: "Conseil en localisation arabe",
-    "digital-marketing": "Marketing digital et SEO en arabe",
+    "digital-marketing": "Marketing digital, SEO et visibilité dans la recherche IA",
   },
   es: {
     services: "Servicios lingüísticos en árabe",
@@ -107,7 +107,7 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
     mtpe: "Posedición de traducción automática (MTPE) al árabe",
     transcreation: "Transcreación al árabe",
     consulting: "Consultoría de localización al árabe",
-    "digital-marketing": "Marketing digital y SEO en árabe",
+    "digital-marketing": "Marketing digital, SEO y visibilidad en la búsqueda con IA",
   },
 };
 

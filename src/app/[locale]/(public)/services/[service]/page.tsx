@@ -24,6 +24,7 @@ import { ids, breadcrumbs } from "@/lib/entity";
 import { Faq } from "@/components/Faq/Faq";
 import { QuoteForm } from "../../contact/QuoteForm";
 import { Testimonials } from "@/components/Testimonials/Testimonials";
+import { AiVisibility } from "@/components/AiVisibility/AiVisibility";
 import { getFaqs } from "@/content/faqs";
 import styles from "./servicePage.module.css";
 
@@ -104,6 +105,8 @@ export default async function ServicePage({ params }: { params: Params }) {
           </div>
         </div>
       </Section>
+
+      {service === "digital-marketing" && <AiVisibility locale={locale} />}
 
       {service === "translation" && (
         <Section tinted title={shared.specTitle} intro={shared.specIntro}>

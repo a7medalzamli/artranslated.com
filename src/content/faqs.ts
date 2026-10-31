@@ -132,6 +132,14 @@ const en: FaqSet = {
   ],
   "digital-marketing": [
     {
+      q: "What are SEO, AEO, GEO and LLMO?",
+      a: "SEO helps your website rank in search engines. AEO (answer engine optimization) structures your content so it can be used directly as an answer. GEO (generative engine optimization) and LLMO (large language model optimization) make your business easy for AI tools to understand, trust and cite when they generate answers. Together, they keep you visible wherever people search.",
+    },
+    {
+      q: "Can you guarantee that my business appears in AI answers?",
+      a: "No one can guarantee it, because AI tools choose their own sources. What I can do is make your business the clearest, most consistent and most citable source on your topic, which is what these tools look for, and track how your visibility changes over time.",
+    },
+    {
       q: "Which markets do you work with?",
       a: "I mainly work with businesses in Europe and North America, as well as clients around the world, that want to reach Arabic-speaking audiences.",
     },
@@ -259,6 +267,14 @@ const ar: FaqSet = {
     },
   ],
   "digital-marketing": [
+    {
+      q: "ما المقصود بـ SEO وAEO وGEO وLLMO؟",
+      a: "SEO يساعد موقعك على التصدّر في محركات البحث. وAEO (تحسين محركات الإجابة) ينظّم محتواك ليُستخدم إجابةً مباشرة. أما GEO (تحسين المحركات التوليدية) وLLMO (تحسين الظهور في النماذج اللغوية الكبيرة) فيجعلان شركتك سهلة الفهم وموثوقة ويُستشهد بها لدى أدوات الذكاء الاصطناعي عند توليد الإجابات. ومعًا تبقيك ظاهرًا أينما بحث الناس.",
+    },
+    {
+      q: "هل تضمن ظهور شركتي في إجابات الذكاء الاصطناعي؟",
+      a: "لا أحد يستطيع ضمان ذلك، لأن أدوات الذكاء الاصطناعي تختار مصادرها بنفسها. ما أستطيع فعله هو أن أجعل شركتك المصدر الأوضح والأكثر اتساقًا والأجدر بالاستشهاد في مجالها، وهو ما تبحث عنه هذه الأدوات، وأن أتابع تطوّر ظهورك مع الوقت.",
+    },
     {
       q: "ما الأسواق التي تعمل معها؟",
       a: "أعمل أساسًا مع شركات في أوروبا وأمريكا الشمالية، إضافةً إلى عملاء من مختلف أنحاء العالم، ممن يريدون الوصول إلى الجمهور الناطق بالعربية.",
@@ -388,6 +404,14 @@ const fr: FaqSet = {
   ],
   "digital-marketing": [
     {
+      q: "Que signifient SEO, AEO, GEO et LLMO ?",
+      a: "Le SEO aide votre site à se positionner dans les moteurs de recherche. L’AEO (optimisation pour les moteurs de réponse) structure vos contenus pour qu’ils puissent servir directement de réponse. Le GEO (optimisation pour les moteurs génératifs) et le LLMO (optimisation pour les grands modèles de langage) rendent votre entreprise facile à comprendre, fiable et citable par les outils d’IA lorsqu’ils génèrent des réponses. Ensemble, ils vous gardent visible partout où l’on cherche.",
+    },
+    {
+      q: "Pouvez-vous garantir que mon entreprise apparaîtra dans les réponses de l’IA ?",
+      a: "Personne ne peut le garantir, car les outils d’IA choisissent eux-mêmes leurs sources. Je peux en revanche faire de votre entreprise la source la plus claire, la plus cohérente et la plus citable de votre domaine, ce que ces outils recherchent, et suivre l’évolution de votre visibilité dans le temps.",
+    },
+    {
       q: "Avec quels marchés travaillez-vous ?",
       a: "Je travaille principalement avec des entreprises d’Europe et d’Amérique du Nord, ainsi qu’avec des clients du monde entier, qui veulent toucher un public arabophone.",
     },
@@ -515,6 +539,14 @@ const es: FaqSet = {
     },
   ],
   "digital-marketing": [
+    {
+      q: "¿Qué son el SEO, el AEO, el GEO y el LLMO?",
+      a: "El SEO ayuda a que tu web se posicione en los buscadores. El AEO (optimización para motores de respuesta) estructura tu contenido para que pueda usarse directamente como respuesta. El GEO (optimización para motores generativos) y el LLMO (optimización para grandes modelos de lenguaje) hacen que tu empresa sea fácil de entender, fiable y citable para las herramientas de IA cuando generan respuestas. Juntos te mantienen visible dondequiera que la gente busque.",
+    },
+    {
+      q: "¿Puedes garantizar que mi empresa aparezca en las respuestas de la IA?",
+      a: "Nadie puede garantizarlo, porque las herramientas de IA eligen sus propias fuentes. Lo que sí puedo hacer es convertir tu empresa en la fuente más clara, coherente y citable de tu sector, que es lo que buscan estas herramientas, y seguir cómo evoluciona tu visibilidad con el tiempo.",
+    },
     {
       q: "¿Con qué mercados trabajas?",
       a: "Trabajo sobre todo con empresas de Europa y Norteamérica, además de clientes de todo el mundo, que quieren llegar al público de habla árabe.",

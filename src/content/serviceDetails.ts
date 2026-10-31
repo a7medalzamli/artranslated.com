@@ -56,9 +56,9 @@ const en: Details = {
   ),
   "digital-marketing": d(
     "en",
-    "Businesses that want Arabic-speaking customers to find and trust them online, from SaaS and e-commerce to service providers entering Gulf, Levant or North African markets.",
-    "I research the Arabic keywords your audience actually searches for, then write or localize website pages, blog posts, social media posts, ads and emails around them, adapting tone and examples to the target market instead of translating line by line. Campaign results are reviewed to improve the next round.",
-    "An Arabic keyword list, search-optimized page and blog content, social media and ad copy, localized emails and newsletters, and a short performance review with recommendations.",
+    "Businesses that want customers to find and trust them online, in search engines and in AI answers, from SaaS and e-commerce to service providers entering Arabic-speaking, European or North American markets.",
+    "I start with research: the keywords and questions your audience uses, and how your business appears today in search results and AI answers. Then I fix the technical and structured-data side of your website, write or localize content that answers those questions clearly, and run social media and ad campaigns. Results are tracked to improve the next round.",
+    "A search and AI visibility audit, a keyword and question map, search-optimized pages and blog content, structured data and technical recommendations for your website, social media and ad copy, and regular performance reviews with recommendations.",
   ),
 };
 
@@ -95,9 +95,9 @@ const ar: Details = {
   ),
   "digital-marketing": d(
     "ar",
-    "الشركات التي تريد أن يجدها العملاء الناطقون بالعربية على الإنترنت وأن يثقوا بها، من البرمجيات كخدمة والتجارة الإلكترونية إلى مزوّدي الخدمات الداخلين إلى أسواق الخليج والشام وشمال أفريقيا.",
-    "أبحث عن الكلمات المفتاحية العربية التي يستخدمها جمهورك فعلًا في البحث، ثم أكتب أو أوطّن صفحات الموقع والمقالات ومنشورات وسائل التواصل الاجتماعي والإعلانات والرسائل البريدية بناءً عليها، مع تكييف النبرة والأمثلة للسوق المستهدفة بدلًا من الترجمة سطرًا بسطر. وتُراجَع نتائج الحملات لتحسين الجولة التالية.",
-    "قائمة بالكلمات المفتاحية العربية، ومحتوى صفحات ومقالات مُحسَّنًا لمحركات البحث، ونصوصًا لوسائل التواصل الاجتماعي والإعلانات، ورسائل بريدية ونشرات موطَّنة، ومراجعة موجزة للأداء مع توصيات.",
+    "الشركات التي تريد أن يجدها العملاء ويثقوا بها على الإنترنت، في محركات البحث وفي إجابات الذكاء الاصطناعي، من منصات SaaS والتجارة الإلكترونية إلى مقدّمي الخدمات الذين يدخلون الأسواق العربية أو الأوروبية أو أمريكا الشمالية.",
+    "أبدأ بالبحث: الكلمات المفتاحية والأسئلة التي يستخدمها جمهورك، وكيف تظهر شركتك اليوم في نتائج البحث وإجابات الذكاء الاصطناعي. ثم أعالج الجانب التقني والبيانات المنظّمة في موقعك، وأكتب أو أوطّن محتوى يجيب عن تلك الأسئلة بوضوح، وأدير حملات وسائل التواصل الاجتماعي والإعلانات. وتُتابَع النتائج لتحسين الجولة التالية.",
+    "تقييم للظهور في البحث والذكاء الاصطناعي، وخريطة للكلمات المفتاحية والأسئلة، وصفحات ومحتوى مدونة محسَّن لمحركات البحث، وبيانات منظّمة وتوصيات تقنية لموقعك، ونصوص لوسائل التواصل الاجتماعي والإعلانات، ومراجعات دورية للأداء مع توصيات.",
   ),
 };
 
@@ -134,9 +134,9 @@ const fr: Details = {
   ),
   "digital-marketing": d(
     "fr",
-    "Les entreprises qui veulent que les clients arabophones les trouvent et leur fassent confiance en ligne, du SaaS et de l’e-commerce aux prestataires de services qui abordent les marchés du Golfe, du Levant ou d’Afrique du Nord.",
-    "Je recherche les mots-clés arabes que votre public utilise réellement, puis je rédige ou localise autour d’eux les pages de votre site, vos articles de blog, vos publications sur les réseaux sociaux, vos annonces et vos e-mails, en adaptant le ton et les exemples au marché visé au lieu de traduire ligne par ligne. Les résultats des campagnes sont analysés pour améliorer la suivante.",
-    "Une liste de mots-clés arabes, des pages et des articles optimisés pour le référencement, des textes pour les réseaux sociaux et les annonces, des e-mails et newsletters localisés, et un bref bilan de performance avec recommandations.",
+    "Les entreprises qui veulent être trouvées et choisies en ligne, dans les moteurs de recherche comme dans les réponses de l’IA, des SaaS et du e-commerce aux prestataires qui abordent les marchés arabophones, européens ou nord-américains.",
+    "Je commence par la recherche : les mots-clés et les questions de votre public, et la présence actuelle de votre entreprise dans les résultats de recherche et les réponses de l’IA. Je corrige ensuite l’aspect technique et les données structurées de votre site, je rédige ou localise des contenus qui répondent clairement à ces questions, et je gère vos campagnes sur les réseaux sociaux et publicitaires. Les résultats sont suivis pour améliorer l’étape suivante.",
+    "Un audit de visibilité dans la recherche et l’IA, une cartographie des mots-clés et des questions, des pages et articles optimisés pour la recherche, des données structurées et des recommandations techniques pour votre site, des textes pour les réseaux sociaux et la publicité, et des bilans de performance réguliers avec recommandations.",
   ),
 };
 
@@ -173,9 +173,9 @@ const es: Details = {
   ),
   "digital-marketing": d(
     "es",
-    "Empresas que quieren que los clientes de habla árabe las encuentren y confíen en ellas en internet, desde SaaS y comercio electrónico hasta proveedores de servicios que entran en los mercados del Golfo, el Levante o el norte de África.",
-    "Investigo las palabras clave en árabe que tu público busca de verdad y, a partir de ellas, redacto o localizo páginas web, artículos de blog, publicaciones en redes sociales, anuncios y correos, adaptando el tono y los ejemplos al mercado objetivo en lugar de traducir línea por línea. Los resultados de las campañas se revisan para mejorar la siguiente.",
-    "Una lista de palabras clave en árabe, contenido de páginas y blog optimizado para buscadores, textos para redes sociales y anuncios, correos y boletines localizados, y una breve revisión de resultados con recomendaciones.",
+    "Empresas que quieren que sus clientes las encuentren y confíen en ellas en internet, en los buscadores y en las respuestas de la IA, desde SaaS y comercio electrónico hasta proveedores de servicios que entran en mercados árabes, europeos o norteamericanos.",
+    "Empiezo investigando: las palabras clave y las preguntas de tu público, y cómo aparece hoy tu empresa en los resultados de búsqueda y en las respuestas de la IA. Después corrijo la parte técnica y los datos estructurados de tu web, escribo o localizo contenido que responde con claridad a esas preguntas y gestiono campañas en redes sociales y de anuncios. Los resultados se siguen para mejorar la siguiente ronda.",
+    "Una auditoría de visibilidad en buscadores e IA, un mapa de palabras clave y preguntas, páginas y contenido de blog optimizados, datos estructurados y recomendaciones técnicas para tu web, textos para redes sociales y anuncios, y revisiones periódicas del rendimiento con recomendaciones.",
   ),
 };
 
