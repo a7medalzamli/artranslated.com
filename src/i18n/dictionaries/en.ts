@@ -50,7 +50,7 @@ const en = {
   serviceMenu: {
     translation: "Translation",
     editing: "Editing & proofreading",
-    mtpe: "Post-editing (MTPE)",
+    mtpe: "MTPE",
     transcreation: "Transcreation",
     consulting: "Consulting",
     digitalMarketing: "Digital Marketing",

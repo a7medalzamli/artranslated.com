@@ -52,7 +52,7 @@ const ar: Dictionary = {
   serviceMenu: {
     translation: "الترجمة",
     editing: "التحرير والتدقيق",
-    mtpe: "التحرير اللاحق للترجمة الآلية",
+    mtpe: "MTPE",
     transcreation: "الترجمة الإبداعية",
     consulting: "الاستشارات",
     digitalMarketing: "التسويق الرقمي",

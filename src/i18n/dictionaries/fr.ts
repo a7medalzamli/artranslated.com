@@ -46,7 +46,7 @@ const fr: Dictionary = {
   serviceMenu: {
     translation: "Traduction",
     editing: "Révision et relecture",
-    mtpe: "Post-édition (MTPE)",
+    mtpe: "MTPE",
     transcreation: "Transcréation",
     consulting: "Conseil",
     digitalMarketing: "Marketing digital",
