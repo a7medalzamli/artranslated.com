@@ -1,6 +1,5 @@
-import Image from "next/image";
 import { Section } from "../Section/Section";
-import { PROZ_PROFILE, reviewLabels, reviews } from "@/content/testimonials";
+import { reviewLabels, reviews } from "@/content/testimonials";
 import type { Locale } from "@/i18n";
 import styles from "./Testimonials.module.css";
 
@@ -9,7 +8,7 @@ const QUOTES: Record<Locale, [string, string]> = { en: ["“", "”"], ar: ["«"
 
 const DATE_LOCALES: Record<Locale, string> = { en: "en-US", ar: "ar-u-nu-latn", fr: "fr-FR", es: "es-ES" };
 
-/** Client reviews from ProZ.com, with the Certified PRO badge as proof. */
+/** Client reviews from ProZ.com. */
 export function Testimonials({ locale, tinted = false }: { locale: string; tinted?: boolean }) {
   const loc = (["en", "ar", "fr", "es"].includes(locale) ? locale : "en") as Locale;
   const l = reviewLabels[loc];
@@ -43,21 +42,6 @@ export function Testimonials({ locale, tinted = false }: { locale: string; tinte
           </li>
         ))}
       </ul>
-
-      <div className={styles.footer}>
-        <a href={PROZ_PROFILE} target="_blank" rel="noopener noreferrer" className={styles.badgeLink} aria-label={l.badge}>
-          <Image
-            src="/proz-certified-pro.jpg"
-            alt="ProZ.com Certified PRO: Professional Translator"
-            width={1600}
-            height={528}
-            className={styles.badge}
-          />
-        </a>
-        <a href={PROZ_PROFILE} target="_blank" rel="noopener noreferrer" className={styles.all}>
-          {l.all} ↗
-        </a>
-      </div>
     </Section>
   );
 }
