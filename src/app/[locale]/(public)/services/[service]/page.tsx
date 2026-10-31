@@ -147,8 +147,8 @@ export default async function ServicePage({ params }: { params: Params }) {
         </ul>
       </Section>
 
-      {service === "translation" && (
-        <Faq title={getFaqs(locale).title} items={getFaqs(locale).translation} tinted />
+      {getFaqs(locale)[service] && (
+        <Faq title={getFaqs(locale).title} items={getFaqs(locale)[service] ?? []} tinted />
       )}
 
       <CTA

@@ -1,4 +1,5 @@
 import type { Locale } from "@/i18n";
+import type { ServiceSlug } from "./servicePages";
 
 /**
  * Frequently asked questions, in all four languages. "home" appears on the
@@ -12,7 +13,8 @@ export type FaqItem = {
   link?: { label: string; href: string };
 };
 
-type FaqSet = { title: string; home: FaqItem[]; translation: FaqItem[] };
+/** Homepage questions plus questions for each service page that has them. */
+type FaqSet = { title: string; home: FaqItem[] } & Partial<Record<ServiceSlug, FaqItem[]>>;
 
 const PROZ = "https://www.proz.com/profile/2522215";
 
@@ -50,6 +52,62 @@ const en: FaqSet = {
     {
       q: "Is editing and proofreading included?",
       a: "Yes. For direct clients, every project goes through translation, editing and proofreading (TEP) followed by quality checks, so you receive a document that is ready to publish or use, not a draft. Agencies that run their own review step can order translation only.",
+    },
+  ],
+  mtpe: [
+    {
+      q: "Will post-edited Arabic read like a human translation?",
+      a: "Yes. With full post-editing, I rework the machine output until it reads naturally, as if it had been written by a professional Arabic translator. Meaning, terminology, grammar, style and flow are all corrected, so readers can’t tell a machine was involved.",
+    },
+    {
+      q: "Is MTPE cheaper than human translation?",
+      a: "Yes. Because the machine produces a first draft, post-editing usually costs less and takes less time than translating from scratch. The exact saving depends on the quality of the raw output and the level of editing you need, and is agreed in the quote.",
+    },
+    {
+      q: "Do you offer light or full post-editing?",
+      a: "Both. Light post-editing makes the text accurate and understandable, which suits internal documents and large volumes of reference content. Full post-editing brings the Arabic up to publication quality for anything your customers will read.",
+    },
+  ],
+  transcreation: [
+    {
+      q: "How is transcreation different from translation?",
+      a: "Translation carries the meaning of a text from one language to another. Transcreation is closer to copywriting: it starts from your creative brief and recreates the message in Arabic so it keeps the same intent, tone and emotional impact, even when the words, wordplay or cultural references have to change. It is used for slogans, campaigns, brand messages and product copy.",
+    },
+    {
+      q: "Do you provide back-translations?",
+      a: "Yes. Each Arabic option comes with a back-translation and notes explaining the choices, so colleagues who don’t read Arabic can review and approve it with confidence.",
+    },
+    {
+      q: "Can you fit Arabic into tight space limits in apps and websites?",
+      a: "Yes. Interface text such as buttons, menus and notifications is written to fit the character or space limits you set without losing clarity, and checked for right-to-left layout. Where possible, I review it in screenshots or a test version of your product.",
+    },
+  ],
+  consulting: [
+    {
+      q: "Should we use Modern Standard Arabic or a regional dialect?",
+      a: "It depends on your audience and the type of content. Modern Standard Arabic is understood across the Arab world and suits documentation, legal, corporate and most website content. A regional dialect, such as Gulf or Egyptian Arabic, can work better for marketing, social media and video aimed at one country. I help you choose the right mix for each market and type of content.",
+    },
+    {
+      q: "Is consulting a one-off service or ongoing?",
+      a: "Consulting is an ongoing service. We start with a review of your markets, content and workflow, then I stay involved as your Arabic content grows: answering terminology and style questions, updating glossaries and guides, and checking quality as you add new products, markets or vendors.",
+    },
+    {
+      q: "What does a localization-readiness review include?",
+      a: "Before translation starts, I check whether your website or app is technically and culturally ready for Arabic: text kept outside the code so it can be translated, right-to-left layout and mirrored icons, mixed Arabic and English text and numbers, room for longer or shorter text, Arabic plural forms, date, number and currency formats, fonts, and images or names that may need cultural adaptation. You receive a prioritized list of fixes, which saves time and cost once translation begins.",
+    },
+  ],
+  "digital-marketing": [
+    {
+      q: "Which markets do you work with?",
+      a: "I mainly work with businesses in Europe and North America, as well as clients around the world, that want to reach Arabic-speaking audiences.",
+    },
+    {
+      q: "Do you manage social media accounts, or only write the content?",
+      a: "Both. I write and localize your Arabic posts, and I can also manage your accounts: planning the content calendar, scheduling and publishing posts, and reviewing performance to improve results.",
+    },
+    {
+      q: "Which marketing tools do you use?",
+      a: "I work with the industry’s standard tools, including Google Analytics, Google Search Console, Google Ads, Meta Business Suite, LinkedIn Campaign Manager, Semrush, Ahrefs, Hootsuite, Mailchimp and Canva, and I adapt to the tools your team already uses.",
     },
   ],
 };
@@ -90,6 +148,62 @@ const ar: FaqSet = {
       a: "نعم. بالنسبة للعملاء المباشرين، يمرّ كل مشروع بمراحل الترجمة والتحرير والتدقيق (TEP) ثم فحوص الجودة، لتستلم مستندًا جاهزًا للنشر أو الاستخدام لا مسودة. ويمكن للوكالات التي تتولى المراجعة بنفسها طلب الترجمة فقط.",
     },
   ],
+  mtpe: [
+    {
+      q: "هل يُقرأ النص العربي بعد التحرير اللاحق كأنه ترجمة بشرية؟",
+      a: "نعم. في التحرير اللاحق الكامل، أعيد صياغة مخرجات الآلة حتى يُقرأ النص بسلاسة كأنه من عمل مترجم عربي محترف، فأصحّح المعنى والمصطلحات والقواعد والأسلوب والسلاسة، بحيث لا يلاحظ القارئ أن الآلة شاركت في العمل.",
+    },
+    {
+      q: "هل التحرير اللاحق للترجمة الآلية أقل تكلفة من الترجمة البشرية؟",
+      a: "نعم. لأن الآلة تقدّم مسودة أولى، فإن التحرير اللاحق عادةً أقل تكلفة وأسرع من الترجمة من الصفر. ويعتمد مقدار التوفير على جودة المخرجات الأولية ومستوى التحرير الذي تحتاجه، ويُتفق عليه في عرض السعر.",
+    },
+    {
+      q: "هل تقدّم التحرير اللاحق الخفيف أم الكامل؟",
+      a: "الاثنين معًا. يجعل التحرير الخفيف النص دقيقًا ومفهومًا، وهو مناسب للمستندات الداخلية والكميات الكبيرة من المحتوى المرجعي. أما التحرير الكامل فيرتقي بالنص العربي إلى جودة النشر لكل ما سيقرؤه عملاؤك.",
+    },
+  ],
+  transcreation: [
+    {
+      q: "ما الفرق بين الترجمة الإبداعية والترجمة؟",
+      a: "تنقل الترجمة معنى النص من لغة إلى أخرى. أما الترجمة الإبداعية فأقرب إلى كتابة المحتوى الإعلاني: تنطلق من موجزك الإبداعي وتعيد صياغة الرسالة بالعربية لتحافظ على المقصد والنبرة والأثر العاطفي نفسه، حتى لو تطلّب ذلك تغيير الكلمات أو التلاعب اللفظي أو المرجعيات الثقافية. وتُستخدم في الشعارات والحملات ورسائل العلامة التجارية ونصوص المنتجات.",
+    },
+    {
+      q: "هل تقدّم ترجمة عكسية؟",
+      a: "نعم. ترافق كل صيغة عربية ترجمة عكسية وملاحظات توضّح سبب الاختيارات، ليتمكن زملاؤك الذين لا يقرؤون العربية من مراجعتها واعتمادها بثقة.",
+    },
+    {
+      q: "هل يمكنك ملاءمة النص العربي لمساحات ضيقة في التطبيقات والمواقع؟",
+      a: "نعم. تُكتب نصوص الواجهات، كالأزرار والقوائم والإشعارات، لتناسب حدود الأحرف أو المساحة التي تحدّدها دون أن تفقد وضوحها، وتُراجَع وفق اتجاه الكتابة من اليمين إلى اليسار. وكلما أمكن، أراجعها عبر لقطات الشاشة أو نسخة تجريبية من منتجك.",
+    },
+  ],
+  consulting: [
+    {
+      q: "هل نستخدم العربية الفصحى المعاصرة أم لهجة محلية؟",
+      a: "يعتمد ذلك على جمهورك ونوع المحتوى. العربية الفصحى المعاصرة مفهومة في أنحاء العالم العربي، وتناسب الوثائق والمحتوى القانوني والمؤسسي ومعظم محتوى المواقع. أما اللهجة المحلية، كالخليجية أو المصرية، فقد تكون أنسب للتسويق ووسائل التواصل الاجتماعي ومقاطع الفيديو الموجّهة إلى بلد بعينه. وأساعدك على اختيار المزيج المناسب لكل سوق ونوع محتوى.",
+    },
+    {
+      q: "هل الاستشارة خدمة لمرة واحدة أم مستمرة؟",
+      a: "الاستشارة خدمة مستمرة. نبدأ بمراجعة أسواقك ومحتواك وسير عملك، ثم أواكبك مع نمو محتواك العربي: أجيب عن أسئلة المصطلحات والأسلوب، وأحدّث المسارد والأدلة، وأراجع الجودة كلما أضفت منتجات أو أسواقًا أو مورّدين جددًا.",
+    },
+    {
+      q: "ماذا تشمل مراجعة الجاهزية للتوطين؟",
+      a: "قبل بدء الترجمة، أتحقق من جاهزية موقعك أو تطبيقك تقنيًا وثقافيًا للعربية: فصل النصوص عن الشيفرة البرمجية لتسهل ترجمتها، والتصميم من اليمين إلى اليسار وعكس الأيقونات، والنصوص والأرقام المختلطة بين العربية والإنجليزية، والمساحة الكافية للنصوص الأطول أو الأقصر، وصيغ الجمع العربية، وتنسيقات التاريخ والأرقام والعملات، والخطوط، والصور أو الأسماء التي قد تحتاج إلى تكييف ثقافي. وتحصل على قائمة إصلاحات مرتّبة حسب الأولوية توفّر الوقت والتكلفة عند بدء الترجمة.",
+    },
+  ],
+  "digital-marketing": [
+    {
+      q: "ما الأسواق التي تعمل معها؟",
+      a: "أعمل أساسًا مع شركات في أوروبا وأمريكا الشمالية، إضافةً إلى عملاء من مختلف أنحاء العالم، ممن يريدون الوصول إلى الجمهور الناطق بالعربية.",
+    },
+    {
+      q: "هل تدير حسابات وسائل التواصل الاجتماعي أم تكتب المحتوى فقط؟",
+      a: "الاثنين معًا. أكتب منشوراتك العربية وأوطّنها، ويمكنني أيضًا إدارة حساباتك: تخطيط تقويم المحتوى، وجدولة المنشورات ونشرها، ومراجعة الأداء لتحسين النتائج.",
+    },
+    {
+      q: "ما أدوات التسويق التي تستخدمها؟",
+      a: "أعمل بالأدوات المعتمدة في المجال، ومنها Google Analytics وGoogle Search Console وGoogle Ads وMeta Business Suite وLinkedIn Campaign Manager وSemrush وAhrefs وHootsuite وMailchimp وCanva، وأتكيّف مع الأدوات التي يستخدمها فريقك.",
+    },
+  ],
 };
 
 const fr: FaqSet = {
@@ -128,6 +242,62 @@ const fr: FaqSet = {
       a: "Oui. Pour les clients directs, chaque projet passe par la traduction, la révision et la relecture (TEP), suivies de contrôles qualité : vous recevez un document prêt à être publié ou utilisé, pas un brouillon. Les agences qui assurent leur propre relecture peuvent commander la traduction seule.",
     },
   ],
+  mtpe: [
+    {
+      q: "L’arabe post-édité se lit-il comme une traduction humaine ?",
+      a: "Oui. En post-édition complète, je retravaille la sortie de la machine jusqu’à ce que le texte se lise naturellement, comme s’il avait été écrit par un traducteur arabe professionnel. Le sens, la terminologie, la grammaire, le style et la fluidité sont corrigés, si bien que le lecteur ne devine pas qu’une machine est intervenue.",
+    },
+    {
+      q: "La post-édition coûte-t-elle moins cher que la traduction humaine ?",
+      a: "Oui. Comme la machine produit un premier jet, la post-édition coûte généralement moins cher et prend moins de temps qu’une traduction à partir de zéro. L’économie exacte dépend de la qualité de la sortie brute et du niveau de révision souhaité, et elle est fixée dans le devis.",
+    },
+    {
+      q: "Proposez-vous une post-édition légère ou complète ?",
+      a: "Les deux. La post-édition légère rend le texte exact et compréhensible, ce qui convient aux documents internes et aux gros volumes de contenu de référence. La post-édition complète amène l’arabe au niveau de publication pour tout ce que liront vos clients.",
+    },
+  ],
+  transcreation: [
+    {
+      q: "Quelle différence entre transcréation et traduction ?",
+      a: "La traduction transpose le sens d’un texte d’une langue à une autre. La transcréation se rapproche de la rédaction publicitaire : elle part de votre brief créatif et recrée le message en arabe pour en conserver l’intention, le ton et l’impact émotionnel, même si les mots, les jeux de mots ou les références culturelles doivent changer. Elle sert aux slogans, aux campagnes, aux messages de marque et aux textes produits.",
+    },
+    {
+      q: "Fournissez-vous des rétrotraductions ?",
+      a: "Oui. Chaque proposition arabe est accompagnée d’une rétrotraduction et de notes expliquant les choix, pour que vos collègues qui ne lisent pas l’arabe puissent la relire et la valider en toute confiance.",
+    },
+    {
+      q: "Pouvez-vous faire tenir l’arabe dans des espaces réduits sur les applications et les sites ?",
+      a: "Oui. Les textes d’interface, comme les boutons, menus et notifications, sont rédigés pour respecter les limites de caractères ou d’espace que vous fixez sans perdre en clarté, et vérifiés pour la lecture de droite à gauche. Dans la mesure du possible, je les contrôle sur captures d’écran ou sur une version de test de votre produit.",
+    },
+  ],
+  consulting: [
+    {
+      q: "Faut-il utiliser l’arabe standard moderne ou un dialecte régional ?",
+      a: "Cela dépend de votre public et du type de contenu. L’arabe standard moderne est compris dans tout le monde arabe et convient à la documentation, aux contenus juridiques et institutionnels et à la plupart des sites web. Un dialecte régional, comme l’arabe du Golfe ou l’égyptien, peut être plus efficace pour le marketing, les réseaux sociaux et les vidéos destinés à un seul pays. Je vous aide à choisir le bon équilibre pour chaque marché et chaque type de contenu.",
+    },
+    {
+      q: "Le conseil est-il ponctuel ou suivi ?",
+      a: "Le conseil est un service suivi. Nous commençons par examiner vos marchés, vos contenus et votre flux de travail, puis je vous accompagne à mesure que vos contenus arabes se développent : réponses aux questions de terminologie et de style, mise à jour des glossaires et des guides, et contrôle de la qualité lorsque vous ajoutez de nouveaux produits, marchés ou prestataires.",
+    },
+    {
+      q: "Que comprend un audit de préparation à la localisation ?",
+      a: "Avant le début de la traduction, je vérifie que votre site ou votre application est prêt pour l’arabe, sur le plan technique comme culturel : textes séparés du code pour pouvoir être traduits, mise en page de droite à gauche et icônes inversées, mélange de texte et de chiffres arabes et latins, place suffisante pour des textes plus longs ou plus courts, formes du pluriel arabe, formats de date, de nombre et de devise, polices, et images ou noms à adapter culturellement. Vous recevez une liste de corrections classées par priorité, qui fait gagner du temps et de l’argent une fois la traduction lancée.",
+    },
+  ],
+  "digital-marketing": [
+    {
+      q: "Avec quels marchés travaillez-vous ?",
+      a: "Je travaille principalement avec des entreprises d’Europe et d’Amérique du Nord, ainsi qu’avec des clients du monde entier, qui veulent toucher un public arabophone.",
+    },
+    {
+      q: "Gérez-vous les comptes de réseaux sociaux, ou seulement la rédaction des contenus ?",
+      a: "Les deux. Je rédige et localise vos publications en arabe, et je peux aussi gérer vos comptes : planification du calendrier éditorial, programmation et publication des posts, et analyse des performances pour améliorer les résultats.",
+    },
+    {
+      q: "Quels outils marketing utilisez-vous ?",
+      a: "Je travaille avec les outils de référence du secteur, notamment Google Analytics, Google Search Console, Google Ads, Meta Business Suite, LinkedIn Campaign Manager, Semrush, Ahrefs, Hootsuite, Mailchimp et Canva, et je m’adapte aux outils que votre équipe utilise déjà.",
+    },
+  ],
 };
 
 const es: FaqSet = {
@@ -164,6 +334,62 @@ const es: FaqSet = {
     {
       q: "¿Incluye edición y revisión?",
       a: "Sí. Para los clientes directos, cada proyecto pasa por traducción, edición y revisión (TEP), seguidas de controles de calidad, así que recibes un documento listo para publicar o usar, no un borrador. Las agencias que hacen su propia revisión pueden pedir solo la traducción.",
+    },
+  ],
+  mtpe: [
+    {
+      q: "¿El árabe poseditado se lee como una traducción humana?",
+      a: "Sí. Con la posedición completa, reelaboro el resultado de la máquina hasta que el texto se lee con naturalidad, como si lo hubiera escrito un traductor profesional de árabe. Corrijo sentido, terminología, gramática, estilo y fluidez, de modo que el lector no nota que intervino una máquina.",
+    },
+    {
+      q: "¿La posedición es más barata que la traducción humana?",
+      a: "Sí. Como la máquina genera un primer borrador, la posedición suele costar menos y llevar menos tiempo que traducir desde cero. El ahorro exacto depende de la calidad del resultado en bruto y del nivel de edición que necesites, y se acuerda en el presupuesto.",
+    },
+    {
+      q: "¿Ofreces posedición ligera o completa?",
+      a: "Las dos. La posedición ligera deja el texto preciso y comprensible, lo que sirve para documentos internos y grandes volúmenes de contenido de referencia. La posedición completa lleva el árabe a calidad de publicación para todo lo que vayan a leer tus clientes.",
+    },
+  ],
+  transcreation: [
+    {
+      q: "¿En qué se diferencia la transcreación de la traducción?",
+      a: "La traducción traslada el sentido de un texto de un idioma a otro. La transcreación se parece más a la redacción publicitaria: parte de tu brief creativo y recrea el mensaje en árabe para conservar la intención, el tono y el impacto emocional, aunque haya que cambiar las palabras, los juegos de palabras o las referencias culturales. Se usa en eslóganes, campañas, mensajes de marca y textos de producto.",
+    },
+    {
+      q: "¿Ofreces retrotraducciones?",
+      a: "Sí. Cada propuesta en árabe incluye una retrotraducción y notas que explican las decisiones, para que tus compañeros que no leen árabe puedan revisarla y aprobarla con confianza.",
+    },
+    {
+      q: "¿Puedes ajustar el árabe a espacios reducidos en aplicaciones y sitios web?",
+      a: "Sí. Los textos de interfaz, como botones, menús y notificaciones, se redactan para respetar los límites de caracteres o de espacio que fijes sin perder claridad, y se revisan para la lectura de derecha a izquierda. Siempre que es posible, los reviso sobre capturas de pantalla o una versión de prueba de tu producto.",
+    },
+  ],
+  consulting: [
+    {
+      q: "¿Debemos usar árabe estándar moderno o un dialecto regional?",
+      a: "Depende de tu público y del tipo de contenido. El árabe estándar moderno se entiende en todo el mundo árabe y es adecuado para documentación, contenido jurídico y corporativo y la mayoría de los sitios web. Un dialecto regional, como el árabe del Golfo o el egipcio, puede funcionar mejor en marketing, redes sociales y vídeos dirigidos a un solo país. Te ayudo a elegir la combinación adecuada para cada mercado y tipo de contenido.",
+    },
+    {
+      q: "¿La consultoría es puntual o continua?",
+      a: "La consultoría es un servicio continuo. Empezamos revisando tus mercados, tu contenido y tu flujo de trabajo, y después te acompaño a medida que crece tu contenido en árabe: resuelvo dudas de terminología y estilo, actualizo glosarios y guías, y reviso la calidad cuando incorporas nuevos productos, mercados o proveedores.",
+    },
+    {
+      q: "¿Qué incluye una revisión de preparación para la localización?",
+      a: "Antes de empezar a traducir, compruebo si tu sitio web o aplicación está preparado para el árabe, a nivel técnico y cultural: textos separados del código para poder traducirlos, diseño de derecha a izquierda e iconos invertidos, mezcla de texto y números en árabe y en alfabeto latino, espacio para textos más largos o más cortos, formas del plural árabe, formatos de fecha, número y moneda, tipografías, e imágenes o nombres que puedan necesitar adaptación cultural. Recibes una lista de correcciones ordenada por prioridad, que ahorra tiempo y dinero cuando empieza la traducción.",
+    },
+  ],
+  "digital-marketing": [
+    {
+      q: "¿Con qué mercados trabajas?",
+      a: "Trabajo sobre todo con empresas de Europa y Norteamérica, además de clientes de todo el mundo, que quieren llegar al público de habla árabe.",
+    },
+    {
+      q: "¿Gestionas cuentas de redes sociales o solo redactas el contenido?",
+      a: "Las dos cosas. Redacto y localizo tus publicaciones en árabe, y también puedo gestionar tus cuentas: planificar el calendario de contenidos, programar y publicar las publicaciones, y analizar los resultados para mejorarlos.",
+    },
+    {
+      q: "¿Qué herramientas de marketing utilizas?",
+      a: "Trabajo con las herramientas de referencia del sector, como Google Analytics, Google Search Console, Google Ads, Meta Business Suite, LinkedIn Campaign Manager, Semrush, Ahrefs, Hootsuite, Mailchimp y Canva, y me adapto a las que ya use tu equipo.",
     },
   ],
 };
