@@ -30,7 +30,7 @@ export async function InfoPageView({
   const tablesSection = p.tables && {
     key: "tables",
     body: (
-      <div className={styles.tables}>
+      <div className={`${styles.tables} ${p.tables.length === 1 ? styles.single : ""}`}>
         {p.tables.map((table) => (
           <div key={table.title}>
             <h2 className={styles.tableTitle}>{table.title}</h2>
@@ -76,7 +76,7 @@ export async function InfoPageView({
     key: "blocks",
     title: p.blocksTitle,
     body: (
-      <div className={serviceStyles.details}>
+      <div className={`${serviceStyles.details} ${p.blocks.length === 4 ? styles.steps : ""}`}>
         {p.blocks.map((block) => (
           <div key={block.title} className={serviceStyles.detail}>
             <h2 className={serviceStyles.detailTitle}>{block.title}</h2>

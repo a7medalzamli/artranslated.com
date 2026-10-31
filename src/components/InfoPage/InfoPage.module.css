@@ -64,3 +64,15 @@
 .availability {
   text-align: center;
 }
+
+/* A single table spans a readable width instead of half the row. */
+@media (min-width: 60em) {
+  .tables.single {
+    grid-template-columns: minmax(0, 48rem);
+  }
+
+  /* Four steps sit in one row (doubled class beats the shared grid). */
+  .steps.steps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
