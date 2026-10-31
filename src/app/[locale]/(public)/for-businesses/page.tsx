@@ -39,17 +39,6 @@ export default async function ForBusinessesPage({ params }: { params: Promise<{ 
     inLanguage: locale,
     areaServed: "Worldwide",
     provider: { "@id": ids.business },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "USD",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        minPrice: 0.04,
-        maxPrice: 0.06,
-        priceCurrency: "USD",
-        unitText: "word",
-      },
-    },
   };
 
   return <InfoPageView locale={locale} page={p} image={IMAGE} structuredData={serviceLd} />;

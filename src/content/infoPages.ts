@@ -3,8 +3,8 @@ import type { FaqItem } from "./faqs";
 
 /**
  * "For agencies" and "Rates & turnaround" pages, in four languages.
- * Facts given by Ahmed: up to 4,000 words of translation a day; translation
- * USD 0.04–0.06 per word; no sworn or certified translation. A free test
+ * Facts given by Ahmed: at least 5,000 words of translation a day; prices are
+ * not published (quote only); no sworn or certified translation. A free test
  * translation is offered only when asked, so it is deliberately not mentioned.
  */
 export type InfoTable = {
@@ -46,14 +46,14 @@ const agencies: Record<Locale, InfoPage> = {
     crumb: "For agencies",
     seoTitle: "Freelance Arabic Translator for Agencies (LSPs)",
     description:
-      "A dependable English, French and Spanish to Arabic linguist for translation agencies: translation, review, LQA and MTPE in your CAT tools, with up to 4,000 words of translation a day.",
+      "A dependable English, French and Spanish to Arabic linguist for translation agencies: translation, review, LQA and MTPE in your CAT tools, translating at least 5,000 words a day.",
     intro: [
       "Most of my work since 2014 has been with translation agencies (LSPs). I know how vendor work runs: purchase orders, CAT tools, translation memories, glossaries, style guides, query sheets, QA checks and firm deadlines, and I fit into your workflow without extra management from your project managers.",
       "I translate from English, French and Spanish into Arabic, my native language, review other translators’ work, score quality with LQA and post-edit machine translation, so one Arabic linguist can cover your whole workflow from translation to final check.",
     ],
     listTitle: "What I offer agencies",
     list: [
-      "Translation from English, French and Spanish into Arabic, up to 4,000 words a day",
+      "Translation from English, French and Spanish into Arabic, at least 5,000 words a day",
       "Bilingual review and proofreading of other translators’ work",
       "LQA scoring with MQM or your own scorecard, with reports",
       "Machine translation post-editing (light and full)",
@@ -64,7 +64,7 @@ const agencies: Record<Locale, InfoPage> = {
     blocks: [
       {
         title: "Capacity and scheduling",
-        text: "I translate up to 4,000 words a day. Larger projects are scheduled with your project manager in advance and can be delivered in parts, so your downstream review and DTP steps can start early.",
+        text: "I translate at least 5,000 words a day. Larger projects are scheduled with your project manager in advance and can be delivered in parts, so your downstream review and DTP steps can start early.",
       },
       {
         title: "How I work with your PMs",
@@ -72,7 +72,7 @@ const agencies: Record<Locale, InfoPage> = {
       },
       {
         title: "Rates",
-        text: "Translation is charged per source word, from USD 0.04 to 0.06 depending on subject, volume and deadline. Review, LQA and post-editing are quoted per project or per hour. Send me your rate sheet or project details and I’ll confirm.",
+        text: "Translation is charged per source word; review, LQA and post-editing per project or per hour. Send me your rate sheet or project details and I’ll reply with my rates.",
       },
     ],
     showAvailability: true,
@@ -85,7 +85,7 @@ const agencies: Record<Locale, InfoPage> = {
       },
       {
         q: "How many words can you translate per day?",
-        a: "Up to 4,000 words of translation a day. For larger volumes, we agree a schedule in advance, with partial deliveries if needed.",
+        a: "At least 5,000 words of translation a day. For larger volumes, we agree a schedule in advance, with partial deliveries if needed.",
       },
       {
         q: "Which CAT tools do you use?",
@@ -112,14 +112,14 @@ const agencies: Record<Locale, InfoPage> = {
     crumb: "للوكالات",
     seoTitle: "مترجم عربي مستقل لوكالات الترجمة",
     description:
-      "مترجم موثوق من الإنجليزية والفرنسية والإسبانية إلى العربية لوكالات الترجمة: ترجمة ومراجعة وتقييم جودة (LQA) وتحرير لاحق للترجمة الآلية في أدوات الترجمة التي تستخدمها، بطاقة تصل إلى 4,000 كلمة يوميًا.",
+      "مترجم موثوق من الإنجليزية والفرنسية والإسبانية إلى العربية لوكالات الترجمة: ترجمة ومراجعة وتقييم جودة (LQA) وتحرير لاحق للترجمة الآلية في أدوات الترجمة التي تستخدمها، بطاقة لا تقل عن 5,000 كلمة يوميًا.",
     intro: [
       "معظم عملي منذ عام 2014 كان مع وكالات الترجمة. أعرف كيف يسير العمل مع المترجمين المستقلين: أوامر الشراء، وأدوات الترجمة بمساعدة الحاسوب، وذاكرات الترجمة، والمسارد، وأدلة الأسلوب، وجداول الاستفسارات، وفحوص الجودة، والمواعيد النهائية الصارمة، وأندمج في سير عملكم دون أن يحتاج مديرو المشاريع إلى متابعة إضافية.",
       "أترجم من الإنجليزية والفرنسية والإسبانية إلى العربية، لغتي الأم، وأراجع أعمال مترجمين آخرين، وأقيّم الجودة (LQA)، وأحرّر مخرجات الترجمة الآلية، ليغطي مترجم عربي واحد سير عملكم كله من الترجمة حتى الفحص النهائي.",
     ],
     listTitle: "ما أقدّمه للوكالات",
     list: [
-      "الترجمة من الإنجليزية والفرنسية والإسبانية إلى العربية، حتى 4,000 كلمة يوميًا",
+      "الترجمة من الإنجليزية والفرنسية والإسبانية إلى العربية، بما لا يقل عن 5,000 كلمة يوميًا",
       "مراجعة ثنائية اللغة وتدقيق لأعمال مترجمين آخرين",
       "تقييم الجودة (LQA) وفق إطار MQM أو بطاقة التقييم الخاصة بكم، مع تقارير",
       "التحرير اللاحق للترجمة الآلية (الخفيف والكامل)",
@@ -130,7 +130,7 @@ const agencies: Record<Locale, InfoPage> = {
     blocks: [
       {
         title: "الطاقة الإنتاجية والجدولة",
-        text: "أترجم حتى 4,000 كلمة يوميًا. وتُجدوَل المشاريع الأكبر مسبقًا مع مدير المشروع، ويمكن تسليمها على دفعات ليبدأ فريق المراجعة والتنسيق لديكم مبكرًا.",
+        text: "أترجم ما لا يقل عن 5,000 كلمة يوميًا. وتُجدوَل المشاريع الأكبر مسبقًا مع مدير المشروع، ويمكن تسليمها على دفعات ليبدأ فريق المراجعة والتنسيق لديكم مبكرًا.",
       },
       {
         title: "كيف أعمل مع مديري المشاريع",
@@ -138,7 +138,7 @@ const agencies: Record<Locale, InfoPage> = {
       },
       {
         title: "الأسعار",
-        text: "تُحتسب الترجمة لكل كلمة في النص المصدر، من 0.04 إلى 0.06 دولار أمريكي حسب الموضوع والحجم والموعد النهائي. أما المراجعة وتقييم الجودة والتحرير اللاحق فتُسعَّر حسب المشروع أو بالساعة. أرسلوا إليّ جدول أسعاركم أو تفاصيل المشروع وسأؤكد السعر.",
+        text: "تُحتسب الترجمة لكل كلمة في النص المصدر، أما المراجعة وتقييم الجودة والتحرير اللاحق فحسب المشروع أو بالساعة. أرسلوا إليّ جدول أسعاركم أو تفاصيل المشروع وسأرد عليكم بأسعاري.",
       },
     ],
     showAvailability: true,
@@ -151,7 +151,7 @@ const agencies: Record<Locale, InfoPage> = {
       },
       {
         q: "كم كلمة يمكنك أن تترجم يوميًا؟",
-        a: "حتى 4,000 كلمة يوميًا. وللأحجام الأكبر، نتفق مسبقًا على جدول زمني، مع التسليم على دفعات عند الحاجة.",
+        a: "ما لا يقل عن 5,000 كلمة يوميًا. وللأحجام الأكبر، نتفق مسبقًا على جدول زمني، مع التسليم على دفعات عند الحاجة.",
       },
       {
         q: "ما أدوات الترجمة التي تستخدمها؟",
@@ -178,14 +178,14 @@ const agencies: Record<Locale, InfoPage> = {
     crumb: "Pour les agences",
     seoTitle: "Traducteur arabe indépendant pour agences de traduction",
     description:
-      "Un linguiste fiable de l’anglais, du français et de l’espagnol vers l’arabe pour les agences de traduction : traduction, révision, LQA et post-édition dans vos outils de TAO, jusqu’à 4 000 mots traduits par jour.",
+      "Un linguiste fiable de l’anglais, du français et de l’espagnol vers l’arabe pour les agences de traduction : traduction, révision, LQA et post-édition dans vos outils de TAO, au moins 5 000 mots traduits par jour.",
     intro: [
       "Depuis 2014, je travaille principalement avec des agences de traduction. Je connais le fonctionnement du travail en sous-traitance : bons de commande, outils de TAO, mémoires de traduction, glossaires, guides de style, fichiers de questions, contrôles qualité et délais fermes. Je m’intègre à votre flux de travail sans suivi supplémentaire de vos chefs de projet.",
       "Je traduis de l’anglais, du français et de l’espagnol vers l’arabe, ma langue maternelle, je révise le travail d’autres traducteurs, j’évalue la qualité (LQA) et je post-édite la traduction automatique : un seul linguiste arabe peut couvrir tout votre processus, de la traduction au contrôle final.",
     ],
     listTitle: "Ce que je propose aux agences",
     list: [
-      "Traduction de l’anglais, du français et de l’espagnol vers l’arabe, jusqu’à 4 000 mots par jour",
+      "Traduction de l’anglais, du français et de l’espagnol vers l’arabe, au moins 5 000 mots par jour",
       "Révision bilingue et relecture du travail d’autres traducteurs",
       "Notation LQA selon MQM ou votre propre grille, avec rapports",
       "Post-édition de traduction automatique (légère et complète)",
@@ -196,7 +196,7 @@ const agencies: Record<Locale, InfoPage> = {
     blocks: [
       {
         title: "Capacité et planification",
-        text: "Je traduis jusqu’à 4 000 mots par jour. Les projets plus importants sont planifiés à l’avance avec votre chef de projet et peuvent être livrés en plusieurs parties, pour que vos étapes de révision et de PAO puissent commencer plus tôt.",
+        text: "Je traduis au moins 5 000 mots par jour. Les projets plus importants sont planifiés à l’avance avec votre chef de projet et peuvent être livrés en plusieurs parties, pour que vos étapes de révision et de PAO puissent commencer plus tôt.",
       },
       {
         title: "Ma façon de travailler avec vos chefs de projet",
@@ -204,7 +204,7 @@ const agencies: Record<Locale, InfoPage> = {
       },
       {
         title: "Tarifs",
-        text: "La traduction est facturée au mot source, de 0,04 à 0,06 USD selon le domaine, le volume et le délai. La révision, la LQA et la post-édition sont chiffrées au projet ou à l’heure. Envoyez-moi votre grille tarifaire ou les détails du projet et je vous confirmerai le tarif.",
+        text: "La traduction est facturée au mot source ; la révision, la LQA et la post-édition au projet ou à l’heure. Envoyez-moi votre grille tarifaire ou les détails du projet et je vous communiquerai mes tarifs.",
       },
     ],
     showAvailability: true,
@@ -217,7 +217,7 @@ const agencies: Record<Locale, InfoPage> = {
       },
       {
         q: "Combien de mots pouvez-vous traduire par jour ?",
-        a: "Jusqu’à 4 000 mots par jour. Pour des volumes plus importants, nous convenons d’un planning à l’avance, avec des livraisons partielles si nécessaire.",
+        a: "Au moins 5 000 mots par jour. Pour des volumes plus importants, nous convenons d’un planning à l’avance, avec des livraisons partielles si nécessaire.",
       },
       {
         q: "Quels outils de TAO utilisez-vous ?",
@@ -244,14 +244,14 @@ const agencies: Record<Locale, InfoPage> = {
     crumb: "Para agencias",
     seoTitle: "Traductor autónomo de árabe para agencias de traducción",
     description:
-      "Un lingüista fiable del inglés, el francés y el español al árabe para agencias de traducción: traducción, revisión, LQA y posedición en tus herramientas TAO, con hasta 4000 palabras traducidas al día.",
+      "Un lingüista fiable del inglés, el francés y el español al árabe para agencias de traducción: traducción, revisión, LQA y posedición en tus herramientas TAO, con al menos 5000 palabras traducidas al día.",
     intro: [
       "Desde 2014 trabajo sobre todo con agencias de traducción. Conozco cómo funciona el trabajo como proveedor: órdenes de compra, herramientas TAO, memorias de traducción, glosarios, guías de estilo, hojas de consultas, controles de calidad y plazos firmes, y me integro en tu flujo de trabajo sin que tus gestores de proyecto tengan que hacer un seguimiento extra.",
       "Traduzco del inglés, el francés y el español al árabe, mi lengua materna, reviso el trabajo de otros traductores, evalúo la calidad con LQA y poseedito traducción automática, para que un solo lingüista de árabe cubra todo tu proceso, de la traducción a la comprobación final.",
     ],
     listTitle: "Qué ofrezco a las agencias",
     list: [
-      "Traducción del inglés, el francés y el español al árabe, hasta 4000 palabras al día",
+      "Traducción del inglés, el francés y el español al árabe, al menos 5000 palabras al día",
       "Revisión bilingüe y corrección del trabajo de otros traductores",
       "Puntuación LQA con MQM o tu propia ficha, con informes",
       "Posedición de traducción automática (ligera y completa)",
@@ -262,7 +262,7 @@ const agencies: Record<Locale, InfoPage> = {
     blocks: [
       {
         title: "Capacidad y planificación",
-        text: "Traduzco hasta 4000 palabras al día. Los proyectos más grandes se planifican con antelación con tu gestor de proyectos y pueden entregarse por partes, para que la revisión y la maquetación puedan empezar antes.",
+        text: "Traduzco al menos 5000 palabras al día. Los proyectos más grandes se planifican con antelación con tu gestor de proyectos y pueden entregarse por partes, para que la revisión y la maquetación puedan empezar antes.",
       },
       {
         title: "Cómo trabajo con tus gestores de proyecto",
@@ -270,7 +270,7 @@ const agencies: Record<Locale, InfoPage> = {
       },
       {
         title: "Tarifas",
-        text: "La traducción se cobra por palabra del original, de 0,04 a 0,06 USD según el tema, el volumen y el plazo. La revisión, la LQA y la posedición se presupuestan por proyecto o por hora. Envíame tu tabla de tarifas o los detalles del proyecto y te lo confirmo.",
+        text: "La traducción se cobra por palabra del original; la revisión, la LQA y la posedición, por proyecto o por hora. Envíame tu tabla de tarifas o los detalles del proyecto y te enviaré mis tarifas.",
       },
     ],
     showAvailability: true,
@@ -283,7 +283,7 @@ const agencies: Record<Locale, InfoPage> = {
       },
       {
         q: "¿Cuántas palabras puedes traducir al día?",
-        a: "Hasta 4000 palabras al día. Para volúmenes mayores, acordamos un calendario con antelación, con entregas parciales si hace falta.",
+        a: "Al menos 5000 palabras al día. Para volúmenes mayores, acordamos un calendario con antelación, con entregas parciales si hace falta.",
       },
       {
         q: "¿Qué herramientas TAO usas?",
@@ -317,34 +317,34 @@ const rates: Record<Locale, InfoPage> = {
     crumb: "Rates & turnaround",
     seoTitle: "Arabic Translation Rates & Turnaround",
     description:
-      "Clear Arabic translation rates, from USD 0.04 to 0.06 per word, and realistic delivery times based on up to 4,000 words a day.",
+      "How Arabic translation is priced and how long it takes, based on at least 5,000 words of translation a day. Every project gets a free, clear quote.",
     intro: [
-      "Translation into Arabic is charged per word of the source text, at USD 0.04 to 0.06 per word. Where your project falls in that range depends on the subject, the file format, the volume and the deadline.",
+      "Translation into Arabic is charged per word of the source text. The rate for your project depends on the subject, the file format, the volume and the deadline.",
       "Every project starts with a clear written quote, so you know the price and the delivery date before any work begins. Quotes are free and without obligation.",
     ],
     tables: [
       {
-        title: "Rates",
-        head: ["Service", "Rate"],
+        title: "How each service is priced",
+        head: ["Service", "Priced"],
         rows: [
-          ["Translation (English, French or Spanish into Arabic)", "USD 0.04–0.06 per word"],
+          ["Translation (English, French or Spanish into Arabic)", "Per word of the source text"],
           ["Editing, proofreading and LQA", "Quoted per project or per hour"],
           ["Machine translation post-editing (MTPE)", "Quoted per project, based on the machine output"],
           ["Transcreation, consulting and digital marketing", "Quoted per project"],
         ],
-        note: "Prices in US dollars, per word of the source text. Your final rate is confirmed in your quote.",
+        note: "Send me your files for a free quote with your exact price and delivery date.",
       },
       {
         title: "Typical turnaround",
         head: ["Project size", "Typical delivery"],
         rows: [
           ["Up to 1,000 words", "Within 1 working day"],
-          ["1,000–4,000 words", "1–2 working days"],
-          ["4,000–10,000 words", "2–4 working days"],
-          ["10,000–20,000 words", "4–6 working days"],
-          ["Over 20,000 words", "Agreed schedule, with partial deliveries"],
+          ["1,000–5,000 words", "1–2 working days"],
+          ["5,000–10,000 words", "2–3 working days"],
+          ["10,000–25,000 words", "3–6 working days"],
+          ["Over 25,000 words", "Agreed schedule, with partial deliveries"],
         ],
-        note: "Based on up to 4,000 words of translation a day, including my own review. Editing, proofreading and post-editing are usually faster. Urgent deadlines are possible depending on availability.",
+        note: "Based on at least 5,000 words of translation a day, including my own review. Editing, proofreading and post-editing are usually faster. Urgent deadlines are possible depending on availability.",
       },
     ],
     listTitle: "What affects the price",
@@ -386,34 +386,34 @@ const rates: Record<Locale, InfoPage> = {
     crumb: "الأسعار ومواعيد التسليم",
     seoTitle: "أسعار الترجمة إلى العربية ومواعيد التسليم",
     description:
-      "أسعار واضحة للترجمة إلى العربية، من 0.04 إلى 0.06 دولار أمريكي للكلمة، ومواعيد تسليم واقعية بطاقة تصل إلى 4,000 كلمة يوميًا.",
+      "كيف تُسعَّر الترجمة إلى العربية وكم تستغرق، بطاقة لا تقل عن 5,000 كلمة يوميًا. ويحصل كل مشروع على عرض سعر واضح ومجاني.",
     intro: [
-      "تُحتسب الترجمة إلى العربية لكل كلمة في النص المصدر، بسعر يتراوح بين 0.04 و0.06 دولار أمريكي للكلمة. ويتحدد موقع مشروعك ضمن هذا النطاق حسب الموضوع وصيغة الملف والحجم والموعد النهائي.",
+      "تُحتسب الترجمة إلى العربية لكل كلمة في النص المصدر. ويتحدد سعر مشروعك حسب الموضوع وصيغة الملف والحجم والموعد النهائي.",
       "يبدأ كل مشروع بعرض سعر مكتوب وواضح، لتعرف السعر وموعد التسليم قبل بدء العمل. وعروض الأسعار مجانية ودون أي التزام.",
     ],
     tables: [
       {
-        title: "الأسعار",
-        head: ["الخدمة", "السعر"],
+        title: "كيف تُسعَّر كل خدمة",
+        head: ["الخدمة", "طريقة التسعير"],
         rows: [
-          ["الترجمة (من الإنجليزية أو الفرنسية أو الإسبانية إلى العربية)", "0.04–0.06 دولار أمريكي للكلمة"],
+          ["الترجمة (من الإنجليزية أو الفرنسية أو الإسبانية إلى العربية)", "لكل كلمة في النص المصدر"],
           ["التحرير والتدقيق وتقييم الجودة (LQA)", "حسب المشروع أو بالساعة"],
           ["التحرير اللاحق للترجمة الآلية (MTPE)", "حسب المشروع، بناءً على جودة الترجمة الآلية"],
           ["الترجمة الإبداعية والاستشارات والتسويق الرقمي", "حسب المشروع"],
         ],
-        note: "الأسعار بالدولار الأمريكي، لكل كلمة في النص المصدر. ويُؤكَّد السعر النهائي في عرض السعر.",
+        note: "أرسل إليّ ملفاتك لتحصل على عرض سعر مجاني بالسعر الدقيق وموعد التسليم.",
       },
       {
         title: "مواعيد التسليم المعتادة",
         head: ["حجم المشروع", "مدة التسليم المعتادة"],
         rows: [
           ["حتى 1,000 كلمة", "خلال يوم عمل واحد"],
-          ["1,000–4,000 كلمة", "1–2 يوم عمل"],
-          ["4,000–10,000 كلمة", "2–4 أيام عمل"],
-          ["10,000–20,000 كلمة", "4–6 أيام عمل"],
-          ["أكثر من 20,000 كلمة", "جدول زمني متفق عليه، مع التسليم على دفعات"],
+          ["1,000–5,000 كلمة", "1–2 يوم عمل"],
+          ["5,000–10,000 كلمة", "2–3 أيام عمل"],
+          ["10,000–25,000 كلمة", "3–6 أيام عمل"],
+          ["أكثر من 25,000 كلمة", "جدول زمني متفق عليه، مع التسليم على دفعات"],
         ],
-        note: "بناءً على ترجمة حتى 4,000 كلمة يوميًا، شاملةً مراجعتي الخاصة. وعادةً ما يكون التحرير والتدقيق والتحرير اللاحق أسرع. ويمكن تلبية المواعيد العاجلة حسب التوفر.",
+        note: "بناءً على ترجمة ما لا يقل عن 5,000 كلمة يوميًا، شاملةً مراجعتي الخاصة. وعادةً ما يكون التحرير والتدقيق والتحرير اللاحق أسرع. ويمكن تلبية المواعيد العاجلة حسب التوفر.",
       },
     ],
     listTitle: "ما الذي يؤثر في السعر",
@@ -455,34 +455,34 @@ const rates: Record<Locale, InfoPage> = {
     crumb: "Tarifs et délais",
     seoTitle: "Tarifs et délais de traduction vers l’arabe",
     description:
-      "Des tarifs clairs pour la traduction vers l’arabe, de 0,04 à 0,06 USD le mot, et des délais réalistes, sur la base de 4 000 mots par jour maximum.",
+      "Comment la traduction vers l’arabe est facturée et combien de temps elle prend, sur la base d’au moins 5 000 mots traduits par jour. Chaque projet reçoit un devis clair et gratuit.",
     intro: [
-      "La traduction vers l’arabe est facturée au mot du texte source, de 0,04 à 0,06 USD le mot. La place de votre projet dans cette fourchette dépend du domaine, du format des fichiers, du volume et du délai.",
+      "La traduction vers l’arabe est facturée au mot du texte source. Le tarif de votre projet dépend du domaine, du format des fichiers, du volume et du délai.",
       "Chaque projet commence par un devis écrit et clair : vous connaissez le prix et la date de livraison avant le début du travail. Les devis sont gratuits et sans engagement.",
     ],
     tables: [
       {
-        title: "Tarifs",
-        head: ["Service", "Tarif"],
+        title: "Mode de facturation par service",
+        head: ["Service", "Facturation"],
         rows: [
-          ["Traduction (de l’anglais, du français ou de l’espagnol vers l’arabe)", "0,04–0,06 USD le mot"],
+          ["Traduction (de l’anglais, du français ou de l’espagnol vers l’arabe)", "Au mot du texte source"],
           ["Révision, relecture et LQA", "Sur devis, au projet ou à l’heure"],
           ["Post-édition de traduction automatique (MTPE)", "Sur devis, selon la qualité de la traduction automatique"],
           ["Transcréation, conseil et marketing digital", "Sur devis, au projet"],
         ],
-        note: "Prix en dollars américains, par mot du texte source. Votre tarif définitif est confirmé dans le devis.",
+        note: "Envoyez-moi vos fichiers pour un devis gratuit avec le prix exact et la date de livraison.",
       },
       {
         title: "Délais habituels",
         head: ["Taille du projet", "Délai habituel"],
         rows: [
           ["Jusqu’à 1 000 mots", "Sous 1 jour ouvré"],
-          ["1 000 à 4 000 mots", "1 à 2 jours ouvrés"],
-          ["4 000 à 10 000 mots", "2 à 4 jours ouvrés"],
-          ["10 000 à 20 000 mots", "4 à 6 jours ouvrés"],
-          ["Plus de 20 000 mots", "Planning convenu, avec livraisons partielles"],
+          ["1 000 à 5 000 mots", "1 à 2 jours ouvrés"],
+          ["5 000 à 10 000 mots", "2 à 3 jours ouvrés"],
+          ["10 000 à 25 000 mots", "3 à 6 jours ouvrés"],
+          ["Plus de 25 000 mots", "Planning convenu, avec livraisons partielles"],
         ],
-        note: "Sur la base de 4 000 mots traduits par jour maximum, relecture personnelle comprise. La révision, la relecture et la post-édition sont généralement plus rapides. Les délais urgents sont possibles selon les disponibilités.",
+        note: "Sur la base d’au moins 5 000 mots traduits par jour, relecture personnelle comprise. La révision, la relecture et la post-édition sont généralement plus rapides. Les délais urgents sont possibles selon les disponibilités.",
       },
     ],
     listTitle: "Ce qui influence le prix",
@@ -524,34 +524,34 @@ const rates: Record<Locale, InfoPage> = {
     crumb: "Tarifas y plazos",
     seoTitle: "Tarifas y plazos de traducción al árabe",
     description:
-      "Tarifas claras de traducción al árabe, de 0,04 a 0,06 USD por palabra, y plazos de entrega realistas, con hasta 4000 palabras al día.",
+      "Cómo se presupuesta la traducción al árabe y cuánto tarda, con al menos 5000 palabras traducidas al día. Cada proyecto recibe un presupuesto claro y gratuito.",
     intro: [
-      "La traducción al árabe se cobra por palabra del texto original, de 0,04 a 0,06 USD por palabra. El punto de esa horquilla en el que queda tu proyecto depende del tema, el formato de los archivos, el volumen y el plazo.",
+      "La traducción al árabe se cobra por palabra del texto original. La tarifa de tu proyecto depende del tema, el formato de los archivos, el volumen y el plazo.",
       "Cada proyecto empieza con un presupuesto claro y por escrito, para que conozcas el precio y la fecha de entrega antes de empezar. Los presupuestos son gratuitos y sin compromiso.",
     ],
     tables: [
       {
-        title: "Tarifas",
-        head: ["Servicio", "Tarifa"],
+        title: "Cómo se presupuesta cada servicio",
+        head: ["Servicio", "Forma de cobro"],
         rows: [
-          ["Traducción (del inglés, el francés o el español al árabe)", "0,04–0,06 USD por palabra"],
+          ["Traducción (del inglés, el francés o el español al árabe)", "Por palabra del texto original"],
           ["Edición, revisión y LQA", "Presupuesto por proyecto o por hora"],
           ["Posedición de traducción automática (MTPE)", "Presupuesto por proyecto, según la traducción automática"],
           ["Transcreación, consultoría y marketing digital", "Presupuesto por proyecto"],
         ],
-        note: "Precios en dólares estadounidenses, por palabra del texto original. Tu tarifa final se confirma en el presupuesto.",
+        note: "Envíame tus archivos para recibir un presupuesto gratuito con el precio exacto y la fecha de entrega.",
       },
       {
         title: "Plazos habituales",
         head: ["Tamaño del proyecto", "Entrega habitual"],
         rows: [
           ["Hasta 1000 palabras", "En 1 día laborable"],
-          ["1000–4000 palabras", "1–2 días laborables"],
-          ["4000–10 000 palabras", "2–4 días laborables"],
-          ["10 000–20 000 palabras", "4–6 días laborables"],
-          ["Más de 20 000 palabras", "Calendario acordado, con entregas parciales"],
+          ["1000–5000 palabras", "1–2 días laborables"],
+          ["5000–10 000 palabras", "2–3 días laborables"],
+          ["10 000–25 000 palabras", "3–6 días laborables"],
+          ["Más de 25 000 palabras", "Calendario acordado, con entregas parciales"],
         ],
-        note: "Basado en hasta 4000 palabras traducidas al día, incluida mi propia revisión. La edición, la revisión y la posedición suelen ser más rápidas. Los plazos urgentes son posibles según disponibilidad.",
+        note: "Basado en al menos 5000 palabras traducidas al día, incluida mi propia revisión. La edición, la revisión y la posedición suelen ser más rápidas. Los plazos urgentes son posibles según disponibilidad.",
       },
     ],
     listTitle: "Qué influye en el precio",
@@ -592,8 +592,8 @@ const rates: Record<Locale, InfoPage> = {
 
 /* ------------------------------------------------------------------ */
 /* For businesses (direct clients, plain language, no tool names)     */
-/* Prices are examples at USD 0.04–0.06 per word; translation, editing */
-/* and proofreading are included for direct clients by default.       */
+/* No prices are shown; translation, editing and proofreading are     */
+/* included for direct clients by default.                            */
 /* ------------------------------------------------------------------ */
 
 const businesses: Record<Locale, InfoPage> = {
@@ -629,15 +629,15 @@ const businesses: Record<Locale, InfoPage> = {
     ],
     tables: [
       {
-        title: "What it costs: examples",
-        head: ["Example project", "Typical price and delivery"],
+        title: "How long it takes: examples",
+        head: ["Example project", "Typical delivery"],
         rows: [
-          ["A brochure or flyer (about 1,000 words)", "USD 40–60 · within 1 working day"],
-          ["A contract or policy (about 3,000 words)", "USD 120–180 · 1–2 working days"],
-          ["A 10-page website (about 5,000 words)", "USD 200–300 · 2–4 working days"],
-          ["A user manual or report (about 10,000 words)", "USD 400–600 · 2–4 working days"],
+          ["A brochure or flyer (about 1,000 words)", "Within 1 working day"],
+          ["A contract or policy (about 3,000 words)", "1–2 working days"],
+          ["A 10-page website (about 5,000 words)", "1–2 working days"],
+          ["A user manual or report (about 10,000 words)", "2–3 working days"],
         ],
-        note: "Based on USD 0.04–0.06 per word of your original text, with editing and proofreading included. Your exact price and date are in your free quote.",
+        note: "Editing and proofreading are always included. Your exact price and delivery date are in your free quote.",
       },
     ],
     listTitle: "What you receive",
@@ -707,15 +707,15 @@ const businesses: Record<Locale, InfoPage> = {
     ],
     tables: [
       {
-        title: "كم يكلّف: أمثلة",
-        head: ["مثال على المشروع", "السعر ومدة التسليم المعتادة"],
+        title: "كم يستغرق: أمثلة",
+        head: ["مثال على المشروع", "مدة التسليم المعتادة"],
         rows: [
-          ["كتيّب أو نشرة (نحو 1,000 كلمة)", "40–60 دولارًا أمريكيًا · خلال يوم عمل واحد"],
-          ["عقد أو سياسة (نحو 3,000 كلمة)", "120–180 دولارًا أمريكيًا · 1–2 يوم عمل"],
-          ["موقع إلكتروني من 10 صفحات (نحو 5,000 كلمة)", "200–300 دولار أمريكي · 2–4 أيام عمل"],
-          ["دليل مستخدم أو تقرير (نحو 10,000 كلمة)", "400–600 دولار أمريكي · 2–4 أيام عمل"],
+          ["كتيّب أو نشرة (نحو 1,000 كلمة)", "خلال يوم عمل واحد"],
+          ["عقد أو سياسة (نحو 3,000 كلمة)", "1–2 يوم عمل"],
+          ["موقع إلكتروني من 10 صفحات (نحو 5,000 كلمة)", "1–2 يوم عمل"],
+          ["دليل مستخدم أو تقرير (نحو 10,000 كلمة)", "2–3 أيام عمل"],
         ],
-        note: "بناءً على 0.04–0.06 دولار أمريكي لكل كلمة في نصك الأصلي، مع المراجعة والتدقيق. ويتضمن عرض السعر المجاني السعر الدقيق وموعد التسليم.",
+        note: "المراجعة والتدقيق مشمولان دائمًا. ويتضمن عرض السعر المجاني السعر الدقيق وموعد التسليم.",
       },
     ],
     listTitle: "ما الذي تستلمه",
@@ -785,15 +785,15 @@ const businesses: Record<Locale, InfoPage> = {
     ],
     tables: [
       {
-        title: "Combien ça coûte : exemples",
-        head: ["Exemple de projet", "Prix et délai habituels"],
+        title: "Combien de temps : exemples",
+        head: ["Exemple de projet", "Délai habituel"],
         rows: [
-          ["Une brochure ou un dépliant (environ 1 000 mots)", "40–60 USD · sous 1 jour ouvré"],
-          ["Un contrat ou une politique (environ 3 000 mots)", "120–180 USD · 1 à 2 jours ouvrés"],
-          ["Un site de 10 pages (environ 5 000 mots)", "200–300 USD · 2 à 4 jours ouvrés"],
-          ["Un manuel ou un rapport (environ 10 000 mots)", "400–600 USD · 2 à 4 jours ouvrés"],
+          ["Une brochure ou un dépliant (environ 1 000 mots)", "Sous 1 jour ouvré"],
+          ["Un contrat ou une politique (environ 3 000 mots)", "1 à 2 jours ouvrés"],
+          ["Un site de 10 pages (environ 5 000 mots)", "1 à 2 jours ouvrés"],
+          ["Un manuel ou un rapport (environ 10 000 mots)", "2 à 3 jours ouvrés"],
         ],
-        note: "Sur la base de 0,04 à 0,06 USD par mot de votre texte original, révision et relecture comprises. Votre prix exact et votre date figurent dans votre devis gratuit.",
+        note: "La révision et la relecture sont toujours comprises. Votre prix exact et votre date de livraison figurent dans votre devis gratuit.",
       },
     ],
     listTitle: "Ce que vous recevez",
@@ -863,15 +863,15 @@ const businesses: Record<Locale, InfoPage> = {
     ],
     tables: [
       {
-        title: "Cuánto cuesta: ejemplos",
-        head: ["Proyecto de ejemplo", "Precio y entrega habituales"],
+        title: "Cuánto tarda: ejemplos",
+        head: ["Proyecto de ejemplo", "Entrega habitual"],
         rows: [
-          ["Un folleto (unas 1000 palabras)", "40–60 USD · en 1 día laborable"],
-          ["Un contrato o una política (unas 3000 palabras)", "120–180 USD · 1–2 días laborables"],
-          ["Una web de 10 páginas (unas 5000 palabras)", "200–300 USD · 2–4 días laborables"],
-          ["Un manual o un informe (unas 10 000 palabras)", "400–600 USD · 2–4 días laborables"],
+          ["Un folleto (unas 1000 palabras)", "En 1 día laborable"],
+          ["Un contrato o una política (unas 3000 palabras)", "1–2 días laborables"],
+          ["Una web de 10 páginas (unas 5000 palabras)", "1–2 días laborables"],
+          ["Un manual o un informe (unas 10 000 palabras)", "2–3 días laborables"],
         ],
-        note: "Basado en 0,04–0,06 USD por palabra de tu texto original, con edición y revisión incluidas. Tu precio exacto y la fecha aparecen en tu presupuesto gratuito.",
+        note: "La edición y la revisión siempre están incluidas. Tu precio exacto y la fecha de entrega aparecen en tu presupuesto gratuito.",
       },
     ],
     listTitle: "Qué recibes",

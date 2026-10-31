@@ -69,6 +69,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang={defaultLocale}
       dir={localeDirection[defaultLocale]}
       className={`${lexend.variable} ${ibmPlexSansArabic.variable}`}
+      // Lets Next turn off smooth scrolling while switching pages, so a new
+      // page appears at the top instantly instead of gliding into place.
+      data-scroll-behavior="smooth"
       // The inline script below sets lang/dir from the URL before hydration.
       suppressHydrationWarning
     >

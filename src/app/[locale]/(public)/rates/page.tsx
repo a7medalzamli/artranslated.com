@@ -28,8 +28,6 @@ export default async function RatesPage({ params }: { params: Promise<{ locale: 
   await getContent(locale as Locale);
   const p = getRatesPage(locale);
 
-  // Translation price range as structured data, so search engines and AI
-  // assistants can quote it accurately.
   const serviceLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -40,17 +38,6 @@ export default async function RatesPage({ params }: { params: Promise<{ locale: 
     inLanguage: locale,
     areaServed: "Worldwide",
     provider: { "@id": ids.business },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "USD",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        minPrice: 0.04,
-        maxPrice: 0.06,
-        priceCurrency: "USD",
-        unitText: "word",
-      },
-    },
   };
 
   return <InfoPageView locale={locale} page={p} image={IMAGE} structuredData={serviceLd} />;
