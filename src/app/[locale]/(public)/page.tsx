@@ -73,20 +73,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </h2>
               <div className={styles.languagePair}>
                 <ul className={styles.languageList}>
-                  {sourceLanguages.map((code, i) => (
-                    <Reveal
-                      as="li"
-                      key={code}
-                      from="up"
-                      delay={i * 80}
-                      className={styles.languageItem}
-                    >
+                  {sourceLanguages.map((code) => (
+                    <li key={code} className={styles.languageItem}>
                       <Flag code={code} size={34} />
                       <span>{t.home.langNames[code]}</span>
-                    </Reveal>
+                    </li>
                   ))}
                 </ul>
-                <Reveal from="up" delay={240} className={styles.languageArrow}>
+                <div className={styles.languageArrow}>
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path
                       d="M4 12h15m-6-6 6 6-6 6"
@@ -97,11 +91,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                     />
                   </svg>
                   <span className="visually-hidden">{intoWord[loc]}</span>
-                </Reveal>
-                <Reveal from="up" delay={320} className={`${styles.languageItem} ${styles.languageTarget}`}>
+                </div>
+                <div className={`${styles.languageItem} ${styles.languageTarget}`}>
                   <Flag code="ar" size={34} />
                   <span>{t.home.langNames.ar}</span>
-                </Reveal>
+                </div>
               </div>
             </div>
           </div>
