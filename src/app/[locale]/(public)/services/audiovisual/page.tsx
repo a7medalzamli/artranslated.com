@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { ProcessSteps } from "@/components/ProcessSteps/ProcessSteps";
 import { CTA } from "@/components/CTA/CTA";
+import { SpecializationDetails } from "@/components/SpecializationDetails/SpecializationDetails";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
@@ -66,6 +67,8 @@ export default async function AudiovisualPage({
           </ul>
         </div>
       </Section>
+
+      <SpecializationDetails locale={locale} slug="audiovisual" />
 
       <CTA
         title={s.ctaTitle}

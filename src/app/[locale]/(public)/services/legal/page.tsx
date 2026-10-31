@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
+import { SpecializationDetails } from "@/components/SpecializationDetails/SpecializationDetails";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
@@ -58,6 +59,8 @@ export default async function LegalPage({ params }: { params: Promise<{ locale: 
           </ul>
         </div>
       </Section>
+
+      <SpecializationDetails locale={locale} slug="legal" />
 
       <CTA
         title={s.ctaTitle}

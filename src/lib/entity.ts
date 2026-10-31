@@ -44,7 +44,7 @@ export function entityGraph(locale: string) {
         address: { "@type": "PostalAddress", addressCountry: "PS" },
         areaServed: "Worldwide",
         availableLanguage: ["Arabic", "English", "French", "Spanish"],
-        foundingDate: "2014",
+        foundingDate: "2026",
         founder: { "@id": ids.person },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
@@ -66,7 +66,7 @@ export function entityGraph(locale: string) {
         alternateName: ["Ahmed Alzamly", "أحمد الزاملي"],
         jobTitle: "English, French and Spanish to Arabic Translator and Localization Specialist",
         description:
-          "Palestinian translator and digital marketing specialist. Translating since 2011 and working professionally since 2014; owner of Translated into Arabic (TIA).",
+          "Palestinian translator and digital marketing specialist. Translating since 2011 and working professionally since 2014; founded Translated into Arabic (TIA) in 2026.",
         url: `${siteUrl}/en/about`,
         image: `${siteUrl}/portrait.jpg`,
         email: site.contact.email,

@@ -1,0 +1,26 @@
+.grid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 60em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+  }
+}
+
+.block {
+  padding-top: var(--space-md);
+  border-top: 3px solid var(--color-primary);
+}
+
+.title {
+  font-size: var(--font-size-h4);
+  margin-bottom: var(--space-sm);
+}
+
+.block p {
+  color: var(--color-text);
+  line-height: var(--line-normal);
+}

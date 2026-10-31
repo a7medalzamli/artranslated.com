@@ -22,6 +22,7 @@ import { getServiceDetails } from "@/content/serviceDetails";
 import { siteUrl } from "@/lib/seo";
 import { ids, breadcrumbs } from "@/lib/entity";
 import { Faq } from "@/components/Faq/Faq";
+import { Testimonials } from "@/components/Testimonials/Testimonials";
 import { getFaqs } from "@/content/faqs";
 import styles from "./servicePage.module.css";
 
@@ -146,6 +147,8 @@ export default async function ServicePage({ params }: { params: Params }) {
           ))}
         </ul>
       </Section>
+
+      {service === "translation" && <Testimonials locale={locale} />}
 
       {getFaqs(locale)[service] && (
         <Faq title={getFaqs(locale).title} items={getFaqs(locale)[service] ?? []} tinted />
