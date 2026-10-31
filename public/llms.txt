@@ -36,7 +36,6 @@
 - [About Ahmed Alzamli](https://www.artranslated.com/en/about): background, education, courses, memberships
 - [For businesses](https://www.artranslated.com/en/for-businesses): plain-language guide for direct clients; how a project works in 4 steps, example delivery times, editing and proofreading included, free corrections for 14 days
 - [For agencies](https://www.artranslated.com/en/for-agencies): Arabic translation, review, LQA and MTPE for translation agencies (LSPs); at least 5,000 words a day; SDL Trados, memoQ, Wordfast, Xbench
-- [Rates & turnaround](https://www.artranslated.com/en/rates): how each service is priced (translation per source word, free quotes); typical delivery times; no sworn or certified translation
 - [How it works](https://www.artranslated.com/en/process): TEP workflow, quality assurance and tools
 - [Confidentiality](https://www.artranslated.com/en/confidentiality): NDAs and secure file handling
 - [Contact and quotes](https://www.artranslated.com/en/contact)

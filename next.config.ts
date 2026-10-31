@@ -17,6 +17,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // The Rates & turnaround page was removed; send old links to For businesses.
+      {
+        source: "/:locale(en|ar|fr|es)/rates",
+        destination: "/:locale/for-businesses",
+        permanent: true,
+      },
       // The AI data annotation service was removed; send old links to Services.
       {
         source: "/:locale(en|ar|fr|es)/services/ai-data-annotation",

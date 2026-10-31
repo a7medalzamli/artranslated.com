@@ -38,7 +38,6 @@ const en = {
     howItWorks: "How it works?",
     forBusinesses: "For businesses",
     forAgencies: "For agencies",
-    rates: "Rates & turnaround",
     serviceLinks: {
       technical: "Technical",
       legal: "Legal",

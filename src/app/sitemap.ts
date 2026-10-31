@@ -48,7 +48,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     routes.saasLocalization,
     routes.forBusinesses,
     routes.forAgencies,
-    routes.rates,
     routes.process,
     routes.confidentiality,
     routes.blog,

@@ -34,7 +34,6 @@ const fr: Dictionary = {
     howItWorks: "Comment ça marche ?",
     forBusinesses: "Pour les entreprises",
     forAgencies: "Pour les agences",
-    rates: "Tarifs et délais",
     serviceLinks: {
       technical: "Technique",
       legal: "Juridique",

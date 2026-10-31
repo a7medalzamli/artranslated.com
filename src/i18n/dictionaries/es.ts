@@ -34,7 +34,6 @@ const es: Dictionary = {
     howItWorks: "¿Cómo funciona?",
     forBusinesses: "Para empresas",
     forAgencies: "Para agencias",
-    rates: "Tarifas y plazos",
     serviceLinks: {
       technical: "Técnica",
       legal: "Jurídica",

@@ -1,4 +1,4 @@
-/* Rates and turnaround tables: side by side on wide screens. */
+/* Tables (e.g. delivery examples): side by side on wide screens. */
 .tables {
   display: grid;
   gap: var(--space-2xl);

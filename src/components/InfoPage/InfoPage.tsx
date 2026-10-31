@@ -13,7 +13,7 @@ import { routes } from "@/lib/routes";
 import serviceStyles from "@/app/[locale]/(public)/services/[service]/servicePage.module.css";
 import styles from "./InfoPage.module.css";
 
-/** Shared layout for the "For agencies" and "Rates & turnaround" pages. */
+/** Shared layout for the "For agencies" and "For businesses" pages. */
 export async function InfoPageView({
   locale,
   page: p,

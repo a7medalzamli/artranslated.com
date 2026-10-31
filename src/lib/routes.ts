@@ -21,7 +21,6 @@ export const routes = {
   saasLocalization: "/services/saas-localization",
   forBusinesses: "/for-businesses",
   forAgencies: "/for-agencies",
-  rates: "/rates",
   process: "/process",
   confidentiality: "/confidentiality",
   blog: "/blog",
