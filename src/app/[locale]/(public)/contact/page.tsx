@@ -9,6 +9,9 @@ import { getSeoText } from "@/content/seoText";
 import { getServicePages, serviceSlugs } from "@/content/servicePages";
 import type { Locale } from "@/i18n";
 import { site } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd/JsonLd";
+import { breadcrumbs } from "@/lib/entity";
+import { routes } from "@/lib/routes";
 import styles from "./contact.module.css";
 
 export async function generateMetadata({
@@ -40,8 +43,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   ];
   const serviceOptions = serviceSlugs.map((slug) => servicePages.pages[slug].title);
 
+  const crumbT = await getContent(locale as Locale);
+  const crumbLd = breadcrumbs(locale, crumbT.common.homeCrumb, [{ name: crumbT.contact.crumb, path: routes.contact }]);
   return (
     <>
+      <JsonLd data={crumbLd} />
       <PageHeader title={c.title} />
 
       <Container className="section-pad">

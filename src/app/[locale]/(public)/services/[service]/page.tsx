@@ -18,7 +18,9 @@ import { getServiceSeoTitles } from "@/content/seoText";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
+import { getServiceDetails } from "@/content/serviceDetails";
 import { siteUrl } from "@/lib/seo";
+import { ids, breadcrumbs } from "@/lib/entity";
 import styles from "./servicePage.module.css";
 
 type Params = Promise<{ locale: string; service: string }>;
@@ -65,12 +67,18 @@ export default async function ServicePage({ params }: { params: Params }) {
     url: `${siteUrl}/${locale}/services/${service}`,
     inLanguage: locale,
     areaServed: "Worldwide",
-    provider: { "@type": "ProfessionalService", name: "Ahmed Alzamli", url: siteUrl },
+    provider: { "@id": ids.business },
+    serviceType: page.title,
   };
+  const crumbs = breadcrumbs(locale, t.common.homeCrumb, [
+    { name: t.services.crumb, path: routes.services },
+    { name: page.title, path: `/services/${service}` },
+  ]);
 
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={crumbs} />
       <PageHeader title={page.title} />
 
       <Section>
@@ -114,6 +122,17 @@ export default async function ServicePage({ params }: { params: Params }) {
           </CardGrid>
         </Section>
       )}
+
+      <Section>
+        <div className={styles.details}>
+          {getServiceDetails(locale)[service].map((block) => (
+            <div key={block.title} className={styles.detail}>
+              <h2 className={styles.detailTitle}>{block.title}</h2>
+              <p>{block.text}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
 
       <Section title={page.includedTitle ?? shared.includedTitle}>
         <ul className={styles.included}>

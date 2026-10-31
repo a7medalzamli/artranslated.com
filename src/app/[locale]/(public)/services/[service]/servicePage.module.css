@@ -79,3 +79,31 @@
   color: var(--color-text);
   margin-bottom: var(--space-xl);
 }
+
+/* ---- Who it's for / How it works / What you receive ---- */
+.details {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 60em) {
+  .details {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+  }
+}
+
+.detail {
+  padding-top: var(--space-md);
+  border-top: 3px solid var(--color-primary);
+}
+
+.detailTitle {
+  font-size: var(--font-size-h4);
+  margin-bottom: var(--space-sm);
+}
+
+.detail p {
+  color: var(--color-text);
+  line-height: var(--line-normal);
+}

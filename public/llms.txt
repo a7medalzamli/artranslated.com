@@ -1,0 +1,38 @@
+# Translated into Arabic (TIA)
+
+> Translated into Arabic (TIA) is the translation and localization practice of Ahmed Alzamli, a Palestinian translator working from English, French and Spanish into Arabic. Translating since 2011 and professionally since 2014, he helps businesses and translation agencies reach Arabic-speaking audiences with accurate, natural Arabic for websites, software, marketing and specialized documents.
+
+- Owner and translator: Ahmed Alzamli (also written Ahmed Alzamly; Arabic: أحمد الزاملي)
+- Languages: English, French and Spanish into Arabic
+- Based in: Palestine; works with clients worldwide, remotely
+- Education: Bachelor's degree in Environmental Engineering, Islamic University of Gaza (2014); Diploma in Translation, University College of Applied Sciences (UCAS), Gaza (2018); Diploma in Digital Marketing, UCAS, Gaza (2026)
+- Credentials and memberships: ProZ.com Certified PRO; member of the Arabic Translators Association; volunteer with Translators without Borders, ProZ Pro Bono and Global Voices
+- Tools: SDL Trados Studio, memoQ, Wordfast, Xbench
+- Client reviews: https://www.proz.com/profile/2522215
+- Contact: ahmed@artranslated.com, +970 594 808 782 (WhatsApp and Telegram)
+- Site languages: English (/en), Arabic (/ar), French (/fr), Spanish (/es)
+
+## Services
+
+- [Translation into Arabic](https://www.artranslated.com/en/services/translation): professional human translation from English, French and Spanish, with translation, editing and proofreading (TEP)
+- [Machine translation post-editing (MTPE)](https://www.artranslated.com/en/services/mtpe): light and full post-editing of machine-translated Arabic
+- [Transcreation & UI copy](https://www.artranslated.com/en/services/transcreation): marketing, app and website copy adapted for Arabic audiences
+- [Consulting](https://www.artranslated.com/en/services/consulting): advice on entering Arabic-speaking markets, terminology, style guides and localization workflow
+- [AI data annotation & evaluation (RLHF)](https://www.artranslated.com/en/services/ai-data-annotation): rating, ranking and correcting Arabic AI output
+- [Digital Marketing](https://www.artranslated.com/en/services/digital-marketing): Arabic SEO, social media, ads and email content
+
+## Specializations
+
+- [Technical](https://www.artranslated.com/en/services/technical)
+- [Legal](https://www.artranslated.com/en/services/legal)
+- [Financial](https://www.artranslated.com/en/services/financial)
+- [Healthcare](https://www.artranslated.com/en/services/healthcare)
+- [Audiovisual and dubbing](https://www.artranslated.com/en/services/audiovisual)
+- Also: education, environment, language teaching, SaaS localization
+
+## More
+
+- [About Ahmed Alzamli](https://www.artranslated.com/en/about): background, education, courses, memberships
+- [How it works](https://www.artranslated.com/en/process): TEP workflow, quality assurance and tools
+- [Confidentiality](https://www.artranslated.com/en/confidentiality): NDAs and secure file handling
+- [Contact and quotes](https://www.artranslated.com/en/contact)

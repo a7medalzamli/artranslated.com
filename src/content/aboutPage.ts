@@ -68,16 +68,16 @@ const en: AboutPageContent = {
     text: "Effective translation requires more than just language proficiency; it requires a deep understanding of the subject matter. My expertise is built on a unique, tri-fold educational foundation:",
     credentials: [
       {
-        title: "Bachelor’s Degree in Engineering (Class of 2014)",
+        title: "Bachelor’s Degree in Environmental Engineering, Islamic University of Gaza (Class of 2014)",
         text: "Ensures absolute precision, structural understanding, and accurate terminology when localizing complex technical texts.",
       },
       {
-        title: "Diploma in Translation (Class of 2018)",
+        title: "Diploma in Translation, University College of Applied Sciences (UCAS), Gaza (Class of 2018)",
         text: "Provides the academic framework and linguistic mastery required for seamless, culturally nuanced communication.",
       },
       {
-        title: "Diploma in Digital Marketing (Class of 2026)",
-        text: "Allows me to optimize translated content for the modern web, ensuring marketing materials remain persuasive, engaging, and search-friendly in the target market.",
+        title: "Diploma in Digital Marketing, University College of Applied Sciences (UCAS), Gaza (Class of 2026)",
+        text: "Formally certifies years of hands-on digital marketing experience that came before it, and allows me to optimize translated content for the modern web so marketing materials stay persuasive, engaging and search-friendly in the target market.",
       },
     ],
   },
@@ -126,16 +126,16 @@ const ar: AboutPageContent = {
     text: "الترجمة الفعّالة تتطلب أكثر من إتقان اللغة؛ إنها تتطلب فهمًا عميقًا للموضوع. تقوم خبرتي على أساس تعليمي فريد من ثلاثة محاور:",
     credentials: [
       {
-        title: "بكالوريوس الهندسة (دفعة 2014)",
+        title: "بكالوريوس الهندسة البيئية، الجامعة الإسلامية بغزة (دفعة 2014)",
         text: "يضمن الدقة التامة والفهم البنيوي والمصطلحات الصحيحة عند توطين النصوص التقنية المعقّدة.",
       },
       {
-        title: "دبلوم الترجمة (دفعة 2018)",
+        title: "دبلوم الترجمة، الكلية الجامعية للعلوم التطبيقية (UCAS) بغزة (دفعة 2018)",
         text: "يوفّر الإطار الأكاديمي والإتقان اللغوي اللازمين لتواصل سلس يراعي الفروق الثقافية.",
       },
       {
-        title: "دبلوم التسويق الرقمي (دفعة 2026)",
-        text: "يتيح لي تحسين المحتوى المترجم للويب الحديث، لتبقى المواد التسويقية مقنعة وجذابة وملائمة لمحركات البحث في السوق المستهدفة.",
+        title: "دبلوم التسويق الرقمي، الكلية الجامعية للعلوم التطبيقية (UCAS) بغزة (دفعة 2026)",
+        text: "يوثّق رسميًا خبرة عملية في التسويق الرقمي سبقته بسنوات، ويتيح لي تحسين المحتوى المترجم للويب الحديث، لتبقى المواد التسويقية مقنعة وجذابة وملائمة لمحركات البحث في السوق المستهدفة.",
       },
     ],
   },
@@ -184,16 +184,16 @@ const fr: AboutPageContent = {
     text: "Une traduction efficace exige plus que la maîtrise de la langue : elle exige une compréhension approfondie du sujet. Mon expertise repose sur une formation unique en trois volets :",
     credentials: [
       {
-        title: "Licence en ingénierie (promotion 2014)",
+        title: "Licence en génie de l’environnement, Université islamique de Gaza (promotion 2014)",
         text: "Garantit une précision absolue, une compréhension structurelle et une terminologie exacte lors de la localisation de textes techniques complexes.",
       },
       {
-        title: "Diplôme de traduction (promotion 2018)",
+        title: "Diplôme de traduction, University College of Applied Sciences (UCAS), Gaza (promotion 2018)",
         text: "Apporte le cadre académique et la maîtrise linguistique nécessaires à une communication fluide et attentive aux nuances culturelles.",
       },
       {
-        title: "Diplôme de marketing digital (promotion 2026)",
-        text: "Me permet d’optimiser les contenus traduits pour le web, afin que les supports marketing restent convaincants, engageants et bien référencés sur le marché cible.",
+        title: "Diplôme de marketing digital, University College of Applied Sciences (UCAS), Gaza (promotion 2026)",
+        text: "Vient certifier des années d’expérience pratique en marketing digital acquise auparavant, et me permet d’optimiser les contenus traduits pour le web, afin que les supports marketing restent convaincants, engageants et bien référencés sur le marché cible.",
       },
     ],
   },
@@ -242,16 +242,16 @@ const es: AboutPageContent = {
     text: "Una traducción eficaz requiere algo más que dominar el idioma: exige un conocimiento profundo del tema. Mi experiencia se basa en una formación única en tres pilares:",
     credentials: [
       {
-        title: "Grado en Ingeniería (promoción de 2014)",
+        title: "Grado en Ingeniería Ambiental, Universidad Islámica de Gaza (promoción de 2014)",
         text: "Garantiza una precisión absoluta, comprensión estructural y terminología exacta al localizar textos técnicos complejos.",
       },
       {
-        title: "Diploma en Traducción (promoción de 2018)",
+        title: "Diploma en Traducción, University College of Applied Sciences (UCAS), Gaza (promoción de 2018)",
         text: "Aporta el marco académico y el dominio lingüístico necesarios para una comunicación fluida y atenta a los matices culturales.",
       },
       {
-        title: "Diploma en Marketing Digital (promoción de 2026)",
-        text: "Me permite optimizar el contenido traducido para la web actual, de modo que los materiales de marketing sigan siendo persuasivos, atractivos y bien posicionados en el mercado de destino.",
+        title: "Diploma en Marketing Digital, University College of Applied Sciences (UCAS), Gaza (promoción de 2026)",
+        text: "Acredita formalmente años de experiencia práctica en marketing digital previos al diploma y me permite optimizar el contenido traducido para la web actual, de modo que los materiales de marketing sigan siendo persuasivos, atractivos y bien posicionados en el mercado de destino.",
       },
     ],
   },

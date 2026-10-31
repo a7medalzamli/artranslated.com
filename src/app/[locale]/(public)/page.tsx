@@ -3,7 +3,6 @@ import { LocaleLink as Link } from "@/components/LocaleLink/LocaleLink";
 import Image from "next/image";
 import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
-import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { Reveal } from "@/components/Reveal/Reveal";
 import { CountUp } from "@/components/CountUp/CountUp";
 import { AvailabilityHours } from "@/components/AvailabilityHours/AvailabilityHours";
@@ -11,11 +10,9 @@ import { Flag, type LanguageCode } from "@/components/Flag/Flag";
 import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
-import { getSeoText } from "@/content/seoText";
+import { getHomeSummary, getSeoText } from "@/content/seoText";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
-import { siteUrl } from "@/lib/seo";
-import { site } from "@/lib/site";
 import styles from "./page.module.css";
 
 export async function generateMetadata({
@@ -34,52 +31,6 @@ export async function generateMetadata({
   });
 }
 
-const professionalService = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: site.name,
-  description:
-    "Website translation and localization into English and Arabic, plus English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations.",
-  url: siteUrl,
-  areaServed: "Worldwide",
-  availableLanguage: ["English", "French", "Spanish", "Arabic"],
-  email: site.contact.email,
-  telephone: site.contact.phone,
-  serviceType: [
-    "Arabic translation",
-    "Website localization",
-    "SaaS localization",
-    "Machine translation post-editing",
-    "Transcreation",
-    "Localization consulting",
-    "AI data annotation",
-    "Arabic digital marketing",
-    "Technical translation",
-    "Legal translation",
-    "Financial translation",
-    "Healthcare translation",
-    "Audiovisual translation",
-  ],
-  logo: `${siteUrl}/logo-tia-v2.png`,
-  image: `${siteUrl}/portrait.jpg`,
-  address: { "@type": "PostalAddress", addressCountry: "PS" },
-  founder: {
-    "@type": "Person",
-    name: "Ahmed Alzamli",
-    jobTitle: "Arabic Translator and Localizer",
-    knowsLanguage: ["ar", "en", "fr", "es"],
-  },
-};
-
-const webSite = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Translated into Arabic (TIA)",
-  alternateName: "Ahmed Alzamli",
-  url: siteUrl,
-  inLanguage: ["en", "ar", "fr", "es"],
-};
-
 const languageCodes: LanguageCode[] = ["en", "ar", "fr", "es"];
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -92,8 +43,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
-      <JsonLd data={professionalService} />
-      <JsonLd data={webSite} />
 
       {/* ---- Hero ---- */}
       <section className={styles.hero}>
@@ -101,7 +50,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className={styles.heroInner}>
             {content.hero.label && <p className={styles.heroLabel}>{content.hero.label}</p>}
             <h1 className={styles.heroTitle}>{content.hero.title}</h1>
-            {content.hero.lead && <p className={styles.heroLead}>{content.hero.lead}</p>}
+            <p className={styles.heroLead}>{getHomeSummary(locale)}</p>
             <div className={styles.heroActions}>
               <Button href={routes.contact} variant="primary" size="lg">
                 {t.common.letsTalk}

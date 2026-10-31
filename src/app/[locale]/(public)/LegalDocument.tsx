@@ -62,6 +62,7 @@ export async function LegalDocument({ locale, t }: { locale: string; t: LegalCon
     <>
       <PageHeader
         title={t.title}
+        locale={locale}
         breadcrumbs={[{ label: c.common.homeCrumb, href: routes.home }, { label: t.crumb }]}
       />
 

@@ -39,6 +39,7 @@ export default async function AudiovisualPage({
         eyebrow={t.serviceDetail.eyebrow}
         title={s.title}
         description={s.description}
+        locale={locale}
         breadcrumbs={[
           { label: t.common.homeCrumb, href: routes.home },
           { label: t.services.crumb, href: routes.services },

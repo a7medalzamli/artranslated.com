@@ -7,6 +7,13 @@ import { getPublishedPosts } from "@/lib/blog/posts";
 // Query the latest published posts at request time.
 export const dynamic = "force-dynamic";
 
+/**
+ * Date the site content last changed. Update it when pages are edited, so the
+ * sitemap tells search engines what really changed instead of marking every
+ * page as new on each deploy.
+ */
+const CONTENT_UPDATED = new Date("2026-10-31");
+
 /** Build a per-locale URL for a path ("/" → "/<locale>"). */
 function localeUrl(locale: string, path: string): string {
   return `${siteUrl}/${locale}${path === "/" ? "" : path}`;
@@ -49,7 +56,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries: MetadataRoute.Sitemap = staticPaths.flatMap((path) =>
     locales.map((locale) => ({
       url: localeUrl(locale, path),
-      lastModified: new Date(),
+      lastModified: CONTENT_UPDATED,
       alternates: alternates(path),
     })),
   );

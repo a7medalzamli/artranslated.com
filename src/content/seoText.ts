@@ -114,3 +114,18 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
 export function getServiceSeoTitles(locale: string): ServiceTitles {
   return serviceTitles[locale as Locale] ?? serviceTitles.en;
 }
+
+/**
+ * Homepage summary under the headline: who runs the site, what it offers and
+ * since when, in plain words that people and AI assistants can quote.
+ */
+const homeSummary: Record<Locale, string> = {
+  en: "I’m Ahmed Alzamli, a Palestinian translator working from English, French and Spanish into Arabic. Through Translated into Arabic (TIA), I’ve helped businesses and agencies reach Arabic-speaking audiences since 2014, with accurate, natural Arabic for websites, software, marketing and specialized documents.",
+  ar: "أنا أحمد الزاملي، مترجم فلسطيني من الإنجليزية والفرنسية والإسبانية إلى العربية. ومن خلال Translated into Arabic (TIA)، أساعد منذ عام 2014 الشركات ووكالات الترجمة على الوصول إلى الجمهور الناطق بالعربية بنصوص عربية دقيقة وطبيعية للمواقع الإلكترونية والبرمجيات والتسويق والوثائق المتخصصة.",
+  fr: "Je suis Ahmed Alzamli, traducteur palestinien de l’anglais, du français et de l’espagnol vers l’arabe. Avec Translated into Arabic (TIA), j’aide depuis 2014 entreprises et agences à toucher le public arabophone grâce à un arabe exact et naturel pour les sites web, les logiciels, le marketing et les documents spécialisés.",
+  es: "Soy Ahmed Alzamli, traductor palestino del inglés, el francés y el español al árabe. Con Translated into Arabic (TIA), ayudo desde 2014 a empresas y agencias a llegar al público de habla árabe con un árabe preciso y natural para sitios web, software, marketing y documentos especializados.",
+};
+
+export function getHomeSummary(locale: string): string {
+  return homeSummary[locale as Locale] ?? homeSummary.en;
+}

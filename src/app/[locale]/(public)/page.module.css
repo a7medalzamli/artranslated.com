@@ -36,7 +36,7 @@
   margin: var(--space-lg) auto 0;
   font-size: var(--font-size-lg);
   color: var(--color-text-muted);
-  max-width: 46ch;
+  max-width: 62ch;
 }
 
 .heroLocalize {

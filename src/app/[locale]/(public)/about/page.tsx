@@ -10,6 +10,9 @@ import { getSeoText } from "@/content/seoText";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd/JsonLd";
+import { breadcrumbs, ids } from "@/lib/entity";
+import { siteUrl } from "@/lib/seo";
 import styles from "./about.module.css";
 
 export async function generateMetadata({
@@ -35,8 +38,20 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const c = await getContent(locale as Locale);
   const a = getAboutPage(locale);
 
+  const crumbT = await getContent(locale as Locale);
+  const crumbLd = breadcrumbs(locale, crumbT.common.homeCrumb, [{ name: crumbT.about.crumb, path: routes.about }]);
+  const profileLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    url: `${siteUrl}/${locale}/about`,
+    inLanguage: locale,
+    mainEntity: { "@id": ids.person },
+    about: { "@id": ids.business },
+  };
   return (
     <>
+      <JsonLd data={crumbLd} />
+      <JsonLd data={profileLd} />
       {/* Top box: short heading */}
       <header className={styles.header}>
         <Container>

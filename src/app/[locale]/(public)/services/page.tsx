@@ -11,6 +11,8 @@ import { getServiceSeoTitles } from "@/content/seoText";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd/JsonLd";
+import { breadcrumbs } from "@/lib/entity";
 import styles from "./services.module.css";
 
 /** Dictionary key for each service's menu label. */
@@ -50,8 +52,11 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
     ...overview.items[slug],
   }));
 
+  const crumbT = await getContent(locale as Locale);
+  const crumbLd = breadcrumbs(locale, crumbT.common.homeCrumb, [{ name: crumbT.services.crumb, path: routes.services }]);
   return (
     <>
+      <JsonLd data={crumbLd} />
       {/* ---- Header: title and a wide photo ---- */}
       <header className={styles.hero}>
         <Container>

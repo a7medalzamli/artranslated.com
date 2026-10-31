@@ -37,6 +37,7 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
         title={p.title}
         // Non-English intros follow the code copy (English has none), not older CMS text.
         description={locale === "en" ? p.description : getStaticContent(locale as Locale).process.description}
+        locale={locale}
         breadcrumbs={[{ label: t.common.homeCrumb, href: routes.home }, { label: p.crumb }]}
       />
 

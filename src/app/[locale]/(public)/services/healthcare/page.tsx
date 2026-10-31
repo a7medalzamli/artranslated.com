@@ -34,6 +34,7 @@ export default async function HealthcarePage({ params }: { params: Promise<{ loc
         eyebrow={t.serviceDetail.eyebrow}
         title={s.title}
         description={s.description}
+        locale={locale}
         breadcrumbs={[
           { label: t.common.homeCrumb, href: routes.home },
           { label: t.services.crumb, href: routes.services },

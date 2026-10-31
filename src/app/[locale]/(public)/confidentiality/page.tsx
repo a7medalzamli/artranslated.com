@@ -37,6 +37,7 @@ export default async function ConfidentialityPage({
       <PageHeader
         title={c.title}
         description={c.description}
+        locale={locale}
         breadcrumbs={[{ label: t.common.homeCrumb, href: routes.home }, { label: c.crumb }]}
       />
 

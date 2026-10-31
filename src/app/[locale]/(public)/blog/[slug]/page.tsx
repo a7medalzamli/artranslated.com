@@ -84,6 +84,7 @@ export default async function BlogPostPage({
       <PageHeader
         eyebrow={post.category ?? undefined}
         title={post.title}
+        locale={locale}
         breadcrumbs={[
           { label: t.common.homeCrumb, href: routes.home },
           { label: t.blog.crumb, href: routes.blog },

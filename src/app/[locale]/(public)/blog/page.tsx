@@ -50,6 +50,7 @@ export default async function BlogPage({
       <PageHeader
         title={b.title}
         description={b.description}
+        locale={locale}
         breadcrumbs={[{ label: t.common.homeCrumb, href: routes.home }, { label: b.crumb }]}
       />
 
