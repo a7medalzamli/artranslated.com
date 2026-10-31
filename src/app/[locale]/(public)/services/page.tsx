@@ -21,7 +21,6 @@ const menuKey = {
   mtpe: "mtpe",
   transcreation: "transcreation",
   consulting: "consulting",
-  "ai-data-annotation": "aiDataAnnotation",
   "digital-marketing": "digitalMarketing",
 } as const satisfies Record<ServiceSlug, string>;
 

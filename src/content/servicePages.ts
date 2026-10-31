@@ -11,7 +11,6 @@ export const serviceSlugs = [
   "mtpe",
   "transcreation",
   "consulting",
-  "ai-data-annotation",
   "digital-marketing",
 ] as const;
 
@@ -27,7 +26,6 @@ export const serviceImages: Record<ServiceSlug, string> = {
   mtpe: "/images/photos/service-mtpe.jpg",
   transcreation: "/images/photos/service-transcreation.jpg",
   consulting: "/images/photos/service-consulting.jpg",
-  "ai-data-annotation": "/images/photos/service-ai-annotation.jpg",
   "digital-marketing": "/images/photos/service-digital-marketing.jpg",
 };
 
@@ -49,7 +47,7 @@ type Shared = {
   specTitle: string;
   specIntro: string;
   /** Extra specialization cards (no detail page yet), shown after the main five. */
-  extraSpecializations: { title: string; summary: string; image: string }[];
+  extraSpecializations: { title: string; summary: string; image: string; href?: string }[];
 };
 
 /** Services overview page: one section per service, question + first-person text. */
@@ -105,6 +103,7 @@ const en: LocaleContent = {
         summary:
           "Helping SaaS companies reach Arabic-speaking users by localizing platforms, dashboards, help centres and release notes for a seamless product experience.",
         image: "/images/photos/spec-saas.jpg",
+        href: "/services/saas-localization",
       },
     ],
   },
@@ -133,10 +132,6 @@ const en: LocaleContent = {
       consulting: {
         question: "Planning to enter Arabic-speaking markets?",
         text: "I advise on **terminology, style guides, workflows and tools** so your content is ready for Arabic and quality stays consistent as you grow.",
-      },
-      "ai-data-annotation": {
-        question: "Training or evaluating AI models in Arabic?",
-        text: "I **rate, rank and correct Arabic AI output**, write prompts and responses, and give structured feedback against your guidelines to improve model quality and safety.",
       },
       "digital-marketing": {
         question: "Want your brand to be found and trusted by Arab audiences?",
@@ -222,25 +217,6 @@ const en: LocaleContent = {
       ctaTitle: "Planning an Arabic launch?",
       ctaDescription: "Book a call to discuss your content, markets and goals.",
     },
-    "ai-data-annotation": {
-      title: "AI data annotation & evaluation (RLHF)",
-      description:
-        "Evaluating, ranking and correcting Arabic AI output to improve model quality and safety.",
-      intro: [
-        "Language models need native-speaker judgement to perform well in Arabic. Annotation and evaluation work provides that signal: rating responses, correcting errors and flagging unsafe or unnatural output.",
-        "Work follows your guidelines precisely, with consistent scoring and clear written feedback.",
-      ],
-      included: [
-        "Response rating and ranking (RLHF)",
-        "Correction of machine-translated and generated Arabic",
-        "Prompt and response writing",
-        "Safety, bias and cultural-appropriateness review",
-        "Structured feedback against your guidelines",
-        "Data labeling and classification in Arabic",
-      ],
-      ctaTitle: "Training models in Arabic?",
-      ctaDescription: "Get native, consistent Arabic evaluation for your AI data.",
-    },
     "digital-marketing": {
       title: "Digital Marketing",
       description:
@@ -293,6 +269,7 @@ const ar: LocaleContent = {
         summary:
           "مساعدة شركات البرمجيات كخدمة على الوصول إلى المستخدمين العرب من خلال توطين المنصات ولوحات التحكم ومراكز المساعدة وملاحظات الإصدار، لتقديم تجربة منتج سلسة.",
         image: "/images/photos/spec-saas.jpg",
+        href: "/services/saas-localization",
       },
     ],
   },
@@ -321,10 +298,6 @@ const ar: LocaleContent = {
       consulting: {
         question: "هل تخطط لدخول الأسواق الناطقة بالعربية؟",
         text: "أقدّم المشورة بشأن **المصطلحات وأدلة الأسلوب وسير العمل والأدوات**، ليكون محتواك جاهزًا للعربية وتبقى الجودة متّسقة مع نموّك.",
-      },
-      "ai-data-annotation": {
-        question: "هل تدرّب نماذج ذكاء اصطناعي بالعربية أو تقيّمها؟",
-        text: "**أقيّم مخرجات الذكاء الاصطناعي العربية وأرتّبها وأصحّحها**، وأكتب الأوامر والإجابات، وأقدّم ملاحظات منظَّمة وفق إرشاداتك لتحسين جودة النماذج وأمانها.",
       },
       "digital-marketing": {
         question: "هل تريد أن يجد الجمهور العربي علامتك التجارية ويثق بها؟",
@@ -409,24 +382,6 @@ const ar: LocaleContent = {
       ctaTitle: "تخطط لإطلاق بالعربية؟",
       ctaDescription: "احجز مكالمة لمناقشة محتواك وأسواقك وأهدافك.",
     },
-    "ai-data-annotation": {
-      title: "توسيم البيانات وتقييمها للذكاء الاصطناعي (RLHF)",
-      description: "تقييم مخرجات الذكاء الاصطناعي العربية وترتيبها وتصحيحها لتحسين جودة النماذج وأمانها.",
-      intro: [
-        "تحتاج النماذج اللغوية إلى حكم متحدث أصلي لتؤدي جيدًا بالعربية. ويوفّر عمل التوسيم والتقييم هذه الإشارة: تقييم الإجابات، وتصحيح الأخطاء، ورصد المخرجات غير الآمنة أو غير الطبيعية.",
-        "يسير العمل وفق إرشاداتك بدقة، مع تقييم متّسق وملاحظات مكتوبة واضحة.",
-      ],
-      included: [
-        "تقييم الإجابات وترتيبها (RLHF)",
-        "تصحيح النصوص العربية المترجمة آليًا والمولَّدة",
-        "كتابة الأوامر والإجابات",
-        "مراجعة الأمان والتحيّز والملاءمة الثقافية",
-        "ملاحظات منظَّمة وفق إرشاداتك",
-        "وسم البيانات وتصنيفها بالعربية",
-      ],
-      ctaTitle: "تدرّب نماذج بالعربية؟",
-      ctaDescription: "احصل على تقييم عربي أصيل ومتّسق لبيانات الذكاء الاصطناعي.",
-    },
     "digital-marketing": {
       title: "التسويق الرقمي",
       description:
@@ -480,6 +435,7 @@ const fr: LocaleContent = {
         summary:
           "Aider les entreprises SaaS à toucher les utilisateurs arabophones en localisant plateformes, tableaux de bord, centres d’aide et notes de version, pour une expérience produit fluide.",
         image: "/images/photos/spec-saas.jpg",
+        href: "/services/saas-localization",
       },
     ],
   },
@@ -508,10 +464,6 @@ const fr: LocaleContent = {
       consulting: {
         question: "Vous préparez votre arrivée sur les marchés arabophones ?",
         text: "Je vous conseille sur **la terminologie, les guides de style, les processus et les outils** pour que vos contenus soient prêts pour l’arabe et que la qualité reste constante à mesure que vous grandissez.",
-      },
-      "ai-data-annotation": {
-        question: "Vous entraînez ou évaluez des modèles d’IA en arabe ?",
-        text: "J’**évalue, classe et corrige les réponses d’IA en arabe**, rédige des prompts et des réponses, et fournis des retours structurés selon vos consignes pour améliorer la qualité et la sécurité des modèles.",
       },
       "digital-marketing": {
         question: "Vous voulez que votre marque soit trouvée et appréciée par le public arabophone ?",
@@ -597,25 +549,6 @@ const fr: LocaleContent = {
       ctaTitle: "Vous préparez un lancement en arabe ?",
       ctaDescription: "Réservez un appel pour parler de vos contenus, marchés et objectifs.",
     },
-    "ai-data-annotation": {
-      title: "Annotation et évaluation de données IA (RLHF)",
-      description:
-        "Évaluer, classer et corriger les réponses d’IA en arabe pour améliorer la qualité et la sécurité des modèles.",
-      intro: [
-        "Les modèles de langue ont besoin du jugement d’un locuteur natif pour bien fonctionner en arabe. L’annotation et l’évaluation apportent ce signal : noter les réponses, corriger les erreurs et signaler les contenus inappropriés ou peu naturels.",
-        "Le travail suit précisément vos consignes, avec une notation cohérente et des retours écrits clairs.",
-      ],
-      included: [
-        "Notation et classement des réponses (RLHF)",
-        "Correction de textes arabes traduits automatiquement ou générés",
-        "Rédaction de prompts et de réponses",
-        "Revue de sécurité, de biais et d’adéquation culturelle",
-        "Retours structurés selon vos consignes",
-        "Étiquetage et classification de données en arabe",
-      ],
-      ctaTitle: "Vous entraînez des modèles en arabe ?",
-      ctaDescription: "Obtenez une évaluation native et cohérente de vos données d’IA.",
-    },
     "digital-marketing": {
       title: "Marketing digital",
       description:
@@ -669,6 +602,7 @@ const es: LocaleContent = {
         summary:
           "Ayudar a las empresas SaaS a llegar a los usuarios de habla árabe localizando plataformas, paneles, centros de ayuda y notas de versión, para ofrecer una experiencia de producto fluida.",
         image: "/images/photos/spec-saas.jpg",
+        href: "/services/saas-localization",
       },
     ],
   },
@@ -697,10 +631,6 @@ const es: LocaleContent = {
       consulting: {
         question: "¿Planeas entrar en los mercados de habla árabe?",
         text: "Te asesoro sobre **terminología, guías de estilo, flujos de trabajo y herramientas** para que tu contenido esté listo para el árabe y la calidad se mantenga a medida que creces.",
-      },
-      "ai-data-annotation": {
-        question: "¿Entrenas o evalúas modelos de IA en árabe?",
-        text: "**Puntúo, clasifico y corrijo respuestas de IA en árabe**, redacto instrucciones y respuestas, y ofrezco comentarios estructurados según tus pautas para mejorar la calidad y la seguridad de los modelos.",
       },
       "digital-marketing": {
         question: "¿Quieres que el público árabe encuentre tu marca y confíe en ella?",
@@ -785,25 +715,6 @@ const es: LocaleContent = {
       ],
       ctaTitle: "¿Preparas un lanzamiento en árabe?",
       ctaDescription: "Reserva una llamada para hablar de tus contenidos, mercados y objetivos.",
-    },
-    "ai-data-annotation": {
-      title: "Anotación y evaluación de datos de IA (RLHF)",
-      description:
-        "Evaluar, clasificar y corregir respuestas de IA en árabe para mejorar la calidad y la seguridad de los modelos.",
-      intro: [
-        "Los modelos de lenguaje necesitan el criterio de un hablante nativo para funcionar bien en árabe. La anotación y la evaluación aportan esa señal: puntuar respuestas, corregir errores y señalar contenidos inseguros o poco naturales.",
-        "El trabajo sigue tus pautas con precisión, con una puntuación coherente y comentarios escritos claros.",
-      ],
-      included: [
-        "Puntuación y clasificación de respuestas (RLHF)",
-        "Corrección de textos árabes traducidos automáticamente o generados",
-        "Redacción de instrucciones y respuestas",
-        "Revisión de seguridad, sesgos y adecuación cultural",
-        "Comentarios estructurados según tus pautas",
-        "Etiquetado y clasificación de datos en árabe",
-      ],
-      ctaTitle: "¿Entrenas modelos en árabe?",
-      ctaDescription: "Obtén una evaluación nativa y coherente de tus datos de IA.",
     },
     "digital-marketing": {
       title: "Marketing digital",

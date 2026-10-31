@@ -49,7 +49,6 @@ const en = {
     mtpe: "Post-editing (MTPE)",
     transcreation: "Transcreation & UI copy",
     consulting: "Consulting",
-    aiDataAnnotation: "AI data annotation",
     digitalMarketing: "Digital Marketing",
   },
   breadcrumbs: {

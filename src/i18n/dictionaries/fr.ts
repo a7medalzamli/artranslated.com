@@ -45,7 +45,6 @@ const fr: Dictionary = {
     mtpe: "Post-édition (MTPE)",
     transcreation: "Transcréation et textes d’interface",
     consulting: "Conseil",
-    aiDataAnnotation: "Annotation de données IA",
     digitalMarketing: "Marketing digital",
   },
   breadcrumbs: {

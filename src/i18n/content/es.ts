@@ -221,11 +221,6 @@ const es: SiteContent = {
           "Revisar aplicaciones e interfaces localizadas en contexto para detectar problemas de maquetación, truncamiento y usabilidad antes del lanzamiento.",
       },
       {
-        title: "Anotación y evaluación de datos de IA (RLHF)",
-        summary:
-          "Evaluar y clasificar las salidas en árabe generadas por IA, corregir errores y dar retroalimentación estructurada para mejorar la calidad y la seguridad del modelo.",
-      },
-      {
         title: "Adaptación de doblaje con sincronización labial",
         summary:
           "Adaptar los guiones con código de tiempo y ajustar el número de sílabas en árabe para que coincidan con los movimientos labiales en pantalla, conservando el significado y la emoción originales.",
@@ -255,7 +250,7 @@ const es: SiteContent = {
       s3List: [
         "Posedición de traducción automática (MTPE): llevar la salida automática a calidad humana manteniendo plazos eficientes.",
         "Pruebas de producto digital: revisar las interfaces localizadas en contexto para detectar problemas de maquetación, truncamiento y usabilidad.",
-        "Anotación y evaluación de datos de IA (RLHF): evaluar y mejorar la salida en árabe generada por IA.",
+        "Localización de SaaS: adaptar plataformas de software, paneles y centros de ayuda para usuarios de habla árabe.",
       ],
       ctaTitle: "¿Tienes documentación técnica para traducir?",
       ctaDescription:

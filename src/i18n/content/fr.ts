@@ -226,11 +226,6 @@ const fr: SiteContent = {
           "Examiner les applications et interfaces localisées en contexte pour repérer les problèmes de mise en page, de troncature et d'ergonomie avant la publication.",
       },
       {
-        title: "Annotation et évaluation de données IA (RLHF)",
-        summary:
-          "Évaluer et classer les sorties arabes générées par l'IA, corriger les erreurs et fournir un retour structuré pour améliorer la qualité et la sûreté du modèle.",
-      },
-      {
         title: "Adaptation de doublage avec synchronisation labiale",
         summary:
           "Adapter les scripts minutés et ajuster le nombre de syllabes en arabe pour correspondre aux mouvements des lèvres à l'écran, tout en conservant le sens et l'émotion d'origine.",
@@ -260,7 +255,7 @@ const fr: SiteContent = {
       s3List: [
         "Post-édition de traduction automatique (MTPE) — amener la sortie machine au niveau humain tout en gardant des délais efficaces.",
         "Test de produits numériques — vérifier les interfaces localisées en contexte pour la mise en page, la troncature et l'ergonomie.",
-        "Annotation et évaluation de données IA (RLHF) — évaluer et améliorer la sortie arabe générée par l'IA.",
+        "Localisation de SaaS — adapter plateformes logicielles, tableaux de bord et centres d’aide aux utilisateurs arabophones.",
       ],
       ctaTitle: "Vous avez une documentation technique à traduire ?",
       ctaDescription: "Indiquez la combinaison de langues, le domaine et le délai pour un devis clair.",

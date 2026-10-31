@@ -15,6 +15,16 @@ const nextConfig: NextConfig = {
     // Allow optimized images served from Supabase Storage (cover images).
     remotePatterns: [{ protocol: "https", hostname: "*.supabase.co" }],
   },
+  async redirects() {
+    return [
+      // The AI data annotation service was removed; send old links to Services.
+      {
+        source: "/:locale(en|ar|fr|es)/services/ai-data-annotation",
+        destination: "/:locale/services",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     // React dev mode needs eval() for debugging; production never does.
     const isDev = process.env.NODE_ENV !== "production";

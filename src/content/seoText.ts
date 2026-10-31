@@ -68,7 +68,6 @@ type ServiceTitles = {
   mtpe: string;
   transcreation: string;
   consulting: string;
-  "ai-data-annotation": string;
   "digital-marketing": string;
 };
 
@@ -79,7 +78,6 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
     mtpe: "Arabic Machine Translation Post-Editing (MTPE)",
     transcreation: "Arabic Transcreation & UI Copy",
     consulting: "Arabic Localization Consulting",
-    "ai-data-annotation": "Arabic AI Data Annotation & RLHF",
     "digital-marketing": "Arabic Digital Marketing & SEO",
   },
   ar: {
@@ -88,7 +86,6 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
     mtpe: "التحرير اللاحق للترجمة الآلية إلى العربية (MTPE)",
     transcreation: "الترجمة الإبداعية ونصوص الواجهات بالعربية",
     consulting: "استشارات التوطين إلى العربية",
-    "ai-data-annotation": "توسيم بيانات الذكاء الاصطناعي بالعربية (RLHF)",
     "digital-marketing": "التسويق الرقمي وتحسين محركات البحث بالعربية",
   },
   fr: {
@@ -97,7 +94,6 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
     mtpe: "Post-édition de traduction automatique (MTPE) arabe",
     transcreation: "Transcréation et textes d’interface en arabe",
     consulting: "Conseil en localisation arabe",
-    "ai-data-annotation": "Annotation de données IA en arabe (RLHF)",
     "digital-marketing": "Marketing digital et SEO en arabe",
   },
   es: {
@@ -106,7 +102,6 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
     mtpe: "Posedición de traducción automática (MTPE) al árabe",
     transcreation: "Transcreación y textos de interfaz en árabe",
     consulting: "Consultoría de localización al árabe",
-    "ai-data-annotation": "Anotación de datos de IA en árabe (RLHF)",
     "digital-marketing": "Marketing digital y SEO en árabe",
   },
 };

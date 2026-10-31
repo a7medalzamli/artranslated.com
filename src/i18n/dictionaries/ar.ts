@@ -51,7 +51,6 @@ const ar: Dictionary = {
     mtpe: "التحرير اللاحق للترجمة الآلية",
     transcreation: "الترجمة الإبداعية ونصوص الواجهات",
     consulting: "الاستشارات",
-    aiDataAnnotation: "توسيم البيانات للذكاء الاصطناعي",
     digitalMarketing: "التسويق الرقمي",
   },
   breadcrumbs: {

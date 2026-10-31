@@ -45,7 +45,6 @@ const es: Dictionary = {
     mtpe: "Posedición (MTPE)",
     transcreation: "Transcreación y textos de interfaz",
     consulting: "Consultoría",
-    aiDataAnnotation: "Anotación de datos de IA",
     digitalMarketing: "Marketing digital",
   },
   breadcrumbs: {

@@ -83,7 +83,6 @@ export function entityGraph(locale: string) {
           "Environmental engineering",
           "Digital marketing",
           "Search engine optimization",
-          "AI data annotation",
         ],
         worksFor: { "@id": ids.business },
         alumniOf: [IUG, UCAS],

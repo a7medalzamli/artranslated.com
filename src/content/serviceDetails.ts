@@ -48,12 +48,6 @@ const en: Details = {
     "We start with a call about your products, markets and current workflow. I review your existing Arabic content or source files and identify the risks: dialect choice, terminology, right-to-left issues, culturally sensitive images or names, and missing quality steps. You get practical recommendations, not a theoretical report.",
     "Depending on scope: a glossary and style guide, guidance on Modern Standard Arabic versus regional dialects, a localization-readiness review of your website or app, and a quality process your team or vendors can follow.",
   ),
-  "ai-data-annotation": d(
-    "en",
-    "AI companies and data vendors training, fine-tuning or evaluating language models in Arabic, who need native-speaker judgement rather than guesswork.",
-    "Working within your guidelines and platform, I rate and rank model responses (RLHF), correct translated or generated Arabic, write prompts and reference answers, and flag unsafe, biased or culturally inappropriate output. Unclear cases are documented with a written rationale.",
-    "Consistent ratings and edits that follow your guidelines, written feedback that explains each judgement, and labeled or classified Arabic data ready for your pipeline.",
-  ),
   "digital-marketing": d(
     "en",
     "Businesses that want Arabic-speaking customers to find and trust them online, from SaaS and e-commerce to service providers entering Gulf, Levant or North African markets.",
@@ -86,12 +80,6 @@ const ar: Details = {
     "الشركات التي تستعد لدخول الأسواق الناطقة بالعربية لأول مرة، والفرق التي يعاني محتواها العربي من عدم الاتساق أو بطء الإنتاج أو ضعف الصدى لدى جمهوره.",
     "نبدأ بمكالمة حول منتجاتك وأسواقك وسير عملك الحالي. أراجع محتواك العربي الحالي أو ملفاتك المصدرية وأحدّد المخاطر: اختيار اللهجة، والمصطلحات، ومشكلات الكتابة من اليمين إلى اليسار، والصور أو الأسماء الحساسة ثقافيًا، وخطوات الجودة الناقصة. وتحصل على توصيات عملية لا تقريرًا نظريًا.",
     "بحسب نطاق العمل: مسرد مصطلحات ودليل أسلوب، وإرشادات حول العربية الفصحى المعاصرة مقابل اللهجات المحلية، ومراجعة لجاهزية موقعك أو تطبيقك للتوطين، وآلية جودة يمكن لفريقك أو مورّديك اتباعها.",
-  ),
-  "ai-data-annotation": d(
-    "ar",
-    "شركات الذكاء الاصطناعي ومورّدو البيانات الذين يدرّبون النماذج اللغوية بالعربية أو يضبطونها أو يقيّمونها، ويحتاجون إلى حكم متحدث أصلي لا إلى التخمين.",
-    "ضمن إرشاداتك ومنصتك، أقيّم استجابات النماذج وأرتّبها (RLHF)، وأصحّح النصوص العربية المترجمة أو المولَّدة، وأكتب المطالبات والإجابات المرجعية، وأشير إلى المخرجات غير الآمنة أو المنحازة أو غير الملائمة ثقافيًا. وتُوثَّق الحالات الملتبسة بتعليل مكتوب.",
-    "تقييمات وتعديلات متّسقة تلتزم بإرشاداتك، وملاحظات مكتوبة تشرح كل حكم، وبيانات عربية موسومة أو مصنّفة جاهزة للاستخدام في مسار عملك.",
   ),
   "digital-marketing": d(
     "ar",
@@ -126,12 +114,6 @@ const fr: Details = {
     "Nous commençons par un appel sur vos produits, vos marchés et votre flux de travail actuel. J’examine vos contenus arabes existants ou vos fichiers sources et j’identifie les risques : choix de la variante, terminologie, problèmes d’écriture de droite à gauche, images ou noms sensibles sur le plan culturel, étapes de qualité manquantes. Vous recevez des recommandations concrètes, pas un rapport théorique.",
     "Selon le périmètre : un glossaire et un guide de style, des conseils sur l’arabe standard moderne et les dialectes régionaux, un audit de la préparation de votre site ou de votre application à la localisation, et un processus qualité que votre équipe ou vos prestataires peuvent suivre.",
   ),
-  "ai-data-annotation": d(
-    "fr",
-    "Les entreprises d’IA et les fournisseurs de données qui entraînent, ajustent ou évaluent des modèles de langage en arabe, et qui ont besoin du jugement d’un locuteur natif plutôt que d’approximations.",
-    "Dans le cadre de vos consignes et de votre plateforme, j’évalue et je classe les réponses des modèles (RLHF), je corrige l’arabe traduit ou généré, je rédige des instructions et des réponses de référence, et je signale les contenus dangereux, biaisés ou culturellement inappropriés. Les cas ambigus sont documentés par une justification écrite.",
-    "Des évaluations et des corrections cohérentes et conformes à vos consignes, des commentaires écrits qui expliquent chaque jugement, et des données arabes étiquetées ou classées prêtes pour votre chaîne de traitement.",
-  ),
   "digital-marketing": d(
     "fr",
     "Les entreprises qui veulent que les clients arabophones les trouvent et leur fassent confiance en ligne, du SaaS et de l’e-commerce aux prestataires de services qui abordent les marchés du Golfe, du Levant ou d’Afrique du Nord.",
@@ -164,12 +146,6 @@ const es: Details = {
     "Empresas que se preparan para entrar por primera vez en mercados de habla árabe y equipos cuyo contenido en árabe es incoherente, lento de producir o no conecta con su público.",
     "Empezamos con una llamada sobre tus productos, mercados y flujo de trabajo actual. Reviso tu contenido en árabe o tus archivos de origen e identifico los riesgos: elección de variante, terminología, problemas de escritura de derecha a izquierda, imágenes o nombres culturalmente sensibles y pasos de calidad que faltan. Recibes recomendaciones prácticas, no un informe teórico.",
     "Según el alcance: un glosario y una guía de estilo, orientación sobre el árabe estándar moderno frente a los dialectos regionales, una revisión de la preparación de tu sitio web o aplicación para la localización y un proceso de calidad que tu equipo o tus proveedores puedan seguir.",
-  ),
-  "ai-data-annotation": d(
-    "es",
-    "Empresas de IA y proveedores de datos que entrenan, ajustan o evalúan modelos de lenguaje en árabe y necesitan el criterio de un hablante nativo, no suposiciones.",
-    "Siguiendo tus pautas y tu plataforma, puntúo y clasifico respuestas de modelos (RLHF), corrijo árabe traducido o generado, redacto instrucciones y respuestas de referencia, y señalo contenidos inseguros, sesgados o culturalmente inadecuados. Los casos dudosos se documentan con una justificación por escrito.",
-    "Puntuaciones y correcciones coherentes que siguen tus pautas, comentarios escritos que explican cada decisión y datos en árabe etiquetados o clasificados, listos para tu flujo de trabajo.",
   ),
   "digital-marketing": d(
     "es",

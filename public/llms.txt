@@ -18,7 +18,6 @@
 - [Machine translation post-editing (MTPE)](https://www.artranslated.com/en/services/mtpe): light and full post-editing of machine-translated Arabic
 - [Transcreation & UI copy](https://www.artranslated.com/en/services/transcreation): marketing, app and website copy adapted for Arabic audiences
 - [Consulting](https://www.artranslated.com/en/services/consulting): advice on entering Arabic-speaking markets, terminology, style guides and localization workflow
-- [AI data annotation & evaluation (RLHF)](https://www.artranslated.com/en/services/ai-data-annotation): rating, ranking and correcting Arabic AI output
 - [Digital Marketing](https://www.artranslated.com/en/services/digital-marketing): Arabic SEO, social media, ads and email content
 
 ## Specializations
@@ -28,7 +27,8 @@
 - [Financial](https://www.artranslated.com/en/services/financial)
 - [Healthcare](https://www.artranslated.com/en/services/healthcare)
 - [Audiovisual and dubbing](https://www.artranslated.com/en/services/audiovisual)
-- Also: education, environment, language teaching, SaaS localization
+- [SaaS localization](https://www.artranslated.com/en/services/saas-localization): software platforms, apps, help centers and app store listings localized into Arabic
+- Also: education, environment, language teaching
 
 ## More
 

@@ -227,11 +227,6 @@ const en = {
           "Reviewing localized apps and interfaces in context to catch layout, truncation and usability issues before release.",
       },
       {
-        title: "AI data annotation & evaluation (RLHF)",
-        summary:
-          "Evaluating and ranking AI-generated Arabic output, correcting errors and giving structured feedback to improve model quality and safety.",
-      },
-      {
         title: "Dubbing adaptation with lip-sync",
         summary:
           "Adapting timecoded scripts and adjusting Arabic syllable counts to match on-screen lip movements, while carrying the original meaning and emotion.",
@@ -261,7 +256,7 @@ const en = {
       s3List: [
         "Machine translation post-editing (MTPE) — bringing machine output up to human quality while keeping turnaround efficient.",
         "Digital product testing — checking localized interfaces in context for layout, truncation and usability issues.",
-        "AI data annotation & evaluation (RLHF) — assessing and improving AI-generated Arabic output.",
+        "SaaS localization — adapting software platforms, dashboards and help centers for Arabic-speaking users.",
       ],
       ctaTitle: "Have technical documentation to translate?",
       ctaDescription: "Share the language pair, subject area and deadline for a clear quote.",
