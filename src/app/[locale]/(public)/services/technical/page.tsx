@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
 import { SpecializationDetails } from "@/components/SpecializationDetails/SpecializationDetails";
-import { getContent } from "@/i18n/content";
+import { getContent, getStaticContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
@@ -64,7 +64,8 @@ export default async function TechnicalPage({ params }: { params: Promise<{ loca
         <div className="prose">
           <p>{s.s3Intro}</p>
           <ul>
-            {s.s3List.map((item) => (
+            {/* Code copy wins: an older saved CMS list still named a removed service. */}
+            {getStaticContent(locale as Locale).serviceDetail.technical.s3List.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
