@@ -4,6 +4,8 @@ import ar from "./ar";
 import fr from "./fr";
 import es from "./es";
 import { readMerged } from "@/lib/cms/db";
+import { notFound } from "next/navigation";
+import { isLocale } from "../config";
 
 /** Page content shape is defined by the English content. */
 export type SiteContent = typeof en;
@@ -21,5 +23,7 @@ export function getStaticContent(locale: Locale): SiteContent {
  * (per-locale only, never across locales).
  */
 export async function getContent(locale: Locale): Promise<SiteContent> {
+  // An unknown "language" (e.g. /foo.txt read as a locale) is a missing page.
+  if (!isLocale(locale)) notFound();
   return readMerged<SiteContent>("content", locale, staticContent[locale]);
 }

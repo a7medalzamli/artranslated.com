@@ -1,6 +1,8 @@
 import type { Locale } from "@/i18n";
 import { localizedHome } from "@/content/homeLocalized";
 import { readMerged } from "@/lib/cms/db";
+import { notFound } from "next/navigation";
+import { isLocale } from "@/i18n/config";
 import { defaultHomeContent, type HomeContent } from "./home";
 
 /**
@@ -14,6 +16,7 @@ import { defaultHomeContent, type HomeContent } from "./home";
  * translations kept in code (which mirror English) take priority.
  */
 export async function getLocalizedHome(locale: Locale): Promise<HomeContent> {
+  if (!isLocale(locale)) notFound();
   if (locale === "en") return readMerged<HomeContent>("home", locale, defaultHomeContent);
 
   const code = localizedHome[locale as "ar" | "fr" | "es"];
