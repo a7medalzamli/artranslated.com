@@ -32,6 +32,8 @@ const fr: Dictionary = {
     alconost: "Certifié par Alconost",
     about: "À propos",
     howItWorks: "Comment ça marche ?",
+    forAgencies: "Pour les agences",
+    rates: "Tarifs et délais",
     serviceLinks: {
       technical: "Technique",
       legal: "Juridique",

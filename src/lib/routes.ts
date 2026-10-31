@@ -19,6 +19,8 @@ export const routes = {
   healthcare: "/services/healthcare",
   audiovisual: "/services/audiovisual",
   saasLocalization: "/services/saas-localization",
+  forAgencies: "/for-agencies",
+  rates: "/rates",
   process: "/process",
   confidentiality: "/confidentiality",
   blog: "/blog",

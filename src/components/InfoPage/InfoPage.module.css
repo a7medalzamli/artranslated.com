@@ -1,0 +1,66 @@
+/* Rates and turnaround tables: side by side on wide screens. */
+.tables {
+  display: grid;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 60em) {
+  .tables {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.tableTitle {
+  font-size: var(--font-size-h4);
+  margin-bottom: var(--space-md);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-size: var(--font-size-sm);
+}
+
+.table th,
+.table td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: start;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table tbody tr:last-child th,
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.table thead th {
+  background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  color: var(--color-primary);
+  font-weight: var(--weight-semibold);
+}
+
+.table tbody th {
+  font-weight: var(--weight-medium, 500);
+  color: var(--color-text);
+}
+
+.table td {
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+}
+
+.tableNote {
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.availability {
+  text-align: center;
+}

@@ -38,6 +38,8 @@ const ar: Dictionary = {
     alconost: "معتمد من Alconost",
     about: "نبذة",
     howItWorks: "كيف نعمل؟",
+    forAgencies: "للوكالات",
+    rates: "الأسعار ومواعيد التسليم",
     serviceLinks: {
       technical: "التقنية",
       legal: "القانونية",

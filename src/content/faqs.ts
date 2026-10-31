@@ -39,6 +39,10 @@ const en: FaqSet = {
       a: "Feedback from clients I have worked with is published on my ProZ.com profile, the largest professional network for translators.",
       link: { label: "Read client reviews on ProZ.com", href: PROZ },
     },
+    {
+      q: "Do you provide sworn or certified translation?",
+      a: "No. I don’t provide sworn or certified translations with an official stamp, such as for immigration or court documents. I focus on commercial, technical, legal, financial, healthcare, marketing and software content.",
+    },
   ],
   translation: [
     {
@@ -162,6 +166,10 @@ const ar: FaqSet = {
       q: "أين يمكنني الاطلاع على تقييمات عملائك؟",
       a: "آراء العملاء الذين عملت معهم منشورة في ملفي على ProZ.com، أكبر شبكة مهنية للمترجمين.",
       link: { label: "اقرأ تقييمات العملاء على ProZ.com", href: PROZ },
+    },
+    {
+      q: "هل تقدّم ترجمة محلّفة أو معتمدة؟",
+      a: "لا. لا أقدّم ترجمات محلّفة أو معتمدة بختم رسمي، كتلك المطلوبة لمعاملات الهجرة أو المحاكم. أركّز على المحتوى التجاري والتقني والقانوني والمالي والطبي والتسويقي والبرمجي.",
     },
   ],
   translation: [
@@ -287,6 +295,10 @@ const fr: FaqSet = {
       a: "Les avis des clients avec qui j’ai travaillé sont publiés sur mon profil ProZ.com, le plus grand réseau professionnel de traducteurs.",
       link: { label: "Lire les avis clients sur ProZ.com", href: PROZ },
     },
+    {
+      q: "Proposez-vous des traductions assermentées ou certifiées ?",
+      a: "Non. Je ne fournis pas de traductions assermentées ou certifiées avec cachet officiel, comme pour les démarches d’immigration ou les tribunaux. Je me concentre sur les contenus commerciaux, techniques, juridiques, financiers, médicaux, marketing et logiciels.",
+    },
   ],
   translation: [
     {
@@ -410,6 +422,10 @@ const es: FaqSet = {
       q: "¿Dónde puedo ver opiniones de tus clientes?",
       a: "Las opiniones de los clientes con los que he trabajado están publicadas en mi perfil de ProZ.com, la mayor red profesional de traductores.",
       link: { label: "Leer opiniones de clientes en ProZ.com", href: PROZ },
+    },
+    {
+      q: "¿Ofreces traducción jurada o certificada?",
+      a: "No. No ofrezco traducciones juradas ni certificadas con sello oficial, como las que se piden para trámites de inmigración o tribunales. Me centro en contenido comercial, técnico, jurídico, financiero, sanitario, de marketing y de software.",
     },
   ],
   translation: [

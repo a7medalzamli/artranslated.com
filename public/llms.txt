@@ -34,6 +34,8 @@
 ## More
 
 - [About Ahmed Alzamli](https://www.artranslated.com/en/about): background, education, courses, memberships
+- [For agencies](https://www.artranslated.com/en/for-agencies): Arabic translation, review, LQA and MTPE for translation agencies (LSPs); up to 4,000 words a day; SDL Trados, memoQ, Wordfast, Xbench
+- [Rates & turnaround](https://www.artranslated.com/en/rates): translation USD 0.04-0.06 per source word; typical delivery times; no sworn or certified translation
 - [How it works](https://www.artranslated.com/en/process): TEP workflow, quality assurance and tools
 - [Confidentiality](https://www.artranslated.com/en/confidentiality): NDAs and secure file handling
 - [Contact and quotes](https://www.artranslated.com/en/contact)

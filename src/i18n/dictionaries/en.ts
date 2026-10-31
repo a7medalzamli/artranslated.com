@@ -36,6 +36,8 @@ const en = {
     alconost: "Certified by Alconost",
     about: "About",
     howItWorks: "How it works?",
+    forAgencies: "For agencies",
+    rates: "Rates & turnaround",
     serviceLinks: {
       technical: "Technical",
       legal: "Legal",
