@@ -32,11 +32,15 @@
   max-width: 20ch;
 }
 
+/* The hero holds only title, lead and buttons, so the lead is a little
+   larger and narrower to read as a short intro, not a block of text. */
 .heroLead {
-  margin: var(--space-lg) auto 0;
-  font-size: var(--font-size-lg);
+  margin: var(--space-xl) auto 0;
+  font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  line-height: 1.65;
   color: var(--color-text-muted);
-  max-width: 62ch;
+  max-width: 54ch;
+  text-wrap: pretty;
 }
 
 .heroLocalize {
@@ -52,7 +56,7 @@
 }
 
 .heroActions {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-2xl);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);

@@ -6,7 +6,6 @@ import { Button } from "@/components/Button/Button";
 import { Reveal } from "@/components/Reveal/Reveal";
 import { CountUp } from "@/components/CountUp/CountUp";
 import { AvailabilityHours } from "@/components/AvailabilityHours/AvailabilityHours";
-import { Flag, type LanguageCode } from "@/components/Flag/Flag";
 import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
@@ -34,8 +33,6 @@ export async function generateMetadata({
   });
 }
 
-const languageCodes: LanguageCode[] = ["en", "ar", "fr", "es"];
-
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc = locale as Locale;
@@ -61,26 +58,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <Link href={routes.services} className={styles.heroSecondary}>
                 {t.common.exploreServices}
               </Link>
-            </div>
-
-            <div className={styles.heroLanguages} aria-labelledby="languages-title">
-              <h2 id="languages-title" className={styles.languagesTitle}>
-                {t.home.languagesTitle}
-              </h2>
-              <ul className={styles.languageList}>
-                {languageCodes.map((code, i) => (
-                  <Reveal
-                    as="li"
-                    key={code}
-                    from="up"
-                    delay={i * 80}
-                    className={styles.languageItem}
-                  >
-                    <Flag code={code} size={34} />
-                    <span>{t.home.langNames[code]}</span>
-                  </Reveal>
-                ))}
-              </ul>
             </div>
           </div>
         </Container>
