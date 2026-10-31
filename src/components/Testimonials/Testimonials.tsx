@@ -4,6 +4,9 @@ import { PROZ_PROFILE, reviewLabels, reviews } from "@/content/testimonials";
 import type { Locale } from "@/i18n";
 import styles from "./Testimonials.module.css";
 
+/** Quotation marks as each language writes them. */
+const QUOTES: Record<Locale, [string, string]> = { en: ["“", "”"], ar: ["«", "»"], fr: ["« ", " »"], es: ["«", "»"] };
+
 const DATE_LOCALES: Record<Locale, string> = { en: "en-US", ar: "ar-u-nu-latn", fr: "fr-FR", es: "es-ES" };
 
 /** Client reviews from ProZ.com, with the Certified PRO badge as proof. */
@@ -22,7 +25,11 @@ export function Testimonials({ locale, tinted = false }: { locale: string; tinte
                 ★★★★★
               </p>
               <blockquote className={styles.quote}>
-                <p>“{r.quote[loc]}”</p>
+                <p>
+                  {QUOTES[loc][0]}
+                  {r.quote[loc]}
+                  {QUOTES[loc][1]}
+                </p>
               </blockquote>
               <figcaption className={styles.caption}>
                 <span className={styles.name}>{r.name}</span>
