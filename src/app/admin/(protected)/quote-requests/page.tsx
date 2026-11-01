@@ -63,7 +63,7 @@ export default async function AdminQuoteRequestsPage({
               <dl className={styles.details}>
                 <div>
                   <dt>Language pair</dt>
-                  <dd>{r.language_pair}</dd>
+                  <dd>{r.language_pair || "—"}</dd>
                 </div>
                 <div>
                   <dt>Specialization</dt>

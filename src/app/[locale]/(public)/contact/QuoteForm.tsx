@@ -90,9 +90,9 @@ export function QuoteForm({
 
       <div className={styles.row}>
         <label className={styles.field}>
-          <span>{labels.languagePair} *</span>
-          <select name="language_pair" required defaultValue="">
-            <option value="" disabled>
+          <span>{labels.languagePair}</span>
+          <select name="language_pair" defaultValue="">
+            <option value="">
               {labels.choose}
             </option>
             {labels.pairs.map((pair) => (

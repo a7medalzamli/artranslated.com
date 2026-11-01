@@ -35,7 +35,7 @@ export async function sendQuoteEmails(quote: QuoteRequestInput, locale: string):
       from,
       to: adminTo,
       replyTo: quote.email,
-      subject: `New quote request from ${quote.name} (${quote.language_pair})`,
+      subject: `New quote request from ${quote.name}${quote.language_pair ? ` (${quote.language_pair})` : ""}`,
       text: adminText(quote, lang),
     });
     if (admin.error) console.error("[email] Notification failed:", admin.error);
@@ -62,7 +62,7 @@ function adminText(q: QuoteRequestInput, lang: Lang): string {
     "",
     `Name: ${q.name}`,
     `Email: ${q.email}`,
-    `Language pair: ${q.language_pair}`,
+    `Language pair: ${q.language_pair || "—"}`,
     `Specialization: ${q.specialization || "—"}`,
     `Word count / runtime: ${q.volume || "—"}`,
     `Deadline: ${q.deadline || "—"}`,
