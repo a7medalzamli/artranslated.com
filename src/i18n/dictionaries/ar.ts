@@ -40,6 +40,7 @@ const ar: Dictionary = {
     howItWorks: "كيف نعمل؟",
     forBusinesses: "للشركات",
     forAgencies: "للوكالات",
+    arabicMarkets: "الأسواق العربية",
     serviceLinks: {
       technical: "التقنية",
       legal: "القانونية",

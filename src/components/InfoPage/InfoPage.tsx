@@ -11,19 +11,24 @@ import { getContent } from "@/i18n/content";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import serviceStyles from "@/app/[locale]/(public)/services/[service]/servicePage.module.css";
+import { RelatedGuides } from "../RelatedGuides/RelatedGuides";
+import type { ClusterKey } from "@/content/postCategories";
 import styles from "./InfoPage.module.css";
 
-/** Shared layout for the "For agencies" and "For businesses" pages. */
+/** Shared layout for the For agencies / For businesses, Arabic markets and language-pair pages. */
 export async function InfoPageView({
   locale,
   page: p,
   image,
   structuredData,
+  clusters,
 }: {
   locale: string;
   page: InfoPage;
   image: string;
   structuredData: Record<string, unknown>;
+  /** Topic clusters whose articles are listed under "Related guides". */
+  clusters?: ClusterKey[];
 }) {
   const t = await getContent(locale as Locale);
 
@@ -137,6 +142,9 @@ export async function InfoPageView({
 
       {/* FAQ continues the alternating backgrounds. */}
       <Faq title={p.faqTitle} items={p.faqs} tinted={sections.length % 2 === 0} />
+      {clusters && (
+        <RelatedGuides locale={locale} clusters={clusters} tinted={sections.length % 2 !== 0} />
+      )}
       <CTA
         title={p.ctaTitle}
         description={p.ctaDescription}

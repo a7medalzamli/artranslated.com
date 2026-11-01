@@ -38,6 +38,7 @@ const en = {
     howItWorks: "How it works?",
     forBusinesses: "For businesses",
     forAgencies: "For agencies",
+    arabicMarkets: "Arabic markets",
     serviceLinks: {
       technical: "Technical",
       legal: "Legal",

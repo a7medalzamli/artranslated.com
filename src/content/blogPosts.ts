@@ -22,7 +22,7 @@ export type CodePost = {
 
 const msaVsDialects: CodePost = {
   slug: "which-arabic-msa-vs-dialects",
-  category: "Localization",
+  category: "Arabic translation",
   cover: "/images/blog/which-arabic.jpg",
   publishedAt: "2026-11-01T09:00:00Z",
   updatedAt: "2026-11-01T14:00:00Z",
@@ -143,8 +143,8 @@ Choosing the right variety is part of every project I take on. If you are unsure
       title: "Arabe standard, darija ou arabe du Golfe : quel arabe pour vos marchés ?",
       seoTitle: "Arabe standard, darija ou arabe du Golfe : quel arabe choisir ?",
       excerpt:
-        "Maghreb ou Moyen-Orient ? Pour une entreprise française, le choix de l’arabe dépend du marché visé. Arabe standard, darija, arabe du Golfe : le guide pour décider.",
-      content: `Pour une entreprise française, « traduire en arabe » n’est pas une décision unique. Viser Casablanca, Alger, Tunis, Le Caire, Dubaï ou Riyad n’implique ni le même public, ni les mêmes habitudes linguistiques. Avant de lancer une traduction, il faut savoir **quel arabe** parler à qui.
+        "Maghreb ou Moyen-Orient ? Pour une entreprise francophone, le choix de l’arabe dépend du marché visé. Arabe standard, darija, arabe du Golfe : le guide pour décider.",
+      content: `Pour une entreprise francophone, de France, de Belgique, de Suisse, du Canada ou d’Afrique, « traduire en arabe » n’est pas une décision unique. Viser Casablanca, Alger, Tunis, Le Caire, Dubaï ou Riyad n’implique ni le même public, ni les mêmes habitudes linguistiques. Avant de lancer une traduction, il faut savoir **quel arabe** parler à qui.
 
 ## L’arabe standard moderne, socle commun
 
@@ -188,7 +188,7 @@ Je traduis vers l’arabe depuis 2014, notamment depuis le français, et j’aid
       seoTitle: "¿Existe un árabe neutro? Árabe estándar y dialectos explicados para hispanohablantes",
       excerpt:
         "Igual que el español tiene variantes y un «español neutro», el árabe tiene un estándar común y muchos dialectos. Una guía pensada para empresas de España y Latinoamérica.",
-      content: `Si trabajas en una empresa de España o Latinoamérica, ya conoces el problema: ¿escribimos para México, para Argentina o para España? ¿Usamos «tú», «vos» o «usted»? Muchas marcas resuelven esto con un **español neutro** que entienden todos.
+      content: `Si trabajas en una empresa de España, Latinoamérica o de cualquier mercado hispanohablante, ya conoces el problema: ¿escribimos para México, para Argentina o para España? ¿Usamos «tú», «vos» o «usted»? Muchas marcas resuelven esto con un **español neutro** que entienden todos.
 
 El árabe tiene una situación parecida, pero aún más marcada.
 
@@ -245,7 +245,7 @@ Traduzco al árabe desde el español desde hace años y ayudo a empresas hispana
 
 const glossary: CodePost = {
   slug: "arabic-localization-glossary",
-  category: "Terminology",
+  category: "Arabic translation",
   cover: "/images/blog/localization-glossary.jpg",
   publishedAt: "2026-11-01T10:00:00Z",
   updatedAt: "2026-11-01T14:00:00Z",
@@ -465,7 +465,7 @@ Una prueba previa que sustituye los textos por versiones simuladas para detectar
 
 const raasVsSaas: CodePost = {
   slug: "results-as-a-service-vs-saas",
-  category: "Localization",
+  category: "SaaS localization",
   cover: "/images/blog/raas-vs-saas.jpg",
   publishedAt: "2026-11-04T08:00:00Z",
   updatedAt: "2026-11-04T08:00:00Z",
@@ -595,7 +595,7 @@ L’IA a fait baisser le coût de nombreuses tâches répétitives. Les directio
 
 ## Le cas de la localisation vers l’arabe
 
-Pour une entreprise française qui se développe au Maghreb, au Moyen-Orient ou dans le Golfe, la localisation en arabe est souvent achetée de deux façons :
+Pour une entreprise francophone, PME ou grand groupe, qui se développe au Maghreb, au Moyen-Orient ou dans le Golfe, la localisation en arabe est souvent achetée de deux façons :
 
 - **en outils** : une plateforme de traduction, de la traduction automatique, puis une équipe interne qui « corrige » ;
 - **en temps** : un tarif horaire ou au mot, sans engagement clair sur l’état final du texte.
@@ -624,8 +624,8 @@ C’est dans cet esprit que je travaille en [localisation SaaS](/fr/services/saa
       title: "Pago por resultados: guía de Results as a Service para entrar en el mercado árabe",
       seoTitle: "Results as a Service (RaaS): pago por resultados para entrar en el mercado árabe",
       excerpt:
-        "Si tu startup quiere vender en el mundo árabe con un equipo pequeño, pagar por herramientas no basta. Así funciona Results as a Service y cómo aplicarlo paso a paso.",
-      content: `Si diriges una startup o una pyme en España o Latinoamérica y quieres vender en el mundo árabe, seguramente ya lo has notado: hay herramientas para todo, pero **nadie en tu equipo habla árabe** ni tiene tiempo de aprender a usarlas bien.
+        "Para vender en el mundo árabe, pagar por herramientas no basta: hace falta que alguien entregue el resultado. Así funciona Results as a Service, para empresas de cualquier tamaño.",
+      content: `Da igual que seas una startup, una pyme o una gran empresa, en España, en Latinoamérica o en Estados Unidos: si quieres vender en el mundo árabe, seguramente ya lo has notado. Hay herramientas para todo, pero **pocas personas en tu equipo hablan árabe** y nadie tiene tiempo de convertirse en experto en localización.
 
 Aquí es donde encaja **Results as a Service (RaaS)**, una idea que el marketing en español conoce bien con otro nombre: el **pago por resultados**.
 
@@ -640,7 +640,7 @@ No compras horas ni licencias: compras el resultado terminado.
 
 **El idioma es la mayor barrera.** El árabe se escribe de derecha a izquierda, tiene una variedad estándar y muchos dialectos, y las herramientas de traducción automática todavía cometen errores que un cliente árabe detecta enseguida. Sin un especialista, la herramienta no basta.
 
-**Los equipos pequeños no pueden con todo.** En una startup, la misma persona lleva producto, marketing y ventas. Gestionar traductores, plataformas y revisiones en un idioma que no lee es tiempo que no tiene.
+**Ningún equipo puede con todo.** En una startup, la misma persona lleva producto, marketing y ventas; en una gran empresa, los equipos de localización gestionan decenas de idiomas a la vez. En ambos casos, coordinar traductores, plataformas y revisiones en un idioma que no se domina consume un tiempo que nadie tiene.
 
 **Lo que cuenta es estar listo.** Para lanzar en Emiratos, Arabia Saudí o Marruecos necesitas una web, una app o un catálogo que funcionen en árabe desde el primer día.
 
@@ -677,7 +677,7 @@ Así trabajo en la [localización de SaaS](/es/services/saas-localization) y en 
 
 const aiSearchVisibility: CodePost = {
   slug: "ai-search-visibility",
-  category: "AI & data",
+  category: "SEO & AI visibility",
   cover: "/images/blog/ai-search-visibility.jpg",
   publishedAt: "2026-11-02T08:00:00Z",
   updatedAt: "2026-11-02T08:00:00Z",
@@ -774,11 +774,11 @@ That is where my background helps: I combine [digital marketing and AI visibilit
     },
     fr: {
       publishedAt: "2026-11-03T08:00:00Z",
-      title: "Être cité par l’IA sur les marchés arabophones : SEO, AEO et GEO pour les entreprises françaises",
+      title: "Être cité par l’IA sur les marchés arabophones : SEO, AEO et GEO pour les entreprises francophones",
       seoTitle: "Visibilité IA sur les marchés arabophones : SEO, AEO et GEO",
       excerpt:
         "Votre entreprise est bien référencée en France, mais l’est-elle quand un prospect pose la question en arabe à un assistant IA ? Les clés d’une visibilité multilingue dans la recherche générative.",
-      content: `Beaucoup d’entreprises françaises soignent leur référencement en français, parfois en anglais. Mais lorsqu’un prospect à Casablanca, Dubaï ou Riyad pose sa question **en arabe** à un assistant IA, la réponse s’appuie sur d’autres sources. Et votre entreprise n’y figure souvent pas.
+      content: `Beaucoup d’entreprises francophones, en France, en Belgique, en Suisse ou au Canada, soignent leur référencement en français, parfois en anglais. Mais lorsqu’un prospect à Casablanca, Dubaï ou Riyad pose sa question **en arabe** à un assistant IA, la réponse s’appuie sur d’autres sources. Et votre entreprise n’y figure souvent pas.
 
 ## La visibilité IA se joue langue par langue
 
@@ -813,11 +813,11 @@ Traducteur vers l’arabe depuis 2014 et spécialisé en [marketing digital et v
     },
     es: {
       publishedAt: "2026-11-04T16:00:00Z",
-      title: "Visibilidad en la IA: checklist para pymes que quieren vender en el mundo árabe",
-      seoTitle: "Visibilidad en la IA para pymes: checklist SEO, AEO y GEO para el mercado árabe",
+      title: "Visibilidad en la IA: checklist para empresas que quieren vender en el mundo árabe",
+      seoTitle: "Visibilidad en la IA para empresas: checklist SEO, AEO y GEO para el mercado árabe",
       excerpt:
-        "Tus clientes de Emiratos o Marruecos ya preguntan a asistentes de IA antes de comprar. Esta checklist te ayuda a que tu pyme aparezca en esas respuestas.",
-      content: `Si tienes una pyme, un hotel, una tienda online o una consultora en España o Latinoamérica y quieres clientes en el mundo árabe, hay un cambio que conviene entender: **cada vez más compradores preguntan a un asistente de IA antes de buscar en Google**. Y la respuesta suele mencionar solo a unas pocas empresas.
+        "Tus clientes de Emiratos o Marruecos ya preguntan a asistentes de IA antes de comprar. Esta checklist te ayuda a que tu empresa aparezca en esas respuestas.",
+      content: `Tanto si diriges una pyme, una cadena hotelera, un e-commerce o una multinacional, en España, Latinoamérica o cualquier país hispanohablante, si quieres clientes en el mundo árabe hay un cambio que conviene entender: **cada vez más compradores preguntan a un asistente de IA antes de buscar en Google**. Y la respuesta suele mencionar solo a unas pocas empresas.
 
 ## Tres siglas que conviene conocer
 
@@ -825,9 +825,9 @@ Traducteur vers l’arabe depuis 2014 et spécialisé en [marketing digital et v
 - **AEO:** escribir contenido en formato de pregunta y respuesta para que se muestre como respuesta directa.
 - **GEO:** que las herramientas de IA entiendan bien tu empresa y la citen como fuente.
 
-No hace falta ser una gran empresa para trabajarlas. Hace falta orden y constancia.
+Sirven igual para una pyme que para una multinacional: lo que marca la diferencia es el orden y la constancia.
 
-## Checklist para tu pyme
+## Checklist para tu empresa
 
 **Tu identidad**
 
@@ -854,7 +854,7 @@ No hace falta ser una gran empresa para trabajarlas. Hace falta orden y constanc
 
 ## El error más común: el árabe automático
 
-Muchas pymes activan un plugin de traducción automática y dan por hecho que ya tienen web en árabe. El resultado suele ser un texto con errores que un lector árabe detecta en segundos, y que tampoco ayuda a que la IA te recomiende. Para el mercado árabe, la calidad del idioma es parte de tu visibilidad.
+Muchas empresas, grandes y pequeñas, activan un plugin de traducción automática y dan por hecho que ya tienen web en árabe. El resultado suele ser un texto con errores que un lector árabe detecta en segundos, y que tampoco ayuda a que la IA te recomiende. Para el mercado árabe, la calidad del idioma es parte de tu visibilidad.
 
 ## Cómo te puedo ayudar
 

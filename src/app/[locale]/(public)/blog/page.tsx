@@ -3,7 +3,7 @@ import { LocaleLink as Link } from "@/components/LocaleLink/LocaleLink";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Container } from "@/components/Container/Container";
 import { getPublishedPosts } from "@/lib/blog/posts";
-import { postCategories, isPostCategory } from "@/content/postCategories";
+import { postCategories, isPostCategory, categoryLabel } from "@/content/postCategories";
 import { formatDate, readingTimeMinutes } from "@/lib/blog/format";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
@@ -43,7 +43,10 @@ export default async function BlogPage({
   const b = t.blog;
   const { category } = await searchParams;
   const activeCategory = category && isPostCategory(category) ? category : undefined;
-  const posts = await getPublishedPosts(activeCategory, locale);
+  const allPosts = await getPublishedPosts(undefined, locale);
+  const posts = activeCategory ? allPosts.filter((p) => p.category === activeCategory) : allPosts;
+  // Only offer categories that have at least one article in this language.
+  const usedCategories = postCategories.filter((c) => allPosts.some((p) => p.category === c));
 
   return (
     <>
@@ -63,14 +66,14 @@ export default async function BlogPage({
           >
             {b.all}
           </Link>
-          {postCategories.map((cat) => (
+          {usedCategories.map((cat) => (
             <Link
               key={cat}
               href={`${routes.blog}?category=${encodeURIComponent(cat)}`}
               className={styles.filter}
               aria-current={activeCategory === cat ? "true" : undefined}
             >
-              {cat}
+              {categoryLabel(cat, locale)}
             </Link>
           ))}
         </nav>
@@ -82,7 +85,7 @@ export default async function BlogPage({
             {posts.map((post) => (
               <li key={post.id}>
                 <article className={styles.card}>
-                  {post.category && <span className={styles.badge}>{post.category}</span>}
+                  {post.category && <span className={styles.badge}>{categoryLabel(post.category, locale)}</span>}
                   <h2 className={styles.cardTitle}>
                     <Link href={`${routes.blog}/${post.slug}`}>{post.title}</Link>
                   </h2>

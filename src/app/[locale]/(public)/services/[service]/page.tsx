@@ -25,6 +25,8 @@ import { Faq } from "@/components/Faq/Faq";
 import { QuoteForm } from "../../contact/QuoteForm";
 import { Testimonials } from "@/components/Testimonials/Testimonials";
 import { AiVisibility } from "@/components/AiVisibility/AiVisibility";
+import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
+import type { ClusterKey } from "@/content/postCategories";
 import { getFaqs } from "@/content/faqs";
 import styles from "./servicePage.module.css";
 
@@ -55,6 +57,59 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     defaultOgImage: serviceImages[service],
   });
 }
+
+/** Translation page: links to the language-pair pages and the Arabic markets hub. */
+const PAIRS: Record<
+  Locale,
+  { title: string; intro: string; cards: { href: string; title: string; text: string; image: string }[] }
+> = {
+  en: {
+    title: "Language pairs and markets",
+    intro: "Direct translation into Arabic from three languages, with no relay language.",
+    cards: [
+      { href: routes.frenchToArabic, title: "French → Arabic", text: "For companies and agencies across the French-speaking world.", image: "/images/photos/service-consulting.jpg" },
+      { href: routes.spanishToArabic, title: "Spanish → Arabic", text: "For Spain, Latin America and the Spanish-speaking world.", image: "/images/photos/spec-website-marketing.jpg" },
+      { href: routes.arabicMarkets, title: "Arabic markets", text: "The Gulf, the Levant, Egypt, the Maghreb and Iraq: which Arabic each one reads.", image: "/images/photos/services-hero.jpg" },
+    ],
+  },
+  ar: {
+    title: "أزواج اللغات والأسواق",
+    intro: "ترجمة مباشرة إلى العربية من ثلاث لغات، دون لغة وسيطة.",
+    cards: [
+      { href: routes.frenchToArabic, title: "الفرنسية ← العربية", text: "للشركات والوكالات في العالم الناطق بالفرنسية.", image: "/images/photos/service-consulting.jpg" },
+      { href: routes.spanishToArabic, title: "الإسبانية ← العربية", text: "لإسبانيا وأمريكا اللاتينية والعالم الناطق بالإسبانية.", image: "/images/photos/spec-website-marketing.jpg" },
+      { href: routes.arabicMarkets, title: "الأسواق العربية", text: "الخليج والشام ومصر والمغرب العربي والعراق: أي عربية يقرؤها كل منها.", image: "/images/photos/services-hero.jpg" },
+    ],
+  },
+  fr: {
+    title: "Combinaisons de langues et marchés",
+    intro: "Traduction directe vers l’arabe depuis trois langues, sans langue relais.",
+    cards: [
+      { href: routes.frenchToArabic, title: "Français → arabe", text: "Pour les entreprises et agences de tout l’espace francophone.", image: "/images/photos/service-consulting.jpg" },
+      { href: routes.spanishToArabic, title: "Espagnol → arabe", text: "Pour l’Espagne, l’Amérique latine et le monde hispanophone.", image: "/images/photos/spec-website-marketing.jpg" },
+      { href: routes.arabicMarkets, title: "Marchés arabophones", text: "Golfe, Levant, Égypte, Maghreb et Irak : quel arabe lit chacun d’eux.", image: "/images/photos/services-hero.jpg" },
+    ],
+  },
+  es: {
+    title: "Combinaciones de idiomas y mercados",
+    intro: "Traducción directa al árabe desde tres idiomas, sin idioma puente.",
+    cards: [
+      { href: routes.frenchToArabic, title: "Francés → árabe", text: "Para empresas y agencias de todo el mundo francófono.", image: "/images/photos/service-consulting.jpg" },
+      { href: routes.spanishToArabic, title: "Español → árabe", text: "Para España, Latinoamérica y el mundo hispanohablante.", image: "/images/photos/spec-website-marketing.jpg" },
+      { href: routes.arabicMarkets, title: "Mercados árabes", text: "Golfo, Levante, Egipto, Magreb e Irak: qué árabe lee cada uno.", image: "/images/photos/services-hero.jpg" },
+    ],
+  },
+};
+
+/** Topic clusters whose articles appear under "Related guides" on each service page. */
+const serviceClusters: Record<string, ClusterKey[]> = {
+  translation: ["translation", "arabic-markets"],
+  editing: ["quality"],
+  mtpe: ["machine-translation", "quality"],
+  transcreation: ["marketing"],
+  consulting: ["arabic-markets", "marketing", "translation"],
+  "digital-marketing": ["seo-ai", "marketing"],
+};
 
 export default async function ServicePage({ params }: { params: Params }) {
   const { locale, service } = await params;
@@ -130,6 +185,18 @@ export default async function ServicePage({ params }: { params: Params }) {
         </Section>
       )}
 
+      {service === "translation" && (
+        <Section title={PAIRS[locale as Locale].title} intro={PAIRS[locale as Locale].intro}>
+          <CardGrid columns={3}>
+            {PAIRS[locale as Locale].cards.map((card) => (
+              <Card key={card.href} title={card.title} href={card.href} image={card.image}>
+                {card.text}
+              </Card>
+            ))}
+          </CardGrid>
+        </Section>
+      )}
+
       <Section>
         <div className={styles.details}>
           {getServiceDetails(locale)[service].map((block) => (
@@ -153,6 +220,8 @@ export default async function ServicePage({ params }: { params: Params }) {
       </Section>
 
       {service === "translation" && <Testimonials locale={locale} />}
+
+      <RelatedGuides locale={locale} clusters={serviceClusters[service]} />
 
       {getFaqs(locale)[service] && (
         <Faq title={getFaqs(locale).title} items={getFaqs(locale)[service] ?? []} tinted />

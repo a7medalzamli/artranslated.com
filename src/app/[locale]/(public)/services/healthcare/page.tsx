@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
 import { SpecializationDetails } from "@/components/SpecializationDetails/SpecializationDetails";
+import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
@@ -61,6 +62,7 @@ export default async function HealthcarePage({ params }: { params: Promise<{ loc
       </Section>
 
       <SpecializationDetails locale={locale} slug="healthcare" />
+      <RelatedGuides locale={locale} clusters={["industries"]} />
 
       <CTA
         title={s.ctaTitle}

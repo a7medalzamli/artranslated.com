@@ -34,6 +34,7 @@ const es: Dictionary = {
     howItWorks: "¿Cómo funciona?",
     forBusinesses: "Para empresas",
     forAgencies: "Para agencias",
+    arabicMarkets: "Mercados árabes",
     serviceLinks: {
       technical: "Técnica",
       legal: "Jurídica",

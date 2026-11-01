@@ -40,6 +40,10 @@
 - [Confidentiality](https://www.artranslated.com/en/confidentiality): NDAs and secure file handling
 - [Contact and quotes](https://www.artranslated.com/en/contact)
 
+- [Arabic-speaking markets](https://www.artranslated.com/en/arabic-markets): the Gulf, the Levant, Egypt, the Maghreb and Iraq; which Arabic each market reads and how to reach it
+- [French to Arabic translation](https://www.artranslated.com/en/french-to-arabic): direct translation from French, with no English relay, for the French-speaking world
+- [Spanish to Arabic translation](https://www.artranslated.com/en/spanish-to-arabic): direct translation from Spanish, with no English relay, for Spain, Latin America and the Spanish-speaking world
+
 ## Guides
 
 - [Which Arabic should you use? MSA vs dialects](https://www.artranslated.com/en/blog/which-arabic-msa-vs-dialects): when to use Modern Standard Arabic or Gulf, Egyptian, Levantine, Iraqi and Maghrebi dialects, by content type

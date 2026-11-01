@@ -41,5 +41,5 @@ export default async function ForBusinessesPage({ params }: { params: Promise<{ 
     provider: { "@id": ids.business },
   };
 
-  return <InfoPageView locale={locale} page={p} image={IMAGE} structuredData={serviceLd} />;
+  return <InfoPageView locale={locale} page={p} image={IMAGE} structuredData={serviceLd} clusters={["buying-guides", "translation"]} />;
 }

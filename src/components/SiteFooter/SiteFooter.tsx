@@ -66,6 +66,9 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
                 <Link href={routes.forAgencies}>{dict.footer.forAgencies}</Link>
               </li>
               <li>
+                <Link href={routes.arabicMarkets}>{dict.footer.arabicMarkets}</Link>
+              </li>
+              <li>
                 <Link href={routes.blog}>{dict.nav.blog}</Link>
               </li>
               <li>

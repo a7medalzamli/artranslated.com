@@ -4,6 +4,7 @@ import { Section } from "@/components/Section/Section";
 import { ProcessSteps } from "@/components/ProcessSteps/ProcessSteps";
 import { CTA } from "@/components/CTA/CTA";
 import { SpecializationDetails } from "@/components/SpecializationDetails/SpecializationDetails";
+import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
@@ -69,6 +70,7 @@ export default async function AudiovisualPage({
       </Section>
 
       <SpecializationDetails locale={locale} slug="audiovisual" />
+      <RelatedGuides locale={locale} clusters={["industries"]} />
 
       <CTA
         title={s.ctaTitle}

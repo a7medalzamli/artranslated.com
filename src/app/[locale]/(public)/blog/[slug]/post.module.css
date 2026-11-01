@@ -18,3 +18,17 @@
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
 }
+
+/* Link from the article to its main service page. */
+.pillar {
+  margin-top: var(--space-2xl);
+  padding: var(--space-md) var(--space-lg);
+  border-inline-start: 4px solid var(--color-accent);
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.pillar a {
+  color: var(--color-accent);
+}

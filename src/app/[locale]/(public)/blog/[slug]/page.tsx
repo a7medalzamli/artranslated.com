@@ -13,7 +13,18 @@ import { locales } from "@/i18n/config";
 import { routes } from "@/lib/routes";
 import { siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
+import { LocaleLink as Link } from "@/components/LocaleLink/LocaleLink";
+import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
+import { clusters } from "@/content/postCategories";
 import styles from "./post.module.css";
+
+/** Lead-in for the link from an article to its main service page. */
+const PILLAR_LEAD: Record<Locale, string> = {
+  en: "Related service:",
+  ar: "الخدمة ذات الصلة:",
+  fr: "Service associé :",
+  es: "Servicio relacionado:",
+};
 
 export const dynamic = "force-dynamic";
 
@@ -67,6 +78,8 @@ export default async function BlogPostPage({
     notFound();
   }
 
+  const cluster = clusters.find((c) => c.label.en === post.category);
+
   const blogPosting = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -116,7 +129,20 @@ export default async function BlogPostPage({
         )}
 
         <Markdown>{post.content}</Markdown>
+
+        {cluster && (
+          <p className={styles.pillar}>
+            <span>{PILLAR_LEAD[locale as Locale] ?? PILLAR_LEAD.en}</span>{" "}
+            <Link href={cluster.pillar}>
+              {cluster.label[locale as Locale] ?? cluster.label.en} <span aria-hidden="true">{locale === "ar" ? "←" : "→"}</span>
+            </Link>
+          </p>
+        )}
       </Container>
+
+      {cluster && (
+        <RelatedGuides locale={locale} clusters={[cluster.key]} exclude={post.slug} variant="articles" tinted limit={3} />
+      )}
     </>
   );
 }
