@@ -13,7 +13,8 @@ function codePostsFor(locale: string): Post[] {
   return codePosts.flatMap((p) => {
     const text = p.text[locale as Locale] ?? p.text.en;
     const date = text.publishedAt ?? p.publishedAt;
-    if (Date.parse(date) > now) return [];
+    // Live only once Ahmed has approved it AND its date has arrived.
+    if (text.approved !== true || Date.parse(date) > now) return [];
     return {
       id: `code-${p.slug}`,
       title: text.title,
@@ -106,6 +107,6 @@ export function publishedLocalesFor(slug: string, allLocales: readonly string[])
   const now = Date.now();
   return allLocales.filter((l) => {
     const text = post.text[l as Locale];
-    return text && Date.parse(text.publishedAt ?? post.publishedAt) <= now;
+    return text?.approved === true && Date.parse(text.publishedAt ?? post.publishedAt) <= now;
   });
 }

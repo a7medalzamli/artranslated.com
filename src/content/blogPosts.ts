@@ -13,7 +13,18 @@ export type CodePost = {
   updatedAt: string;
   /** Each language is a separate article; `publishedAt` here overrides the post date, so
    *  language versions can go out on different days (they stay hidden until then). */
-  text: Record<Locale, { title: string; excerpt: string; seoTitle: string; content: string; publishedAt?: string }>;
+  text: Record<
+    Locale,
+    {
+      title: string;
+      excerpt: string;
+      seoTitle: string;
+      content: string;
+      publishedAt?: string;
+      /** Must be true (confirmed by Ahmed) before this version can go live, even after its date. */
+      approved?: boolean;
+    }
+  >;
 };
 
 /* ------------------------------------------------------------------ */
@@ -28,6 +39,7 @@ const msaVsDialects: CodePost = {
   updatedAt: "2026-11-01T14:00:00Z",
   text: {
     en: {
+      approved: true,
       title: "Which Arabic should you use? Modern Standard Arabic vs dialects",
       seoTitle: "MSA vs Arabic Dialects: Which Arabic Should Your Business Use?",
       excerpt:
@@ -91,6 +103,7 @@ Many brands combine both: MSA for the website, product and documentation, and a 
 Choosing the right variety is part of every project I take on. If you are unsure, [tell me about your audience and goals](/en/contact) and I’ll recommend the best option before any translation begins. You can also read about my [consulting service](/en/services/consulting), which covers this decision for larger launches.`,
     },
     ar: {
+      approved: true,
       title: "الفصحى أم العامية في محتوى علامتك التجارية؟ دليل عملي للمسوّقين العرب",
       seoTitle: "الفصحى أم العامية في التسويق؟ دليل اختيار لغة علامتك التجارية",
       excerpt:
@@ -140,6 +153,7 @@ Choosing the right variety is part of every project I take on. If you are unsure
 أكتب وأترجم وأكيّف المحتوى العربي منذ عام 2014، وأساعد العلامات التجارية على اختيار النبرة المناسبة لكل سوق عبر [الاستشارات](/ar/services/consulting) و[الترجمة الإبداعية](/ar/services/transcreation). وإن كنت مترددًا بين الفصحى واللهجة في حملتك القادمة، [فتواصل معي](/ar/contact).`,
     },
     fr: {
+      approved: true,
       title: "Arabe standard, darija ou arabe du Golfe : quel arabe pour vos marchés ?",
       seoTitle: "Arabe standard, darija ou arabe du Golfe : quel arabe choisir ?",
       excerpt:
@@ -184,6 +198,7 @@ Traduire le même texte français mot à mot pour tous les marchés arabes. Les 
 Je traduis vers l’arabe depuis 2014, notamment depuis le français, et j’aide les entreprises à choisir la bonne variété pour chaque marché dans le cadre de mon [service de conseil](/fr/services/consulting). Vous hésitez entre Maghreb et Golfe, arabe standard et dialecte ? [Parlons de votre projet](/fr/contact).`,
     },
     es: {
+      approved: true,
       title: "¿Existe un «árabe neutro»? Cómo elegir el árabe adecuado si vienes del mundo hispano",
       seoTitle: "¿Existe un árabe neutro? Árabe estándar y dialectos explicados para hispanohablantes",
       excerpt:
@@ -251,6 +266,7 @@ const glossary: CodePost = {
   updatedAt: "2026-11-01T14:00:00Z",
   text: {
     en: {
+      approved: true,
       title: "Arabic localization glossary: 15 terms explained simply",
       seoTitle: "Translation & Localization Glossary: MTPE, LQA, TEP, CAT and More",
       excerpt:
@@ -322,6 +338,7 @@ Recreating a message, such as a slogan or campaign, so it has the same effect in
 If a quote or a vendor form uses a term you don’t recognize, [just ask me](/en/contact). I’m happy to explain how it applies to your project.`,
     },
     ar: {
+      approved: true,
       title: "مصطلحات ستقرؤها في عروض أسعار الترجمة: دليل العميل العربي",
       seoTitle: "مصطلحات عروض أسعار الترجمة والتوطين: دليل مبسّط للعميل العربي",
       excerpt:
@@ -363,6 +380,7 @@ If a quote or a vendor form uses a term you don’t recognize, [just ask me](/en
 إن ورد في عرض السعر مصطلح لا تعرفه، فاسأل عنه قبل الموافقة. المزوّد المحترف يشرح لك بوضوح ما الذي تدفع مقابله. وإن أردت عرض سعر واضحًا لمشروعك، [فتواصل معي](/ar/contact).`,
     },
     fr: {
+      approved: true,
       title: "Comment lire un devis de traduction : les termes à connaître",
       seoTitle: "Lire un devis de traduction : mots source, TAO, mémoire, révision, LQA",
       excerpt:
@@ -408,6 +426,7 @@ If a quote or a vendor form uses a term you don’t recognize, [just ask me](/en
 Vérifiez que le devis précise : les langues, le volume, les étapes de qualité incluses, le format de livraison, le délai et les conditions de confidentialité. Un bon prestataire répond volontiers à vos questions. Pour un devis clair sur votre projet vers l’arabe, [contactez-moi](/fr/contact).`,
     },
     es: {
+      approved: true,
       title: "Diccionario técnico del árabe para gestores de proyecto y desarrolladores",
       seoTitle: "Localizar software al árabe: RTL, plurales, números y calendario explicados",
       excerpt:
