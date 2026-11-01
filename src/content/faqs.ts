@@ -23,7 +23,7 @@ const en: FaqSet = {
   home: [
     {
       q: "Which languages do you translate between?",
-      a: "I translate from English, French and Spanish into Arabic, my native language, so the result reads as if it had been written in Arabic for your audience.",
+      a: "I translate from English, French and Spanish into Arabic, my native language, and from Arabic into English, so the result reads as if it had been written in Arabic for your audience.",
     },
     {
       q: "Do you work with translation agencies or direct clients?",
@@ -159,7 +159,7 @@ const ar: FaqSet = {
   home: [
     {
       q: "ما اللغات التي تترجم منها وإليها؟",
-      a: "أترجم من الإنجليزية والفرنسية والإسبانية إلى العربية، لغتي الأم، ليُقرأ النص كأنه كُتب بالعربية أصلًا لجمهورك.",
+      a: "أترجم من الإنجليزية والفرنسية والإسبانية إلى العربية، لغتي الأم، ومن العربية إلى الإنجليزية، ليُقرأ النص كأنه كُتب بالعربية أصلًا لجمهورك.",
     },
     {
       q: "هل تعمل مع وكالات الترجمة (LSPs) أم مع العملاء المباشرين؟",
@@ -295,7 +295,7 @@ const fr: FaqSet = {
   home: [
     {
       q: "Dans quelles langues traduisez-vous ?",
-      a: "Je traduis de l’anglais, du français et de l’espagnol vers l’arabe, ma langue maternelle, pour un texte qui se lit comme s’il avait été écrit directement en arabe pour votre public.",
+      a: "Je traduis de l’anglais, du français et de l’espagnol vers l’arabe, ma langue maternelle, et de l’arabe vers l’anglais, pour un texte qui se lit comme s’il avait été écrit directement en arabe pour votre public.",
     },
     {
       q: "Travaillez-vous avec des agences de traduction ou des clients directs ?",
@@ -431,7 +431,7 @@ const es: FaqSet = {
   home: [
     {
       q: "¿Entre qué idiomas traduces?",
-      a: "Traduzco del inglés, el francés y el español al árabe, mi lengua materna, para que el texto se lea como si se hubiera escrito directamente en árabe para tu público.",
+      a: "Traduzco del inglés, el francés y el español al árabe, mi lengua materna, y del árabe al inglés, para que el texto se lea como si se hubiera escrito directamente en árabe para tu público.",
     },
     {
       q: "¿Trabajas con agencias de traducción o con clientes directos?",

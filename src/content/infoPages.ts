@@ -46,14 +46,14 @@ const agencies: Record<Locale, InfoPage> = {
     crumb: "For agencies",
     seoTitle: "Freelance Arabic Translator for Agencies (LSPs)",
     description:
-      "A dependable English, French and Spanish to Arabic linguist for translation agencies: translation, review, LQA and MTPE in your CAT tools, translating at least 5,000 words a day.",
+      "A dependable Arabic linguist for translation agencies, working from English, French and Spanish into Arabic and from Arabic into English: translation, review, LQA and MTPE in your CAT tools, translating at least 5,000 words a day.",
     intro: [
       "Most of my work since 2014 has been with translation agencies (LSPs). I know how vendor work runs: purchase orders, CAT tools, translation memories, glossaries, style guides, query sheets, QA checks and firm deadlines, and I fit into your workflow without extra management from your project managers.",
-      "I translate from English, French and Spanish into Arabic, my native language, review other translators’ work, score quality with LQA and post-edit machine translation, so one Arabic linguist can cover your whole workflow from translation to final check.",
+      "I translate from English, French and Spanish into Arabic, my native language, and from Arabic into English, review other translators’ work, score quality with LQA and post-edit machine translation, so one Arabic linguist can cover your whole workflow from translation to final check.",
     ],
     listTitle: "What I offer agencies",
     list: [
-      "Translation from English, French and Spanish into Arabic, at least 5,000 words a day",
+      "Translation from English, French and Spanish into Arabic, and from Arabic into English, at least 5,000 words a day",
       "Bilingual review and proofreading of other translators’ work",
       "LQA scoring with MQM or your own scorecard, with reports",
       "Machine translation post-editing (light and full)",
@@ -81,7 +81,7 @@ const agencies: Record<Locale, InfoPage> = {
     faqs: [
       {
         q: "Which language pairs do you cover?",
-        a: "English to Arabic, French to Arabic and Spanish to Arabic. Arabic is my native language.",
+        a: "English to Arabic, French to Arabic, Spanish to Arabic, and Arabic to English. Arabic is my native language.",
       },
       {
         q: "How many words can you translate per day?",
@@ -112,14 +112,14 @@ const agencies: Record<Locale, InfoPage> = {
     crumb: "للوكالات",
     seoTitle: "مترجم عربي مستقل لوكالات الترجمة (LSPs)",
     description:
-      "مترجم موثوق من الإنجليزية والفرنسية والإسبانية إلى العربية لوكالات الترجمة (LSPs): ترجمة ومراجعة وتقييم جودة (LQA) وتحرير لاحق للترجمة الآلية في أدوات الترجمة التي تستخدمها، بطاقة لا تقل عن 5,000 كلمة يوميًا.",
+      "مترجم موثوق من الإنجليزية والفرنسية والإسبانية إلى العربية ومن العربية إلى الإنجليزية لوكالات الترجمة (LSPs): ترجمة ومراجعة وتقييم جودة (LQA) وتحرير لاحق للترجمة الآلية في أدوات الترجمة التي تستخدمها، بطاقة لا تقل عن 5,000 كلمة يوميًا.",
     intro: [
       "معظم عملي منذ عام 2014 كان مع وكالات الترجمة (LSPs). أعرف كيف يسير العمل مع المترجمين المستقلين: أوامر الشراء، وأدوات الترجمة بمساعدة الحاسوب، وذاكرات الترجمة، والمسارد، وأدلة الأسلوب، وجداول الاستفسارات، وفحوص الجودة، والمواعيد النهائية الصارمة، وأندمج في سير عملكم دون أن يحتاج مديرو المشاريع إلى متابعة إضافية.",
-      "أترجم من الإنجليزية والفرنسية والإسبانية إلى العربية، لغتي الأم، وأراجع أعمال مترجمين آخرين، وأقيّم الجودة (LQA)، وأحرّر مخرجات الترجمة الآلية، ليغطي مترجم عربي واحد سير عملكم كله من الترجمة حتى الفحص النهائي.",
+      "أترجم من الإنجليزية والفرنسية والإسبانية إلى العربية، لغتي الأم، ومن العربية إلى الإنجليزية، وأراجع أعمال مترجمين آخرين، وأقيّم الجودة (LQA)، وأحرّر مخرجات الترجمة الآلية، ليغطي مترجم عربي واحد سير عملكم كله من الترجمة حتى الفحص النهائي.",
     ],
     listTitle: "ما أقدّمه للوكالات",
     list: [
-      "الترجمة من الإنجليزية والفرنسية والإسبانية إلى العربية، بما لا يقل عن 5,000 كلمة يوميًا",
+      "الترجمة من الإنجليزية والفرنسية والإسبانية إلى العربية، ومن العربية إلى الإنجليزية، بما لا يقل عن 5,000 كلمة يوميًا",
       "مراجعة ثنائية اللغة وتدقيق لأعمال مترجمين آخرين",
       "تقييم الجودة (LQA) وفق إطار MQM أو بطاقة التقييم الخاصة بكم، مع تقارير",
       "التحرير اللاحق للترجمة الآلية (الخفيف والكامل)",
@@ -147,7 +147,7 @@ const agencies: Record<Locale, InfoPage> = {
     faqs: [
       {
         q: "ما أزواج اللغات التي تعمل بها؟",
-        a: "من الإنجليزية إلى العربية، ومن الفرنسية إلى العربية، ومن الإسبانية إلى العربية. والعربية لغتي الأم.",
+        a: "من الإنجليزية إلى العربية، ومن الفرنسية إلى العربية، ومن الإسبانية إلى العربية، ومن العربية إلى الإنجليزية. والعربية لغتي الأم.",
       },
       {
         q: "كم كلمة يمكنك أن تترجم يوميًا؟",
@@ -178,14 +178,14 @@ const agencies: Record<Locale, InfoPage> = {
     crumb: "Pour les agences",
     seoTitle: "Traducteur arabe indépendant pour agences de traduction",
     description:
-      "Un linguiste fiable de l’anglais, du français et de l’espagnol vers l’arabe pour les agences de traduction : traduction, révision, LQA et post-édition dans vos outils de TAO, au moins 5 000 mots traduits par jour.",
+      "Un linguiste arabe fiable pour les agences de traduction, de l’anglais, du français et de l’espagnol vers l’arabe, et de l’arabe vers l’anglais : traduction, révision, LQA et post-édition dans vos outils de TAO, au moins 5 000 mots traduits par jour.",
     intro: [
       "Depuis 2014, je travaille principalement avec des agences de traduction. Je connais le fonctionnement du travail en sous-traitance : bons de commande, outils de TAO, mémoires de traduction, glossaires, guides de style, fichiers de questions, contrôles qualité et délais fermes. Je m’intègre à votre flux de travail sans suivi supplémentaire de vos chefs de projet.",
-      "Je traduis de l’anglais, du français et de l’espagnol vers l’arabe, ma langue maternelle, je révise le travail d’autres traducteurs, j’évalue la qualité (LQA) et je post-édite la traduction automatique : un seul linguiste arabe peut couvrir tout votre processus, de la traduction au contrôle final.",
+      "Je traduis de l’anglais, du français et de l’espagnol vers l’arabe, ma langue maternelle, et de l’arabe vers l’anglais, je révise le travail d’autres traducteurs, j’évalue la qualité (LQA) et je post-édite la traduction automatique : un seul linguiste arabe peut couvrir tout votre processus, de la traduction au contrôle final.",
     ],
     listTitle: "Ce que je propose aux agences",
     list: [
-      "Traduction de l’anglais, du français et de l’espagnol vers l’arabe, au moins 5 000 mots par jour",
+      "Traduction de l’anglais, du français et de l’espagnol vers l’arabe, et de l’arabe vers l’anglais, au moins 5 000 mots par jour",
       "Révision bilingue et relecture du travail d’autres traducteurs",
       "Notation LQA selon MQM ou votre propre grille, avec rapports",
       "Post-édition de traduction automatique (légère et complète)",
@@ -213,7 +213,7 @@ const agencies: Record<Locale, InfoPage> = {
     faqs: [
       {
         q: "Quelles combinaisons de langues couvrez-vous ?",
-        a: "Anglais vers arabe, français vers arabe et espagnol vers arabe. L’arabe est ma langue maternelle.",
+        a: "Anglais vers arabe, français vers arabe, espagnol vers arabe, et arabe vers anglais. L’arabe est ma langue maternelle.",
       },
       {
         q: "Combien de mots pouvez-vous traduire par jour ?",
@@ -244,14 +244,14 @@ const agencies: Record<Locale, InfoPage> = {
     crumb: "Para agencias",
     seoTitle: "Traductor autónomo de árabe para agencias de traducción",
     description:
-      "Un lingüista fiable del inglés, el francés y el español al árabe para agencias de traducción: traducción, revisión, LQA y posedición en tus herramientas TAO, con al menos 5000 palabras traducidas al día.",
+      "Un lingüista de árabe fiable para agencias de traducción, del inglés, el francés y el español al árabe, y del árabe al inglés: traducción, revisión, LQA y posedición en tus herramientas TAO, con al menos 5000 palabras traducidas al día.",
     intro: [
       "Desde 2014 trabajo sobre todo con agencias de traducción. Conozco cómo funciona el trabajo como proveedor: órdenes de compra, herramientas TAO, memorias de traducción, glosarios, guías de estilo, hojas de consultas, controles de calidad y plazos firmes, y me integro en tu flujo de trabajo sin que tus gestores de proyecto tengan que hacer un seguimiento extra.",
-      "Traduzco del inglés, el francés y el español al árabe, mi lengua materna, reviso el trabajo de otros traductores, evalúo la calidad con LQA y poseedito traducción automática, para que un solo lingüista de árabe cubra todo tu proceso, de la traducción a la comprobación final.",
+      "Traduzco del inglés, el francés y el español al árabe, mi lengua materna, y del árabe al inglés, reviso el trabajo de otros traductores, evalúo la calidad con LQA y poseedito traducción automática, para que un solo lingüista de árabe cubra todo tu proceso, de la traducción a la comprobación final.",
     ],
     listTitle: "Qué ofrezco a las agencias",
     list: [
-      "Traducción del inglés, el francés y el español al árabe, al menos 5000 palabras al día",
+      "Traducción del inglés, el francés y el español al árabe, y del árabe al inglés, al menos 5000 palabras al día",
       "Revisión bilingüe y corrección del trabajo de otros traductores",
       "Puntuación LQA con MQM o tu propia ficha, con informes",
       "Posedición de traducción automática (ligera y completa)",
@@ -279,7 +279,7 @@ const agencies: Record<Locale, InfoPage> = {
     faqs: [
       {
         q: "¿Qué combinaciones de idiomas cubres?",
-        a: "Inglés a árabe, francés a árabe y español a árabe. El árabe es mi lengua materna.",
+        a: "Inglés a árabe, francés a árabe, español a árabe, y árabe a inglés. El árabe es mi lengua materna.",
       },
       {
         q: "¿Cuántas palabras puedes traducir al día?",

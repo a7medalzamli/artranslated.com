@@ -75,7 +75,7 @@ const en = {
       "Each specialization has its own page explaining what is covered and how the work is handled.",
     translationTitle: "Translation",
     translationSummary:
-      "Professional human translation from English, French and Spanish into Arabic — accurate, natural and consistent with your terminology, for documents, websites and software.",
+      "Professional human translation from English, French and Spanish into Arabic, and from Arabic into English — accurate, natural and consistent with your terminology, for documents, websites and software.",
     consultingTitle: "Consulting",
     consultingSummary:
       "Consulting: advice on entering Arabic-speaking markets, setting up terminology and style guides, and choosing the right workflow, tools and quality process.",
@@ -382,7 +382,7 @@ const en = {
     nda: "I'd like an NDA signed before I share files.",
     sending: "Sending…",
     send: "Send request",
-    pairs: ["English → Arabic", "French → Arabic", "Spanish → Arabic"],
+    pairs: ["English → Arabic", "French → Arabic", "Spanish → Arabic", "Arabic → English"],
   },
   cookie: {
     text: "This website uses analytics cookies (Google Analytics) to understand how the site is used. They are only set if you accept. See the",

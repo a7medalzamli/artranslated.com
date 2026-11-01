@@ -73,7 +73,7 @@ const es: SiteContent = {
       "Cada especialización tiene su propia página que explica qué incluye y cómo se realiza el trabajo.",
     translationTitle: "Traducción",
     translationSummary:
-      "Traducción humana profesional del inglés, el francés y el español al árabe — precisa, natural y coherente con tu terminología, para documentos, sitios web y software.",
+      "Traducción humana profesional del inglés, el francés y el español al árabe, y del árabe al inglés — precisa, natural y coherente con tu terminología, para documentos, sitios web y software.",
     consultingTitle: "Consultoría",
     consultingSummary:
       "Consultoría: asesoramiento para entrar en los mercados de habla árabe, creación de glosarios y guías de estilo, y elección del flujo de trabajo, las herramientas y el proceso de calidad adecuados.",
@@ -380,7 +380,7 @@ const es: SiteContent = {
     nda: "Quiero firmar un acuerdo de confidencialidad antes de compartir archivos.",
     sending: "Enviando…",
     send: "Enviar solicitud",
-    pairs: ["Inglés → Árabe", "Francés → Árabe", "Español → Árabe"],
+    pairs: ["Inglés → Árabe", "Francés → Árabe", "Español → Árabe", "Árabe → Inglés"],
   },
   cookie: {
     text: "Este sitio utiliza cookies de analítica (Google Analytics) para entender cómo se usa. Solo se instalan si las aceptas. Consulta la",

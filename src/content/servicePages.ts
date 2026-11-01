@@ -121,7 +121,7 @@ const en: LocaleContent = {
     items: {
       translation: {
         question: "Do you need documents, websites or software translated into Arabic?",
-        text: "I translate from **English, French and Spanish into Arabic** across technical, legal, financial, healthcare, education, environmental and audiovisual content — accurate, natural and consistent with your terminology.",
+        text: "I translate from **English, French and Spanish into Arabic**, and from **Arabic into English**, across technical, legal, financial, healthcare, education, environmental and audiovisual content — accurate, natural and consistent with your terminology.",
       },
       editing: {
         question: "Need an Arabic translation checked before it goes out?",
@@ -149,7 +149,7 @@ const en: LocaleContent = {
     translation: {
       title: "Translation into Arabic",
       description:
-        "Professional human translation from English, French and Spanish into Arabic, across technical, legal, financial, healthcare and audiovisual content.",
+        "Professional human translation from English, French and Spanish into Arabic, and from Arabic into English, across technical, legal, financial, healthcare and audiovisual content.",
       intro: [
         "Every project is translated by a professional linguist, not just run through a machine. The goal is Arabic that is accurate, reads naturally and stays consistent with your terminology and brand voice.",
         "Work follows a defined translation, editing and proofreading process, supported by CAT tools, glossaries and translation memories so quality holds across every file and every update.",
@@ -312,7 +312,7 @@ const ar: LocaleContent = {
     items: {
       translation: {
         question: "هل تحتاج إلى ترجمة مستندات أو مواقع إلكترونية أو برمجيات إلى العربية؟",
-        text: "أترجم **من الإنجليزية والفرنسية والإسبانية إلى العربية** في المجالات التقنية والقانونية والمالية والطبية والتعليمية والبيئية والسمعية البصرية — ترجمة دقيقة وسلسة ومتّسقة مع مصطلحاتك.",
+        text: "أترجم **من الإنجليزية والفرنسية والإسبانية إلى العربية**، و**من العربية إلى الإنجليزية**، في المجالات التقنية والقانونية والمالية والطبية والتعليمية والبيئية والسمعية البصرية — ترجمة دقيقة وسلسة ومتّسقة مع مصطلحاتك.",
       },
       editing: {
         question: "هل تحتاج إلى مراجعة ترجمة عربية قبل اعتمادها؟",
@@ -340,7 +340,7 @@ const ar: LocaleContent = {
     translation: {
       title: "الترجمة إلى العربية",
       description:
-        "ترجمة بشرية احترافية من الإنجليزية والفرنسية والإسبانية إلى العربية، في المجالات التقنية والقانونية والمالية والطبية والسمعية البصرية.",
+        "ترجمة بشرية احترافية من الإنجليزية والفرنسية والإسبانية إلى العربية، ومن العربية إلى الإنجليزية، في المجالات التقنية والقانونية والمالية والطبية والسمعية البصرية.",
       intro: [
         "يتولى ترجمة كل مشروع لغويٌّ محترف، ولا يُكتفى بتمريره عبر الترجمة الآلية (MT). والهدف نصٌّ عربي دقيق وسلس ومتّسق مع مصطلحاتك وأسلوب علامتك التجارية.",
         "يسير العمل وفق منهجية محددة للترجمة والتحرير والتدقيق، بدعم من أدوات الترجمة بمساعدة الحاسوب (CAT) ومسارد المصطلحات وذاكرات الترجمة، للحفاظ على الجودة في كل ملف وكل تحديث.",
@@ -503,7 +503,7 @@ const fr: LocaleContent = {
     items: {
       translation: {
         question: "Vous avez besoin de traduire des documents, un site web ou un logiciel en arabe ?",
-        text: "Je traduis **de l’anglais, du français et de l’espagnol vers l’arabe** dans les domaines technique, juridique, financier, médical, éducatif, environnemental et audiovisuel — avec précision, naturel et cohérence terminologique.",
+        text: "Je traduis **de l’anglais, du français et de l’espagnol vers l’arabe**, et **de l’arabe vers l’anglais**, dans les domaines technique, juridique, financier, médical, éducatif, environnemental et audiovisuel — avec précision, naturel et cohérence terminologique.",
       },
       editing: {
         question: "Besoin de faire vérifier une traduction arabe avant sa diffusion ?",
@@ -531,7 +531,7 @@ const fr: LocaleContent = {
     translation: {
       title: "Traduction vers l’arabe",
       description:
-        "Traduction humaine professionnelle de l’anglais, du français et de l’espagnol vers l’arabe, dans les domaines technique, juridique, financier, médical et audiovisuel.",
+        "Traduction humaine professionnelle de l’anglais, du français et de l’espagnol vers l’arabe, et de l’arabe vers l’anglais, dans les domaines technique, juridique, financier, médical et audiovisuel.",
       intro: [
         "Chaque projet est traduit par un linguiste professionnel, et pas seulement passé par une machine. L’objectif : un arabe exact, naturel et cohérent avec votre terminologie et votre ton.",
         "Le travail suit un processus défini de traduction, révision et relecture, appuyé par des outils de TAO, des glossaires et des mémoires de traduction pour garantir la qualité sur chaque fichier et chaque mise à jour.",
@@ -695,7 +695,7 @@ const es: LocaleContent = {
     items: {
       translation: {
         question: "¿Necesitas traducir documentos, sitios web o software al árabe?",
-        text: "Traduzco **del inglés, el francés y el español al árabe** en los ámbitos técnico, jurídico, financiero, sanitario, educativo, medioambiental y audiovisual, con precisión, naturalidad y coherencia terminológica.",
+        text: "Traduzco **del inglés, el francés y el español al árabe**, y **del árabe al inglés**, en los ámbitos técnico, jurídico, financiero, sanitario, educativo, medioambiental y audiovisual, con precisión, naturalidad y coherencia terminológica.",
       },
       editing: {
         question: "¿Necesitas revisar una traducción al árabe antes de publicarla?",
@@ -723,7 +723,7 @@ const es: LocaleContent = {
     translation: {
       title: "Traducción al árabe",
       description:
-        "Traducción humana profesional del inglés, el francés y el español al árabe, en los ámbitos técnico, jurídico, financiero, sanitario y audiovisual.",
+        "Traducción humana profesional del inglés, el francés y el español al árabe, y del árabe al inglés, en los ámbitos técnico, jurídico, financiero, sanitario y audiovisual.",
       intro: [
         "Cada proyecto lo traduce un lingüista profesional, no solo una máquina. El objetivo es un árabe preciso, natural y coherente con tu terminología y tu tono de marca.",
         "El trabajo sigue un proceso definido de traducción, edición y corrección, con herramientas TAO, glosarios y memorias de traducción para mantener la calidad en cada archivo y cada actualización.",

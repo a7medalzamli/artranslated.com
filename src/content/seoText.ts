@@ -17,8 +17,8 @@ type SeoText = {
 
 const en: SeoText = {
   homeTitle: "Arabic Translation & Localization Services",
-  home: "Professional English, French and Spanish to Arabic translation and localization for websites, SaaS, marketing, legal, technical and healthcare content.",
-  about: "Ahmed Alzamli, English, French and Spanish to Arabic translator and localizer, helping clients expand into Arabic-speaking markets with accurate, native content.",
+  home: "Professional English, French and Spanish to Arabic, and Arabic to English, translation and localization for websites, SaaS, marketing, legal, technical and healthcare content.",
+  about: "Ahmed Alzamli, English, French and Spanish to Arabic (and Arabic to English) translator and localizer, helping clients expand into Arabic-speaking markets with accurate, native content.",
   process: "How your Arabic translation project runs, step by step: translation, editing and proofreading (TEP), quality checks, CAT tools and on-time delivery.",
   contact: "Request a quote for Arabic translation or localization. Share your languages, subject and deadline and get a clear, tailored quote by email.",
   blog: "Articles on Arabic translation, localization, transcreation and terminology: practical tips for reaching Arabic-speaking audiences.",
@@ -26,8 +26,8 @@ const en: SeoText = {
 
 const ar: SeoText = {
   homeTitle: "خدمات الترجمة والتوطين إلى العربية",
-  home: "ترجمة وتوطين احترافي من الإنجليزية والفرنسية والإسبانية إلى العربية للمواقع الإلكترونية والبرمجيات والتسويق والمحتوى القانوني والتقني والطبي.",
-  about: "أحمد الزاملي، مترجم ومختص في التوطين من الإنجليزية والفرنسية والإسبانية إلى العربية، يساعد العملاء على التوسّع في الأسواق العربية بمحتوى دقيق وأصيل.",
+  home: "ترجمة وتوطين احترافي من الإنجليزية والفرنسية والإسبانية إلى العربية ومن العربية إلى الإنجليزية للمواقع الإلكترونية والبرمجيات والتسويق والمحتوى القانوني والتقني والطبي.",
+  about: "أحمد الزاملي، مترجم ومختص في التوطين من الإنجليزية والفرنسية والإسبانية إلى العربية ومن العربية إلى الإنجليزية، يساعد العملاء على التوسّع في الأسواق العربية بمحتوى دقيق وأصيل.",
   process: "كيف يُنجَز مشروع الترجمة إلى العربية خطوة بخطوة: الترجمة والتحرير والتدقيق، وفحوص الجودة، وأدوات الترجمة بمساعدة الحاسوب، والتسليم في الموعد.",
   contact: "اطلب عرض سعر لخدمات الترجمة أو التوطين إلى العربية. شاركني اللغات والموضوع والموعد النهائي، وستصلك عبر البريد الإلكتروني عرض سعر واضح ومفصّل.",
   blog: "مقالات عن الترجمة إلى العربية والتوطين وإعادة الصياغة الإبداعية والمصطلحات: نصائح عملية للوصول إلى الجمهور الناطق بالعربية.",
@@ -35,8 +35,8 @@ const ar: SeoText = {
 
 const fr: SeoText = {
   homeTitle: "Traduction et localisation vers l’arabe",
-  home: "Traduction et localisation professionnelles de l’anglais, du français et de l’espagnol vers l’arabe : sites web, SaaS, marketing, juridique, technique et santé.",
-  about: "Ahmed Alzamli, traducteur et localisateur de l’anglais, du français et de l’espagnol vers l’arabe, aide ses clients à se développer sur les marchés arabophones.",
+  home: "Traduction et localisation professionnelles de l’anglais, du français et de l’espagnol vers l’arabe, et de l’arabe vers l’anglais : sites web, SaaS, marketing, juridique, technique et santé.",
+  about: "Ahmed Alzamli, traducteur et localisateur de l’anglais, du français et de l’espagnol vers l’arabe (et de l’arabe vers l’anglais), aide ses clients à se développer sur les marchés arabophones.",
   process: "Le déroulement de votre projet de traduction vers l’arabe, étape par étape : traduction, révision et relecture, contrôle qualité, outils TAO et livraison.",
   contact: "Demandez un devis de traduction ou de localisation vers l’arabe. Indiquez les langues, le sujet et le délai, et recevez un devis clair et personnalisé.",
   blog: "Articles sur la traduction vers l’arabe, la localisation, la transcréation et la terminologie : conseils pratiques pour toucher le public arabophone.",
@@ -44,8 +44,8 @@ const fr: SeoText = {
 
 const es: SeoText = {
   homeTitle: "Traducción y localización al árabe",
-  home: "Traducción y localización profesional del inglés, francés y español al árabe para sitios web, SaaS, marketing y contenido jurídico, técnico y sanitario.",
-  about: "Ahmed Alzamli, traductor y localizador del inglés, francés y español al árabe, ayuda a sus clientes a expandirse en los mercados de habla árabe.",
+  home: "Traducción y localización profesional del inglés, francés y español al árabe, y del árabe al inglés, para sitios web, SaaS, marketing y contenido jurídico, técnico y sanitario.",
+  about: "Ahmed Alzamli, traductor y localizador del inglés, francés y español al árabe (y del árabe al inglés), ayuda a sus clientes a expandirse en los mercados de habla árabe.",
   process: "Cómo se gestiona tu proyecto de traducción al árabe, paso a paso: traducción, edición y revisión, controles de calidad, herramientas TAO y entrega puntual.",
   contact: "Solicita un presupuesto de traducción o localización al árabe. Indica los idiomas, el tema y el plazo y recibe un presupuesto claro y personalizado.",
   blog: "Artículos sobre traducción al árabe, localización, transcreación y terminología: consejos prácticos para llegar al público de habla árabe.",

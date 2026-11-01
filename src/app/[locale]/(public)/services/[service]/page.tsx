@@ -65,7 +65,7 @@ const PAIRS: Record<
 > = {
   en: {
     title: "Language pairs and markets",
-    intro: "Direct translation into Arabic from three languages, with no relay language.",
+    intro: "Direct translation into Arabic from three languages, with no relay language, and from Arabic into English.",
     cards: [
       { href: routes.frenchToArabic, title: "French → Arabic", text: "For companies and agencies across the French-speaking world.", image: "/images/photos/service-consulting.jpg" },
       { href: routes.spanishToArabic, title: "Spanish → Arabic", text: "For Spain, Latin America and the Spanish-speaking world.", image: "/images/photos/spec-website-marketing.jpg" },
@@ -74,7 +74,7 @@ const PAIRS: Record<
   },
   ar: {
     title: "أزواج اللغات والأسواق",
-    intro: "ترجمة مباشرة إلى العربية من ثلاث لغات، دون لغة وسيطة.",
+    intro: "ترجمة مباشرة إلى العربية من ثلاث لغات دون لغة وسيطة، ومن العربية إلى الإنجليزية.",
     cards: [
       { href: routes.frenchToArabic, title: "الفرنسية ← العربية", text: "للشركات والوكالات في العالم الناطق بالفرنسية.", image: "/images/photos/service-consulting.jpg" },
       { href: routes.spanishToArabic, title: "الإسبانية ← العربية", text: "لإسبانيا وأمريكا اللاتينية والعالم الناطق بالإسبانية.", image: "/images/photos/spec-website-marketing.jpg" },
@@ -83,7 +83,7 @@ const PAIRS: Record<
   },
   fr: {
     title: "Combinaisons de langues et marchés",
-    intro: "Traduction directe vers l’arabe depuis trois langues, sans langue relais.",
+    intro: "Traduction directe vers l’arabe depuis trois langues, sans langue relais, et de l’arabe vers l’anglais.",
     cards: [
       { href: routes.frenchToArabic, title: "Français → arabe", text: "Pour les entreprises et agences de tout l’espace francophone.", image: "/images/photos/service-consulting.jpg" },
       { href: routes.spanishToArabic, title: "Espagnol → arabe", text: "Pour l’Espagne, l’Amérique latine et le monde hispanophone.", image: "/images/photos/spec-website-marketing.jpg" },
@@ -92,7 +92,7 @@ const PAIRS: Record<
   },
   es: {
     title: "Combinaciones de idiomas y mercados",
-    intro: "Traducción directa al árabe desde tres idiomas, sin idioma puente.",
+    intro: "Traducción directa al árabe desde tres idiomas, sin idioma puente, y del árabe al inglés.",
     cards: [
       { href: routes.frenchToArabic, title: "Francés → árabe", text: "Para empresas y agencias de todo el mundo francófono.", image: "/images/photos/service-consulting.jpg" },
       { href: routes.spanishToArabic, title: "Español → árabe", text: "Para España, Latinoamérica y el mundo hispanohablante.", image: "/images/photos/spec-website-marketing.jpg" },

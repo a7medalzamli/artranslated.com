@@ -75,7 +75,7 @@ const fr: SiteContent = {
       "Chaque spécialisation a sa propre page expliquant ce qui est couvert et comment le travail est réalisé.",
     translationTitle: "Traduction",
     translationSummary:
-      "Traduction humaine professionnelle de l’anglais, du français et de l’espagnol vers l’arabe — précise, naturelle et cohérente avec votre terminologie, pour vos documents, sites web et logiciels.",
+      "Traduction humaine professionnelle de l’anglais, du français et de l’espagnol vers l’arabe, et de l’arabe vers l’anglais — précise, naturelle et cohérente avec votre terminologie, pour vos documents, sites web et logiciels.",
     consultingTitle: "Conseil",
     consultingSummary:
       "Conseil : accompagnement pour aborder les marchés arabophones, mise en place de glossaires et de guides de style, et choix du bon processus, des outils et du contrôle qualité.",
@@ -383,7 +383,7 @@ const fr: SiteContent = {
     nda: "Je souhaite un accord de confidentialité signé avant de partager des fichiers.",
     sending: "Envoi…",
     send: "Envoyer la demande",
-    pairs: ["Anglais → Arabe", "Français → Arabe", "Espagnol → Arabe"],
+    pairs: ["Anglais → Arabe", "Français → Arabe", "Espagnol → Arabe", "Arabe → Anglais"],
   },
   cookie: {
     text: "Ce site utilise des cookies de mesure d’audience (Google Analytics) pour comprendre son utilisation. Ils ne sont déposés qu’avec votre accord. Consultez la",

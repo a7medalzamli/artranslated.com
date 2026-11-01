@@ -749,3 +749,8 @@
   color: var(--color-accent);
   font-weight: var(--weight-semibold);
 }
+
+/* Second language pair (Arabic → English) under the first one. */
+.languagePairSecond {
+  margin-top: var(--space-md);
+}

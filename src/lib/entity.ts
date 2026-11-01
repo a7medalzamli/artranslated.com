@@ -64,7 +64,7 @@ export function entityGraph(locale: string) {
         "@id": ids.person,
         name: "Ahmed Alzamli",
         alternateName: ["Ahmed Alzamly", "أحمد الزاملي"],
-        jobTitle: "English, French and Spanish to Arabic Translator and Localization Specialist",
+        jobTitle: "English, French and Spanish to Arabic and Arabic to English Translator and Localization Specialist",
         description:
           "Palestinian translator and digital marketing specialist. Translating since 2011 and working professionally since 2014; founded Translated into Arabic (TIA) in 2026.",
         url: `${siteUrl}/en/about`,
