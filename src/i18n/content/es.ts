@@ -123,8 +123,9 @@ const es: SiteContent = {
     ],
     qaTitle: "Política de aseguramiento de la calidad",
     qaParagraphs: [
-      "El aseguramiento de la calidad combina comprobaciones automatizadas con el criterio humano. Las comprobaciones automatizadas en SDL Trados señalan incoherencias terminológicas y errores de números y etiquetas; una fase humana de edición y revisión garantiza que el árabe se lea con naturalidad y exactitud.",
-      "Las decisiones terminológicas se registran en glosarios y bases terminológicas para reutilizarlas, y las memorias de traducción mantienen la coherencia del contenido actualizado o repetido.",
+      "El control de calidad sigue la práctica de las agencias de traducción profesionales de todo el mundo: cada proyecto pasa por la traducción, una edición bilingüe frente al texto original y una revisión final monolingüe del árabe antes de la entrega.",
+      "Antes de cada entrega, los controles de calidad automáticos detectan incoherencias terminológicas, errores de cifras y etiquetas, traducciones distintas de frases repetidas, problemas de puntuación y espaciado, y segmentos sin traducir. Después, una revisión humana confirma que el texto es preciso, natural y adecuado para su público.",
+      "La terminología se gestiona en glosarios y bases terminológicas del proyecto, y las memorias de traducción mantienen coherente el contenido repetido o actualizado. Si lo necesitas, la calidad se puede medir con una ficha LQA basada en el marco MQM, y tus comentarios se registran para que cada nuevo proyecto parta de las últimas decisiones.",
     ],
     toolsTitle: "Herramientas",
     toolList: [

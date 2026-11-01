@@ -126,8 +126,9 @@ const fr: SiteContent = {
     ],
     qaTitle: "Politique d'assurance qualité",
     qaParagraphs: [
-      "L'assurance qualité combine des contrôles automatisés et le jugement humain. Les contrôles automatisés dans SDL Trados signalent les incohérences terminologiques et les erreurs de chiffres et de balises ; une phase humaine de révision et de relecture garantit que l'arabe se lit de façon naturelle et exacte.",
-      "Les décisions terminologiques sont consignées dans des glossaires et des bases terminologiques pour être réutilisées, et les mémoires de traduction maintiennent la cohérence du contenu mis à jour ou répété.",
+      "L’assurance qualité suit les pratiques des agences de traduction professionnelles du monde entier : chaque projet passe par la traduction, une révision bilingue par rapport au texte source, puis une relecture finale unilingue de l’arabe avant livraison.",
+      "Avant chaque livraison, des contrôles qualité automatisés détectent les incohérences terminologiques, les erreurs de chiffres et de balises, les traductions divergentes de phrases répétées, les problèmes de ponctuation et d’espacement, et les segments non traduits. Une relecture humaine confirme ensuite que le texte est exact, naturel et adapté à son public.",
+      "La terminologie est gérée dans des glossaires et bases terminologiques propres au projet, et les mémoires de traduction assurent la cohérence des contenus répétés ou mis à jour. Sur demande, la qualité peut être mesurée avec une grille LQA fondée sur le référentiel MQM, et vos retours sont consignés pour que chaque nouveau projet parte des dernières décisions.",
     ],
     toolsTitle: "Outils",
     toolList: [

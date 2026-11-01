@@ -47,7 +47,8 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
 
       <Section tinted title={p.qaTitle}>
         <div className="prose">
-          {p.qaParagraphs.map((para, i) => (
+          {/* QA text always from code (an older CMS copy named a specific tool). */}
+          {getStaticContent(locale as Locale).process.qaParagraphs.map((para, i) => (
             <p key={i}>{para}</p>
           ))}
         </div>

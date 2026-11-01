@@ -127,8 +127,9 @@ const en = {
     ],
     qaTitle: "Quality-assurance policy",
     qaParagraphs: [
-      "Quality assurance combines automated checks with human judgement. Automated checks in SDL Trados flag terminology mismatches, number and tag errors and inconsistencies; a human editing and proofreading pass ensures the Arabic reads naturally and accurately.",
-      "Terminology decisions are captured in glossaries and termbases so they carry forward to future work, and translation memories keep updated or repeat content consistent.",
+      "Quality assurance follows the practice used by professional translation agencies worldwide: every project goes through translation, a bilingual revision against the source text, and a final monolingual proofread of the Arabic before delivery.",
+      "Before every delivery, automated QA checks catch terminology mismatches, number and tag errors, inconsistent translations of repeated sentences, punctuation and spacing issues, and untranslated segments. A human review then confirms that the text is accurate, natural and right for its audience.",
+      "Terminology is managed in project glossaries and termbases, and translation memories keep repeated and updated content consistent. On request, quality can be measured with an LQA scorecard based on the MQM framework, and your feedback is recorded so every new project starts from the latest decisions.",
     ],
     toolsTitle: "Tools",
     toolList: [
