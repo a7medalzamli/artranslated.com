@@ -15,6 +15,9 @@ import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { Faq } from "@/components/Faq/Faq";
 import { Testimonials } from "@/components/Testimonials/Testimonials";
+import { RelatedServices } from "@/components/RelatedServices/RelatedServices";
+import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
+import { clusters } from "@/content/postCategories";
 import { getFaqs } from "@/content/faqs";
 import styles from "./page.module.css";
 
@@ -37,6 +40,14 @@ export async function generateMetadata({
 const sourceLanguages: LanguageCode[] = ["en", "fr", "es"];
 // Read by screen readers between the source languages and Arabic.
 const intoWord: Record<Locale, string> = { en: "into", ar: "إلى", fr: "vers", es: "al" };
+
+/** Headings of the homepage link sections (services and latest guides). */
+const HOME_LINKS: Record<Locale, { services: string; guides: string }> = {
+  en: { services: "Services", guides: "Latest guides" },
+  ar: { services: "الخدمات", guides: "أحدث الأدلة" },
+  fr: { services: "Services", guides: "Derniers guides" },
+  es: { services: "Servicios", guides: "Últimas guías" },
+};
 
 /** Two entry points under the hero: direct clients and translation agencies. */
 const audience: Record<
@@ -265,11 +276,27 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </Container>
       </section>
 
+      {/* ---- Services: links from the homepage to each pillar page ---- */}
+      <RelatedServices
+        locale={locale}
+        title={HOME_LINKS[loc].services}
+        links={["translation", "editing", "mtpe", "transcreation", "saas", "digital-marketing"]}
+        tinted
+      />
+
       {/* ---- Client reviews (ProZ.com) ---- */}
       <Testimonials locale={locale} />
 
       {/* ---- Frequently asked questions ---- */}
       <Faq title={getFaqs(locale).title} items={getFaqs(locale).home} tinted />
+
+      {/* ---- Latest guides from the blog ---- */}
+      <RelatedGuides
+        locale={locale}
+        title={HOME_LINKS[loc].guides}
+        clusters={clusters.map((c) => c.key)}
+        limit={3}
+      />
 
       {/* ---- Partners / credentials ---- */}
       <section className={styles.partners} aria-label="Partners">

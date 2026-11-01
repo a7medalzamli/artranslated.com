@@ -27,6 +27,7 @@ import { Testimonials } from "@/components/Testimonials/Testimonials";
 import { AiVisibility } from "@/components/AiVisibility/AiVisibility";
 import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
 import { TrustStrip } from "@/components/Trust/Trust";
+import { RelatedServices, relatedServices } from "@/components/RelatedServices/RelatedServices";
 import type { ClusterKey } from "@/content/postCategories";
 import { getFaqs } from "@/content/faqs";
 import styles from "./servicePage.module.css";
@@ -228,6 +229,8 @@ export default async function ServicePage({ params }: { params: Params }) {
       {getFaqs(locale)[service] && (
         <Faq title={getFaqs(locale).title} items={getFaqs(locale)[service] ?? []} tinted />
       )}
+
+      <RelatedServices locale={locale} links={relatedServices[service]} />
 
       {service === "editing" ? (
         // Editing page: the quote form itself, with the service pre-selected.

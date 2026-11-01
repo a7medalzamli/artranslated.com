@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { InfoPageView } from "@/components/InfoPage/InfoPage";
+import { relatedServices } from "@/components/RelatedServices/RelatedServices";
 import { getMarketsPage } from "@/content/hubPages";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
@@ -47,6 +48,7 @@ export default async function ArabicMarketsPage({ params }: { params: Promise<{ 
       image={IMAGE}
       structuredData={serviceLd}
       clusters={["arabic-markets", "marketing"]}
+      related={relatedServices["arabic-markets"]}
     />
   );
 }

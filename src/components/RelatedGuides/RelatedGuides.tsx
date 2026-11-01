@@ -25,6 +25,7 @@ export async function RelatedGuides({
   variant = "guides",
   tinted = false,
   limit = 4,
+  title,
 }: {
   locale: string;
   clusters: ClusterKey[];
@@ -32,6 +33,8 @@ export async function RelatedGuides({
   variant?: "guides" | "articles";
   tinted?: boolean;
   limit?: number;
+  /** Overrides the default heading. */
+  title?: string;
 }) {
   const t = TITLES[locale as Locale] ?? TITLES.en;
   const categories = clusters.map(categoryOf);
@@ -46,7 +49,7 @@ export async function RelatedGuides({
   if (posts.length === 0) return null;
 
   return (
-    <Section tinted={tinted} title={variant === "guides" ? t.guides : t.articles}>
+    <Section tinted={tinted} title={title ?? (variant === "guides" ? t.guides : t.articles)}>
       <ul className={styles.grid}>
         {posts.map((post) => (
           <li key={post.slug}>

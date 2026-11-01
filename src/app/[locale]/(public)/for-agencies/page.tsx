@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { InfoPageView } from "@/components/InfoPage/InfoPage";
+import { relatedServices } from "@/components/RelatedServices/RelatedServices";
 import { getAgencyPage } from "@/content/infoPages";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
@@ -41,5 +42,6 @@ export default async function ForAgenciesPage({ params }: { params: Promise<{ lo
     provider: { "@id": ids.business },
   };
 
-  return <InfoPageView locale={locale} page={p} image={IMAGE} structuredData={serviceLd} clusters={["buying-guides", "quality"]} />;
+  return <InfoPageView locale={locale} page={p} image={IMAGE} structuredData={serviceLd} clusters={["buying-guides", "quality"]}
+      related={relatedServices["for-agencies"]} />;
 }

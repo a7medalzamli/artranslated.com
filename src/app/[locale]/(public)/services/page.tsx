@@ -89,7 +89,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                 <p className={styles.question}>{s.question}</p>
                 <p className={styles.body}>{withBold(s.text)}</p>
                 <Link href={`/services/${s.slug}`} className={styles.more}>
-                  {overview.learnMore}
+                  {overview.learnMore.replace("{name}", s.name)}
                 </Link>
               </div>
             </article>

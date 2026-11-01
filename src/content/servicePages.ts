@@ -111,7 +111,7 @@ const en: LocaleContent = {
   },
   overview: {
     helpTitle: "I can help with",
-    learnMore: "Learn more",
+    learnMore: "More about {name}",
     pageTitle: "Linguistic Services",
     closingTitle: "I’d love to hear more about your project",
     closingText: "Tell me what you need translated, adapted or reviewed, and I’ll get back to you with a plan and a quote.",
@@ -307,7 +307,7 @@ const ar: LocaleContent = {
   },
   overview: {
     helpTitle: "يمكنني مساعدتك في",
-    learnMore: "اعرف المزيد",
+    learnMore: "المزيد عن {name}",
     pageTitle: "الخدمات اللغوية",
     closingTitle: "يسعدني أن أعرف المزيد عن مشروعك",
     closingText: "أخبرني بما تحتاج إلى ترجمته أو تكييفه أو مراجعته، وسأعود إليك بخطة وعرض سعر.",
@@ -504,7 +504,7 @@ const fr: LocaleContent = {
   },
   overview: {
     helpTitle: "Je peux vous aider avec",
-    learnMore: "En savoir plus",
+    learnMore: "En savoir plus : {name}",
     pageTitle: "Services linguistiques",
     closingTitle: "J’aimerais en savoir plus sur votre projet",
     closingText: "Dites-moi ce que vous souhaitez traduire, adapter ou réviser, et je reviendrai vers vous avec un plan et un devis.",
@@ -701,7 +701,7 @@ const es: LocaleContent = {
   },
   overview: {
     helpTitle: "Puedo ayudarte con",
-    learnMore: "Más información",
+    learnMore: "Más sobre {name}",
     pageTitle: "Servicios lingüísticos",
     closingTitle: "Me encantaría saber más sobre tu proyecto",
     closingText: "Cuéntame qué necesitas traducir, adaptar o revisar y te responderé con un plan y un presupuesto.",

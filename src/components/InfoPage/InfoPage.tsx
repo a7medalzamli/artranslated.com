@@ -13,6 +13,7 @@ import { routes } from "@/lib/routes";
 import serviceStyles from "@/app/[locale]/(public)/services/[service]/servicePage.module.css";
 import { RelatedGuides } from "../RelatedGuides/RelatedGuides";
 import { TrustStrip } from "../Trust/Trust";
+import { RelatedServices, type LinkKey } from "../RelatedServices/RelatedServices";
 import type { ClusterKey } from "@/content/postCategories";
 import styles from "./InfoPage.module.css";
 
@@ -23,6 +24,7 @@ export async function InfoPageView({
   image,
   structuredData,
   clusters,
+  related,
 }: {
   locale: string;
   page: InfoPage;
@@ -30,6 +32,8 @@ export async function InfoPageView({
   structuredData: Record<string, unknown>;
   /** Topic clusters whose articles are listed under "Related guides". */
   clusters?: ClusterKey[];
+  /** Pillar pages linked under "Related services". */
+  related?: LinkKey[];
 }) {
   const t = await getContent(locale as Locale);
 
@@ -148,6 +152,7 @@ export async function InfoPageView({
       )}
       {/* Credibility signals; background continues the alternation. */}
       <TrustStrip locale={locale} tinted={clusters ? sections.length % 2 === 0 : sections.length % 2 !== 0} />
+      {related && <RelatedServices locale={locale} links={related} tinted={!(clusters ? sections.length % 2 === 0 : sections.length % 2 !== 0)} />}
       <CTA
         title={p.ctaTitle}
         description={p.ctaDescription}
