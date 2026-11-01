@@ -38,6 +38,81 @@ const sourceLanguages: LanguageCode[] = ["en", "fr", "es"];
 // Read by screen readers between the source languages and Arabic.
 const intoWord: Record<Locale, string> = { en: "into", ar: "إلى", fr: "vers", es: "al" };
 
+/** Two entry points under the hero: direct clients and translation agencies. */
+const audience: Record<
+  Locale,
+  { aria: string; cards: { href: string; label: string; text: string; cta: string }[] }
+> = {
+  en: {
+    aria: "Who I work with",
+    cards: [
+      {
+        href: routes.forBusinesses,
+        label: "I’m a business",
+        text: "Need your documents, website or marketing in Arabic? See how it works, step by step.",
+        cta: "For businesses",
+      },
+      {
+        href: routes.forAgencies,
+        label: "I’m a translation agency",
+        text: "Looking for a reliable Arabic linguist? Capacity, CAT tools and workflow.",
+        cta: "For agencies",
+      },
+    ],
+  },
+  ar: {
+    aria: "مع من أعمل",
+    cards: [
+      {
+        href: routes.forBusinesses,
+        label: "أنا صاحب شركة",
+        text: "هل تحتاج إلى مستنداتك أو موقعك أو تسويقك بالعربية؟ تعرّف على طريقة العمل خطوة بخطوة.",
+        cta: "للشركات",
+      },
+      {
+        href: routes.forAgencies,
+        label: "أنا وكالة ترجمة",
+        text: "هل تبحث عن مترجم عربي موثوق؟ الطاقة الإنتاجية وأدوات الترجمة وسير العمل.",
+        cta: "للوكالات",
+      },
+    ],
+  },
+  fr: {
+    aria: "Avec qui je travaille",
+    cards: [
+      {
+        href: routes.forBusinesses,
+        label: "Je suis une entreprise",
+        text: "Besoin de vos documents, de votre site ou de votre marketing en arabe ? Découvrez comment ça marche, étape par étape.",
+        cta: "Pour les entreprises",
+      },
+      {
+        href: routes.forAgencies,
+        label: "Je suis une agence de traduction",
+        text: "Vous cherchez un linguiste arabe fiable ? Capacité, outils de TAO et méthode de travail.",
+        cta: "Pour les agences",
+      },
+    ],
+  },
+  es: {
+    aria: "Con quién trabajo",
+    cards: [
+      {
+        href: routes.forBusinesses,
+        label: "Soy una empresa",
+        text: "¿Necesitas tus documentos, tu web o tu marketing en árabe? Descubre cómo funciona, paso a paso.",
+        cta: "Para empresas",
+      },
+      {
+        href: routes.forAgencies,
+        label: "Soy una agencia de traducción",
+        text: "¿Buscas un lingüista de árabe fiable? Capacidad, herramientas TAO y forma de trabajo.",
+        cta: "Para agencias",
+      },
+    ],
+  },
+};
+
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc = locale as Locale;
@@ -98,6 +173,23 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 </div>
               </div>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* ---- Who is it for: businesses / agencies ---- */}
+      <section className={styles.audience} aria-label={audience[loc].aria}>
+        <Container>
+          <div className={styles.audienceGrid}>
+            {audience[loc].cards.map((card) => (
+              <Link key={card.href} href={card.href} className={styles.audienceCard}>
+                <span className={styles.audienceLabel}>{card.label}</span>
+                <span className={styles.audienceText}>{card.text}</span>
+                <span className={styles.audienceCta}>
+                  {card.cta} <span aria-hidden="true">{loc === "ar" ? "←" : "→"}</span>
+                </span>
+              </Link>
+            ))}
           </div>
         </Container>
       </section>

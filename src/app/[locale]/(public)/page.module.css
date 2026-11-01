@@ -697,3 +697,55 @@
 .hero > * {
   width: 100%;
 }
+
+/* ---- Who is it for: businesses / agencies (under the hero) ---- */
+.audience {
+  padding-block: var(--space-2xl);
+}
+
+.audienceGrid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 48em) {
+  .audienceGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.audienceCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-inline-start: 4px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  text-decoration: none;
+  transition:
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.audienceCard:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.audienceLabel {
+  font-size: var(--font-size-h4);
+  font-weight: var(--weight-bold);
+}
+
+.audienceText {
+  color: var(--color-text-muted);
+}
+
+.audienceCta {
+  margin-top: var(--space-xs);
+  color: var(--color-accent);
+  font-weight: var(--weight-semibold);
+}

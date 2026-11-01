@@ -23,7 +23,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const post = await getPublishedPostBySlug(slug);
+  const post = await getPublishedPostBySlug(slug, locale);
   if (!post) return { title: "Post not found" };
 
   const title = post.seo_title || post.title;
@@ -57,7 +57,7 @@ export default async function BlogPostPage({
 }) {
   const { locale, slug } = await params;
   const t = await getContent(locale as Locale);
-  const post = await getPublishedPostBySlug(slug);
+  const post = await getPublishedPostBySlug(slug, locale);
 
   if (!post) {
     notFound();

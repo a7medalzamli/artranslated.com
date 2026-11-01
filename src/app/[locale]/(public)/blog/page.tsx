@@ -43,7 +43,7 @@ export default async function BlogPage({
   const b = t.blog;
   const { category } = await searchParams;
   const activeCategory = category && isPostCategory(category) ? category : undefined;
-  const posts = await getPublishedPosts(activeCategory);
+  const posts = await getPublishedPosts(activeCategory, locale);
 
   return (
     <>

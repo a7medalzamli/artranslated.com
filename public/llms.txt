@@ -39,3 +39,8 @@
 - [How it works](https://www.artranslated.com/en/process): TEP workflow, quality assurance and tools
 - [Confidentiality](https://www.artranslated.com/en/confidentiality): NDAs and secure file handling
 - [Contact and quotes](https://www.artranslated.com/en/contact)
+
+## Guides
+
+- [Which Arabic should you use? MSA vs dialects](https://www.artranslated.com/en/blog/which-arabic-msa-vs-dialects): when to use Modern Standard Arabic or Gulf, Egyptian, Levantine, Iraqi and Maghrebi dialects, by content type
+- [Arabic localization glossary](https://www.artranslated.com/en/blog/arabic-localization-glossary): localization, i18n, RTL, CAT tools, translation memory, MTPE, TEP, LQA, MQM and transcreation explained
