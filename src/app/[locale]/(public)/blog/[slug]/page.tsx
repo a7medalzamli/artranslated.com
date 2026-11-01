@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Container } from "@/components/Container/Container";
 import { Markdown } from "@/components/Markdown/Markdown";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
-import { getPublishedPostBySlug } from "@/lib/blog/posts";
+import { getPublishedPostBySlug, publishedLocalesFor } from "@/lib/blog/posts";
 import { formatDate, readingTimeMinutes } from "@/lib/blog/format";
 import { getContent } from "@/i18n/content";
 import type { Locale } from "@/i18n";
@@ -35,8 +35,12 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${locale}/blog/${post.slug}`,
       languages: {
-        ...Object.fromEntries(locales.map((l) => [l, `/${l}/blog/${post.slug}`])),
-        "x-default": `/en/blog/${post.slug}`,
+        ...Object.fromEntries(
+          publishedLocalesFor(post.slug, locales).map((l) => [l, `/${l}/blog/${post.slug}`]),
+        ),
+        ...(publishedLocalesFor(post.slug, locales).includes("en")
+          ? { "x-default": `/en/blog/${post.slug}` }
+          : {}),
       },
     },
     openGraph: {

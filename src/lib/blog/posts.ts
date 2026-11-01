@@ -8,10 +8,12 @@ export type Post = Database["public"]["Tables"]["posts"]["Row"];
 
 /** Articles written in code (one version per language), shaped like database posts. */
 function codePostsFor(locale: string): Post[] {
-  // Articles dated in the future stay hidden until that date (scheduled posts).
+  // Each language version has its own date and stays hidden until then (scheduled posts).
   const now = Date.now();
-  return codePosts.filter((p) => Date.parse(p.publishedAt) <= now).map((p) => {
+  return codePosts.flatMap((p) => {
     const text = p.text[locale as Locale] ?? p.text.en;
+    const date = text.publishedAt ?? p.publishedAt;
+    if (Date.parse(date) > now) return [];
     return {
       id: `code-${p.slug}`,
       title: text.title,
@@ -21,11 +23,11 @@ function codePostsFor(locale: string): Post[] {
       category: p.category,
       cover_image_url: p.cover,
       status: "published",
-      published_at: p.publishedAt,
+      published_at: date,
       seo_title: text.seoTitle,
       seo_description: text.excerpt,
-      created_at: p.publishedAt,
-      updated_at: p.updatedAt,
+      created_at: date,
+      updated_at: Date.parse(p.updatedAt) > Date.parse(date) ? p.updatedAt : date,
     } as Post;
   });
 }
@@ -92,4 +94,18 @@ export async function getPostById(id: string): Promise<Post | null> {
   const { data, error } = await supabase.from("posts").select("*").eq("id", id).maybeSingle();
   if (error) throw error;
   return data;
+}
+
+/**
+ * Languages in which a post is published right now: code articles can go out on
+ * different days per language; admin-panel posts exist in every language.
+ */
+export function publishedLocalesFor(slug: string, allLocales: readonly string[]): string[] {
+  const post = codePosts.find((p) => p.slug === slug);
+  if (!post) return [...allLocales];
+  const now = Date.now();
+  return allLocales.filter((l) => {
+    const text = post.text[l as Locale];
+    return text && Date.parse(text.publishedAt ?? post.publishedAt) <= now;
+  });
 }

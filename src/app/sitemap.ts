@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteUrl } from "@/lib/seo";
 import { routes } from "@/lib/routes";
 import { locales } from "@/i18n";
-import { getPublishedPosts } from "@/lib/blog/posts";
+import { getPublishedPosts, publishedLocalesFor } from "@/lib/blog/posts";
 
 // Query the latest published posts at request time.
 export const dynamic = "force-dynamic";
@@ -66,15 +66,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   let postEntries: MetadataRoute.Sitemap = [];
   try {
-    const posts = await getPublishedPosts();
-    postEntries = posts.flatMap((post) => {
-      const path = `/blog/${post.slug}`;
-      return locales.map((locale) => ({
-        url: localeUrl(locale, path),
-        lastModified: new Date(post.updated_at),
-        alternates: alternates(path),
-      }));
-    });
+    // Each language lists only the articles already published in that language
+    // (language versions of an article can go out on different days).
+    const perLocale = await Promise.all(locales.map((l) => getPublishedPosts(undefined, l)));
+    postEntries = locales.flatMap((locale, i) =>
+      perLocale[i].map((post) => {
+        const path = `/blog/${post.slug}`;
+        const live = publishedLocalesFor(post.slug, locales);
+        return {
+          url: localeUrl(locale, path),
+          lastModified: new Date(post.updated_at),
+          alternates: {
+            languages: {
+              ...Object.fromEntries(live.map((l) => [l, localeUrl(l, path)])),
+              ...(live.includes("en") ? { "x-default": localeUrl("en", path) } : {}),
+            },
+          },
+        };
+      }),
+    );
   } catch {
     // If the database is unreachable, still return the static routes.
   }

@@ -11,7 +11,9 @@ export type CodePost = {
   cover: string;
   publishedAt: string;
   updatedAt: string;
-  text: Record<Locale, { title: string; excerpt: string; seoTitle: string; content: string }>;
+  /** Each language is a separate article; `publishedAt` here overrides the post date, so
+   *  language versions can go out on different days (they stay hidden until then). */
+  text: Record<Locale, { title: string; excerpt: string; seoTitle: string; content: string; publishedAt?: string }>;
 };
 
 /* ------------------------------------------------------------------ */
@@ -590,6 +592,7 @@ const raasVsSaas: CodePost = {
   updatedAt: "2026-11-04T08:00:00Z",
   text: {
     en: {
+      publishedAt: "2026-11-04T08:00:00Z",
       title: "Results as a Service (RaaS) vs SaaS: what it means for localization",
       seoTitle: "Results as a Service (RaaS) vs SaaS: What It Means for Localization",
       excerpt:
@@ -644,6 +647,7 @@ RaaS works best when results are **measurable and within the provider’s contro
 This is how I approach [SaaS localization](/en/services/saas-localization): we agree on the result you need, and I take care of everything required to deliver it, from translation and review to in-context checks and quality reporting. If you are planning an Arabic launch, [tell me about your product](/en/contact) and I’ll suggest a clear, results-based scope.`,
     },
     ar: {
+      publishedAt: "2026-11-05T08:00:00Z",
       title: "ادفع مقابل النتيجة لا الأداة: ما الذي تعنيه «النتائج كخدمة (RaaS)» للشركات العربية؟",
       seoTitle: "النتائج كخدمة (RaaS) للشركات العربية: ادفع مقابل النتيجة لا الأداة",
       excerpt:
@@ -689,6 +693,7 @@ This is how I approach [SaaS localization](/en/services/saas-localization): we a
 أطبّق هذا النهج في [توطين منتجات SaaS](/ar/services/saas-localization) وفي [التسويق الرقمي والظهور في الذكاء الاصطناعي (AI)](/ar/services/digital-marketing): نتفق أولًا على النتيجة، ثم أتولى العمل كله حتى أسلّمها جاهزة. وإن أردت أن نحدد معًا النتيجة التي تحتاجها شركتك، [فتواصل معي](/ar/contact).`,
     },
     fr: {
+      publishedAt: "2026-11-06T08:00:00Z",
       title: "Obligation de moyens ou de résultat ? Le Results as a Service appliqué à la localisation",
       seoTitle: "Results as a Service (RaaS) : passer à l’obligation de résultat en localisation",
       excerpt:
@@ -736,6 +741,7 @@ Une obligation de résultat n’a de sens que sur ce que le prestataire maîtris
 C’est dans cet esprit que je travaille en [localisation SaaS](/fr/services/saas-localization) et en [révision et LQA](/fr/services/editing) : nous définissons ensemble le résultat attendu et la façon de le mesurer, puis je prends en charge tout le travail nécessaire pour le livrer. Pour définir le vôtre, [écrivez-moi](/fr/contact).`,
     },
     es: {
+      publishedAt: "2026-11-07T08:00:00Z",
       title: "Pago por resultados: guía de Results as a Service para entrar en el mercado árabe",
       seoTitle: "Results as a Service (RaaS): pago por resultados para entrar en el mercado árabe",
       excerpt:
@@ -784,4 +790,198 @@ Así trabajo en la [localización de SaaS](/es/services/saas-localization) y en 
   },
 };
 
-export const codePosts: CodePost[] = [msaVsDialects, glossary, raasVsSaas];
+/* ------------------------------------------------------------------ */
+/* 4. AI search visibility — a different article per language,        */
+/*    published on different days (ar 2 Nov, fr 3 Nov, es 4 Nov,      */
+/*    en 8 Nov)                                                        */
+/* ------------------------------------------------------------------ */
+
+const aiSearchVisibility: CodePost = {
+  slug: "ai-search-visibility",
+  category: "AI & data",
+  cover: "/images/blog/ai-search-visibility.jpg",
+  publishedAt: "2026-11-02T08:00:00Z",
+  updatedAt: "2026-11-02T08:00:00Z",
+  text: {
+    en: {
+      publishedAt: "2026-11-08T08:00:00Z",
+      title: "How to get your business cited in AI answers: SEO, AEO and GEO explained",
+      seoTitle: "How to Get Cited in AI Answers: SEO, AEO and GEO Explained",
+      excerpt:
+        "More buyers now ask AI assistants instead of scrolling search results. Here is how SEO, AEO and GEO work together, and seven practical steps to make your business the source AI quotes.",
+      content: `A growing share of buyers no longer scroll through ten blue links. They ask an AI assistant a full question, such as "Which Arabic translator should I hire for my SaaS?", and read a single generated answer. That answer usually names a few businesses and cites a few sources. The question for every company is simple: **will you be one of them?**
+
+## Three layers of visibility
+
+- **SEO (search engine optimization)** gets your pages ranked in Google and Bing. It is still the foundation: AI tools often build their answers from pages that already rank well.
+- **AEO (answer engine optimization)** shapes your content so it can be lifted directly as an answer: clear questions, short direct answers, and well-structured pages.
+- **GEO (generative engine optimization)** makes your business easy for AI systems to understand, trust and cite when they generate a response.
+
+You do not choose one. Each layer builds on the one below it.
+
+## What AI tools look for
+
+AI systems are trying to give a confident, correct answer. They favour sources that are:
+
+- **Clear:** they say exactly who you are, what you do and for whom.
+- **Consistent:** the same name, services and facts appear on your website and on other trusted sites.
+- **Specific:** they answer real questions with concrete details, not vague marketing claims.
+- **Credible:** they show experience, qualifications and independent reviews.
+
+## Seven practical steps
+
+1. **Describe your business in one plain sentence** on your homepage, and use the same wording everywhere.
+2. **Keep your name and facts identical** across your website, LinkedIn, directories and review platforms.
+3. **Add a real FAQ** to your key pages, answering the questions clients actually ask, in one or two sentences each.
+4. **Use structured data (schema)** so machines can read your business, services, people and FAQs without guessing.
+5. **Write specific pages** for each service and audience instead of one general page.
+6. **Collect independent reviews** on trusted platforms, because AI tools weigh what others say about you.
+7. **Publish useful guides** in your area of expertise, so you become the source worth citing.
+
+## Measuring progress
+
+There is no single ranking report for AI answers yet. Track a mix of signals: rankings for your main keywords, traffic from AI tools in your analytics, how often your brand is mentioned, and how AI assistants describe you when you ask them about your field.
+
+## A note for multilingual businesses
+
+AI visibility is decided language by language. A business that is well described in English may be invisible when the same question is asked in Arabic, French or Spanish. Each market needs its own clear, natively written content.
+
+That is where my background helps: I combine [digital marketing and AI visibility](/en/services/digital-marketing) with translation and localization into Arabic. If you want to know how AI tools describe your business today, [get in touch](/en/contact) for an audit.`,
+    },
+    ar: {
+      publishedAt: "2026-11-02T08:00:00Z",
+      title: "لماذا قد يتجاهلك الذكاء الاصطناعي (AI) حين يسأل العملاء بالعربية؟",
+      seoTitle: "كيف تظهر شركتك في إجابات الذكاء الاصطناعي (AI) بالعربية؟",
+      excerpt:
+        "يسأل العملاء اليوم أدوات الذكاء الاصطناعي (AI) بالعربية عن الشركات والخدمات. لكن المحتوى العربي الجيد على الإنترنت قليل، وهذه فرصة لمن يبادر أولًا.",
+      content: `جرّب أن تسأل أداة ذكاء اصطناعي (AI) بالعربية: «ما أفضل شركة لترجمة المواقع في الرياض؟» أو «من يقدّم خدمات تسويق رقمي للشركات الناشئة في عمّان؟». ستلاحظ أن الإجابة تذكر أسماء قليلة، وتستشهد بمصادر محدودة، وأحيانًا تقدّم معلومات قديمة أو غير دقيقة.
+
+السبب بسيط: **المحتوى العربي الجيد والموثوق على الإنترنت ما زال قليلًا** مقارنة بالإنجليزية، وأدوات الذكاء الاصطناعي (AI) لا تستطيع أن تستشهد بما لم يُكتب.
+
+## الخبر الجيد: الفرصة ما زالت مفتوحة
+
+في الإنجليزية، تتنافس آلاف الشركات على أن تكون المصدر الذي يستشهد به الذكاء الاصطناعي (AI). أما في العربية، فما زال المجال أوسع بكثير. والشركة التي تنشر اليوم محتوى عربيًا واضحًا ودقيقًا ومنظّمًا، تزيد فرصتها في أن تكون من المصادر التي تعتمد عليها هذه الأدوات حين يسأل العملاء بالعربية.
+
+## ثلاث طبقات للظهور
+
+- **تحسين محركات البحث (SEO):** أن تظهر صفحاتك في نتائج Google وBing.
+- **تحسين محركات الإجابة (AEO):** أن يُكتب محتواك بصيغة أسئلة وأجوبة واضحة يمكن عرضها إجابةً مباشرة.
+- **تحسين محركات البحث التوليدية (GEO):** أن تكون شركتك سهلة الفهم والاستشهاد بها لدى أدوات الذكاء الاصطناعي (AI) عند توليد الإجابات.
+
+## أخطاء شائعة في المحتوى العربي
+
+- **الاعتماد على الترجمة الآلية (MT) دون مراجعة:** النص الركيك يفقد ثقة القارئ والآلة معًا.
+- **اسم الشركة يُكتب بأكثر من طريقة:** مرة بالعربية ومرة بالإنجليزية ومرة بتهجئة مختلفة، فلا تعرف الأدوات أنها الشركة نفسها.
+- **صفحات عامة بلا تفاصيل:** «نقدّم أفضل الخدمات» لا تجيب عن أي سؤال حقيقي.
+- **غياب الأسئلة الشائعة بالعربية:** مع أنها أسهل طريقة لتقديم إجابات جاهزة.
+
+## خطوات عملية للبدء
+
+1. **اكتب تعريفًا واضحًا لشركتك بجملة واحدة** بالعربية والإنجليزية، واستخدمه في كل مكان.
+2. **وحّد اسم شركتك وبياناتها** في موقعك وملفاتك على LinkedIn وGoogle والأدلة المحلية.
+3. **أنشئ صفحة لكل خدمة** تشرح لمن هي، وكيف تعمل، وماذا يستلم العميل.
+4. **أضف أسئلة شائعة حقيقية بالعربية** بإجابات قصيرة ومباشرة.
+5. **استخدم البيانات المنظّمة (Schema)** لتعريف شركتك وخدماتك بلغة تفهمها الآلات.
+6. **اكتب بعربية سليمة وطبيعية،** بالفصحى أو بنبرة محلية حسب جمهورك، لا بترجمة حرفية.
+7. **شجّع العملاء على كتابة تقييمات** على المنصات الموثوقة.
+
+## كيف تعرف أنك تتقدّم؟
+
+اسأل أدوات الذكاء الاصطناعي (AI) بالعربية عن مجالك كل شهر، ولاحظ هل تُذكر شركتك وكيف تُوصف. وتابع في أدوات التحليل الزيارات القادمة من هذه الأدوات، وترتيب كلماتك المفتاحية الأساسية.
+
+## كيف أساعدك
+
+أجمع بين [التسويق الرقمي والظهور في الذكاء الاصطناعي (AI)](/ar/services/digital-marketing) وخبرة الكتابة والترجمة إلى العربية منذ عام 2014، لأكتب لك محتوى عربيًا يفهمه القارئ وتستشهد به الأدوات. وإن أردت أن تعرف كيف تصف أدوات الذكاء الاصطناعي (AI) شركتك اليوم، [فتواصل معي](/ar/contact) لإجراء تقييم.`,
+    },
+    fr: {
+      publishedAt: "2026-11-03T08:00:00Z",
+      title: "Être cité par l’IA sur les marchés arabophones : SEO, AEO et GEO pour les entreprises françaises",
+      seoTitle: "Visibilité IA sur les marchés arabophones : SEO, AEO et GEO",
+      excerpt:
+        "Votre entreprise est bien référencée en France, mais l’est-elle quand un prospect pose la question en arabe à un assistant IA ? Les clés d’une visibilité multilingue dans la recherche générative.",
+      content: `Beaucoup d’entreprises françaises soignent leur référencement en français, parfois en anglais. Mais lorsqu’un prospect à Casablanca, Dubaï ou Riyad pose sa question **en arabe** à un assistant IA, la réponse s’appuie sur d’autres sources. Et votre entreprise n’y figure souvent pas.
+
+## La visibilité IA se joue langue par langue
+
+Les assistants IA construisent leurs réponses à partir des contenus disponibles dans la langue de la question. Une excellente page en français ne garantit rien pour une requête en arabe. Si votre site arabe est absent, traduit automatiquement ou très incomplet, d’autres acteurs occuperont la place.
+
+## SEO, AEO, GEO : de quoi parle-t-on ?
+
+- **SEO** (référencement naturel) : être bien positionné dans Google et Bing.
+- **AEO** (optimisation pour les moteurs de réponse) : structurer vos contenus en questions-réponses claires, reprises telles quelles comme réponse.
+- **GEO** (référencement génératif) : rendre votre entreprise facile à comprendre, à vérifier et à citer par les outils d’IA.
+
+Ces trois niveaux s’additionnent, et doivent être travaillés **dans chaque langue cible**.
+
+## Les erreurs fréquentes des sites multilingues
+
+- **Une version arabe traduite automatiquement** : les erreurs de grammaire, de terminologie et de ton sautent aux yeux d’un lecteur arabophone et nuisent à la crédibilité.
+- **Des informations différentes d’une langue à l’autre** : nom de marque, services ou coordonnées incohérents brouillent l’identité de l’entreprise.
+- **Une architecture mal balisée** : sans balises hreflang ni pages distinctes par langue, les moteurs ne savent pas quelle version afficher.
+- **L’absence de FAQ en arabe** : précisément le format que les moteurs de réponse aiment reprendre.
+
+## Une méthode en cinq étapes
+
+1. **Définissez vos marchés et vos requêtes** : quelles questions vos clients posent-ils, en arabe standard ou en dialecte ?
+2. **Créez des pages arabes rédigées pour ce public,** et non calquées sur la version française.
+3. **Harmonisez votre identité** : même nom, mêmes services, mêmes faits sur le site, LinkedIn, les annuaires et les plateformes d’avis.
+4. **Balisez correctement** : hreflang, données structurées (schema) pour l’entreprise, les services et la FAQ.
+5. **Mesurez** : positions, trafic issu des assistants IA, et manière dont ces outils décrivent votre entreprise en arabe.
+
+## Mon accompagnement
+
+Traducteur vers l’arabe depuis 2014 et spécialisé en [marketing digital et visibilité IA](/fr/services/digital-marketing), j’aide les entreprises francophones à exister dans la recherche, classique comme générative, sur les marchés arabophones. Pour un audit de votre visibilité en arabe, [contactez-moi](/fr/contact).`,
+    },
+    es: {
+      publishedAt: "2026-11-04T16:00:00Z",
+      title: "Visibilidad en la IA: checklist para pymes que quieren vender en el mundo árabe",
+      seoTitle: "Visibilidad en la IA para pymes: checklist SEO, AEO y GEO para el mercado árabe",
+      excerpt:
+        "Tus clientes de Emiratos o Marruecos ya preguntan a asistentes de IA antes de comprar. Esta checklist te ayuda a que tu pyme aparezca en esas respuestas.",
+      content: `Si tienes una pyme, un hotel, una tienda online o una consultora en España o Latinoamérica y quieres clientes en el mundo árabe, hay un cambio que conviene entender: **cada vez más compradores preguntan a un asistente de IA antes de buscar en Google**. Y la respuesta suele mencionar solo a unas pocas empresas.
+
+## Tres siglas que conviene conocer
+
+- **SEO:** posicionarte en Google y Bing con las palabras que usan tus clientes.
+- **AEO:** escribir contenido en formato de pregunta y respuesta para que se muestre como respuesta directa.
+- **GEO:** que las herramientas de IA entiendan bien tu empresa y la citen como fuente.
+
+No hace falta ser una gran empresa para trabajarlas. Hace falta orden y constancia.
+
+## Checklist para tu pyme
+
+**Tu identidad**
+
+- [ ] Una frase clara que diga qué haces, para quién y dónde, en la portada de tu web.
+- [ ] El mismo nombre, dirección y servicios en tu web, Google, LinkedIn y directorios.
+- [ ] Reseñas reales en plataformas de confianza, también de clientes internacionales.
+
+**Tu contenido**
+
+- [ ] Una página por servicio, con detalles concretos y no solo frases comerciales.
+- [ ] Preguntas frecuentes reales, con respuestas de una o dos frases.
+- [ ] Una versión de la web en **árabe escrita por un profesional**, no traducida automáticamente.
+
+**La parte técnica**
+
+- [ ] Datos estructurados (schema) para tu empresa, tus servicios y tus preguntas frecuentes.
+- [ ] Etiquetas de idioma (hreflang) para que cada versión llegue a su público.
+- [ ] Una web rápida y que funcione bien en móvil.
+
+**El seguimiento**
+
+- [ ] Preguntar cada mes a los asistentes de IA por tu sector, en árabe y en español, y anotar si apareces.
+- [ ] Revisar en Analytics las visitas que llegan desde herramientas de IA.
+
+## El error más común: el árabe automático
+
+Muchas pymes activan un plugin de traducción automática y dan por hecho que ya tienen web en árabe. El resultado suele ser un texto con errores que un lector árabe detecta en segundos, y que tampoco ayuda a que la IA te recomiende. Para el mercado árabe, la calidad del idioma es parte de tu visibilidad.
+
+## Cómo te puedo ayudar
+
+Trabajo el [marketing digital y la visibilidad en IA](/es/services/digital-marketing) junto con la traducción al árabe desde 2014, así que puedo ocuparme de las dos partes: un árabe natural y una web preparada para aparecer en buscadores e IA. Si quieres saber cómo te ven hoy los asistentes de IA, [escríbeme](/es/contact) y lo revisamos.`,
+    },
+  },
+};
+
+export const codePosts: CodePost[] = [msaVsDialects, glossary, raasVsSaas, aiSearchVisibility];
