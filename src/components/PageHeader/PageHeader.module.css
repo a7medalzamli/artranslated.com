@@ -9,3 +9,11 @@
   color: var(--color-text-muted);
   font-size: var(--font-size-lg);
 }
+
+/* Long titles (blog articles): smaller, so they run across the full width
+   in fewer lines instead of stacking in a narrow block. */
+.titleLong {
+  font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.6rem);
+  line-height: 1.2;
+  max-width: none;
+}

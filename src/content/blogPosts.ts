@@ -21,7 +21,7 @@ export type CodePost = {
 const msaVsDialects: CodePost = {
   slug: "which-arabic-msa-vs-dialects",
   category: "Localization",
-  cover: "/images/blog/which-arabic.png",
+  cover: "/images/blog/which-arabic.jpg",
   publishedAt: "2026-11-01T09:00:00Z",
   updatedAt: "2026-11-01T09:00:00Z",
   text: {
@@ -287,7 +287,7 @@ Elegir la variedad adecuada forma parte de cada proyecto que acepto. Si tienes d
 const glossary: CodePost = {
   slug: "arabic-localization-glossary",
   category: "Terminology",
-  cover: "/images/blog/localization-glossary.png",
+  cover: "/images/blog/localization-glossary.jpg",
   publishedAt: "2026-11-01T10:00:00Z",
   updatedAt: "2026-11-01T10:00:00Z",
   text: {

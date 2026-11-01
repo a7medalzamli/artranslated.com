@@ -16,9 +16,11 @@ type PageHeaderProps = {
   breadcrumbs?: Crumb[];
   breadcrumbLabel?: string;
   locale?: string;
+  /** Smaller title for long headings (blog articles), so it uses the full width. */
+  long?: boolean;
 };
 
-export function PageHeader({ title, description, breadcrumbs, locale }: PageHeaderProps) {
+export function PageHeader({ title, description, breadcrumbs, locale, long }: PageHeaderProps) {
   const crumbLd =
     breadcrumbs && breadcrumbs.length > 1 && locale
       ? {
@@ -38,7 +40,7 @@ export function PageHeader({ title, description, breadcrumbs, locale }: PageHead
     <header className={styles.header}>
       {crumbLd && <JsonLd data={crumbLd} />}
       <Container>
-        <h1 className={styles.title}>{title}</h1>
+        <h1 className={long ? styles.titleLong : styles.title}>{title}</h1>
         {description && <p className={styles.description}>{description}</p>}
       </Container>
     </header>
