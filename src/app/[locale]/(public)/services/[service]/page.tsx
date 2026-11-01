@@ -26,6 +26,7 @@ import { QuoteForm } from "../../contact/QuoteForm";
 import { Testimonials } from "@/components/Testimonials/Testimonials";
 import { AiVisibility } from "@/components/AiVisibility/AiVisibility";
 import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
+import { TrustStrip } from "@/components/Trust/Trust";
 import type { ClusterKey } from "@/content/postCategories";
 import { getFaqs } from "@/content/faqs";
 import styles from "./servicePage.module.css";
@@ -221,6 +222,7 @@ export default async function ServicePage({ params }: { params: Params }) {
 
       {service === "translation" && <Testimonials locale={locale} />}
 
+      <TrustStrip locale={locale} tinted />
       <RelatedGuides locale={locale} clusters={serviceClusters[service]} />
 
       {getFaqs(locale)[service] && (

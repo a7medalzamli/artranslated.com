@@ -4,6 +4,7 @@ import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
 import { SpecializationDetails } from "@/components/SpecializationDetails/SpecializationDetails";
 import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
+import { TrustStrip } from "@/components/Trust/Trust";
 import { getContent, getStaticContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
@@ -75,7 +76,8 @@ export default async function TechnicalPage({ params }: { params: Promise<{ loca
       </Section>
 
       <SpecializationDetails locale={locale} slug="technical" />
-      <RelatedGuides locale={locale} clusters={["industries"]} />
+      <TrustStrip locale={locale} />
+      <RelatedGuides locale={locale} clusters={["industries"]} tinted />
 
       <CTA
         title={s.ctaTitle}

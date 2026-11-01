@@ -5,6 +5,7 @@ import { Section } from "@/components/Section/Section";
 import { CTA } from "@/components/CTA/CTA";
 import { Faq } from "@/components/Faq/Faq";
 import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
+import { TrustStrip } from "@/components/Trust/Trust";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { getSaasPage } from "@/content/saasPage";
 import { getContent } from "@/i18n/content";
@@ -107,7 +108,8 @@ export default async function SaasLocalizationPage({ params }: { params: Promise
         </div>
       </Section>
 
-      <RelatedGuides locale={locale} clusters={["saas"]} />
+      <TrustStrip locale={locale} />
+      <RelatedGuides locale={locale} clusters={["saas"]} tinted />
 
       <Faq title={p.faqTitle} items={p.faqs} />
 

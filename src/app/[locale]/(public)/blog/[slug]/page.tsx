@@ -15,6 +15,8 @@ import { siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { LocaleLink as Link } from "@/components/LocaleLink/LocaleLink";
 import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
+import { AuthorBox } from "@/components/Trust/Trust";
+import { ids } from "@/lib/entity";
 import { clusters } from "@/content/postCategories";
 import styles from "./post.module.css";
 
@@ -88,11 +90,17 @@ export default async function BlogPostPage({
     image: post.cover_image_url ?? undefined,
     datePublished: post.published_at ?? undefined,
     dateModified: post.updated_at,
-    author: { "@type": "Person", name: site.name },
+    // Named author with credentials (E-E-A-T), linked to the person and business in the site-wide graph.
+    author: {
+      "@type": "Person",
+      "@id": ids.person,
+      name: site.name,
+      url: `${siteUrl}/${locale}${routes.about}`,
+    },
     url: `${siteUrl}/${locale}/blog/${post.slug}`,
     mainEntityOfPage: `${siteUrl}/${locale}/blog/${post.slug}`,
     inLanguage: locale,
-    publisher: { "@type": "Person", name: site.name, url: siteUrl },
+    publisher: { "@id": ids.business },
   };
 
   return (
@@ -138,6 +146,8 @@ export default async function BlogPostPage({
             </Link>
           </p>
         )}
+
+        <AuthorBox locale={locale} />
       </Container>
 
       {cluster && (

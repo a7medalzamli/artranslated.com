@@ -12,6 +12,7 @@ import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import serviceStyles from "@/app/[locale]/(public)/services/[service]/servicePage.module.css";
 import { RelatedGuides } from "../RelatedGuides/RelatedGuides";
+import { TrustStrip } from "../Trust/Trust";
 import type { ClusterKey } from "@/content/postCategories";
 import styles from "./InfoPage.module.css";
 
@@ -145,6 +146,8 @@ export async function InfoPageView({
       {clusters && (
         <RelatedGuides locale={locale} clusters={clusters} tinted={sections.length % 2 !== 0} />
       )}
+      {/* Credibility signals; background continues the alternation. */}
+      <TrustStrip locale={locale} tinted={clusters ? sections.length % 2 === 0 : sections.length % 2 !== 0} />
       <CTA
         title={p.ctaTitle}
         description={p.ctaDescription}
