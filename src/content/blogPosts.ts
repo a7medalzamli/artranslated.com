@@ -25,7 +25,7 @@ const msaVsDialects: CodePost = {
   category: "Localization",
   cover: "/images/blog/which-arabic.jpg",
   publishedAt: "2026-11-01T09:00:00Z",
-  updatedAt: "2026-11-01T09:00:00Z",
+  updatedAt: "2026-11-01T14:00:00Z",
   text: {
     en: {
       title: "Which Arabic should you use? Modern Standard Arabic vs dialects",
@@ -91,193 +91,150 @@ Many brands combine both: MSA for the website, product and documentation, and a 
 Choosing the right variety is part of every project I take on. If you are unsure, [tell me about your audience and goals](/en/contact) and I’ll recommend the best option before any translation begins. You can also read about my [consulting service](/en/services/consulting), which covers this decision for larger launches.`,
     },
     ar: {
-      title: "أي عربية تستخدم؟ الفصحى المعاصرة أم اللهجات",
-      seoTitle: "الفصحى أم اللهجات العربية: أي عربية تناسب شركتك؟",
+      title: "الفصحى أم العامية في محتوى علامتك التجارية؟ دليل عملي للمسوّقين العرب",
+      seoTitle: "الفصحى أم العامية في التسويق؟ دليل اختيار لغة علامتك التجارية",
       excerpt:
-        "الفصحى المعاصرة أم الخليجية أم المصرية أم الشامية أم المغاربية؟ دليل عملي لاختيار العربية المناسبة لمستنداتك وموقعك وتطبيقك وتسويقك.",
-      content: `يتحدث العربية أكثر من 400 مليون شخص في أكثر من 20 دولة، لكنها ليست تنوعًا واحدًا. فقبل أن تترجم أي شيء، عليك أن تقرر **أي عربية** سيقرؤها جمهورك. ويعتمد الاختيار الصحيح على نوع ما تنشره ومن سيقرؤه.
+        "هل تكتب منشوراتك بالفصحى أم باللهجة؟ وهل يبحث عملاؤك في Google بالكلمات نفسها؟ دليل عملي لاختيار لغة علامتك التجارية في كل قناة.",
+      content: `كل مسوّق عربي يواجه السؤال نفسه عاجلًا أو آجلًا: **هل نكتب بالفصحى أم بالعامية؟** والإجابة ليست واحدة لكل المحتوى، بل تختلف حسب القناة والجمهور والهدف.
 
-## العربية الفصحى المعاصرة
+## الفصحى ليست «لغة رسمية» فقط
 
-الفصحى المعاصرة هي اللغة المكتوبة المشتركة في العالم العربي. تُستخدم في الصحف والكتب والمستندات الرسمية والعقود والتعليم ونشرات الأخبار ومعظم المواقع الإلكترونية، ويفهمها كل متعلّم ناطق بالعربية من المغرب إلى عُمان.
+يربط كثيرون الفصحى بالأسلوب الجاف أو الرسمي، لكن هناك فصحى مبسّطة وعصرية تستخدمها اليوم علامات تجارية كبيرة في مواقعها وتطبيقاتها: جمل قصيرة، وكلمات مألوفة، ونبرة ودّية. هذه الفصحى يفهمها الجميع من المغرب إلى الخليج، وتمنح العلامة صورة موثوقة ومحترفة.
 
-**استخدم الفصحى في:**
+## متى تنجح العامية؟
 
-- العقود والسياسات والمستندات القانونية والمالية
-- الوثائق التقنية والأدلة ومراكز المساعدة
-- واجهات البرامج والتطبيقات التي تخدم عدة دول
-- مواقع الشركات الموجّهة إلى العالم العربي كله
-- المحتوى الطبي والتعليمي
+تنجح اللهجة المحلية حين تريد أن تبدو **قريبًا وعفويًا** من جمهور بلد بعينه:
 
-ولا يعني ذلك أن تبدو الفصحى جامدة؛ فالمترجم الجيد يكتب فصحى واضحة ومعاصرة بنبرة تناسب علامتك، من الرسمية إلى الودّية.
+- منشورات وسائل التواصل الاجتماعي والإعلانات القصيرة
+- مقاطع الفيديو والإعلانات الصوتية
+- الحملات الموسمية والمحتوى الفكاهي
+- الرسائل المباشرة وخدمة العملاء في بلد واحد
 
-## مجموعات اللهجات الرئيسية
+لكن انتبه: اللهجة الخليجية في حملة موجّهة إلى مصر، أو المصرية في حملة مغاربية، قد تبدو غريبة أو مصطنعة.
 
-يتحدث الناس لهجاتهم المحلية في حياتهم اليومية، وأبرز مجموعاتها:
+## العملاء يبحثون بكلمات مختلفة
 
-- **الخليجية:** السعودية والإمارات والكويت وقطر والبحرين وعُمان
-- **المصرية:** مفهومة على نطاق واسع في المنطقة بفضل السينما والدراما المصرية
-- **الشامية:** فلسطين والأردن ولبنان وسوريا
-- **العراقية:** العراق
-- **المغاربية (الدارجة):** المغرب والجزائر وتونس وليبيا، وهي الأبعد عن الفصحى
+هنا نقطة يغفل عنها كثيرون في **تحسين محركات البحث (SEO)**: الناس لا يبحثون دائمًا بالفصحى. قد يكتب المستخدم «أسعار تكييف» في بلد، و«أسعار مكيف» في بلد آخر، أو يستخدم كلمة إنجليزية مكتوبة بحروف عربية. لذلك:
 
-اللهجات منطوقة في الأساس، لذا نادرًا ما تُستخدم في الكتابة الرسمية، لكنها مناسبة حين تريد أن تبدو قريبًا وشخصيًا من سوق بعينها.
+- ابحث عن الكلمات التي يستخدمها جمهورك فعلًا في كل سوق
+- اكتب صفحاتك بالفصحى، لكن أدخل الكلمات المحلية الشائعة في العناوين والأسئلة الشائعة حيث يكون ذلك طبيعيًا
+- لا تفترض أن ترجمة الكلمة المفتاحية الإنجليزية حرفيًا هي ما يبحث عنه العميل
 
-## أيهما تختار؟
+## قاعدة بسيطة لكل قناة
 
-| المحتوى | العربية المقترحة |
+| القناة | اللغة المقترحة |
 |---|---|
-| العقود والسياسات والتقارير المالية | فصحى رسمية |
-| الأدلة ومراكز المساعدة والوثائق | فصحى واضحة |
-| واجهة تطبيق أو منصة SaaS لعدة دول | فصحى بنبرة بسيطة وودّية |
-| موقع للعالم العربي كله | الفصحى |
-| تسويق لدولة واحدة | فصحى بلمسة محلية، أو لهجة تلك الدولة |
-| وسائل التواصل والإعلانات لسوق واحدة | اللهجة المحلية غالبًا الأفضل أداءً |
-| فيديو لجمهور واسع | الفصحى، أو المصرية للمحتوى غير الرسمي |
-| خدمة العملاء في دولة واحدة | فصحى مبسّطة مع كلمات محلية حيث يكون ذلك طبيعيًا |
+| الموقع الإلكتروني والتطبيق | فصحى مبسّطة وعصرية |
+| المستندات والعقود والسياسات | فصحى رسمية |
+| مركز المساعدة | فصحى واضحة وقصيرة |
+| وسائل التواصل في بلد واحد | لهجة ذلك البلد أو فصحى بنكهة محلية |
+| الإعلانات المدفوعة | حسب السوق المستهدفة لكل حملة |
+| البريد الإلكتروني التسويقي | فصحى ودّية |
 
-## قاعدة عملية
+## اجعل قرارك مكتوبًا
 
-إذا كان جمهورك في **أكثر من دولة**، أو كان المحتوى **رسميًا أو تقنيًا أو طويل الأمد**، فاستخدم الفصحى. وإذا كان المحتوى **قصيرًا وعاطفيًا وموجّهًا إلى دولة واحدة**، كحملة على وسائل التواصل في السعودية، ففكّر في اللهجة المحلية أو فصحى بنكهة محلية.
+أفضل ما تفعله علامتك هو **دليل أسلوب** قصير يحدد: متى نستخدم الفصحى، ومتى نستخدم اللهجة، وكيف نخاطب العميل (أنتَ أم أنتم؟)، وما الكلمات المعتمدة لأسماء المنتجات والخدمات. هذا الدليل يحمي اتساق علامتك مهما تعدّد الكتّاب والمترجمون.
 
-وتجمع علامات تجارية كثيرة بين الاثنين: الفصحى للموقع والمنتج والوثائق، ونبرة محلية خفيفة لوسائل التواصل والحملات، فتبقى العلامة متّسقة وتبدو طبيعية في كل سوق.
+## كيف أساعدك
 
-## أخطاء شائعة يجب تجنّبها
-
-- **خلط اللهجات** في نص واحد، ما يربك القارئ
-- **استخدام اللهجة في المحتوى الرسمي**، ما قد يبدو غير احترافي
-- **كتابة فصحى ثقيلة وقديمة الأسلوب** للتسويق، ما يجعلها بعيدة عن القارئ
-- **ترجمة الشعارات حرفيًا** بدل تكييفها عبر [الترجمة الإبداعية](/ar/services/transcreation)
-
-## لست متأكدًا أي عربية تناسب جمهورك؟
-
-اختيار التنوع المناسب جزء من كل مشروع أعمل عليه. إن لم تكن متأكدًا، [أخبرني عن جمهورك وأهدافك](/ar/contact) وسأقترح الخيار الأنسب قبل بدء الترجمة. ويمكنك أيضًا الاطلاع على [خدمة الاستشارات](/ar/services/consulting) التي تتناول هذا القرار في عمليات الإطلاق الكبيرة.`,
+أكتب وأترجم وأكيّف المحتوى العربي منذ عام 2014، وأساعد العلامات التجارية على اختيار النبرة المناسبة لكل سوق عبر [الاستشارات](/ar/services/consulting) و[الترجمة الإبداعية](/ar/services/transcreation). وإن كنت مترددًا بين الفصحى واللهجة في حملتك القادمة، [فتواصل معي](/ar/contact).`,
     },
     fr: {
-      title: "Quel arabe choisir ? L’arabe standard moderne ou les dialectes",
-      seoTitle: "Arabe standard ou dialectes : quel arabe pour votre entreprise ?",
+      title: "Arabe standard, darija ou arabe du Golfe : quel arabe pour vos marchés ?",
+      seoTitle: "Arabe standard, darija ou arabe du Golfe : quel arabe choisir ?",
       excerpt:
-        "Arabe standard moderne, du Golfe, égyptien, levantin ou maghrébin ? Un guide pratique pour choisir le bon arabe pour vos documents, votre site, votre application et votre marketing.",
-      content: `L’arabe est parlé par plus de 400 millions de personnes dans plus de 20 pays, mais ce n’est pas une seule variété. Avant de traduire quoi que ce soit, vous devez décider **quel arabe** votre public lira. Le bon choix dépend de ce que vous publiez et de qui le lira.
+        "Maghreb ou Moyen-Orient ? Pour une entreprise française, le choix de l’arabe dépend du marché visé. Arabe standard, darija, arabe du Golfe : le guide pour décider.",
+      content: `Pour une entreprise française, « traduire en arabe » n’est pas une décision unique. Viser Casablanca, Alger, Tunis, Le Caire, Dubaï ou Riyad n’implique ni le même public, ni les mêmes habitudes linguistiques. Avant de lancer une traduction, il faut savoir **quel arabe** parler à qui.
 
-## L’arabe standard moderne (ASM)
+## L’arabe standard moderne, socle commun
 
-L’arabe standard moderne, appelé *al-fuṣḥā* en arabe, est la langue écrite commune du monde arabe. On l’utilise dans la presse, les livres, les documents officiels, les contrats, l’enseignement, les journaux télévisés et la plupart des sites web. Tout arabophone instruit le comprend, du Maroc à Oman.
+L’arabe standard moderne (ASM) est la langue écrite commune à tous les pays arabes : presse, administration, contrats, enseignement, la plupart des sites institutionnels. Il est compris partout. Pour un site d’entreprise, une documentation, une application ou des conditions générales destinés à plusieurs pays, c’est le choix le plus sûr.
 
-**Utilisez l’ASM pour :**
+## Le Maghreb : un cas particulier
 
-- Les contrats, politiques, documents juridiques et financiers
-- La documentation technique, les manuels et les centres d’aide
-- Les interfaces de logiciels et d’applications destinées à plusieurs pays
-- Les sites d’entreprise visant l’ensemble du monde arabe
-- Les contenus médicaux et éducatifs
+Au Maroc, en Algérie et en Tunisie, la situation est singulière :
 
-L’ASM n’a pas à sonner rigide : un bon traducteur écrit un arabe standard clair et moderne, avec un ton adapté à votre marque, du plus formel au plus convivial.
+- **la darija** (l’arabe dialectal maghrébin) est la langue du quotidien, très différente de l’arabe standard et parfois difficile à comprendre pour un public du Moyen-Orient ;
+- **le français** reste très présent dans les affaires, l’enseignement supérieur et une partie de l’administration ;
+- **l’arabe standard** domine l’écrit officiel et les médias.
 
-## Les principaux groupes de dialectes
+Conséquence pratique : pour le Maghreb, un contenu en français peut suffire pour certains publics professionnels, mais une version en arabe standard élargit nettement votre audience. Pour une campagne grand public sur les réseaux sociaux, une touche de darija peut créer de la proximité, à condition d’être écrite par quelqu’un qui la maîtrise.
 
-Au quotidien, on parle son dialecte local. Les principaux groupes sont :
+## Le Golfe et le Moyen-Orient
 
-- **Golfe (khaliji) :** Arabie saoudite, Émirats arabes unis, Koweït, Qatar, Bahreïn et Oman
-- **Égyptien :** largement compris dans la région grâce au cinéma et aux séries égyptiens
-- **Levantin (shami) :** Palestine, Jordanie, Liban et Syrie
-- **Irakien :** Irak
-- **Maghrébin (darija) :** Maroc, Algérie, Tunisie et Libye, le plus éloigné de l’ASM
+Dans le Golfe (Arabie saoudite, Émirats, Qatar, Koweït…), l’anglais est très présent dans les affaires, mais l’arabe reste indispensable pour toucher le grand public et les institutions. On y privilégie un arabe standard moderne, clair et soigné, avec parfois une touche du dialecte du Golfe dans le marketing local. En Égypte, le dialecte égyptien est compris dans toute la région grâce au cinéma et aux séries, ce qui en fait une option pour certains contenus vidéo informels.
 
-Les dialectes sont surtout parlés et rarement utilisés à l’écrit formel. Ils fonctionnent bien quand vous voulez paraître proche d’un marché précis.
+## Grille de décision
 
-## Lequel choisir ?
-
-| Contenu | Arabe recommandé |
+| Votre projet | Choix recommandé |
 |---|---|
-| Contrats, politiques, rapports financiers | ASM formel |
-| Manuels, centres d’aide, documentation | ASM clair |
-| Interface d’application ou de SaaS pour plusieurs pays | ASM au ton simple et convivial |
-| Site web pour tout le monde arabe | ASM |
-| Marketing pour un seul pays | ASM avec une touche locale, ou le dialecte du pays |
-| Réseaux sociaux et publicités pour un seul marché | Le dialecte local est souvent le plus efficace |
-| Vidéo pour un large public | ASM, ou égyptien pour un contenu informel |
-| Service client dans un seul pays | ASM simple, avec des mots locaux quand c’est naturel |
+| Site institutionnel pour plusieurs pays arabes | Arabe standard |
+| Contrats, CGV, documentation | Arabe standard formel |
+| Campagne réseaux sociaux au Maroc | Darija ou arabe standard avec touche locale |
+| Clientèle B2B au Maghreb | Français et arabe standard |
+| Marketing grand public dans le Golfe | Arabe standard, avec touche du Golfe si pertinent |
+| Vidéo informelle pour un large public | Arabe standard, ou égyptien |
 
-## Une règle pratique
+## Le piège à éviter
 
-Si votre public se trouve dans **plusieurs pays**, ou si le contenu est **officiel, technique ou durable**, utilisez l’ASM. Si votre contenu est **court, émotionnel et destiné à un seul pays**, comme une campagne sur les réseaux sociaux en Arabie saoudite, envisagez le dialecte local ou un ASM aux accents locaux.
+Traduire le même texte français mot à mot pour tous les marchés arabes. Les références culturelles, le ton et même certains termes changent d’un pays à l’autre. Un slogan qui fonctionne à Paris peut tomber à plat à Riyad : c’est le rôle de la [transcréation](/fr/services/transcreation).
 
-Beaucoup de marques combinent les deux : l’ASM pour le site, le produit et la documentation, et un ton local léger pour les réseaux sociaux et les campagnes. La marque reste cohérente tout en sonnant naturelle sur chaque marché.
+## Mon accompagnement
 
-## Erreurs fréquentes à éviter
-
-- **Mélanger les dialectes** dans un même texte, ce qui déroute le lecteur
-- **Utiliser un dialecte pour un contenu formel**, ce qui peut paraître peu professionnel
-- **Écrire un ASM lourd et vieilli** pour le marketing, ce qui crée de la distance
-- **Traduire les slogans mot à mot** au lieu de les adapter par la [transcréation](/fr/services/transcreation)
-
-## Vous hésitez sur l’arabe qui convient à votre public ?
-
-Le choix de la bonne variété fait partie de chaque projet que j’accepte. En cas de doute, [parlez-moi de votre public et de vos objectifs](/fr/contact) et je vous recommanderai la meilleure option avant le début de la traduction. Vous pouvez aussi découvrir mon [service de conseil](/fr/services/consulting), qui couvre cette décision pour les lancements plus importants.`,
+Je traduis vers l’arabe depuis 2014, notamment depuis le français, et j’aide les entreprises à choisir la bonne variété pour chaque marché dans le cadre de mon [service de conseil](/fr/services/consulting). Vous hésitez entre Maghreb et Golfe, arabe standard et dialecte ? [Parlons de votre projet](/fr/contact).`,
     },
     es: {
-      title: "¿Qué árabe usar? Árabe estándar moderno o dialectos",
-      seoTitle: "Árabe estándar o dialectos: ¿qué árabe necesita tu empresa?",
+      title: "¿Existe un «árabe neutro»? Cómo elegir el árabe adecuado si vienes del mundo hispano",
+      seoTitle: "¿Existe un árabe neutro? Árabe estándar y dialectos explicados para hispanohablantes",
       excerpt:
-        "¿Árabe estándar moderno, del Golfo, egipcio, levantino o magrebí? Una guía práctica para elegir el árabe adecuado para tus documentos, tu web, tu app y tu marketing.",
-      content: `El árabe lo hablan más de 400 millones de personas en más de 20 países, pero no es una sola variedad. Antes de traducir nada, tienes que decidir **qué árabe** va a leer tu público. La elección correcta depende de lo que publiques y de quién lo vaya a leer.
+        "Igual que el español tiene variantes y un «español neutro», el árabe tiene un estándar común y muchos dialectos. Una guía pensada para empresas de España y Latinoamérica.",
+      content: `Si trabajas en una empresa de España o Latinoamérica, ya conoces el problema: ¿escribimos para México, para Argentina o para España? ¿Usamos «tú», «vos» o «usted»? Muchas marcas resuelven esto con un **español neutro** que entienden todos.
 
-## Árabe estándar moderno (AEM)
+El árabe tiene una situación parecida, pero aún más marcada.
 
-El árabe estándar moderno, llamado *al-fuṣḥā* en árabe, es la lengua escrita común del mundo árabe. Se usa en la prensa, los libros, los documentos oficiales, los contratos, la educación, los informativos y la mayoría de los sitios web. Cualquier hablante de árabe con estudios lo entiende, de Marruecos a Omán.
+## El árabe estándar: el «árabe neutro»
 
-**Usa el AEM para:**
+El **árabe estándar moderno** es la lengua escrita común de todos los países árabes. Es el árabe de la prensa, los libros, los contratos, la televisión informativa y la mayoría de las webs. Cualquier persona con estudios lo entiende, de Marruecos a Omán.
 
-- Contratos, políticas, documentos jurídicos y financieros
-- Documentación técnica, manuales y centros de ayuda
-- Interfaces de software y apps para varios países
-- Webs corporativas dirigidas a todo el mundo árabe
-- Contenido sanitario y educativo
+Es, por tanto, lo más parecido a un «árabe neutro», y es la elección adecuada para:
 
-El AEM no tiene por qué sonar rígido: un buen traductor escribe un árabe estándar claro y moderno, con un tono adecuado a tu marca, de formal a cercano.
+- webs corporativas y tiendas online para varios países
+- apps y plataformas de software
+- documentación técnica, contratos y políticas
+- contenido sanitario, educativo o institucional
 
-## Los principales grupos de dialectos
+## La gran diferencia con el español
 
-En el día a día, la gente habla su dialecto local. Los grupos principales son:
+Entre el español de Madrid y el de Buenos Aires hay diferencias, pero se entienden sin esfuerzo. Entre los **dialectos árabes**, la distancia puede ser mucho mayor: un marroquí y un iraquí hablando cada uno su dialecto pueden tener dificultades para entenderse. Por eso los dialectos casi nunca se usan para textos formales escritos.
 
-- **Del Golfo (jaliyi):** Arabia Saudí, Emiratos Árabes Unidos, Kuwait, Catar, Baréin y Omán
-- **Egipcio:** muy entendido en toda la región gracias al cine y las series egipcias
-- **Levantino (shami):** Palestina, Jordania, Líbano y Siria
-- **Iraquí:** Irak
-- **Magrebí (dariya):** Marruecos, Argelia, Túnez y Libia, el más alejado del AEM
+Los grandes grupos son:
 
-Los dialectos son sobre todo orales, así que rara vez se usan en la escritura formal. Funcionan bien cuando quieres sonar cercano a un mercado concreto.
+- **Golfo:** Arabia Saudí, Emiratos, Kuwait, Catar, Baréin y Omán
+- **Egipcio:** muy conocido en toda la región por el cine y las series
+- **Levantino:** Palestina, Jordania, Líbano y Siria
+- **Magrebí (dariya):** Marruecos, Argelia, Túnez y Libia
 
-## ¿Cuál elegir?
+## Dos mercados que interesan especialmente
 
-| Contenido | Árabe recomendado |
+**Marruecos**, por cercanía con España, comercio y turismo: la dariya es la lengua del día a día, el árabe estándar domina lo escrito y el francés está muy presente en los negocios. Para una web, árabe estándar; para redes sociales locales, la dariya puede acercarte al público.
+
+**Los países del Golfo**, por turismo, inversión y comercio: el inglés se usa mucho en los negocios, pero para llegar al gran público necesitas un árabe estándar cuidado, con un toque local en el marketing si quieres sonar cercano.
+
+## Cómo decidir
+
+| Tu contenido | Árabe recomendado |
 |---|---|
-| Contratos, políticas, informes financieros | AEM formal |
-| Manuales, centros de ayuda, documentación | AEM claro |
-| Interfaz de app o SaaS para varios países | AEM con un tono sencillo y cercano |
-| Web para todo el mundo árabe | AEM |
-| Marketing para un solo país | AEM con un toque local, o el dialecto de ese país |
-| Redes sociales y anuncios para un solo mercado | El dialecto local suele funcionar mejor |
-| Vídeo para un público amplio | AEM, o egipcio para contenido informal |
-| Atención al cliente en un solo país | AEM sencillo, con palabras locales cuando resulte natural |
+| Web o app para varios países | Árabe estándar |
+| Contratos, políticas, manuales | Árabe estándar formal |
+| Campaña en redes en un solo país | Dialecto local o estándar con toque local |
+| Vídeo informal para mucho público | Árabe estándar o egipcio |
+| Atención al cliente en un país | Árabe estándar sencillo |
 
-## Una regla práctica
+## Un consejo final
 
-Si tu público está en **más de un país**, o el contenido es **oficial, técnico o duradero**, usa el AEM. Si tu contenido es **breve, emotivo y dirigido a un solo país**, como una campaña en redes sociales en Arabia Saudí, plantéate el dialecto local o un AEM con sabor local.
+No traduzcas tu eslogan palabra por palabra. Igual que un chiste de Madrid puede no funcionar en Lima, una frase publicitaria pensada en español rara vez funciona igual en árabe. Para eso existe la [transcreación](/es/services/transcreation).
 
-Muchas marcas combinan ambos: AEM para la web, el producto y la documentación, y un tono local ligero para redes sociales y campañas. Así la marca se mantiene coherente y suena natural en cada mercado.
-
-## Errores frecuentes que debes evitar
-
-- **Mezclar dialectos** en un mismo texto, lo que confunde al lector
-- **Usar un dialecto en contenido formal**, lo que puede parecer poco profesional
-- **Escribir un AEM pesado y anticuado** para marketing, lo que resulta distante
-- **Traducir eslóganes palabra por palabra** en lugar de adaptarlos con la [transcreación](/es/services/transcreation)
-
-## ¿No sabes qué árabe encaja con tu público?
-
-Elegir la variedad adecuada forma parte de cada proyecto que acepto. Si tienes dudas, [cuéntame tu público y tus objetivos](/es/contact) y te recomendaré la mejor opción antes de empezar a traducir. También puedes conocer mi [servicio de consultoría](/es/services/consulting), que cubre esta decisión en lanzamientos más grandes.`,
+Traduzco al árabe desde el español desde hace años y ayudo a empresas hispanas a elegir la variedad adecuada para cada mercado con mi [servicio de consultoría](/es/services/consulting). ¿Dudas sobre qué árabe usar? [Cuéntame tu proyecto](/es/contact).`,
     },
   },
 };
@@ -291,7 +248,7 @@ const glossary: CodePost = {
   category: "Terminology",
   cover: "/images/blog/localization-glossary.jpg",
   publishedAt: "2026-11-01T10:00:00Z",
-  updatedAt: "2026-11-01T10:00:00Z",
+  updatedAt: "2026-11-01T14:00:00Z",
   text: {
     en: {
       title: "Arabic localization glossary: 15 terms explained simply",
@@ -365,217 +322,139 @@ Recreating a message, such as a slogan or campaign, so it has the same effect in
 If a quote or a vendor form uses a term you don’t recognize, [just ask me](/en/contact). I’m happy to explain how it applies to your project.`,
     },
     ar: {
-      title: "مسرد مصطلحات التوطين: 15 مصطلحًا بشرح مبسّط",
-      seoTitle: "مسرد مصطلحات الترجمة والتوطين: MTPE وLQA وTEP وأدوات CAT",
+      title: "مصطلحات ستقرؤها في عروض أسعار الترجمة: دليل العميل العربي",
+      seoTitle: "مصطلحات عروض أسعار الترجمة والتوطين: دليل مبسّط للعميل العربي",
       excerpt:
-        "MTPE وLQA وTEP وأدوات CAT وذاكرة الترجمة (TM) والكتابة من اليمين إلى اليسار (RTL)… قطاع الترجمة مليء بالاختصارات، وإليك شرحها بلغة بسيطة.",
-      content: `إن تلقيت يومًا عرض سعر أو نموذج تسجيل من وكالة ترجمة، فربما واجهت سيلًا من الاختصارات. يشرح هذا المسرد أكثر المصطلحات شيوعًا بلغة بسيطة، مع ملاحظات حول معناها في العربية.
+        "تصلك عروض الأسعار والعقود مليئة بمصطلحات مثل TEP وMTPE وTM وLQA؟ هذا الدليل يشرحها بالعربية مع اختصاراتها الإنجليزية، لتعرف بالضبط ما الذي تدفع مقابله.",
+      content: `حين تطلب ترجمة موقعك أو تطبيقك أو مستنداتك من مترجم أو وكالة، قد يصلك عرض سعر مليء بمصطلحات واختصارات إنجليزية. ولأن معظم هذه المصطلحات تُستخدم في القطاع كما هي، جمعت لك أهمها مع مقابلها العربي وشرح مبسّط لما يعنيه لك كعميل.
 
-## التوطين (Localization)
+## مصطلحات الخدمة
 
-تكييف المنتج أو المحتوى لسوق بعينها، لا مجرد ترجمة الكلمات. ويشمل في العربية اتجاه الكتابة من اليمين إلى اليسار (RTL) والتواريخ والأرقام والعملات والصور والمراجع الثقافية. انظر [توطين SaaS](/ar/services/saas-localization).
+**الترجمة والتحرير والتدقيق (TEP):** سير العمل المعياري للجودة: ترجمة، ثم مراجعة الترجمة مقابل النص الأصلي، ثم تدقيق النص العربي النهائي. إذا رأيت TEP في العرض، فأنت تحصل على ثلاث مراحل لا مرحلة واحدة.
 
-## التدويل (i18n)
+**التحرير اللاحق للترجمة الآلية (MTPE):** يصحّح مترجم بشري نصًا أنتجته الترجمة الآلية (MT). وهو مناسب للأحجام الكبيرة والمحتوى الداخلي، لكنه يختلف عن الترجمة البشرية الكاملة. انظر [خدمة MTPE](/ar/services/mtpe).
 
-تهيئة البرمجيات لتكون *قابلة* للتوطين لاحقًا: فصل النصوص عن الشيفرة، ودعم اللغات التي تُكتب من اليمين إلى اليسار، وترك مساحة للنصوص الأطول. ويرمز «i18n» إلى الأحرف الثمانية عشر بين «i» و«n» في الكلمة الإنجليزية.
+**الترجمة الإبداعية (Transcreation):** إعادة صياغة الشعارات والحملات لتؤدي الأثر نفسه في الثقافة العربية، لا ترجمتها حرفيًا. وغالبًا ما تُسعَّر حسب المشروع لا حسب الكلمة. انظر [الترجمة الإبداعية](/ar/services/transcreation).
 
-## الكتابة من اليمين إلى اليسار (RTL)
+**التوطين (Localization):** تكييف المنتج أو الموقع كله للسوق العربية: النصوص، والاتجاه من اليمين إلى اليسار (RTL)، والتواريخ، والعملات، والصور.
 
-تُكتب العربية من اليمين إلى اليسار، فيجب أن تنعكس واجهات المواقع والتطبيقات، بما فيها القوائم والأيقونات والأسهم وأشرطة التقدّم، بينما تبقى الأرقام والكلمات اللاتينية من اليسار إلى اليمين داخل النص العربي.
+## مصطلحات الأدوات والحساب
 
-## النص المصدر والنص الهدف
+**أدوات الترجمة بمساعدة الحاسوب (CAT):** برامج مثل Trados وmemoQ يعمل بها المترجم. ليست ترجمة آلية، بل تساعده على الاتساق وتحفظ تنسيق ملفاتك.
 
-**المصدر** هو النص الأصلي، و**الهدف** هو الترجمة. وعادةً ما تُسعَّر الترجمة لكل كلمة في النص المصدر.
+**ذاكرة الترجمة (TM):** قاعدة بيانات بالجمل التي سبقت ترجمتها لك. وهي ملك لمشروعك، وتجعل التحديثات اللاحقة أسرع وأكثر اتساقًا. اسأل دائمًا: هل سأحصل على نسخة من ذاكرة الترجمة (TM)؟
 
-## أدوات الترجمة بمساعدة الحاسوب (CAT)
+**التكرارات والتطابقات (Repetitions / Matches):** الجمل المكررة داخل ملفك، أو الموجودة سابقًا في ذاكرة الترجمة (TM). قد تظهر في العرض كبنود منفصلة لأنها تحتاج إلى جهد أقل من النص الجديد.
 
-برامج مثل Trados وmemoQ وWordfast. وهي ليست ترجمة آلية، بل تساعد المترجم البشري على العمل باتساق باستخدام ذاكرات الترجمة (TM) والمسارد، وتحافظ على تنسيق الملف.
+**عدد الكلمات المصدرية (Source word count):** عدد كلمات النص الأصلي، وهو الأساس المعتاد لحساب حجم مشروع الترجمة.
 
-## ذاكرة الترجمة (TM)
+**المسرد (Glossary):** قائمة بالمصطلحات المعتمدة لعلامتك ومنتجاتك. وإعداده في بداية المشروع يوفّر عليك تصحيحات كثيرة لاحقًا.
 
-قاعدة بيانات بالجمل التي سبقت ترجمتها. فإذا تكررت الجملة نفسها أو جملة مشابهة، يُعاد استخدامها، فتبقى الصياغة متّسقة وتصبح التحديثات أسرع.
+## مصطلحات الجودة
 
-## التطابق الجزئي (Fuzzy match)
+**ضمان الجودة (QA):** الفحوص التي تُجرى قبل التسليم، يدويًا وبأدوات متخصصة، للتأكد من الأرقام والمصطلحات والتنسيق.
 
-جملة *مشابهة* لجملة في ذاكرة الترجمة (TM) لكنها غير مطابقة تمامًا، فيراجعها المترجم ويعدّلها بدل ترجمتها من الصفر.
+**تقييم جودة اللغة (LQA):** تقييم موضوعي للترجمة تُسجَّل فيه الأخطاء حسب نوعها وخطورتها، وينتج عنه درجة جودة وتقرير. مفيد إذا أردت التحقق من جودة ترجمة استلمتها من جهة أخرى. انظر [التحرير والتدقيق](/ar/services/editing).
 
-## المسرد أو قاعدة المصطلحات (Termbase)
+**اتفاقية عدم الإفصاح (NDA):** اتفاقية تضمن سرية ملفاتك. يمكنك طلب توقيعها قبل إرسال أي مستند.
 
-قائمة بالترجمات المعتمدة لمصطلحاتك الأساسية، كأسماء المنتجات والميزات ومفردات القطاع، تضمن اتساق كل مترجم وكل مستند.
+## نصيحة أخيرة
 
-## الترجمة الآلية (MT)
-
-ترجمة تنتجها البرامج تلقائيًا. وهي سريعة، لكنها في العربية تخطئ كثيرًا في القواعد والتذكير والتأنيث والمصطلحات والنبرة.
-
-## التحرير اللاحق للترجمة الآلية (MTPE)
-
-يصحّح لغوي بشري مخرجات الترجمة الآلية (MT). فـ**التحرير الخفيف** يجعلها دقيقة ومفهومة، و**التحرير الكامل** يجعلها تُقرأ كأنها مكتوبة بيد إنسان. انظر [MTPE](/ar/services/mtpe).
-
-## الترجمة والتحرير والتدقيق (TEP)
-
-سير عمل الجودة المعياري: خطوة للترجمة، وثانية لمقارنة الترجمة بالمصدر (التحرير)، وأخيرة لفحص النص العربي نفسه (التدقيق).
-
-## التحرير مقابل التدقيق
-
-**التحرير** ثنائي اللغة: تُراجَع الترجمة مقابل المصدر. و**التدقيق** أحادي اللغة: يُفحص النص العربي النهائي من حيث القواعد والإملاء وعلامات الترقيم والتنسيق. انظر [التحرير والتدقيق](/ar/services/editing).
-
-## تقييم جودة اللغة (LQA)
-
-طريقة موضوعية لقياس جودة الترجمة: تُسجَّل الأخطاء حسب الفئة، كالدقة أو المصطلحات أو الأسلوب، وحسب الخطورة، ثم تتحول إلى درجة جودة وتقرير.
-
-## إطار MQM
-
-مقاييس الجودة متعددة الأبعاد، وهو إطار شائع يحدد فئات الأخطاء ودرجات خطورتها المستخدمة في تقييم الجودة (LQA).
-
-## الترجمة الإبداعية (Transcreation)
-
-إعادة صياغة الرسالة، كالشعار أو الحملة، لتُحدث الأثر نفسه في ثقافة أخرى، بدل ترجمتها حرفيًا. وغالبًا ما تُرفق بـ**ترجمة عكسية** إلى الإنجليزية لتعرف ما يقوله النص العربي. انظر [الترجمة الإبداعية](/ar/services/transcreation).
-
-## هل لديك مصطلح غير موجود هنا؟
-
-إذا ورد في عرض سعر أو نموذج تسجيل مصطلح لا تعرفه، [فاسألني](/ar/contact). يسعدني أن أشرح كيف ينطبق على مشروعك.`,
+إن ورد في عرض السعر مصطلح لا تعرفه، فاسأل عنه قبل الموافقة. المزوّد المحترف يشرح لك بوضوح ما الذي تدفع مقابله. وإن أردت عرض سعر واضحًا لمشروعك، [فتواصل معي](/ar/contact).`,
     },
     fr: {
-      title: "Glossaire de la localisation en arabe : 15 termes expliqués simplement",
-      seoTitle: "Glossaire de la traduction et de la localisation : MTPE, LQA, TEP, TAO",
+      title: "Comment lire un devis de traduction : les termes à connaître",
+      seoTitle: "Lire un devis de traduction : mots source, TAO, mémoire, révision, LQA",
       excerpt:
-        "MTPE, LQA, TEP, outils de TAO, mémoire de traduction, RTL… Le secteur de la traduction regorge d’abréviations. Les voici, expliquées simplement.",
-      content: `Si vous avez déjà reçu un devis ou un formulaire prestataire d’une agence de traduction, vous avez sans doute croisé une avalanche d’abréviations. Ce glossaire explique les termes les plus courants en langage simple, avec ce qu’ils impliquent pour l’arabe.
+        "Mots source, répétitions, correspondances, révision, relecture, PAO, post-édition… Les termes qui figurent sur un devis de traduction, expliqués pour les acheteurs.",
+      content: `Un devis de traduction peut sembler opaque la première fois qu’on en reçoit un. Lignes séparées pour les « répétitions », mention de « TAO », distinction entre « révision » et « relecture »… Voici les termes que vous croiserez le plus souvent, et ce qu’ils signifient concrètement pour vous.
 
-## Localisation
+## Le volume
 
-Adapter un produit ou un contenu à un marché précis, pas seulement en traduire les mots. Pour l’arabe, cela inclut la mise en page de droite à gauche, les dates, les nombres, les devises, les images et les références culturelles. Voir [localisation SaaS](/fr/services/saas-localization).
+**Mots source.** La traduction se compte généralement sur le nombre de mots du document d’origine, et non de la traduction. Un texte français et sa version arabe n’ont d’ailleurs pas le même nombre de mots.
 
-## Internationalisation (i18n)
+**Répétitions.** Les phrases qui apparaissent plusieurs fois dans vos fichiers. Elles demandent moins de travail que le texte nouveau, c’est pourquoi elles figurent souvent sur une ligne à part.
 
-Préparer un logiciel pour qu’il *puisse* être localisé ensuite : séparer le texte du code, prendre en charge les langues de droite à gauche et prévoir de la place pour des textes plus longs. « i18n » désigne les 18 lettres entre le « i » et le « n » du mot anglais.
+**Correspondances (matches).** Les phrases déjà traduites lors de projets précédents et enregistrées dans votre mémoire de traduction. On parle de correspondance exacte (100 %) ou partielle (*fuzzy match*) lorsqu’une phrase est seulement proche.
 
-## Droite à gauche (RTL)
+## Les outils
 
-L’arabe s’écrit de droite à gauche. Sites et applications doivent inverser leur mise en page, y compris menus, icônes, flèches et barres de progression, tandis que les chiffres et les mots en caractères latins se lisent toujours de gauche à droite dans le texte arabe.
+**TAO (traduction assistée par ordinateur).** Des logiciels comme Trados, memoQ ou Wordfast, qui aident le traducteur à rester cohérent et conservent la mise en forme de vos fichiers. Ce n’est **pas** de la traduction automatique.
 
-## Source et cible
+**Mémoire de traduction.** La base de vos phrases déjà traduites. Elle appartient à votre projet : n’hésitez pas à en demander une copie, elle vous servira pour les mises à jour et si vous changez de prestataire.
 
-La **source** est le texte d’origine ; la **cible** est la traduction. La traduction est généralement facturée au mot source.
+**Glossaire.** La liste de vos termes validés (noms de produits, vocabulaire métier). Il garantit que tous les traducteurs utilisent les mêmes mots.
 
-## Outil de TAO
+## Les étapes de qualité
 
-Logiciel de traduction assistée par ordinateur, comme Trados, memoQ ou Wordfast. Ce n’est pas de la traduction automatique : il aide le traducteur humain à travailler de façon cohérente grâce aux mémoires de traduction et aux glossaires, et il préserve la mise en forme du fichier.
+**Traduction.** Le premier passage, réalisé par un traducteur professionnel de langue maternelle.
 
-## Mémoire de traduction (TM)
+**Révision.** Un contrôle **bilingue** : le texte traduit est comparé à l’original pour vérifier l’exactitude, les omissions et la terminologie.
 
-Une base de données des phrases déjà traduites. Lorsqu’une phrase identique ou proche réapparaît, elle est réutilisée, ce qui garantit la cohérence et accélère les mises à jour.
+**Relecture.** Un contrôle **unilingue** du texte final : grammaire, orthographe, ponctuation, mise en forme.
 
-## Correspondance partielle (fuzzy match)
+**LQA (évaluation de la qualité linguistique).** Une notation objective de la traduction, erreur par erreur, avec un rapport. Utile pour contrôler un prestataire ou valider un lot important. Voir [révision et relecture](/fr/services/editing).
 
-Une phrase *proche*, mais pas identique, d’une phrase de la mémoire de traduction. Le traducteur la vérifie et l’ajuste au lieu de tout retraduire.
+## Les options
 
-## Glossaire ou base terminologique
+**Post-édition (MTPE).** Correction humaine d’une traduction automatique, légère ou complète selon l’usage du texte. Voir [MTPE](/fr/services/mtpe).
 
-Une liste des traductions validées de vos termes clés, comme les noms de produits, les fonctionnalités et le vocabulaire du secteur. Elle assure la cohérence de chaque traducteur et de chaque document.
+**PAO (publication assistée par ordinateur).** La remise en page du document traduit, particulièrement importante pour l’arabe, qui s’écrit de droite à gauche.
 
-## Traduction automatique (TA)
+**Urgence.** Un délai plus court que le rythme habituel du traducteur, qui peut demander une organisation particulière.
 
-Une traduction produite automatiquement par un logiciel. Rapide, mais en arabe elle commet souvent des erreurs de grammaire, d’accord en genre, de terminologie et de ton.
+## Avant de signer
 
-## MTPE (post-édition de traduction automatique)
-
-Un linguiste humain corrige la traduction automatique. La **post-édition légère** la rend exacte et compréhensible ; la **post-édition complète** la rend aussi naturelle qu’un texte écrit par un humain. Voir [MTPE](/fr/services/mtpe).
-
-## TEP (traduction, révision, relecture)
-
-Le processus qualité standard : une étape de traduction, une deuxième qui compare la traduction à la source (révision) et une dernière qui vérifie l’arabe lui-même (relecture).
-
-## Révision ou relecture
-
-La **révision** est bilingue : la traduction est comparée à la source. La **relecture** est unilingue : l’arabe final est vérifié pour la grammaire, l’orthographe, la ponctuation et la mise en forme. Voir [révision et relecture](/fr/services/editing).
-
-## LQA (évaluation de la qualité linguistique)
-
-Une méthode objective pour mesurer la qualité d’une traduction. Les erreurs sont consignées par catégorie, comme l’exactitude, la terminologie ou le style, et par gravité, puis converties en note de qualité et en rapport.
-
-## MQM
-
-Multidimensional Quality Metrics, un référentiel très utilisé qui définit les catégories d’erreurs et les niveaux de gravité employés en LQA.
-
-## Transcréation
-
-Recréer un message, comme un slogan ou une campagne, pour qu’il produise le même effet dans une autre culture, au lieu de le traduire mot à mot. Elle s’accompagne souvent d’une **rétrotraduction** pour que vous sachiez ce que dit le texte arabe. Voir [transcréation](/fr/services/transcreation).
-
-## Un terme manque à l’appel ?
-
-Si un devis ou un formulaire prestataire contient un terme que vous ne connaissez pas, [demandez-moi](/fr/contact). Je vous expliquerai volontiers ce qu’il signifie pour votre projet.`,
+Vérifiez que le devis précise : les langues, le volume, les étapes de qualité incluses, le format de livraison, le délai et les conditions de confidentialité. Un bon prestataire répond volontiers à vos questions. Pour un devis clair sur votre projet vers l’arabe, [contactez-moi](/fr/contact).`,
     },
     es: {
-      title: "Glosario de localización al árabe: 15 términos explicados de forma sencilla",
-      seoTitle: "Glosario de traducción y localización: MTPE, LQA, TEP, TAO y más",
+      title: "Diccionario técnico del árabe para gestores de proyecto y desarrolladores",
+      seoTitle: "Localizar software al árabe: RTL, plurales, números y calendario explicados",
       excerpt:
-        "MTPE, LQA, TEP, herramientas TAO, memoria de traducción, RTL… El sector de la traducción está lleno de siglas. Aquí las tienes, explicadas con sencillez.",
-      content: `Si alguna vez has recibido un presupuesto o un formulario de proveedor de una agencia de traducción, seguramente te has encontrado con un aluvión de siglas. Este glosario explica los términos más habituales en lenguaje sencillo, con lo que significan para el árabe.
+        "RTL, seis formas de plural, cifras arábigas orientales, calendario hégira… Lo que todo gestor de proyecto o desarrollador debe saber antes de localizar una app al árabe.",
+      content: `Si eres gestor de proyecto, product manager o desarrollador y te toca lanzar una app o una web en árabe, descubrirás que no basta con «traducir los textos». El árabe tiene particularidades técnicas que conviene conocer **antes** de empezar. Este pequeño diccionario reúne las más importantes.
 
-## Localización
+## RTL (de derecha a izquierda)
 
-Adaptar un producto o contenido a un mercado concreto, no solo traducir sus palabras. En árabe incluye el diseño de derecha a izquierda, las fechas, los números, las monedas, las imágenes y las referencias culturales. Consulta [localización de SaaS](/es/services/saas-localization).
+El árabe se escribe de derecha a izquierda. Toda la interfaz debe reflejarse: menús, iconos de flecha, barras de progreso, carruseles y la posición de los botones. Lo que no se invierte: los números, los fragmentos en alfabeto latino (como nombres de marca o URLs) y ciertos iconos, como el de reproducir un vídeo.
 
-## Internacionalización (i18n)
+## Texto bidireccional (bidi)
 
-Preparar el software para que *pueda* localizarse después: separar el texto del código, admitir idiomas de derecha a izquierda y dejar espacio para textos más largos. «i18n» se refiere a las 18 letras entre la «i» y la «n» de la palabra inglesa.
+Cuando una frase árabe incluye palabras en inglés o números, el texto mezcla dos direcciones. Si la interfaz no lo gestiona bien, aparecen signos de puntuación en el lugar equivocado o frases desordenadas. Es uno de los fallos más visibles en apps mal localizadas.
 
-## De derecha a izquierda (RTL)
+## Plurales
 
-El árabe se escribe de derecha a izquierda. Webs y apps deben invertir su diseño, incluidos menús, iconos, flechas y barras de progreso, mientras que los números y las palabras en alfabeto latino se siguen leyendo de izquierda a derecha dentro del texto árabe.
+El español tiene dos formas: singular y plural. El árabe distingue hasta **seis categorías** gramaticales en las reglas de software (cero, uno, dos, pocos, muchos y otros). Si tu código solo prevé «1 elemento / X elementos», el árabe mostrará frases incorrectas. Usa bibliotecas que admitan las reglas de plural de cada idioma.
 
-## Original y destino
+## Género
 
-El **original** (o texto de origen) es el texto inicial; el **destino** es la traducción. La traducción suele cobrarse por palabra del original.
+Los verbos y adjetivos cambian según el género, también en la segunda persona. Un mensaje como «Bienvenido» puede necesitar variantes, o una formulación que evite el problema. Conviene decidirlo con el traductor desde el principio.
 
-## Herramienta TAO
+## Números y cifras
 
-Software de traducción asistida por ordenador, como Trados, memoQ o Wordfast. No es traducción automática: ayuda al traductor humano a trabajar con coherencia gracias a memorias de traducción y glosarios, y conserva el formato del archivo.
+En muchos países árabes se usan las cifras habituales (0-9), pero en otros, como en parte de Oriente Medio, son frecuentes las **cifras arábigas orientales** (٠١٢٣…). Decide cuáles usará tu producto en cada mercado y prueba fechas, precios y teléfonos.
 
-## Memoria de traducción (TM)
+## Calendario y formatos
 
-Una base de datos con las frases ya traducidas. Cuando vuelve a aparecer la misma frase o una parecida, se reutiliza, lo que mantiene la coherencia y agiliza las actualizaciones.
+Además del calendario gregoriano, en algunos contextos se usa el **calendario hégira**. Revisa también el formato de fechas, monedas y el primer día de la semana, que en varios países no es el lunes.
 
-## Coincidencia parcial (fuzzy match)
+## Tipografía
 
-Una frase *parecida*, pero no idéntica, a otra de la memoria de traducción. El traductor la revisa y la ajusta en lugar de traducirla desde cero.
+Elige fuentes con buen soporte para árabe y prueba los tamaños: la escritura árabe necesita más altura de línea y no admite cursiva ni separación de letras como el alfabeto latino.
 
-## Glosario o base terminológica
+## i18n y cadenas
 
-Una lista con las traducciones aprobadas de tus términos clave, como nombres de productos, funciones y vocabulario del sector. Garantiza la coherencia de cada traductor y de cada documento.
+La **internacionalización (i18n)** consiste en preparar el código para cualquier idioma: textos fuera del código, en archivos de **cadenas** (JSON, XLIFF…), con espacio para textos más largos y sin concatenar frases. Una buena i18n abarata enormemente la localización.
 
-## Traducción automática (TA)
+## Pseudolocalización
 
-Traducción generada automáticamente por un software. Es rápida, pero en árabe suele cometer errores de gramática, concordancia de género, terminología y tono.
+Una prueba previa que sustituye los textos por versiones simuladas para detectar textos cortados, cadenas sin traducir o problemas RTL antes de traducir nada.
 
-## MTPE (posedición de traducción automática)
+## MTPE y LQA
 
-Un lingüista humano corrige la traducción automática. La **posedición ligera** la hace precisa y comprensible; la **posedición completa** hace que se lea como si la hubiera escrito una persona. Consulta [MTPE](/es/services/mtpe).
+**MTPE**: traducción automática corregida por un lingüista. **LQA**: evaluación objetiva de la calidad con puntuación e informe. Ambas son útiles en productos con muchas actualizaciones. Consulta [localización de SaaS](/es/services/saas-localization).
 
-## TEP (traducción, edición y revisión)
-
-El proceso de calidad estándar: un paso de traducción, un segundo que compara la traducción con el original (edición) y uno final que revisa el propio texto árabe (revisión).
-
-## Edición frente a revisión
-
-La **edición** es bilingüe: la traducción se compara con el original. La **revisión** es monolingüe: se comprueba la gramática, la ortografía, la puntuación y el formato del árabe final. Consulta [edición y revisión](/es/services/editing).
-
-## LQA (evaluación de la calidad lingüística)
-
-Una forma objetiva de medir la calidad de una traducción. Los errores se registran por categoría, como exactitud, terminología o estilo, y por gravedad, y se convierten en una puntuación de calidad y un informe.
-
-## MQM
-
-Multidimensional Quality Metrics, un marco muy utilizado que define las categorías de error y los niveles de gravedad que se usan en la LQA.
-
-## Transcreación
-
-Recrear un mensaje, como un eslogan o una campaña, para que tenga el mismo efecto en otra cultura, en lugar de traducirlo palabra por palabra. Suele ir acompañada de una **retrotraducción** para que sepas qué dice el texto árabe. Consulta [transcreación](/es/services/transcreation).
-
-## ¿Falta algún término?
-
-Si un presupuesto o un formulario de proveedor incluye un término que no conoces, [pregúntame](/es/contact). Te explicaré encantado cómo se aplica a tu proyecto.`,
+¿Preparas el lanzamiento de tu producto en árabe? [Escríbeme](/es/contact) y revisamos juntos qué hay que tener en cuenta.`,
     },
   },
 };
