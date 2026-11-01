@@ -23,19 +23,20 @@ const en: SaasPage = {
   crumb: "SaaS Localization",
   seoTitle: "Arabic SaaS Localization",
   description:
-    "Localizing SaaS platforms, apps and help centers into Arabic, so Arabic-speaking users get a product that feels built for them.",
+    "Arabic localization for SaaS platforms, web and mobile apps and help centers: UI strings, onboarding, documentation and app store listings, adapted for right-to-left layouts and shipped with every release.",
   intro: [
-    "Arabic is spoken by more than 400 million people, and users across the Gulf, the Levant and North Africa expect software in their own language. Localizing a SaaS product means more than translating strings: the interface has to work from right to left, terminology has to stay consistent across the product, help center and marketing site, and the tone has to match your brand.",
-    "I combine translation, localization and digital marketing experience, so your Arabic product, documentation and go-to-market content are handled by one specialist who understands both the language and how SaaS products grow.",
+    "Arabic is spoken by more than 400 million people, and users across the Gulf, the Levant, Egypt and North Africa expect software in their own language. Localizing a SaaS product means more than translating strings: the interface has to mirror from right to left, handle bidirectional text, Arabic plural forms and number formats, keep terminology consistent across the product, help center and marketing site, and match your brand voice.",
+    "I combine translation, software localization and digital marketing experience, so your Arabic UI, documentation and go-to-market content are handled by one specialist. I work in your translation management system or with the resource files your developers export, and support continuous localization so Arabic ships with every sprint.",
   ],
   listTitle: "What I localize",
   list: [
-    "Interface text, onboarding flows and in-app messages",
-    "Dashboards, settings, notifications and email templates",
-    "Help centers, knowledge bases and release notes",
+    "UI strings, onboarding flows and in-app messages (JSON, XLIFF, XML)",
+    "Dashboards, settings, notifications and transactional emails",
+    "Help centers, knowledge bases, API docs and release notes",
     "Terms of service, privacy policies and in-app legal text",
-    "Marketing websites, landing pages and app store listings",
+    "Marketing websites, landing pages and app store listings (ASO)",
     "Product videos, demos and onboarding tutorials",
+    "Product glossary, style guide and in-context linguistic QA",
   ],
   blocks: [
     {
@@ -88,19 +89,20 @@ const ar: SaasPage = {
   crumb: "توطين SaaS",
   seoTitle: "توطين البرمجيات كخدمة (SaaS) إلى العربية",
   description:
-    "توطين منصات البرمجيات كخدمة (SaaS) والتطبيقات ومراكز المساعدة إلى العربية، ليحصل المستخدمون الناطقون بالعربية على منتج يبدو كأنه صُمّم لهم.",
+    "توطين منصات البرمجيات كخدمة (SaaS) وتطبيقات الويب والجوال ومراكز المساعدة إلى العربية: نصوص الواجهة والتهيئة الأولى والوثائق وصفحات متاجر التطبيقات، مع تكييفها للاتجاه من اليمين إلى اليسار (RTL) وتسليمها مع كل إصدار.",
   intro: [
-    "يتحدث العربية أكثر من 400 مليون شخص، ويتوقع المستخدمون في الخليج والشام وشمال أفريقيا برمجيات بلغتهم. وتوطين منتج SaaS أكثر من مجرد ترجمة نصوص: يجب أن تعمل الواجهة من اليمين إلى اليسار، وأن تبقى المصطلحات متّسقة بين المنتج ومركز المساعدة والموقع التسويقي، وأن تناسب النبرة هوية علامتك.",
-    "أجمع بين خبرة الترجمة والتوطين والتسويق الرقمي، ليتولّى منتجك العربي ووثائقه ومحتوى إطلاقه في السوق مختصٌّ واحد يفهم اللغة ويفهم كيف تنمو منتجات SaaS.",
+    "يتحدث العربية أكثر من 400 مليون شخص، ويتوقع المستخدمون في الخليج والشام ومصر وشمال أفريقيا برمجيات بلغتهم. وتوطين منتج SaaS أكثر من ترجمة نصوص: يجب أن تنعكس الواجهة من اليمين إلى اليسار، وأن تتعامل مع النص ثنائي الاتجاه وصيغ الجمع العربية وتنسيقات الأرقام، وأن تبقى المصطلحات متّسقة بين المنتج ومركز المساعدة والموقع التسويقي، وأن تناسب النبرة هوية علامتك.",
+    "أجمع بين خبرة الترجمة وتوطين البرمجيات والتسويق الرقمي، ليتولّى واجهتك العربية ووثائقها ومحتوى إطلاقها مختصٌّ واحد. أعمل في نظام إدارة الترجمة لديك أو على ملفات الموارد التي يصدّرها مطوّروك، وأدعم التوطين المستمر لتصدر العربية مع كل دورة تطوير.",
   ],
   listTitle: "ما الذي أوطّنه",
   list: [
-    "نصوص الواجهة وخطوات البدء والرسائل داخل التطبيق",
-    "لوحات التحكم والإعدادات والإشعارات وقوالب البريد الإلكتروني",
-    "مراكز المساعدة وقواعد المعرفة وملاحظات الإصدار",
+    "نصوص الواجهة والتهيئة الأولى والرسائل داخل التطبيق (JSON وXLIFF وXML)",
+    "لوحات التحكم والإعدادات والإشعارات ورسائل البريد التشغيلية",
+    "مراكز المساعدة وقواعد المعرفة ووثائق واجهات البرمجة (API) وملاحظات الإصدار",
     "شروط الخدمة وسياسات الخصوصية والنصوص القانونية داخل التطبيق",
-    "المواقع التسويقية وصفحات الهبوط وصفحات المتاجر الإلكترونية للتطبيقات",
-    "مقاطع فيديو المنتجات والعروض التوضيحية ودروس البدء",
+    "المواقع التسويقية وصفحات الهبوط وصفحات متاجر التطبيقات (ASO)",
+    "فيديوهات المنتج والعروض التوضيحية ودروس التهيئة",
+    "مسرد المنتج ودليل الأسلوب وفحص الجودة اللغوية في السياق",
   ],
   blocks: [
     {
@@ -153,19 +155,20 @@ const fr: SaasPage = {
   crumb: "Localisation de SaaS",
   seoTitle: "Localisation de SaaS vers l’arabe",
   description:
-    "Localisation de plateformes SaaS, d’applications et de centres d’aide vers l’arabe, pour offrir aux utilisateurs arabophones un produit qui semble conçu pour eux.",
+    "Localisation en arabe de plateformes SaaS, d’applications web et mobiles et de centres d’aide : chaînes d’interface, onboarding, documentation et fiches des stores, adaptées à l’écriture de droite à gauche et livrées à chaque version.",
   intro: [
-    "L’arabe est parlé par plus de 400 millions de personnes, et les utilisateurs du Golfe, du Levant et d’Afrique du Nord attendent des logiciels dans leur langue. Localiser un produit SaaS ne se limite pas à traduire des chaînes : l’interface doit fonctionner de droite à gauche, la terminologie doit rester cohérente entre le produit, le centre d’aide et le site marketing, et le ton doit refléter votre marque.",
-    "J’associe une expérience en traduction, en localisation et en marketing digital : votre produit arabe, sa documentation et vos contenus de lancement sont pris en charge par un seul spécialiste qui comprend à la fois la langue et la croissance des produits SaaS.",
+    "L’arabe est parlé par plus de 400 millions de personnes, et les utilisateurs du Golfe, du Levant, d’Égypte et d’Afrique du Nord attendent des logiciels dans leur langue. Localiser un produit SaaS ne se limite pas à traduire des chaînes : l’interface doit s’inverser de droite à gauche, gérer le texte bidirectionnel, les formes du pluriel arabe et les formats de nombres, garder une terminologie cohérente entre produit, centre d’aide et site marketing, et respecter votre ton de marque.",
+    "J’associe traduction, localisation logicielle et marketing digital : votre interface arabe, votre documentation et vos contenus de lancement sont confiés à un seul spécialiste. Je travaille dans votre système de gestion de traduction ou sur les fichiers de ressources exportés par vos développeurs, et j’accompagne la localisation continue pour que l’arabe sorte à chaque sprint.",
   ],
   listTitle: "Ce que je localise",
   list: [
-    "Textes d’interface, parcours d’accueil et messages dans l’application",
-    "Tableaux de bord, paramètres, notifications et modèles d’e-mails",
-    "Centres d’aide, bases de connaissances et notes de version",
-    "Conditions d’utilisation, politiques de confidentialité et mentions juridiques",
-    "Sites marketing, pages d’atterrissage et fiches sur les stores",
+    "Chaînes d’interface, parcours d’onboarding et messages in-app (JSON, XLIFF, XML)",
+    "Tableaux de bord, paramètres, notifications et e-mails transactionnels",
+    "Centres d’aide, bases de connaissances, documentation d’API et notes de version",
+    "Conditions d’utilisation, politiques de confidentialité et mentions légales in-app",
+    "Sites marketing, landing pages et fiches des stores d’applications (ASO)",
     "Vidéos produit, démonstrations et tutoriels de prise en main",
+    "Glossaire produit, guide de style et contrôle linguistique en contexte",
   ],
   blocks: [
     {
@@ -218,19 +221,20 @@ const es: SaasPage = {
   crumb: "Localización de SaaS",
   seoTitle: "Localización de SaaS al árabe",
   description:
-    "Localización de plataformas SaaS, aplicaciones y centros de ayuda al árabe, para que los usuarios de habla árabe tengan un producto que parezca hecho para ellos.",
+    "Localización al árabe de plataformas SaaS, apps web y móviles y centros de ayuda: cadenas de interfaz, onboarding, documentación y fichas de las tiendas de apps, adaptadas al diseño de derecha a izquierda y entregadas en cada versión.",
   intro: [
-    "El árabe lo hablan más de 400 millones de personas, y los usuarios del Golfo, el Levante y el norte de África esperan software en su idioma. Localizar un producto SaaS es más que traducir cadenas: la interfaz tiene que funcionar de derecha a izquierda, la terminología debe ser coherente entre el producto, el centro de ayuda y el sitio de marketing, y el tono debe encajar con tu marca.",
-    "Combino experiencia en traducción, localización y marketing digital, así que tu producto en árabe, su documentación y el contenido de lanzamiento están en manos de un solo especialista que entiende tanto el idioma como el crecimiento de los productos SaaS.",
+    "El árabe lo hablan más de 400 millones de personas, y los usuarios del Golfo, el Levante, Egipto y el norte de África esperan software en su idioma. Localizar un producto SaaS es más que traducir cadenas: la interfaz debe reflejarse de derecha a izquierda, gestionar texto bidireccional, las formas de plural del árabe y los formatos de números, mantener la terminología coherente entre producto, centro de ayuda y web de marketing, y respetar tu voz de marca.",
+    "Combino traducción, localización de software y marketing digital, así que tu interfaz en árabe, tu documentación y tu contenido de lanzamiento los gestiona un solo especialista. Trabajo en tu sistema de gestión de traducción o con los archivos de recursos que exportan tus desarrolladores, y doy soporte a la localización continua para que el árabe salga en cada sprint.",
   ],
   listTitle: "Qué localizo",
   list: [
-    "Textos de interfaz, procesos de bienvenida y mensajes dentro de la aplicación",
-    "Paneles, ajustes, notificaciones y plantillas de correo",
-    "Centros de ayuda, bases de conocimiento y notas de versión",
-    "Términos del servicio, políticas de privacidad y textos legales",
-    "Sitios de marketing, páginas de aterrizaje y fichas en tiendas de aplicaciones",
-    "Vídeos de producto, demostraciones y tutoriales de inicio",
+    "Cadenas de interfaz, flujos de onboarding y mensajes in-app (JSON, XLIFF, XML)",
+    "Paneles, ajustes, notificaciones y correos transaccionales",
+    "Centros de ayuda, bases de conocimiento, documentación de API y notas de versión",
+    "Condiciones de uso, políticas de privacidad y textos legales in-app",
+    "Webs de marketing, landing pages y fichas de tiendas de apps (ASO)",
+    "Vídeos de producto, demos y tutoriales de onboarding",
+    "Glosario de producto, guía de estilo y control lingüístico en contexto",
   ],
   blocks: [
     {

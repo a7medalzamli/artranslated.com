@@ -62,7 +62,7 @@ const en: AboutPageContent = {
     "Targeted B2B Marketing Strategies & Campaigns",
   ],
   intro:
-    "I am Ahmed Alzamli, a Palestinian translator and digital marketing specialist. At Translated into Arabic (TIA), my mission is to help global businesses confidently reach the Arab-speaking world, ensuring their products, services, and core messages resonate authentically and accurately with a new audience.",
+    "I am Ahmed Alzamli, a Palestinian translator, localization specialist and digital marketer, and the founder of Translated into Arabic (TIA). A native Arabic speaker, I have translated professionally since 2014, from English, French and Spanish into Arabic and from Arabic into English, for translation agencies and companies worldwide. I am a ProZ.com Certified PRO, hold an Alconost certificate, an engineering degree and diplomas in translation and digital marketing, and my mission is to help businesses reach the Arabic-speaking world with content that is accurate, natural and easy to find.",
   approach: {
     title: "Approach to Translation and Localization",
     text: "Effective translation requires more than just language proficiency; it requires a deep understanding of the subject matter. My expertise is built on a unique, tri-fold educational foundation:",
@@ -120,7 +120,7 @@ const ar: AboutPageContent = {
     "استراتيجيات وحملات تسويق موجّهة للشركات (B2B)",
   ],
   intro:
-    "أنا أحمد الزاملي، مترجم فلسطيني ومتخصص في التسويق الرقمي. مهمّتي في Translated into Arabic (TIA) هي مساعدة الشركات العالمية على الوصول بثقة إلى العالم العربي، بحيث تصل منتجاتها وخدماتها ورسائلها الأساسية إلى الجمهور الجديد بأصالة ودقة.",
+    "أنا أحمد الزاملي، مترجم فلسطيني ومختص في التوطين (Localization) والتسويق الرقمي، ومؤسس Translated into Arabic (TIA). العربية لغتي الأم، وأعمل في الترجمة باحتراف منذ عام 2014، من الإنجليزية والفرنسية والإسبانية إلى العربية ومن العربية إلى الإنجليزية، لوكالات الترجمة (LSPs) والشركات حول العالم. أحمل اعتماد ProZ.com Certified PRO وشهادة من Alconost، وشهادة في الهندسة ودبلومين في الترجمة والتسويق الرقمي، ومهمّتي مساعدة الشركات على الوصول إلى العالم الناطق بالعربية بمحتوى دقيق وطبيعي وسهل الوصول إليه.",
   approach: {
     title: "منهجي في الترجمة والتوطين",
     text: "الترجمة الفعّالة تتطلب أكثر من إتقان اللغة؛ إنها تتطلب فهمًا عميقًا للموضوع. تقوم خبرتي على أساس تعليمي فريد من ثلاثة محاور:",
@@ -178,7 +178,7 @@ const fr: AboutPageContent = {
     "Stratégies et campagnes marketing B2B ciblées",
   ],
   intro:
-    "Je suis Ahmed Alzamli, traducteur palestinien et spécialiste du marketing digital. Chez Translated into Arabic (TIA), ma mission est d’aider les entreprises internationales à s’adresser en toute confiance au monde arabophone, en veillant à ce que leurs produits, services et messages clés trouvent un écho authentique et fidèle auprès d’un nouveau public.",
+    "Je suis Ahmed Alzamli, traducteur palestinien, spécialiste de la localisation et du marketing digital, et fondateur de Translated into Arabic (TIA). De langue maternelle arabe, je traduis professionnellement depuis 2014, de l’anglais, du français et de l’espagnol vers l’arabe, et de l’arabe vers l’anglais, pour des agences de traduction et des entreprises du monde entier. Certifié PRO sur ProZ.com, titulaire d’un certificat Alconost, d’un diplôme d’ingénieur et de diplômes en traduction et en marketing digital, j’aide les entreprises à atteindre le monde arabophone avec des contenus exacts, naturels et faciles à trouver.",
   approach: {
     title: "Mon approche de la traduction et de la localisation",
     text: "Une traduction efficace exige plus que la maîtrise de la langue : elle exige une compréhension approfondie du sujet. Mon expertise repose sur une formation unique en trois volets :",
@@ -236,7 +236,7 @@ const es: AboutPageContent = {
     "Estrategias y campañas de marketing B2B dirigidas",
   ],
   intro:
-    "Soy Ahmed Alzamli, traductor palestino y especialista en marketing digital. En Translated into Arabic (TIA), mi misión es ayudar a las empresas internacionales a llegar con confianza al mundo árabe, haciendo que sus productos, servicios y mensajes clave conecten de forma auténtica y precisa con un nuevo público.",
+    "Soy Ahmed Alzamli, traductor palestino, especialista en localización y marketing digital, y fundador de Translated into Arabic (TIA). Nativo de árabe, traduzco profesionalmente desde 2014, del inglés, el francés y el español al árabe, y del árabe al inglés, para agencias de traducción y empresas de todo el mundo. Soy Certified PRO de ProZ.com, tengo un certificado de Alconost, una titulación en ingeniería y diplomas en traducción y marketing digital, y mi misión es ayudar a las empresas a llegar al mundo árabe con contenido preciso, natural y fácil de encontrar.",
   approach: {
     title: "Mi enfoque de la traducción y la localización",
     text: "Una traducción eficaz requiere algo más que dominar el idioma: exige un conocimiento profundo del tema. Mi experiencia se basa en una formación única en tres pilares:",
