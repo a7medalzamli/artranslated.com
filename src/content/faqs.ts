@@ -57,11 +57,15 @@ const en: FaqSet = {
       q: "Is editing and proofreading included?",
       a: "Yes. For direct clients, every project goes through translation, editing and proofreading (TEP) followed by quality checks, so you receive a document that is ready to publish or use, not a draft. Agencies that run their own review step can order translation only.",
     },
+    {
+      q: "How long does it take to translate a document into Arabic?",
+      a: "It depends on the length, subject and file format. A professional translator typically translates around 2,000 to 3,000 words a day, with editing and proofreading on top. I translate at least 5,000 words a day, so a 1,000-word document is usually delivered within one working day, 5,000 words in one to two days, and 10,000 words in two to three days. Larger projects are scheduled with partial deliveries.",
+    },
   ],
   editing: [
     {
-      q: "What is the difference between editing and proofreading?",
-      a: "Editing is a bilingual check: I compare the Arabic translation with the source sentence by sentence to correct mistranslations, omissions, terminology and style. Proofreading is a final monolingual check of the Arabic text itself, for grammar, spelling, punctuation, consistency and formatting, before it is published.",
+      q: "What is the difference between editing and proofreading in translation?",
+      a: "Editing (also called revision) is a bilingual check: the translation is compared with the source text sentence by sentence to fix mistranslations, omissions, terminology and style. Proofreading is a monolingual check of the final text only, for grammar, spelling, punctuation, consistency and formatting. Professional workflows such as TEP (translation, editing, proofreading) use both, editing first and proofreading last, before the Arabic is published.",
     },
     {
       q: "Do you review other translators’ work?",
@@ -72,8 +76,8 @@ const en: FaqSet = {
       a: "Accuracy (mistranslations, omissions and additions), terminology and glossary compliance, grammar and spelling, Arabic punctuation and typography, consistency across the document, locale conventions such as dates, numbers and currencies, register and style for the audience, and formatting, tags and layout, including right-to-left issues.",
     },
     {
-      q: "What is LQA, and how do you score translations?",
-      a: "Language quality assessment (LQA) measures translation quality objectively. Each error is logged by category, such as accuracy, terminology, fluency, style or locale conventions, and by severity (minor, major or critical), using the MQM framework or your agency’s own scorecard. The result is a quality score and a short report with examples and recommendations.",
+      q: "What is LQA in translation?",
+      a: "LQA (language quality assessment) is an objective method for measuring translation quality. A reviewer logs each error by category, such as accuracy, terminology, fluency, style or locale conventions, and by severity (minor, major or critical), usually with the MQM framework or a client scorecard. The result is a quality score and a report with examples, used by translation agencies to evaluate vendors and by companies to check translations before release.",
     },
     {
       q: "Will you change the translator’s style?",
@@ -94,18 +98,18 @@ const en: FaqSet = {
       a: "Yes. With full post-editing, I rework the machine output until it reads naturally, as if it had been written by a professional Arabic translator. Meaning, terminology, grammar, style and flow are all corrected, so readers can’t tell a machine was involved.",
     },
     {
-      q: "Is MTPE cheaper than human translation?",
-      a: "Yes. Because the machine produces a first draft, post-editing usually costs less and takes less time than translating from scratch. The exact saving depends on the quality of the raw output and the level of editing you need, and is agreed in the quote.",
+      q: "Is machine translation post-editing (MTPE) cheaper than human translation?",
+      a: "Usually, yes. Because a machine translation engine produces the first draft, post-editing generally takes less time and costs less than translating from scratch. The saving depends on the quality of the raw output, the subject and the level of editing: light post-editing saves the most, full post-editing to publication quality saves less. For Arabic, where engines still make grammar and terminology errors, a native post-editor is essential either way.",
     },
     {
-      q: "Do you offer light or full post-editing?",
-      a: "Both. Light post-editing makes the text accurate and understandable, which suits internal documents and large volumes of reference content. Full post-editing brings the Arabic up to publication quality for anything your customers will read.",
+      q: "What is the difference between light and full post-editing?",
+      a: "Light post-editing corrects only what is needed to make machine-translated text accurate and understandable; the style may remain mechanical. It suits internal documents and large volumes of reference content. Full post-editing brings the text up to the quality of human translation, with correct terminology, natural style and consistent formatting, and is the right choice for anything customers, partners or the public will read. I offer both for Arabic content.",
     },
   ],
   transcreation: [
     {
-      q: "How is transcreation different from translation?",
-      a: "Translation carries the meaning of a text from one language to another. Transcreation is closer to copywriting: it starts from your creative brief and recreates the message in Arabic so it keeps the same intent, tone and emotional impact, even when the words, wordplay or cultural references have to change. It is used for slogans, campaigns, brand messages and product copy.",
+      q: "What is the difference between transcreation and translation?",
+      a: "Translation transfers the meaning of a text into another language. Transcreation recreates the message for a new culture so it keeps the same intent, emotion and effect, even if the words change completely. It is used for slogans, advertising, campaigns and brand copy, where a literal translation would lose wordplay or persuasive power. Transcreation into Arabic usually includes several creative options with a back-translation, so the client can see what each option says.",
     },
     {
       q: "Do you provide back-translations?",
@@ -118,8 +122,8 @@ const en: FaqSet = {
   ],
   consulting: [
     {
-      q: "Should we use Modern Standard Arabic or a regional dialect?",
-      a: "It depends on your audience and the type of content. Modern Standard Arabic is understood across the Arab world and suits documentation, legal, corporate and most website content. A regional dialect, such as Gulf or Egyptian Arabic, can work better for marketing, social media and video aimed at one country. I help you choose the right mix for each market and type of content.",
+      q: "Should a business use Modern Standard Arabic or a regional dialect?",
+      a: "Most businesses should use Modern Standard Arabic (MSA) for written content, because it is understood in every Arabic-speaking country and suits websites, apps, documentation, legal and corporate texts. A regional dialect, such as Gulf, Egyptian, Levantine or Maghrebi Arabic, works better for marketing, social media and video aimed at one country, where a conversational tone builds closeness. Many brands combine both: MSA for core content and a local touch for campaigns.",
     },
     {
       q: "Is consulting a one-off service or ongoing?",
@@ -133,7 +137,7 @@ const en: FaqSet = {
   "digital-marketing": [
     {
       q: "What are SEO, AEO, GEO and LLMO?",
-      a: "SEO helps your website rank in search engines. AEO (answer engine optimization) structures your content so it can be used directly as an answer. GEO (generative engine optimization) and LLMO (large language model optimization) make your business easy for AI tools to understand, trust and cite when they generate answers. Together, they keep you visible wherever people search.",
+      a: "They are four layers of online visibility. SEO (search engine optimization) helps web pages rank in search engines such as Google and Bing. AEO (answer engine optimization) structures content as clear questions and answers so it can be shown as a direct answer. GEO (generative engine optimization) and LLMO (large language model optimization) make a business easy for AI tools to understand, trust and cite when they generate answers. Each layer builds on the one before.",
     },
     {
       q: "Can you guarantee that my business appears in AI answers?",
@@ -193,11 +197,15 @@ const ar: FaqSet = {
       q: "هل يشمل العمل التحرير والتدقيق؟",
       a: "نعم. بالنسبة للعملاء المباشرين، يمرّ كل مشروع بمراحل الترجمة والتحرير والتدقيق (TEP) ثم فحوص الجودة، لتستلم مستندًا جاهزًا للنشر أو الاستخدام لا مسودة. ويمكن للوكالات التي تتولى المراجعة بنفسها طلب الترجمة فقط.",
     },
+    {
+      q: "كم تستغرق ترجمة مستند إلى العربية؟",
+      a: "يتوقف ذلك على الطول والموضوع وصيغة الملف. يترجم المترجم المحترف عادةً بين 2,000 و3,000 كلمة يوميًا، يضاف إليها التحرير والتدقيق. وأنا أترجم ما لا يقل عن 5,000 كلمة يوميًا، لذا يُسلَّم المستند المكوّن من 1,000 كلمة عادةً خلال يوم عمل واحد، و5,000 كلمة خلال يوم إلى يومين، و10,000 كلمة خلال يومين إلى ثلاثة. وتُجدوَل المشاريع الأكبر مع تسليم على دفعات.",
+    },
   ],
   editing: [
     {
-      q: "ما الفرق بين التحرير والتدقيق؟",
-      a: "التحرير مراجعة ثنائية اللغة: أقارن الترجمة العربية بالنص المصدر جملةً جملة لتصحيح أخطاء الترجمة والسقط والمصطلحات والأسلوب. أما التدقيق فمراجعة نهائية أحادية اللغة للنص العربي نفسه، من حيث القواعد والإملاء وعلامات الترقيم والاتساق والتنسيق، قبل نشره.",
+      q: "ما الفرق بين التحرير والتدقيق في الترجمة؟",
+      a: "التحرير (ويُسمّى أيضًا المراجعة) فحص ثنائي اللغة: تُقارَن الترجمة بالنص المصدر جملةً جملة لتصحيح أخطاء الترجمة والسقط والمصطلحات والأسلوب. أما التدقيق ففحص أحادي اللغة للنص النهائي وحده، من حيث القواعد والإملاء وعلامات الترقيم والاتساق والتنسيق. وتجمع منهجيات العمل الاحترافية مثل الترجمة والتحرير والتدقيق (TEP) بين الاثنين: التحرير أولًا والتدقيق أخيرًا، قبل نشر النص العربي.",
     },
     {
       q: "هل تراجع أعمال مترجمين آخرين؟",
@@ -208,8 +216,8 @@ const ar: FaqSet = {
       a: "الدقة (أخطاء الترجمة والسقط والإضافات)، والالتزام بالمصطلحات والمسرد، والقواعد والإملاء، وعلامات الترقيم العربية وقواعد الطباعة، والاتساق في المستند كله، والأعراف المحلية كالتواريخ والأرقام والعملات، والأسلوب المناسب للجمهور، والتنسيق والوسوم والتخطيط، بما في ذلك مشكلات الكتابة من اليمين إلى اليسار (RTL).",
     },
     {
-      q: "ما تقييم جودة اللغة (LQA)، وكيف تقيّم الترجمات؟",
-      a: "تقييم جودة اللغة (LQA) يقيس جودة الترجمة بموضوعية. يُسجَّل كل خطأ حسب فئته، كالدقة أو المصطلحات أو السلاسة أو الأسلوب أو الأعراف المحلية، وحسب خطورته (بسيط أو جوهري أو حرج)، وفق إطار MQM أو بطاقة التقييم الخاصة بوكالتك. والنتيجة درجة للجودة وتقرير موجز يتضمن أمثلة وتوصيات.",
+      q: "ما تقييم جودة اللغة (LQA) في الترجمة؟",
+      a: "تقييم جودة اللغة (LQA) طريقة موضوعية لقياس جودة الترجمة. يسجّل المراجع كل خطأ حسب فئته، كالدقة أو المصطلحات أو السلاسة أو الأسلوب أو الأعراف المحلية، وحسب خطورته (بسيط أو جوهري أو حرج)، غالبًا وفق إطار MQM أو بطاقة تقييم العميل. والنتيجة درجة جودة وتقرير بالأمثلة، تستخدمه وكالات الترجمة (LSPs) لتقييم المترجمين، وتستخدمه الشركات للتحقق من الترجمات قبل إطلاقها.",
     },
     {
       q: "هل ستغيّر أسلوب المترجم؟",
@@ -230,18 +238,18 @@ const ar: FaqSet = {
       a: "نعم. في التحرير اللاحق (MTPE) الكامل، أعيد صياغة مخرجات الآلة حتى يُقرأ النص بسلاسة كأنه من عمل مترجم عربي محترف، فأصحّح المعنى والمصطلحات والقواعد والأسلوب والسلاسة، بحيث لا يلاحظ القارئ أن الآلة شاركت في العمل.",
     },
     {
-      q: "هل التحرير اللاحق للترجمة الآلية (MTPE) أقل تكلفة من الترجمة البشرية؟",
-      a: "نعم. لأن الآلة تقدّم مسودة أولى، فإن التحرير اللاحق (MTPE) عادةً أقل تكلفة وأسرع من الترجمة من الصفر. ويعتمد مقدار التوفير على جودة المخرجات الأولية ومستوى التحرير الذي تحتاجه، ويُتفق عليه في عرض السعر.",
+      q: "هل التحرير اللاحق للترجمة الآلية (MTPE) أرخص من الترجمة البشرية؟",
+      a: "غالبًا نعم. فلأن محرك الترجمة الآلية (MT) يُنتج المسودة الأولى، يستغرق التحرير اللاحق (MTPE) عادةً وقتًا أقل ويكلّف أقل من الترجمة من الصفر. ويتوقف التوفير على جودة الناتج الخام والموضوع ومستوى التحرير: التحرير الخفيف يوفّر أكثر، والتحرير الكامل حتى جودة النشر يوفّر أقل. وفي العربية، حيث لا تزال المحركات تخطئ في القواعد والمصطلحات، لا غنى في الحالتين عن محرّر لغته الأم العربية.",
     },
     {
-      q: "هل تقدّم التحرير اللاحق (MTPE) الخفيف أم الكامل؟",
-      a: "الاثنين معًا. يجعل التحرير الخفيف النص دقيقًا ومفهومًا، وهو مناسب للمستندات الداخلية والكميات الكبيرة من المحتوى المرجعي. أما التحرير الكامل فيرتقي بالنص العربي إلى جودة النشر لكل ما سيقرؤه عملاؤك.",
+      q: "ما الفرق بين التحرير اللاحق (MTPE) الخفيف والكامل؟",
+      a: "التحرير اللاحق (MTPE) الخفيف يصحّح فقط ما يلزم ليصبح النص المترجم آليًا دقيقًا ومفهومًا، وقد يبقى أسلوبه آليًا، وهو مناسب للمستندات الداخلية والأحجام الكبيرة من المحتوى المرجعي. أما التحرير اللاحق الكامل فيرتقي بالنص إلى مستوى الترجمة البشرية، بمصطلحات صحيحة وأسلوب طبيعي وتنسيق متّسق، وهو الخيار الصحيح لكل ما سيقرؤه العملاء أو الشركاء أو الجمهور. وأقدّم النوعين للمحتوى العربي.",
     },
   ],
   transcreation: [
     {
-      q: "ما الفرق بين الترجمة الإبداعية والترجمة؟",
-      a: "تنقل الترجمة معنى النص من لغة إلى أخرى. أما الترجمة الإبداعية فأقرب إلى كتابة المحتوى الإعلاني: تنطلق من موجزك الإبداعي وتعيد صياغة الرسالة بالعربية لتحافظ على المقصد والنبرة والأثر العاطفي نفسه، حتى لو تطلّب ذلك تغيير الكلمات أو التلاعب اللفظي أو المرجعيات الثقافية. وتُستخدم في الشعارات والحملات ورسائل العلامة التجارية ونصوص المنتجات.",
+      q: "ما الفرق بين الترجمة الإبداعية (Transcreation) والترجمة؟",
+      a: "الترجمة تنقل معنى النص إلى لغة أخرى، أما الترجمة الإبداعية فتعيد صياغة الرسالة لثقافة جديدة لتحتفظ بالمقصد والعاطفة والأثر نفسها، حتى لو تغيّرت الكلمات كليًا. وتُستخدم للشعارات والإعلانات والحملات ونصوص العلامات التجارية، حيث تُفقد الترجمة الحرفية التلاعب اللفظي أو القوة الإقناعية. وتتضمن الترجمة الإبداعية إلى العربية عادةً عدة خيارات مع ترجمة عكسية (Back-translation) ليعرف العميل ما يقوله كل خيار.",
     },
     {
       q: "هل تقدّم ترجمة عكسية؟",
@@ -254,8 +262,8 @@ const ar: FaqSet = {
   ],
   consulting: [
     {
-      q: "هل نستخدم العربية الفصحى المعاصرة أم لهجة محلية؟",
-      a: "يعتمد ذلك على جمهورك ونوع المحتوى. العربية الفصحى المعاصرة مفهومة في أنحاء العالم العربي، وتناسب الوثائق والمحتوى القانوني والمؤسسي ومعظم محتوى المواقع. أما اللهجة المحلية، كالخليجية أو المصرية، فقد تكون أنسب للتسويق ووسائل التواصل الاجتماعي ومقاطع الفيديو الموجّهة إلى بلد بعينه. وأساعدك على اختيار المزيج المناسب لكل سوق ونوع محتوى.",
+      q: "هل تستخدم الشركة العربية الفصحى المعاصرة أم لهجة محلية؟",
+      a: "يناسب معظم الشركات استخدام العربية الفصحى المعاصرة (MSA) في المحتوى المكتوب، لأنها مفهومة في كل الدول الناطقة بالعربية، وتصلح للمواقع والتطبيقات والوثائق والنصوص القانونية والمؤسسية. أما اللهجة المحلية، كالخليجية أو المصرية أو الشامية أو المغاربية، فتنجح أكثر في التسويق ووسائل التواصل والفيديو الموجّهة إلى بلد واحد، حيث تبني النبرة العفوية قربًا من الجمهور. وتجمع علامات كثيرة بين الاثنين: الفصحى للمحتوى الأساسي، ولمسة محلية للحملات.",
     },
     {
       q: "هل الاستشارة خدمة لمرة واحدة أم مستمرة؟",
@@ -269,7 +277,7 @@ const ar: FaqSet = {
   "digital-marketing": [
     {
       q: "ما المقصود بـ SEO وAEO وGEO وLLMO؟",
-      a: "SEO يساعد موقعك على التصدّر في محركات البحث. وAEO (تحسين محركات الإجابة) ينظّم محتواك ليُستخدم إجابةً مباشرة. أما GEO (تحسين المحركات التوليدية) وLLMO (تحسين الظهور في النماذج اللغوية الكبيرة) فيجعلان شركتك سهلة الفهم وموثوقة ويُستشهد بها لدى أدوات الذكاء الاصطناعي (AI) عند توليد الإجابات. ومعًا تبقيك ظاهرًا أينما بحث الناس.",
+      a: "هي أربع طبقات للظهور على الإنترنت. تحسين محركات البحث (SEO) يساعد صفحات الويب على التصدّر في محركات مثل Google وBing. وتحسين محركات الإجابة (AEO) ينظّم المحتوى في أسئلة وأجوبة واضحة ليُعرض إجابةً مباشرة. أما تحسين المحركات التوليدية (GEO) وتحسين الظهور في النماذج اللغوية الكبيرة (LLMO) فيجعلان الشركة سهلة الفهم وموثوقة ويُستشهد بها لدى أدوات الذكاء الاصطناعي (AI) عند توليد الإجابات. وكل طبقة تبني على ما قبلها.",
     },
     {
       q: "هل تضمن ظهور شركتي في إجابات الذكاء الاصطناعي؟",
@@ -329,11 +337,15 @@ const fr: FaqSet = {
       q: "La révision et la relecture sont-elles incluses ?",
       a: "Oui. Pour les clients directs, chaque projet passe par la traduction, la révision et la relecture (TEP), suivies de contrôles qualité : vous recevez un document prêt à être publié ou utilisé, pas un brouillon. Les agences qui assurent leur propre relecture peuvent commander la traduction seule.",
     },
+    {
+      q: "Combien de temps faut-il pour traduire un document en arabe ?",
+      a: "Cela dépend de la longueur, du domaine et du format du fichier. Un traducteur professionnel traduit généralement entre 2 000 et 3 000 mots par jour, révision et relecture en plus. Je traduis au moins 5 000 mots par jour : un document de 1 000 mots est donc généralement livré sous un jour ouvré, 5 000 mots en un à deux jours et 10 000 mots en deux à trois jours. Les projets plus importants sont planifiés avec des livraisons partielles.",
+    },
   ],
   editing: [
     {
-      q: "Quelle différence entre révision et relecture ?",
-      a: "La révision est un contrôle bilingue : je compare la traduction arabe à la source phrase par phrase pour corriger contresens, omissions, terminologie et style. La relecture est un contrôle final unilingue du texte arabe lui-même, pour la grammaire, l’orthographe, la ponctuation, la cohérence et la mise en forme, avant publication.",
+      q: "Quelle est la différence entre révision et relecture en traduction ?",
+      a: "La révision est un contrôle bilingue : la traduction est comparée au texte source phrase par phrase pour corriger contresens, omissions, terminologie et style. La relecture est un contrôle unilingue du texte final seul : grammaire, orthographe, ponctuation, cohérence et mise en forme. Les processus professionnels comme le TEP (traduction, révision, relecture) combinent les deux, la révision d’abord et la relecture en dernier, avant la publication de l’arabe.",
     },
     {
       q: "Révisez-vous le travail d’autres traducteurs ?",
@@ -344,8 +356,8 @@ const fr: FaqSet = {
       a: "L’exactitude (contresens, omissions et ajouts), le respect de la terminologie et du glossaire, la grammaire et l’orthographe, la ponctuation et la typographie arabes, la cohérence dans tout le document, les conventions locales comme les dates, nombres et devises, le registre et le style adaptés au public, ainsi que la mise en forme, les balises et la mise en page, y compris les problèmes d’écriture de droite à gauche.",
     },
     {
-      q: "Qu’est-ce que la LQA, et comment notez-vous les traductions ?",
-      a: "L’évaluation de la qualité linguistique (LQA) mesure objectivement la qualité d’une traduction. Chaque erreur est consignée par catégorie, comme l’exactitude, la terminologie, la fluidité, le style ou les conventions locales, et par gravité (mineure, majeure ou critique), selon le référentiel MQM ou la grille de votre agence. Le résultat : une note de qualité et un court rapport avec exemples et recommandations.",
+      q: "Qu’est-ce que la LQA en traduction ?",
+      a: "La LQA (évaluation de la qualité linguistique) est une méthode objective pour mesurer la qualité d’une traduction. Le réviseur consigne chaque erreur par catégorie, comme l’exactitude, la terminologie, la fluidité, le style ou les conventions locales, et par gravité (mineure, majeure ou critique), généralement selon le référentiel MQM ou la grille du client. Le résultat : une note de qualité et un rapport avec exemples, utilisés par les agences pour évaluer leurs prestataires et par les entreprises avant publication.",
     },
     {
       q: "Allez-vous modifier le style du traducteur ?",
@@ -366,18 +378,18 @@ const fr: FaqSet = {
       a: "Oui. En post-édition complète, je retravaille la sortie de la machine jusqu’à ce que le texte se lise naturellement, comme s’il avait été écrit par un traducteur arabe professionnel. Le sens, la terminologie, la grammaire, le style et la fluidité sont corrigés, si bien que le lecteur ne devine pas qu’une machine est intervenue.",
     },
     {
-      q: "La post-édition coûte-t-elle moins cher que la traduction humaine ?",
-      a: "Oui. Comme la machine produit un premier jet, la post-édition coûte généralement moins cher et prend moins de temps qu’une traduction à partir de zéro. L’économie exacte dépend de la qualité de la sortie brute et du niveau de révision souhaité, et elle est fixée dans le devis.",
+      q: "La post-édition (MTPE) coûte-t-elle moins cher que la traduction humaine ?",
+      a: "Le plus souvent, oui. Comme un moteur de traduction automatique produit le premier jet, la post-édition demande généralement moins de temps et coûte moins cher qu’une traduction complète. L’économie dépend de la qualité de la sortie brute, du domaine et du niveau de post-édition : la post-édition légère économise le plus, la post-édition complète jusqu’à la qualité publiable un peu moins. En arabe, où les moteurs font encore des erreurs de grammaire et de terminologie, un post-éditeur natif reste indispensable.",
     },
     {
-      q: "Proposez-vous une post-édition légère ou complète ?",
-      a: "Les deux. La post-édition légère rend le texte exact et compréhensible, ce qui convient aux documents internes et aux gros volumes de contenu de référence. La post-édition complète amène l’arabe au niveau de publication pour tout ce que liront vos clients.",
+      q: "Quelle est la différence entre post-édition légère et complète ?",
+      a: "La post-édition légère corrige uniquement ce qui est nécessaire pour rendre une traduction automatique exacte et compréhensible ; le style peut rester mécanique. Elle convient aux documents internes et aux gros volumes de contenus de référence. La post-édition complète amène le texte au niveau d’une traduction humaine, avec une terminologie juste, un style naturel et une mise en forme cohérente : c’est le bon choix pour tout ce que liront clients, partenaires ou grand public. Je propose les deux pour l’arabe.",
     },
   ],
   transcreation: [
     {
-      q: "Quelle différence entre transcréation et traduction ?",
-      a: "La traduction transpose le sens d’un texte d’une langue à une autre. La transcréation se rapproche de la rédaction publicitaire : elle part de votre brief créatif et recrée le message en arabe pour en conserver l’intention, le ton et l’impact émotionnel, même si les mots, les jeux de mots ou les références culturelles doivent changer. Elle sert aux slogans, aux campagnes, aux messages de marque et aux textes produits.",
+      q: "Quelle est la différence entre transcréation et traduction ?",
+      a: "La traduction transfère le sens d’un texte dans une autre langue. La transcréation recrée le message pour une autre culture afin qu’il garde la même intention, la même émotion et le même effet, même si les mots changent complètement. Elle s’utilise pour les slogans, la publicité, les campagnes et les textes de marque, où une traduction littérale ferait perdre jeux de mots et force de persuasion. Vers l’arabe, elle comprend généralement plusieurs propositions avec rétrotraduction.",
     },
     {
       q: "Fournissez-vous des rétrotraductions ?",
@@ -391,7 +403,7 @@ const fr: FaqSet = {
   consulting: [
     {
       q: "Faut-il utiliser l’arabe standard moderne ou un dialecte régional ?",
-      a: "Cela dépend de votre public et du type de contenu. L’arabe standard moderne est compris dans tout le monde arabe et convient à la documentation, aux contenus juridiques et institutionnels et à la plupart des sites web. Un dialecte régional, comme l’arabe du Golfe ou l’égyptien, peut être plus efficace pour le marketing, les réseaux sociaux et les vidéos destinés à un seul pays. Je vous aide à choisir le bon équilibre pour chaque marché et chaque type de contenu.",
+      a: "La plupart des entreprises devraient utiliser l’arabe standard moderne pour leurs contenus écrits, car il est compris dans tous les pays arabophones et convient aux sites, applications, documentations, textes juridiques et institutionnels. Un dialecte régional, comme l’arabe du Golfe, égyptien, levantin ou maghrébin (darija), fonctionne mieux pour le marketing, les réseaux sociaux et la vidéo destinés à un seul pays. Beaucoup de marques combinent les deux : arabe standard pour l’essentiel, touche locale pour les campagnes.",
     },
     {
       q: "Le conseil est-il ponctuel ou suivi ?",
@@ -405,7 +417,7 @@ const fr: FaqSet = {
   "digital-marketing": [
     {
       q: "Que signifient SEO, AEO, GEO et LLMO ?",
-      a: "Le SEO aide votre site à se positionner dans les moteurs de recherche. L’AEO (optimisation pour les moteurs de réponse) structure vos contenus pour qu’ils puissent servir directement de réponse. Le GEO (optimisation pour les moteurs génératifs) et le LLMO (optimisation pour les grands modèles de langage) rendent votre entreprise facile à comprendre, fiable et citable par les outils d’IA lorsqu’ils génèrent des réponses. Ensemble, ils vous gardent visible partout où l’on cherche.",
+      a: "Ce sont quatre niveaux de visibilité en ligne. Le SEO (référencement naturel) aide les pages à se positionner dans les moteurs comme Google et Bing. L’AEO (optimisation pour les moteurs de réponse) structure les contenus en questions-réponses claires pour qu’ils s’affichent comme réponse directe. Le GEO (référencement génératif) et le LLMO (optimisation pour les grands modèles de langage) rendent une entreprise facile à comprendre, fiable et citable par les outils d’IA. Chaque niveau s’appuie sur le précédent.",
     },
     {
       q: "Pouvez-vous garantir que mon entreprise apparaîtra dans les réponses de l’IA ?",
@@ -465,11 +477,15 @@ const es: FaqSet = {
       q: "¿Incluye edición y revisión?",
       a: "Sí. Para los clientes directos, cada proyecto pasa por traducción, edición y revisión (TEP), seguidas de controles de calidad, así que recibes un documento listo para publicar o usar, no un borrador. Las agencias que hacen su propia revisión pueden pedir solo la traducción.",
     },
+    {
+      q: "¿Cuánto se tarda en traducir un documento al árabe?",
+      a: "Depende de la extensión, el tema y el formato del archivo. Un traductor profesional suele traducir entre 2000 y 3000 palabras al día, más la edición y la revisión. Yo traduzco al menos 5000 palabras al día, así que un documento de 1000 palabras suele entregarse en un día laborable, uno de 5000 palabras en uno o dos días y uno de 10 000 palabras en dos o tres días. Los proyectos más grandes se planifican con entregas parciales.",
+    },
   ],
   editing: [
     {
-      q: "¿Qué diferencia hay entre edición y revisión?",
-      a: "La edición es una comprobación bilingüe: comparo la traducción al árabe con el original frase por frase para corregir errores de traducción, omisiones, terminología y estilo. La revisión es una comprobación final monolingüe del propio texto en árabe, de gramática, ortografía, puntuación, coherencia y formato, antes de publicarlo.",
+      q: "¿Qué diferencia hay entre edición y revisión en traducción?",
+      a: "La edición es una comprobación bilingüe: la traducción se compara con el texto original frase por frase para corregir errores de sentido, omisiones, terminología y estilo. La revisión es una comprobación monolingüe solo del texto final: gramática, ortografía, puntuación, coherencia y formato. Los flujos profesionales como el TEP (traducción, edición y revisión) combinan ambas, primero la edición y al final la revisión, antes de publicar el texto en árabe.",
     },
     {
       q: "¿Revisas el trabajo de otros traductores?",
@@ -480,8 +496,8 @@ const es: FaqSet = {
       a: "La exactitud (errores de traducción, omisiones y añadidos), el cumplimiento de la terminología y el glosario, la gramática y la ortografía, la puntuación y tipografía árabes, la coherencia en todo el documento, las convenciones locales como fechas, números y monedas, el registro y el estilo adecuados al público, y el formato, las etiquetas y el diseño, incluidos los problemas de escritura de derecha a izquierda.",
     },
     {
-      q: "¿Qué es la LQA y cómo puntúas las traducciones?",
-      a: "La evaluación de la calidad lingüística (LQA) mide la calidad de una traducción de forma objetiva. Cada error se registra por categoría, como exactitud, terminología, fluidez, estilo o convenciones locales, y por gravedad (leve, grave o crítico), con el marco MQM o la ficha de tu agencia. El resultado es una puntuación de calidad y un breve informe con ejemplos y recomendaciones.",
+      q: "¿Qué es la LQA en traducción?",
+      a: "La LQA (evaluación de la calidad lingüística) es un método objetivo para medir la calidad de una traducción. El revisor registra cada error por categoría, como exactitud, terminología, fluidez, estilo o convenciones locales, y por gravedad (leve, grave o crítico), normalmente con el marco MQM o la ficha del cliente. El resultado es una puntuación de calidad y un informe con ejemplos, que las agencias usan para evaluar proveedores y las empresas para validar traducciones antes de publicarlas.",
     },
     {
       q: "¿Vas a cambiar el estilo del traductor?",
@@ -502,18 +518,18 @@ const es: FaqSet = {
       a: "Sí. Con la posedición completa, reelaboro el resultado de la máquina hasta que el texto se lee con naturalidad, como si lo hubiera escrito un traductor profesional de árabe. Corrijo sentido, terminología, gramática, estilo y fluidez, de modo que el lector no nota que intervino una máquina.",
     },
     {
-      q: "¿La posedición es más barata que la traducción humana?",
-      a: "Sí. Como la máquina genera un primer borrador, la posedición suele costar menos y llevar menos tiempo que traducir desde cero. El ahorro exacto depende de la calidad del resultado en bruto y del nivel de edición que necesites, y se acuerda en el presupuesto.",
+      q: "¿Es la posedición (MTPE) más barata que la traducción humana?",
+      a: "Normalmente, sí. Como un motor de traducción automática produce el primer borrador, la posedición suele llevar menos tiempo y costar menos que traducir desde cero. El ahorro depende de la calidad de la salida en bruto, del tema y del nivel de posedición: la posedición ligera ahorra más, y la completa, hasta calidad publicable, algo menos. En árabe, donde los motores aún cometen errores de gramática y terminología, un poseditor nativo es imprescindible en ambos casos.",
     },
     {
-      q: "¿Ofreces posedición ligera o completa?",
-      a: "Las dos. La posedición ligera deja el texto preciso y comprensible, lo que sirve para documentos internos y grandes volúmenes de contenido de referencia. La posedición completa lleva el árabe a calidad de publicación para todo lo que vayan a leer tus clientes.",
+      q: "¿Qué diferencia hay entre posedición ligera y completa?",
+      a: "La posedición ligera corrige solo lo necesario para que una traducción automática sea precisa y comprensible; el estilo puede seguir sonando mecánico. Sirve para documentos internos y grandes volúmenes de contenido de referencia. La posedición completa lleva el texto al nivel de una traducción humana, con terminología correcta, estilo natural y formato coherente, y es la opción adecuada para todo lo que leerán clientes, socios o el público. Ofrezco ambas para contenido en árabe.",
     },
   ],
   transcreation: [
     {
-      q: "¿En qué se diferencia la transcreación de la traducción?",
-      a: "La traducción traslada el sentido de un texto de un idioma a otro. La transcreación se parece más a la redacción publicitaria: parte de tu brief creativo y recrea el mensaje en árabe para conservar la intención, el tono y el impacto emocional, aunque haya que cambiar las palabras, los juegos de palabras o las referencias culturales. Se usa en eslóganes, campañas, mensajes de marca y textos de producto.",
+      q: "¿Qué diferencia hay entre transcreación y traducción?",
+      a: "La traducción traslada el significado de un texto a otro idioma. La transcreación recrea el mensaje para otra cultura de modo que conserve la misma intención, emoción y efecto, aunque las palabras cambien por completo. Se usa en eslóganes, publicidad, campañas y textos de marca, donde una traducción literal perdería los juegos de palabras o la fuerza persuasiva. La transcreación al árabe suele incluir varias propuestas con retrotraducción, para que el cliente sepa qué dice cada una.",
     },
     {
       q: "¿Ofreces retrotraducciones?",
@@ -526,8 +542,8 @@ const es: FaqSet = {
   ],
   consulting: [
     {
-      q: "¿Debemos usar árabe estándar moderno o un dialecto regional?",
-      a: "Depende de tu público y del tipo de contenido. El árabe estándar moderno se entiende en todo el mundo árabe y es adecuado para documentación, contenido jurídico y corporativo y la mayoría de los sitios web. Un dialecto regional, como el árabe del Golfo o el egipcio, puede funcionar mejor en marketing, redes sociales y vídeos dirigidos a un solo país. Te ayudo a elegir la combinación adecuada para cada mercado y tipo de contenido.",
+      q: "¿Debe una empresa usar árabe estándar moderno o un dialecto regional?",
+      a: "La mayoría de las empresas debería usar árabe estándar moderno en sus contenidos escritos, porque se entiende en todos los países de habla árabe y sirve para webs, apps, documentación y textos jurídicos y corporativos. Un dialecto regional, como el árabe del Golfo, egipcio, levantino o magrebí (dariya), funciona mejor en marketing, redes sociales y vídeo dirigidos a un solo país. Muchas marcas combinan ambos: árabe estándar para lo esencial y un toque local para las campañas.",
     },
     {
       q: "¿La consultoría es puntual o continua?",
@@ -541,7 +557,7 @@ const es: FaqSet = {
   "digital-marketing": [
     {
       q: "¿Qué son el SEO, el AEO, el GEO y el LLMO?",
-      a: "El SEO ayuda a que tu web se posicione en los buscadores. El AEO (optimización para motores de respuesta) estructura tu contenido para que pueda usarse directamente como respuesta. El GEO (optimización para motores generativos) y el LLMO (optimización para grandes modelos de lenguaje) hacen que tu empresa sea fácil de entender, fiable y citable para las herramientas de IA cuando generan respuestas. Juntos te mantienen visible dondequiera que la gente busque.",
+      a: "Son cuatro capas de visibilidad en internet. El SEO (posicionamiento en buscadores) ayuda a que las páginas se posicionen en buscadores como Google y Bing. El AEO (optimización para motores de respuesta) estructura el contenido en preguntas y respuestas claras para mostrarse como respuesta directa. El GEO (posicionamiento generativo) y el LLMO (optimización para grandes modelos de lenguaje) hacen que una empresa sea fácil de entender, fiable y citable para las herramientas de IA. Cada capa se apoya en la anterior.",
     },
     {
       q: "¿Puedes garantizar que mi empresa aparezca en las respuestas de la IA?",

@@ -71,7 +71,7 @@ const markets: Record<Locale, InfoPage> = {
     faqs: [
       {
         q: "Do I need a different Arabic version for each country?",
-        a: "Usually not. One well-written Modern Standard Arabic version works across all Arabic-speaking markets. Country-specific versions make sense mainly for marketing, social media and campaigns aimed at one market.",
+        a: "Usually not. One version written in Modern Standard Arabic (MSA) is understood in all Arabic-speaking countries, from Morocco to the Gulf, and works for websites, apps, documents and most marketing. Separate country versions make sense mainly for campaigns, social media and video aimed at one market, or where local terms differ, for example for products, units or legal references. Start with MSA, then localize the content closest to the customer.",
       },
       {
         q: "Is English enough to do business in the Gulf?",
@@ -145,7 +145,7 @@ const markets: Record<Locale, InfoPage> = {
     faqs: [
       {
         q: "هل أحتاج إلى نسخة عربية مختلفة لكل دولة؟",
-        a: "غالبًا لا. فنسخة واحدة مكتوبة بفصحى متقنة تصلح لكل الأسواق العربية. أما النسخ الخاصة بكل دولة فتفيد أساسًا في التسويق ووسائل التواصل والحملات الموجّهة إلى سوق بعينها.",
+        a: "غالبًا لا. فنسخة واحدة بالعربية الفصحى المعاصرة (MSA) مفهومة في كل الدول الناطقة بالعربية، من المغرب إلى الخليج، وتصلح للمواقع والتطبيقات والمستندات ومعظم المحتوى التسويقي. أما النسخ الخاصة بكل دولة فتفيد أساسًا في الحملات ووسائل التواصل والفيديو الموجّهة إلى سوق واحدة، أو حين تختلف المصطلحات المحلية، كأسماء المنتجات ووحدات القياس والمراجع القانونية. ابدأ بالفصحى، ثم وطّن المحتوى الأقرب إلى العميل.",
       },
       {
         q: "هل تكفي الإنجليزية للعمل في الخليج؟",
@@ -219,7 +219,7 @@ const markets: Record<Locale, InfoPage> = {
     faqs: [
       {
         q: "Faut-il une version arabe différente pour chaque pays ?",
-        a: "Généralement non. Une seule version en arabe standard bien rédigée convient à tous les marchés arabophones. Des versions par pays se justifient surtout pour le marketing, les réseaux sociaux et les campagnes ciblant un marché précis.",
+        a: "Généralement non. Une seule version en arabe standard moderne est comprise dans tous les pays arabophones, du Maroc au Golfe, et convient aux sites, applications, documents et à la plupart des contenus marketing. Des versions par pays se justifient surtout pour les campagnes, les réseaux sociaux et la vidéo visant un seul marché, ou quand les termes locaux diffèrent, par exemple pour les produits, les unités ou les références juridiques. Commencez par l’arabe standard, puis localisez les contenus les plus proches du client.",
       },
       {
         q: "L’anglais suffit-il pour faire des affaires dans le Golfe ?",
@@ -293,7 +293,7 @@ const markets: Record<Locale, InfoPage> = {
     faqs: [
       {
         q: "¿Necesito una versión en árabe distinta para cada país?",
-        a: "Normalmente no. Una única versión en árabe estándar bien escrita sirve para todos los mercados de habla árabe. Las versiones por país tienen sentido sobre todo en marketing, redes sociales y campañas dirigidas a un mercado concreto.",
+        a: "Normalmente no. Una sola versión en árabe estándar moderno se entiende en todos los países de habla árabe, de Marruecos al Golfo, y sirve para webs, apps, documentos y la mayor parte del marketing. Las versiones por país tienen sentido sobre todo en campañas, redes sociales y vídeo dirigidos a un solo mercado, o cuando cambian los términos locales, por ejemplo de productos, unidades o referencias legales. Empieza por el árabe estándar y localiza después el contenido más cercano al cliente.",
       },
       {
         q: "¿Basta con el inglés para hacer negocios en el Golfo?",
