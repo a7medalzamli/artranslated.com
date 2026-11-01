@@ -172,29 +172,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <span>{t.home.langNames.ar}</span>
                 </div>
               </div>
-              {/* Second pair: Arabic → English. */}
-              <div className={`${styles.languagePair} ${styles.languagePairSecond}`}>
-                <div className={styles.languageItem}>
-                  <Flag code="ar" size={34} />
-                  <span>{t.home.langNames.ar}</span>
-                </div>
-                <div className={styles.languageArrow}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path
-                      d="M4 12h15m-6-6 6 6-6 6"
-                      stroke="currentColor"
-                      strokeWidth="2.25"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <span className="visually-hidden">{intoWord[loc]}</span>
-                </div>
-                <div className={`${styles.languageItem} ${styles.languageTarget}`}>
-                  <Flag code="en" size={34} />
-                  <span>{t.home.langNames.en}</span>
-                </div>
-              </div>
             </div>
           </div>
         </Container>
