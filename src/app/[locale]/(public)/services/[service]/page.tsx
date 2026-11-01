@@ -12,7 +12,7 @@ import {
   serviceImages,
   serviceSlugs,
 } from "@/content/servicePages";
-import { getContent } from "@/i18n/content";
+import { getContent, getStaticContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getServiceSeoTitles } from "@/content/seoText";
 import type { Locale } from "@/i18n";
@@ -231,7 +231,7 @@ export default async function ServicePage({ params }: { params: Params }) {
         // Editing page: the quote form itself, with the service pre-selected.
         <Section title={page.ctaTitle} intro={page.ctaDescription} narrow>
           <QuoteForm
-            labels={t.form}
+            labels={{ ...t.form, pairs: getStaticContent(locale as Locale).form.pairs }}
             locale={locale}
             defaultService={page.title}
             specializationOptions={[

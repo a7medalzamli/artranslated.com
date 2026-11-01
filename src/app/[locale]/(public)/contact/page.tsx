@@ -3,7 +3,7 @@ import Image from "next/image";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Container } from "@/components/Container/Container";
 import { QuoteForm } from "./QuoteForm";
-import { getContent } from "@/i18n/content";
+import { getContent, getStaticContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getSeoText } from "@/content/seoText";
 import { getServicePages, serviceSlugs } from "@/content/servicePages";
@@ -80,7 +80,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
         <div className="section-gap">
           <QuoteForm
-            labels={t.form}
+            labels={{ ...t.form, pairs: getStaticContent(locale as Locale).form.pairs }}
             specializationOptions={specializationOptions}
             serviceOptions={serviceOptions}
             locale={locale}
