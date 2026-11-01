@@ -25,7 +25,7 @@ const content: Record<Locale, Record<SpecSlug, Blocks>> = {
   en: {
     technical: b(
       "en",
-      "Manuals, specifications, datasheets, and safety and compliance documents, translated by a translator with a degree in environmental engineering. Terminology is managed in SDL Trados termbases, and every file goes through translation, editing and proofreading before delivery.",
+      "Manuals, specifications, datasheets, and safety and compliance documents, translated by a translator with a degree in environmental engineering. Terminology is managed in project termbases, and every file goes through translation, editing and proofreading before delivery.",
       "Technical products are increasingly sold as software. I localize SaaS platforms, dashboards, help centers, knowledge bases and release notes into Arabic, keeping interface terms consistent with your documentation and checking the right-to-left layout.",
       "Product pages, brochures, case studies and trade-show material need to be accurate and persuasive. I adapt them for Arabic-speaking buyers and advise on technical glossaries, style guides and the right variety of Arabic for your market.",
     ),
@@ -37,7 +37,7 @@ const content: Record<Locale, Record<SpecSlug, Blocks>> = {
     ),
     financial: b(
       "en",
-      "Financial statements, annual and investor reports, and audit and compliance documents, translated with exact figures and consistent terminology across reporting periods, using SDL Trados termbases and translation memories. Past work includes French to Arabic accounting projects for translation agencies.",
+      "Financial statements, annual and investor reports, and audit and compliance documents, translated with exact figures and consistent terminology across reporting periods, using termbases and translation memories. Past work includes French to Arabic accounting projects for translation agencies.",
       "Fintech and banking products need clear Arabic in their apps: onboarding flows, account screens, notifications, help-center articles and in-app legal text. I localize them with consistent financial terms and correct right-to-left number and currency formats.",
       "Investor presentations, product pages and campaigns for financial services are adapted to build trust with Arabic-speaking customers, with advice on terminology, tone and regional conventions for each market.",
     ),
@@ -57,7 +57,7 @@ const content: Record<Locale, Record<SpecSlug, Blocks>> = {
   ar: {
     technical: b(
       "ar",
-      "ترجمة الأدلة والمواصفات وصحائف البيانات ووثائق السلامة والامتثال على يد مترجم يحمل شهادة في الهندسة البيئية. تُدار المصطلحات عبر قواعد مصطلحات SDL Trados، ويمرّ كل ملف بالترجمة والتحرير والتدقيق (TEP) قبل التسليم.",
+      "ترجمة الأدلة والمواصفات وصحائف البيانات ووثائق السلامة والامتثال على يد مترجم يحمل شهادة في الهندسة البيئية. تُدار المصطلحات عبر قواعد مصطلحات، ويمرّ كل ملف بالترجمة والتحرير والتدقيق (TEP) قبل التسليم.",
       "تُباع المنتجات التقنية اليوم في صورة برمجيات بشكل متزايد. أوطّن منصات البرمجيات كخدمة (SaaS) ولوحات التحكم ومراكز المساعدة وقواعد المعرفة وملاحظات الإصدار إلى العربية، مع توحيد مصطلحات الواجهة مع وثائقك ومراجعة التصميم من اليمين إلى اليسار (RTL).",
       "تحتاج صفحات المنتجات والكتيّبات ودراسات الحالة ومواد المعارض إلى الدقة والإقناع معًا. أكيّفها للمشترين الناطقين بالعربية، وأقدّم الاستشارة حول المسارد التقنية وأدلة الأسلوب ونوع العربية المناسب لسوقك.",
     ),
@@ -69,7 +69,7 @@ const content: Record<Locale, Record<SpecSlug, Blocks>> = {
     ),
     financial: b(
       "ar",
-      "ترجمة القوائم المالية والتقارير السنوية وتقارير المستثمرين ووثائق التدقيق والامتثال بأرقام دقيقة ومصطلحات متّسقة عبر الفترات المالية، باستخدام قواعد مصطلحات SDL Trados وذاكرات الترجمة (TM). ومن أعمالي السابقة مشاريع ترجمة محاسبية من الفرنسية إلى العربية لوكالات ترجمة.",
+      "ترجمة القوائم المالية والتقارير السنوية وتقارير المستثمرين ووثائق التدقيق والامتثال بأرقام دقيقة ومصطلحات متّسقة عبر الفترات المالية، باستخدام قواعد مصطلحات وذاكرات الترجمة (TM). ومن أعمالي السابقة مشاريع ترجمة محاسبية من الفرنسية إلى العربية لوكالات ترجمة.",
       "تحتاج منتجات التقنية المالية والخدمات المصرفية إلى عربية واضحة في تطبيقاتها: خطوات التسجيل، وشاشات الحسابات، والإشعارات، ومقالات مركز المساعدة، والنصوص القانونية داخل التطبيق. أوطّنها بمصطلحات مالية موحّدة وتنسيقات صحيحة للأرقام والعملات من اليمين إلى اليسار (RTL).",
       "تُكيَّف عروض المستثمرين وصفحات المنتجات وحملات الخدمات المالية لبناء الثقة لدى العملاء الناطقين بالعربية، مع استشارات حول المصطلحات والنبرة والأعراف الإقليمية لكل سوق.",
     ),
@@ -89,7 +89,7 @@ const content: Record<Locale, Record<SpecSlug, Blocks>> = {
   fr: {
     technical: b(
       "fr",
-      "Manuels, spécifications, fiches techniques, documents de sécurité et de conformité, traduits par un traducteur diplômé en génie de l’environnement. La terminologie est gérée dans des bases terminologiques SDL Trados, et chaque fichier passe par la traduction, la révision et la relecture avant livraison.",
+      "Manuels, spécifications, fiches techniques, documents de sécurité et de conformité, traduits par un traducteur diplômé en génie de l’environnement. La terminologie est gérée dans des bases terminologiques du projet, et chaque fichier passe par la traduction, la révision et la relecture avant livraison.",
       "Les produits techniques se vendent de plus en plus sous forme de logiciels. Je localise en arabe des plateformes SaaS, tableaux de bord, centres d’aide, bases de connaissances et notes de version, en alignant les termes de l’interface sur votre documentation et en vérifiant la mise en page de droite à gauche.",
       "Pages produits, brochures, études de cas et supports de salon doivent être à la fois exacts et convaincants. Je les adapte pour les acheteurs arabophones et vous conseille sur les glossaires techniques, les guides de style et la variété d’arabe adaptée à votre marché.",
     ),
@@ -101,7 +101,7 @@ const content: Record<Locale, Record<SpecSlug, Blocks>> = {
     ),
     financial: b(
       "fr",
-      "États financiers, rapports annuels et rapports aux investisseurs, documents d’audit et de conformité, traduits avec des chiffres exacts et une terminologie cohérente d’une période à l’autre, grâce aux bases terminologiques et mémoires de traduction SDL Trados. Mes travaux passés comprennent des projets de traduction comptable du français vers l’arabe pour des agences de traduction.",
+      "États financiers, rapports annuels et rapports aux investisseurs, documents d’audit et de conformité, traduits avec des chiffres exacts et une terminologie cohérente d’une période à l’autre, grâce aux bases terminologiques et mémoires de traduction. Mes travaux passés comprennent des projets de traduction comptable du français vers l’arabe pour des agences de traduction.",
       "Les produits fintech et bancaires ont besoin d’un arabe clair dans leurs applications : parcours d’inscription, écrans de compte, notifications, articles du centre d’aide et mentions juridiques. Je les localise avec une terminologie financière cohérente et des formats de nombres et de devises corrects en écriture de droite à gauche.",
       "Présentations aux investisseurs, pages produits et campagnes de services financiers sont adaptées pour gagner la confiance des clients arabophones, avec des conseils sur la terminologie, le ton et les usages régionaux de chaque marché.",
     ),
@@ -121,7 +121,7 @@ const content: Record<Locale, Record<SpecSlug, Blocks>> = {
   es: {
     technical: b(
       "es",
-      "Manuales, especificaciones, fichas técnicas y documentos de seguridad y cumplimiento, traducidos por un traductor titulado en ingeniería ambiental. La terminología se gestiona con bases terminológicas de SDL Trados, y cada archivo pasa por traducción, edición y revisión antes de la entrega.",
+      "Manuales, especificaciones, fichas técnicas y documentos de seguridad y cumplimiento, traducidos por un traductor titulado en ingeniería ambiental. La terminología se gestiona con bases terminológicas del proyecto, y cada archivo pasa por traducción, edición y revisión antes de la entrega.",
       "Cada vez más productos técnicos se venden como software. Localizo al árabe plataformas SaaS, paneles, centros de ayuda, bases de conocimiento y notas de versión, manteniendo los términos de la interfaz coherentes con tu documentación y revisando el diseño de derecha a izquierda.",
       "Las páginas de producto, folletos, casos de éxito y materiales para ferias deben ser precisos y convincentes. Los adapto para compradores de habla árabe y te asesoro sobre glosarios técnicos, guías de estilo y la variedad de árabe adecuada para tu mercado.",
     ),
@@ -133,7 +133,7 @@ const content: Record<Locale, Record<SpecSlug, Blocks>> = {
     ),
     financial: b(
       "es",
-      "Estados financieros, informes anuales y para inversores, y documentos de auditoría y cumplimiento, traducidos con cifras exactas y terminología coherente entre periodos, con bases terminológicas y memorias de traducción de SDL Trados. Entre mis trabajos anteriores hay proyectos de traducción contable del francés al árabe para agencias de traducción.",
+      "Estados financieros, informes anuales y para inversores, y documentos de auditoría y cumplimiento, traducidos con cifras exactas y terminología coherente entre periodos, con bases terminológicas y memorias de traducción. Entre mis trabajos anteriores hay proyectos de traducción contable del francés al árabe para agencias de traducción.",
       "Los productos fintech y bancarios necesitan un árabe claro en sus aplicaciones: procesos de alta, pantallas de cuenta, notificaciones, artículos del centro de ayuda y textos legales. Los localizo con terminología financiera coherente y formatos correctos de números y monedas de derecha a izquierda.",
       "Las presentaciones para inversores, páginas de producto y campañas de servicios financieros se adaptan para generar confianza entre los clientes de habla árabe, con asesoramiento sobre terminología, tono y convenciones regionales de cada mercado.",
     ),
