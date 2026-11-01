@@ -89,7 +89,7 @@ const serviceTitles: Record<Locale, ServiceTitles> = {
     mtpe: "التحرير اللاحق للترجمة الآلية إلى العربية (MTPE)",
     transcreation: "الترجمة الإبداعية إلى العربية",
     consulting: "استشارات التوطين إلى العربية",
-    "digital-marketing": "التسويق الرقمي وتحسين محركات البحث والظهور في الذكاء الاصطناعي",
+    "digital-marketing": "التسويق الرقمي وتحسين محركات البحث (SEO) والظهور في الذكاء الاصطناعي (AI)",
   },
   fr: {
     services: "Services linguistiques en arabe",
@@ -121,7 +121,7 @@ export function getServiceSeoTitles(locale: string): ServiceTitles {
  */
 const homeSummary: Record<Locale, string> = {
   en: "I’m Ahmed Alzamli, a Palestinian translator working professionally since 2014. Through Translated into Arabic (TIA), I help businesses and agencies reach Arabic-speaking audiences with accurate, natural Arabic.",
-  ar: "أنا أحمد الزاملي، مترجم فلسطيني محترف منذ عام 2014. ومن خلال Translated into Arabic (TIA)، أساعد الشركات ووكالات الترجمة على الوصول إلى الجمهور الناطق بالعربية بنصوص عربية دقيقة وطبيعية.",
+  ar: "أنا أحمد الزاملي، مترجم فلسطيني محترف منذ عام 2014. ومن خلال Translated into Arabic (TIA)، أساعد الشركات ووكالات الترجمة (LSPs) على الوصول إلى الجمهور الناطق بالعربية بنصوص عربية دقيقة وطبيعية.",
   fr: "Je suis Ahmed Alzamli, traducteur palestinien professionnel depuis 2014. Avec Translated into Arabic (TIA), j’aide entreprises et agences à toucher le public arabophone grâce à un arabe exact et naturel.",
   es: "Soy Ahmed Alzamli, traductor palestino profesional desde 2014. Con Translated into Arabic (TIA), ayudo a empresas y agencias a llegar al público de habla árabe con un árabe preciso y natural.",
 };
