@@ -578,4 +578,234 @@ Si un presupuesto o un formulario de proveedor incluye un término que no conoce
   },
 };
 
-export const codePosts: CodePost[] = [msaVsDialects, glossary];
+/* ------------------------------------------------------------------ */
+/* 3. Results as a Service vs SaaS (scheduled for 4 November 2026)     */
+/* ------------------------------------------------------------------ */
+
+const raasVsSaas: CodePost = {
+  slug: "results-as-a-service-vs-saas",
+  category: "Localization",
+  cover: "/images/blog/raas-vs-saas.jpg",
+  publishedAt: "2026-11-04T08:00:00Z",
+  updatedAt: "2026-11-04T08:00:00Z",
+  text: {
+    en: {
+      title: "Results as a Service (RaaS) vs SaaS: what it means for localization",
+      seoTitle: "Results as a Service (RaaS) vs SaaS: What It Means for Localization",
+      excerpt:
+        "SaaS sells you a tool; Results as a Service sells you the outcome. Here is what the shift means, why AI is driving it, and how to buy Arabic localization as a result.",
+      content: `For twenty years, software has mostly been sold as **SaaS**: you pay a monthly subscription and your team uses the tool. A newer model is gaining ground, especially with AI: **Results as a Service (RaaS)**, where you pay for the outcome itself, not for the tool or the hours behind it.
+
+## What is SaaS?
+
+Software as a Service gives you **access to a tool**: a CRM, a design app, an SEO platform or a translation management system. The provider maintains the software; you do the work with it. You pay per user or per month, whether or not you get the result you wanted.
+
+## What is Results as a Service?
+
+With RaaS, the provider delivers a **finished, measurable outcome**. Behind the scenes they may use software, AI and human experts, but you don’t manage any of it. You agree on the result, such as "our app live in Arabic" or "every support ticket answered within an hour", and the provider is responsible for getting there.
+
+## SaaS vs RaaS at a glance
+
+| | SaaS | RaaS |
+|---|---|---|
+| What you buy | Access to a tool | A finished outcome |
+| Who does the work | Your team | The provider |
+| What you pay for | Seats or subscriptions | Results or clearly scoped deliverables |
+| Who carries the risk | Mostly you | Shared, or mostly the provider |
+| What you need in-house | People to run the tool | Someone to define and approve the result |
+
+## Why RaaS is growing now
+
+AI has made much routine work faster and cheaper to produce. Companies are asking a simple question: **why pay for software my team has to operate, when I could pay for the result?** At the same time, many teams are short on time and specialist skills. A provider who combines tools, AI and expertise can often deliver the outcome more reliably than a company learning a new platform from scratch.
+
+## What it means for localization
+
+Localization has long been sold as tools (translation platforms, machine translation) or as time (per hour, per word). But what a software company actually needs is a **result**: an Arabic product that users can rely on.
+
+Thinking in results changes the conversation:
+
+- **Instead of** "We bought a translation platform and machine translation," **ask** "Is our Arabic release ready to ship?"
+- **Instead of** "How many hours did the reviewer spend?", **ask** "What is the quality score, and which issues were fixed?"
+- **Instead of** "Who manages the translators?", **ask** "Who is accountable for Arabic being ready in every release?"
+
+## How to buy localization as a result
+
+1. **Define the outcome.** For example: interface, help center and app store listing in Arabic, ready for the next release.
+2. **Agree on how it will be measured.** In-context review completed, right-to-left issues reported, an LQA score above an agreed threshold.
+3. **Fix the scope and timing.** Which content, which release, which deadline.
+4. **Keep it continuous.** For SaaS products, results matter in every release, not only at launch.
+
+## What to watch out for
+
+RaaS works best when results are **measurable and within the provider’s control**. A translator can guarantee an accurate, consistent, launch-ready Arabic product; nobody can honestly guarantee how many users it will win. Be wary of promises about outcomes no one controls, and make sure the scope is clear before work starts.
+
+## How I work
+
+This is how I approach [SaaS localization](/en/services/saas-localization): we agree on the result you need, and I take care of everything required to deliver it, from translation and review to in-context checks and quality reporting. If you are planning an Arabic launch, [tell me about your product](/en/contact) and I’ll suggest a clear, results-based scope.`,
+    },
+    ar: {
+      title: "النتائج كخدمة (RaaS) مقابل البرمجيات كخدمة (SaaS): ماذا يعني ذلك للتوطين؟",
+      seoTitle: "النتائج كخدمة (RaaS) مقابل SaaS: ماذا يعني ذلك للتوطين؟",
+      excerpt:
+        "تبيعك البرمجيات كخدمة أداةً، أما النتائج كخدمة فتبيعك النتيجة نفسها. إليك معنى هذا التحوّل، ولماذا يدفعه الذكاء الاصطناعي، وكيف تشتري التوطين إلى العربية بوصفه نتيجة.",
+      content: `على مدى عشرين عامًا، بيعت البرمجيات غالبًا بنموذج **البرمجيات كخدمة (SaaS)**: تدفع اشتراكًا شهريًا ويستخدم فريقك الأداة. لكن نموذجًا أحدث يكتسب حضورًا، خاصة مع الذكاء الاصطناعي: **النتائج كخدمة (RaaS)**، حيث تدفع مقابل النتيجة نفسها، لا مقابل الأداة أو الساعات التي تقف وراءها.
+
+## ما البرمجيات كخدمة (SaaS)؟
+
+تمنحك البرمجيات كخدمة **حق استخدام أداة**: نظام لإدارة العملاء، أو تطبيق تصميم، أو منصة لتحسين محركات البحث، أو نظام لإدارة الترجمة. يتولى المزوّد صيانة البرنامج، وتتولى أنت العمل به، وتدفع لكل مستخدم أو كل شهر، سواء حققت النتيجة التي أردتها أم لا.
+
+## ما النتائج كخدمة (RaaS)؟
+
+في هذا النموذج، يسلّمك المزوّد **نتيجة مكتملة وقابلة للقياس**. قد يستخدم خلف الكواليس برامج وذكاءً اصطناعيًا وخبراء بشريين، لكنك لا تدير شيئًا من ذلك. تتفقان على النتيجة، مثل «تطبيقنا متاح بالعربية» أو «الرد على كل طلب دعم خلال ساعة»، ويكون المزوّد مسؤولًا عن الوصول إليها.
+
+## مقارنة سريعة
+
+| | SaaS | RaaS |
+|---|---|---|
+| ما الذي تشتريه | حق استخدام أداة | نتيجة مكتملة |
+| من يؤدي العمل | فريقك | المزوّد |
+| مقابل ماذا تدفع | المستخدمون أو الاشتراكات | النتائج أو مخرجات محددة النطاق |
+| من يتحمّل المخاطرة | أنت غالبًا | مشتركة، أو المزوّد غالبًا |
+| ما تحتاجه داخل شركتك | أشخاص لتشغيل الأداة | شخص يحدد النتيجة ويعتمدها |
+
+## لماذا ينمو هذا النموذج الآن؟
+
+جعل الذكاء الاصطناعي كثيرًا من الأعمال الروتينية أسرع وأقل تكلفة، فصارت الشركات تطرح سؤالًا بسيطًا: **لماذا أدفع مقابل برنامج على فريقي تشغيله، بينما يمكنني أن أدفع مقابل النتيجة؟** وفي الوقت نفسه، تعاني فرق كثيرة من ضيق الوقت ونقص المهارات المتخصصة، والمزوّد الذي يجمع بين الأدوات والذكاء الاصطناعي والخبرة يستطيع غالبًا تحقيق النتيجة بموثوقية أكبر من شركة تتعلم منصة جديدة من الصفر.
+
+## ماذا يعني ذلك للتوطين؟
+
+طالما بيع التوطين على شكل أدوات (منصات الترجمة والترجمة الآلية) أو وقت (بالساعة أو بالكلمة). لكن ما تحتاجه شركة البرمجيات فعلًا هو **نتيجة**: منتج عربي يمكن للمستخدمين الاعتماد عليه.
+
+والتفكير بالنتائج يغيّر طبيعة الحوار:
+
+- **بدل** «اشترينا منصة ترجمة وترجمة آلية»، **اسأل** «هل إصدارنا العربي جاهز للإطلاق؟»
+- **بدل** «كم ساعة قضاها المراجع؟»، **اسأل** «ما درجة الجودة، وما المشكلات التي عولجت؟»
+- **بدل** «من يدير المترجمين؟»، **اسأل** «من المسؤول عن جاهزية العربية في كل إصدار؟»
+
+## كيف تشتري التوطين بوصفه نتيجة؟
+
+1. **حدّد النتيجة.** مثلًا: الواجهة ومركز المساعدة وصفحة المتجر بالعربية، جاهزة للإصدار القادم.
+2. **اتفقا على طريقة القياس.** إتمام المراجعة في السياق، والإبلاغ عن مشكلات الاتجاه من اليمين إلى اليسار، ودرجة تقييم جودة (LQA) أعلى من حدّ متفق عليه.
+3. **ثبّت النطاق والتوقيت.** أي محتوى، وأي إصدار، وأي موعد نهائي.
+4. **اجعلها مستمرة.** في منتجات SaaS، تهمّ النتائج في كل إصدار، لا عند الإطلاق فقط.
+
+## ما الذي يجب الانتباه إليه؟
+
+ينجح هذا النموذج حين تكون النتائج **قابلة للقياس وضمن سيطرة المزوّد**. يستطيع المترجم أن يضمن منتجًا عربيًا دقيقًا ومتّسقًا وجاهزًا للإطلاق، لكن لا أحد يستطيع بصدق أن يضمن عدد المستخدمين الذين سيكسبهم. فاحذر من الوعود بنتائج لا يتحكم فيها أحد، وتأكد من وضوح النطاق قبل بدء العمل.
+
+## كيف أعمل
+
+هكذا أتعامل مع [توطين منتجات SaaS](/ar/services/saas-localization): نتفق على النتيجة التي تحتاجها، وأتولى كل ما يلزم لتحقيقها، من الترجمة والمراجعة إلى الفحص في السياق وتقارير الجودة. وإن كنت تخطط لإطلاق منتجك بالعربية، [فأخبرني عنه](/ar/contact) وسأقترح نطاقًا واضحًا قائمًا على النتائج.`,
+    },
+    fr: {
+      title: "Results as a Service (RaaS) ou SaaS : ce que cela change pour la localisation",
+      seoTitle: "Results as a Service (RaaS) vs SaaS : ce que cela change pour la localisation",
+      excerpt:
+        "Le SaaS vous vend un outil ; le Results as a Service vous vend le résultat. Ce que ce changement signifie, pourquoi l’IA l’accélère, et comment acheter la localisation en arabe comme un résultat.",
+      content: `Depuis vingt ans, les logiciels se vendent surtout en **SaaS** : vous payez un abonnement mensuel et votre équipe utilise l’outil. Un modèle plus récent gagne du terrain, notamment avec l’IA : le **Results as a Service (RaaS)**, où vous payez le résultat lui-même, et non l’outil ou les heures qui se cachent derrière.
+
+## Qu’est-ce que le SaaS ?
+
+Le Software as a Service vous donne **accès à un outil** : un CRM, une application de design, une plateforme SEO ou un système de gestion de traduction. Le fournisseur entretient le logiciel ; c’est vous qui travaillez avec. Vous payez par utilisateur ou par mois, que vous obteniez ou non le résultat voulu.
+
+## Qu’est-ce que le Results as a Service ?
+
+Avec le RaaS, le fournisseur livre un **résultat fini et mesurable**. En coulisses, il peut s’appuyer sur des logiciels, de l’IA et des experts, mais vous n’avez rien à gérer. Vous convenez du résultat, par exemple « notre application disponible en arabe » ou « chaque demande de support traitée en moins d’une heure », et le fournisseur est responsable de l’atteindre.
+
+## SaaS et RaaS en un coup d’œil
+
+| | SaaS | RaaS |
+|---|---|---|
+| Ce que vous achetez | L’accès à un outil | Un résultat fini |
+| Qui fait le travail | Votre équipe | Le fournisseur |
+| Ce que vous payez | Des licences ou abonnements | Des résultats ou des livrables bien définis |
+| Qui porte le risque | Surtout vous | Partagé, ou surtout le fournisseur |
+| Ce qu’il vous faut en interne | Des personnes pour utiliser l’outil | Quelqu’un pour définir et valider le résultat |
+
+## Pourquoi le RaaS progresse maintenant
+
+L’IA a rendu une grande partie du travail courant plus rapide et moins coûteux. Les entreprises se posent donc une question simple : **pourquoi payer un logiciel que mon équipe doit faire tourner, alors que je pourrais payer le résultat ?** En parallèle, beaucoup d’équipes manquent de temps et de compétences spécialisées. Un prestataire qui combine outils, IA et expertise peut souvent livrer le résultat de façon plus fiable qu’une entreprise qui découvre une nouvelle plateforme.
+
+## Ce que cela change pour la localisation
+
+La localisation s’est longtemps vendue sous forme d’outils (plateformes de traduction, traduction automatique) ou de temps (à l’heure, au mot). Or, ce dont un éditeur de logiciels a réellement besoin, c’est d’un **résultat** : un produit en arabe sur lequel ses utilisateurs peuvent compter.
+
+Raisonner en résultats change la discussion :
+
+- **Au lieu de** « Nous avons acheté une plateforme de traduction et de la traduction automatique », **demandez-vous** « Notre version arabe est-elle prête à être déployée ? »
+- **Au lieu de** « Combien d’heures le réviseur a-t-il passées ? », **demandez** « Quelle est la note de qualité, et quels problèmes ont été corrigés ? »
+- **Au lieu de** « Qui gère les traducteurs ? », **demandez** « Qui est responsable de l’arabe à chaque version ? »
+
+## Comment acheter la localisation comme un résultat
+
+1. **Définissez le résultat.** Par exemple : interface, centre d’aide et fiche de l’app store en arabe, prêts pour la prochaine version.
+2. **Convenez de la façon de le mesurer.** Vérification en contexte terminée, problèmes d’écriture de droite à gauche signalés, note LQA au-dessus d’un seuil convenu.
+3. **Fixez le périmètre et le calendrier.** Quels contenus, quelle version, quelle échéance.
+4. **Inscrivez-le dans la durée.** Pour un produit SaaS, le résultat compte à chaque version, pas seulement au lancement.
+
+## Les points de vigilance
+
+Le RaaS fonctionne le mieux quand les résultats sont **mesurables et sous le contrôle du fournisseur**. Un traducteur peut garantir un produit arabe exact, cohérent et prêt au lancement ; personne ne peut honnêtement garantir le nombre d’utilisateurs qu’il gagnera. Méfiez-vous des promesses portant sur des résultats que personne ne maîtrise, et assurez-vous que le périmètre est clair avant de commencer.
+
+## Ma façon de travailler
+
+C’est ainsi que j’aborde la [localisation SaaS](/fr/services/saas-localization) : nous définissons le résultat dont vous avez besoin, et je prends en charge tout ce qu’il faut pour le livrer, de la traduction et la révision aux vérifications en contexte et aux rapports qualité. Vous préparez un lancement en arabe ? [Parlez-moi de votre produit](/fr/contact) et je vous proposerai un périmètre clair, fondé sur les résultats.`,
+    },
+    es: {
+      title: "Results as a Service (RaaS) frente a SaaS: qué significa para la localización",
+      seoTitle: "Results as a Service (RaaS) vs SaaS: qué significa para la localización",
+      excerpt:
+        "El SaaS te vende una herramienta; Results as a Service te vende el resultado. Qué significa este cambio, por qué lo impulsa la IA y cómo contratar la localización al árabe como un resultado.",
+      content: `Durante veinte años, el software se ha vendido sobre todo como **SaaS**: pagas una suscripción mensual y tu equipo usa la herramienta. Un modelo más reciente gana terreno, sobre todo con la IA: **Results as a Service (RaaS)**, en el que pagas por el resultado en sí, no por la herramienta ni por las horas que hay detrás.
+
+## ¿Qué es el SaaS?
+
+El Software as a Service te da **acceso a una herramienta**: un CRM, una app de diseño, una plataforma de SEO o un sistema de gestión de traducciones. El proveedor mantiene el software; tú haces el trabajo con él. Pagas por usuario o por mes, consigas o no el resultado que buscabas.
+
+## ¿Qué es Results as a Service?
+
+Con el RaaS, el proveedor entrega un **resultado terminado y medible**. Entre bastidores puede usar software, IA y expertos, pero tú no gestionas nada de eso. Acordáis el resultado, como «nuestra app disponible en árabe» o «cada consulta de soporte respondida en menos de una hora», y el proveedor se encarga de conseguirlo.
+
+## SaaS y RaaS de un vistazo
+
+| | SaaS | RaaS |
+|---|---|---|
+| Qué compras | Acceso a una herramienta | Un resultado terminado |
+| Quién hace el trabajo | Tu equipo | El proveedor |
+| Por qué pagas | Licencias o suscripciones | Resultados o entregables bien definidos |
+| Quién asume el riesgo | Sobre todo tú | Compartido, o sobre todo el proveedor |
+| Qué necesitas en tu empresa | Personas que manejen la herramienta | Alguien que defina y apruebe el resultado |
+
+## Por qué crece ahora el RaaS
+
+La IA ha hecho que gran parte del trabajo rutinario sea más rápido y barato. Por eso las empresas se plantean una pregunta sencilla: **¿por qué pagar por un software que mi equipo tiene que manejar, si puedo pagar por el resultado?** Al mismo tiempo, muchos equipos andan cortos de tiempo y de perfiles especializados. Un proveedor que combina herramientas, IA y experiencia suele entregar el resultado con más fiabilidad que una empresa que aprende una plataforma nueva desde cero.
+
+## Qué significa para la localización
+
+La localización se ha vendido durante mucho tiempo como herramientas (plataformas de traducción, traducción automática) o como tiempo (por hora, por palabra). Pero lo que una empresa de software necesita de verdad es un **resultado**: un producto en árabe en el que sus usuarios puedan confiar.
+
+Pensar en resultados cambia la conversación:
+
+- **En lugar de** «Hemos comprado una plataforma de traducción y traducción automática», **pregunta** «¿Está nuestra versión en árabe lista para lanzar?»
+- **En lugar de** «¿Cuántas horas ha dedicado el revisor?», **pregunta** «¿Cuál es la puntuación de calidad y qué problemas se han corregido?»
+- **En lugar de** «¿Quién gestiona a los traductores?», **pregunta** «¿Quién responde de que el árabe esté listo en cada versión?»
+
+## Cómo contratar la localización como un resultado
+
+1. **Define el resultado.** Por ejemplo: interfaz, centro de ayuda y ficha de la tienda de apps en árabe, listos para la próxima versión.
+2. **Acordad cómo se medirá.** Revisión en contexto terminada, problemas de escritura de derecha a izquierda señalados, puntuación LQA por encima de un umbral acordado.
+3. **Fija el alcance y los plazos.** Qué contenido, qué versión, qué fecha límite.
+4. **Hazlo continuo.** En un producto SaaS, el resultado importa en cada versión, no solo en el lanzamiento.
+
+## A qué prestar atención
+
+El RaaS funciona mejor cuando los resultados son **medibles y dependen del proveedor**. Un traductor puede garantizar un producto en árabe preciso, coherente y listo para lanzar; nadie puede garantizar honestamente cuántos usuarios conseguirá. Desconfía de las promesas sobre resultados que nadie controla y asegúrate de que el alcance esté claro antes de empezar.
+
+## Cómo trabajo
+
+Así enfoco la [localización de SaaS](/es/services/saas-localization): acordamos el resultado que necesitas y me encargo de todo lo necesario para entregarlo, desde la traducción y la revisión hasta las comprobaciones en contexto y los informes de calidad. Si estás preparando un lanzamiento en árabe, [cuéntame tu producto](/es/contact) y te propondré un alcance claro basado en resultados.`,
+    },
+  },
+};
+
+export const codePosts: CodePost[] = [msaVsDialects, glossary, raasVsSaas];

@@ -8,7 +8,9 @@ export type Post = Database["public"]["Tables"]["posts"]["Row"];
 
 /** Articles written in code (one version per language), shaped like database posts. */
 function codePostsFor(locale: string): Post[] {
-  return codePosts.map((p) => {
+  // Articles dated in the future stay hidden until that date (scheduled posts).
+  const now = Date.now();
+  return codePosts.filter((p) => Date.parse(p.publishedAt) <= now).map((p) => {
     const text = p.text[locale as Locale] ?? p.text.en;
     return {
       id: `code-${p.slug}`,
