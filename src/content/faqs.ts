@@ -59,7 +59,7 @@ const en: FaqSet = {
     },
     {
       q: "How long does it take to translate a document into Arabic?",
-      a: "It depends on the length, subject and file format. A professional translator typically translates around 2,000 to 3,000 words a day, with editing and proofreading on top. I translate at least 5,000 words a day, so a 1,000-word document is usually delivered within one working day, 5,000 words in one to two days, and 10,000 words in two to three days. Larger projects are scheduled with partial deliveries.",
+      a: "It depends on the length, subject and file format. With today’s CAT tools, translation memories and terminology management, an experienced professional translator can translate around 5,000 to 6,000 words a day, with editing and proofreading on top. I translate at least 5,000 words a day, so a 1,000-word document is usually delivered within one working day, 5,000 words in one to two days, and 10,000 words in two to three days. Larger projects are scheduled with partial deliveries.",
     },
   ],
   editing: [
@@ -199,7 +199,7 @@ const ar: FaqSet = {
     },
     {
       q: "كم تستغرق ترجمة مستند إلى العربية؟",
-      a: "يتوقف ذلك على الطول والموضوع وصيغة الملف. يترجم المترجم المحترف عادةً بين 2,000 و3,000 كلمة يوميًا، يضاف إليها التحرير والتدقيق. وأنا أترجم ما لا يقل عن 5,000 كلمة يوميًا، لذا يُسلَّم المستند المكوّن من 1,000 كلمة عادةً خلال يوم عمل واحد، و5,000 كلمة خلال يوم إلى يومين، و10,000 كلمة خلال يومين إلى ثلاثة. وتُجدوَل المشاريع الأكبر مع تسليم على دفعات.",
+      a: "يتوقف ذلك على الطول والموضوع وصيغة الملف. بفضل أدوات الترجمة بمساعدة الحاسوب (CAT) وذاكرات الترجمة (TM) وإدارة المصطلحات اليوم، يستطيع المترجم المحترف المتمرّس ترجمة نحو 5,000 إلى 6,000 كلمة يوميًا، يضاف إليها التحرير والتدقيق. وأنا أترجم ما لا يقل عن 5,000 كلمة يوميًا، لذا يُسلَّم المستند المكوّن من 1,000 كلمة عادةً خلال يوم عمل واحد، و5,000 كلمة خلال يوم إلى يومين، و10,000 كلمة خلال يومين إلى ثلاثة. وتُجدوَل المشاريع الأكبر مع تسليم على دفعات.",
     },
   ],
   editing: [
@@ -339,7 +339,7 @@ const fr: FaqSet = {
     },
     {
       q: "Combien de temps faut-il pour traduire un document en arabe ?",
-      a: "Cela dépend de la longueur, du domaine et du format du fichier. Un traducteur professionnel traduit généralement entre 2 000 et 3 000 mots par jour, révision et relecture en plus. Je traduis au moins 5 000 mots par jour : un document de 1 000 mots est donc généralement livré sous un jour ouvré, 5 000 mots en un à deux jours et 10 000 mots en deux à trois jours. Les projets plus importants sont planifiés avec des livraisons partielles.",
+      a: "Cela dépend de la longueur, du domaine et du format du fichier. Grâce aux outils de TAO, aux mémoires de traduction et à la gestion terminologique actuels, un traducteur professionnel expérimenté peut traduire environ 5 000 à 6 000 mots par jour, révision et relecture en plus. Je traduis au moins 5 000 mots par jour : un document de 1 000 mots est donc généralement livré sous un jour ouvré, 5 000 mots en un à deux jours et 10 000 mots en deux à trois jours. Les projets plus importants sont planifiés avec des livraisons partielles.",
     },
   ],
   editing: [
@@ -479,7 +479,7 @@ const es: FaqSet = {
     },
     {
       q: "¿Cuánto se tarda en traducir un documento al árabe?",
-      a: "Depende de la extensión, el tema y el formato del archivo. Un traductor profesional suele traducir entre 2000 y 3000 palabras al día, más la edición y la revisión. Yo traduzco al menos 5000 palabras al día, así que un documento de 1000 palabras suele entregarse en un día laborable, uno de 5000 palabras en uno o dos días y uno de 10 000 palabras en dos o tres días. Los proyectos más grandes se planifican con entregas parciales.",
+      a: "Depende de la extensión, el tema y el formato del archivo. Gracias a las herramientas TAO, las memorias de traducción y la gestión terminológica actuales, un traductor profesional con experiencia puede traducir entre 5000 y 6000 palabras al día, más la edición y la revisión. Yo traduzco al menos 5000 palabras al día, así que un documento de 1000 palabras suele entregarse en un día laborable, uno de 5000 palabras en uno o dos días y uno de 10 000 palabras en dos o tres días. Los proyectos más grandes se planifican con entregas parciales.",
     },
   ],
   editing: [
