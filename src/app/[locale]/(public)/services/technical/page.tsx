@@ -28,7 +28,8 @@ export async function generateMetadata({
 export default async function TechnicalPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getContent(locale as Locale);
-  const s = t.serviceDetail.technical;
+  // Page text always from code (an older CMS copy could hide updates).
+  const s = getStaticContent(locale as Locale).serviceDetail.technical;
 
   return (
     <>

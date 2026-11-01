@@ -233,18 +233,18 @@ const es: SiteContent = {
     technical: {
       title: "Traducción técnica al árabe",
       description:
-        "Documentación de ingeniería e industrial traducida por alguien que entiende el tema, no solo las palabras.",
+        "Traducción técnica y de ingeniería al árabe a cargo de un traductor con titulación en ingeniería: manuales, especificaciones, fichas técnicas y documentos de seguridad correctos para los especialistas.",
       crumb: "Técnica",
       s1Title: "Entender el tema, no solo el idioma",
-      s1p1: "Una formación en ingeniería ambiental permite leer los textos técnicos de origen como el autor pretendía: los conceptos, las unidades y las normas detrás de la terminología resultan familiares, de modo que el árabe se lee correctamente para los especialistas del campo.",
-      s1p2: "La coherencia se garantiza con SDL Trados Studio: los glosarios y bases terminológicas del proyecto mantienen uniformes los términos clave, y las memorias de traducción mantienen alineados los documentos extensos o actualizados con frecuencia de una versión a otra.",
+      s1p1: "Una titulación en ingeniería ambiental permite leer los textos técnicos tal como los pensó su autor. Los conceptos, las unidades del SI, las tolerancias y las normas industriales que hay detrás de la terminología resultan familiares, de modo que instrucciones, especificaciones y advertencias de seguridad se leen correctamente en árabe para ingenieros, técnicos y operarios.",
+      s1p2: "La coherencia se gestiona con glosarios, bases terminológicas y memorias de traducción del proyecto en herramientas TAO profesionales, para que los términos clave sean uniformes entre manuales, fichas técnicas y software, y los documentos largos o que se actualizan a menudo sigan alineados de una revisión a otra.",
       s2Title: "Qué traduzco",
       s2List: [
-        "Manuales de ingeniería, guías de usuario y procedimientos operativos",
-        "Especificaciones técnicas y fichas de datos",
-        "Informes ambientales y de ingeniería",
-        "Documentación de seguridad, normas y cumplimiento",
-        "Documentación de productos y equipos",
+        "Manuales de ingeniería, guías de usuario y procedimientos normalizados de trabajo",
+        "Especificaciones técnicas, fichas técnicas y listas de materiales",
+        "Fichas de datos de seguridad (FDS), advertencias y documentación de PRL y medio ambiente",
+        "Informes ambientales, energéticos y de ingeniería",
+        "Documentación de productos, equipos y maquinaria",
       ],
       s3Title: "Servicios técnicos relacionados",
       s3Intro: "Los proyectos técnicos suelen combinar la traducción con:",
@@ -260,17 +260,18 @@ const es: SiteContent = {
     legal: {
       title: "Traducción jurídica al árabe",
       description:
-        "Contratos y documentación jurídica traducidos con precisión y tratados con la confidencialidad que el material exige.",
+        "Traducción jurídica al árabe de contratos, condiciones, políticas y documentos societarios, con terminología precisa, términos definidos coherentes y estricta confidencialidad.",
       crumb: "Jurídica",
       s1Title: "Precisión y confidencialidad",
-      s1p1: "Los textos jurídicos no dejan lugar a la ambigüedad: la terminología, la estructura y el significado deben trasladarse con exactitud. Cada proyecto utiliza las bases terminológicas de SDL Trados para que los términos definidos se mantengan coherentes dentro de un documento y entre documentos relacionados.",
-      s1p2: "El material jurídico es sensible por naturaleza. Los archivos se tratan con estricta confidencialidad, se transfieren de forma segura, y estoy dispuesto a firmar un acuerdo de confidencialidad antes de abrir ningún archivo.",
+      s1p1: "Los textos jurídicos no admiten ambigüedades: los términos definidos, las obligaciones, las condiciones y las cláusulas de ley aplicable deben trasladarse con el mismo sentido y alcance. Las bases terminológicas mantienen coherentes los términos definidos en cada documento y entre contratos relacionados, y el árabe sigue el registro formal de los contratos en el mundo árabe.",
+      s1p2: "Los documentos jurídicos son sensibles por naturaleza. Los archivos se tratan con total confidencialidad y se transfieren de forma segura, y firmo encantado un acuerdo de confidencialidad antes de abrir cualquier archivo. Ten en cuenta que no ofrezco traducciones juradas ni certificadas con sello oficial.",
       s2Title: "Qué traduzco",
       s2List: [
-        "Contratos y acuerdos",
-        "Términos y condiciones, políticas y documentos de cumplimiento",
-        "Documentación corporativa y regulatoria",
-        "Correspondencia y materiales jurídicos de apoyo",
+        "Contratos mercantiles, acuerdos y NDA",
+        "Condiciones de uso, políticas de privacidad y avisos de cookies",
+        "Documentos societarios, estatutos y actas del consejo",
+        "Cumplimiento normativo, prevención del blanqueo de capitales (PBC) y documentación regulatoria",
+        "Correspondencia jurídica y documentación de apoyo",
       ],
       ctaTitle: "¿Necesitas traducir documentos jurídicos con confidencialidad?",
       ctaDescription:
@@ -279,17 +280,18 @@ const es: SiteContent = {
     financial: {
       title: "Traducción financiera al árabe",
       description:
-        "Documentos financieros traducidos con la exactitud, la discreción y la coherencia terminológica que exigen las cifras.",
+        "Traducción financiera al árabe de informes anuales, estados financieros, comunicación con inversores y contenido bancario, con cifras exactas y terminología financiera coherente.",
       crumb: "Financiera",
       s1Title: "Exactitud donde importan tanto las cifras como las palabras",
-      s1p1: "Los documentos financieros combinan cifras exactas con un lenguaje cuidadosamente elegido. La terminología se mantiene coherente con las bases terminológicas y memorias de traducción de SDL Trados, de modo que los términos recurrentes y las expresiones estándar se mantienen uniformes entre periodos de reporte y conjuntos de documentos.",
-      s1p2: "El material financiero se trata como confidencial: transferencias seguras, manejo cuidadoso y disposición a firmar un acuerdo de confidencialidad antes de abrir ningún archivo.",
+      s1p1: "Los documentos financieros combinan cifras exactas con un lenguaje cuidadosamente elegido. La terminología contable y de reporting, incluida la de las NIIF (IFRS), se mantiene coherente con bases terminológicas y memorias de traducción, para que las partidas recurrentes y las fórmulas habituales sean uniformes entre ejercicios, entidades y conjuntos de documentos.",
+      s1p2: "Cifras, fechas, monedas y porcentajes se comprueban frente al original antes de la entrega, y se aplican de forma coherente las convenciones árabes para números y fechas. Los documentos financieros se tratan como confidenciales: transferencias seguras, manejo cuidadoso y firma de un acuerdo de confidencialidad si lo necesitas.",
       s2Title: "Qué traduzco",
       s2List: [
-        "Informes y estados financieros",
-        "Comunicaciones a inversores y comunicaciones corporativas",
-        "Documentación de auditoría y cumplimiento",
-        "Presentaciones y materiales de marketing financiero",
+        "Informes anuales, estados financieros y notas",
+        "Presentaciones para inversores y comunicación corporativa",
+        "Informes de auditoría, cumplimiento y ESG",
+        "Contenido bancario, fintech y de seguros",
+        "Terminología de finanzas islámicas y documentación de productos",
       ],
       ctaTitle: "¿Tienes documentos financieros para traducir?",
       ctaDescription:
@@ -298,17 +300,18 @@ const es: SiteContent = {
     healthcare: {
       title: "Traducción sanitaria al árabe",
       description:
-        "Documentación médica y sanitaria traducida con exactitud, claridad y el registro adecuado para sus lectores.",
+        "Traducción médica y sanitaria al árabe de documentación clínica, información para pacientes y contenido de productos sanitarios, precisa para los profesionales y clara para los pacientes.",
       crumb: "Salud",
       s1Title: "Claridad y corrección para contenido sensible",
-      s1p1: "El contenido sanitario tiene consecuencias reales, por eso la exactitud y la claridad van primero. Los términos se mantienen coherentes con las bases terminológicas de SDL Trados, y el registro se adapta al público, ya sean los lectores clínicos o pacientes.",
-      s1p2: "Cada proyecto sigue un flujo completo de Traducción–Edición–Revisión, y los archivos se tratan con estricta confidencialidad.",
+      s1p1: "El contenido sanitario tiene consecuencias reales, así que la exactitud y la claridad van primero. La terminología médica se mantiene coherente con bases terminológicas, y el registro se adapta al lector: lenguaje clínico preciso para médicos y farmacéuticos, y un árabe sencillo y tranquilizador para pacientes y familiares.",
+      s1p2: "Cada proyecto sigue un flujo completo de traducción, edición y revisión (TEP), con dosis, unidades y advertencias comprobadas frente al original. Los archivos se tratan con total confidencialidad y los datos de salud personales nunca se comparten.",
       s2Title: "Qué traduzco",
       s2List: [
-        "Documentación médica y clínica",
-        "Información e instrucciones dirigidas a pacientes",
-        "Documentación de productos y dispositivos sanitarios",
-        "Materiales regulatorios y de cumplimiento",
+        "Informes médicos y documentación clínica",
+        "Prospectos, consentimientos informados e instrucciones para pacientes",
+        "Manuales de productos sanitarios e instrucciones de uso (IFU)",
+        "Etiquetado farmacéutico y documentos regulatorios",
+        "Contenido de divulgación sanitaria y marketing de salud",
       ],
       ctaTitle: "¿Necesitas traducir contenido sanitario al árabe?",
       ctaDescription:
@@ -317,10 +320,10 @@ const es: SiteContent = {
     audiovisual: {
       title: "Traducción audiovisual y doblaje al árabe",
       description:
-        "Subtitulado, transcreación y adaptación de doblaje, con la precisión de sincronización labial que exigen el streaming y la difusión.",
+        "Subtitulación al árabe, adaptación de guiones de doblaje y transcreación para vídeo, e-learning y plataformas de streaming, con tiempos exactos, diálogos naturales y sincronía labial precisa.",
       crumb: "Audiovisual",
       s1Title: "Diálogos que suenan nativos y encajan en los labios",
-      s1p1: "El trabajo audiovisual es más que palabras en una página: el árabe tiene que ajustarse a la imagen, al ritmo y a la interpretación. Eso implica transcrear las expresiones para que resulten nativas al público árabe conservando la tensión dramática y la intención del original.",
+      s1p1: "La traducción audiovisual va más allá de las palabras: el árabe tiene que encajar con la imagen, los tiempos y la interpretación. Los subtítulos respetan la velocidad de lectura y la longitud de línea, los guiones de doblaje se adaptan a la sincronía labial y a cada personaje, y las expresiones se transcrean para que suenen naturales al público árabe sin perder la intensidad ni la intención del original.",
       stepsTitle: "El proceso de adaptación de doblaje y sincronización labial",
       workflowSteps: [
         {

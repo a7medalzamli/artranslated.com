@@ -5,7 +5,7 @@ import { ProcessSteps } from "@/components/ProcessSteps/ProcessSteps";
 import { CTA } from "@/components/CTA/CTA";
 import { SpecializationDetails } from "@/components/SpecializationDetails/SpecializationDetails";
 import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
-import { getContent } from "@/i18n/content";
+import { getContent, getStaticContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import type { Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
@@ -33,7 +33,8 @@ export default async function AudiovisualPage({
 }) {
   const { locale } = await params;
   const t = await getContent(locale as Locale);
-  const s = t.serviceDetail.audiovisual;
+  // Page text always from code (an older CMS copy could hide updates).
+  const s = getStaticContent(locale as Locale).serviceDetail.audiovisual;
 
   return (
     <>
