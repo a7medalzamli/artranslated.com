@@ -25,5 +25,22 @@ export function getStaticContent(locale: Locale): SiteContent {
 export async function getContent(locale: Locale): Promise<SiteContent> {
   // An unknown "language" (e.g. /foo.txt read as a locale) is a missing page.
   if (!isLocale(locale)) notFound();
-  return readMerged<SiteContent>("content", locale, staticContent[locale]);
+  const content = await readMerged<SiteContent>("content", locale, staticContent[locale]);
+  return withRetiredTextReplaced(content, locale);
+}
+
+/**
+ * Wording that was rewritten in code but may still be stored in an older
+ * copy saved from the admin panel. The saved old text is swapped for the new.
+ */
+const RETIRED_PROCESS_CTA = new Set([
+  "Want this level of care on your project?",
+  "تريد هذا المستوى من العناية في مشروعك؟",
+  "Vous voulez ce niveau de soin pour votre projet ?",
+  "¿Quieres este nivel de cuidado en tu proyecto?",
+]);
+
+function withRetiredTextReplaced(content: SiteContent, locale: Locale): SiteContent {
+  if (!RETIRED_PROCESS_CTA.has(content.process?.ctaTitle)) return content;
+  return { ...content, process: { ...content.process, ctaTitle: staticContent[locale].process.ctaTitle } };
 }
