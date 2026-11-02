@@ -71,7 +71,7 @@
   margin-inline-end: auto;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
   gap: var(--space-lg) var(--space-xl);
 }
 
