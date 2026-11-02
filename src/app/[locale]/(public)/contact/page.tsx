@@ -51,30 +51,14 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <PageHeader title={c.title} />
 
       <Container className="section-pad">
-        <div className={styles.intro}>
-          <div className={styles.introText}>
-            <p style={{ fontSize: "var(--font-size-lg)", marginBottom: "var(--space-lg)" }}>
-              {c.directIntro}{" "}
-              <a href={`mailto:${site.contact.email}`} style={{ fontWeight: 600 }}>
-                {site.contact.email}
-              </a>{" "}
-              {c.directOr}{" "}
-              <a href={`tel:${site.contact.phoneHref}`} style={{ fontWeight: 600 }}>
-                {site.contact.phone}
-              </a>
-              .
-            </p>
-          </div>
-
-          <div className={styles.introMedia}>
-            <Image
-              src="/images/photos/contact.jpg"
-              alt=""
-              fill
-              sizes="(min-width: 60em) 40vw, 100vw"
-              priority
-            />
-          </div>
+        <div className={styles.introMedia}>
+          <Image
+            src="/images/photos/contact.jpg"
+            alt=""
+            fill
+            sizes="(min-width: 75em) 1200px, 100vw"
+            priority
+          />
         </div>
 
         <div className="section-gap">
@@ -85,6 +69,13 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             locale={locale}
           />
         </div>
+
+        <p className={styles.direct}>
+          {c.directIntro}{" "}
+          <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>{" "}
+          {c.directOr}{" "}
+          <a href={`tel:${site.contact.phoneHref}`}>{site.contact.phone}</a>.
+        </p>
       </Container>
     </>
   );

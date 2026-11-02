@@ -123,36 +123,37 @@
   overflow: hidden;
 }
 
-/* Intro text + confidentiality note beside a photo; photo stacks on top on small screens. */
-.intro {
-  display: grid;
-  gap: var(--space-xl);
-  align-items: center;
-}
-
+/* Photo as a full-width banner above the form. */
 .introMedia {
   position: relative;
+  width: 100%;
   aspect-ratio: 16 / 10;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--color-surface-2);
   box-shadow: var(--shadow-md);
-  order: -1;
 }
 
 .introMedia img {
   object-fit: cover;
+  object-position: center 35%;
 }
 
 @media (min-width: 60em) {
-  .intro {
-    grid-template-columns: 1.1fr 1fr;
-  }
-
   .introMedia {
-    order: 0;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 21 / 8;
   }
+}
+
+/* Direct email and phone, under the form. */
+.direct {
+  margin-top: var(--space-2xl);
+  font-size: var(--font-size-lg);
+}
+
+.direct a {
+  font-weight: var(--weight-semibold);
+  white-space: nowrap;
 }
 
 /* Short line above the contact details, moved down from the page header. */
