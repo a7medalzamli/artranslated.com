@@ -51,8 +51,8 @@
   }
 }
 
-/* ---- Credential badges (ProZ, ArTA, Alconost, Translators without Borders) ---- */
-/* All four in one row, each exactly the same width and height. Not links. */
+/* ---- Credential badges: Alconost (left), then ProZ, ArTA and Translators without Borders ---- */
+/* The three rectangular badges are exactly the same width and height. Not links. */
 .credBadges {
   margin-top: var(--space-xl);
   margin-bottom: var(--space-md);
@@ -63,6 +63,24 @@
   gap: var(--space-lg);
 }
 
+
+/* Alconost: logo with a caption, pushed to the start (left in LTR, right in Arabic). */
+.alconost {
+  margin: 0;
+  margin-inline-end: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.alconostLogo {
+  display: block;
+  width: 150px;
+  height: auto;
+}
 
 .credImg {
   display: block;

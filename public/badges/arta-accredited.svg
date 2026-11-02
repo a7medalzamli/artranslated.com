@@ -1,46 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="ArTA accredited">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 230" width="200" height="230" role="img" aria-label="ArTA accredited">
   <defs>
-    <radialGradient id="gold" gradientUnits="userSpaceOnUse" cx="80" cy="60" r="150">
-      <stop offset="0%" stop-color="#fff2a8"/>
-      <stop offset="45%" stop-color="#f0bf33"/>
-      <stop offset="100%" stop-color="#b07d0a"/>
-    </radialGradient>
-    <linearGradient id="goldText" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffe680"/>
-      <stop offset="100%" stop-color="#e3a823"/>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9a6a0c"/>
+      <stop offset="30%" stop-color="#e2b23a"/>
+      <stop offset="55%" stop-color="#f6d878"/>
+      <stop offset="100%" stop-color="#a87510"/>
     </linearGradient>
-    <radialGradient id="navy" cx="50%" cy="38%" r="65%">
-      <stop offset="0%" stop-color="#22406b"/>
-      <stop offset="100%" stop-color="#0b1d38"/>
+    <radialGradient id="gold" gradientUnits="userSpaceOnUse" cx="75" cy="85" r="150">
+      <stop offset="0%" stop-color="#fff6c4"/>
+      <stop offset="35%" stop-color="#f3c94e"/>
+      <stop offset="75%" stop-color="#d49a1c"/>
+      <stop offset="100%" stop-color="#a06c08"/>
     </radialGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbe08a"/>
+      <stop offset="50%" stop-color="#c8901a"/>
+      <stop offset="100%" stop-color="#8a5c06"/>
+    </linearGradient>
+    <radialGradient id="navy" cx="45%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#25446f"/>
+      <stop offset="100%" stop-color="#0c1f3c"/>
+    </radialGradient>
+    <linearGradient id="accredited" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff3c7"/>
+      <stop offset="100%" stop-color="#e6c66a"/>
+    </linearGradient>
   </defs>
-  <!-- Scalloped gold seal: a disc with 18 round lobes around it -->
-  <g fill="url(#gold)" stroke="#a5760c" stroke-width="1">
-    <circle cx="100" cy="100" r="80"/>
-    <circle cx="100.0" cy="16.0" r="13"/>
-    <circle cx="128.7" cy="21.1" r="13"/>
-    <circle cx="154.0" cy="35.7" r="13"/>
-    <circle cx="172.7" cy="58.0" r="13"/>
-    <circle cx="182.7" cy="85.4" r="13"/>
-    <circle cx="182.7" cy="114.6" r="13"/>
-    <circle cx="172.7" cy="142.0" r="13"/>
-    <circle cx="154.0" cy="164.3" r="13"/>
-    <circle cx="128.7" cy="178.9" r="13"/>
-    <circle cx="100.0" cy="184.0" r="13"/>
-    <circle cx="71.3" cy="178.9" r="13"/>
-    <circle cx="46.0" cy="164.3" r="13"/>
-    <circle cx="27.3" cy="142.0" r="13"/>
-    <circle cx="17.3" cy="114.6" r="13"/>
-    <circle cx="17.3" cy="85.4" r="13"/>
-    <circle cx="27.3" cy="58.0" r="13"/>
-    <circle cx="46.0" cy="35.7" r="13"/>
-    <circle cx="71.3" cy="21.1" r="13"/>
+
+  <!-- Gold ribbon behind the seal, rising to the top -->
+  <rect x="82" y="0" width="36" height="70" fill="url(#ribbon)"/>
+  <rect x="82" y="0" width="36" height="70" fill="none" stroke="#8a5c06" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Seal: 16 pointed gold rays with softened tips (shifted down 30 for the ribbon) -->
+  <g transform="translate(0 30)">
+    <polygon fill="url(#gold)" stroke="url(#gold)" stroke-width="9" stroke-linejoin="round"
+      points="100.0,5.0 116.8,15.7 136.4,12.2 147.8,28.5 167.2,32.8 171.5,52.2 187.8,63.6 184.3,83.2 195.0,100.0 184.3,116.8 187.8,136.4 171.5,147.8 167.2,167.2 147.8,171.5 136.4,187.8 116.8,184.3 100.0,195.0 83.2,184.3 63.6,187.8 52.2,171.5 32.8,167.2 28.5,147.8 12.2,136.4 15.7,116.8 5.0,100.0 15.7,83.2 12.2,63.6 28.5,52.2 32.8,32.8 52.2,28.5 63.6,12.2 83.2,15.7"/>
+    <!-- Gold rim and navy disc -->
+    <circle cx="100" cy="100" r="79" fill="url(#rim)"/>
+    <circle cx="100" cy="100" r="75" fill="url(#navy)"/>
+    <circle cx="100" cy="100" r="75" fill="none" stroke="#e8c25a" stroke-width="1.2" opacity="0.7"/>
+    <!-- Lettering, as on the original seal -->
+    <text x="100" y="98" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="42" fill="#f6f2df" letter-spacing="0.5">ArTA</text>
+    <text x="101" y="130" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-style="italic" font-weight="700" font-size="23" textLength="112" lengthAdjust="spacingAndGlyphs" fill="url(#accredited)">accredited</text>
   </g>
-  <!-- Cover the inner outlines of the lobes so the edge reads as one wavy seal -->
-  <circle cx="100" cy="100" r="79" fill="url(#gold)"/>
-  <!-- Gold ring and navy disc -->
-  <circle cx="100" cy="100" r="64" fill="#c4931a"/>
-  <circle cx="100" cy="100" r="60" fill="url(#navy)"/>
-  <text x="100" y="99" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="38" fill="#ffffff" letter-spacing="1">ArTA</text>
-  <text x="100" y="126" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="19" fill="url(#goldText)">accredited</text>
 </svg>

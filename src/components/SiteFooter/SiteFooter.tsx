@@ -103,7 +103,18 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
         </div>
 
         <div className={styles.credBadges}>
-          {/* Four certification badges, all the same size and shape. */}
+          {/* Alconost: logo with its caption, on the left (as originally designed). */}
+          <figure className={styles.alconost}>
+            <Image
+              src="/badges/alconost-logo.svg"
+              alt="Alconost"
+              width={258}
+              height={45}
+              className={styles.alconostLogo}
+            />
+            <figcaption>{dict.footer.alconost}</figcaption>
+          </figure>
+          {/* Rectangular badges, all the same size: ProZ, ArTA, Translators without Borders. */}
           <Image
             src="/proz-certified-pro.jpg"
             alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
@@ -114,13 +125,6 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
           <Image
             src="/badges/arta-badge.svg"
             alt="ArTA accredited translator — Arab Translators Association (جمعية المترجمين العرب)"
-            width={1600}
-            height={528}
-            className={styles.credImg}
-          />
-          <Image
-            src="/badges/alconost-badge.svg"
-            alt="Alconost certified translator"
             width={1600}
             height={528}
             className={styles.credImg}
