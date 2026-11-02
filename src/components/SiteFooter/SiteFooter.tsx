@@ -72,9 +72,6 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
               <li>
                 <Link href={routes.blog}>{dict.nav.blog}</Link>
               </li>
-              <li>
-                <Link href={routes.contact}>{dict.nav.contact}</Link>
-              </li>
             </ul>
           </nav>
 
