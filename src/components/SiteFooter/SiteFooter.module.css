@@ -2,11 +2,11 @@
   margin-top: var(--space-4xl);
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
-  padding-block: var(--space-2xl) var(--space-sm);
+  padding-block: var(--space-3xl) var(--space-md);
   /* Full-screen-height footer: main grid at the top, copyright pinned to the
      bottom (see .inner / .bottom). */
-  min-height: 60vh;
-  min-height: 60svh;
+  min-height: 70vh;
+  min-height: 70svh;
   display: flex;
   flex-direction: column;
 }
@@ -54,13 +54,13 @@
 /* ---- Credential badges: Alconost (left), then ProZ, ArTA and Translators without Borders ---- */
 /* The three rectangular badges are exactly the same width and height. Not links. */
 .credBadges {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-2xl);
   margin-bottom: var(--space-md);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
 }
 
 
@@ -73,18 +73,19 @@
   align-items: center;
   gap: var(--space-xs);
   color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
 }
 
 .alconostLogo {
   display: block;
-  width: 150px;
+  width: 220px;
   height: auto;
 }
 
 .credImg {
   display: block;
-  width: 170px;
+  width: 250px;
+  max-width: 100%;
   height: auto;
   border-radius: var(--radius-sm);
 }
@@ -97,7 +98,7 @@
 
 .logo {
   display: block;
-  height: 34px;
+  height: 46px;
   width: auto;
   /* The logo file has a white background; blend it into light backgrounds. */
   mix-blend-mode: multiply;
@@ -106,11 +107,11 @@
 .tagline {
   margin-top: var(--space-xs);
   color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
 }
 
 .heading {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   font-weight: var(--weight-semibold);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -130,7 +131,7 @@
 .list a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
 }
 
 .list a:hover {
@@ -143,7 +144,7 @@
   padding-top: var(--space-sm);
   border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
-  font-size: 0.72rem;
+  font-size: var(--font-size-sm);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
