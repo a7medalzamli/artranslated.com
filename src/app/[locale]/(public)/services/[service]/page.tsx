@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section } from "@/components/Section/Section";
 import { Card, CardGrid } from "@/components/Card/Card";
 import { CTA } from "@/components/CTA/CTA";
-import { specializations } from "@/content/specializations";
+import { isExtraSpecShown, hiddenSpecSlugs, isSpecShown, specializations } from "@/content/specializations";
 import {
   getServicePages,
   isServiceSlug,
@@ -168,7 +168,7 @@ export default async function ServicePage({ params }: { params: Params }) {
       {service === "translation" && (
         <Section tinted title={shared.specTitle} intro={shared.specIntro}>
           <CardGrid columns={3}>
-            {specializations.map((spec, i) => (
+            {specializations.map((spec, i) => hiddenSpecSlugs.has(spec.slug) ? null : (
               <Card
                 key={spec.slug}
                 title={t.cards.specializations[i]?.title ?? spec.title}
@@ -178,7 +178,7 @@ export default async function ServicePage({ params }: { params: Params }) {
                 {t.cards.specializations[i]?.summary ?? spec.summary}
               </Card>
             ))}
-            {shared.extraSpecializations.map((spec) => (
+            {shared.extraSpecializations.filter(isExtraSpecShown).map((spec) => (
               <Card key={spec.title} title={spec.title} image={spec.image} href={spec.href}>
                 {spec.summary}
               </Card>
@@ -240,8 +240,8 @@ export default async function ServicePage({ params }: { params: Params }) {
             locale={locale}
             defaultService={page.title}
             specializationOptions={[
-              ...t.cards.specializations.map((s) => s.title),
-              ...shared.extraSpecializations.map((s) => s.title),
+              ...t.cards.specializations.filter(isSpecShown).map((s) => s.title),
+              ...shared.extraSpecializations.filter(isExtraSpecShown).map((s) => s.title),
             ]}
             serviceOptions={serviceSlugs.map((slug) => pages[slug].title)}
           />

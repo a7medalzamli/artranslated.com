@@ -143,5 +143,5 @@ export const relatedServices: Record<string, LinkKey[]> = {
   "for-agencies": ["translation", "editing", "mtpe", "french-to-arabic"],
   "arabic-markets": ["consulting", "transcreation", "digital-marketing", "translation"],
   "french-to-arabic": ["translation", "legal", "financial", "arabic-markets"],
-  "spanish-to-arabic": ["translation", "audiovisual", "arabic-markets", "french-to-arabic"],
+  "spanish-to-arabic": ["translation", "transcreation", "arabic-markets", "french-to-arabic"],
 };

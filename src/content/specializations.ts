@@ -49,3 +49,19 @@ export const specializations: Specialization[] = [
       "Subtitling, transcreation and dubbing adaptation with careful lip-sync alignment for Arabic audiences.",
   },
 ];
+
+/**
+ * Specializations hidden for now (kept here so they can be shown again by
+ * removing them from these lists). Core ones by slug; extra ones by photo,
+ * which is the same in every language.
+ */
+export const hiddenSpecSlugs = new Set(["audiovisual"]);
+export const hiddenExtraSpecImages = new Set([
+  "/images/photos/spec-environment.jpg",
+  "/images/photos/spec-language-teaching.jpg",
+]);
+
+/** True if the core specialization at this position is shown. */
+export const isSpecShown = (_: unknown, i: number) => !hiddenSpecSlugs.has(specializations[i]?.slug);
+/** True if this extra specialization is shown. */
+export const isExtraSpecShown = (spec: { image: string }) => !hiddenExtraSpecImages.has(spec.image);

@@ -43,7 +43,6 @@ Last updated: 2026-11-02
 - [Legal](https://www.artranslated.com/en/services/legal)
 - [Financial](https://www.artranslated.com/en/services/financial)
 - [Healthcare](https://www.artranslated.com/en/services/healthcare)
-- [Audiovisual and dubbing](https://www.artranslated.com/en/services/audiovisual)
 - [SaaS localization](https://www.artranslated.com/en/services/saas-localization): software platforms, apps, help centers and app store listings localized into Arabic
 - Also: education, environment, language teaching
 

@@ -19,13 +19,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getContent(locale as Locale);
-  return buildCmsMetadata({
+  const meta = await buildCmsMetadata({
     path: "/services/audiovisual",
     locale,
     defaultTitle: t.serviceDetail.audiovisual.title,
     defaultDescription: t.serviceDetail.audiovisual.description,
     seo: t.seo.audiovisual,
   });
+  // Hidden for now: kept out of search results until it's shown again.
+  return { ...meta, robots: { index: false, follow: true } };
 }
 
 export default async function AudiovisualPage({

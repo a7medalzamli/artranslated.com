@@ -7,6 +7,7 @@ import { getContent, getStaticContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getSeoText } from "@/content/seoText";
 import { getServicePages, serviceSlugs } from "@/content/servicePages";
+import { isExtraSpecShown, isSpecShown } from "@/content/specializations";
 import type { Locale } from "@/i18n";
 import { site } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
@@ -36,10 +37,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const t = await getContent(loc);
   const c = t.contact;
   const servicePages = getServicePages(loc);
-  // All nine specializations and the six services, as shown on the Services pages.
+  // The shown specializations and the services, as on the Services pages.
   const specializationOptions = [
-    ...t.cards.specializations.map((s) => s.title),
-    ...servicePages.shared.extraSpecializations.map((s) => s.title),
+    ...t.cards.specializations.filter(isSpecShown).map((s) => s.title),
+    ...servicePages.shared.extraSpecializations.filter(isExtraSpecShown).map((s) => s.title),
   ];
   const serviceOptions = serviceSlugs.map((slug) => servicePages.pages[slug].title);
 
