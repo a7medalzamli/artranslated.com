@@ -77,17 +77,6 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
             </ul>
           </nav>
 
-          <nav className={styles.col} aria-label={dict.footer.legalHeading}>
-            <h2 className={styles.heading}>{dict.footer.legalHeading}</h2>
-            <ul className={styles.list}>
-              <li>
-                <Link href={routes.terms}>{dict.footer.terms}</Link>
-              </li>
-              <li>
-                <Link href={routes.privacy}>{dict.footer.privacy}</Link>
-              </li>
-            </ul>
-          </nav>
 
           <div className={styles.col}>
             <h2 className={styles.heading}>{dict.footer.contactHeading}</h2>
@@ -142,6 +131,10 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
           <p>
             &copy; {year} {settings.name}. {dict.footer.rightsReserved}
           </p>
+          <nav className={styles.legal} aria-label={dict.footer.legalHeading}>
+            <Link href={routes.terms}>{dict.footer.terms}</Link>
+            <Link href={routes.privacy}>{dict.footer.privacy}</Link>
+          </nav>
           <SocialLinks socials={settings.socials} className={styles.footerSocials} />
         </div>
       </Container>

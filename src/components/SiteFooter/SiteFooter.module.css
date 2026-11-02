@@ -34,7 +34,7 @@
 
 @media (min-width: 64em) {
   .grid {
-    grid-template-columns: 1.6fr 1fr 1fr 1fr 1.1fr;
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
     gap: var(--space-2xl);
   }
 }
@@ -154,4 +154,21 @@
 
 .footerSocials {
   margin-inline-start: auto;
+}
+
+/* Terms and Privacy, in the bottom bar next to the copyright. */
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.legal a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.legal a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
