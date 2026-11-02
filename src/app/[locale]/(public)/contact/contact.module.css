@@ -152,7 +152,6 @@
 }
 
 .direct a {
-  font-weight: var(--weight-semibold);
   white-space: nowrap;
 }
 
