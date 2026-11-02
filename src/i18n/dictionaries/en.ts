@@ -54,6 +54,7 @@ const en = {
     editing: "Editing & proofreading",
     mtpe: "MTPE",
     transcreation: "Transcreation",
+    saasLocalization: "SaaS Localization",
     consulting: "Consulting",
     digitalMarketing: "Digital Marketing",
   },

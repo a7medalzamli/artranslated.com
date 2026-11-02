@@ -11,6 +11,7 @@ export type SaasPage = {
   listTitle: string;
   list: string[];
   blocks: { title: string; text: string }[];
+  steps: { title: string; intro: string; items: { title: string; text: string }[] };
   raas: { title: string; intro: string; items: { title: string; text: string }[] };
   faqTitle: string;
   faqs: FaqItem[];
@@ -21,7 +22,7 @@ export type SaasPage = {
 const en: SaasPage = {
   title: "SaaS Localization into Arabic",
   crumb: "SaaS Localization",
-  seoTitle: "Arabic SaaS Localization",
+  seoTitle: "Arabic SaaS & App Localization Services",
   description:
     "Arabic localization for SaaS platforms, web and mobile apps and help centers: UI strings, onboarding, documentation and app store listings, adapted for right-to-left layouts and shipped with every release.",
   intro: [
@@ -52,6 +53,17 @@ const en: SaasPage = {
       text: "A localized Arabic product ready to ship, a product glossary and style guide, a list of any layout or internationalization issues found during review, and quick turnaround on new strings with each release, so Arabic stays in step with your other languages.",
     },
   ],
+  steps: {
+    title: "How Arabic SaaS localization works",
+    intro: "A clear, repeatable process, from your first Arabic release to every update after it.",
+    items: [
+      { title: "Scope and files", text: "You share your resource files, such as JSON, XLIFF or XML, or invite me to your translation management system (TMS). You get a clear scope, schedule and quote before work starts." },
+      { title: "Glossary and voice", text: "I build a glossary of your product terms and agree the tone with you, so buttons, features and help articles use the same Arabic words everywhere." },
+      { title: "Translation that fits the build", text: "Strings are translated within your character limits, with placeholders, variables, tags and Arabic plural forms kept intact, so nothing breaks in the build." },
+      { title: "In-context review and LQA", text: "I review the Arabic in screenshots or a staging environment, check right-to-left (RTL) layout and truncation, and report any internationalization (i18n) issues to your developers." },
+      { title: "Continuous releases", text: "New and changed strings are translated in small batches with each sprint, reusing your translation memory (TM), so Arabic ships at the same time as your other languages." },
+    ],
+  },
   raas: {
     title: "Localization as a result, not a tool",
     intro: "SaaS gives you software to run. Results as a Service (RaaS) gives you the finished outcome. That’s how I approach SaaS localization: we agree on the result you need, and I deliver it ready to ship.",
@@ -79,6 +91,22 @@ const en: SaasPage = {
       q: "What is Results as a Service (RaaS), and how does it apply to localization?",
       a: "Instead of paying for tools or hours and managing the work yourself, you agree on a clear outcome, such as an Arabic release ready to ship, and I take care of everything needed to deliver it: translation, review, in-context checks and quality reporting. Every project has a clear scope and quote before work starts.",
     },
+    {
+      q: "How much does Arabic SaaS localization cost?",
+      a: "It depends on the word count, how much of the text repeats, and whether you need in-context review and ongoing release updates. Send your files or a link to your product and you’ll receive a clear quote before any work starts.",
+    },
+    {
+      q: "How long does it take to localize an app into Arabic?",
+      a: "I translate at least 5,000 words a day, so the interface of a typical web or mobile app is usually ready within days, followed by in-context review. Help centers and documentation are delivered in planned batches, and new strings are turned around to match your release schedule.",
+    },
+    {
+      q: "Which file formats do you support?",
+      a: "JSON, XLIFF, XML and HTML resource files, SRT subtitles for product videos, and content managed in translation management systems or help-center platforms. Placeholders, tags and variables are preserved exactly.",
+    },
+    {
+      q: "Will the Arabic version display correctly from right to left?",
+      a: "Translation alone doesn’t flip a layout; your developers enable right-to-left (RTL) support. I then review the product in context and report mirrored icons, misaligned or truncated text and mixed-direction issues, so they’re fixed before launch.",
+    },
   ],
   ctaTitle: "Launching your SaaS product in Arabic?",
   ctaDescription: "Tell me about your product, platform and release schedule for a clear quote.",
@@ -87,7 +115,7 @@ const en: SaasPage = {
 const ar: SaasPage = {
   title: "توطين البرمجيات كخدمة (SaaS) إلى العربية",
   crumb: "توطين SaaS",
-  seoTitle: "توطين البرمجيات كخدمة (SaaS) إلى العربية",
+  seoTitle: "خدمات توطين البرمجيات كخدمة (SaaS) والتطبيقات إلى العربية",
   description:
     "توطين منصات البرمجيات كخدمة (SaaS) وتطبيقات الويب والجوال ومراكز المساعدة إلى العربية: نصوص الواجهة والتهيئة الأولى والوثائق وصفحات متاجر التطبيقات، مع تكييفها للاتجاه من اليمين إلى اليسار (RTL) وتسليمها مع كل إصدار.",
   intro: [
@@ -118,6 +146,17 @@ const ar: SaasPage = {
       text: "منتج عربي مُوطَّن جاهز للإطلاق، ومسرد مصطلحات للمنتج ودليل أسلوب، وقائمة بأي مشكلات في التصميم أو التدويل (i18n) تُكتشف أثناء المراجعة، وتسليم سريع للنصوص الجديدة مع كل إصدار، لتبقى العربية مواكبة للغاتك الأخرى.",
     },
   ],
+  steps: {
+    title: "كيف يتم توطين منتج SaaS إلى العربية",
+    intro: "عملية واضحة قابلة للتكرار، من أول إصدار عربي إلى كل تحديث بعده.",
+    items: [
+      { title: "تحديد النطاق والملفات", text: "ترسل ملفات الموارد مثل JSON أو XLIFF أو XML، أو تضيفني إلى نظام إدارة الترجمة (TMS) لديك. وتحصل على نطاق وجدول زمني وعرض سعر واضح قبل بدء العمل." },
+      { title: "المسرد والنبرة", text: "أُعدّ مسردًا لمصطلحات منتجك ونتّفق على النبرة، لتستخدم الأزرار والميزات ومقالات المساعدة الكلمات العربية نفسها في كل مكان." },
+      { title: "ترجمة تناسب البناء البرمجي", text: "تُترجَم النصوص ضمن حدود عدد الأحرف، مع الحفاظ على العناصر النائبة والمتغيرات والوسوم وصيغ الجمع العربية، فلا يتعطّل شيء في البناء." },
+      { title: "مراجعة في السياق وضمان جودة اللغة (LQA)", text: "أراجع النص العربي في لقطات الشاشة أو بيئة الاختبار، وأتحقق من التخطيط من اليمين إلى اليسار (RTL) واقتطاع النصوص، وأبلغ مطوّريك بأي مشكلات في التدويل (i18n)." },
+      { title: "إصدارات مستمرة", text: "تُترجَم النصوص الجديدة والمعدّلة على دفعات صغيرة مع كل دورة تطوير، مع الاستفادة من ذاكرة الترجمة (TM)، لتصدر العربية في الوقت نفسه مع لغاتك الأخرى." },
+    ],
+  },
   raas: {
     title: "التوطين نتيجةً لا أداة",
     intro: "تمنحك البرمجيات كخدمة (SaaS) برنامجًا عليك تشغيله، أما النتائج كخدمة (RaaS) فتمنحك النتيجة النهائية. وهكذا أتعامل مع توطين منتجات SaaS: نتفق على النتيجة التي تحتاجها، وأسلّمها جاهزة للإطلاق.",
@@ -145,6 +184,22 @@ const ar: SaasPage = {
       q: "ما المقصود بالنتائج كخدمة (RaaS)، وكيف ينطبق ذلك على التوطين؟",
       a: "بدل أن تدفع مقابل الأدوات أو الساعات وتدير العمل بنفسك، نتفق على نتيجة واضحة، كإصدار عربي جاهز للإطلاق، وأتولّى كل ما يلزم لتحقيقها: الترجمة والمراجعة والفحص في السياق وتقارير الجودة. ولكل مشروع نطاق واضح وعرض سعر قبل بدء العمل.",
     },
+    {
+      q: "كم تكلفة توطين منتج SaaS إلى العربية؟",
+      a: "تعتمد على عدد الكلمات، ونسبة النصوص المتكررة، وحاجتك إلى المراجعة في السياق وتحديثات الإصدارات المستمرة. أرسل ملفاتك أو رابط منتجك وستحصل على عرض سعر واضح قبل بدء أي عمل.",
+    },
+    {
+      q: "كم يستغرق توطين تطبيق إلى العربية؟",
+      a: "أترجم 5,000 كلمة يوميًا على الأقل، لذا تكون واجهة تطبيق الويب أو الجوال المعتاد جاهزة عادةً خلال أيام، تليها المراجعة في السياق. أما مراكز المساعدة والوثائق فتُسلَّم على دفعات مخطّطة، وتُترجَم النصوص الجديدة بما يتوافق مع جدول إصداراتك.",
+    },
+    {
+      q: "ما صيغ الملفات التي تدعمها؟",
+      a: "ملفات الموارد بصيغ JSON وXLIFF وXML وHTML، وملفات الترجمة المرئية SRT لفيديوهات المنتج، والمحتوى المُدار في أنظمة إدارة الترجمة (TMS) أو منصات مراكز المساعدة. وتبقى العناصر النائبة والوسوم والمتغيرات كما هي تمامًا.",
+    },
+    {
+      q: "هل ستظهر النسخة العربية بشكل صحيح من اليمين إلى اليسار (RTL)؟",
+      a: "الترجمة وحدها لا تعكس التخطيط؛ فمطوّروك هم من يفعّلون دعم الاتجاه من اليمين إلى اليسار (RTL). ثم أراجع المنتج في السياق وأبلغ عن الأيقونات المعكوسة والنصوص غير المحاذاة أو المقتطعة ومشكلات اختلاط الاتجاهات، لتُصلَح قبل الإطلاق.",
+    },
   ],
   ctaTitle: "هل تطلق منتج SaaS بالعربية؟",
   ctaDescription: "أخبرني عن منتجك ومنصتك وجدول إصداراتك للحصول على عرض سعر واضح.",
@@ -153,7 +208,7 @@ const ar: SaasPage = {
 const fr: SaasPage = {
   title: "Localisation de SaaS vers l’arabe",
   crumb: "Localisation de SaaS",
-  seoTitle: "Localisation de SaaS vers l’arabe",
+  seoTitle: "Localisation SaaS et d’applications en arabe",
   description:
     "Localisation en arabe de plateformes SaaS, d’applications web et mobiles et de centres d’aide : chaînes d’interface, onboarding, documentation et fiches des stores, adaptées à l’écriture de droite à gauche et livrées à chaque version.",
   intro: [
@@ -184,6 +239,17 @@ const fr: SaasPage = {
       text: "Un produit localisé en arabe prêt à être publié, un glossaire produit et un guide de style, la liste des éventuels problèmes de mise en page ou d’internationalisation relevés pendant la vérification, et une livraison rapide des nouvelles chaînes à chaque version, pour que l’arabe suive le rythme de vos autres langues.",
     },
   ],
+  steps: {
+    title: "Comment se déroule la localisation SaaS en arabe",
+    intro: "Un processus clair et reproductible, de votre première version arabe à chaque mise à jour.",
+    items: [
+      { title: "Périmètre et fichiers", text: "Vous partagez vos fichiers de ressources (JSON, XLIFF ou XML) ou m’invitez dans votre système de gestion de traduction (TMS). Vous recevez un périmètre, un calendrier et un devis clairs avant le début du travail." },
+      { title: "Glossaire et ton", text: "Je constitue un glossaire de vos termes produit et nous définissons le ton ensemble, pour que boutons, fonctionnalités et articles d’aide emploient partout les mêmes mots en arabe." },
+      { title: "Une traduction qui respecte le code", text: "Les chaînes sont traduites dans vos limites de caractères, en préservant variables, balises, espaces réservés et formes plurielles de l’arabe : rien ne casse au moment du build." },
+      { title: "Relecture en contexte et LQA", text: "Je relis l’arabe sur captures d’écran ou en environnement de test, vérifie la mise en page de droite à gauche (RTL) et les troncatures, et signale à vos développeurs tout problème d’internationalisation (i18n)." },
+      { title: "Versions continues", text: "Les chaînes nouvelles ou modifiées sont traduites par petits lots à chaque sprint, avec votre mémoire de traduction (TM), pour que l’arabe sorte en même temps que vos autres langues." },
+    ],
+  },
   raas: {
     title: "La localisation comme un résultat, pas un outil",
     intro: "Le SaaS vous donne un logiciel à faire tourner. Le Results as a Service (RaaS) vous livre le résultat final. C’est ainsi que j’aborde la localisation SaaS : nous définissons ensemble le résultat attendu, et je le livre prêt à être déployé.",
@@ -211,6 +277,22 @@ const fr: SaasPage = {
       q: "Qu’est-ce que le Results as a Service (RaaS), et comment s’applique-t-il à la localisation ?",
       a: "Au lieu de payer des outils ou des heures et de gérer le travail vous-même, nous convenons d’un résultat clair, par exemple une version arabe prête à déployer, et je prends en charge tout ce qu’il faut pour le livrer : traduction, révision, vérifications en contexte et rapports qualité. Chaque projet a un périmètre et un devis clairs avant de commencer.",
     },
+    {
+      q: "Combien coûte la localisation d’un SaaS en arabe ?",
+      a: "Cela dépend du nombre de mots, de la part de texte répété et de vos besoins en relecture en contexte et en mises à jour continues. Envoyez vos fichiers ou un lien vers votre produit : vous recevrez un devis clair avant tout démarrage.",
+    },
+    {
+      q: "Combien de temps faut-il pour localiser une application en arabe ?",
+      a: "Je traduis au moins 5 000 mots par jour : l’interface d’une application web ou mobile courante est généralement prête en quelques jours, suivie de la relecture en contexte. Centres d’aide et documentation sont livrés par lots planifiés, et les nouvelles chaînes suivent votre rythme de publication.",
+    },
+    {
+      q: "Quels formats de fichiers prenez-vous en charge ?",
+      a: "Les fichiers de ressources JSON, XLIFF, XML et HTML, les sous-titres SRT de vos vidéos produit, ainsi que les contenus gérés dans un TMS ou une plateforme de centre d’aide. Variables, balises et espaces réservés sont conservés à l’identique.",
+    },
+    {
+      q: "La version arabe s’affichera-t-elle correctement de droite à gauche ?",
+      a: "La traduction seule n’inverse pas la mise en page : ce sont vos développeurs qui activent le support droite-à-gauche (RTL). Je relis ensuite le produit en contexte et signale icônes inversées, textes mal alignés ou tronqués et problèmes de sens mixte, pour les corriger avant le lancement.",
+    },
   ],
   ctaTitle: "Vous lancez votre produit SaaS en arabe ?",
   ctaDescription: "Parlez-moi de votre produit, de votre plateforme et de votre rythme de versions pour obtenir un devis clair.",
@@ -219,7 +301,7 @@ const fr: SaasPage = {
 const es: SaasPage = {
   title: "Localización de SaaS al árabe",
   crumb: "Localización de SaaS",
-  seoTitle: "Localización de SaaS al árabe",
+  seoTitle: "Localización de SaaS y apps al árabe",
   description:
     "Localización al árabe de plataformas SaaS, apps web y móviles y centros de ayuda: cadenas de interfaz, onboarding, documentación y fichas de las tiendas de apps, adaptadas al diseño de derecha a izquierda y entregadas en cada versión.",
   intro: [
@@ -250,6 +332,17 @@ const es: SaasPage = {
       text: "Un producto localizado al árabe listo para publicar, un glosario del producto y una guía de estilo, una lista de los problemas de diseño o internacionalización detectados en la revisión y entregas rápidas de las cadenas nuevas en cada versión, para que el árabe avance al mismo ritmo que tus otros idiomas.",
     },
   ],
+  steps: {
+    title: "Cómo funciona la localización de SaaS al árabe",
+    intro: "Un proceso claro y repetible, desde tu primera versión en árabe hasta cada actualización posterior.",
+    items: [
+      { title: "Alcance y archivos", text: "Compartes tus archivos de recursos, como JSON, XLIFF o XML, o me invitas a tu sistema de gestión de traducción (TMS). Recibes un alcance, un calendario y un presupuesto claros antes de empezar." },
+      { title: "Glosario y tono", text: "Creo un glosario con los términos de tu producto y acordamos el tono, para que botones, funciones y artículos de ayuda usen las mismas palabras en árabe en todas partes." },
+      { title: "Traducción que respeta el código", text: "Las cadenas se traducen dentro de tus límites de caracteres, conservando variables, etiquetas, marcadores de posición y las formas plurales del árabe, para que nada falle en la compilación." },
+      { title: "Revisión en contexto y LQA", text: "Reviso el árabe en capturas de pantalla o en un entorno de pruebas, compruebo el diseño de derecha a izquierda (RTL) y los textos cortados, e informo a tus desarrolladores de cualquier problema de internacionalización (i18n)." },
+      { title: "Lanzamientos continuos", text: "Las cadenas nuevas o modificadas se traducen en pequeños lotes en cada sprint, aprovechando tu memoria de traducción (TM), para que el árabe salga al mismo tiempo que tus otros idiomas." },
+    ],
+  },
   raas: {
     title: "La localización como resultado, no como herramienta",
     intro: "El SaaS te da un software que tienes que manejar. Results as a Service (RaaS) te entrega el resultado final. Así enfoco la localización de SaaS: acordamos el resultado que necesitas y lo entrego listo para lanzar.",
@@ -276,6 +369,22 @@ const es: SaasPage = {
     {
       q: "¿Qué es Results as a Service (RaaS) y cómo se aplica a la localización?",
       a: "En lugar de pagar por herramientas u horas y gestionar el trabajo tú mismo, acordamos un resultado claro, como una versión en árabe lista para lanzar, y me encargo de todo lo necesario para entregarlo: traducción, revisión, comprobaciones en contexto e informes de calidad. Cada proyecto tiene un alcance y un presupuesto claros antes de empezar.",
+    },
+    {
+      q: "¿Cuánto cuesta localizar un SaaS al árabe?",
+      a: "Depende del número de palabras, de cuánto texto se repite y de si necesitas revisión en contexto y actualizaciones continuas. Envía tus archivos o un enlace a tu producto y recibirás un presupuesto claro antes de empezar.",
+    },
+    {
+      q: "¿Cuánto se tarda en localizar una app al árabe?",
+      a: "Traduzco al menos 5.000 palabras al día, así que la interfaz de una app web o móvil habitual suele estar lista en pocos días, seguida de la revisión en contexto. Los centros de ayuda y la documentación se entregan en lotes planificados, y las cadenas nuevas siguen tu calendario de lanzamientos.",
+    },
+    {
+      q: "¿Qué formatos de archivo admites?",
+      a: "Archivos de recursos JSON, XLIFF, XML y HTML, subtítulos SRT para los vídeos de producto y contenido gestionado en un TMS o en plataformas de centros de ayuda. Variables, etiquetas y marcadores de posición se conservan intactos.",
+    },
+    {
+      q: "¿La versión en árabe se verá bien de derecha a izquierda?",
+      a: "La traducción por sí sola no invierte el diseño: son tus desarrolladores quienes activan el soporte de derecha a izquierda (RTL). Después reviso el producto en contexto e informo de iconos invertidos, textos desalineados o cortados y problemas de dirección mixta, para corregirlos antes del lanzamiento.",
     },
   ],
   ctaTitle: "¿Vas a lanzar tu producto SaaS en árabe?",

@@ -43,15 +43,42 @@ export default async function SaasLocalizationPage({ params }: { params: Promise
     name: p.title,
     description: p.description,
     serviceType: "SaaS localization",
+    alternateName: ["Arabic software localization", "Arabic app localization", "Arabic UI translation"],
     url: `${siteUrl}/${locale}${routes.saasLocalization}`,
+    image: `${siteUrl}${IMAGE}`,
     inLanguage: locale,
     areaServed: "Worldwide",
+    availableLanguage: ["English", "French", "Spanish", "Arabic"],
+    audience: { "@type": "BusinessAudience", audienceType: "SaaS companies, app developers and localization agencies" },
     provider: { "@id": ids.business },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: p.listTitle,
+      itemListElement: p.list.map((item) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: item },
+      })),
+    },
+  };
+
+  const howToLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: p.steps.title,
+    description: p.steps.intro,
+    inLanguage: locale,
+    step: p.steps.items.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.title,
+      text: s.text,
+    })),
   };
 
   return (
     <>
       <JsonLd data={serviceLd} />
+      <JsonLd data={howToLd} />
       <PageHeader
         title={p.title}
         locale={locale}
@@ -87,7 +114,18 @@ export default async function SaasLocalizationPage({ params }: { params: Promise
         </ul>
       </Section>
 
-      <Section>
+      <Section title={p.steps.title} intro={p.steps.intro}>
+        <ol className={styles.steps}>
+          {p.steps.items.map((step) => (
+            <li key={step.title} className={styles.step}>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      <Section tinted>
         <div className={styles.details}>
           {p.blocks.map((block) => (
             <div key={block.title} className={styles.detail}>
@@ -98,7 +136,7 @@ export default async function SaasLocalizationPage({ params }: { params: Promise
         </div>
       </Section>
 
-      <Section tinted title={p.raas.title} intro={p.raas.intro}>
+      <Section title={p.raas.title} intro={p.raas.intro}>
         <div className={styles.details}>
           {p.raas.items.map((item) => (
             <div key={item.title} className={styles.detail}>

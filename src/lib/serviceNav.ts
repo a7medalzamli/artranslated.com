@@ -16,6 +16,7 @@ export function buildServiceNav(dict: Dictionary): NavLink[] {
     { href: section("editing"), label: m.editing },
     { href: section("mtpe"), label: m.mtpe },
     { href: section("transcreation"), label: m.transcreation },
+    { href: routes.saasLocalization, label: m.saasLocalization },
     { href: section("consulting"), label: m.consulting },
     { href: section("digital-marketing"), label: m.digitalMarketing },
   ];

@@ -56,6 +56,7 @@ const ar: Dictionary = {
     editing: "التحرير والتدقيق",
     mtpe: "MTPE",
     transcreation: "الترجمة الإبداعية",
+    saasLocalization: "توطين البرمجيات (SaaS)",
     consulting: "الاستشارات",
     digitalMarketing: "التسويق الرقمي",
   },
