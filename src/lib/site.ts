@@ -31,7 +31,7 @@ export const site = {
    * Set an href to "" to hide that item.
    */
   socials: [
-    { platform: "linkedin", label: "LinkedIn", href: "#" },
+    { platform: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/ahmed-alzamli" },
     { platform: "whatsapp", label: "WhatsApp", href: "https://wa.me/970594808782" },
     { platform: "telegram", label: "Telegram", href: TELEGRAM_URL },
   ],

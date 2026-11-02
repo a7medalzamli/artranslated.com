@@ -17,7 +17,7 @@ export const ids = {
 
 /** Public profiles that confirm the same person (used as sameAs). */
 export const profiles = [
-  "https://www.linkedin.com/in/ahmed-alzamly",
+  "https://www.linkedin.com/in/ahmed-alzamli",
   "https://www.proz.com/profile/2522215",
   "http://ahmedalzamly.translatorscafe.com",
 ];

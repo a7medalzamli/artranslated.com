@@ -6,7 +6,7 @@ import type { Locale } from "@/i18n";
  * Ahmed; don't add claims (clients, figures, certifications) without his OK.
  */
 export const PROZ_PROFILE = "https://www.proz.com/profile/2522215";
-export const LINKEDIN = "https://www.linkedin.com/in/ahmed-alzamly";
+export const LINKEDIN = "https://www.linkedin.com/in/ahmed-alzamli";
 
 type Trust = {
   author: {

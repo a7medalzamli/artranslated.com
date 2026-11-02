@@ -21,7 +21,10 @@ function withValidWhatsApp(settings: SiteSettings): SiteSettings {
     ...settings,
     socials: settings.socials.map((s) => ({
       ...s,
-      href: s.href.replace(/^(https:\/\/wa\.me\/)(?:\+|00)/, "$1"),
+      href: s.href
+        .replace(/^(https:\/\/wa\.me\/)(?:\+|00)/, "$1")
+        // The LinkedIn profile moved from ahmed-alzamly to ahmed-alzamli.
+        .replace(/linkedin\.com\/in\/ahmed-alzamly\b/i, "linkedin.com/in/ahmed-alzamli"),
     })),
   };
 }
