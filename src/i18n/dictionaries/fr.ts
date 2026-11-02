@@ -36,6 +36,16 @@ const fr: Dictionary = {
     forBusinesses: "Pour les entreprises",
     forAgencies: "Pour les agences",
     arabicMarkets: "Marchés arabophones",
+    form: {
+      name: "Votre nom",
+      email: "Votre e-mail",
+      message: "Votre message",
+      send: "Envoyer",
+      sending: "Envoi…",
+      success: "Merci ! Votre message a été envoyé. Je vous réponds rapidement.",
+      invalid: "Veuillez indiquer votre nom, un e-mail valide et un message.",
+      failed: "Désolé, le message n’a pas pu être envoyé. Réessayez ou écrivez-moi directement par e-mail.",
+    },
     serviceLinks: {
       technical: "Technique",
       legal: "Juridique",

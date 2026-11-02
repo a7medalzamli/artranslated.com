@@ -40,6 +40,16 @@ const en = {
     forBusinesses: "For businesses",
     forAgencies: "For agencies",
     arabicMarkets: "Arabic markets",
+    form: {
+      name: "Your name",
+      email: "Your email",
+      message: "Your message",
+      send: "Send",
+      sending: "Sending…",
+      success: "Thank you! Your message was sent. I’ll reply shortly.",
+      invalid: "Please fill in your name, a valid email and a message.",
+      failed: "Sorry, the message could not be sent. Please try again or email me directly.",
+    },
     serviceLinks: {
       technical: "Technical",
       legal: "Legal",

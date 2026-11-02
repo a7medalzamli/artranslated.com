@@ -54,7 +54,80 @@ export async function sendQuoteEmails(quote: QuoteRequestInput, locale: string):
   }
 }
 
-const LANG_NAMES: Record<Lang, string> = { en: "English", ar: "Arabic", fr: "French", es: "Spanish" };
+/** Short message from the footer form: notify Ahmed and confirm to the sender. */
+export async function sendContactEmails(
+  msg: { name: string; email: string; message: string },
+  locale: string,
+): Promise<void> {
+  const apiKey = process.env.RESEND_API_KEY;
+  const from = process.env.EMAIL_FROM || DEFAULT_FROM;
+  const adminTo = process.env.QUOTE_NOTIFICATION_EMAIL || DEFAULT_NOTIFY;
+  const lang: Lang = (["en", "ar", "fr", "es"] as const).includes(locale as Lang) ? (locale as Lang) : "en";
+  if (!apiKey) {
+    console.warn("[email] RESEND_API_KEY is not set, so no emails were sent.");
+    return;
+  }
+  const resend = new Resend(apiKey);
+  try {
+    const admin = await resend.emails.send({
+      from,
+      to: adminTo,
+      replyTo: msg.email,
+      subject: `New message from ${msg.name} (website footer)`,
+      text: [
+        "New message from the artranslated.com footer form",
+        "",
+        `Name: ${msg.name}`,
+        `Email: ${msg.email}`,
+        `Sent from the ${LANG_NAMES[lang]} version of the site`,
+        "",
+        "Message:",
+        msg.message,
+        "",
+        "Reply to this email to answer directly.",
+      ].join("\n"),
+    });
+    if (admin.error) console.error("[email] Notification failed:", admin.error);
+
+    const c = CONTACT_REPLY[lang];
+    const client = await resend.emails.send({
+      from,
+      to: msg.email,
+      replyTo: adminTo,
+      subject: c.subject,
+      text: c.body(msg.name),
+    });
+    if (client.error) console.error("[email] Confirmation failed:", client.error);
+  } catch (error) {
+    console.error("[email] Failed to send contact emails:", error);
+  }
+}
+
+/** Confirmation for footer messages, in the page's language. */
+const CONTACT_REPLY: Record<Lang, { subject: string; body: (name: string) => string }> = {
+  en: {
+    subject: "Your message was received",
+    body: (name) =>
+      [`Hi ${name},`, "", "Thank you for your message. I've received it and will reply shortly.", "", "Best regards,", SIGNATURE].join("\n"),
+  },
+  ar: {
+    subject: "تم استلام رسالتك",
+    body: (name) =>
+      [`مرحبًا ${name}،`, "", "شكرًا لرسالتك. لقد استلمتها وسأرد عليك قريبًا.", "", "مع خالص التحية،", SIGNATURE].join("\n"),
+  },
+  fr: {
+    subject: "Votre message a bien été reçu",
+    body: (name) =>
+      [`Bonjour ${name},`, "", "Merci pour votre message. Je l’ai bien reçu et je vous répondrai rapidement.", "", "Bien cordialement,", SIGNATURE].join("\n"),
+  },
+  es: {
+    subject: "Hemos recibido tu mensaje",
+    body: (name) =>
+      [`Hola, ${name}:`, "", "Gracias por tu mensaje. Lo he recibido y te responderé en breve.", "", "Un saludo,", SIGNATURE].join("\n"),
+  },
+};
+
+const LANG_NAMES: Record<Lang, string> ={ en: "English", ar: "Arabic", fr: "French", es: "Spanish" };
 
 function adminText(q: QuoteRequestInput, lang: Lang): string {
   return [

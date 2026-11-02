@@ -7,6 +7,7 @@ import { buildServiceNav } from "@/lib/serviceNav";
 import { site } from "@/lib/site";
 import type { Dictionary } from "@/i18n";
 import type { SiteSettings } from "@/lib/content/settings";
+import { FooterContactForm } from "./FooterContactForm";
 import styles from "./SiteFooter.module.css";
 
 export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: SiteSettings }) {
@@ -88,6 +89,7 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
                 <a href={`tel:${site.contact.phoneHref}`}>{site.contact.phone}</a>
               </li>
             </ul>
+            <FooterContactForm labels={dict.footer.form} />
           </div>
         </div>
 
