@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic";
  * sitemap tells search engines what really changed instead of marking every
  * page as new on each deploy.
  */
-const CONTENT_UPDATED = new Date("2026-10-31");
+const CONTENT_UPDATED = new Date("2026-11-02");
 
 /** Build a per-locale URL for a path ("/" → "/<locale>"). */
 function localeUrl(locale: string, path: string): string {

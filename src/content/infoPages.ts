@@ -317,7 +317,7 @@ const businesses: Record<Locale, InfoPage> = {
   en: {
     title: "Arabic Translation for Businesses",
     crumb: "For businesses",
-    seoTitle: "Arabic Translation for Businesses: How It Works & Prices",
+    seoTitle: "Arabic Translation for Businesses: How It Works",
     description:
       "Need your documents, website or marketing in Arabic? Send your file, get a clear price, and receive Arabic that’s checked and ready to use. No translation knowledge needed.",
     intro: [
@@ -395,7 +395,7 @@ const businesses: Record<Locale, InfoPage> = {
   ar: {
     title: "الترجمة إلى العربية للشركات",
     crumb: "للشركات",
-    seoTitle: "الترجمة إلى العربية للشركات: كيف نعمل والأسعار",
+    seoTitle: "الترجمة إلى العربية للشركات: كيف نعمل",
     description:
       "هل تحتاج إلى مستنداتك أو موقعك الإلكتروني أو محتواك التسويقي بالعربية؟ أرسل ملفك، واحصل على سعر واضح، واستلم نصًا عربيًا مراجَعًا وجاهزًا للاستخدام، دون الحاجة إلى أي معرفة بالترجمة.",
     intro: [
@@ -473,7 +473,7 @@ const businesses: Record<Locale, InfoPage> = {
   fr: {
     title: "Traduction en arabe pour les entreprises",
     crumb: "Pour les entreprises",
-    seoTitle: "Traduction en arabe pour les entreprises : fonctionnement et prix",
+    seoTitle: "Traduction en arabe pour les entreprises",
     description:
       "Besoin de vos documents, de votre site ou de vos supports marketing en arabe ? Envoyez votre fichier, recevez un prix clair et obtenez un arabe vérifié et prêt à l’emploi, sans aucune connaissance en traduction.",
     intro: [
@@ -551,7 +551,7 @@ const businesses: Record<Locale, InfoPage> = {
   es: {
     title: "Traducción al árabe para empresas",
     crumb: "Para empresas",
-    seoTitle: "Traducción al árabe para empresas: cómo funciona y precios",
+    seoTitle: "Traducción al árabe para empresas",
     description:
       "¿Necesitas tus documentos, tu web o tu marketing en árabe? Envía tu archivo, recibe un precio claro y obtén un árabe revisado y listo para usar, sin saber nada de traducción.",
     intro: [

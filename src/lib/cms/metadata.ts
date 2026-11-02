@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { locales } from "@/i18n/config";
 import { siteUrl } from "@/lib/seo";
+import { getMetaOverride } from "@/content/metaOverrides";
 
 /** Open Graph expects language_TERRITORY codes. */
 const ogLocales: Record<string, string> = { en: "en_US", ar: "ar_AR", fr: "fr_FR", es: "es_ES" };
@@ -22,8 +23,10 @@ export function buildCmsMetadata(opts: {
   seo?: SeoOverride;
   defaultOgImage?: string;
 }): Metadata {
-  const title = opts.seo?.title?.trim() || opts.defaultTitle;
-  const description = opts.seo?.description?.trim() || opts.defaultDescription;
+  // Order: CMS override → tuned search text in code → the page's own text.
+  const tuned = getMetaOverride(opts.locale, opts.path);
+  const title = opts.seo?.title?.trim() || tuned.title || opts.defaultTitle;
+  const description = opts.seo?.description?.trim() || tuned.description || opts.defaultDescription;
   // Default share image: the 1200x630 branded card in the page's language.
   const ogImage =
     opts.seo?.ogImage?.trim() ||

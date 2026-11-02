@@ -12,6 +12,22 @@
 - Contact: ahmed@artranslated.com, +970 594 808 782 (WhatsApp and Telegram)
 - Site languages: English (/en), Arabic (/ar), French (/fr), Spanish (/es)
 
+Last updated: 2026-11-02
+
+## Quick answers
+
+- Language pairs: English, French and Spanish into Arabic, and Arabic into English. French and Spanish are translated directly, without an English relay.
+- Who does the work: Ahmed Alzamli personally, a native Arabic speaker, translating professionally since 2014.
+- Daily capacity: at least 5,000 words of translation a day.
+- Quality process: translation, editing and proofreading (TEP) on every project; LQA scoring on request.
+- Pricing: quoted per project (translation is usually priced per source word). Prices are not published; a clear written quote is sent before work starts.
+- Not offered: sworn, certified or notarized translation.
+- File formats: JSON, XLIFF, XML and HTML resource files, SRT subtitles, and content in translation management systems (TMS).
+- Which Arabic: Modern Standard Arabic (MSA) by default, understood in every Arabic-speaking market; dialect or a lighter tone for marketing aimed at one country.
+- CAT tools: SDL Trados Studio, memoQ, Wordfast.
+- Clients: companies of all sizes worldwide and translation agencies (LSPs), remotely.
+- Language versions of this site: English (https://www.artranslated.com/en), Arabic (https://www.artranslated.com/ar), French (https://www.artranslated.com/fr), Spanish (https://www.artranslated.com/es).
+
 ## Services
 
 - [Translation into Arabic](https://www.artranslated.com/en/services/translation): professional human translation from English, French and Spanish, with translation, editing and proofreading (TEP)
@@ -43,6 +59,7 @@
 - [Arabic-speaking markets](https://www.artranslated.com/en/arabic-markets): the Gulf, the Levant, Egypt, the Maghreb and Iraq; which Arabic each market reads and how to reach it
 - [French to Arabic translation](https://www.artranslated.com/en/french-to-arabic): direct translation from French, with no English relay, for the French-speaking world
 - [Spanish to Arabic translation](https://www.artranslated.com/en/spanish-to-arabic): direct translation from Spanish, with no English relay, for Spain, Latin America and the Spanish-speaking world
+- [Arabic SaaS localization](https://www.artranslated.com/en/services/saas-localization): UI strings, help centers and app store listings; RTL review in context; continuous localization with each release
 
 ## Guides
 
