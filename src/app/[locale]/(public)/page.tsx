@@ -280,7 +280,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <RelatedServices
         locale={locale}
         title={HOME_LINKS[loc].services}
-        links={["translation", "editing", "mtpe", "transcreation", "saas", "digital-marketing"]}
+        links={["translation", "editing", "mtpe", "transcreation", "saas", "consulting", "digital-marketing"]}
         tinted
       />
 
