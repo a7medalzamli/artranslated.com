@@ -51,7 +51,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <PageHeader title={c.title} />
 
       <Container className="section-pad">
-        <p className={styles.lead}>{c.lead}</p>
         <div className={styles.intro}>
           <div className={styles.introText}>
             <p style={{ fontSize: "var(--font-size-lg)", marginBottom: "var(--space-lg)" }}>
