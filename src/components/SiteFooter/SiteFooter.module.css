@@ -64,8 +64,6 @@
   gap: var(--space-lg);
 }
 
-/* Alconost credential: logo with a caption, pushed to the start (left in
-   LTR, right in Arabic); the other badges stay at the end. */
 /* Left group of certifications (Alconost, ArTA); pushes the other badges to the end. */
 .certs {
   margin-inline-end: auto;
