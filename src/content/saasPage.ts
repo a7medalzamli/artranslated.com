@@ -61,7 +61,7 @@ const en: SaasPage = {
       { title: "Glossary and voice", text: "I build a glossary of your product terms and agree the tone with you, so buttons, features and help articles use the same Arabic words everywhere." },
       { title: "Translation that fits the build", text: "Strings are translated within your character limits, with placeholders, variables, tags and Arabic plural forms kept intact, so nothing breaks in the build." },
       { title: "In-context review and LQA", text: "I review the Arabic in screenshots or a staging environment, check right-to-left (RTL) layout and truncation, and report any internationalization (i18n) issues to your developers." },
-      { title: "Continuous releases", text: "New and changed strings are translated in small batches with each sprint, reusing your translation memory (TM), so Arabic ships at the same time as your other languages." },
+      { title: "Continuous releases", text: "New and changed strings are translated in small batches with each sprint and returned within 1–2 working days, reusing your translation memory (TM), so Arabic ships at the same time as your other languages." },
     ],
   },
   raas: {
@@ -81,7 +81,7 @@ const en: SaasPage = {
     },
     {
       q: "Can you keep up with continuous releases?",
-      a: "Yes. For products that ship updates every week or sprint, new and changed strings are translated in small batches as they arrive, using your translation memory and glossary so terminology stays consistent from one release to the next.",
+      a: "Yes. For products that ship updates every week or sprint, new and changed strings are translated in small batches as they arrive and returned within 1–2 working days, using your translation memory and glossary so terminology stays consistent from one release to the next.",
     },
     {
       q: "Should our app use Modern Standard Arabic or a dialect?",
@@ -97,7 +97,7 @@ const en: SaasPage = {
     },
     {
       q: "How long does it take to localize an app into Arabic?",
-      a: "I translate at least 5,000 words a day, so the interface of a typical web or mobile app is usually ready within days, followed by in-context review. Help centers and documentation are delivered in planned batches, and new strings are turned around to match your release schedule.",
+      a: "I translate at least 5,000 words a day, so the interface of a typical web or mobile app is usually ready within days, followed by in-context review. Help centers and documentation are delivered in planned batches, and new strings added between releases are returned within 1–2 working days.",
     },
     {
       q: "Which file formats do you support?",
@@ -154,7 +154,7 @@ const ar: SaasPage = {
       { title: "المسرد والنبرة", text: "أُعدّ مسردًا لمصطلحات منتجك ونتّفق على النبرة، لتستخدم الأزرار والميزات ومقالات المساعدة الكلمات العربية نفسها في كل مكان." },
       { title: "ترجمة تناسب البناء البرمجي", text: "تُترجَم النصوص ضمن حدود عدد الأحرف، مع الحفاظ على العناصر النائبة والمتغيرات والوسوم وصيغ الجمع العربية، فلا يتعطّل شيء في البناء." },
       { title: "مراجعة في السياق وضمان جودة اللغة (LQA)", text: "أراجع النص العربي في لقطات الشاشة أو بيئة الاختبار، وأتحقق من التخطيط من اليمين إلى اليسار (RTL) واقتطاع النصوص، وأبلغ مطوّريك بأي مشكلات في التدويل (i18n)." },
-      { title: "إصدارات مستمرة", text: "تُترجَم النصوص الجديدة والمعدّلة على دفعات صغيرة مع كل دورة تطوير، مع الاستفادة من ذاكرة الترجمة (TM)، لتصدر العربية في الوقت نفسه مع لغاتك الأخرى." },
+      { title: "إصدارات مستمرة", text: "تُترجَم النصوص الجديدة والمعدّلة على دفعات صغيرة مع كل دورة تطوير وتُسلَّم خلال يوم إلى يومَي عمل، مع الاستفادة من ذاكرة الترجمة (TM)، لتصدر العربية في الوقت نفسه مع لغاتك الأخرى." },
     ],
   },
   raas: {
@@ -174,7 +174,7 @@ const ar: SaasPage = {
     },
     {
       q: "هل يمكنك مواكبة الإصدارات المتتالية؟",
-      a: "نعم. في المنتجات التي تصدر تحديثاتها كل أسبوع أو كل دورة تطوير، تُترجم النصوص الجديدة والمعدّلة على دفعات صغيرة فور وصولها، باستخدام ذاكرة الترجمة (TM) والمسرد الخاصين بك، لتبقى المصطلحات متّسقة من إصدار إلى آخر.",
+      a: "نعم. في المنتجات التي تصدر تحديثاتها كل أسبوع أو كل دورة تطوير، تُترجم النصوص الجديدة والمعدّلة على دفعات صغيرة فور وصولها وتُسلَّم خلال يوم إلى يومَي عمل، باستخدام ذاكرة الترجمة (TM) والمسرد الخاصين بك، لتبقى المصطلحات متّسقة من إصدار إلى آخر.",
     },
     {
       q: "هل يستخدم تطبيقنا العربية الفصحى المعاصرة أم لهجة محلية؟",
@@ -190,7 +190,7 @@ const ar: SaasPage = {
     },
     {
       q: "كم يستغرق توطين تطبيق إلى العربية؟",
-      a: "أترجم 5,000 كلمة يوميًا على الأقل، لذا تكون واجهة تطبيق الويب أو الجوال المعتاد جاهزة عادةً خلال أيام، تليها المراجعة في السياق. أما مراكز المساعدة والوثائق فتُسلَّم على دفعات مخطّطة، وتُترجَم النصوص الجديدة بما يتوافق مع جدول إصداراتك.",
+      a: "أترجم 5,000 كلمة يوميًا على الأقل، لذا تكون واجهة تطبيق الويب أو الجوال المعتاد جاهزة عادةً خلال أيام، تليها المراجعة في السياق. أما مراكز المساعدة والوثائق فتُسلَّم على دفعات مخطّطة، وتُسلَّم النصوص الجديدة المضافة بين الإصدارات خلال يوم إلى يومَي عمل.",
     },
     {
       q: "ما صيغ الملفات التي تدعمها؟",
@@ -247,7 +247,7 @@ const fr: SaasPage = {
       { title: "Glossaire et ton", text: "Je constitue un glossaire de vos termes produit et nous définissons le ton ensemble, pour que boutons, fonctionnalités et articles d’aide emploient partout les mêmes mots en arabe." },
       { title: "Une traduction qui respecte le code", text: "Les chaînes sont traduites dans vos limites de caractères, en préservant variables, balises, espaces réservés et formes plurielles de l’arabe : rien ne casse au moment du build." },
       { title: "Relecture en contexte et LQA", text: "Je relis l’arabe sur captures d’écran ou en environnement de test, vérifie la mise en page de droite à gauche (RTL) et les troncatures, et signale à vos développeurs tout problème d’internationalisation (i18n)." },
-      { title: "Versions continues", text: "Les chaînes nouvelles ou modifiées sont traduites par petits lots à chaque sprint, avec votre mémoire de traduction (TM), pour que l’arabe sorte en même temps que vos autres langues." },
+      { title: "Versions continues", text: "Les chaînes nouvelles ou modifiées sont traduites par petits lots à chaque sprint et livrées sous 1 à 2 jours ouvrés, avec votre mémoire de traduction (TM), pour que l’arabe sorte en même temps que vos autres langues." },
     ],
   },
   raas: {
@@ -267,7 +267,7 @@ const fr: SaasPage = {
     },
     {
       q: "Pouvez-vous suivre un rythme de mises à jour continu ?",
-      a: "Oui. Pour les produits mis à jour chaque semaine ou à chaque sprint, les chaînes nouvelles ou modifiées sont traduites par petits lots dès leur arrivée, avec votre mémoire de traduction et votre glossaire, pour une terminologie cohérente d’une version à l’autre.",
+      a: "Oui. Pour les produits mis à jour chaque semaine ou à chaque sprint, les chaînes nouvelles ou modifiées sont traduites par petits lots dès leur arrivée et livrées sous 1 à 2 jours ouvrés, avec votre mémoire de traduction et votre glossaire, pour une terminologie cohérente d’une version à l’autre.",
     },
     {
       q: "Notre application doit-elle utiliser l’arabe standard moderne ou un dialecte ?",
@@ -283,7 +283,7 @@ const fr: SaasPage = {
     },
     {
       q: "Combien de temps faut-il pour localiser une application en arabe ?",
-      a: "Je traduis au moins 5 000 mots par jour : l’interface d’une application web ou mobile courante est généralement prête en quelques jours, suivie de la relecture en contexte. Centres d’aide et documentation sont livrés par lots planifiés, et les nouvelles chaînes suivent votre rythme de publication.",
+      a: "Je traduis au moins 5 000 mots par jour : l’interface d’une application web ou mobile courante est généralement prête en quelques jours, suivie de la relecture en contexte. Centres d’aide et documentation sont livrés par lots planifiés, et les nouvelles chaînes ajoutées entre deux versions sont livrées sous 1 à 2 jours ouvrés.",
     },
     {
       q: "Quels formats de fichiers prenez-vous en charge ?",
@@ -340,7 +340,7 @@ const es: SaasPage = {
       { title: "Glosario y tono", text: "Creo un glosario con los términos de tu producto y acordamos el tono, para que botones, funciones y artículos de ayuda usen las mismas palabras en árabe en todas partes." },
       { title: "Traducción que respeta el código", text: "Las cadenas se traducen dentro de tus límites de caracteres, conservando variables, etiquetas, marcadores de posición y las formas plurales del árabe, para que nada falle en la compilación." },
       { title: "Revisión en contexto y LQA", text: "Reviso el árabe en capturas de pantalla o en un entorno de pruebas, compruebo el diseño de derecha a izquierda (RTL) y los textos cortados, e informo a tus desarrolladores de cualquier problema de internacionalización (i18n)." },
-      { title: "Lanzamientos continuos", text: "Las cadenas nuevas o modificadas se traducen en pequeños lotes en cada sprint, aprovechando tu memoria de traducción (TM), para que el árabe salga al mismo tiempo que tus otros idiomas." },
+      { title: "Lanzamientos continuos", text: "Las cadenas nuevas o modificadas se traducen en pequeños lotes en cada sprint y se entregan en 1 o 2 días hábiles, aprovechando tu memoria de traducción (TM), para que el árabe salga al mismo tiempo que tus otros idiomas." },
     ],
   },
   raas: {
@@ -360,7 +360,7 @@ const es: SaasPage = {
     },
     {
       q: "¿Puedes seguir el ritmo de lanzamientos continuos?",
-      a: "Sí. En productos que publican actualizaciones cada semana o cada sprint, las cadenas nuevas y modificadas se traducen en pequeños lotes a medida que llegan, con tu memoria de traducción y tu glosario, para que la terminología sea coherente de una versión a otra.",
+      a: "Sí. En productos que publican actualizaciones cada semana o cada sprint, las cadenas nuevas y modificadas se traducen en pequeños lotes a medida que llegan y se entregan en 1 o 2 días hábiles, con tu memoria de traducción y tu glosario, para que la terminología sea coherente de una versión a otra.",
     },
     {
       q: "¿Nuestra aplicación debe usar árabe estándar moderno o un dialecto?",
@@ -376,7 +376,7 @@ const es: SaasPage = {
     },
     {
       q: "¿Cuánto se tarda en localizar una app al árabe?",
-      a: "Traduzco al menos 5.000 palabras al día, así que la interfaz de una app web o móvil habitual suele estar lista en pocos días, seguida de la revisión en contexto. Los centros de ayuda y la documentación se entregan en lotes planificados, y las cadenas nuevas siguen tu calendario de lanzamientos.",
+      a: "Traduzco al menos 5.000 palabras al día, así que la interfaz de una app web o móvil habitual suele estar lista en pocos días, seguida de la revisión en contexto. Los centros de ayuda y la documentación se entregan en lotes planificados, y las cadenas nuevas que se añaden entre lanzamientos se entregan en 1 o 2 días hábiles.",
     },
     {
       q: "¿Qué formatos de archivo admites?",
