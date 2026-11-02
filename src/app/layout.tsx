@@ -17,6 +17,9 @@ const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   weight: ["400", "500", "600", "700"],
   variable: "--font-ibm-plex-sans-arabic",
   display: "swap",
+  // Not preloaded: its four files would otherwise load on every page, in every
+  // language, before anything is shown. Arabic pages swap it in once loaded.
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -27,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Ahmed Alzamli",
   },
   description:
-    "Website translation and localization into English and Arabic, plus professional English, French and Spanish into Arabic translation across technical, legal, financial, healthcare and audiovisual specializations.",
+    "English, French and Spanish to Arabic translation and localization by Ahmed Alzamli, ProZ Certified PRO: websites, SaaS, marketing, legal and technical.",
   keywords: [
     "website translation",
     "website localization",
