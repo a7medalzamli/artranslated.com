@@ -51,9 +51,8 @@
   }
 }
 
-/* ---- Credential badges (ProZ, Translators without Borders / Trados) ---- */
-/* Credential images in one row (not inside the columns), so both render at
-   exactly the same width and height. Not links. */
+/* ---- Credential badges (ProZ, ArTA, Alconost, Translators without Borders) ---- */
+/* All four in one row, each exactly the same width and height. Not links. */
 .credBadges {
   margin-top: var(--space-xl);
   margin-bottom: var(--space-md);
