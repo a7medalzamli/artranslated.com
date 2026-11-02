@@ -66,9 +66,23 @@
 
 /* Alconost credential: logo with a caption, pushed to the start (left in
    LTR, right in Arabic); the other badges stay at the end. */
+/* Left group of certifications (Alconost, ArTA); pushes the other badges to the end. */
+.certs {
+  margin-inline-end: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-lg) var(--space-xl);
+}
+
+.artaSeal {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+
 .alconost {
   margin: 0;
-  margin-inline-end: auto;
   display: flex;
   flex-direction: column;
   align-items: center;

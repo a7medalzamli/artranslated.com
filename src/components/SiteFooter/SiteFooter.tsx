@@ -103,16 +103,29 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
         </div>
 
         <div className={styles.credBadges}>
-          <figure className={styles.alconost}>
-            <Image
-              src="/badges/alconost-logo.svg"
-              alt="Alconost"
-              width={258}
-              height={45}
-              className={styles.alconostLogo}
-            />
-            <figcaption>{dict.footer.alconost}</figcaption>
-          </figure>
+          {/* Certifications (left): Alconost and ArTA, each with a caption. */}
+          <div className={styles.certs}>
+            <figure className={styles.alconost}>
+              <Image
+                src="/badges/alconost-logo.svg"
+                alt="Alconost"
+                width={258}
+                height={45}
+                className={styles.alconostLogo}
+              />
+              <figcaption>{dict.footer.alconost}</figcaption>
+            </figure>
+            <figure className={styles.alconost}>
+              <Image
+                src="/badges/arta-accredited.svg"
+                alt="ArTA accredited — Arab Translators Association"
+                width={200}
+                height={200}
+                className={styles.artaSeal}
+              />
+              <figcaption>{dict.footer.arta}</figcaption>
+            </figure>
+          </div>
           <Image
             src="/proz-certified-pro.jpg"
             alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"

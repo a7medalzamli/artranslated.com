@@ -118,10 +118,22 @@ export function entityGraph(locale: string) {
             credentialCategory: "certification",
             recognizedBy: { "@type": "Organization", name: "ProZ.com", url: "https://www.proz.com" },
           },
+          {
+            "@type": "EducationalOccupationalCredential",
+            name: "ArTA accredited translator",
+            credentialCategory: "accreditation",
+            recognizedBy: { "@type": "Organization", name: "Arab Translators Association (ArTA)" },
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            name: "Alconost certificate",
+            credentialCategory: "certificate",
+            recognizedBy: { "@type": "Organization", name: "Alconost", url: "https://alconost.com" },
+          },
         ],
         memberOf: [
           { "@type": "Organization", name: "ProZ.com Certified PRO Network", url: "https://www.proz.com" },
-          { "@type": "Organization", name: "Arabic Translators Association" },
+          { "@type": "Organization", name: "Arab Translators Association (ArTA)", alternateName: "جمعية المترجمين العرب" },
           { "@type": "Organization", name: "Translators without Borders", url: "https://translatorswithoutborders.org" },
         ],
         sameAs: profiles,

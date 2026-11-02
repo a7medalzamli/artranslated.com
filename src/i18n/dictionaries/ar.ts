@@ -36,6 +36,7 @@ const ar: Dictionary = {
     privacy: "سياسة الخصوصية",
     rightsReserved: "جميع الحقوق محفوظة.",
     alconost: "معتمد من Alconost",
+    arta: "معتمد من جمعية المترجمين العرب (ArTA)",
     about: "نبذة",
     howItWorks: "كيف نعمل؟",
     forBusinesses: "للشركات",

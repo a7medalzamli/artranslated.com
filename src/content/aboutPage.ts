@@ -91,7 +91,7 @@ const en: AboutPageContent = {
   commitment: {
     title: "Unwavering Commitment to Quality and Ethics",
     paragraphs: [
-      "Trust and professionalism are the cornerstones of my practice. As a certified member of the ProZ.com Certified PRO Network and the Arabic Translators Association, I strictly adhere to their comprehensive codes of professional conduct and career ethics.",
+      "Trust and professionalism are the cornerstones of my practice. As a certified member of the ProZ.com Certified PRO Network and the Arab Translators Association (ArTA), I strictly adhere to their comprehensive codes of professional conduct and career ethics.",
       "I am committed to working responsibly, delivering excellence on every project, and making a tangible, positive impact on businesses expanding across the globe.",
       "The landscape of language and digital marketing is always evolving. To provide my clients with the most up-to-date and effective services, I am deeply committed to continuous career development. I actively pursue advanced courses and regularly attend industry conferences and webinars to hone my specialized skills.",
     ],

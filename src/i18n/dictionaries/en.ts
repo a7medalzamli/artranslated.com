@@ -34,6 +34,7 @@ const en = {
     privacy: "Privacy policy",
     rightsReserved: "All rights reserved.",
     alconost: "Certified by Alconost",
+    arta: "Accredited by ArTA",
     about: "About",
     howItWorks: "How it works?",
     forBusinesses: "For businesses",
