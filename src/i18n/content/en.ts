@@ -146,7 +146,7 @@ const en = {
         text: "SEO, analytics and social media tools for keyword research, content planning and campaign tracking",
       },
     ],
-    ctaTitle: "Want this level of care on your project?",
+    ctaTitle: "Give your project the care it deserves",
     ctaDescription: "Tell me what you're working on and I'll explain exactly how it would be handled.",
   },
   contact: {

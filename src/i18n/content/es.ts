@@ -142,7 +142,7 @@ const es: SiteContent = {
         text: "herramientas de SEO, analítica y redes sociales para la investigación de palabras clave, la planificación de contenidos y el seguimiento de campañas",
       },
     ],
-    ctaTitle: "¿Quieres este nivel de cuidado en tu proyecto?",
+    ctaTitle: "Dale a tu proyecto el cuidado que merece",
     ctaDescription: "Cuéntame en qué trabajas y te explicaré exactamente cómo se gestionaría.",
   },
   contact: {

@@ -145,7 +145,7 @@ const fr: SiteContent = {
         text: "outils SEO, d’analyse et de réseaux sociaux pour la recherche de mots-clés, la planification de contenus et le suivi des campagnes",
       },
     ],
-    ctaTitle: "Vous voulez ce niveau de soin pour votre projet ?",
+    ctaTitle: "Offrez à votre projet le soin qu’il mérite",
     ctaDescription:
       "Dites-moi sur quoi vous travaillez et je vous expliquerai exactement comment ce serait géré.",
   },
