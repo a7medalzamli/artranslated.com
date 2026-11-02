@@ -150,9 +150,9 @@ const en = {
     ctaDescription: "Tell me what you're working on and I'll explain exactly how it would be handled.",
   },
   contact: {
-    title: "Contact & request a quote",
+    title: "Contact",
     description: "Tell me about your project and I'll reply with a clear quote.",
-    lead: "Share a few details about your project, the languages, subject and deadline, and I’ll reply with a clear, tailored quote.",
+    lead: "Share a few details about your project: the languages, subject and deadline.",
     crumb: "Contact",
     directIntro: "Prefer to reach out directly? Email",
     directOr: "or call",

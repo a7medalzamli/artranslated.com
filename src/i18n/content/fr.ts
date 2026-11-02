@@ -150,9 +150,9 @@ const fr: SiteContent = {
       "Dites-moi sur quoi vous travaillez et je vous expliquerai exactement comment ce serait géré.",
   },
   contact: {
-    title: "Contact et demande de devis",
+    title: "Contact",
     description: "Parlez-moi de votre projet et je vous répondrai avec un devis clair.",
-    lead: "Donnez-moi quelques détails sur votre projet, langues, domaine et délai, et je vous répondrai avec un devis clair et adapté.",
+    lead: "Donnez-moi quelques détails sur votre projet : langues, domaine et délai.",
     crumb: "Contact",
     directIntro: "Vous préférez un contact direct ? Écrivez à",
     directOr: "ou appelez le",

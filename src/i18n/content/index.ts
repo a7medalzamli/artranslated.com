@@ -33,14 +33,42 @@ export async function getContent(locale: Locale): Promise<SiteContent> {
  * Wording that was rewritten in code but may still be stored in an older
  * copy saved from the admin panel. The saved old text is swapped for the new.
  */
-const RETIRED_PROCESS_CTA = new Set([
-  "Want this level of care on your project?",
-  "تريد هذا المستوى من العناية في مشروعك؟",
-  "Vous voulez ce niveau de soin pour votre projet ?",
-  "¿Quieres este nivel de cuidado en tu proyecto?",
-]);
+const RETIRED: { section: "process" | "contact"; field: string; old: string[] }[] = [
+  {
+    section: "process",
+    field: "ctaTitle",
+    old: [
+      "Want this level of care on your project?",
+      "تريد هذا المستوى من العناية في مشروعك؟",
+      "Vous voulez ce niveau de soin pour votre projet ?",
+      "¿Quieres este nivel de cuidado en tu proyecto?",
+    ],
+  },
+  {
+    section: "contact",
+    field: "title",
+    old: ["Contact & request a quote", "تواصل واطلب عرض سعر", "Contact et demande de devis", "Contacto y solicitud de presupuesto"],
+  },
+  {
+    section: "contact",
+    field: "lead",
+    old: [
+      "Share a few details about your project, the languages, subject and deadline, and I’ll reply with a clear, tailored quote.",
+      "شاركني بعض التفاصيل عن مشروعك، اللغات والمجال والموعد النهائي، وسأرد عليك بعرض سعر واضح ومناسب لاحتياجاتك.",
+      "Donnez-moi quelques détails sur votre projet, langues, domaine et délai, et je vous répondrai avec un devis clair et adapté.",
+      "Compárteme algunos detalles de tu proyecto, idiomas, tema y plazo, y te responderé con un presupuesto claro y a tu medida.",
+    ],
+  },
+];
 
 function withRetiredTextReplaced(content: SiteContent, locale: Locale): SiteContent {
-  if (!RETIRED_PROCESS_CTA.has(content.process?.ctaTitle)) return content;
-  return { ...content, process: { ...content.process, ctaTitle: staticContent[locale].process.ctaTitle } };
+  let out = content;
+  for (const { section, field, old } of RETIRED) {
+    const current = (out[section] as Record<string, unknown> | undefined)?.[field];
+    if (typeof current === "string" && old.includes(current)) {
+      const fresh = (staticContent[locale][section] as Record<string, unknown>)[field];
+      out = { ...out, [section]: { ...out[section], [field]: fresh } } as SiteContent;
+    }
+  }
+  return out;
 }
