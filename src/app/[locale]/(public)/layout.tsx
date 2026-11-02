@@ -8,6 +8,10 @@ import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { entityGraph } from "@/lib/entity";
 import styles from "./layout.module.css";
 
+// Pages are pre-built and cached, then refreshed at most once an hour, so
+// scheduled articles appear on time without rebuilding on every visit.
+export const revalidate = 3600;
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }

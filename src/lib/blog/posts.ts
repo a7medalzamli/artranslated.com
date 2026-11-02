@@ -1,5 +1,7 @@
 import "server-only";
 import { createClient } from "@/lib/supabase/server";
+import { createClient as createSupabaseClient } from "@supabase/supabase-js";
+import { getSupabaseAnonKey, getSupabaseUrl } from "@/lib/supabase/env";
 import type { Database } from "@/lib/supabase/database.types";
 import { codePosts } from "@/content/blogPosts";
 import type { Locale } from "@/i18n";
@@ -45,7 +47,7 @@ export async function getPublishedPosts(category?: string, locale = "en"): Promi
 }
 
 async function getDbPublishedPosts(category?: string): Promise<Post[]> {
-  const supabase = await createClient();
+  const supabase = publicClient();
   let query = supabase
     .from("posts")
     .select("*")
@@ -65,7 +67,7 @@ async function getDbPublishedPosts(category?: string): Promise<Post[]> {
 export async function getPublishedPostBySlug(slug: string, locale = "en"): Promise<Post | null> {
   const fromCode = codePostsFor(locale).find((p) => p.slug === slug);
   if (fromCode) return fromCode;
-  const supabase = await createClient();
+  const supabase = publicClient();
   const { data, error } = await supabase
     .from("posts")
     .select("*")
@@ -108,5 +110,16 @@ export function publishedLocalesFor(slug: string, allLocales: readonly string[])
   return allLocales.filter((l) => {
     const text = post.text[l as Locale];
     return text?.approved === true && Date.parse(text.publishedAt ?? post.publishedAt) <= now;
+  });
+}
+
+/**
+ * Cookie-free client for public reads. Reading cookies would force every page
+ * that lists articles to be rebuilt on each visit (2–3 s); without them the
+ * pages are pre-built and cached. Published posts are readable anonymously.
+ */
+function publicClient() {
+  return createSupabaseClient<Database>(getSupabaseUrl(), getSupabaseAnonKey(), {
+    auth: { persistSession: false },
   });
 }
