@@ -58,7 +58,7 @@ export async function RelatedGuides({
               <span className={styles.title}>{post.title}</span>
               {post.excerpt && <span className={styles.excerpt}>{post.excerpt}</span>}
               <span className={styles.more}>
-                {t.read} <span aria-hidden="true">{locale === "ar" ? "←" : "→"}</span>
+                {t.read}
               </span>
             </Link>
           </li>

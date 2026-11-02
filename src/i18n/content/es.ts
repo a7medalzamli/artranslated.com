@@ -384,7 +384,7 @@ const es: SiteContent = {
     nda: "Quiero firmar un acuerdo de confidencialidad antes de compartir archivos.",
     sending: "Enviando…",
     send: "Enviar solicitud",
-    pairs: ["Inglés → Árabe", "Francés → Árabe", "Español → Árabe", "Árabe → Inglés"],
+    pairs: ["Inglés al árabe", "Francés al árabe", "Español al árabe", "Árabe al inglés"],
   },
   cookie: {
     text: "Este sitio utiliza cookies de analítica (Google Analytics) para entender cómo se usa. Solo se instalan si las aceptas. Consulta la",

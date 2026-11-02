@@ -113,7 +113,7 @@ export function RelatedServices({
             <li key={key}>
               <Link href={l.href} className={styles.card}>
                 <span className={styles.title}>
-                  {l.title} <span aria-hidden="true">{locale === "ar" ? "←" : "→"}</span>
+                  {l.title}
                 </span>
                 <span className={styles.text}>{l.text}</span>
               </Link>

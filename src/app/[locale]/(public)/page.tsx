@@ -197,7 +197,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 <span className={styles.audienceLabel}>{card.label}</span>
                 <span className={styles.audienceText}>{card.text}</span>
                 <span className={styles.audienceCta}>
-                  {card.cta} <span aria-hidden="true">{loc === "ar" ? "←" : "→"}</span>
+                  {card.cta}
                 </span>
               </Link>
             ))}

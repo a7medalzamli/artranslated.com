@@ -40,10 +40,10 @@ export const reviews: Review[] = [
       es: "Un traductor profesional y fiable.",
     },
     tag: {
-      en: "French → Arabic · Accounting",
+      en: "French to Arabic · Accounting",
       ar: "من الفرنسية إلى العربية · محاسبة",
-      fr: "Français → arabe · Comptabilité",
-      es: "Francés → árabe · Contabilidad",
+      fr: "Français vers l’arabe · Comptabilité",
+      es: "Francés al árabe · Contabilidad",
     },
   },
   {
@@ -56,7 +56,7 @@ export const reviews: Review[] = [
       fr: "Un traducteur consciencieux, doté d’une vaste expérience, de solides compétences et d’une large connaissance des langues. Vous pouvez compter sur lui sans hésiter.",
       es: "Un traductor diligente, con amplia experiencia, grandes habilidades y un amplio conocimiento de idiomas. Sin duda, puedes confiar en él.",
     },
-    tag: { en: "Spanish → Arabic", ar: "من الإسبانية إلى العربية", fr: "Espagnol → arabe", es: "Español → árabe" },
+    tag: { en: "Spanish to Arabic", ar: "من الإسبانية إلى العربية", fr: "Espagnol vers l’arabe", es: "Español al árabe" },
   },
 ];
 

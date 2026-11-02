@@ -386,7 +386,7 @@ const en = {
     nda: "I'd like an NDA signed before I share files.",
     sending: "Sending…",
     send: "Send request",
-    pairs: ["English → Arabic", "French → Arabic", "Spanish → Arabic", "Arabic → English"],
+    pairs: ["English to Arabic", "French to Arabic", "Spanish to Arabic", "Arabic to English"],
   },
   cookie: {
     text: "This website uses analytics cookies (Google Analytics) to understand how the site is used. They are only set if you accept. See the",

@@ -34,11 +34,11 @@ export function Faq({ title, items, tinted = false }: { title: string; items: Fa
               {it.link &&
                 (it.link.href.startsWith("/") ? (
                   <LocaleLink href={it.link.href} className={styles.link}>
-                    {it.link.label} →
+                    {it.link.label}
                   </LocaleLink>
                 ) : (
                   <a href={it.link.href} className={styles.link} target="_blank" rel="noopener noreferrer">
-                    {it.link.label} ↗
+                    {it.link.label}
                   </a>
                 ))}
             </div>

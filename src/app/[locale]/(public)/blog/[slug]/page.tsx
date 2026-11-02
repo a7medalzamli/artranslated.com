@@ -147,7 +147,7 @@ export default async function BlogPostPage({
           <p className={styles.pillar}>
             <span>{PILLAR_LEAD[locale as Locale] ?? PILLAR_LEAD.en}</span>{" "}
             <Link href={cluster.pillar}>
-              {cluster.label[locale as Locale] ?? cluster.label.en} <span aria-hidden="true">{locale === "ar" ? "←" : "→"}</span>
+              {cluster.label[locale as Locale] ?? cluster.label.en}
             </Link>
           </p>
         )}

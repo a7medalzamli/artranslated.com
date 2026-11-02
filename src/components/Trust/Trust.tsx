@@ -15,7 +15,7 @@ export function TrustStrip({ locale, tinted = false }: { locale: string; tinted?
           <li key={item.title} className={styles.item}>
             {item.href ? (
               <a href={item.href} target="_blank" rel="noopener noreferrer" className={styles.itemTitle}>
-                {item.title} <span aria-hidden="true">↗</span>
+                {item.title}
               </a>
             ) : (
               <span className={styles.itemTitle}>{item.title}</span>

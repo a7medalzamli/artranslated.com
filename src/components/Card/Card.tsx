@@ -39,7 +39,7 @@ export function Card({ title, children, href, linkLabel, image }: CardProps) {
       <div className={styles.body}>{children}</div>
       {href && linkLabel && (
         <Link href={href} className={styles.link}>
-          {linkLabel} <span aria-hidden="true">&rarr;</span>
+          {linkLabel}
         </Link>
       )}
     </div>

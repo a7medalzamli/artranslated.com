@@ -53,7 +53,7 @@ export type HomeContent = z.infer<typeof homeContentSchema>;
 /** Current site text — used until the admin saves edits, and as a safety net. */
 export const defaultHomeContent: HomeContent = {
   hero: {
-    label: "English · French · Spanish → Arabic",
+    label: "English, French & Spanish to Arabic",
     title: "Precise Arabic translation agencies and companies can rely on",
     lead: "Technical, legal, financial, healthcare and audiovisual specializations — delivered with a full Translation–Editing–Proofreading workflow and SDL Trados terminology control.",
   },

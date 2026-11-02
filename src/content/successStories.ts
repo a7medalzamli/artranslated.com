@@ -18,7 +18,7 @@ export const successStories: SuccessStory[] = [
   {
     id: "environmental-manual",
     title: "Environmental engineering manual localization",
-    languagePair: "English → Arabic",
+    languagePair: "English to Arabic",
     scope:
       "A multinational infrastructure firm required the localization of a 50,000-word environmental engineering manual from English into Arabic.",
     challenge:
@@ -31,7 +31,7 @@ export const successStories: SuccessStory[] = [
   {
     id: "audiovisual-dubbing",
     title: "Audiovisual & dubbing — thriller series",
-    languagePair: "Spanish → Arabic",
+    languagePair: "Spanish to Arabic",
     scope:
       "A major European localization agency required translation and dubbing adaptation from Spanish into Arabic for a 10-episode thriller series destined for a global streaming platform.",
     challenge:
@@ -44,7 +44,7 @@ export const successStories: SuccessStory[] = [
   {
     id: "marketing-ai-annotation",
     title: "Digital marketing & AI data annotation",
-    languagePair: "English & French → Arabic",
+    languagePair: "English & French to Arabic",
     scope:
       "A global technology company needed to localize their digital product interface and optimize their machine learning outputs for the MENA region, translating from English and French into Arabic.",
     challenge:

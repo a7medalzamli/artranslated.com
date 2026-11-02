@@ -316,7 +316,7 @@ const markets: Record<Locale, InfoPage> = {
 const frenchToArabic: Record<Locale, InfoPage> = {
   en: {
     title: "French to Arabic Translation",
-    crumb: "French → Arabic",
+    crumb: "French to Arabic",
     seoTitle: "French to Arabic Translation by a Native Arabic Translator",
     description:
       "Direct translation from French into Arabic, without going through English, for companies of every size and translation agencies across the French-speaking world.",
@@ -367,7 +367,7 @@ const frenchToArabic: Record<Locale, InfoPage> = {
   },
   ar: {
     title: "الترجمة من الفرنسية إلى العربية",
-    crumb: "الفرنسية ← العربية",
+    crumb: "من الفرنسية إلى العربية",
     seoTitle: "الترجمة من الفرنسية إلى العربية على يد مترجم لغته الأم العربية",
     description:
       "ترجمة مباشرة من الفرنسية إلى العربية، دون المرور بالإنجليزية، للشركات بمختلف أحجامها ولوكالات الترجمة (LSPs) في العالم الناطق بالفرنسية.",
@@ -418,7 +418,7 @@ const frenchToArabic: Record<Locale, InfoPage> = {
   },
   fr: {
     title: "Traduction du français vers l’arabe",
-    crumb: "Français → arabe",
+    crumb: "Français vers l’arabe",
     seoTitle: "Traduction français-arabe par un traducteur de langue maternelle arabe",
     description:
       "Traduction directe du français vers l’arabe, sans passer par l’anglais, pour les entreprises de toutes tailles et les agences de traduction de tout l’espace francophone.",
@@ -469,7 +469,7 @@ const frenchToArabic: Record<Locale, InfoPage> = {
   },
   es: {
     title: "Traducción del francés al árabe",
-    crumb: "Francés → árabe",
+    crumb: "Francés al árabe",
     seoTitle: "Traducción del francés al árabe por un traductor nativo de árabe",
     description:
       "Traducción directa del francés al árabe, sin pasar por el inglés, para empresas de todos los tamaños y agencias de traducción de todo el mundo francófono.",
@@ -527,7 +527,7 @@ const frenchToArabic: Record<Locale, InfoPage> = {
 const spanishToArabic: Record<Locale, InfoPage> = {
   en: {
     title: "Spanish to Arabic Translation",
-    crumb: "Spanish → Arabic",
+    crumb: "Spanish to Arabic",
     seoTitle: "Spanish to Arabic Translation by a Native Arabic Translator",
     description:
       "Direct translation from Spanish into Arabic, without going through English, for companies of every size and translation agencies across Spain, Latin America and the Spanish-speaking world.",
@@ -578,7 +578,7 @@ const spanishToArabic: Record<Locale, InfoPage> = {
   },
   ar: {
     title: "الترجمة من الإسبانية إلى العربية",
-    crumb: "الإسبانية ← العربية",
+    crumb: "من الإسبانية إلى العربية",
     seoTitle: "الترجمة من الإسبانية إلى العربية على يد مترجم لغته الأم العربية",
     description:
       "ترجمة مباشرة من الإسبانية إلى العربية، دون المرور بالإنجليزية، للشركات بمختلف أحجامها ولوكالات الترجمة (LSPs) في إسبانيا وأمريكا اللاتينية والعالم الناطق بالإسبانية.",
@@ -629,7 +629,7 @@ const spanishToArabic: Record<Locale, InfoPage> = {
   },
   fr: {
     title: "Traduction de l’espagnol vers l’arabe",
-    crumb: "Espagnol → arabe",
+    crumb: "Espagnol vers l’arabe",
     seoTitle: "Traduction espagnol-arabe par un traducteur de langue maternelle arabe",
     description:
       "Traduction directe de l’espagnol vers l’arabe, sans passer par l’anglais, pour les entreprises de toutes tailles et les agences de traduction d’Espagne, d’Amérique latine et du monde hispanophone.",
@@ -680,7 +680,7 @@ const spanishToArabic: Record<Locale, InfoPage> = {
   },
   es: {
     title: "Traducción del español al árabe",
-    crumb: "Español → árabe",
+    crumb: "Español al árabe",
     seoTitle: "Traducción español-árabe por un traductor nativo de árabe",
     description:
       "Traducción directa del español al árabe, sin pasar por el inglés, para empresas de todos los tamaños y agencias de traducción de España, Latinoamérica y todo el mundo hispanohablante.",
