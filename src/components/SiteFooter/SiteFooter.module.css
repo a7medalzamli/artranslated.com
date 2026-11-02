@@ -82,6 +82,18 @@
   height: auto;
 }
 
+/* When the badges wrap onto several lines (tablets and phones), center them all
+   so Alconost and the other three line up the same way. */
+@media (max-width: 72em) {
+  .credBadges {
+    justify-content: center;
+  }
+
+  .alconost {
+    margin-inline-end: 0;
+  }
+}
+
 .credImg {
   display: block;
   width: 250px;
