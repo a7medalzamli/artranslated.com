@@ -123,7 +123,7 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
             className={styles.credImg}
           />
           <Image
-            src="/badges/arta-badge.svg"
+            src="/badges/arta-badge.png"
             alt="ArTA accredited translator — Arab Translators Association (جمعية المترجمين العرب)"
             width={1600}
             height={528}
