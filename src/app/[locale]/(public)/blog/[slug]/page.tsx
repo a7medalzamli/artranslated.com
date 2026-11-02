@@ -28,7 +28,11 @@ const PILLAR_LEAD: Record<Locale, string> = {
   es: "Servicio relacionado:",
 };
 
-export const dynamic = "force-dynamic";
+// Articles are built on first visit, then cached and refreshed hourly (see the
+// public layout). None are pre-built, so scheduled articles never leak early.
+export function generateStaticParams() {
+  return [];
+}
 
 export async function generateMetadata({
   params,
