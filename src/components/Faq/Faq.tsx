@@ -20,7 +20,7 @@ export function Faq({ title, items, tinted = false }: { title: string; items: Fa
   };
 
   return (
-    <Section title={title} tinted={tinted} narrow>
+    <Section title={title} tinted={tinted}>
       <JsonLd data={ld} />
       <div className={styles.list}>
         {items.map((it, i) => (
