@@ -28,6 +28,7 @@ export const routes = {
   confidentiality: "/confidentiality",
   blog: "/blog",
   contact: "/contact",
+  wordCounter: "/tools/word-counter",
   terms: "/terms",
   privacy: "/privacy",
 } as const;

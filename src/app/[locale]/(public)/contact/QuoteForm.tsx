@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useEffect } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { submitQuote, type QuoteState } from "./actions";
 import styles from "./contact.module.css";
@@ -46,6 +46,16 @@ export function QuoteForm({
   serviceOptions: string[];
 }) {
   const [state, formAction, pending] = useActionState(submitQuote, initialState);
+  const volumeRef = useRef<HTMLInputElement>(null);
+
+  // Arriving from the word counter (?words=1234): fill in the word count.
+  useEffect(() => {
+    const w = new URLSearchParams(window.location.search).get("words");
+    const input = volumeRef.current;
+    if (!w || !/^\d{1,7}$/.test(w) || !input || input.value) return;
+    const unit: Record<string, string> = { en: "words", ar: "كلمة", fr: "mots", es: "palabras" };
+    input.value = `${Number(w).toLocaleString(locale === "ar" ? "en" : locale)} ${unit[locale] ?? unit.en}`;
+  }, [locale]);
 
   // Count a successful request as a lead in Google Analytics (if consented).
   useEffect(() => {
@@ -122,7 +132,7 @@ export function QuoteForm({
       <div className={styles.row}>
         <label className={styles.field}>
           <span>{labels.volume}</span>
-          <input name="volume" placeholder={labels.volumePlaceholder} />
+          <input name="volume" ref={volumeRef} placeholder={labels.volumePlaceholder} />
         </label>
 
         <label className={styles.field}>

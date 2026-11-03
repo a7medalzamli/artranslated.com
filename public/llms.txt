@@ -54,6 +54,7 @@ Last updated: 2026-11-02
 - [How it works](https://www.artranslated.com/en/process): TEP workflow, quality assurance and tools
 - [Confidentiality](https://www.artranslated.com/en/confidentiality): NDAs and secure file handling
 - [Contact and quotes](https://www.artranslated.com/en/contact)
+- [Free word counter and Arabic translation time estimator](https://www.artranslated.com/en/tools/word-counter) (also in Spanish, French and Arabic: /es/, /fr/, /ar/)
 
 - [Arabic-speaking markets](https://www.artranslated.com/en/arabic-markets): the Gulf, the Levant, Egypt, the Maghreb and Iraq; which Arabic each market reads and how to reach it
 - [French to Arabic translation](https://www.artranslated.com/en/french-to-arabic): direct translation from French, with no English relay, for the French-speaking world

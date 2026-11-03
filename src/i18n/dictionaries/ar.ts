@@ -42,6 +42,7 @@ const ar: Dictionary = {
     forBusinesses: "للشركات",
     forAgencies: "للوكالات",
     arabicMarkets: "الأسواق العربية",
+    wordCounter: "عدّاد الكلمات المجاني",
     form: {
       name: "اسمك",
       email: "بريدك الإلكتروني",

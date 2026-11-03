@@ -36,6 +36,7 @@ const fr: Dictionary = {
     forBusinesses: "Pour les entreprises",
     forAgencies: "Pour les agences",
     arabicMarkets: "Marchés arabophones",
+    wordCounter: "Compteur de mots gratuit",
     form: {
       name: "Votre nom",
       email: "Votre e-mail",

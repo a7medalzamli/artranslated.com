@@ -40,6 +40,7 @@ const en = {
     forBusinesses: "For businesses",
     forAgencies: "For agencies",
     arabicMarkets: "Arabic markets",
+    wordCounter: "Free word counter",
     form: {
       name: "Your name",
       email: "Your email",
