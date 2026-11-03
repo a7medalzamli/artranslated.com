@@ -33,7 +33,7 @@ const en: LegalContent = {
         },
         {
           lead: "Technical Data:",
-          text: "Basic website usage data (such as pages visited, approximate location, device and browser type) collected through Google Analytics and Vercel Analytics. These tools, and the cookies Google Analytics sets, are used only if you accept them in the cookie banner. Google processes this data under its own privacy policy (policies.google.com/privacy).",
+          text: "Basic website usage data (such as pages visited, approximate location, device and browser type) collected through Google Analytics and Vercel Analytics. Analytics cookies are set, and Vercel Analytics runs, only if you accept them in the cookie banner. If you decline, Google Analytics stores no cookies and receives only anonymous, cookie-free signals (without any identifier for you or your device), which Google uses to estimate overall visits. Google processes this data under its own privacy policy (policies.google.com/privacy).",
         },
       ],
     },
@@ -122,7 +122,7 @@ const ar: LegalContent = {
         },
         {
           lead: "البيانات التقنية:",
-          text: "بيانات أساسية عن استخدام الموقع (مثل الصفحات التي تمت زيارتها، والموقع التقريبي، ونوع الجهاز والمتصفح) تُجمع عبر Google Analytics وVercel Analytics. ولا تُستخدم هذه الأدوات، ولا ملفات تعريف الارتباط التي يضعها Google Analytics، إلا إذا وافقت عليها في شريط ملفات تعريف الارتباط. وتعالج Google هذه البيانات وفق سياسة الخصوصية الخاصة بها (policies.google.com/privacy).",
+          text: "بيانات أساسية عن استخدام الموقع (مثل الصفحات التي تمت زيارتها، والموقع التقريبي، ونوع الجهاز والمتصفح) تُجمع عبر Google Analytics وVercel Analytics. ولا تُوضع ملفات تعريف الارتباط (Cookies) الخاصة بالتحليلات، ولا يعمل Vercel Analytics، إلا إذا وافقت عليها في شريط ملفات تعريف الارتباط. وإن رفضت، فلا يخزّن Google Analytics أي ملفات تعريف ارتباط، ولا يتلقى إلا إشارات مجهولة الهوية بلا ملفات تعريف ارتباط (دون أي معرّف لك أو لجهازك)، تستخدمها Google لتقدير إجمالي الزيارات. وتعالج Google هذه البيانات وفق سياسة الخصوصية الخاصة بها (policies.google.com/privacy).",
         },
       ],
     },
@@ -207,7 +207,7 @@ const fr: LegalContent = {
         },
         {
           lead: "Données techniques :",
-          text: "des données de base sur l’utilisation du site (pages consultées, localisation approximative, type d’appareil et de navigateur) collectées au moyen de Google Analytics et de Vercel Analytics. Ces outils, ainsi que les cookies déposés par Google Analytics, ne sont utilisés que si vous les acceptez dans le bandeau cookies. Google traite ces données conformément à sa propre politique de confidentialité (policies.google.com/privacy).",
+          text: "des données de base sur l’utilisation du site (pages consultées, localisation approximative, type d’appareil et de navigateur) collectées au moyen de Google Analytics et de Vercel Analytics. Les cookies de mesure d’audience ne sont déposés, et Vercel Analytics ne fonctionne, que si vous les acceptez dans le bandeau cookies. Si vous refusez, Google Analytics ne stocke aucun cookie et ne reçoit que des signaux anonymes, sans cookie (sans aucun identifiant vous concernant ou concernant votre appareil), que Google utilise pour estimer la fréquentation globale. Google traite ces données conformément à sa propre politique de confidentialité (policies.google.com/privacy).",
         },
       ],
     },
@@ -296,7 +296,7 @@ const es: LegalContent = {
         },
         {
           lead: "Datos técnicos:",
-          text: "datos básicos de uso del sitio web (como las páginas visitadas, la ubicación aproximada y el tipo de dispositivo y navegador) recopilados mediante Google Analytics y Vercel Analytics. Estas herramientas, y las cookies que instala Google Analytics, solo se utilizan si las acepta en el aviso de cookies. Google trata estos datos conforme a su propia política de privacidad (policies.google.com/privacy).",
+          text: "datos básicos de uso del sitio web (como las páginas visitadas, la ubicación aproximada y el tipo de dispositivo y navegador) recopilados mediante Google Analytics y Vercel Analytics. Las cookies de analítica solo se instalan, y Vercel Analytics solo funciona, si las acepta en el aviso de cookies. Si las rechaza, Google Analytics no guarda ninguna cookie y solo recibe señales anónimas sin cookies (sin ningún identificador suyo ni de su dispositivo), que Google utiliza para estimar el total de visitas. Google trata estos datos conforme a su propia política de privacidad (policies.google.com/privacy).",
         },
       ],
     },

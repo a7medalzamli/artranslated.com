@@ -11,8 +11,26 @@ import styles from "./CookieConsent.module.css";
 
 const KEY = "cookie-consent";
 
-// Google Analytics 4 measurement ID. Loaded only after the visitor accepts cookies.
+// Google Analytics 4 measurement ID.
 const GA_ID = "G-1HGXTWKZGJ";
+
+/**
+ * Google Consent Mode. Analytics loads on every public page but starts with
+ * all storage denied, so no cookies are set. If the visitor accepted (now or
+ * on an earlier visit), analytics cookies are allowed. Without consent Google
+ * only receives anonymous, cookie-free signals that it uses to estimate visits.
+ */
+const GA_BOOT = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var c=null;try{c=localStorage.getItem('${KEY}')}catch(e){}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:c==='accepted'?'granted':'denied'});
+gtag('js',new Date());gtag('config','${GA_ID}');`;
+
+function updateConsent(value: "accepted" | "declined") {
+  const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+  if (typeof gtag === "function") {
+    gtag("consent", "update", { analytics_storage: value === "accepted" ? "granted" : "denied" });
+  }
+}
 
 const COOKIE_LABELS = {
   en: {
@@ -73,6 +91,7 @@ function setConsent(value: "accepted" | "declined") {
   } catch {
     /* storage blocked */
   }
+  updateConsent(value);
   emit();
 }
 
@@ -80,10 +99,10 @@ export function CookieConsent() {
   const snapshot = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
   const pathname = usePathname();
 
-  // After consent, count clicks on email / phone / WhatsApp / Telegram links
-  // anywhere on the site as "contact" events in Google Analytics.
+  // Count clicks on email / phone / WhatsApp / Telegram links anywhere on the
+  // site as "contact" events (cookie-free unless the visitor accepted).
   useEffect(() => {
-    if (snapshot !== "accepted") return;
+    if (snapshot === "ssr") return;
     const onClick = (e: MouseEvent) => {
       const a = (e.target as Element | null)?.closest?.("a[href]");
       if (!a) return;
@@ -112,18 +131,18 @@ export function CookieConsent() {
 
   return (
     <>
-      {snapshot === "accepted" && (
+      {snapshot !== "ssr" && (
         <>
-          <Analytics />
+          <Script id="ga4" strategy="afterInteractive">
+            {GA_BOOT}
+          </Script>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
             strategy="afterInteractive"
           />
-          <Script id="ga4" strategy="afterInteractive">
-            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
-          </Script>
         </>
       )}
+      {snapshot === "accepted" && <Analytics />}
       {snapshot === "none" && (
         <div className={styles.banner} role="region" aria-label="Cookie consent">
           <p className={styles.text}>
