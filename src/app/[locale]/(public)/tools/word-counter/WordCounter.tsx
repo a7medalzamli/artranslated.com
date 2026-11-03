@@ -19,7 +19,16 @@ function countWords(text: string, locale: string): number {
   if (typeof Intl !== "undefined" && "Segmenter" in Intl) {
     const seg = new Intl.Segmenter(locale, { granularity: "word" });
     let n = 0;
-    for (const s of seg.segment(text)) if (s.isWordLike) n++;
+    // Words joined by a hyphen or apostrophe ("well-known", "l'arabe") count once.
+    let prev: "word" | "joiner" | "other" = "other";
+    for (const s of seg.segment(text)) {
+      if (s.isWordLike) {
+        if (prev !== "joiner") n++;
+        prev = "word";
+      } else {
+        prev = prev === "word" && /^[-‐‑'’]$/.test(s.segment) ? "joiner" : "other";
+      }
+    }
     return n;
   }
   return text.trim().split(/\s+/).length;
