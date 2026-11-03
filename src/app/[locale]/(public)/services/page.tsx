@@ -62,7 +62,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         <Container>
           <h1 className={styles.heroTitle}>{overview.pageTitle}</h1>
           <div className={styles.banner}>
-            <Image src="/images/photos/services-hero.jpg" alt="" fill priority sizes="100vw" />
+            <Image src="/images/photos/services-hero.jpg" alt={overview.pageTitle} fill priority sizes="100vw" />
           </div>
         </Container>
       </header>
@@ -79,7 +79,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
               <div className={styles.media}>
                 <Image
                   src={serviceImages[s.slug]}
-                  alt=""
+                  alt={s.name}
                   fill
                   sizes="(min-width: 60em) 45vw, 100vw"
                 />

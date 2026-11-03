@@ -238,7 +238,7 @@ const markets: Record<Locale, InfoPage> = {
     crumb: "Mercados árabes",
     seoTitle: "Mercados de habla árabe: Golfo, Levante, Egipto, Magreb e Irak",
     description:
-      "El árabe lo hablan más de 400 millones de personas en más de 20 países. Un panorama de los principales mercados, el árabe que lee cada uno y cómo llegar a ellos.",
+      "Más de 400 millones de personas hablan árabe en más de 20 países. Los principales mercados, el árabe que lee cada uno y cómo llegar a ellos.",
     intro: [
       "El mundo árabe no es un único mercado. Los clientes de Riad, El Cairo, Beirut y Casablanca comparten una lengua escrita, pero se diferencian en sus dialectos, sus idiomas de negocios, sus hábitos de compra y sus referencias culturales. Acertar con el idioma en cada mercado es el primer paso para ganarse su confianza.",
       "Ayudo a empresas de todos los tamaños, desde startups hasta multinacionales, a entrar en los mercados de habla árabe con traducción, localización y marketing digital adaptados a cada público, traduciendo directamente del inglés, el francés y el español.",

@@ -154,7 +154,7 @@ export default async function ServicePage({ params }: { params: Params }) {
           <div className={styles.introMedia}>
             <Image
               src={serviceImages[service]}
-              alt=""
+              alt={page.title}
               fill
               sizes="(min-width: 60em) 40vw, 100vw"
               priority

@@ -98,7 +98,7 @@ export default async function SaasLocalizationPage({ params }: { params: Promise
             ))}
           </div>
           <div className={styles.introMedia}>
-            <Image src={IMAGE} alt="" fill sizes="(min-width: 60em) 40vw, 100vw" priority />
+            <Image src={IMAGE} alt={p.title} fill sizes="(min-width: 60em) 40vw, 100vw" priority />
           </div>
         </div>
       </Section>

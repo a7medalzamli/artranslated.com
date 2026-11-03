@@ -13,10 +13,10 @@ type CardProps = {
   image?: string;
 };
 
-function CardImage({ src }: { src: string }) {
+function CardImage({ src, alt }: { src: string; alt: string }) {
   return (
     <div className={styles.media}>
-      <Image src={src} alt="" fill sizes="(min-width: 60em) 33vw, (min-width: 40em) 50vw, 100vw" />
+      <Image src={src} alt={alt} fill sizes="(min-width: 60em) 33vw, (min-width: 40em) 50vw, 100vw" />
     </div>
   );
 }
@@ -25,7 +25,7 @@ export function Card({ title, children, href, linkLabel, image }: CardProps) {
   if (href && !linkLabel) {
     return (
       <Link href={href} className={`${styles.card} ${styles.clickable}`}>
-        {image && <CardImage src={image} />}
+        {image && <CardImage src={image} alt={title} />}
         <h3 className={styles.title}>{title}</h3>
         <div className={styles.body}>{children}</div>
       </Link>
@@ -34,7 +34,7 @@ export function Card({ title, children, href, linkLabel, image }: CardProps) {
 
   return (
     <div className={styles.card}>
-      {image && <CardImage src={image} />}
+      {image && <CardImage src={image} alt={title} />}
       <h3 className={styles.title}>{title}</h3>
       <div className={styles.body}>{children}</div>
       {href && linkLabel && (

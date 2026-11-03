@@ -41,7 +41,7 @@ const msaVsDialects: CodePost = {
     en: {
       approved: true,
       title: "Which Arabic should you use? Modern Standard Arabic vs dialects",
-      seoTitle: "MSA vs Arabic Dialects: Which Arabic Should Your Business Use?",
+      seoTitle: "MSA vs Arabic Dialects: Which Arabic for Your Business?",
       excerpt:
         "Modern Standard Arabic, Gulf, Egyptian, Levantine or Maghrebi? A practical guide to choosing the right Arabic for your documents, website, app and marketing.",
       content: `Arabic is spoken by more than 400 million people across more than 20 countries, but it is not one single variety. Before you translate anything, you need to decide **which Arabic** your audience should read. The right choice depends on what you are publishing and who will read it.
@@ -105,7 +105,7 @@ Choosing the right variety is part of every project I take on. If you are unsure
     ar: {
       approved: true,
       title: "الفصحى أم العامية في محتوى علامتك التجارية؟ دليل عملي للمسوّقين العرب",
-      seoTitle: "الفصحى أم العامية في التسويق؟ دليل اختيار لغة علامتك التجارية",
+      seoTitle: "الفصحى أم العامية في التسويق؟ دليل اختيار لغة علامتك",
       excerpt:
         "هل تكتب منشوراتك بالفصحى أم باللهجة؟ وهل يبحث عملاؤك في Google بالكلمات نفسها؟ دليل عملي لاختيار لغة علامتك التجارية في كل قناة.",
       content: `كل مسوّق عربي يواجه السؤال نفسه عاجلًا أو آجلًا: **هل نكتب بالفصحى أم بالعامية؟** والإجابة ليست واحدة لكل المحتوى، بل تختلف حسب القناة والجمهور والهدف.
@@ -155,9 +155,9 @@ Choosing the right variety is part of every project I take on. If you are unsure
     fr: {
       approved: true,
       title: "Arabe standard, darija ou arabe du Golfe : quel arabe pour vos marchés ?",
-      seoTitle: "Arabe standard, darija ou arabe du Golfe : quel arabe choisir ?",
+      seoTitle: "Arabe standard, darija ou du Golfe : quel arabe choisir ?",
       excerpt:
-        "Maghreb ou Moyen-Orient ? Pour une entreprise francophone, le choix de l’arabe dépend du marché visé. Arabe standard, darija, arabe du Golfe : le guide pour décider.",
+        "Maghreb ou Moyen-Orient ? Le choix de l’arabe dépend du marché visé. Arabe standard, darija, arabe du Golfe : le guide pour décider.",
       content: `Pour une entreprise francophone, de France, de Belgique, de Suisse, du Canada ou d’Afrique, « traduire en arabe » n’est pas une décision unique. Viser Casablanca, Alger, Tunis, Le Caire, Dubaï ou Riyad n’implique ni le même public, ni les mêmes habitudes linguistiques. Avant de lancer une traduction, il faut savoir **quel arabe** parler à qui.
 
 ## L’arabe standard moderne, socle commun
@@ -200,9 +200,9 @@ Je traduis vers l’arabe depuis 2014, notamment depuis le français, et j’aid
     es: {
       approved: true,
       title: "¿Existe un «árabe neutro»? Cómo elegir el árabe adecuado si vienes del mundo hispano",
-      seoTitle: "¿Existe un árabe neutro? Árabe estándar y dialectos explicados para hispanohablantes",
+      seoTitle: "¿Existe un árabe neutro? Árabe estándar y dialectos",
       excerpt:
-        "Igual que el español tiene variantes y un «español neutro», el árabe tiene un estándar común y muchos dialectos. Una guía pensada para empresas de España y Latinoamérica.",
+        "El español tiene variantes y un «español neutro»; el árabe, un estándar común y muchos dialectos. Guía para empresas de España y Latinoamérica.",
       content: `Si trabajas en una empresa de España, Latinoamérica o de cualquier mercado hispanohablante, ya conoces el problema: ¿escribimos para México, para Argentina o para España? ¿Usamos «tú», «vos» o «usted»? Muchas marcas resuelven esto con un **español neutro** que entienden todos.
 
 El árabe tiene una situación parecida, pero aún más marcada.
@@ -268,7 +268,7 @@ const glossary: CodePost = {
     en: {
       approved: true,
       title: "Arabic localization glossary: 15 terms explained simply",
-      seoTitle: "Translation & Localization Glossary: MTPE, LQA, TEP, CAT and More",
+      seoTitle: "Translation & Localization Glossary: MTPE, LQA, TEP, CAT",
       excerpt:
         "MTPE, LQA, TEP, CAT tools, translation memory, RTL… The translation industry is full of abbreviations. Here they are, explained in plain language.",
       content: `If you have ever received a quote or a vendor form from a translation agency, you have probably met a wall of abbreviations. This glossary explains the most common terms in plain language, with notes on what they mean for Arabic.
@@ -340,7 +340,7 @@ If a quote or a vendor form uses a term you don’t recognize, [just ask me](/en
     ar: {
       approved: true,
       title: "مصطلحات ستقرؤها في عروض أسعار الترجمة: دليل العميل العربي",
-      seoTitle: "مصطلحات عروض أسعار الترجمة والتوطين: دليل مبسّط للعميل العربي",
+      seoTitle: "مصطلحات عروض أسعار الترجمة: دليل مبسّط للعميل العربي",
       excerpt:
         "تصلك عروض الأسعار والعقود مليئة بمصطلحات مثل TEP وMTPE وTM وLQA؟ هذا الدليل يشرحها بالعربية مع اختصاراتها الإنجليزية، لتعرف بالضبط ما الذي تدفع مقابله.",
       content: `حين تطلب ترجمة موقعك أو تطبيقك أو مستنداتك من مترجم أو وكالة، قد يصلك عرض سعر مليء بمصطلحات واختصارات إنجليزية. ولأن معظم هذه المصطلحات تُستخدم في القطاع كما هي، جمعت لك أهمها مع مقابلها العربي وشرح مبسّط لما يعنيه لك كعميل.
@@ -382,9 +382,9 @@ If a quote or a vendor form uses a term you don’t recognize, [just ask me](/en
     fr: {
       approved: true,
       title: "Comment lire un devis de traduction : les termes à connaître",
-      seoTitle: "Lire un devis de traduction : mots source, TAO, mémoire, révision, LQA",
+      seoTitle: "Lire un devis de traduction : TAO, mémoire, révision, LQA",
       excerpt:
-        "Mots source, répétitions, correspondances, révision, relecture, PAO, post-édition… Les termes qui figurent sur un devis de traduction, expliqués pour les acheteurs.",
+        "Mots source, répétitions, révision, relecture, PAO, post-édition : les termes d’un devis de traduction, expliqués pour les acheteurs.",
       content: `Un devis de traduction peut sembler opaque la première fois qu’on en reçoit un. Lignes séparées pour les « répétitions », mention de « TAO », distinction entre « révision » et « relecture »… Voici les termes que vous croiserez le plus souvent, et ce qu’ils signifient concrètement pour vous.
 
 ## Le volume
@@ -428,9 +428,9 @@ Vérifiez que le devis précise : les langues, le volume, les étapes de qualit�
     es: {
       approved: true,
       title: "Diccionario técnico del árabe para gestores de proyecto y desarrolladores",
-      seoTitle: "Localizar software al árabe: RTL, plurales, números y calendario explicados",
+      seoTitle: "Localizar software al árabe: RTL, plurales y calendario",
       excerpt:
-        "RTL, seis formas de plural, cifras arábigas orientales, calendario hégira… Lo que todo gestor de proyecto o desarrollador debe saber antes de localizar una app al árabe.",
+        "RTL, seis formas de plural, cifras arábigas orientales, calendario hégira: lo que debes saber antes de localizar una app al árabe.",
       content: `Si eres gestor de proyecto, product manager o desarrollador y te toca lanzar una app o una web en árabe, descubrirás que no basta con «traducir los textos». El árabe tiene particularidades técnicas que conviene conocer **antes** de empezar. Este pequeño diccionario reúne las más importantes.
 
 ## RTL (de derecha a izquierda)

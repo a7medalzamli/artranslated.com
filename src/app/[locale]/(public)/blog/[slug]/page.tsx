@@ -17,6 +17,7 @@ import { LocaleLink as Link } from "@/components/LocaleLink/LocaleLink";
 import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
 import { AuthorBox } from "@/components/Trust/Trust";
 import { ids } from "@/lib/entity";
+import { fitTitle } from "@/lib/seoTitle";
 import { clusters } from "@/content/postCategories";
 import styles from "./post.module.css";
 
@@ -47,7 +48,7 @@ export async function generateMetadata({
   const description = post.seo_description || post.excerpt || undefined;
 
   return {
-    title,
+    title: fitTitle(title),
     description,
     alternates: {
       canonical: `/${locale}/blog/${post.slug}`,

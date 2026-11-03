@@ -79,11 +79,11 @@ const en: Record<string, Meta> = {
 const ar: Record<string, Meta> = {
   "": {
     description:
-      "ترجمة وتوطين من الإنجليزية والفرنسية والإسبانية إلى العربية على يد أحمد الزاملي (ProZ Certified PRO): المواقع والبرمجيات (SaaS) والتسويق والمحتوى القانوني والتقني.",
+      "ترجمة وتوطين من الإنجليزية والفرنسية والإسبانية إلى العربية على يد أحمد الزاملي (ProZ Certified PRO): المواقع والبرمجيات (SaaS) والتسويق.",
   },
   "/about": {
     description:
-      "أحمد الزاملي: مترجم ومختص في التوطين إلى العربية منذ 2014، حاصل على ProZ Certified PRO واعتماد جمعية المترجمين العرب (ArTA)، يترجم من الإنجليزية والفرنسية والإسبانية.",
+      "أحمد الزاملي: مترجم ومختص في التوطين إلى العربية منذ 2014، حاصل على ProZ Certified PRO واعتماد جمعية المترجمين العرب (ArTA).",
   },
   "/services": { title: "خدمات الترجمة والتحرير إلى العربية" },
   "/process": { title: "كيف يُنجَز مشروع الترجمة إلى العربية" },
@@ -140,7 +140,7 @@ const ar: Record<string, Meta> = {
 const fr: Record<string, Meta> = {
   "": {
     description:
-      "Traduction et localisation de l’anglais, du français et de l’espagnol vers l’arabe par Ahmed Alzamli, ProZ Certified PRO : sites web, SaaS, marketing, juridique.",
+      "Traduction et localisation de l’anglais, du français et de l’espagnol vers l’arabe par Ahmed Alzamli, ProZ Certified PRO : sites web, SaaS, marketing.",
   },
   "/about": {
     description:

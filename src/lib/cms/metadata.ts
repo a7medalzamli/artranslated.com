@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { locales } from "@/i18n/config";
 import { siteUrl } from "@/lib/seo";
 import { getMetaOverride } from "@/content/metaOverrides";
+import { fitTitle } from "@/lib/seoTitle";
 
 /** Open Graph expects language_TERRITORY codes. */
 const ogLocales: Record<string, string> = { en: "en_US", ar: "ar_AR", fr: "fr_FR", es: "es_ES" };
@@ -40,7 +41,7 @@ export function buildCmsMetadata(opts: {
   };
 
   return {
-    title,
+    title: fitTitle(title),
     description,
     alternates: { canonical, languages },
     openGraph: {

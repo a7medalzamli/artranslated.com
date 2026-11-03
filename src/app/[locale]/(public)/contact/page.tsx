@@ -55,7 +55,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         <div className={styles.introMedia}>
           <Image
             src="/images/photos/contact.jpg"
-            alt=""
+            alt={`${c.title} – ${site.name}`}
             fill
             sizes="(min-width: 75em) 1200px, 100vw"
             priority

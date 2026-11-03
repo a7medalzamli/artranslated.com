@@ -38,12 +38,14 @@ export function pickLocale(all: Record<Locale, LegalContent>, locale: string): L
 }
 
 export function legalMetadata(path: string, locale: string, t: LegalContent): Metadata {
-  return buildCmsMetadata({
+  const meta = buildCmsMetadata({
     path,
     locale,
     defaultTitle: t.title,
     defaultDescription: t.description,
   });
+  // Legal pages stay reachable but are kept out of search results.
+  return { ...meta, robots: { index: false, follow: true } };
 }
 
 function Text({ item }: { item: LegalItem }) {

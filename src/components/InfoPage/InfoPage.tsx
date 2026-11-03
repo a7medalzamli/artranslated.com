@@ -134,7 +134,7 @@ export async function InfoPageView({
             ))}
           </div>
           <div className={serviceStyles.introMedia}>
-            <Image src={image} alt="" fill sizes="(min-width: 60em) 40vw, 100vw" priority />
+            <Image src={image} alt={p.title} fill sizes="(min-width: 60em) 40vw, 100vw" priority />
           </div>
         </div>
       </Section>
