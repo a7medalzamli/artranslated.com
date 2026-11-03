@@ -13,6 +13,8 @@ const KEY = "cookie-consent";
 
 // Google Analytics 4 measurement ID.
 const GA_ID = "G-1HGXTWKZGJ";
+// Microsoft Clarity project ID.
+const CLARITY_ID = "z7usn1ltby";
 
 /**
  * Google Consent Mode. Analytics loads on every public page but starts with
@@ -34,25 +36,25 @@ function updateConsent(value: "accepted" | "declined") {
 
 const COOKIE_LABELS = {
   en: {
-    text: "This website uses analytics cookies (Google Analytics) to understand how the site is used. They are only set if you accept. See the",
+    text: "This website uses analytics cookies (Google Analytics, Microsoft Clarity) to understand how the site is used. They are only set if you accept. See the",
     privacy: "privacy policy",
     decline: "Decline",
     accept: "Accept",
   },
   ar: {
-    text: "يستخدم هذا الموقع ملفات تعريف ارتباط تحليلية (Google Analytics) لفهم كيفية استخدام الموقع، ولا تُفعَّل إلا بعد موافقتك. اطّلع على",
+    text: "يستخدم هذا الموقع ملفات تعريف ارتباط تحليلية (Google Analytics, Microsoft Clarity) لفهم كيفية استخدام الموقع، ولا تُفعَّل إلا بعد موافقتك. اطّلع على",
     privacy: "سياسة الخصوصية",
     decline: "رفض",
     accept: "قبول",
   },
   fr: {
-    text: "Ce site utilise des cookies de mesure d’audience (Google Analytics) pour comprendre son utilisation. Ils ne sont déposés qu’avec votre accord. Consultez la",
+    text: "Ce site utilise des cookies de mesure d’audience (Google Analytics, Microsoft Clarity) pour comprendre son utilisation. Ils ne sont déposés qu’avec votre accord. Consultez la",
     privacy: "politique de confidentialité",
     decline: "Refuser",
     accept: "Accepter",
   },
   es: {
-    text: "Este sitio utiliza cookies de analítica (Google Analytics) para entender cómo se usa. Solo se instalan si las aceptas. Consulta la",
+    text: "Este sitio utiliza cookies de analítica (Google Analytics, Microsoft Clarity) para entender cómo se usa. Solo se instalan si las aceptas. Consulta la",
     privacy: "política de privacidad",
     decline: "Rechazar",
     accept: "Aceptar",
@@ -142,7 +144,15 @@ export function CookieConsent() {
           />
         </>
       )}
-      {snapshot === "accepted" && <Analytics />}
+      {snapshot === "accepted" && (
+        <>
+          <Analytics />
+          {/* Microsoft Clarity (heatmaps and session recordings), only after consent. */}
+          <Script id="clarity" strategy="afterInteractive">
+            {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${CLARITY_ID}");window.clarity("consent");`}
+          </Script>
+        </>
+      )}
       {snapshot === "none" && (
         <div className={styles.banner} role="region" aria-label="Cookie consent">
           <p className={styles.text}>
