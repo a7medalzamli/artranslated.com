@@ -11,7 +11,7 @@ import { getLocalizedHome } from "@/lib/content/getLocalizedHome";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getHomeSummary, getSeoText } from "@/content/seoText";
-import type { Locale } from "@/i18n";
+import { getDictionary, type Locale } from "@/i18n";
 import { routes } from "@/lib/routes";
 import { Faq } from "@/components/Faq/Faq";
 import { Testimonials } from "@/components/Testimonials/Testimonials";
@@ -146,8 +146,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <Button href={routes.contact} variant="primary" size="lg">
                 {t.common.letsTalk}
               </Button>
-              <Link href={routes.services} className={styles.heroSecondary}>
-                {t.common.exploreServices}
+              <Link href={routes.about} className={styles.heroSecondary}>
+                {getDictionary(loc).nav.about}
               </Link>
             </div>
 
