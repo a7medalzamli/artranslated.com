@@ -52,6 +52,7 @@
 }
 
 .published,
+.scheduled,
 .draft {
   font-size: var(--font-size-sm);
   font-weight: var(--weight-semibold);
@@ -67,6 +68,11 @@
 .draft {
   background: var(--color-surface-2);
   color: var(--color-text-muted);
+}
+
+.scheduled {
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  color: var(--color-primary);
 }
 
 /* ---- Edit page header + admin actions ---- */

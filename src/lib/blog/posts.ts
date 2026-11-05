@@ -3,55 +3,24 @@ import { createClient } from "@/lib/supabase/server";
 import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 import { getSupabaseAnonKey, getSupabaseUrl } from "@/lib/supabase/env";
 import type { Database } from "@/lib/supabase/database.types";
-import { codePosts } from "@/content/blogPosts";
-import type { Locale } from "@/i18n";
 
 export type Post = Database["public"]["Tables"]["posts"]["Row"];
 
-/** Articles written in code (one version per language), shaped like database posts. */
-function codePostsFor(locale: string): Post[] {
-  // Each language version has its own date and stays hidden until then (scheduled posts).
-  const now = Date.now();
-  return codePosts.flatMap((p) => {
-    const text = p.text[locale as Locale] ?? p.text.en;
-    const date = text.publishedAt ?? p.publishedAt;
-    // Live only once Ahmed has approved it AND its date has arrived.
-    if (text.approved !== true || Date.parse(date) > now) return [];
-    return {
-      id: `code-${p.slug}`,
-      title: text.title,
-      slug: p.slug,
-      excerpt: text.excerpt,
-      content: text.content,
-      category: p.category,
-      cover_image_url: p.cover,
-      status: "published",
-      published_at: date,
-      seo_title: text.seoTitle,
-      seo_description: text.excerpt,
-      created_at: date,
-      updated_at: Date.parse(p.updatedAt) > Date.parse(date) ? p.updatedAt : date,
-    } as Post;
-  });
-}
+/**
+ * Every article is written in the admin panel. Each language version is its own
+ * post (own title, text and date); versions of one article share the same slug.
+ * A post is live once it is published AND its publish date has arrived, so a
+ * future date schedules it.
+ */
 
-/** Published posts (admin panel + code articles), newest first. Optionally filtered by category. */
+/** Published posts in one language, newest first. Optionally filtered by category. */
 export async function getPublishedPosts(category?: string, locale = "en"): Promise<Post[]> {
-  const fromCode = codePostsFor(locale).filter((p) => !category || p.category === category);
-  // If the database is unreachable, still show the code articles.
-  const fromDb = await getDbPublishedPosts(category).catch(() => [] as Post[]);
-  const slugs = new Set(fromCode.map((p) => p.slug));
-  return [...fromCode, ...fromDb.filter((p) => !slugs.has(p.slug))].sort((a, b) =>
-    (b.published_at ?? "").localeCompare(a.published_at ?? ""),
-  );
-}
-
-async function getDbPublishedPosts(category?: string): Promise<Post[]> {
-  const supabase = publicClient();
-  let query = supabase
+  let query = publicClient()
     .from("posts")
     .select("*")
+    .eq("locale", locale)
     .eq("status", "published")
+    .lte("published_at", new Date().toISOString())
     .order("published_at", { ascending: false });
 
   if (category) {
@@ -59,27 +28,41 @@ async function getDbPublishedPosts(category?: string): Promise<Post[]> {
   }
 
   const { data, error } = await query;
-  if (error) throw error;
+  // If the database is unreachable, show an empty blog rather than an error page.
+  if (error) return [];
   return data ?? [];
 }
 
-/** A single published post by slug, or null if not found / not published. */
+/** A single live post by slug in one language, or null. */
 export async function getPublishedPostBySlug(slug: string, locale = "en"): Promise<Post | null> {
-  const fromCode = codePostsFor(locale).find((p) => p.slug === slug);
-  if (fromCode) return fromCode;
-  const supabase = publicClient();
-  const { data, error } = await supabase
+  const { data, error } = await publicClient()
     .from("posts")
     .select("*")
+    .eq("locale", locale)
     .eq("slug", slug)
     .eq("status", "published")
+    .lte("published_at", new Date().toISOString())
     .maybeSingle();
 
   if (error) throw error;
   return data;
 }
 
-/** All posts (draft + published) for the admin list. Requires an admin session. */
+/** Languages in which an article (by slug) is live right now. */
+export async function publishedLocalesFor(slug: string, allLocales: readonly string[]): Promise<string[]> {
+  const { data, error } = await publicClient()
+    .from("posts")
+    .select("locale")
+    .eq("slug", slug)
+    .eq("status", "published")
+    .lte("published_at", new Date().toISOString());
+
+  if (error) return [];
+  const live = new Set((data ?? []).map((row) => row.locale));
+  return allLocales.filter((l) => live.has(l));
+}
+
+/** All posts (draft + published, every language) for the admin list. Requires an admin session. */
 export async function getAllPosts(): Promise<Post[]> {
   const supabase = await createClient();
   const { data, error } = await supabase
@@ -97,20 +80,6 @@ export async function getPostById(id: string): Promise<Post | null> {
   const { data, error } = await supabase.from("posts").select("*").eq("id", id).maybeSingle();
   if (error) throw error;
   return data;
-}
-
-/**
- * Languages in which a post is published right now: code articles can go out on
- * different days per language; admin-panel posts exist in every language.
- */
-export function publishedLocalesFor(slug: string, allLocales: readonly string[]): string[] {
-  const post = codePosts.find((p) => p.slug === slug);
-  if (!post) return [...allLocales];
-  const now = Date.now();
-  return allLocales.filter((l) => {
-    const text = post.text[l as Locale];
-    return text?.approved === true && Date.parse(text.publishedAt ?? post.publishedAt) <= now;
-  });
 }
 
 /**

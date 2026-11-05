@@ -12,6 +12,7 @@ export type Database = {
       posts: {
         Row: {
           id: string;
+          locale: string;
           title: string;
           slug: string;
           excerpt: string | null;
@@ -29,6 +30,7 @@ export type Database = {
           id?: string;
           title: string;
           slug: string;
+          locale?: string;
           excerpt?: string | null;
           content?: string;
           category?: string | null;
@@ -44,6 +46,7 @@ export type Database = {
           id?: string;
           title?: string;
           slug?: string;
+          locale?: string;
           excerpt?: string | null;
           content?: string;
           category?: string | null;

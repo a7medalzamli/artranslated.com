@@ -13,8 +13,8 @@ export type PostFormState = { error: string | null };
 
 type DB = SupabaseClient<Database>;
 
-/** Find a unique slug, appending -2, -3, … when needed (ignoring the post itself). */
-async function ensureUniqueSlug(supabase: DB, base: string, excludeId?: string): Promise<string> {
+/** Find a slug unique within one language, appending -2, -3, … when needed (ignoring the post itself). */
+async function ensureUniqueSlug(supabase: DB, base: string, locale: string, excludeId?: string): Promise<string> {
   const root = slugify(base) || "post";
   let attempt = 1;
 
@@ -23,6 +23,7 @@ async function ensureUniqueSlug(supabase: DB, base: string, excludeId?: string):
     const { data, error } = await supabase
       .from("posts")
       .select("id")
+      .eq("locale", locale)
       .eq("slug", candidate)
       .limit(1);
     if (error) throw error;
@@ -35,6 +36,8 @@ async function ensureUniqueSlug(supabase: DB, base: string, excludeId?: string):
 
 function parseForm(formData: FormData) {
   return postInputSchema.safeParse({
+    locale: formData.get("locale") ?? "",
+    published_at: formData.get("published_at") ?? "",
     title: formData.get("title") ?? "",
     slug: formData.get("slug") ?? "",
     excerpt: formData.get("excerpt") ?? "",
@@ -46,9 +49,9 @@ function parseForm(formData: FormData) {
   });
 }
 
-function revalidateBlog(slug?: string) {
-  revalidatePath("/blog");
-  if (slug) revalidatePath(`/blog/${slug}`);
+/** Refresh every page that can list articles (blog, article pages, related guides, sitemap). */
+function revalidateBlog() {
+  revalidatePath("/", "layout");
   revalidatePath(adminRoutes.posts);
 }
 
@@ -60,13 +63,15 @@ export async function createPost(_prev: PostFormState, formData: FormData): Prom
   const input = parsed.data;
 
   const supabase = await createClient();
-  const slug = await ensureUniqueSlug(supabase, input.slug || input.title);
+  const slug = await ensureUniqueSlug(supabase, input.slug || input.title, input.locale);
 
   const { data, error } = await supabase
     .from("posts")
     .insert({
+      locale: input.locale,
       title: input.title,
       slug,
+      published_at: emptyToNull(input.published_at),
       excerpt: emptyToNull(input.excerpt),
       content: input.content,
       category: emptyToNull(input.category),
@@ -80,7 +85,7 @@ export async function createPost(_prev: PostFormState, formData: FormData): Prom
 
   if (error) return { error: error.message };
 
-  revalidateBlog(slug);
+  revalidateBlog();
   redirect(`${adminRoutes.posts}/${data.id}`);
 }
 
@@ -95,13 +100,19 @@ export async function updatePost(_prev: PostFormState, formData: FormData): Prom
   const input = parsed.data;
 
   const supabase = await createClient();
-  const slug = await ensureUniqueSlug(supabase, input.slug || input.title, id);
+  const slug = await ensureUniqueSlug(supabase, input.slug || input.title, input.locale, id);
+  // A published post always needs a date; an empty date on a draft means "publish now when I click Publish".
+  const { data: current } = await supabase.from("posts").select("status").eq("id", id).single();
+  const publishedAt =
+    input.published_at || (current?.status === "published" ? new Date().toISOString() : null);
 
   const { error } = await supabase
     .from("posts")
     .update({
+      locale: input.locale,
       title: input.title,
       slug,
+      published_at: publishedAt,
       excerpt: emptyToNull(input.excerpt),
       content: input.content,
       category: emptyToNull(input.category),
@@ -113,7 +124,7 @@ export async function updatePost(_prev: PostFormState, formData: FormData): Prom
 
   if (error) return { error: error.message };
 
-  revalidateBlog(slug);
+  revalidateBlog();
   return { error: null };
 }
 
@@ -124,7 +135,7 @@ export async function publishPost(formData: FormData) {
   const supabase = await createClient();
   const { data: existing } = await supabase
     .from("posts")
-    .select("slug, published_at")
+    .select("published_at")
     .eq("id", id)
     .single();
 
@@ -132,12 +143,12 @@ export async function publishPost(formData: FormData) {
     .from("posts")
     .update({
       status: "published",
-      // Set the publish date on first publish; keep it on re-publish.
+      // Keep a date already set (a future date schedules the post); otherwise publish now.
       published_at: existing?.published_at ?? new Date().toISOString(),
     })
     .eq("id", id);
 
-  revalidateBlog(existing?.slug);
+  revalidateBlog();
 }
 
 export async function unpublishPost(formData: FormData) {
@@ -145,10 +156,8 @@ export async function unpublishPost(formData: FormData) {
   if (!id) return;
 
   const supabase = await createClient();
-  const { data: existing } = await supabase.from("posts").select("slug").eq("id", id).single();
-
   await supabase.from("posts").update({ status: "draft" }).eq("id", id);
-  revalidateBlog(existing?.slug);
+  revalidateBlog();
 }
 
 export async function deletePost(formData: FormData) {

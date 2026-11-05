@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useId, useState } from "react";
+import { useActionState, useEffect, useId, useState } from "react";
 import Image from "next/image";
 import { uploadImageAction } from "@/lib/content/uploadImageAction";
 import { Markdown } from "@/components/Markdown/Markdown";
@@ -9,6 +9,20 @@ import { postCategories } from "@/content/postCategories";
 import type { Post } from "@/lib/blog/posts";
 import type { PostFormState } from "./actions";
 import styles from "./editor.module.css";
+
+/** Article languages, as shown in the editor. */
+const LANGUAGES = [
+  { code: "en", label: "English" },
+  { code: "ar", label: "Arabic (العربية)" },
+  { code: "fr", label: "French (Français)" },
+  { code: "es", label: "Spanish (Español)" },
+];
+
+/** ISO date to the "YYYY-MM-DDTHH:mm" value of a date-time field, in the browser's time zone. */
+function toLocalInput(iso: string): string {
+  const d = new Date(iso);
+  return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+}
 
 type EditorAction = (state: PostFormState, formData: FormData) => Promise<PostFormState>;
 
@@ -28,6 +42,13 @@ export function PostEditor({ action, post }: { action: EditorAction; post?: Post
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
   const [showPreview, setShowPreview] = useState(true);
+  const [locale, setLocale] = useState(post?.locale ?? "en");
+  // Shown in local time; sent to the server as an ISO date (set after load to match the browser time zone).
+  const [dateLocal, setDateLocal] = useState("");
+  useEffect(() => {
+    if (post?.published_at) setDateLocal(toLocalInput(post.published_at));
+  }, [post?.published_at]);
+  const dir = locale === "ar" ? "rtl" : "ltr";
 
   const ids = useId();
 
@@ -69,6 +90,11 @@ export function PostEditor({ action, post }: { action: EditorAction; post?: Post
     <form action={formAction} className={styles.form}>
       {post && <input type="hidden" name="id" value={post.id} />}
       <input type="hidden" name="cover_image_url" value={coverUrl} />
+      <input
+        type="hidden"
+        name="published_at"
+        value={dateLocal && !Number.isNaN(Date.parse(dateLocal)) ? new Date(dateLocal).toISOString() : ""}
+      />
 
       <div className={styles.grid}>
         <div className={styles.main}>
@@ -76,6 +102,7 @@ export function PostEditor({ action, post }: { action: EditorAction; post?: Post
             <span>Title</span>
             <input
               name="title"
+              dir={dir}
               value={title}
               onChange={(e) => onTitleChange(e.target.value)}
               required
@@ -93,11 +120,14 @@ export function PostEditor({ action, post }: { action: EditorAction; post?: Post
               }}
               placeholder="auto-generated-from-title"
             />
+            <small className={styles.hint}>
+              Use the same slug for every language version of an article, so the site links them together.
+            </small>
           </label>
 
           <label className={styles.field}>
             <span>Excerpt</span>
-            <textarea name="excerpt" rows={2} defaultValue={post?.excerpt ?? ""} />
+            <textarea name="excerpt" rows={2} dir={dir} defaultValue={post?.excerpt ?? ""} />
           </label>
 
           <div className={styles.contentHead}>
@@ -115,13 +145,14 @@ export function PostEditor({ action, post }: { action: EditorAction; post?: Post
             <textarea
               id={`${ids}-content`}
               name="content"
+              dir={dir}
               className={styles.editor}
               rows={18}
               value={content}
               onChange={(e) => setContent(e.target.value)}
             />
             {showPreview && (
-              <div className={styles.preview}>
+              <div className={styles.preview} dir={dir}>
                 {content.trim() ? (
                   <Markdown>{content}</Markdown>
                 ) : (
@@ -134,9 +165,32 @@ export function PostEditor({ action, post }: { action: EditorAction; post?: Post
 
         <aside className={styles.side}>
           <label className={styles.field}>
+            <span>Language</span>
+            <select name="locale" value={locale} onChange={(e) => setLocale(e.target.value)}>
+              {LANGUAGES.map((l) => (
+                <option key={l.code} value={l.code}>
+                  {l.label}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className={styles.field}>
+            <span>Publish date</span>
+            <input type="datetime-local" value={dateLocal} onChange={(e) => setDateLocal(e.target.value)} />
+            <small className={styles.hint}>
+              Empty: goes live when you click Publish. Future date: click Publish and it goes live on that
+              date (within an hour).
+            </small>
+          </label>
+
+          <label className={styles.field}>
             <span>Category</span>
             <select name="category" defaultValue={post?.category ?? ""}>
               <option value="">— none —</option>
+              {post?.category && !(postCategories as readonly string[]).includes(post.category) && (
+                <option value={post.category}>{post.category}</option>
+              )}
               {postCategories.map((cat) => (
                 <option key={cat} value={cat}>
                   {cat}
@@ -168,12 +222,12 @@ export function PostEditor({ action, post }: { action: EditorAction; post?: Post
 
           <label className={styles.field}>
             <span>SEO title</span>
-            <input name="seo_title" defaultValue={post?.seo_title ?? ""} />
+            <input name="seo_title" dir={dir} defaultValue={post?.seo_title ?? ""} />
           </label>
 
           <label className={styles.field}>
             <span>SEO description</span>
-            <textarea name="seo_description" rows={3} defaultValue={post?.seo_description ?? ""} />
+            <textarea name="seo_description" rows={3} dir={dir} defaultValue={post?.seo_description ?? ""} />
           </label>
         </aside>
       </div>

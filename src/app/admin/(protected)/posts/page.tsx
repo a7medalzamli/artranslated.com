@@ -6,6 +6,14 @@ import styles from "./posts.module.css";
 
 export const dynamic = "force-dynamic";
 
+const LANGUAGE: Record<string, string> = { en: "English", ar: "Arabic", fr: "French", es: "Spanish" };
+
+/** "published" posts with a future date are scheduled: they go live on that date. */
+function statusOf(post: { status: string; published_at: string | null }): "draft" | "scheduled" | "published" {
+  if (post.status !== "published") return "draft";
+  return post.published_at && Date.parse(post.published_at) > Date.now() ? "scheduled" : "published";
+}
+
 export default async function AdminPostsPage() {
   const posts = await getAllPosts();
 
@@ -26,23 +34,25 @@ export default async function AdminPostsPage() {
             <thead>
               <tr>
                 <th>Title</th>
+                <th>Language</th>
                 <th>Status</th>
                 <th>Category</th>
+                <th>Publish date</th>
                 <th>Updated</th>
               </tr>
             </thead>
             <tbody>
               {posts.map((post) => (
                 <tr key={post.id}>
-                  <td>
+                  <td dir="auto">
                     <Link href={`${adminRoutes.posts}/${post.id}`}>{post.title}</Link>
                   </td>
+                  <td>{LANGUAGE[post.locale] ?? post.locale}</td>
                   <td>
-                    <span className={post.status === "published" ? styles.published : styles.draft}>
-                      {post.status}
-                    </span>
+                    <span className={styles[statusOf(post)]}>{statusOf(post)}</span>
                   </td>
                   <td>{post.category ?? "—"}</td>
+                  <td>{formatDate(post.published_at) || "—"}</td>
                   <td>{formatDate(post.updated_at)}</td>
                 </tr>
               ))}

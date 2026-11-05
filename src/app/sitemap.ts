@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteUrl } from "@/lib/seo";
 import { routes } from "@/lib/routes";
 import { locales } from "@/i18n";
-import { getPublishedPosts, publishedLocalesFor } from "@/lib/blog/posts";
+import { getPublishedPosts } from "@/lib/blog/posts";
 
 // Query the latest published posts at request time.
 export const dynamic = "force-dynamic";
@@ -73,7 +73,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     postEntries = locales.flatMap((locale, i) =>
       perLocale[i].map((post) => {
         const path = `/blog/${post.slug}`;
-        const live = publishedLocalesFor(post.slug, locales);
+        const live = locales.filter((_, j) => perLocale[j].some((p) => p.slug === post.slug));
         return {
           url: localeUrl(locale, path),
           lastModified: new Date(post.updated_at),

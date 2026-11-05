@@ -1,50 +1,34 @@
-import type { Locale } from "@/i18n";
+-- Blog posts in several languages.
+-- Each language version of an article is its own row (its own title, text and
+-- publish date). Versions of the same article share the same slug, so the site
+-- can link them to each other.
 
-/**
- * Blog articles written in code, with a version for each language. They are
- * listed alongside the posts published from the admin panel (which have one
- * language only). Content is Markdown; links point to the same language.
- */
-export type CodePost = {
-  slug: string;
-  category: string;
-  cover: string;
-  publishedAt: string;
-  updatedAt: string;
-  /** Each language is a separate article; `publishedAt` here overrides the post date, so
-   *  language versions can go out on different days (they stay hidden until then). */
-  text: Record<
-    Locale,
-    {
-      title: string;
-      excerpt: string;
-      seoTitle: string;
-      content: string;
-      publishedAt?: string;
-      /** Must be true (confirmed by Ahmed) before this version can go live, even after its date. */
-      approved?: boolean;
-    }
-  >;
-};
+alter table public.posts add column if not exists locale text not null default 'en';
 
-/* ------------------------------------------------------------------ */
-/* 1. Modern Standard Arabic vs dialects                               */
-/* ------------------------------------------------------------------ */
+alter table public.posts drop constraint if exists posts_locale_check;
+alter table public.posts add constraint posts_locale_check check (locale in ('en', 'ar', 'fr', 'es'));
 
-const msaVsDialects: CodePost = {
-  slug: "which-arabic-msa-vs-dialects",
-  category: "Arabic translation",
-  cover: "/images/blog/which-arabic.jpg",
-  publishedAt: "2026-11-01T09:00:00Z",
-  updatedAt: "2026-11-01T14:00:00Z",
-  text: {
-    en: {
-      approved: true,
-      title: "Which Arabic should you use? Modern Standard Arabic vs dialects",
-      seoTitle: "MSA vs Arabic Dialects: Which Arabic for Your Business?",
-      excerpt:
-        "Modern Standard Arabic, Gulf, Egyptian, Levantine or Maghrebi? A practical guide to choosing the right Arabic for your documents, website, app and marketing.",
-      content: `Arabic is spoken by more than 400 million people across more than 20 countries, but it is not one single variety. Before you translate anything, you need to decide **which Arabic** your audience should read. The right choice depends on what you are publishing and who will read it.
+-- A slug is now unique per language, not across the whole table.
+alter table public.posts drop constraint if exists posts_slug_key;
+create unique index if not exists posts_locale_slug_key on public.posts (locale, slug);
+
+create index if not exists posts_locale_status_published_at_idx
+  on public.posts (locale, status, published_at desc);
+
+-- Visitors only see published posts whose date has arrived (scheduled posts stay hidden).
+drop policy if exists "posts_public_read_published" on public.posts;
+create policy "posts_public_read_published"
+  on public.posts
+  for select
+  to anon
+  using (status = 'published' and published_at <= now());
+
+-- Copies the blog articles written in code into the admin panel (one row per language).
+-- Approved versions are published with their original dates; the others are drafts.
+-- Safe to run twice: rows that already exist (same language + slug) are skipped.
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('en', 'which-arabic-msa-vs-dialects', $tia$Which Arabic should you use? Modern Standard Arabic vs dialects$tia$, $tia$Modern Standard Arabic, Gulf, Egyptian, Levantine or Maghrebi? A practical guide to choosing the right Arabic for your documents, website, app and marketing.$tia$, $tia$Arabic is spoken by more than 400 million people across more than 20 countries, but it is not one single variety. Before you translate anything, you need to decide **which Arabic** your audience should read. The right choice depends on what you are publishing and who will read it.
 
 ## Modern Standard Arabic (MSA)
 
@@ -100,15 +84,11 @@ Many brands combine both: MSA for the website, product and documentation, and a 
 
 ## Not sure which Arabic fits your audience?
 
-Choosing the right variety is part of every project I take on. If you are unsure, [tell me about your audience and goals](/en/contact) and I’ll recommend the best option before any translation begins. You can also read about my [consulting service](/en/services/consulting), which covers this decision for larger launches.`,
-    },
-    ar: {
-      approved: true,
-      title: "الفصحى أم العامية في محتوى علامتك التجارية؟ دليل عملي للمسوّقين العرب",
-      seoTitle: "الفصحى أم العامية في التسويق؟ دليل اختيار لغة علامتك",
-      excerpt:
-        "هل تكتب منشوراتك بالفصحى أم باللهجة؟ وهل يبحث عملاؤك في Google بالكلمات نفسها؟ دليل عملي لاختيار لغة علامتك التجارية في كل قناة.",
-      content: `كل مسوّق عربي يواجه هذا السؤال عاجلًا أو آجلًا: **هل نكتب بالفصحى أم بالعامية؟** والإجابة ليست واحدة لكل المحتوى، بل تختلف حسب القناة والجمهور والهدف.
+Choosing the right variety is part of every project I take on. If you are unsure, [tell me about your audience and goals](/en/contact) and I’ll recommend the best option before any translation begins. You can also read about my [consulting service](/en/services/consulting), which covers this decision for larger launches.$tia$, $tia$Arabic translation$tia$, $tia$/images/blog/which-arabic.jpg$tia$, 'published', '2026-11-01T09:00:00Z', $tia$MSA vs Arabic Dialects: Which Arabic for Your Business?$tia$, $tia$Modern Standard Arabic, Gulf, Egyptian, Levantine or Maghrebi? A practical guide to choosing the right Arabic for your documents, website, app and marketing.$tia$, '2026-11-01T09:00:00Z', '2026-11-01T14:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('ar', 'which-arabic-msa-vs-dialects', $tia$الفصحى أم العامية في محتوى علامتك التجارية؟ دليل عملي للمسوّقين العرب$tia$, $tia$هل تكتب منشوراتك بالفصحى أم باللهجة؟ وهل يبحث عملاؤك في Google بالكلمات نفسها؟ دليل عملي لاختيار لغة علامتك التجارية في كل قناة.$tia$, $tia$كل مسوّق عربي يواجه هذا السؤال عاجلًا أو آجلًا: **هل نكتب بالفصحى أم بالعامية؟** والإجابة ليست واحدة لكل المحتوى، بل تختلف حسب القناة والجمهور والهدف.
 
 ## الفصحى ليست «لغة رسمية» فقط
 
@@ -150,15 +130,11 @@ Choosing the right variety is part of every project I take on. If you are unsure
 
 ## كيف أساعدك
 
-أكتب وأترجم وأكيّف المحتوى العربي منذ عام 2014، وأساعد العلامات التجارية على اختيار النبرة المناسبة لكل سوق عبر [الاستشارات](/ar/services/consulting) و[الترجمة الإبداعية](/ar/services/transcreation). وإن كنت مترددًا بين الفصحى واللهجة في حملتك القادمة، [فتواصل معي](/ar/contact).`,
-    },
-    fr: {
-      approved: true,
-      title: "Arabe standard, darija ou arabe du Golfe : quel arabe pour vos marchés ?",
-      seoTitle: "Arabe standard, darija ou du Golfe : quel arabe choisir ?",
-      excerpt:
-        "Maghreb ou Moyen-Orient ? Le choix de l’arabe dépend du marché visé. Arabe standard, darija, arabe du Golfe : le guide pour décider.",
-      content: `Pour une entreprise francophone, de France, de Belgique, de Suisse, du Canada ou d’Afrique, « traduire en arabe » n’est pas une décision unique. Viser Casablanca, Alger, Tunis, Le Caire, Dubaï ou Riyad n’implique ni le même public, ni les mêmes habitudes linguistiques. Avant de lancer une traduction, il faut savoir **quel arabe** parler à qui.
+أكتب وأترجم وأكيّف المحتوى العربي منذ عام 2014، وأساعد العلامات التجارية على اختيار النبرة المناسبة لكل سوق عبر [الاستشارات](/ar/services/consulting) و[الترجمة الإبداعية](/ar/services/transcreation). وإن كنت مترددًا بين الفصحى واللهجة في حملتك القادمة، [فتواصل معي](/ar/contact).$tia$, $tia$Arabic translation$tia$, $tia$/images/blog/which-arabic.jpg$tia$, 'published', '2026-11-01T09:00:00Z', $tia$الفصحى أم العامية في التسويق؟ دليل اختيار لغة علامتك$tia$, $tia$هل تكتب منشوراتك بالفصحى أم باللهجة؟ وهل يبحث عملاؤك في Google بالكلمات نفسها؟ دليل عملي لاختيار لغة علامتك التجارية في كل قناة.$tia$, '2026-11-01T09:00:00Z', '2026-11-01T14:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('fr', 'which-arabic-msa-vs-dialects', $tia$Arabe standard, darija ou arabe du Golfe : quel arabe pour vos marchés ?$tia$, $tia$Maghreb ou Moyen-Orient ? Le choix de l’arabe dépend du marché visé. Arabe standard, darija, arabe du Golfe : le guide pour décider.$tia$, $tia$Pour une entreprise francophone, de France, de Belgique, de Suisse, du Canada ou d’Afrique, « traduire en arabe » n’est pas une décision unique. Viser Casablanca, Alger, Tunis, Le Caire, Dubaï ou Riyad n’implique ni le même public, ni les mêmes habitudes linguistiques. Avant de lancer une traduction, il faut savoir **quel arabe** parler à qui.
 
 ## L’arabe standard moderne, socle commun
 
@@ -195,15 +171,11 @@ Traduire le même texte français mot à mot pour tous les marchés arabes. Les 
 
 ## Mon accompagnement
 
-Je traduis vers l’arabe depuis 2014, notamment depuis le français, et j’aide les entreprises à choisir la bonne variété pour chaque marché dans le cadre de mon [service de conseil](/fr/services/consulting). Vous hésitez entre Maghreb et Golfe, arabe standard et dialecte ? [Parlons de votre projet](/fr/contact).`,
-    },
-    es: {
-      approved: true,
-      title: "¿Existe un «árabe neutro»? Cómo elegir el árabe adecuado si vienes del mundo hispano",
-      seoTitle: "¿Existe un árabe neutro? Árabe estándar y dialectos",
-      excerpt:
-        "El español tiene variantes y un «español neutro»; el árabe, un estándar común y muchos dialectos. Guía para empresas de España y Latinoamérica.",
-      content: `Si trabajas en una empresa de España, Latinoamérica o de cualquier mercado hispanohablante, ya conoces el problema: ¿escribimos para México, para Argentina o para España? ¿Usamos «tú», «vos» o «usted»? Muchas marcas resuelven esto con un **español neutro** que entienden todos.
+Je traduis vers l’arabe depuis 2014, notamment depuis le français, et j’aide les entreprises à choisir la bonne variété pour chaque marché dans le cadre de mon [service de conseil](/fr/services/consulting). Vous hésitez entre Maghreb et Golfe, arabe standard et dialecte ? [Parlons de votre projet](/fr/contact).$tia$, $tia$Arabic translation$tia$, $tia$/images/blog/which-arabic.jpg$tia$, 'published', '2026-11-01T09:00:00Z', $tia$Arabe standard, darija ou du Golfe : quel arabe choisir ?$tia$, $tia$Maghreb ou Moyen-Orient ? Le choix de l’arabe dépend du marché visé. Arabe standard, darija, arabe du Golfe : le guide pour décider.$tia$, '2026-11-01T09:00:00Z', '2026-11-01T14:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('es', 'which-arabic-msa-vs-dialects', $tia$¿Existe un «árabe neutro»? Cómo elegir el árabe adecuado si vienes del mundo hispano$tia$, $tia$El español tiene variantes y un «español neutro»; el árabe, un estándar común y muchos dialectos. Guía para empresas de España y Latinoamérica.$tia$, $tia$Si trabajas en una empresa de España, Latinoamérica o de cualquier mercado hispanohablante, ya conoces el problema: ¿escribimos para México, para Argentina o para España? ¿Usamos «tú», «vos» o «usted»? Muchas marcas resuelven esto con un **español neutro** que entienden todos.
 
 El árabe tiene una situación parecida, pero aún más marcada.
 
@@ -249,29 +221,11 @@ Los grandes grupos son:
 
 No traduzcas tu eslogan palabra por palabra. Igual que un chiste de Madrid puede no funcionar en Lima, una frase publicitaria pensada en español rara vez funciona igual en árabe. Para eso existe la [transcreación](/es/services/transcreation).
 
-Traduzco al árabe desde el español desde hace años y ayudo a empresas hispanas a elegir la variedad adecuada para cada mercado con mi [servicio de consultoría](/es/services/consulting). ¿Dudas sobre qué árabe usar? [Cuéntame tu proyecto](/es/contact).`,
-    },
-  },
-};
+Traduzco al árabe desde el español desde hace años y ayudo a empresas hispanas a elegir la variedad adecuada para cada mercado con mi [servicio de consultoría](/es/services/consulting). ¿Dudas sobre qué árabe usar? [Cuéntame tu proyecto](/es/contact).$tia$, $tia$Arabic translation$tia$, $tia$/images/blog/which-arabic.jpg$tia$, 'published', '2026-11-01T09:00:00Z', $tia$¿Existe un árabe neutro? Árabe estándar y dialectos$tia$, $tia$El español tiene variantes y un «español neutro»; el árabe, un estándar común y muchos dialectos. Guía para empresas de España y Latinoamérica.$tia$, '2026-11-01T09:00:00Z', '2026-11-01T14:00:00Z')
+on conflict (locale, slug) do nothing;
 
-/* ------------------------------------------------------------------ */
-/* 2. Arabic localization glossary                                     */
-/* ------------------------------------------------------------------ */
-
-const glossary: CodePost = {
-  slug: "arabic-localization-glossary",
-  category: "Arabic translation",
-  cover: "/images/blog/localization-glossary.jpg",
-  publishedAt: "2026-11-01T10:00:00Z",
-  updatedAt: "2026-11-01T14:00:00Z",
-  text: {
-    en: {
-      approved: true,
-      title: "Arabic localization glossary: 15 terms explained simply",
-      seoTitle: "Translation & Localization Glossary: MTPE, LQA, TEP, CAT",
-      excerpt:
-        "MTPE, LQA, TEP, CAT tools, translation memory, RTL… The translation industry is full of abbreviations. Here they are, explained in plain language.",
-      content: `If you have ever received a quote or a vendor form from a translation agency, you have probably met a wall of abbreviations. This glossary explains the most common terms in plain language, with notes on what they mean for Arabic.
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('en', 'arabic-localization-glossary', $tia$Arabic localization glossary: 15 terms explained simply$tia$, $tia$MTPE, LQA, TEP, CAT tools, translation memory, RTL… The translation industry is full of abbreviations. Here they are, explained in plain language.$tia$, $tia$If you have ever received a quote or a vendor form from a translation agency, you have probably met a wall of abbreviations. This glossary explains the most common terms in plain language, with notes on what they mean for Arabic.
 
 ## Localization
 
@@ -335,15 +289,11 @@ Recreating a message, such as a slogan or campaign, so it has the same effect in
 
 ## Have a term that isn’t here?
 
-If a quote or a vendor form uses a term you don’t recognize, [just ask me](/en/contact). I’m happy to explain how it applies to your project.`,
-    },
-    ar: {
-      approved: true,
-      title: "مصطلحات ستقرؤها في عروض أسعار الترجمة: دليل العميل العربي",
-      seoTitle: "مصطلحات عروض أسعار الترجمة: دليل مبسّط للعميل العربي",
-      excerpt:
-        "تصلك عروض الأسعار والعقود مليئة بمصطلحات مثل TEP وMTPE وTM وLQA؟ هذا الدليل يشرحها بالعربية مع اختصاراتها الإنجليزية، لتعرف بالضبط ما الذي تدفع مقابله.",
-      content: `حين تطلب ترجمة موقعك أو تطبيقك أو مستنداتك من مترجم أو وكالة، قد يصلك عرض سعر مليء بمصطلحات واختصارات إنجليزية. ولأن معظم هذه المصطلحات تُستخدم في القطاع كما هي، جمعت لك أهمها مع مقابلها العربي وشرح مبسّط لما يعنيه لك كعميل.
+If a quote or a vendor form uses a term you don’t recognize, [just ask me](/en/contact). I’m happy to explain how it applies to your project.$tia$, $tia$Arabic translation$tia$, $tia$/images/blog/localization-glossary.jpg$tia$, 'published', '2026-11-01T10:00:00Z', $tia$Translation & Localization Glossary: MTPE, LQA, TEP, CAT$tia$, $tia$MTPE, LQA, TEP, CAT tools, translation memory, RTL… The translation industry is full of abbreviations. Here they are, explained in plain language.$tia$, '2026-11-01T10:00:00Z', '2026-11-01T14:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('ar', 'arabic-localization-glossary', $tia$مصطلحات ستقرؤها في عروض أسعار الترجمة: دليل العميل العربي$tia$, $tia$تصلك عروض الأسعار والعقود مليئة بمصطلحات مثل TEP وMTPE وTM وLQA؟ هذا الدليل يشرحها بالعربية مع اختصاراتها الإنجليزية، لتعرف بالضبط ما الذي تدفع مقابله.$tia$, $tia$حين تطلب ترجمة موقعك أو تطبيقك أو مستنداتك من مترجم أو وكالة، قد يصلك عرض سعر مليء بمصطلحات واختصارات إنجليزية. ولأن معظم هذه المصطلحات تُستخدم في القطاع كما هي، جمعت لك أهمها مع مقابلها العربي وشرح مبسّط لما يعنيه لك كعميل.
 
 ## مصطلحات الخدمة
 
@@ -377,15 +327,11 @@ If a quote or a vendor form uses a term you don’t recognize, [just ask me](/en
 
 ## نصيحة أخيرة
 
-إن ورد في عرض السعر مصطلح لا تعرفه، فاسأل عنه قبل الموافقة. المزوّد المحترف يشرح لك بوضوح ما الذي تدفع مقابله. وإن أردت عرض سعر واضحًا لمشروعك، [فتواصل معي](/ar/contact).`,
-    },
-    fr: {
-      approved: true,
-      title: "Comment lire un devis de traduction : les termes à connaître",
-      seoTitle: "Lire un devis de traduction : TAO, mémoire, révision, LQA",
-      excerpt:
-        "Mots source, répétitions, révision, relecture, PAO, post-édition : les termes d’un devis de traduction, expliqués pour les acheteurs.",
-      content: `Un devis de traduction peut sembler opaque la première fois qu’on en reçoit un. Lignes séparées pour les « répétitions », mention de « TAO », distinction entre « révision » et « relecture »… Voici les termes que vous croiserez le plus souvent, et ce qu’ils signifient concrètement pour vous.
+إن ورد في عرض السعر مصطلح لا تعرفه، فاسأل عنه قبل الموافقة. المزوّد المحترف يشرح لك بوضوح ما الذي تدفع مقابله. وإن أردت عرض سعر واضحًا لمشروعك، [فتواصل معي](/ar/contact).$tia$, $tia$Arabic translation$tia$, $tia$/images/blog/localization-glossary.jpg$tia$, 'published', '2026-11-01T10:00:00Z', $tia$مصطلحات عروض أسعار الترجمة: دليل مبسّط للعميل العربي$tia$, $tia$تصلك عروض الأسعار والعقود مليئة بمصطلحات مثل TEP وMTPE وTM وLQA؟ هذا الدليل يشرحها بالعربية مع اختصاراتها الإنجليزية، لتعرف بالضبط ما الذي تدفع مقابله.$tia$, '2026-11-01T10:00:00Z', '2026-11-01T14:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('fr', 'arabic-localization-glossary', $tia$Comment lire un devis de traduction : les termes à connaître$tia$, $tia$Mots source, répétitions, révision, relecture, PAO, post-édition : les termes d’un devis de traduction, expliqués pour les acheteurs.$tia$, $tia$Un devis de traduction peut sembler opaque la première fois qu’on en reçoit un. Lignes séparées pour les « répétitions », mention de « TAO », distinction entre « révision » et « relecture »… Voici les termes que vous croiserez le plus souvent, et ce qu’ils signifient concrètement pour vous.
 
 ## Le volume
 
@@ -423,15 +369,11 @@ If a quote or a vendor form uses a term you don’t recognize, [just ask me](/en
 
 ## Avant de signer
 
-Vérifiez que le devis précise : les langues, le volume, les étapes de qualité incluses, le format de livraison, le délai et les conditions de confidentialité. Un bon prestataire répond volontiers à vos questions. Pour un devis clair sur votre projet vers l’arabe, [contactez-moi](/fr/contact).`,
-    },
-    es: {
-      approved: true,
-      title: "Diccionario técnico del árabe para gestores de proyecto y desarrolladores",
-      seoTitle: "Localizar software al árabe: RTL, plurales y calendario",
-      excerpt:
-        "RTL, seis formas de plural, cifras arábigas orientales, calendario hégira: lo que debes saber antes de localizar una app al árabe.",
-      content: `Si eres gestor de proyecto, product manager o desarrollador y te toca lanzar una app o una web en árabe, descubrirás que no basta con «traducir los textos». El árabe tiene particularidades técnicas que conviene conocer **antes** de empezar. Este pequeño diccionario reúne las más importantes.
+Vérifiez que le devis précise : les langues, le volume, les étapes de qualité incluses, le format de livraison, le délai et les conditions de confidentialité. Un bon prestataire répond volontiers à vos questions. Pour un devis clair sur votre projet vers l’arabe, [contactez-moi](/fr/contact).$tia$, $tia$Arabic translation$tia$, $tia$/images/blog/localization-glossary.jpg$tia$, 'published', '2026-11-01T10:00:00Z', $tia$Lire un devis de traduction : TAO, mémoire, révision, LQA$tia$, $tia$Mots source, répétitions, révision, relecture, PAO, post-édition : les termes d’un devis de traduction, expliqués pour les acheteurs.$tia$, '2026-11-01T10:00:00Z', '2026-11-01T14:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('es', 'arabic-localization-glossary', $tia$Diccionario técnico del árabe para gestores de proyecto y desarrolladores$tia$, $tia$RTL, seis formas de plural, cifras arábigas orientales, calendario hégira: lo que debes saber antes de localizar una app al árabe.$tia$, $tia$Si eres gestor de proyecto, product manager o desarrollador y te toca lanzar una app o una web en árabe, descubrirás que no basta con «traducir los textos». El árabe tiene particularidades técnicas que conviene conocer **antes** de empezar. Este pequeño diccionario reúne las más importantes.
 
 ## RTL (de derecha a izquierda)
 
@@ -473,29 +415,11 @@ Una prueba previa que sustituye los textos por versiones simuladas para detectar
 
 **MTPE**: traducción automática corregida por un lingüista. **LQA**: evaluación objetiva de la calidad con puntuación e informe. Ambas son útiles en productos con muchas actualizaciones. Consulta [localización de SaaS](/es/services/saas-localization).
 
-¿Preparas el lanzamiento de tu producto en árabe? [Escríbeme](/es/contact) y revisamos juntos qué hay que tener en cuenta.`,
-    },
-  },
-};
+¿Preparas el lanzamiento de tu producto en árabe? [Escríbeme](/es/contact) y revisamos juntos qué hay que tener en cuenta.$tia$, $tia$Arabic translation$tia$, $tia$/images/blog/localization-glossary.jpg$tia$, 'published', '2026-11-01T10:00:00Z', $tia$Localizar software al árabe: RTL, plurales y calendario$tia$, $tia$RTL, seis formas de plural, cifras arábigas orientales, calendario hégira: lo que debes saber antes de localizar una app al árabe.$tia$, '2026-11-01T10:00:00Z', '2026-11-01T14:00:00Z')
+on conflict (locale, slug) do nothing;
 
-/* ------------------------------------------------------------------ */
-/* 3. Results as a Service vs SaaS (scheduled for 4 November 2026)     */
-/* ------------------------------------------------------------------ */
-
-const raasVsSaas: CodePost = {
-  slug: "results-as-a-service-vs-saas",
-  category: "SaaS localization",
-  cover: "/images/blog/raas-vs-saas.jpg",
-  publishedAt: "2026-11-04T08:00:00Z",
-  updatedAt: "2026-11-04T08:00:00Z",
-  text: {
-    en: {
-      publishedAt: "2026-11-04T08:00:00Z",
-      title: "Results as a Service (RaaS) vs SaaS: what it means for localization",
-      seoTitle: "Results as a Service (RaaS) vs SaaS: What It Means for Localization",
-      excerpt:
-        "SaaS sells you a tool; Results as a Service sells you the outcome. Here is what the shift means, why AI is driving it, and how to buy Arabic localization as a result.",
-      content: `For twenty years, software has mostly been sold as **SaaS**: you pay a monthly subscription and your team uses the tool. A newer model is gaining ground, especially with AI: **Results as a Service (RaaS)**, where you pay for the outcome itself, not for the tool or the hours behind it.
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('en', 'results-as-a-service-vs-saas', $tia$Results as a Service (RaaS) vs SaaS: what it means for localization$tia$, $tia$SaaS sells you a tool; Results as a Service sells you the outcome. Here is what the shift means, why AI is driving it, and how to buy Arabic localization as a result.$tia$, $tia$For twenty years, software has mostly been sold as **SaaS**: you pay a monthly subscription and your team uses the tool. A newer model is gaining ground, especially with AI: **Results as a Service (RaaS)**, where you pay for the outcome itself, not for the tool or the hours behind it.
 
 ## What is SaaS?
 
@@ -542,15 +466,11 @@ RaaS works best when results are **measurable and within the provider’s contro
 
 ## How I work
 
-This is how I approach [SaaS localization](/en/services/saas-localization): we agree on the result you need, and I take care of everything required to deliver it, from translation and review to in-context checks and quality reporting. If you are planning an Arabic launch, [tell me about your product](/en/contact) and I’ll suggest a clear, results-based scope.`,
-    },
-    ar: {
-      publishedAt: "2026-11-05T08:00:00Z",
-      title: "ادفع مقابل النتيجة لا الأداة: ما الذي تعنيه «النتائج كخدمة (RaaS)» للشركات العربية؟",
-      seoTitle: "النتائج كخدمة (RaaS) للشركات العربية: ادفع مقابل النتيجة لا الأداة",
-      excerpt:
-        "اشتراكات كثيرة وأدوات ذكاء اصطناعي لا تُحسن العربية ونتائج لا تتحقق؟ إليك كيف يساعد نموذج «النتائج كخدمة (RaaS)» الشركات العربية على شراء ما تحتاجه فعلًا.",
-      content: `تشترك كثير من الشركات العربية اليوم في عشرات الأدوات الرقمية: منصات للتسويق، وأدوات لكتابة المحتوى بالذكاء الاصطناعي، وبرامج لإدارة وسائل التواصل، وأنظمة للترجمة الآلية. ومع نهاية الشهر تصل الفواتير، لكن السؤال يبقى: **هل تحققت النتيجة؟**
+This is how I approach [SaaS localization](/en/services/saas-localization): we agree on the result you need, and I take care of everything required to deliver it, from translation and review to in-context checks and quality reporting. If you are planning an Arabic launch, [tell me about your product](/en/contact) and I’ll suggest a clear, results-based scope.$tia$, $tia$SaaS localization$tia$, $tia$/images/blog/raas-vs-saas.jpg$tia$, 'draft', null, $tia$Results as a Service (RaaS) vs SaaS: What It Means for Localization$tia$, $tia$SaaS sells you a tool; Results as a Service sells you the outcome. Here is what the shift means, why AI is driving it, and how to buy Arabic localization as a result.$tia$, '2026-11-04T08:00:00Z', '2026-11-04T08:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('ar', 'results-as-a-service-vs-saas', $tia$ادفع مقابل النتيجة لا الأداة: ما الذي تعنيه «النتائج كخدمة (RaaS)» للشركات العربية؟$tia$, $tia$اشتراكات كثيرة وأدوات ذكاء اصطناعي لا تُحسن العربية ونتائج لا تتحقق؟ إليك كيف يساعد نموذج «النتائج كخدمة (RaaS)» الشركات العربية على شراء ما تحتاجه فعلًا.$tia$, $tia$تشترك كثير من الشركات العربية اليوم في عشرات الأدوات الرقمية: منصات للتسويق، وأدوات لكتابة المحتوى بالذكاء الاصطناعي، وبرامج لإدارة وسائل التواصل، وأنظمة للترجمة الآلية. ومع نهاية الشهر تصل الفواتير، لكن السؤال يبقى: **هل تحققت النتيجة؟**
 
 هنا يبرز نموذج **النتائج كخدمة (Results as a Service أو RaaS)**: بدل أن تشتري أداة وتتولى تشغيلها بنفسك، تتفق مع مزوّد على نتيجة واضحة، ويتولى هو كل ما يلزم لتحقيقها.
 
@@ -588,15 +508,11 @@ This is how I approach [SaaS localization](/en/services/saas-localization): we a
 
 ## كيف أعمل
 
-أطبّق هذا النهج في [توطين منتجات SaaS](/ar/services/saas-localization) وفي [التسويق الرقمي والظهور في الذكاء الاصطناعي (AI)](/ar/services/digital-marketing): نتفق أولًا على النتيجة، ثم أتولى العمل كله حتى أسلّمها جاهزة. وإن أردت أن نحدد معًا النتيجة التي تحتاجها شركتك، [فتواصل معي](/ar/contact).`,
-    },
-    fr: {
-      publishedAt: "2026-11-06T08:00:00Z",
-      title: "Obligation de moyens ou de résultat ? Le Results as a Service appliqué à la localisation",
-      seoTitle: "Results as a Service (RaaS) : passer à l’obligation de résultat en localisation",
-      excerpt:
-        "Licences SaaS, heures facturées… ou résultat garanti ? Le RaaS remet au goût du jour une distinction bien connue en France : l’obligation de moyens et l’obligation de résultat.",
-      content: `En droit français, on distingue depuis longtemps deux façons de s’engager. Avec une **obligation de moyens**, le prestataire promet de tout mettre en œuvre pour atteindre un objectif, sans le garantir. Avec une **obligation de résultat**, il s’engage sur le résultat lui-même.
+أطبّق هذا النهج في [توطين منتجات SaaS](/ar/services/saas-localization) وفي [التسويق الرقمي والظهور في الذكاء الاصطناعي (AI)](/ar/services/digital-marketing): نتفق أولًا على النتيجة، ثم أتولى العمل كله حتى أسلّمها جاهزة. وإن أردت أن نحدد معًا النتيجة التي تحتاجها شركتك، [فتواصل معي](/ar/contact).$tia$, $tia$SaaS localization$tia$, $tia$/images/blog/raas-vs-saas.jpg$tia$, 'draft', null, $tia$النتائج كخدمة (RaaS) للشركات العربية: ادفع مقابل النتيجة لا الأداة$tia$, $tia$اشتراكات كثيرة وأدوات ذكاء اصطناعي لا تُحسن العربية ونتائج لا تتحقق؟ إليك كيف يساعد نموذج «النتائج كخدمة (RaaS)» الشركات العربية على شراء ما تحتاجه فعلًا.$tia$, '2026-11-05T08:00:00Z', '2026-11-05T08:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('fr', 'results-as-a-service-vs-saas', $tia$Obligation de moyens ou de résultat ? Le Results as a Service appliqué à la localisation$tia$, $tia$Licences SaaS, heures facturées… ou résultat garanti ? Le RaaS remet au goût du jour une distinction bien connue en France : l’obligation de moyens et l’obligation de résultat.$tia$, $tia$En droit français, on distingue depuis longtemps deux façons de s’engager. Avec une **obligation de moyens**, le prestataire promet de tout mettre en œuvre pour atteindre un objectif, sans le garantir. Avec une **obligation de résultat**, il s’engage sur le résultat lui-même.
 
 Cette distinction éclaire parfaitement un modèle qui monte dans l’économie numérique : le **Results as a Service (RaaS)**.
 
@@ -636,15 +552,11 @@ Une obligation de résultat n’a de sens que sur ce que le prestataire maîtris
 
 ## Mon approche
 
-C’est dans cet esprit que je travaille en [localisation SaaS](/fr/services/saas-localization) et en [révision et LQA](/fr/services/editing) : nous définissons ensemble le résultat attendu et la façon de le mesurer, puis je prends en charge tout le travail nécessaire pour le livrer. Pour définir le vôtre, [écrivez-moi](/fr/contact).`,
-    },
-    es: {
-      publishedAt: "2026-11-07T08:00:00Z",
-      title: "Pago por resultados: guía de Results as a Service para entrar en el mercado árabe",
-      seoTitle: "Results as a Service (RaaS): pago por resultados para entrar en el mercado árabe",
-      excerpt:
-        "Para vender en el mundo árabe, pagar por herramientas no basta: hace falta que alguien entregue el resultado. Así funciona Results as a Service, para empresas de cualquier tamaño.",
-      content: `Da igual que seas una startup, una pyme o una gran empresa, en España, en Latinoamérica o en Estados Unidos: si quieres vender en el mundo árabe, seguramente ya lo has notado. Hay herramientas para todo, pero **pocas personas en tu equipo hablan árabe** y nadie tiene tiempo de convertirse en experto en localización.
+C’est dans cet esprit que je travaille en [localisation SaaS](/fr/services/saas-localization) et en [révision et LQA](/fr/services/editing) : nous définissons ensemble le résultat attendu et la façon de le mesurer, puis je prends en charge tout le travail nécessaire pour le livrer. Pour définir le vôtre, [écrivez-moi](/fr/contact).$tia$, $tia$SaaS localization$tia$, $tia$/images/blog/raas-vs-saas.jpg$tia$, 'draft', null, $tia$Results as a Service (RaaS) : passer à l’obligation de résultat en localisation$tia$, $tia$Licences SaaS, heures facturées… ou résultat garanti ? Le RaaS remet au goût du jour une distinction bien connue en France : l’obligation de moyens et l’obligation de résultat.$tia$, '2026-11-06T08:00:00Z', '2026-11-06T08:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('es', 'results-as-a-service-vs-saas', $tia$Pago por resultados: guía de Results as a Service para entrar en el mercado árabe$tia$, $tia$Para vender en el mundo árabe, pagar por herramientas no basta: hace falta que alguien entregue el resultado. Así funciona Results as a Service, para empresas de cualquier tamaño.$tia$, $tia$Da igual que seas una startup, una pyme o una gran empresa, en España, en Latinoamérica o en Estados Unidos: si quieres vender en el mundo árabe, seguramente ya lo has notado. Hay herramientas para todo, pero **pocas personas en tu equipo hablan árabe** y nadie tiene tiempo de convertirse en experto en localización.
 
 Aquí es donde encaja **Results as a Service (RaaS)**, una idea que el marketing en español conoce bien con otro nombre: el **pago por resultados**.
 
@@ -683,31 +595,11 @@ El pago por resultados funciona cuando el resultado depende del proveedor. Un tr
 
 ## Cómo trabajo yo
 
-Así trabajo en la [localización de SaaS](/es/services/saas-localization) y en el [marketing digital y la visibilidad en IA](/es/services/digital-marketing): primero acordamos el resultado y cómo medirlo, y después me encargo de todo hasta entregarlo listo. Si estás preparando tu entrada en el mercado árabe, [cuéntame tu proyecto](/es/contact).`,
-    },
-  },
-};
+Así trabajo en la [localización de SaaS](/es/services/saas-localization) y en el [marketing digital y la visibilidad en IA](/es/services/digital-marketing): primero acordamos el resultado y cómo medirlo, y después me encargo de todo hasta entregarlo listo. Si estás preparando tu entrada en el mercado árabe, [cuéntame tu proyecto](/es/contact).$tia$, $tia$SaaS localization$tia$, $tia$/images/blog/raas-vs-saas.jpg$tia$, 'draft', null, $tia$Results as a Service (RaaS): pago por resultados para entrar en el mercado árabe$tia$, $tia$Para vender en el mundo árabe, pagar por herramientas no basta: hace falta que alguien entregue el resultado. Así funciona Results as a Service, para empresas de cualquier tamaño.$tia$, '2026-11-07T08:00:00Z', '2026-11-07T08:00:00Z')
+on conflict (locale, slug) do nothing;
 
-/* ------------------------------------------------------------------ */
-/* 4. AI search visibility — a different article per language,        */
-/*    published on different days (ar 2 Nov, fr 3 Nov, es 4 Nov,      */
-/*    en 8 Nov)                                                        */
-/* ------------------------------------------------------------------ */
-
-const aiSearchVisibility: CodePost = {
-  slug: "ai-search-visibility",
-  category: "SEO & AI visibility",
-  cover: "/images/blog/ai-search-visibility.jpg",
-  publishedAt: "2026-11-02T08:00:00Z",
-  updatedAt: "2026-11-02T08:00:00Z",
-  text: {
-    en: {
-      publishedAt: "2026-11-08T08:00:00Z",
-      title: "How to get your business cited in AI answers: SEO, AEO and GEO explained",
-      seoTitle: "How to Get Cited in AI Answers: SEO, AEO and GEO Explained",
-      excerpt:
-        "More buyers now ask AI assistants instead of scrolling search results. Here is how SEO, AEO and GEO work together, and seven practical steps to make your business the source AI quotes.",
-      content: `A growing share of buyers no longer scroll through ten blue links. They ask an AI assistant a full question, such as "Which Arabic translator should I hire for my SaaS?", and read a single generated answer. That answer usually names a few businesses and cites a few sources. The question for every company is simple: **will you be one of them?**
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('en', 'ai-search-visibility', $tia$How to get your business cited in AI answers: SEO, AEO and GEO explained$tia$, $tia$More buyers now ask AI assistants instead of scrolling search results. Here is how SEO, AEO and GEO work together, and seven practical steps to make your business the source AI quotes.$tia$, $tia$A growing share of buyers no longer scroll through ten blue links. They ask an AI assistant a full question, such as "Which Arabic translator should I hire for my SaaS?", and read a single generated answer. That answer usually names a few businesses and cites a few sources. The question for every company is simple: **will you be one of them?**
 
 ## Three layers of visibility
 
@@ -744,15 +636,11 @@ There is no single ranking report for AI answers yet. Track a mix of signals: ra
 
 AI visibility is decided language by language. A business that is well described in English may be invisible when the same question is asked in Arabic, French or Spanish. Each market needs its own clear, natively written content.
 
-That is where my background helps: I combine [digital marketing and AI visibility](/en/services/digital-marketing) with translation and localization into Arabic. If you want to know how AI tools describe your business today, [get in touch](/en/contact) for an audit.`,
-    },
-    ar: {
-      publishedAt: "2026-11-02T08:00:00Z",
-      title: "لماذا قد يتجاهلك الذكاء الاصطناعي (AI) حين يسأل العملاء بالعربية؟",
-      seoTitle: "كيف تظهر شركتك في إجابات الذكاء الاصطناعي (AI) بالعربية؟",
-      excerpt:
-        "يسأل العملاء اليوم أدوات الذكاء الاصطناعي (AI) بالعربية عن الشركات والخدمات. لكن المحتوى العربي الجيد على الإنترنت قليل، وهذه فرصة لمن يبادر أولًا.",
-      content: `جرّب أن تسأل أداة ذكاء اصطناعي (AI) بالعربية: «ما أفضل شركة لترجمة المواقع في الرياض؟» أو «من يقدّم خدمات تسويق رقمي للشركات الناشئة في عمّان؟». ستلاحظ أن الإجابة تذكر أسماء قليلة، وتستشهد بمصادر محدودة، وأحيانًا تقدّم معلومات قديمة أو غير دقيقة.
+That is where my background helps: I combine [digital marketing and AI visibility](/en/services/digital-marketing) with translation and localization into Arabic. If you want to know how AI tools describe your business today, [get in touch](/en/contact) for an audit.$tia$, $tia$SEO & AI visibility$tia$, $tia$/images/blog/ai-search-visibility.jpg$tia$, 'draft', null, $tia$How to Get Cited in AI Answers: SEO, AEO and GEO Explained$tia$, $tia$More buyers now ask AI assistants instead of scrolling search results. Here is how SEO, AEO and GEO work together, and seven practical steps to make your business the source AI quotes.$tia$, '2026-11-08T08:00:00Z', '2026-11-08T08:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('ar', 'ai-search-visibility', $tia$لماذا قد يتجاهلك الذكاء الاصطناعي (AI) حين يسأل العملاء بالعربية؟$tia$, $tia$يسأل العملاء اليوم أدوات الذكاء الاصطناعي (AI) بالعربية عن الشركات والخدمات. لكن المحتوى العربي الجيد على الإنترنت قليل، وهذه فرصة لمن يبادر أولًا.$tia$, $tia$جرّب أن تسأل أداة ذكاء اصطناعي (AI) بالعربية: «ما أفضل شركة لترجمة المواقع في الرياض؟» أو «من يقدّم خدمات تسويق رقمي للشركات الناشئة في عمّان؟». ستلاحظ أن الإجابة تذكر أسماء قليلة، وتستشهد بمصادر محدودة، وأحيانًا تقدّم معلومات قديمة أو غير دقيقة.
 
 السبب بسيط: **المحتوى العربي الجيد والموثوق على الإنترنت ما زال قليلًا** مقارنة بالإنجليزية، وأدوات الذكاء الاصطناعي (AI) لا تستطيع أن تستشهد بما لم يُكتب.
 
@@ -789,15 +677,11 @@ That is where my background helps: I combine [digital marketing and AI visibilit
 
 ## كيف أساعدك
 
-أجمع بين [التسويق الرقمي والظهور في الذكاء الاصطناعي (AI)](/ar/services/digital-marketing) وخبرة الكتابة والترجمة إلى العربية منذ عام 2014، لأكتب لك محتوى عربيًا يفهمه القارئ وتستشهد به الأدوات. وإن أردت أن تعرف كيف تصف أدوات الذكاء الاصطناعي (AI) شركتك اليوم، [فتواصل معي](/ar/contact) لإجراء تقييم.`,
-    },
-    fr: {
-      publishedAt: "2026-11-03T08:00:00Z",
-      title: "Être cité par l’IA sur les marchés arabophones : SEO, AEO et GEO pour les entreprises francophones",
-      seoTitle: "Visibilité IA sur les marchés arabophones : SEO, AEO et GEO",
-      excerpt:
-        "Votre entreprise est bien référencée en France, mais l’est-elle quand un prospect pose la question en arabe à un assistant IA ? Les clés d’une visibilité multilingue dans la recherche générative.",
-      content: `Beaucoup d’entreprises francophones, en France, en Belgique, en Suisse ou au Canada, soignent leur référencement en français, parfois en anglais. Mais lorsqu’un prospect à Casablanca, Dubaï ou Riyad pose sa question **en arabe** à un assistant IA, la réponse s’appuie sur d’autres sources. Et votre entreprise n’y figure souvent pas.
+أجمع بين [التسويق الرقمي والظهور في الذكاء الاصطناعي (AI)](/ar/services/digital-marketing) وخبرة الكتابة والترجمة إلى العربية منذ عام 2014، لأكتب لك محتوى عربيًا يفهمه القارئ وتستشهد به الأدوات. وإن أردت أن تعرف كيف تصف أدوات الذكاء الاصطناعي (AI) شركتك اليوم، [فتواصل معي](/ar/contact) لإجراء تقييم.$tia$, $tia$SEO & AI visibility$tia$, $tia$/images/blog/ai-search-visibility.jpg$tia$, 'draft', null, $tia$كيف تظهر شركتك في إجابات الذكاء الاصطناعي (AI) بالعربية؟$tia$, $tia$يسأل العملاء اليوم أدوات الذكاء الاصطناعي (AI) بالعربية عن الشركات والخدمات. لكن المحتوى العربي الجيد على الإنترنت قليل، وهذه فرصة لمن يبادر أولًا.$tia$, '2026-11-02T08:00:00Z', '2026-11-02T08:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('fr', 'ai-search-visibility', $tia$Être cité par l’IA sur les marchés arabophones : SEO, AEO et GEO pour les entreprises francophones$tia$, $tia$Votre entreprise est bien référencée en France, mais l’est-elle quand un prospect pose la question en arabe à un assistant IA ? Les clés d’une visibilité multilingue dans la recherche générative.$tia$, $tia$Beaucoup d’entreprises francophones, en France, en Belgique, en Suisse ou au Canada, soignent leur référencement en français, parfois en anglais. Mais lorsqu’un prospect à Casablanca, Dubaï ou Riyad pose sa question **en arabe** à un assistant IA, la réponse s’appuie sur d’autres sources. Et votre entreprise n’y figure souvent pas.
 
 ## La visibilité IA se joue langue par langue
 
@@ -828,15 +712,11 @@ Ces trois niveaux s’additionnent, et doivent être travaillés **dans chaque l
 
 ## Mon accompagnement
 
-Traducteur vers l’arabe depuis 2014 et spécialisé en [marketing digital et visibilité IA](/fr/services/digital-marketing), j’aide les entreprises francophones à exister dans la recherche, classique comme générative, sur les marchés arabophones. Pour un audit de votre visibilité en arabe, [contactez-moi](/fr/contact).`,
-    },
-    es: {
-      publishedAt: "2026-11-04T16:00:00Z",
-      title: "Visibilidad en la IA: checklist para empresas que quieren vender en el mundo árabe",
-      seoTitle: "Visibilidad en la IA para empresas: checklist SEO, AEO y GEO para el mercado árabe",
-      excerpt:
-        "Tus clientes de Emiratos o Marruecos ya preguntan a asistentes de IA antes de comprar. Esta checklist te ayuda a que tu empresa aparezca en esas respuestas.",
-      content: `Tanto si diriges una pyme, una cadena hotelera, un e-commerce o una multinacional, en España, Latinoamérica o cualquier país hispanohablante, si quieres clientes en el mundo árabe hay un cambio que conviene entender: **cada vez más compradores preguntan a un asistente de IA antes de buscar en Google**. Y la respuesta suele mencionar solo a unas pocas empresas.
+Traducteur vers l’arabe depuis 2014 et spécialisé en [marketing digital et visibilité IA](/fr/services/digital-marketing), j’aide les entreprises francophones à exister dans la recherche, classique comme générative, sur les marchés arabophones. Pour un audit de votre visibilité en arabe, [contactez-moi](/fr/contact).$tia$, $tia$SEO & AI visibility$tia$, $tia$/images/blog/ai-search-visibility.jpg$tia$, 'draft', null, $tia$Visibilité IA sur les marchés arabophones : SEO, AEO et GEO$tia$, $tia$Votre entreprise est bien référencée en France, mais l’est-elle quand un prospect pose la question en arabe à un assistant IA ? Les clés d’une visibilité multilingue dans la recherche générative.$tia$, '2026-11-03T08:00:00Z', '2026-11-03T08:00:00Z')
+on conflict (locale, slug) do nothing;
+
+insert into public.posts (locale, slug, title, excerpt, content, category, cover_image_url, status, published_at, seo_title, seo_description, created_at, updated_at)
+values ('es', 'ai-search-visibility', $tia$Visibilidad en la IA: checklist para empresas que quieren vender en el mundo árabe$tia$, $tia$Tus clientes de Emiratos o Marruecos ya preguntan a asistentes de IA antes de comprar. Esta checklist te ayuda a que tu empresa aparezca en esas respuestas.$tia$, $tia$Tanto si diriges una pyme, una cadena hotelera, un e-commerce o una multinacional, en España, Latinoamérica o cualquier país hispanohablante, si quieres clientes en el mundo árabe hay un cambio que conviene entender: **cada vez más compradores preguntan a un asistente de IA antes de buscar en Google**. Y la respuesta suele mencionar solo a unas pocas empresas.
 
 ## Tres siglas que conviene conocer
 
@@ -877,9 +757,6 @@ Muchas empresas, grandes y pequeñas, activan un plugin de traducción automáti
 
 ## Cómo te puedo ayudar
 
-Trabajo el [marketing digital y la visibilidad en IA](/es/services/digital-marketing) junto con la traducción al árabe desde 2014, así que puedo ocuparme de las dos partes: un árabe natural y una web preparada para aparecer en buscadores e IA. Si quieres saber cómo te ven hoy los asistentes de IA, [escríbeme](/es/contact) y lo revisamos.`,
-    },
-  },
-};
+Trabajo el [marketing digital y la visibilidad en IA](/es/services/digital-marketing) junto con la traducción al árabe desde 2014, así que puedo ocuparme de las dos partes: un árabe natural y una web preparada para aparecer en buscadores e IA. Si quieres saber cómo te ven hoy los asistentes de IA, [escríbeme](/es/contact) y lo revisamos.$tia$, $tia$SEO & AI visibility$tia$, $tia$/images/blog/ai-search-visibility.jpg$tia$, 'draft', null, $tia$Visibilidad en la IA para empresas: checklist SEO, AEO y GEO para el mercado árabe$tia$, $tia$Tus clientes de Emiratos o Marruecos ya preguntan a asistentes de IA antes de comprar. Esta checklist te ayuda a que tu empresa aparezca en esas respuestas.$tia$, '2026-11-04T16:00:00Z', '2026-11-04T16:00:00Z')
+on conflict (locale, slug) do nothing;
 
-export const codePosts: CodePost[] = [msaVsDialects, glossary, raasVsSaas, aiSearchVisibility];

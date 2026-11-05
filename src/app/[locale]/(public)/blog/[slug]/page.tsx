@@ -45,6 +45,7 @@ export async function generateMetadata({
   if (!post) return { title: "Post not found" };
 
   const title = post.seo_title || post.title;
+  const live = await publishedLocalesFor(post.slug, locales);
   const description = post.seo_description || post.excerpt || undefined;
 
   return {
@@ -54,9 +55,9 @@ export async function generateMetadata({
       canonical: `/${locale}/blog/${post.slug}`,
       languages: {
         ...Object.fromEntries(
-          publishedLocalesFor(post.slug, locales).map((l) => [l, `/${l}/blog/${post.slug}`]),
+          live.map((l) => [l, `/${l}/blog/${post.slug}`]),
         ),
-        ...(publishedLocalesFor(post.slug, locales).includes("en")
+        ...(live.includes("en")
           ? { "x-default": `/en/blog/${post.slug}` }
           : {}),
       },

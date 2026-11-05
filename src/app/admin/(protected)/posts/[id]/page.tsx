@@ -26,8 +26,8 @@ export default async function EditPostPage({ params }: { params: Promise<{ id: s
             {post.status}
           </span>
         </h1>
-        {post.status === "published" && (
-          <Link href={`${routes.blog}/${post.slug}`} target="_blank" className={styles.viewLive}>
+        {post.status === "published" && (!post.published_at || Date.parse(post.published_at) <= Date.now()) && (
+          <Link href={`/${post.locale}${routes.blog}/${post.slug}`} target="_blank" className={styles.viewLive}>
             View live &#8599;
           </Link>
         )}
