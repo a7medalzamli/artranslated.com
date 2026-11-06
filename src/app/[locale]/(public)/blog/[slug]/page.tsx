@@ -6,7 +6,7 @@ import { Container } from "@/components/Container/Container";
 import { Markdown } from "@/components/Markdown/Markdown";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { getPublishedPostBySlug, publishedLocalesFor } from "@/lib/blog/posts";
-import { formatDate, readingTimeMinutes } from "@/lib/blog/format";
+import { formatDate, readingTimeLabel, readingTimeMinutes } from "@/lib/blog/format";
 import { getContent } from "@/i18n/content";
 import type { Locale } from "@/i18n";
 import { locales } from "@/i18n/config";
@@ -126,7 +126,7 @@ export default async function BlogPostPage({
 
       <Container className={styles.article}>
         <p className={styles.meta}>
-          {formatDate(post.published_at)} &middot; {readingTimeMinutes(post.content)} {t.blog.minRead}
+          {formatDate(post.published_at, locale)} &middot; {readingTimeLabel(readingTimeMinutes(post.content), locale, t.blog.minRead)}
         </p>
 
         {post.cover_image_url && (

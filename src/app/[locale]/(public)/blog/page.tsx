@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Container } from "@/components/Container/Container";
 import { getPublishedPosts } from "@/lib/blog/posts";
 import { postCategories, categoryLabel } from "@/content/postCategories";
-import { formatDate, readingTimeMinutes } from "@/lib/blog/format";
+import { formatDate, readingTimeLabel, readingTimeMinutes } from "@/lib/blog/format";
 import { getContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getSeoText } from "@/content/seoText";
@@ -56,7 +56,7 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
             excerpt: post.excerpt ?? null,
             category: post.category ?? null,
             categoryLabel: post.category ? categoryLabel(post.category, locale) : null,
-            meta: `${formatDate(post.published_at)} · ${readingTimeMinutes(post.content)} ${b.minRead}`,
+            meta: `${formatDate(post.published_at, locale)} · ${readingTimeLabel(readingTimeMinutes(post.content), locale, b.minRead)}`,
           }))}
           categories={usedCategories.map((c) => ({ id: c, label: categoryLabel(c, locale) }))}
           labels={{ all: b.all, filterAria: b.filterAria, emptyCategory: b.emptyCategory, emptyNone: b.emptyNone }}
