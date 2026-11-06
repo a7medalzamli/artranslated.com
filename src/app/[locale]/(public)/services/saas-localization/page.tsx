@@ -136,9 +136,9 @@ export default async function SaasLocalizationPage({ params }: { params: Promise
         </div>
       </Section>
 
-      <Section title={p.raas.title} intro={p.raas.intro}>
+      <Section title={p.deliverables.title} intro={p.deliverables.intro}>
         <div className={styles.details}>
-          {p.raas.items.map((item) => (
+          {p.deliverables.items.map((item) => (
             <div key={item.title} className={styles.detail}>
               <h3 className={styles.detailTitle}>{item.title}</h3>
               <p>{item.text}</p>
