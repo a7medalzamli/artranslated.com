@@ -94,7 +94,7 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
         </div>
 
         <div className={styles.credBadges}>
-          {/* Badges stacked in one column at the end of the footer, on the left. */}
+          {/* Alconost: logo with its caption, on the left (as originally designed). */}
           <figure className={styles.alconost}>
             <Image
               src="/badges/alconost-logo.svg"

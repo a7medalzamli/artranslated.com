@@ -51,24 +51,26 @@
   }
 }
 
-/* ---- Credential badges: at the end of the footer, stacked in one column on the
-   start side (left; right in Arabic): Alconost, ProZ, ArTA, Translators without
-   Borders. The three rectangular badges are the same size. Not links. */
+/* ---- Credential badges: Alconost (left), then ProZ, ArTA and Translators without Borders ---- */
+/* The three rectangular badges are exactly the same width and height. Not links. */
 .credBadges {
   margin-top: var(--space-2xl);
   margin-bottom: var(--space-md);
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-lg);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-xl);
 }
 
-/* Alconost: logo with its caption underneath. */
+
+/* Alconost: logo with a caption, pushed to the start (left in LTR, right in Arabic). */
 .alconost {
   margin: 0;
+  margin-inline-end: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-xs);
   color: var(--color-text-muted);
   font-size: var(--font-size-base);
@@ -78,6 +80,18 @@
   display: block;
   width: 220px;
   height: auto;
+}
+
+/* When the badges wrap onto several lines (tablets and phones), center them all
+   so Alconost and the other three line up the same way. */
+@media (max-width: 72em) {
+  .credBadges {
+    justify-content: center;
+  }
+
+  .alconost {
+    margin-inline-end: 0;
+  }
 }
 
 .credImg {
