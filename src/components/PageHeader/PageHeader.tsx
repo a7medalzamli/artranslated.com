@@ -1,3 +1,4 @@
+import type React from "react";
 import { Container } from "../Container/Container";
 import { JsonLd } from "../JsonLd/JsonLd";
 import type { Crumb } from "../Breadcrumbs/Breadcrumbs";
@@ -20,6 +21,18 @@ type PageHeaderProps = {
   long?: boolean;
 };
 
+/**
+ * Long titles shrink to fit on one line on wide screens: the font size comes
+ * from the title length and an average letter width (Arabic letters are
+ * narrower than Latin ones in our fonts). Phones still wrap.
+ */
+function fitStyle(title: string, locale?: string) {
+  return {
+    "--title-len": title.length,
+    "--char-w": locale === "ar" ? 0.5 : 0.58,
+  } as React.CSSProperties;
+}
+
 export function PageHeader({ title, description, breadcrumbs, locale, long }: PageHeaderProps) {
   const crumbLd =
     breadcrumbs && breadcrumbs.length > 1 && locale
@@ -39,8 +52,13 @@ export function PageHeader({ title, description, breadcrumbs, locale, long }: Pa
   return (
     <header className={styles.header}>
       {crumbLd && <JsonLd data={crumbLd} />}
-      <Container>
-        <h1 className={long ? styles.titleLong : styles.title}>{title}</h1>
+      <Container className={long ? styles.fit : undefined}>
+        <h1
+          className={long ? styles.titleLong : styles.title}
+          style={long ? fitStyle(title, locale) : undefined}
+        >
+          {title}
+        </h1>
         {description && <p className={styles.description}>{description}</p>}
       </Container>
     </header>

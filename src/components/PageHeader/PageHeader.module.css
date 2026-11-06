@@ -17,3 +17,15 @@
   line-height: 1.2;
   max-width: none;
 }
+
+/* Long titles size themselves to the header width so they fit on one line
+   (see fitStyle in PageHeader.tsx), between 1.5rem and 2.6rem. */
+.fit {
+  container-type: inline-size;
+}
+
+@supports (font-size: 1cqi) {
+  .fit .titleLong {
+    font-size: clamp(1.5rem, calc(100cqi / (var(--title-len) * var(--char-w))), 2.6rem);
+  }
+}
