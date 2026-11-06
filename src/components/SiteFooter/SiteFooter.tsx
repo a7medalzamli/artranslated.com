@@ -32,41 +32,6 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
               />
             </Link>
             <p className={styles.tagline}>{dict.footer.tagline}</p>
-            <div className={styles.credBadges}>
-              {/* Badges stacked under the tagline. */}
-              <figure className={styles.alconost}>
-                <Image
-                  src="/badges/alconost-logo.svg"
-                  alt="Alconost"
-                  width={258}
-                  height={45}
-                  className={styles.alconostLogo}
-                />
-                <figcaption>{dict.footer.alconost}</figcaption>
-              </figure>
-              {/* Rectangular badges, all the same size: ProZ, ArTA, Translators without Borders. */}
-              <Image
-                src="/proz-certified-pro.jpg"
-                alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
-                width={1600}
-                height={528}
-                className={styles.credImg}
-              />
-              <Image
-                src="/badges/arta-badge.png"
-                alt="ArTA accredited translator — Arab Translators Association (جمعية المترجمين العرب)"
-                width={1600}
-                height={528}
-                className={styles.credImg}
-              />
-              <Image
-                src="/twb-trados.jpg"
-                alt="Translators without Borders — I work with Trados"
-                width={1600}
-                height={528}
-                className={styles.credImg}
-              />
-            </div>
           </div>
 
           <nav className={styles.col} aria-label={dict.footer.servicesHeading}>
@@ -128,6 +93,41 @@ export function SiteFooter({ dict, settings }: { dict: Dictionary; settings: Sit
           </div>
         </div>
 
+        <div className={styles.credBadges}>
+          {/* Badges stacked in one column at the end of the footer, on the left. */}
+          <figure className={styles.alconost}>
+            <Image
+              src="/badges/alconost-logo.svg"
+              alt="Alconost"
+              width={258}
+              height={45}
+              className={styles.alconostLogo}
+            />
+            <figcaption>{dict.footer.alconost}</figcaption>
+          </figure>
+          {/* Rectangular badges, all the same size: ProZ, ArTA, Translators without Borders. */}
+          <Image
+            src="/proz-certified-pro.jpg"
+            alt="ProZ.com Certified PRO — Professional Translator, member of the ProZ.com Certified PRO Network"
+            width={1600}
+            height={528}
+            className={styles.credImg}
+          />
+          <Image
+            src="/badges/arta-badge.png"
+            alt="ArTA accredited translator — Arab Translators Association (جمعية المترجمين العرب)"
+            width={1600}
+            height={528}
+            className={styles.credImg}
+          />
+          <Image
+            src="/twb-trados.jpg"
+            alt="Translators without Borders — I work with Trados"
+            width={1600}
+            height={528}
+            className={styles.credImg}
+          />
+        </div>
 
         <div className={styles.bottom}>
           <p>
