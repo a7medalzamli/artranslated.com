@@ -55,6 +55,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     routes.blog,
     routes.contact,
     routes.wordCounter,
+    routes.whichArabic,
   ];
 
   const staticEntries: MetadataRoute.Sitemap = staticPaths.flatMap((path) =>

@@ -10,6 +10,11 @@
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /* A single review (on a service page) uses a readable width, not a third. */
+  .grid:has(> :only-child) {
+    grid-template-columns: minmax(0, 46rem);
+  }
 }
 
 .card {

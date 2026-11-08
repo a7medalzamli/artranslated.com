@@ -13,6 +13,7 @@ import { routes } from "@/lib/routes";
 import serviceStyles from "@/app/[locale]/(public)/services/[service]/servicePage.module.css";
 import { RelatedGuides } from "../RelatedGuides/RelatedGuides";
 import { TrustStrip } from "../Trust/Trust";
+import { Testimonials } from "../Testimonials/Testimonials";
 import { RelatedServices, type LinkKey } from "../RelatedServices/RelatedServices";
 import type { ClusterKey } from "@/content/postCategories";
 import styles from "./InfoPage.module.css";
@@ -25,6 +26,7 @@ export async function InfoPageView({
   structuredData,
   clusters,
   related,
+  reviews,
 }: {
   locale: string;
   page: InfoPage;
@@ -34,6 +36,8 @@ export async function InfoPageView({
   clusters?: ClusterKey[];
   /** Pillar pages linked under "Related services". */
   related?: LinkKey[];
+  /** Names of the client reviews to show (see content/testimonials.ts). */
+  reviews?: string[];
 }) {
   const t = await getContent(locale as Locale);
 
@@ -116,6 +120,8 @@ export async function InfoPageView({
       : [tablesSection, listSection, blocksSection, availabilitySection]
   ).filter(Boolean) as SectionPart[];
 
+  const trustTint = clusters ? sections.length % 2 === 0 : sections.length % 2 !== 0;
+
   return (
     <>
       <JsonLd data={structuredData} />
@@ -150,9 +156,10 @@ export async function InfoPageView({
       {clusters && (
         <RelatedGuides locale={locale} clusters={clusters} tinted={sections.length % 2 !== 0} />
       )}
-      {/* Credibility signals; background continues the alternation. */}
-      <TrustStrip locale={locale} tinted={clusters ? sections.length % 2 === 0 : sections.length % 2 !== 0} />
-      {related && <RelatedServices locale={locale} links={related} tinted={!(clusters ? sections.length % 2 === 0 : sections.length % 2 !== 0)} />}
+      {/* Client reviews (optional) and credibility signals; backgrounds keep alternating. */}
+      {reviews && <Testimonials locale={locale} only={reviews} tinted={trustTint} />}
+      <TrustStrip locale={locale} tinted={reviews ? !trustTint : trustTint} />
+      {related && <RelatedServices locale={locale} links={related} tinted={reviews ? trustTint : !trustTint} />}
       <CTA
         title={p.ctaTitle}
         description={p.ctaDescription}

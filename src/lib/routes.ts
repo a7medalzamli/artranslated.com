@@ -29,6 +29,7 @@ export const routes = {
   blog: "/blog",
   contact: "/contact",
   wordCounter: "/tools/word-counter",
+  whichArabic: "/tools/which-arabic",
   terms: "/terms",
   privacy: "/privacy",
 } as const;

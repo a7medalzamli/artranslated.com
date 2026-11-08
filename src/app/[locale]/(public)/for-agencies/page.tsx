@@ -42,6 +42,6 @@ export default async function ForAgenciesPage({ params }: { params: Promise<{ lo
     provider: { "@id": ids.business },
   };
 
-  return <InfoPageView locale={locale} page={p} image={IMAGE} structuredData={serviceLd} clusters={["buying-guides", "quality"]}
+  return <InfoPageView locale={locale} page={p} image={IMAGE} structuredData={serviceLd} clusters={["buying-guides", "quality"]} reviews={["Irene B.", "Ahmed Mahany", "Huda Al-Hussain"]}
       related={relatedServices["for-agencies"]} />;
 }

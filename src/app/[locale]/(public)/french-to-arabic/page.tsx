@@ -49,6 +49,7 @@ export default async function FrenchToArabicPage({ params }: { params: Promise<{
       structuredData={serviceLd}
       clusters={["translation", "arabic-markets"]}
       related={relatedServices["french-to-arabic"]}
+      reviews={["Ahmed Mahany"]}
     />
   );
 }

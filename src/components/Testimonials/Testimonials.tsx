@@ -8,8 +8,16 @@ const QUOTES: Record<Locale, [string, string]> = { en: ["“", "”"], ar: ["«"
 
 const DATE_LOCALES: Record<Locale, string> = { en: "en-US", ar: "ar-u-nu-latn", fr: "fr-FR", es: "es-ES" };
 
-/** Client reviews from ProZ.com. */
-export function Testimonials({ locale, tinted = false }: { locale: string; tinted?: boolean }) {
+/** Client reviews from ProZ.com. `only` shows just the reviews by those names (e.g. on a matching service page). */
+export function Testimonials({
+  locale,
+  tinted = false,
+  only,
+}: {
+  locale: string;
+  tinted?: boolean;
+  only?: string[];
+}) {
   const loc = (["en", "ar", "fr", "es"].includes(locale) ? locale : "en") as Locale;
   const l = reviewLabels[loc];
   const fmt = new Intl.DateTimeFormat(DATE_LOCALES[loc], { month: "long", year: "numeric" });
@@ -17,7 +25,7 @@ export function Testimonials({ locale, tinted = false }: { locale: string; tinte
   return (
     <Section title={l.title} intro={l.intro} tinted={tinted}>
       <ul className={styles.grid}>
-        {reviews.map((r) => (
+        {reviews.filter((r) => !only || only.includes(r.name)).map((r) => (
           <li key={r.name} className={styles.card}>
             <figure className={styles.figure}>
               <p className={styles.stars} role="img" aria-label={l.stars}>

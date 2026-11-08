@@ -5,6 +5,7 @@ import { CTA } from "@/components/CTA/CTA";
 import { SpecializationDetails } from "@/components/SpecializationDetails/SpecializationDetails";
 import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
 import { TrustStrip } from "@/components/Trust/Trust";
+import { Testimonials } from "@/components/Testimonials/Testimonials";
 import { RelatedServices, relatedServices } from "@/components/RelatedServices/RelatedServices";
 import { getContent, getStaticContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
@@ -78,8 +79,9 @@ export default async function TechnicalPage({ params }: { params: Promise<{ loca
 
       <SpecializationDetails locale={locale} slug="technical" />
       <TrustStrip locale={locale} />
-      <RelatedGuides locale={locale} clusters={["industries"]} tinted />
-      <RelatedServices locale={locale} links={relatedServices.technical} />
+      <Testimonials locale={locale} only={["Irene B."]} tinted />
+      <RelatedGuides locale={locale} clusters={["industries"]} />
+      <RelatedServices locale={locale} links={relatedServices.technical} tinted />
 
       <CTA
         title={s.ctaTitle}
