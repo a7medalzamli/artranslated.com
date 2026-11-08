@@ -190,18 +190,18 @@ const en: WhichArabicText = {
   faqTitle: "Questions about MSA and dialects",
   faq: [
     {
-      question: "What is Modern Standard Arabic (MSA)?",
-      answer:
+      q: "What is Modern Standard Arabic (MSA)?",
+      a:
         "MSA (al-fuṣḥā) is the shared written language of the Arab world, used in newspapers, books, official documents, education and most websites. Every educated Arabic speaker understands it, from Morocco to Oman.",
     },
     {
-      question: "Is one Arabic version enough for every country?",
-      answer:
+      q: "Is one Arabic version enough for every country?",
+      a:
         "For most content, yes. One well-written MSA version works across the region. Only marketing, social media and informal video aimed at one country usually benefit from a local version.",
     },
     {
-      question: "Does MSA sound too formal for marketing?",
-      answer:
+      q: "Does MSA sound too formal for marketing?",
+      a:
         "It doesn't have to. MSA can be warm and simple. A good translator chooses everyday words and a tone that suits your brand, from formal to friendly.",
     },
   ],
@@ -309,18 +309,18 @@ const ar: WhichArabicText = {
   faqTitle: "أسئلة عن الفصحى واللهجات",
   faq: [
     {
-      question: "ما العربية الفصحى المعاصرة (MSA)؟",
-      answer:
+      q: "ما العربية الفصحى المعاصرة (MSA)؟",
+      a:
         "الفصحى هي اللغة المكتوبة المشتركة في العالم العربي، وتُستخدم في الصحف والكتب والمستندات الرسمية والتعليم ومعظم المواقع الإلكترونية. ويفهمها كل متحدث متعلم بالعربية، من المغرب إلى عُمان.",
     },
     {
-      question: "هل تكفي نسخة عربية واحدة لكل الدول؟",
-      answer:
+      q: "هل تكفي نسخة عربية واحدة لكل الدول؟",
+      a:
         "لمعظم المحتوى، نعم. نسخة فصحى واحدة مكتوبة جيدًا تصلح للمنطقة كلها. أما التسويق ووسائل التواصل والفيديو غير الرسمي الموجّه إلى دولة واحدة، فيستفيد عادةً من نسخة محلية.",
     },
     {
-      question: "هل الفصحى رسمية أكثر من اللازم للتسويق؟",
-      answer:
+      q: "هل الفصحى رسمية أكثر من اللازم للتسويق؟",
+      a:
         "ليس بالضرورة. يمكن أن تكون الفصحى دافئة وبسيطة. فالمترجم الجيد يختار كلمات يومية ونبرة تناسب علامتك التجارية، من الرسمية إلى الودودة.",
     },
   ],
@@ -428,18 +428,18 @@ const fr: WhichArabicText = {
   faqTitle: "Questions sur le MSA et les dialectes",
   faq: [
     {
-      question: "Qu’est-ce que l’arabe standard moderne (MSA) ?",
-      answer:
+      q: "Qu’est-ce que l’arabe standard moderne (MSA) ?",
+      a:
         "Le MSA (al-fuṣḥā) est la langue écrite commune du monde arabe : presse, livres, documents officiels, enseignement et la plupart des sites web. Tout arabophone instruit le comprend, du Maroc à Oman.",
     },
     {
-      question: "Une seule version arabe suffit-elle pour tous les pays ?",
-      answer:
+      q: "Une seule version arabe suffit-elle pour tous les pays ?",
+      a:
         "Pour la plupart des contenus, oui. Une version en MSA bien écrite fonctionne dans toute la région. Seuls le marketing, les réseaux sociaux et les vidéos informelles destinés à un seul pays gagnent généralement à avoir une version locale.",
     },
     {
-      question: "Le MSA est-il trop formel pour le marketing ?",
-      answer:
+      q: "Le MSA est-il trop formel pour le marketing ?",
+      a:
         "Pas forcément. Le MSA peut être chaleureux et simple. Un bon traducteur choisit des mots du quotidien et un ton adapté à votre marque, du formel au convivial.",
     },
   ],
@@ -547,18 +547,18 @@ const es: WhichArabicText = {
   faqTitle: "Preguntas sobre el MSA y los dialectos",
   faq: [
     {
-      question: "¿Qué es el árabe estándar moderno (MSA)?",
-      answer:
+      q: "¿Qué es el árabe estándar moderno (MSA)?",
+      a:
         "El MSA (al-fuṣḥā) es la lengua escrita común del mundo árabe: prensa, libros, documentos oficiales, educación y la mayoría de las webs. Lo entiende cualquier hablante de árabe con estudios, de Marruecos a Omán.",
     },
     {
-      question: "¿Basta con una sola versión en árabe para todos los países?",
-      answer:
+      q: "¿Basta con una sola versión en árabe para todos los países?",
+      a:
         "Para la mayoría del contenido, sí. Una versión en MSA bien escrita funciona en toda la región. Solo el marketing, las redes sociales y los vídeos informales para un solo país suelen ganar con una versión local.",
     },
     {
-      question: "¿El MSA es demasiado formal para el marketing?",
-      answer:
+      q: "¿El MSA es demasiado formal para el marketing?",
+      a:
         "No tiene por qué. El MSA puede ser cálido y sencillo. Un buen traductor elige palabras cotidianas y un tono adecuado a tu marca, de formal a cercano.",
     },
   ],
