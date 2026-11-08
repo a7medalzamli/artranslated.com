@@ -1,8 +1,8 @@
-import type React from "react";
 import { Container } from "../Container/Container";
 import { JsonLd } from "../JsonLd/JsonLd";
 import type { Crumb } from "../Breadcrumbs/Breadcrumbs";
 import { siteUrl } from "@/lib/seo";
+import { fitTitle } from "@/lib/fitTitle";
 import styles from "./PageHeader.module.css";
 
 type PageHeaderProps = {
@@ -20,18 +20,6 @@ type PageHeaderProps = {
   /** Smaller title for long headings (blog articles), so it uses the full width. */
   long?: boolean;
 };
-
-/**
- * Long titles shrink to fit on one line on wide screens: the font size comes
- * from the title length and an average letter width (Arabic letters are
- * narrower than Latin ones in our fonts). Phones still wrap.
- */
-function fitStyle(title: string, locale?: string) {
-  return {
-    "--title-len": title.length,
-    "--char-w": locale === "ar" ? 0.5 : 0.58,
-  } as React.CSSProperties;
-}
 
 export function PageHeader({ title, description, breadcrumbs, locale, long }: PageHeaderProps) {
   const crumbLd =
@@ -52,11 +40,8 @@ export function PageHeader({ title, description, breadcrumbs, locale, long }: Pa
   return (
     <header className={styles.header}>
       {crumbLd && <JsonLd data={crumbLd} />}
-      <Container className={long ? styles.fit : undefined}>
-        <h1
-          className={long ? styles.titleLong : styles.title}
-          style={long ? fitStyle(title, locale) : undefined}
-        >
+      <Container className={long ? styles.fit : "fit-box"}>
+        <h1 className={long ? styles.titleLong : "fit-title"} style={fitTitle(title)}>
           {title}
         </h1>
         {description && <p className={styles.description}>{description}</p>}

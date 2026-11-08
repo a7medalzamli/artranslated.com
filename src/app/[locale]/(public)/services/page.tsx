@@ -13,6 +13,7 @@ import { routes } from "@/lib/routes";
 import { site } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { breadcrumbs } from "@/lib/entity";
+import { fitTitle } from "@/lib/fitTitle";
 import styles from "./services.module.css";
 
 /** Dictionary key for each service's menu label. */
@@ -59,8 +60,10 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       <JsonLd data={crumbLd} />
       {/* ---- Header: title and a wide photo ---- */}
       <header className={styles.hero}>
-        <Container>
-          <h1 className={styles.heroTitle}>{overview.pageTitle}</h1>
+        <Container className="fit-box">
+          <h1 className={`${styles.heroTitle} fit-title`} style={fitTitle(overview.pageTitle)}>
+            {overview.pageTitle}
+          </h1>
           <div className={styles.banner}>
             <Image src="/images/photos/services-hero.jpg" alt={overview.pageTitle} fill priority sizes="100vw" />
           </div>
@@ -101,8 +104,10 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       <section className={styles.closing}>
         <Container>
           <div className={styles.closingGrid}>
-            <div>
-              <h2 className={styles.closingTitle}>{overview.closingTitle}</h2>
+            <div className="fit-box">
+              <h2 className={`${styles.closingTitle} fit-title`} style={fitTitle(overview.closingTitle)}>
+                {overview.closingTitle}
+              </h2>
               <p className={styles.closingText}>{overview.closingText}</p>
               <Link href={routes.contact} className={styles.button}>
                 {overview.getInTouch}

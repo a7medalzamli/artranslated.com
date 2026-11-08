@@ -185,3 +185,24 @@ select {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---- Titles on one line ----
+   Page and section titles shrink to fit on one line on tablets and computers
+   (see src/lib/fitTitle.ts for the size calculation). Phones wrap as usual. */
+@media (min-width: 48em) {
+  @supports (font-size: 1cqi) {
+    .fit-box {
+      container-type: inline-size;
+    }
+
+    h1.fit-title {
+      font-size: clamp(1.5rem, calc(100cqi / (var(--title-len) * var(--char-w))), var(--fit-max, var(--font-size-h1)));
+      max-width: none;
+    }
+
+    h2.fit-title {
+      font-size: clamp(1.3rem, calc(100cqi / (var(--title-len) * var(--char-w))), var(--fit-max, var(--font-size-h2)));
+      max-width: none;
+    }
+  }
+}

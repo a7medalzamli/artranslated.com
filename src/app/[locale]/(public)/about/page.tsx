@@ -13,6 +13,7 @@ import { site } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { breadcrumbs, ids } from "@/lib/entity";
 import { siteUrl } from "@/lib/seo";
+import { fitTitle } from "@/lib/fitTitle";
 import styles from "./about.module.css";
 
 export async function generateMetadata({
@@ -54,8 +55,10 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <JsonLd data={profileLd} />
       {/* Top box: short heading */}
       <header className={styles.header}>
-        <Container>
-          <h1 className={styles.heading}>{a.heading}</h1>
+        <Container className="fit-box">
+          <h1 className={`${styles.heading} fit-title`} style={fitTitle(a.heading)}>
+            {a.heading}
+          </h1>
         </Container>
       </header>
 

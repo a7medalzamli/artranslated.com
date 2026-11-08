@@ -1,5 +1,6 @@
 import { Container } from "../Container/Container";
 import { Button } from "../Button/Button";
+import { fitTitle } from "@/lib/fitTitle";
 import styles from "./CTA.module.css";
 
 type CTAAction = { label: string; href: string };
@@ -16,8 +17,10 @@ export function CTA({ title, description, primary, secondary }: CTAProps) {
     <section className={styles.cta}>
       <Container>
         <div className={styles.inner}>
-          <div className={styles.text}>
-            <h2 className={styles.title}>{title}</h2>
+          <div className={`${styles.text} fit-box`}>
+            <h2 className={`${styles.title} fit-title`} style={fitTitle(title)}>
+              {title}
+            </h2>
             {description && <p className={styles.description}>{description}</p>}
           </div>
           <div className={styles.actions}>

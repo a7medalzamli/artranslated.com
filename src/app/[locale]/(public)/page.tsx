@@ -19,6 +19,7 @@ import { RelatedServices } from "@/components/RelatedServices/RelatedServices";
 import { RelatedGuides } from "@/components/RelatedGuides/RelatedGuides";
 import { clusters } from "@/content/postCategories";
 import { getFaqs } from "@/content/faqs";
+import { fitTitle } from "@/lib/fitTitle";
 import styles from "./page.module.css";
 
 export async function generateMetadata({
@@ -162,9 +163,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* ---- Hero ---- */}
       <section className={styles.hero}>
         <Container>
-          <div className={styles.heroInner}>
+          <div className={`${styles.heroInner} fit-box`}>
             {content.hero.label && <p className={styles.heroLabel}>{content.hero.label}</p>}
-            <h1 className={styles.heroTitle}>{content.hero.title}</h1>
+            <h1 className={`${styles.heroTitle} fit-title`} style={fitTitle(content.hero.title)}>
+              {content.hero.title}
+            </h1>
             <p className={styles.heroLead}>{getHomeSummary(locale)}</p>
             <div className={styles.heroActions}>
               <Button href={routes.contact} variant="primary" size="lg">
@@ -276,9 +279,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* ---- Why partner / QA ---- */}
       <section className={styles.section}>
         <Container>
-          <div className={styles.whyHead}>
+          <div className={`${styles.whyHead} fit-box`}>
             {content.why.eyebrow && <p className={styles.label}>{content.why.eyebrow}</p>}
-            <h2 className={styles.whyTitle}>{content.why.title}</h2>
+            <h2 className={`${styles.whyTitle} fit-title`} style={fitTitle(content.why.title)}>
+              {content.why.title}
+            </h2>
             <p className={styles.whyIntro}>{content.why.intro}</p>
           </div>
           <ul className={styles.whyList}>
