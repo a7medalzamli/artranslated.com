@@ -7,6 +7,7 @@ import { getContent, getStaticContent } from "@/i18n/content";
 import { buildCmsMetadata } from "@/lib/cms/metadata";
 import { getSeoText } from "@/content/seoText";
 import { getServicePages, serviceSlugs } from "@/content/servicePages";
+import { getSaasPage } from "@/content/saasPage";
 import { isExtraSpecShown, isSpecShown } from "@/content/specializations";
 import type { Locale } from "@/i18n";
 import { site } from "@/lib/site";
@@ -42,7 +43,12 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     ...t.cards.specializations.filter(isSpecShown).map((s) => s.title),
     ...servicePages.shared.extraSpecializations.filter(isExtraSpecShown).map((s) => s.title),
   ];
-  const serviceOptions = serviceSlugs.map((slug) => servicePages.pages[slug].title);
+  // SaaS localization has its own page, so it is added after transcreation.
+  const serviceOptions = serviceSlugs.flatMap((slug) =>
+    slug === "transcreation"
+      ? [servicePages.pages[slug].title, getSaasPage(loc).title]
+      : [servicePages.pages[slug].title],
+  );
 
   const crumbT = await getContent(locale as Locale);
   const crumbLd = breadcrumbs(locale, crumbT.common.homeCrumb, [{ name: crumbT.contact.crumb, path: routes.contact }]);

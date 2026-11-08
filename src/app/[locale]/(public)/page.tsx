@@ -49,6 +49,30 @@ const HOME_LINKS: Record<Locale, { services: string; guides: string }> = {
   es: { services: "Servicios", guides: "Últimas guías" },
 };
 
+/**
+ * Hero call to action and the credentials shown under it. A specific offer
+ * ("free quote") converts better than a general "Let's talk", and proof
+ * right under the button answers "can I trust this person?" early.
+ */
+const HERO: Record<Locale, { cta: string; proof: string[] }> = {
+  en: {
+    cta: "Get a free quote",
+    proof: ["ProZ.com Certified PRO", "Certified by Alconost", "Accredited by ArTA", "Five-star client reviews"],
+  },
+  ar: {
+    cta: "احصل على عرض سعر مجاني",
+    proof: ["ProZ.com Certified PRO", "شهادة من Alconost", "اعتماد جمعية المترجمين العرب (ArTA)", "تقييمات عملاء من خمس نجوم"],
+  },
+  fr: {
+    cta: "Obtenir un devis gratuit",
+    proof: ["Certifié PRO ProZ.com", "Certifié par Alconost", "Accrédité par l’ArTA", "Avis clients cinq étoiles"],
+  },
+  es: {
+    cta: "Pide un presupuesto gratis",
+    proof: ["Certified PRO de ProZ.com", "Certificado por Alconost", "Acreditado por la ArTA", "Opiniones de cinco estrellas"],
+  },
+};
+
 /** Two entry points under the hero: direct clients and translation agencies. */
 const audience: Record<
   Locale,
@@ -144,12 +168,17 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <p className={styles.heroLead}>{getHomeSummary(locale)}</p>
             <div className={styles.heroActions}>
               <Button href={routes.contact} variant="primary" size="lg">
-                {t.common.letsTalk}
+                {HERO[loc].cta}
               </Button>
               <Link href={routes.about} className={styles.heroSecondary}>
                 {getDictionary(loc).nav.about}
               </Link>
             </div>
+            <ul className={styles.heroProof}>
+              {HERO[loc].proof.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
 
             {/* Language pair: source languages → Arabic. Names stay as text
                 so search engines read them; the arrow is decorative. */}

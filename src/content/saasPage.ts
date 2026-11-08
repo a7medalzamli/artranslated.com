@@ -44,14 +44,6 @@ const en: SaasPage = {
       title: "Who it’s for",
       text: "SaaS companies, start-ups and scale-ups launching in Arabic-speaking markets, and localization agencies that need a dedicated Arabic linguist for software accounts, from the first launch to continuous releases.",
     },
-    {
-      title: "How it works",
-      text: "I work in your localization platform or in the files your developers export, such as JSON or XLIFF, build a glossary of product terms, and translate with your character limits in mind. Strings are then reviewed in context, in screenshots or a test environment, to catch right-to-left layout, truncation and plural-form issues before release.",
-    },
-    {
-      title: "What you receive",
-      text: "A localized Arabic product ready to ship, a product glossary and style guide, a list of any layout or internationalization issues found during review, and quick turnaround on new strings with each release, so Arabic stays in step with your other languages.",
-    },
   ],
   steps: {
     title: "How Arabic SaaS localization works",
@@ -136,14 +128,6 @@ const ar: SaasPage = {
     {
       title: "لمن هذه الخدمة",
       text: "شركات البرمجيات كخدمة (SaaS) والشركات الناشئة والنامية التي تطلق منتجاتها في الأسواق الناطقة بالعربية، ووكالات التوطين التي تحتاج إلى لغوي مختص بالعربية لحسابات البرمجيات، من الإطلاق الأول حتى الإصدارات المتتالية.",
-    },
-    {
-      title: "كيف يسير العمل",
-      text: "أعمل على منصة التوطين التي تستخدمها أو على الملفات التي يصدّرها مطوّروك، مثل JSON أو XLIFF، وأبني مسردًا لمصطلحات المنتج، وأترجم مع مراعاة حدود عدد الأحرف. ثم تُراجَع النصوص في سياقها، عبر لقطات الشاشة أو بيئة تجريبية، لاكتشاف مشكلات التصميم من اليمين إلى اليسار (RTL) واقتطاع النصوص وصيغ الجمع قبل الإصدار.",
-    },
-    {
-      title: "ما الذي تحصل عليه",
-      text: "منتج عربي مُوطَّن جاهز للإطلاق، ومسرد مصطلحات للمنتج ودليل أسلوب، وقائمة بأي مشكلات في التصميم أو التدويل (i18n) تُكتشف أثناء المراجعة، وتسليم سريع للنصوص الجديدة مع كل إصدار، لتبقى العربية مواكبة للغاتك الأخرى.",
     },
   ],
   steps: {
@@ -230,14 +214,6 @@ const fr: SaasPage = {
       title: "Pour qui",
       text: "Les éditeurs SaaS, start-up et scale-up qui se lancent sur les marchés arabophones, ainsi que les agences de localisation qui ont besoin d’un linguiste arabe dédié pour leurs comptes logiciels, du premier lancement aux mises à jour continues.",
     },
-    {
-      title: "Comment ça se passe",
-      text: "Je travaille dans votre plateforme de localisation ou sur les fichiers exportés par vos développeurs, comme JSON ou XLIFF, je constitue un glossaire des termes du produit et je traduis en tenant compte de vos limites de caractères. Les chaînes sont ensuite vérifiées en contexte, sur captures d’écran ou dans un environnement de test, pour repérer avant la mise en production les problèmes de mise en page de droite à gauche, de troncature et de pluriels.",
-    },
-    {
-      title: "Ce que vous recevez",
-      text: "Un produit localisé en arabe prêt à être publié, un glossaire produit et un guide de style, la liste des éventuels problèmes de mise en page ou d’internationalisation relevés pendant la vérification, et une livraison rapide des nouvelles chaînes à chaque version, pour que l’arabe suive le rythme de vos autres langues.",
-    },
   ],
   steps: {
     title: "Comment se déroule la localisation SaaS en arabe",
@@ -322,14 +298,6 @@ const es: SaasPage = {
     {
       title: "Para quién es",
       text: "Empresas SaaS, startups y scale-ups que se lanzan en mercados de habla árabe, y agencias de localización que necesitan un lingüista de árabe dedicado para sus cuentas de software, desde el primer lanzamiento hasta las versiones continuas.",
-    },
-    {
-      title: "Cómo funciona",
-      text: "Trabajo en tu plataforma de localización o en los archivos que exportan tus desarrolladores, como JSON o XLIFF, creo un glosario de términos del producto y traduzco teniendo en cuenta tus límites de caracteres. Después, las cadenas se revisan en contexto, en capturas de pantalla o en un entorno de pruebas, para detectar problemas de diseño de derecha a izquierda, textos cortados y formas del plural antes del lanzamiento.",
-    },
-    {
-      title: "Qué recibes",
-      text: "Un producto localizado al árabe listo para publicar, un glosario del producto y una guía de estilo, una lista de los problemas de diseño o internacionalización detectados en la revisión y entregas rápidas de las cadenas nuevas en cada versión, para que el árabe avance al mismo ritmo que tus otros idiomas.",
     },
   ],
   steps: {

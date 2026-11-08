@@ -21,22 +21,22 @@ type CountUpProps = {
  */
 export function CountUp({ value, prefix = "", suffix = "", duration = 1600, className }: CountUpProps) {
   const ref = useRef<HTMLSpanElement | null>(null);
-  const [display, setDisplay] = useState(0);
+  // The server renders the final value, so search engines and visitors without
+  // JS see the real number; the count from 0 only runs in the browser.
+  const [display, setDisplay] = useState(value);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion || !("IntersectionObserver" in window)) {
-      const id = requestAnimationFrame(() => setDisplay(value));
-      return () => cancelAnimationFrame(id);
-    }
+    if (reduceMotion || !("IntersectionObserver" in window)) return;
 
     let frame = 0;
     let start = 0;
 
     const run = () => {
+      setDisplay(0);
       const step = (now: number) => {
         if (!start) start = now;
         const progress = Math.min((now - start) / duration, 1);
