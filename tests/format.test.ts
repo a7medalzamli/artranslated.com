@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { slugify, readingTimeMinutes, formatDate } from "@/lib/blog/format";
+import { slugify, readingTimeMinutes, readingTimeLabel, formatDate } from "@/lib/blog/format";
 
 describe("slugify", () => {
   it("lowercases and hyphenates", () => {
