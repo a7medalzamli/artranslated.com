@@ -46,7 +46,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Ahmed Alzamli" }],
   creator: "Ahmed Alzamli",
-  alternates: { canonical: "/" },
+  // No site-wide canonical: every page sets its own, and a default of "/" made
+  // "not found" and error pages claim to be copies of the homepage.
   openGraph: {
     type: "website",
     locale: "en",
