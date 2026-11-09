@@ -1,0 +1,18 @@
+/* New pages fade in and rise slightly. Visitors who ask for less motion
+   see the page straight away. */
+@media (prefers-reduced-motion: no-preference) {
+  .page {
+    animation: pageIn 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

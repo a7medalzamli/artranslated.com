@@ -14,7 +14,7 @@ type SectionProps = {
 export function Section({ title, intro, children, tinted = false, narrow = false }: SectionProps) {
   return (
     <section className={`${styles.section} ${tinted ? styles.tinted : ""}`.trim()}>
-      <Container size={narrow ? "narrow" : "default"} className="fit-box">
+      <Container size={narrow ? "narrow" : "default"} className="fit-box scroll-reveal">
         {title && (
           <h2 className={`${styles.title} fit-title`} style={fitTitle(title)}>
             {title}

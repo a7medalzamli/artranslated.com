@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter/SiteFooter";
 import { getSiteSettings } from "@/lib/content/getSiteSettings";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
+import { NavProgress } from "@/components/NavProgress/NavProgress";
 import { entityGraph } from "@/lib/entity";
 import styles from "./layout.module.css";
 
@@ -36,6 +37,7 @@ export default async function PublicLayout({
       <a href="#main-content" className="skip-link">
         {dict.actions.skipToContent}
       </a>
+      <NavProgress />
       <SiteHeader dict={dict} settings={settings} />
       <main id="main-content" className={styles.main}>
         {children}

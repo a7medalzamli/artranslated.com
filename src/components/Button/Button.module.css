@@ -13,7 +13,21 @@
   transition:
     background var(--transition-fast),
     color var(--transition-fast),
-    border-color var(--transition-fast);
+    border-color var(--transition-fast),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .button:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.button:not(:disabled):active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: none;
 }
 
 .md {

@@ -238,3 +238,18 @@
     transition: none;
   }
 }
+
+/* A soft shadow appears under the header once the page scrolls. */
+@supports (animation-timeline: scroll()) {
+  .header {
+    animation: headerShadow linear both;
+    animation-timeline: scroll();
+    animation-range: 0 80px;
+  }
+}
+
+@keyframes headerShadow {
+  to {
+    box-shadow: var(--shadow-md);
+  }
+}

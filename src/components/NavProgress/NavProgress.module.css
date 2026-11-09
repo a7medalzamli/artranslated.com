@@ -1,0 +1,32 @@
+.bar {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: 1000;
+  height: 3px;
+  width: 100%;
+  background: var(--color-accent-strong);
+  transform-origin: left center;
+  transform: scaleX(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+[dir="rtl"] .bar {
+  transform-origin: right center;
+}
+
+/* Grows quickly at first, then slows down, so it never "finishes" early. */
+.loading {
+  opacity: 1;
+  transform: scaleX(0.8);
+  transition: transform 8s cubic-bezier(0.1, 0.8, 0.2, 1);
+}
+
+.done {
+  opacity: 0;
+  transform: scaleX(1);
+  transition:
+    transform 200ms ease-out,
+    opacity 300ms ease 150ms;
+}
