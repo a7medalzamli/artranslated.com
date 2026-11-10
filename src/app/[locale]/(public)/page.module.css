@@ -27,10 +27,9 @@
 
 .heroTitle {
   font-size: clamp(2.1rem, 1.5rem + 2.6vw, 3.1rem);
-  --fit-max: clamp(2.1rem, 1.5rem + 2.6vw, 3.1rem);
   color: var(--color-text);
   margin-inline: auto;
-  max-width: 28ch;
+  max-width: 34ch;
   text-wrap: balance;
 }
 

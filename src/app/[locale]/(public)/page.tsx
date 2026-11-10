@@ -163,9 +163,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* ---- Hero ---- */}
       <section className={styles.hero}>
         <Container>
-          <div className={`${styles.heroInner} fit-box`}>
+          <div className={styles.heroInner}>
             {content.hero.label && <p className={styles.heroLabel}>{content.hero.label}</p>}
-            <h1 className={`${styles.heroTitle} fit-title`} style={fitTitle(content.hero.title)}>
+            {/* The main headline stays full size and wraps into even lines. */}
+            <h1 className={styles.heroTitle}>
               {content.hero.title}
             </h1>
             <p className={styles.heroLead}>{getHomeSummary(locale)}</p>
