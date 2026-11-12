@@ -7,6 +7,26 @@ import styles from "./contact.module.css";
 
 const initialState: QuoteState = { ok: false, error: null };
 
+/** "How did you hear about me?": shows which channels bring clients, including AI assistants. */
+const HEARD: Record<string, { label: string; options: [string, string][] }> = {
+  en: {
+    label: "How did you hear about me? (optional)",
+    options: [["", "Choose…"], ["google", "Google or another search engine"], ["ai", "AI assistant (ChatGPT, Claude, Gemini, Perplexity…)"], ["linkedin", "LinkedIn"], ["proz", "ProZ.com or a translator directory"], ["referral", "Recommended by someone"], ["other", "Other"]],
+  },
+  ar: {
+    label: "كيف عرفت عني؟ (اختياري)",
+    options: [["", "اختر…"], ["google", "Google أو محرك بحث آخر"], ["ai", "مساعد ذكاء اصطناعي (AI) مثل ChatGPT أو Claude أو Gemini"], ["linkedin", "LinkedIn"], ["proz", "ProZ.com أو دليل للمترجمين"], ["referral", "توصية من شخص ما"], ["other", "غير ذلك"]],
+  },
+  fr: {
+    label: "Comment m’avez-vous connu ? (facultatif)",
+    options: [["", "Choisir…"], ["google", "Google ou un autre moteur de recherche"], ["ai", "Assistant IA (ChatGPT, Claude, Gemini, Perplexity…)"], ["linkedin", "LinkedIn"], ["proz", "ProZ.com ou un annuaire de traducteurs"], ["referral", "Recommandation"], ["other", "Autre"]],
+  },
+  es: {
+    label: "¿Cómo me conociste? (opcional)",
+    options: [["", "Elegir…"], ["google", "Google u otro buscador"], ["ai", "Asistente de IA (ChatGPT, Claude, Gemini, Perplexity…)"], ["linkedin", "LinkedIn"], ["proz", "ProZ.com o un directorio de traductores"], ["referral", "Recomendación de alguien"], ["other", "Otro"]],
+  },
+};
+
 export type QuoteFormLabels = {
   successTitle: string;
   successText: string;
@@ -157,6 +177,17 @@ export function QuoteForm({
         <span>{labels.details}</span>
         <textarea name="message" rows={5} placeholder={labels.detailsPlaceholder} />
         {fieldError("message") && <em className={styles.err}>{fieldError("message")}</em>}
+      </label>
+
+      <label className={styles.field}>
+        <span>{(HEARD[locale] ?? HEARD.en).label}</span>
+        <select name="heard" defaultValue="">
+          {(HEARD[locale] ?? HEARD.en).options.map(([value, text]) => (
+            <option key={value || "none"} value={value}>
+              {text}
+            </option>
+          ))}
+        </select>
       </label>
 
       <label className={styles.checkbox}>

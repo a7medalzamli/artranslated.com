@@ -32,3 +32,30 @@
 .pillar a {
   color: var(--color-accent);
 }
+
+.meta a {
+  color: inherit;
+  font-weight: var(--weight-semibold);
+}
+
+/* "In short": the article's answer up front. */
+.summary {
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-surface);
+  border-inline-start: 4px solid var(--color-accent-strong);
+  border-radius: var(--radius-md);
+}
+
+.summary strong {
+  display: block;
+  margin-bottom: var(--space-2xs);
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--tracking-label);
+  color: var(--color-accent-strong);
+}
+
+.summary p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-normal);
+}

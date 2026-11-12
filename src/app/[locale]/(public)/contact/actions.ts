@@ -63,7 +63,21 @@ export async function submitQuote(_prev: QuoteState, formData: FormData): Promis
   const pages = getServicePages(locale).pages;
   const allowed = [...serviceSlugs.map((slug) => pages[slug].title), getSaasPage(locale).title];
   const service = allowed.includes(serviceRaw) ? serviceRaw : "";
-  const composedMessage = [service ? `Service needed: ${service}` : "", input.message ?? ""]
+  // "How did you hear about me?" also goes into the message (fixed list, so nothing else is accepted).
+  const HEARD_LABELS: Record<string, string> = {
+    google: "Google or another search engine",
+    ai: "AI assistant (ChatGPT, Claude, Gemini, Perplexity…)",
+    linkedin: "LinkedIn",
+    proz: "ProZ.com or a translator directory",
+    referral: "Recommended by someone",
+    other: "Other",
+  };
+  const heard = HEARD_LABELS[String(formData.get("heard") ?? "")] ?? "";
+  const composedMessage = [
+    service ? `Service needed: ${service}` : "",
+    heard ? `Heard about me: ${heard}` : "",
+    input.message ?? "",
+  ]
     .filter(Boolean)
     .join("\n\n");
   const finalInput = { ...input, message: composedMessage };

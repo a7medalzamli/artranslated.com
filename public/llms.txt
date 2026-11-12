@@ -12,7 +12,7 @@
 - Contact: ahmed@artranslated.com, +970 594 808 782 (WhatsApp and Telegram)
 - Site languages: English (/en), Arabic (/ar), French (/fr), Spanish (/es)
 
-Last updated: 2026-11-02
+Last updated: 2026-11-12
 
 ## Quick answers
 
@@ -55,6 +55,7 @@ Last updated: 2026-11-02
 - [Confidentiality](https://www.artranslated.com/en/confidentiality): NDAs and secure file handling
 - [Contact and quotes](https://www.artranslated.com/en/contact)
 - [Free word counter and Arabic translation time estimator](https://www.artranslated.com/en/tools/word-counter) (also in Spanish, French and Arabic: /es/, /fr/, /ar/)
+- [Which Arabic should I use? (free tool)](https://www.artranslated.com/en/tools/which-arabic): pick the content type and audience; recommends Modern Standard Arabic or a dialect, with the reason (also in /ar/, /fr/, /es/)
 
 - [Arabic-speaking markets](https://www.artranslated.com/en/arabic-markets): the Gulf, the Levant, Egypt, the Maghreb and Iraq; which Arabic each market reads and how to reach it
 - [French to Arabic translation](https://www.artranslated.com/en/french-to-arabic): direct translation from French, with no English relay, for the French-speaking world
@@ -65,3 +66,4 @@ Last updated: 2026-11-02
 
 - [Which Arabic should you use? MSA vs dialects](https://www.artranslated.com/en/blog/which-arabic-msa-vs-dialects): when to use Modern Standard Arabic or Gulf, Egyptian, Levantine, Iraqi and Maghrebi dialects, by content type
 - [Arabic localization glossary](https://www.artranslated.com/en/blog/arabic-localization-glossary): localization, i18n, RTL, CAT tools, translation memory, MTPE, TEP, LQA, MQM and transcreation explained
+- [How to get your business cited in AI answers: SEO, AEO and GEO explained](https://www.artranslated.com/en/blog/ai-search-visibility): how search engine, answer engine and generative engine optimization work together, with seven practical steps
