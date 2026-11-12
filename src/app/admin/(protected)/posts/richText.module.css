@@ -1,0 +1,149 @@
+.wrap {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+/* The toolbar stays visible while scrolling through a long article. */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: var(--space-2xs) var(--space-xs);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding-inline-end: var(--space-2xs);
+  margin-inline-end: var(--space-2xs);
+  border-inline-end: 1px solid var(--color-border);
+}
+
+.group:last-of-type {
+  border-inline-end: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--color-bg);
+  border-color: var(--color-border);
+}
+
+.btn[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--color-primary) 14%, var(--color-bg));
+  border-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+  color: var(--color-primary);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.glyph {
+  font-size: 1.05rem;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1;
+}
+
+.select {
+  height: 2.1rem;
+  padding: 0 0.5rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  min-width: 9rem;
+}
+
+.textBtn {
+  height: 2.1rem;
+  padding: 0 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.textBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* The writing area looks like the published article. */
+.editable {
+  min-height: 26rem;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: var(--space-lg);
+  outline: none;
+  font-size: var(--font-size-base);
+}
+
+.editable:focus-visible {
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--color-primary) 35%, transparent);
+}
+
+.editable img {
+  max-width: 100%;
+  height: auto;
+}
+
+.editable table {
+  margin-block: var(--space-md);
+}
+
+.editable td,
+.editable th {
+  min-width: 4rem;
+}
+
+.editable th {
+  background: var(--color-surface);
+}
+
+.editable hr {
+  border: none;
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  padding: var(--space-2xs) var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.notice {
+  margin: 0 var(--space-sm) var(--space-sm);
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+}

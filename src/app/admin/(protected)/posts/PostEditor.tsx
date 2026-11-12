@@ -4,6 +4,7 @@ import { useActionState, useEffect, useId, useState } from "react";
 import Image from "next/image";
 import { uploadImageAction } from "@/lib/content/uploadImageAction";
 import { Markdown } from "@/components/Markdown/Markdown";
+import { RichTextEditor } from "./RichTextEditor";
 import { slugify } from "@/lib/blog/format";
 import { postCategories } from "@/content/postCategories";
 import type { Post } from "@/lib/blog/posts";
@@ -41,7 +42,8 @@ export function PostEditor({ action, post }: { action: EditorAction; post?: Post
   const [coverUrl, setCoverUrl] = useState(post?.cover_image_url ?? "");
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
-  const [showPreview, setShowPreview] = useState(true);
+  // Visual (Word-style) editor by default; Markdown for advanced edits.
+  const [mode, setMode] = useState<"visual" | "markdown" | "preview">("visual");
   const [locale, setLocale] = useState(post?.locale ?? "en");
   // Shown in local time; sent to the server as an ISO date (set after load to match the browser time zone).
   const [dateLocal, setDateLocal] = useState("");
@@ -57,30 +59,27 @@ export function PostEditor({ action, post }: { action: EditorAction; post?: Post
     if (!slugEdited) setSlug(slugify(value));
   }
 
+  /** Uploads an image to storage. Returns its address, or an error message. */
+  async function upload(file: File): Promise<{ url?: string; error?: string }> {
+    if (!ACCEPTED.includes(file.type)) return { error: "Use a PNG, JPEG, WebP or GIF image." };
+    if (file.size > MAX_BYTES) return { error: "Image must be 5 MB or smaller." };
+    const fd = new FormData();
+    fd.append("file", file);
+    const res = await uploadImageAction(fd);
+    if (res.error || !res.url) return { error: res.error ?? "Upload failed." };
+    return { url: res.url };
+  }
+
   async function onFile(event: React.ChangeEvent<HTMLInputElement>) {
     const file = event.target.files?.[0];
     if (!file) return;
 
     setUploadError(null);
-    if (!ACCEPTED.includes(file.type)) {
-      setUploadError("Use a PNG, JPEG, WebP or GIF image.");
-      return;
-    }
-    if (file.size > MAX_BYTES) {
-      setUploadError("Image must be 5 MB or smaller.");
-      return;
-    }
-
     setUploading(true);
     try {
-      const fd = new FormData();
-      fd.append("file", file);
-      const res = await uploadImageAction(fd);
-      if (res.error || !res.url) {
-        setUploadError(res.error ?? "Upload failed.");
-        return;
-      }
-      setCoverUrl(res.url);
+      const res = await upload(file);
+      if (res.url) setCoverUrl(res.url);
+      else setUploadError(res.error ?? "Upload failed.");
     } finally {
       setUploading(false);
     }
@@ -131,36 +130,63 @@ export function PostEditor({ action, post }: { action: EditorAction; post?: Post
           </label>
 
           <div className={styles.contentHead}>
-            <label htmlFor={`${ids}-content`}>Content (Markdown)</label>
-            <button
-              type="button"
-              className={styles.toggle}
-              onClick={() => setShowPreview((v) => !v)}
-            >
-              {showPreview ? "Hide preview" : "Show preview"}
-            </button>
+            <span id={`${ids}-content-label`}>Content</span>
+            <div className={styles.tabs} role="tablist" aria-label="Editor view">
+              {(
+                [
+                  ["visual", "Visual editor"],
+                  ["markdown", "Markdown"],
+                  ["preview", "Preview"],
+                ] as const
+              ).map(([key, label]) => (
+                <button
+                  key={key}
+                  type="button"
+                  role="tab"
+                  aria-selected={mode === key}
+                  className={styles.tab}
+                  onClick={() => setMode(key)}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className={showPreview ? styles.split : undefined}>
+          {/* What gets saved, whichever view is open. */}
+          <input type="hidden" name="content" value={content} />
+
+          {mode === "visual" && (
+            <RichTextEditor
+              value={content}
+              onChange={setContent}
+              dir={dir}
+              labelledBy={`${ids}-content-label`}
+              uploadImage={async (file) => (await upload(file)).url ?? null}
+            />
+          )}
+
+          {mode === "markdown" && (
             <textarea
               id={`${ids}-content`}
-              name="content"
+              aria-labelledby={`${ids}-content-label`}
               dir={dir}
               className={styles.editor}
-              rows={18}
+              rows={22}
               value={content}
               onChange={(e) => setContent(e.target.value)}
             />
-            {showPreview && (
-              <div className={styles.preview} dir={dir}>
-                {content.trim() ? (
-                  <Markdown>{content}</Markdown>
-                ) : (
-                  <p className={styles.previewEmpty}>Preview appears here.</p>
-                )}
-              </div>
-            )}
-          </div>
+          )}
+
+          {mode === "preview" && (
+            <div className={styles.preview} dir={dir}>
+              {content.trim() ? (
+                <Markdown>{content}</Markdown>
+              ) : (
+                <p className={styles.previewEmpty}>Preview appears here.</p>
+              )}
+            </div>
+          )}
         </div>
 
         <aside className={styles.side}>
